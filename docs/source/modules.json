@@ -1,0 +1,12 @@
+{
+  "oa": [
+    "oa.animation",
+    "oa.gui",
+    "oa.migration",
+    "oa.redshift"
+  ],
+  "bd": [
+    "bd.googledata"
+  ],
+  "others": []
+}

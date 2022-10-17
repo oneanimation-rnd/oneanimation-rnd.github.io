@@ -1,0 +1,13 @@
+******************************
+The *{{ namespace }}* Namespace
+******************************
+
+{% block namespace %}
+{% endblock %}
+
+.. autosummary::
+   :toctree: ../auto
+   :recursive:
+
+   {% for package in packages %} {{ package }}
+   {% endfor %}
