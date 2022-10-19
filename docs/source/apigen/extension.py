@@ -6,7 +6,7 @@ import shutil
 
 from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 
-__all__ = ['generate_api']
+__all__ = ['generate_api', 'cleanup']
 
 def generate_api(app, config):
     """
@@ -20,6 +20,8 @@ def generate_api(app, config):
 
     with open(modules) as _file:
         modules_info = json.load(_file)
+
+    print (json)
 
     if not modules_info or not isinstance(modules_info, dict):
         print('modules info is uninteresting (%s) ... Skipping!' %
@@ -49,9 +51,9 @@ def generate_api(app, config):
         namespace_rst = os.path.join(namespacedir, namespace_filename)
 
         try:
-            ns_template = templates_env.get_template(namespace_filename)
+            ns_template = templates_env.get_template(namespace_filename + '_t')
         except TemplateNotFound:
-            ns_template = templates_env.get_template('namespace.rst')
+            ns_template = templates_env.get_template('namespace.rst_t')
 
         print('Writing %s using %s ...' % (namespace_rst, ns_template.name))
         with open(namespace_rst, 'w+', encoding='utf-8') as _outfile:
@@ -63,5 +65,6 @@ def cleanup(app, exception):
     if not app.config.apigen_cleanup:
         return
     apidir = os.path.join(app.confdir, app.config.apigen_dir)
+    print('cleaning up', apidir, '...')
     if os.path.exists(apidir):
         shutil.rmtree(apidir)

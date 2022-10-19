@@ -1,12 +1,24 @@
 {
   "oa": [
+    "oa.general",
+    "oa.rigging",
+    "oa.shot_split_submitter_tool",
+    "oa.asset",
     "oa.animation",
     "oa.gui",
     "oa.migration",
-    "oa.redshift"
+    "oa.texture_check_in_tool",
+    "oa.aws",
+    "oa.rnd"
   ],
   "bd": [
-    "bd.googledata"
+    "bd.storage",
+    "bd.api",
+    "bd.hooks"
   ],
-  "others": []
+  "others": [
+    "oa_utils",
+    "anim_library",
+    "asset_library"
+  ]
 }

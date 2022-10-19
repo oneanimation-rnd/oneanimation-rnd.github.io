@@ -1,7 +1,6 @@
 ******************************
 The *{{ namespace }}* Namespace
 ******************************
-
 {% block namespace %}
 {% endblock %}
 
@@ -11,3 +10,5 @@ The *{{ namespace }}* Namespace
 
    {% for package in packages %} {{ package }}
    {% endfor %}
+
+.. vim: ft=rst

@@ -17,6 +17,7 @@ Welcome to One Animation Pipeline Docs#'s documentation!
    api
    glossary
    faq
+   help
 
 
 
