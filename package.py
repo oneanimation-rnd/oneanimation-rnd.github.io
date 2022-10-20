@@ -5,6 +5,6 @@ requires = [
     'Sphinx',
     'sphinx_rtd_theme',
     'sphinx_autoapi',
-    'PyGithub2',
+    'PyGithub',
     'pygit2',
  ]

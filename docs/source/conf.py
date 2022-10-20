@@ -21,6 +21,7 @@ release = '0.0.1'
 
 extensions = [
     'autoapi.extension',
+    'repoget',
     'sphinx.ext.autodoc.typehints',
     'sphinx.ext.coverage',
     'sphinx.ext.autosectionlabel',
@@ -34,25 +35,31 @@ extensions = [
     'sphinx.ext.napoleon',
 ]
 
+
+repoget_token = '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'
+repoget_clonedir = '/devtest/repos/'
+
 autoapi_dirs = list(filter(
-    lambda x: 'packages/int' in x and os.path.isdir(x),
+    lambda x: repoget_clonedir in x and os.path.isdir(x),
     sys.path))
+for dirs in autoapi_dirs:
+    print('autoapi', dirs)
 autoapi_keep_files = True
 autoapi_add_toctree_entry = False
 autoapi_python_class_content = 'both'
-autoapi_python_use_implicit_namespaces = False
+autoapi_python_use_implicit_namespaces = True
 autoapi_template_dir = '_templates/autoapi/'
 autoapi_ignore = ['*_vendor*', '*userSetup.py*']
-autoapi_options = {
-        'members': True,
-        'undoc-members': True,
-        'private-members': False,
-        'special-members': ['__init__'],
-        'show-inheritance': True,
-        'show-inheritance-diagram': True,
-        'show-module-summary': True,
-        'imported_members': False,
-        }
+# autoapi_options = {
+#         'members': True,
+#         'undoc-members': True,
+#         'private-members': False,
+#         'special-members': ['__init__'],
+#         'show-inheritance': True,
+#         'show-inheritance-diagram': True,
+#         'show-module-summary': True,
+#         'imported_members': False,
+#         }
 
 apigen_dir = 'api'
 apigen_cleanup = False
