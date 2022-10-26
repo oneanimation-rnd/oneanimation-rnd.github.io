@@ -1,0 +1,53 @@
+# repo selection
+organizations:
+- name: oneanimation-rnd
+  token: ${OA_TOKEN}
+  repos:
+    name:
+    - oa[._]*
+    - bd[._-]*
+    - rdr.*
+users: []
+
+# Per repo conf
+repo_conf:
+  defaults:
+    enabled: no
+    modules: []
+    environments: []
+    # relative to root of repo
+    paths:
+      - python
+      - maya
+      - houdini/python*libs
+      - lib
+      - src
+    # which modules to look for in above paths
+    files: ['*.py', '*.pyi']
+    dirs: ['*']
+    docs_source: docs/source
+    docs_build: docs/build
+
+  overrides:
+    # top override gets preference
+
+    - name: 'oa.animation'
+      settings:
+        modules: ['oa.animation']
+        environments: ['maya']
+
+    - name: 'oa[._]*'
+      settings:
+        enabled: yes
+        dirs: ['oa*']
+        files: []
+
+    - name: 'bd[._-]*'
+      settings:
+        enabled: yes
+        dirs: ['bd*']
+        files: []
+
+    - name: 'rdr.*'
+      settings:
+        enabled: yes
