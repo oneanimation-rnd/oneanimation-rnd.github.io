@@ -13,10 +13,8 @@ def pathmatch(path, pattern):
     pattern_parts = pattern.split(os.path.sep)
     if len(path_parts) != len(pattern_parts):
         return False
-    return all((
-        fnmatch.fnmatch(_path, _pattern)
-        for _path, _pattern in zip(path_parts, pattern_parts)
-        ))
+    return all((fnmatch.fnmatch(_path, _pattern)
+                for _path, _pattern in zip(path_parts, pattern_parts)))
 
 
 class RepoSettings:
@@ -61,8 +59,12 @@ class RepoSettings:
         return self._data['settings'].get('enabled')
 
     @property
-    def paths(self):
-        return self._data['settings'].get('paths', [])
+    def dirs(self):
+        return self._data['settings'].get('dirs', [])
+
+    @property
+    def ignore(self):
+        return self._data['settings'].get('ignore', [])
 
     def update_settings(self, settings):
         if isinstance(settings, RepoSettings):
@@ -70,37 +72,34 @@ class RepoSettings:
         self._data.update(settings)
 
     @property
-    def packages(self):
-        return self._data['settings'].get('dirs', [])
+    def top_level_packages(self):
+        return self._data['settings'].get('top_level_packages', [])
 
-    @property
-    def modules(self):
-        return self._data['settings'].get('files', [])
-
-    def get_repo_paths(self, working_dir):
-        repo_paths = []
+    def get_repo_dirs(self, working_dir, implicit_namespaces=False):
+        repo_dirs = []
+        ignore_dirs = []
 
         if self.enabled:
-            for dirname, dirs, files in os.walk(working_dir, followlinks=False):
+            for dirname, dirs, files in os.walk(working_dir,
+                                                followlinks=False):
                 relpath = os.path.relpath(dirname, working_dir)
 
-                for pattern in self.paths:
-
+                for pattern in self.dirs:
                     if pathmatch(relpath, pattern):
+                        ignore_dirs.extend([
+                            os.path.join(dirname, ign)
+                            for ign in self.ignore
+                            ])
+                        if implicit_namespaces:
+                            repo_dirs.append(dirname)
+                        else:
+                            repo_dirs.extend([
+                                os.path.join(dirname, d) for d in dirs
+                                if any((fnmatch.fnmatch(d, pat)
+                                        for pat in self.top_level_packages))
+                            ])
 
-                        repo_paths.extend([
-                            os.path.join(dirname, d) for d in dirs
-                            if any((fnmatch.fnmatch(d, pat)
-                                    for pat in self.packages))
-                        ])
-
-                        repo_paths.extend([
-                            os.path.join(dirname, f) for f in files
-                            if any((fnmatch.fnmatch(f, pat)
-                                    for pat in self.modules))
-                        ])
-
-        return repo_paths
+        return repo_dirs, ignore_dirs
 
 
 class RepogetConf:
@@ -158,13 +157,10 @@ class RepogetConf:
         repo_settings = self._data['repo_conf']['defaults'].copy()
         for override in reversed(self._data['repo_conf']['overrides']):
             apply = True
-            if not fnmatch.fnmatch(
-                    repo.name,
-                    override.get('name', '*')):
+            if not fnmatch.fnmatch(repo.name, override.get('name', '*')):
                 apply = False
-            if not fnmatch.fnmatch(
-                    repo.owner.login,
-                    override.get('owner', '*')):
+            if not fnmatch.fnmatch(repo.owner.login, override.get(
+                    'owner', '*')):
                 apply = False
             if apply:
                 repo_settings.update(override['settings'])

@@ -47,10 +47,9 @@ class Repoget:
 
         return self._repos
 
-    def ensure_local_clone(self, full_name, clone_dir):
+    def ensure_local_clone(self, full_name):
         '''
         :type repo: github.Repository.Repository
-        :type clone_dir: str
         :rtype: git.Repo or None
         '''
         local_clone = None
@@ -58,9 +57,8 @@ class Repoget:
 
         repo = self._repos[full_name]['gh_repo']
         repo_name = repo.name
-        owner_dir = os.path.join(
-                clone_dir,
-                self._repos[full_name]['owner']['name'])
+        owner_dir = os.path.join(self.clone_dir,
+                                 self._repos[full_name]['owner']['name'])
         repo_dir = os.path.join(owner_dir, repo_name)
         token = self._repos[repo.full_name]['owner']['token']
 
@@ -100,12 +98,50 @@ class Repoget:
 
         return local_clone
 
-    def find_paths_in_clone(self, full_name):
-        ''':rtype: List[str]'''
+    def get_repo_dirs(self, full_name):
+        ''':rtype: tuple(List[str], List[str])'''
         repo = self._repos[full_name]['gh_repo']
         settings = self._conf.get_repo_settings(repo)
-        return settings.get_repo_paths(
+        return settings.get_repo_dirs(
             self._repos[full_name]['local_clone'].working_dir)
+
+    def create_owner_dirs(self):
+        for owner, info in self._owners.items():
+            owner_dir = os.path.join(self.clone_dir, owner)
+            info['owner_dir'] = owner_dir
+            if not os.path.isdir(owner_dir):
+                os.makedirs(owner_dir)
+
+    def clone_repos(self):
+        pool = ThreadPool()
+        results = {}
+
+        for full_name in self._repos.keys():
+            results[full_name] = pool.apply_async(self.ensure_local_clone,
+                                                  args=(full_name, ))
+
+        for full_name in self._repos.keys():
+            local_clone = results[full_name].get()
+            self._repos[full_name]['local_clone'] = local_clone
+
+        pool.close()
+
+    def gather_dirs(self):
+        dirs = []
+        ignores = []
+        for full_name in self._repos.keys():
+            repo_dirs, repo_ignores = self.get_repo_dirs(full_name)
+            dirs.extend(repo_dirs)
+            ignores.extend(repo_ignores)
+        return dirs, ignores
+
+    @staticmethod
+    def config_dir_value(dirs, orig):
+        if orig:
+            if isinstance(orig, str):
+                orig = [orig]
+            dirs.extend(orig)
+        return dirs
 
     def config_inited(self, app, config):
         """
@@ -114,44 +150,25 @@ class Repoget:
         """
         self.sphinx = app
         self.sphinx_config = config
+        self.clone_dir = os.path.abspath(config.repoget_clonedir)
 
         self.fetch_repos()
-        clone_dir = os.path.abspath(config.repoget_clonedir)
+        self.create_owner_dirs()
+        self.clone_repos()
+        dirs, ignores = self.gather_dirs()
 
-        for owner, info in self._owners.items():
-            owner_dir = os.path.join(clone_dir, owner)
-            info['owner_dir'] = owner_dir
-            if not os.path.isdir(owner_dir):
-                os.makedirs(owner_dir)
-
-        pool = ThreadPool()
-        results = {}
-
-        for full_name in self._repos.keys():
-            results[full_name] = pool.apply_async(
-                self.ensure_local_clone,
-                args=(full_name, clone_dir))
-
-        for full_name in self._repos.keys():
-            local_clone = results[full_name].get()
-            self._repos[full_name]['local_clone'] = local_clone
-
-        pool.close()
-
-        paths = []
-        for full_name in self._repos.keys():
-            paths.extend(self.find_paths_in_clone(full_name))
-
-        existing_paths = config.autoapi_dirs
-        if existing_paths:
-            paths.extend(existing_paths)
-        config.autoapi_dirs = paths
+        config.autoapi_dirs = self.config_dir_value(
+                dirs, config.autoapi_dirs)
+        config.autoapi_ignore = self.config_dir_value(
+                ignores, config.autoapi_ignore)
 
     def build_finished(self, app, exception):
         """
         :type app: sphinx.application.Sphinx
         :type extension: Exception
         """
+        if app.config.repoget_cleanup_clonedir:
+            shutil.rmtree(self.clone_dir)
 
 
 def main():

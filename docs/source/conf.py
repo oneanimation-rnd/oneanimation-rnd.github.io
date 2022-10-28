@@ -36,6 +36,7 @@ extensions = [
 ]
 
 repoget_clonedir = '/devtest/repos/'
+repoget_cleanup_clonedir = False
 
 autoapi_dirs = list(filter(
     lambda x: repoget_clonedir in x and os.path.isdir(x),
@@ -44,9 +45,8 @@ autoapi_dirs = list(filter(
 autoapi_keep_files = True
 autoapi_add_toctree_entry = False
 autoapi_python_class_content = 'both'
-autoapi_python_use_implicit_namespaces = True
+autoapi_python_use_implicit_namespaces = False
 autoapi_template_dir = '_templates/autoapi/'
-autoapi_ignore = ['*_vendor*', '*userSetup.py', '*pythonrc.py']
 suppress_warnings = ['autoapi']
 
 apigen_dir = 'api'

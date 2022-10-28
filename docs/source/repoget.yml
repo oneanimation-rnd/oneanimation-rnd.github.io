@@ -1,5 +1,6 @@
 # repo to clone from the internet
 owners:
+
 - name: oneanimation-rnd
   type: organization
   token: ${OA_TOKEN}
@@ -8,6 +9,7 @@ owners:
     - oa[._]*
     - bd[._-]*
     - rdr.*
+
 - name: OATalha
   type: user
   repos:
@@ -22,19 +24,20 @@ repo_conf:
     modules: []
     environments: []
     # relative to root of repo
-    paths:
+    dirs:
       - python
       - maya
       - houdini/python*libs
       - lib
       - src
     ignore:
-      - userSetup.py
-      - _vendor
-      - pythonrc.py
+      - "*/userSetup.py"
+      - "*/*vendor*"
+      - "*/pythonrc.py"
+
     # which modules to look for in above paths
-    files: ['*.py', '*.pyi']
-    dirs: ['*']
+    # used only with implicit namespaces
+    top_level_packages: ['*']
     docs_source: docs/source
     docs_build: docs/build
 
@@ -46,17 +49,26 @@ repo_conf:
         modules: ['oa.animation']
         environments: ['maya']
 
+    - name: 'oa.workbook_checkin_tool'
+      settings:
+        ignore:
+          - "*/vaderBoard/widgets/*"
+          - "*/vaderBoard/helpers/*"
+
     - name: 'oa[._]*'
       settings:
         enabled: yes
-        dirs: ['oa*']
-        files: []
+        top_level_packages: ['oa*']
 
     - name: 'bd[._-]*'
       settings:
         enabled: yes
-        dirs: ['bd*']
-        files: []
+        top_level_packages: ['bd*']
+        ignore:
+          - "*/*vendor*"
+          - "*/example_adapter.py"
+          - "*/s3_accessor.py"
+          - "*/ftp_accessor.py"
 
     - name: 'rdr.*'
       settings:
