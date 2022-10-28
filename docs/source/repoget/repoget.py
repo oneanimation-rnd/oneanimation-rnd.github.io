@@ -9,7 +9,7 @@ import git
 import github
 from loguru import logger
 
-from .conf import RepogetConf
+from .repoget_conf import RepogetConf
 
 
 class Repoget:
@@ -25,34 +25,29 @@ class Repoget:
     def fetch_repos(self):
         """:retval: List[github.Repository.Repository]"""
 
-        owner_types = ['organization', 'user']
-
-        def _fetch_repos_by_type(typ):
-            for owner_info in getattr(self._conf, 'get_' + typ + 's')():
-                owner = owner_info['name']
-                self._owners[owner] = typ
-                token = owner_info['token']
-                gh = github.Github(token)
-                gh_owner = getattr(gh, 'get_' + typ)(owner)
-                for repo in self._conf.filter_repos(gh_owner.get_repos(),
-                                                    **{typ: owner}):
-                    self._repos[repo.full_name] = {
-                        'name': repo.name,
-                        'gh_repo': repo,
-                        'owner': {
-                            'name': owner,
-                            'type': typ,
-                            'gh': gh_owner,
-                            'token': token
-                        },
-                    }
-
-        for typ in owner_types:
-            _fetch_repos_by_type(typ)
+        for owner_info in self._conf.get_owners():
+            owner = owner_info['name']
+            typ = owner_info.get('type', 'user')
+            self._owners[owner] = owner_info.copy()
+            token = owner_info.get('token', '')
+            gh = github.Github(token if token else None)
+            gh_owner = getattr(gh, 'get_' + typ)(owner)
+            for repo in self._conf.filter_repos(gh_owner.get_repos(),
+                                                owner=owner):
+                self._repos[repo.full_name] = {
+                    'name': repo.name,
+                    'gh_repo': repo,
+                    'owner': {
+                        'name': owner,
+                        'type': typ,
+                        'gh': gh_owner,
+                        'token': token
+                    },
+                }
 
         return self._repos
 
-    def ensure_local_clone(self, repo, clone_dir):
+    def ensure_local_clone(self, full_name, clone_dir):
         '''
         :type repo: github.Repository.Repository
         :type clone_dir: str
@@ -61,8 +56,11 @@ class Repoget:
         local_clone = None
         perform = ''
 
+        repo = self._repos[full_name]['gh_repo']
         repo_name = repo.name
-        owner_dir = os.path.join(clone_dir, repo.owner.login)
+        owner_dir = os.path.join(
+                clone_dir,
+                self._repos[full_name]['owner']['name'])
         repo_dir = os.path.join(owner_dir, repo_name)
         token = self._repos[repo.full_name]['owner']['token']
 
@@ -93,10 +91,11 @@ class Repoget:
             remote.pull(repo.default_branch, force=True)
 
         elif perform == 'clone':
-            clone_url = re.sub('(https://)', r'\1%s:x-oauth-basic@' % token,
-                               repo.clone_url)
-            logger.info(clone_url)
-            logger.info(f'cloning {clone_url} => {repo_dir}')
+            clone_url = repo.clone_url
+            logger.info(f'cloning {repo.clone_url} => {repo_dir}')
+            if token and token != 'N/A':
+                clone_url = re.sub('(https://)',
+                                   r'\1%s:x-oauth-basic@' % token, clone_url)
             local_clone = git.Repo.clone_from(clone_url, repo_dir, depth=1)
 
         return local_clone
@@ -106,7 +105,7 @@ class Repoget:
         repo = self._repos[full_name]['gh_repo']
         settings = self._conf.get_repo_settings(repo)
         return settings.get_repo_paths(
-                self._repos[full_name]['local_clone'].working_dir)
+            self._repos[full_name]['local_clone'].working_dir)
 
     def config_inited(self, app, config):
         """
@@ -119,29 +118,33 @@ class Repoget:
         self.fetch_repos()
         clone_dir = os.path.abspath(config.repoget_clonedir)
 
-        for owner in self._owners:
+        for owner, info in self._owners.items():
             owner_dir = os.path.join(clone_dir, owner)
+            info['owner_dir'] = owner_dir
             if not os.path.isdir(owner_dir):
                 os.makedirs(owner_dir)
 
         pool = ThreadPool()
         results = {}
 
-        for repo in self._repos.keys():
-            results[repo] = pool.apply_async(
+        for full_name in self._repos.keys():
+            results[full_name] = pool.apply_async(
                 self.ensure_local_clone,
-                args=(self._repos[repo]['gh_repo'], clone_dir))
+                args=(full_name, clone_dir))
 
-        for repo in self._repos.keys():
-            local_clone = results[repo].get()
-            self._repos[repo]['local_clone'] = local_clone
+        for full_name in self._repos.keys():
+            local_clone = results[full_name].get()
+            self._repos[full_name]['local_clone'] = local_clone
 
         pool.close()
 
         paths = []
-        for repo in self._repos.keys():
-            paths.extend(self.find_paths_in_clone(repo))
+        for full_name in self._repos.keys():
+            paths.extend(self.find_paths_in_clone(full_name))
 
+        existing_paths = config.autoapi_dirs
+        if existing_paths:
+            paths.extend(existing_paths)
         config.autoapi_dirs = paths
 
     def build_finished(self, app, exception):

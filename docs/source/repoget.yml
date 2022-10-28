@@ -1,16 +1,22 @@
-# repo selection
-organizations:
+# repo to clone from the internet
+owners:
 - name: oneanimation-rnd
+  type: organization
   token: ${OA_TOKEN}
   repos:
     name:
     - oa[._]*
     - bd[._-]*
     - rdr.*
-users: []
+- name: OATalha
+  type: user
+  repos:
+    name:
+    - mymath.*
 
 # Per repo conf
 repo_conf:
+
   defaults:
     enabled: no
     modules: []
@@ -22,6 +28,10 @@ repo_conf:
       - houdini/python*libs
       - lib
       - src
+    ignore:
+      - userSetup.py
+      - _vendor
+      - pythonrc.py
     # which modules to look for in above paths
     files: ['*.py', '*.pyi']
     dirs: ['*']
@@ -51,3 +61,7 @@ repo_conf:
     - name: 'rdr.*'
       settings:
         enabled: yes
+
+    - owner: OATalha
+      settings:
+        enabled: no

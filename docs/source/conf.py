@@ -20,8 +20,8 @@ release = '0.0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'autoapi.extension',
     'repoget',
+    'autoapi.extension',
     'sphinx.ext.autodoc.typehints',
     'sphinx.ext.coverage',
     'sphinx.ext.autosectionlabel',
@@ -46,7 +46,7 @@ autoapi_add_toctree_entry = False
 autoapi_python_class_content = 'both'
 autoapi_python_use_implicit_namespaces = True
 autoapi_template_dir = '_templates/autoapi/'
-autoapi_ignore = ['*_vendor*', '*userSetup.py*', '*pythonrc.py*']
+autoapi_ignore = ['*_vendor*', '*userSetup.py', '*pythonrc.py']
 suppress_warnings = ['autoapi']
 
 apigen_dir = 'api'
@@ -75,7 +75,6 @@ todo_include_todos = True
 
 templates_path = ['_templates']
 exclude_patterns = ['autoapi/templates', 'api']
-
 
 
 # -- Options for HTML output -------------------------------------------------

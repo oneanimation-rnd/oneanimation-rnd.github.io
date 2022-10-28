@@ -125,38 +125,26 @@ class RepogetConf:
                 raise ValueError("Please provide a valid conf file")
             self._data = pyaml_env.parse_config(filepath)
 
-    def get_users(self):
-        return self._data.get('users', [])
+    def get_owners(self):
+        return self._data.get('owners', [])
 
-    def get_organizations(self):
-        return self._data.get('organizations', [])
+    def get_owner_rules(self, owner_name):
+        for owner in self.get_owners():
+            if owner['name'] == owner_name:
+                return owner['repos']
+        return {'name': ['*']}
 
-    def get_org_rules(self, org_name):
-        for org in self.get_organizations():
-            if org['name'] == org_name:
-                return org['repos']
-        return {'name': '*'}
-
-    def get_user_rules(self, org_name):
-        for user in self.get_users():
-            if user['name'] == org_name:
-                return user['repos']
-        return {'name': '*'}
-
-    def filter_repos(self, repos, rules=None, organization='', user=''):
+    def filter_repos(self, repos, rules=None, owner=''):
         '''
         :retval: List[github.Repository.Repository]
         '''
         filtered = []
 
         if rules is None:
-            if organization:
-                rules = self.get_org_rules(organization)
-            elif user:
-                rules = self.get_user_rules(user)
+            rules = self.get_owner_rules(owner)
 
         for repo in repos:
-            for glob_pattern in rules.get('name', []):
+            for glob_pattern in rules.get('name', ['*']):
                 if fnmatch.fnmatch(repo.name, glob_pattern):
                     filtered.append(repo)
                     break

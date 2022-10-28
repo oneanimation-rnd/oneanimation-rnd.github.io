@@ -2,7 +2,7 @@
 :orphan:
 
 {% endif %}
-{{ obj.type | capitalize }} :py:mod:`{{ obj.name }}`
+ :py:mod:`{{ obj.name }}`
 ======================{{ "=" * obj.name|length * 2 }}
 
 .. py:module:: {{ obj.name }}
