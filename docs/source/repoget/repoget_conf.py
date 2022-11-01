@@ -18,27 +18,32 @@ def pathmatch(path, pattern):
 
 
 class RepoSettings:
-    filename = 'repoget.yml'
+    file_name = 'docs_info.yml'
 
     @classmethod
-    def find_repo_conf(cls, working_dir):
-        filepath = None
+    def find_conf_file(cls, working_dir, file_name=None):
+        if file_name is None:
+            file_name = cls.file_name
+
+        file_path = None
         for dirname, _, files in os.walk(working_dir, followlinks=False):
-            if cls.filename in files:
-                filepath = os.path.join(dirname, cls.filename)
+            if file_name in files:
+                file_path = os.path.join(dirname, file_name)
                 break
-        return filepath
+
+        return file_path
 
     def __init__(self, data=None, filepath=None, working_dir=None):
 
         if data is None:
             if filepath is None:
-                for dirname, _, files in os.walk(working_dir,
-                                                 followlinks=False):
-                    if self.filename in files:
-                        filepath = os.path.join(dirname, self.filename)
-                        break
-            data = pyaml_env.parse_config(filepath)
+                filepath = self.find_conf_file(working_dir)
+
+            if filepath is None:
+                raise IOError('Could not find conf file in repo')
+
+            data = {'name': os.path.basename(working_dir),
+                    'settings': pyaml_env.parse_config(filepath)}
 
         if not isinstance(data['name'], str) and not isinstance(
                 data['settings'], dict):
@@ -70,6 +75,13 @@ class RepoSettings:
         if isinstance(settings, RepoSettings):
             settings = settings._data
         self._data.update(settings)
+
+    def update_from_working_dir(self, working_dir):
+        try:
+            repo_settings = RepoSettings(working_dir=working_dir)
+        except (ValueError, IOError):
+            return
+        self.update_settings(repo_settings)
 
     @property
     def top_level_packages(self):
@@ -151,10 +163,12 @@ class RepogetConf:
         return filtered
 
     def get_repo_settings(self, repo):
-        ''':type repo: github.Repository.Repository
+        '''
+        :type repo: github.Repository.Repository
         :rtype: RepoSettings
         '''
         repo_settings = self._data['repo_conf']['defaults'].copy()
+
         for override in reversed(self._data['repo_conf']['overrides']):
             apply = True
             if not fnmatch.fnmatch(repo.name, override.get('name', '*')):
@@ -164,6 +178,7 @@ class RepogetConf:
                 apply = False
             if apply:
                 repo_settings.update(override['settings'])
+
         return RepoSettings(data={'name': repo, 'settings': repo_settings})
 
 

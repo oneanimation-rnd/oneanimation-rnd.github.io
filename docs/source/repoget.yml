@@ -10,11 +10,11 @@ owners:
     - bd[._-]*
     - rdr.*
 
-- name: OATalha
-  type: user
-  repos:
-    name:
-    - mymath.*
+# - name: OATalha
+#   type: user
+#   repos:
+#     name:
+#     - mymath.*
 
 # Per repo conf
 repo_conf:
@@ -73,7 +73,3 @@ repo_conf:
     - name: 'rdr.*'
       settings:
         enabled: yes
-
-    - owner: OATalha
-      settings:
-        enabled: no

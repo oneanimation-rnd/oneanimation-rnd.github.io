@@ -102,6 +102,8 @@ class Repoget:
         ''':rtype: tuple(List[str], List[str])'''
         repo = self._repos[full_name]['gh_repo']
         settings = self._conf.get_repo_settings(repo)
+        working_dir = self._repos[full_name]['local_clone'].working_dir
+        settings.update_from_working_dir(working_dir)
         return settings.get_repo_dirs(
             self._repos[full_name]['local_clone'].working_dir)
 
