@@ -3,4 +3,3 @@ sphinx-rtd-theme
 sphinx_autoapi
 PyGithub
 GitPython
-loguru

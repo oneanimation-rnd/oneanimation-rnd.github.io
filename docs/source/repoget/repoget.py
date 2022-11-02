@@ -7,7 +7,7 @@ from threading import RLock
 
 import git
 import github
-from loguru import logger
+from sphinx.util import logger
 
 from .repoget_conf import RepogetConf
 
@@ -170,6 +170,7 @@ class Repoget:
         :type extension: Exception
         """
         if app.config.repoget_cleanup_clonedir:
+            logger.info('cleaning up', self.clone_dir)
             shutil.rmtree(self.clone_dir)
 
 
