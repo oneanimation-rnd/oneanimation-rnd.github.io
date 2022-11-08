@@ -1,5 +1,6 @@
 Sphinx==5.3.0
 sphinx-rtd-theme
 sphinx_autoapi
+pyaml_env
 PyGithub
 GitPython
