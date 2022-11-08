@@ -1,0 +1,91 @@
+ :py:mod:`oa.gui.libs.gui_states.gui_states`
+========================================================================================
+
+.. py:module:: oa.gui.libs.gui_states.gui_states
+
+.. autoapi-nested-parse::
+
+   As a response for getting too many broken scenes, it has been decided to disable any potentially
+   dangerous built-in tools when working on animation scenes.
+
+   This gets triggered when a task is switched to a shot.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.libs.gui_states.gui_states.init_menus
+   oa.gui.libs.gui_states.gui_states.init_shelfs
+   oa.gui.libs.gui_states.gui_states.get_maya_shelf
+   oa.gui.libs.gui_states.gui_states.set_outliner_popup_anim
+   oa.gui.libs.gui_states.gui_states.set_outliner_popup_normal
+   oa.gui.libs.gui_states.gui_states.set_anim_state
+   oa.gui.libs.gui_states.gui_states.disable_anim_state
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.libs.gui_states.gui_states.menus_info
+   oa.gui.libs.gui_states.gui_states.shelfs_info
+
+
+.. py:data:: menus_info
+   
+
+   
+
+.. py:data:: shelfs_info
+   
+
+   
+
+.. py:function:: init_menus()
+
+   Initializes menus otherwise they won't have any children.
+
+
+.. py:function:: init_shelfs()
+
+   Initializes shelfs by switching tabs to it otherwise they won't have any items.
+
+
+.. py:function:: get_maya_shelf()
+
+   Gets and returns Maya's main shelf layout.
+
+
+.. py:function:: set_outliner_popup_anim(*args)
+
+   Disables some sensitive menu items from the Outliner's popup menu.
+
+
+.. py:function:: set_outliner_popup_normal(*args)
+
+
+.. py:function:: set_anim_state(state)
+
+   Disables menus, marking menus, and shelf items as a protection against tools that may break our scene files.
+
+   :param state: Enables protection on True.
+   :type state: bool
+
+
+.. py:function:: disable_anim_state()
+
+   Prompts user to input password if it's not a trusted user.
+
+

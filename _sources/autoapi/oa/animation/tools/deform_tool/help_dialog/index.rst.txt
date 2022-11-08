@@ -1,0 +1,60 @@
+ :py:mod:`oa.animation.tools.deform_tool.help_dialog`
+==========================================================================================================
+
+.. py:module:: oa.animation.tools.deform_tool.help_dialog
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.deform_tool.help_dialog.HelpDialog
+   oa.animation.tools.deform_tool.help_dialog.MainFrame
+   oa.animation.tools.deform_tool.help_dialog.Section
+
+
+
+
+.. py:class:: HelpDialog(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: add_page(title, sections)
+
+
+   .. py:method:: to_minimum_size()
+
+
+   .. py:method:: update_page_label()
+
+
+   .. py:method:: prev_page()
+
+
+   .. py:method:: next_page()
+
+
+
+.. py:class:: MainFrame(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: hideEvent(event)
+
+
+
+.. py:class:: Section(img_path, caption)
+
+   Bases: :py:obj:`object`
+
+

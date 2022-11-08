@@ -1,0 +1,220 @@
+ :py:mod:`oa.asset.tools.costumes.costumes_utils`
+==================================================================================================
+
+.. py:module:: oa.asset.tools.costumes.costumes_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.costumes.costumes_utils.BindMethods
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.costumes.costumes_utils.popup_message
+   oa.asset.tools.costumes.costumes_utils.wrap_layout
+   oa.asset.tools.costumes.costumes_utils.display_error
+   oa.asset.tools.costumes.costumes_utils.get_icon
+   oa.asset.tools.costumes.costumes_utils.connect_to_db
+   oa.asset.tools.costumes.costumes_utils.get_full_namespace
+   oa.asset.tools.costumes.costumes_utils.get_short_name
+   oa.asset.tools.costumes.costumes_utils.load_plugin
+   oa.asset.tools.costumes.costumes_utils.traverse_parents
+   oa.asset.tools.costumes.costumes_utils.get_asset_info
+   oa.asset.tools.costumes.costumes_utils.get_texture_deformer
+   oa.asset.tools.costumes.costumes_utils.server_path
+   oa.asset.tools.costumes.costumes_utils.check_in_thumbnail
+   oa.asset.tools.costumes.costumes_utils.check_in_animation
+   oa.asset.tools.costumes.costumes_utils.create_capture_panel
+   oa.asset.tools.costumes.costumes_utils.get_asset_from_obj
+   oa.asset.tools.costumes.costumes_utils.do_screen_shot
+   oa.asset.tools.costumes.costumes_utils.copy_skin_weights
+   oa.asset.tools.costumes.costumes_utils.smooth_skin_weights
+   oa.asset.tools.costumes.costumes_utils.build_wmodel_id
+   oa.asset.tools.costumes.costumes_utils.add_follicle
+   oa.asset.tools.costumes.costumes_utils.apply_texture_deformer
+   oa.asset.tools.costumes.costumes_utils.remove_texture_deformer
+   oa.asset.tools.costumes.costumes_utils.bind_by_follicle
+   oa.asset.tools.costumes.costumes_utils.bind_by_constraint
+   oa.asset.tools.costumes.costumes_utils.bind_by_skin
+   oa.asset.tools.costumes.costumes_utils.bind_by_wrap
+   oa.asset.tools.costumes.costumes_utils.bind_obj
+   oa.asset.tools.costumes.costumes_utils.remove_bind_connection
+   oa.asset.tools.costumes.costumes_utils.get_binding_data
+   oa.asset.tools.costumes.costumes_utils.create_group
+   oa.asset.tools.costumes.costumes_utils.get_group_assets
+   oa.asset.tools.costumes.costumes_utils.save_animation
+   oa.asset.tools.costumes.costumes_utils.create_costume
+   oa.asset.tools.costumes.costumes_utils.reset_control_objs
+   oa.asset.tools.costumes.costumes_utils.list_character_costumes
+   oa.asset.tools.costumes.costumes_utils.import_costume
+   oa.asset.tools.costumes.costumes_utils.setup_mesh_visibilities
+   oa.asset.tools.costumes.costumes_utils.remove_costume
+
+
+
+.. py:class:: BindMethods
+
+   .. py:attribute:: Constraint
+      :annotation: = constraint
+
+      
+
+   .. py:attribute:: Skinning
+      :annotation: = skinning
+
+      
+
+   .. py:attribute:: Wrap
+      :annotation: = wrap
+
+      
+
+   .. py:attribute:: Follicle
+      :annotation: = follicle
+
+      
+
+
+.. py:function:: popup_message(title, msg, icon=QtWidgets.QMessageBox.NoIcon, buttons=[QtWidgets.QMessageBox.Ok], parent=None)
+
+   Convenient method to display a message.
+
+   :param title: The window's title.
+   :param msg: The window's main content.
+   :param icon: Either a pixmap or QtWidgets.QMessageBox.Icon.
+   :param buttons: A list of QtWidgets.QMessage.StandardButton.
+   :param parent: A QWidget to center the message to.
+
+   :returns: The message box's status code.
+
+
+.. py:function:: wrap_layout(widgets, orientation)
+
+
+.. py:function:: display_error(err, parent=None)
+
+
+.. py:function:: get_icon(file_name, width=None, height=None)
+
+
+.. py:function:: connect_to_db(hosts=(), replica_set_name='rs0', read_pref=None, db_name='maya', collection_name='costumes')
+
+
+.. py:function:: get_full_namespace(ref_node)
+
+   Work-around for `referenceQuery` erroring when trying to get an unloaded reference's namespace.
+
+
+.. py:function:: get_short_name(obj)
+
+
+.. py:function:: load_plugin(plugin)
+
+
+.. py:function:: traverse_parents(obj)
+
+
+.. py:function:: get_asset_info(obj)
+
+
+.. py:function:: get_texture_deformer(obj)
+
+
+.. py:function:: server_path(*sub_dirs)
+
+
+.. py:function:: check_in_thumbnail(transfer_obj, pixmap, file_name)
+
+
+.. py:function:: check_in_animation(transfer_obj, ref_node, costume_id)
+
+
+.. py:function:: create_capture_panel(width, height)
+
+
+.. py:function:: get_asset_from_obj(obj=None)
+
+
+.. py:function:: do_screen_shot(width, height, output)
+
+
+.. py:function:: copy_skin_weights(source, target)
+
+
+.. py:function:: smooth_skin_weights(obj, iterations)
+
+
+.. py:function:: build_wmodel_id(asset_info)
+
+
+.. py:function:: add_follicle(pos, mesh, name='newFollicle')
+
+
+.. py:function:: apply_texture_deformer(obj, offset, direction=0)
+
+
+.. py:function:: remove_texture_deformer(obj)
+
+
+.. py:function:: bind_by_follicle(source, target)
+
+
+.. py:function:: bind_by_constraint(source, target)
+
+
+.. py:function:: bind_by_skin(source, target)
+
+
+.. py:function:: bind_by_wrap(source, target)
+
+
+.. py:function:: bind_obj(source, targets, bind_method, **kwargs)
+
+
+.. py:function:: remove_bind_connection(source)
+
+
+.. py:function:: get_binding_data(obj)
+
+
+.. py:function:: create_group(name, project=None, assets_ids=())
+
+
+.. py:function:: get_group_assets(group_id, group_collection=None, asset_collection=None)
+
+
+.. py:function:: save_animation(nsp, output)
+
+
+.. py:function:: create_costume(asset_obj, costume_name, thumbnail, project=None, groups=[], user=None, date=None, comments='')
+
+
+.. py:function:: reset_control_objs(namespace)
+
+
+.. py:function:: list_character_costumes(wmodel_id, get_fields=None)
+
+
+.. py:function:: import_costume(costume_id, qprogress_bar=None)
+
+
+.. py:function:: setup_mesh_visibilities(nsp)
+
+   Since we are working in sequences, we need to control the visibility of the asset.
+   This will connect visibility for all render meshes and connect it to the global SRT.
+
+
+.. py:function:: remove_costume(costume_id, ref_node)
+
+

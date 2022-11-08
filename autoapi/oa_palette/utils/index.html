@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa_palette.utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title=" oa_shot_builder" href="../../oa_shot_builder/index.html" />
+    <link rel="prev" title=" oa_palette.palette" href="../palette/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../binding/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette.binding</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette.palette</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette.utils</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette.utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/oa_palette/utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa_palette.utils">
+<span id="oa-palette-utils"></span><h1> <a class="reference internal" href="#module-oa_palette.utils" title="oa_palette.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette.utils</span></code></a><a class="headerlink" href="#module-oa_palette.utils" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.get_logger" title="oa_palette.utils.get_logger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_logger</span></code></a>(logger[, ui])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils._parse_userinfo" title="oa_palette.utils._parse_userinfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_parse_userinfo</span></code></a>(user_info_json[, convert])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils._read_userinfo" title="oa_palette.utils._read_userinfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_read_userinfo</span></code></a>(definition[, check_key, convert])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils._write_userinfo" title="oa_palette.utils._write_userinfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_write_userinfo</span></code></a>(definition, user_info)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.get_metadata" title="oa_palette.utils.get_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_metadata</span></code></a>(definition)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils._get_metadata_from_userinfo" title="oa_palette.utils._get_metadata_from_userinfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_metadata_from_userinfo</span></code></a>(definition[, convert])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils._get_metadata_from_section" title="oa_palette.utils._get_metadata_from_section"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_metadata_from_section</span></code></a>(definition)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils.set_metadata" title="oa_palette.utils.set_metadata"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_metadata</span></code></a>(definition, **kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.get_binding_data" title="oa_palette.utils.get_binding_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_binding_data</span></code></a>(definition)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils._get_binding_data_from_userinfo" title="oa_palette.utils._get_binding_data_from_userinfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_binding_data_from_userinfo</span></code></a>(definition[, convert])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils._get_binding_data_from_section" title="oa_palette.utils._get_binding_data_from_section"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_binding_data_from_section</span></code></a>(definition)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils.set_binding_data" title="oa_palette.utils.set_binding_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_binding_data</span></code></a>(definition, binding_data)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.get_hda_section" title="oa_palette.utils.get_hda_section"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_hda_section</span></code></a>(definition, section_name[, create_section])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils._json_encoder" title="oa_palette.utils._json_encoder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_json_encoder</span></code></a>(obj)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils._convert_data" title="oa_palette.utils._convert_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_convert_data</span></code></a>(data[, ignore_dicts])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils._json_decoder" title="oa_palette.utils._json_decoder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_json_decoder</span></code></a>(obj)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.save_to_section" title="oa_palette.utils.save_to_section"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_to_section</span></code></a>(section, data)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils.load_from_section" title="oa_palette.utils.load_from_section"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_from_section</span></code></a>(section)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.get_palette_infos" title="oa_palette.utils.get_palette_infos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_palette_infos</span></code></a>(section)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils.is_locked_hda" title="oa_palette.utils.is_locked_hda"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_locked_hda</span></code></a>(node)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.is_digital_asset" title="oa_palette.utils.is_digital_asset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_digital_asset</span></code></a>(node)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils.is_from_scanned_dir" title="oa_palette.utils.is_from_scanned_dir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_from_scanned_dir</span></code></a>(path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.make_embedded" title="oa_palette.utils.make_embedded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_embedded</span></code></a>(definition[, type_name, menu_name])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils.uninstall_type_definitions" title="oa_palette.utils.uninstall_type_definitions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uninstall_type_definitions</span></code></a>(category, type_name)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.is_palette" title="oa_palette.utils.is_palette"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_palette</span></code></a>(node)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils.clear_definition_preferences" title="oa_palette.utils.clear_definition_preferences"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_definition_preferences</span></code></a>(node_type)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.keep_single_definition" title="oa_palette.utils.keep_single_definition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">keep_single_definition</span></code></a>(definition)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils.is_valid_comment" title="oa_palette.utils.is_valid_comment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_valid_comment</span></code></a>(comment)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.update_nodes" title="oa_palette.utils.update_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_nodes</span></code></a>(node_type)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils.install" title="oa_palette.utils.install"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install</span></code></a>(type_name, identifier)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.get_storage_item_from_definition" title="oa_palette.utils.get_storage_item_from_definition"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_storage_item_from_definition</span></code></a>(definition[, latest])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.utils.get_storage_item" title="oa_palette.utils.get_storage_item"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_storage_item</span></code></a>(identifier[, latest])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.utils.scanned_dirs" title="oa_palette.utils.scanned_dirs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scanned_dirs</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa_palette.utils.scanned_dirs">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">scanned_dirs</span></span><a class="headerlink" href="#oa_palette.utils.scanned_dirs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.get_logger">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">get_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ui</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.get_logger" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils._parse_userinfo">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">_parse_userinfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_info_json</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils._parse_userinfo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils._read_userinfo">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">_read_userinfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils._read_userinfo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils._write_userinfo">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">_write_userinfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils._write_userinfo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.get_metadata">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">get_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.get_metadata" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils._get_metadata_from_userinfo">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">_get_metadata_from_userinfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils._get_metadata_from_userinfo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils._get_metadata_from_section">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">_get_metadata_from_section</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils._get_metadata_from_section" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.set_metadata">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">set_metadata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.set_metadata" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.get_binding_data">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">get_binding_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.get_binding_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils._get_binding_data_from_userinfo">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">_get_binding_data_from_userinfo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">convert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils._get_binding_data_from_userinfo" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils._get_binding_data_from_section">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">_get_binding_data_from_section</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils._get_binding_data_from_section" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.set_binding_data">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">set_binding_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">binding_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.set_binding_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.get_hda_section">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">get_hda_section</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">section_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_section</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.get_hda_section" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils._json_encoder">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">_json_encoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils._json_encoder" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils._convert_data">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">_convert_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_dicts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils._convert_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils._json_decoder">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">_json_decoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils._json_decoder" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.save_to_section">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">save_to_section</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">section</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.save_to_section" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.load_from_section">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">load_from_section</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">section</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.load_from_section" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.get_palette_infos">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">get_palette_infos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">section</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.get_palette_infos" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.is_locked_hda">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">is_locked_hda</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.is_locked_hda" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.is_digital_asset">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">is_digital_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.is_digital_asset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.is_from_scanned_dir">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">is_from_scanned_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.is_from_scanned_dir" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.make_embedded">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">make_embedded</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">menu_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.make_embedded" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.uninstall_type_definitions">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">uninstall_type_definitions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.uninstall_type_definitions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.is_palette">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">is_palette</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.is_palette" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.clear_definition_preferences">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">clear_definition_preferences</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.clear_definition_preferences" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.keep_single_definition">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">keep_single_definition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.keep_single_definition" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.is_valid_comment">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">is_valid_comment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">comment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.is_valid_comment" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.update_nodes">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">update_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.update_nodes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.install">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">install</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.install" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.get_storage_item_from_definition">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">get_storage_item_from_definition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latest</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.get_storage_item_from_definition" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.utils.get_storage_item">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.utils.</span></span><span class="sig-name descname"><span class="pre">get_storage_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latest</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.utils.get_storage_item" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../palette/index.html" class="btn btn-neutral float-left" title=" oa_palette.palette" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../oa_shot_builder/index.html" class="btn btn-neutral float-right" title=" oa_shot_builder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

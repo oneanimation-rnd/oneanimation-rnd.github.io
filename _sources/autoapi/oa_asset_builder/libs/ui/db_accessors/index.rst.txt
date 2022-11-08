@@ -1,0 +1,51 @@
+ :py:mod:`oa_asset_builder.libs.ui.db_accessors`
+================================================================================================
+
+.. py:module:: oa_asset_builder.libs.ui.db_accessors
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.ui.db_accessors.MongoDBAccessor
+
+
+
+
+.. py:class:: MongoDBAccessor(project, database='test-main-db')
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: get_episodes()
+
+
+   .. py:method:: get_sequences(episode)
+
+
+   .. py:method:: get_scenes(episode, sequence)
+
+
+   .. py:method:: get_scenes_by_regex(regex)
+
+
+   .. py:method:: get_asset_types()
+
+
+   .. py:method:: get_asset_categories(asset_type, asset_level=None)
+
+
+   .. py:method:: get_asset_levels()
+
+
+   .. py:method:: get_assets(asset_type=None, asset_level=None, asset_category=None)
+
+
+   .. py:method:: get_assets_by_regex(regex)
+
+
+

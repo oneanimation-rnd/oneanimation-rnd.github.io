@@ -1,0 +1,242 @@
+ :py:mod:`oa.animation.tools.frustum.frustum`
+==========================================================================================
+
+.. py:module:: oa.animation.tools.frustum.frustum
+
+.. autoapi-nested-parse::
+
+   Author: Jason Labbe
+
+   Optimizes Maya scenes to purge any geometry that is outside of the
+   camera's view and center of interest.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.frustum.frustum.get_scene_cp
+   oa.animation.tools.frustum.frustum.get_scene_info
+   oa.animation.tools.frustum.frustum.get_shot_frame_ranges
+   oa.animation.tools.frustum.frustum.get_camera
+   oa.animation.tools.frustum.frustum.mdag_by_name
+   oa.animation.tools.frustum.frustum.is_instanced
+   oa.animation.tools.frustum.frustum.get_instance_number
+   oa.animation.tools.frustum.frustum.get_instance_root
+   oa.animation.tools.frustum.frustum.get_all_character_meshes
+   oa.animation.tools.frustum.frustum.get_scene_instances
+   oa.animation.tools.frustum.frustum.draw_bounding_box
+   oa.animation.tools.frustum.frustum.get_camera_interest
+   oa.animation.tools.frustum.frustum.get_bounding_box
+   oa.animation.tools.frustum.frustum.aabb_collision_check
+   oa.animation.tools.frustum.frustum.get_char_ref_path
+   oa.animation.tools.frustum.frustum.get_asset_render_shapes
+   oa.animation.tools.frustum.frustum.get_objs_in_view
+   oa.animation.tools.frustum.frustum.get_objs_by_proximity
+   oa.animation.tools.frustum.frustum.get_objs_in_frustum
+   oa.animation.tools.frustum.frustum.do_frustum_culling
+
+
+
+.. py:function:: get_scene_cp()
+
+   Gets SceneCP if it exists.
+
+   :returns: The name of the SceneCP, or None if it doesn't exist.
+
+   :raises AssertionError: When it can't find it in the scene.
+
+
+.. py:function:: get_scene_info()
+
+   Gets shot data from scene cp.
+
+   :returns: A dictionary of all the shot info.
+
+   :raises AssertionError: If the scene_info can't be found on the SceneCP.
+
+
+.. py:function:: get_shot_frame_ranges(shot)
+
+   Gets start and end frames of a shot.
+
+   :param shot: Shot name including zero padding.
+   :type shot: string
+
+   :raises AssertionError: If it's unable to find a shot in the SceneCP.
+
+   :returns: A list with the start and end frames.
+
+
+.. py:function:: get_camera()
+
+   Gets scene's camera shape and returns it.
+
+   :raises AssertionError: If camera can't be found.
+
+
+.. py:function:: mdag_by_name(name)
+
+   Creates an MDagPath object with supplied name.
+
+   :param name: Name of an existing object.
+   :type name: string
+
+   :returns: The object wrapped in an MDagPath.
+
+   :raises AssertionError: If object can't be found in the scene.
+
+
+.. py:function:: is_instanced(obj)
+
+   Checks and returns boolean if object is an instance or not.
+
+
+.. py:function:: get_instance_number(obj)
+
+   Gets the object's unique instance number.
+
+   :returns: An integer representing its instance number.
+             An object that isn't instanced will always return 0.
+
+
+.. py:function:: get_instance_root(obj)
+
+   Goes up hierarchy until it finds the root object that defined the instance.
+
+   :returns: The name of the root object.
+             An object that isn't instanced will simply return itself.
+
+
+.. py:function:: get_all_character_meshes()
+
+
+.. py:function:: get_scene_instances()
+
+   Gets and returns all instance roots in the scene.
+
+
+.. py:function:: draw_bounding_box(transform)
+
+   Creates a box to represent the object's bounding box.
+
+   :param transform: A transform's name.
+   :type transform: string
+
+   :raises AssertionError: If transform doesn't have a mesh shape.
+
+
+.. py:function:: get_camera_interest(camera)
+
+   Finds and returns position of a camera's center of interest.
+
+   :param camera: A camera's name.
+   :type camera: string
+
+   :returns: A float list representing its position.
+
+   :raises AssertionError: If a camera is not supplied or it can't find its coi attribute.
+
+
+.. py:function:: get_bounding_box(obj)
+
+   Gets and returns object's bounding box information.
+
+   :param obj: Object's transform, not its shape.
+   :type obj: string
+
+   :returns: 2 lists of floats that represent the bounding box's minimum and maximum positions.
+
+
+.. py:function:: aabb_collision_check(min_1, max_1, min_2, max_2)
+
+   Compares two bounding boxes to see if they are colliding.
+
+   :param min_1: First bounding box's min position.
+   :type min_1: float[]
+   :param max_1: First bounding box's max position.
+   :type max_1: float[]
+   :param min_2: Second bounding box's min position.
+   :type min_2: float[]
+   :param max_2: Second bounding box's max position.
+   :type max_2: float[]
+
+   :returns: A boolean to indicate if there is a collision.
+
+
+.. py:function:: get_char_ref_path(obj)
+
+
+.. py:function:: get_asset_render_shapes(ref_path)
+
+
+.. py:function:: get_objs_in_view(camera, frame_width=960, frame_height=540)
+
+   Collects any geometries that are within view of supplied camera.
+
+   :param camera: A camera's name.
+   :type camera: string
+   :param frame_width:
+   :type frame_width: float
+   :param frame_height:
+   :type frame_height: float
+
+   :returns: Multi-array of geometry names and instances that are in view.
+
+
+.. py:function:: get_objs_by_proximity(camera, culling_area_size, exclude_meshes=[], draw_culling_area=False)
+
+   Collects any geometries that are within a valid distance from the supplied camera's center of interest.
+   Works on the current frame.
+
+   :param camera: A camera's name.
+   :type camera: string
+   :param culling_area_size: The size of the camera's center of interest bounding box.
+   :type culling_area_size: float
+   :param exclude_meshes: List of mesh names to skip over.
+   :type exclude_meshes: string[]
+   :param draw_culling_area: Creates a box that represents the camera's center of interest bounding box.
+   :type draw_culling_area: bool
+
+   :returns: Multi-array of geometry names and instances that inside culling area.
+
+
+.. py:function:: get_objs_in_frustum(camera, culling_area_size=40.0, exclude_meshes=[], draw_culling_area=False)
+
+   Collects objects that are within the camera's frustum and center of interest.
+   This is performed on the current frame.
+
+   :param camera: A camera's name.
+   :type camera: string
+   :param culling_area_size: The size of the camera's center of interest bounding box.
+   :type culling_area_size: float
+   :param exclude_meshes: A list of mesh names that it will skip over.
+   :type exclude_meshes: string[]
+   :param draw_culling_area: Creates a box that represents the camera's center of interest bounding box.
+   :type draw_culling_area: bool
+
+   :returns: Multi-array of geometry names and instances that are inside frustum.
+
+
+.. py:function:: do_frustum_culling(camera, shot, culling_area_size=40.0, draw_culling_area=False)
+
+   Hides all meshes that are outside of the camera's frustum.
+
+   :param camera: A camera's name.
+   :type camera: string
+   :param shot: A shot's name with zero padding.
+   :type shot: string
+   :param culling_area_size: The size of the camera's center of interest bounding box.
+   :type culling_area_size: float
+   :param draw_culling_area: Creates a box that represents the camera's center of interest bounding box.
+   :type draw_culling_area: bool
+
+   :returns: Multi-array of geometry names and instances that are inside frustum.
+
+

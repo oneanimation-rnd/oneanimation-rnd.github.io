@@ -1,0 +1,16 @@
+ :py:mod:`oa.animation.libs.anim_curves`
+================================================================================
+
+.. py:module:: oa.animation.libs.anim_curves
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   clean_anim_curves/index.rst
+   delete_keys/index.rst
+
+

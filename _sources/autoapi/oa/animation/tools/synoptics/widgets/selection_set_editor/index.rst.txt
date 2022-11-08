@@ -1,0 +1,60 @@
+ :py:mod:`oa.animation.tools.synoptics.widgets.selection_set_editor`
+========================================================================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.widgets.selection_set_editor
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.widgets.selection_set_editor.SelectionSetEditor
+
+
+
+
+.. py:class:: SelectionSetEditor(item, view, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   Window to assign a selection set members to an item.
+
+   :param item:
+   :type item: DesignerItem
+   :param view:
+   :type view: QGraphicsView
+   :param parent:
+   :type parent: QWidget
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: add_items()
+
+      Clear previous list and add selected items.
+
+
+   .. py:method:: update_listview()
+
+      Refresh's listview with current items.
+
+
+   .. py:method:: remove_selected()
+
+
+   .. py:method:: clear_all()
+
+
+   .. py:method:: closeEvent(event)
+
+      Assigns the selection set on close.
+
+
+   .. py:method:: run()
+
+
+

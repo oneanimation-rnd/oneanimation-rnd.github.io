@@ -1,0 +1,55 @@
+ :py:mod:`oa_utils.database.wrappers.w_user`
+========================================================================================
+
+.. py:module:: oa_utils.database.wrappers.w_user
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_user._meta
+   oa_utils.database.wrappers.w_user.WUser
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_user.LOGGER
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:class:: _meta
+
+   Bases: :py:obj:`type`
+
+   .. py:method:: __getattr__(name)
+      :classmethod:
+
+
+
+.. py:class:: WUser(user)
+
+   .. py:property:: wrapped
+
+
+   .. py:method:: upsert(name=None, email=None, thumbnail=None)
+      :classmethod:
+
+
+   .. py:method:: __getattr__(name)
+
+
+

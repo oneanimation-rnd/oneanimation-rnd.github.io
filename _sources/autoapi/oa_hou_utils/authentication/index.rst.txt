@@ -1,0 +1,70 @@
+ :py:mod:`oa_hou_utils.authentication`
+============================================================================
+
+.. py:module:: oa_hou_utils.authentication
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_hou_utils.authentication.AuthWidget
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_hou_utils.authentication.EMAIL_REGEX
+
+
+.. py:data:: EMAIL_REGEX
+   
+
+   
+
+.. py:class:: AuthWidget(authenticator, parent=hou.qt.mainWindow())
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: _init_widgets()
+
+
+   .. py:method:: _init_layout()
+
+
+   .. py:method:: _init_connections()
+
+
+   .. py:method:: _set_state(state)
+
+
+   .. py:method:: _set_next_state(state)
+
+
+   .. py:method:: _switch_to_next_state()
+
+
+   .. py:method:: _show_error(error_msg)
+
+
+   .. py:method:: _hide_error()
+
+
+   .. py:method:: _on_text_changed()
+
+
+   .. py:method:: _on_signin_button_clicked()
+
+
+   .. py:method:: closeEvent(event)
+
+
+

@@ -1,0 +1,45 @@
+ :py:mod:`bd.storage.structure`
+==============================================================
+
+.. py:module:: bd.storage.structure
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   item/index.rst
+   schema/index.rst
+
+
+Package Contents
+----------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.structure.Schema
+
+
+
+
+.. py:class:: Schema(schema_dir)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: cached_anchors
+      
+
+      
+
+   .. py:method:: get_items()
+
+
+   .. py:method:: get_item(tags)
+
+
+

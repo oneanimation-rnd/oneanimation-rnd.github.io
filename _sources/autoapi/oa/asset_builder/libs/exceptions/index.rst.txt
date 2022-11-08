@@ -1,0 +1,37 @@
+ :py:mod:`oa.asset_builder.libs.exceptions`
+======================================================================================
+
+.. py:module:: oa.asset_builder.libs.exceptions
+
+
+Module Contents
+---------------
+
+.. py:exception:: AssetBuilderError(message=None, details=None)
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+   .. py:attribute:: default_message
+      :annotation: = Unspecified error occurred
+
+      
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+
+.. py:exception:: DescriptionError(message=None, details=None)
+
+   Bases: :py:obj:`AssetBuilderError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+

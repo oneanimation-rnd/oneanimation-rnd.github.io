@@ -1,0 +1,26 @@
+ :py:mod:`oa.animation.tools.attach_to_surface.attach_to_surface`
+==================================================================================================================================
+
+.. py:module:: oa.animation.tools.attach_to_surface.attach_to_surface
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.attach_to_surface.attach_to_surface.attach
+   oa.animation.tools.attach_to_surface.attach_to_surface.attach_to_selection
+
+
+
+.. py:function:: attach(mesh, select, color=None, size=2.5, name='attach')
+
+
+.. py:function:: attach_to_selection()
+
+

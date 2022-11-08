@@ -1,0 +1,190 @@
+ :py:mod:`bd.storage.core`
+====================================================
+
+.. py:module:: bd.storage.core
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.core.Identifier
+   bd.storage.core.MetaItem
+   bd.storage.core.StorageItem
+   bd.storage.core.StoragePool
+
+
+
+
+.. py:class:: Identifier(tags=None, fields=None)
+
+   Bases: :py:obj:`bd.storage.edits.TagsEdit`, :py:obj:`bd.storage.edits.FieldsEdit`
+
+   .. py:method:: hash()
+
+
+   .. py:method:: copy()
+
+
+   .. py:method:: pure()
+
+
+   .. py:method:: __str__()
+
+
+   .. py:method:: __repr__()
+
+
+
+.. py:class:: MetaItem(tags, schema_item, storage)
+
+   Bases: :py:obj:`bd.storage.mixins.TagsMixin`, :py:obj:`bd.storage.mixins.ChainItemMixin`
+
+   .. py:property:: type
+
+
+   .. py:property:: template
+
+
+   .. py:property:: storage
+
+
+   .. py:property:: adapter
+
+
+   .. py:property:: accessor
+
+
+   .. py:property:: formatter
+
+
+   .. py:property:: project
+
+
+   .. py:method:: get_storage_item(fields)
+
+
+   .. py:method:: build_rpath(fields)
+
+
+   .. py:method:: __str__()
+
+
+   .. py:method:: __repr__()
+
+
+
+.. py:class:: StorageItem(rpath, fields, meta_item)
+
+   Bases: :py:obj:`bd.storage.mixins.TagsMixin`, :py:obj:`bd.storage.mixins.FieldsMixin`, :py:obj:`bd.storage.edits.MetadataEdit`, :py:obj:`bd.storage.mixins.ChainItemMixin`
+
+   .. py:property:: rpath
+
+
+   .. py:property:: type
+
+
+   .. py:property:: storage
+
+
+   .. py:property:: accessor
+
+
+   .. py:property:: meta_item
+
+
+   .. py:method:: get_identifier()
+
+
+   .. py:method:: exists(check_upstream=False)
+
+
+   .. py:method:: get_filesystem_path()
+
+
+   .. py:method:: read(current_item_only=False, upstream=True, with_metadata=False)
+
+
+   .. py:method:: _dump_metadata()
+
+
+   .. py:method:: _load_metadata()
+
+
+   .. py:method:: write(data, current_item_only=False, upstream=True, with_metadata=False)
+
+
+   .. py:method:: pull(with_metadata=False)
+
+
+   .. py:method:: push(with_metadata=False)
+
+
+   .. py:method:: make_directories()
+
+
+   .. py:method:: remove(propagate=True)
+
+
+   .. py:method:: __str__()
+
+
+   .. py:method:: __repr__()
+
+
+
+.. py:class:: StoragePool(config)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: project
+
+
+   .. py:property:: storages
+
+
+   .. py:method:: get_global_instance()
+      :classmethod:
+
+
+   .. py:method:: create(config, global_instance=False)
+      :classmethod:
+
+
+   .. py:method:: get_storage_item_from_filename(filename)
+
+
+   .. py:method:: get_item(tags)
+
+      Find MetaItem by tags.
+
+      :param tags:
+      :type tags: TagsMixin
+
+      :rtype: MetaItem
+
+
+   .. py:method:: get_storage_item(identifier)
+
+      Create storage item for the provided identifier.
+
+      :param identifier: identifier object
+      :type identifier: Identifier
+
+      :returns: storage item
+      :rtype: StorageItem
+
+
+   .. py:method:: _init_storages()
+
+      Initialize storages from provided configuration.
+
+      :returns: Cached list of Storage objects.
+      :rtype: list
+
+
+

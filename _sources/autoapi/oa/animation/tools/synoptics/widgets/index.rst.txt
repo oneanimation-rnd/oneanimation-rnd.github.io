@@ -1,0 +1,30 @@
+ :py:mod:`oa.animation.tools.synoptics.widgets`
+==============================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.widgets
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   items/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   code_text_edit/index.rst
+   delete_dialog/index.rst
+   qflow_layout/index.rst
+   script_editor/index.rst
+   selection_set_editor/index.rst
+   syntax_highlighter/index.rst
+   text_settings_dialog/index.rst
+
+

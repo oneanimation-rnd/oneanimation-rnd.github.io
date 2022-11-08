@@ -1,0 +1,50 @@
+ :py:mod:`oa_asset_builder.libs.ui.widgets.asset_tree`
+============================================================================================================
+
+.. py:module:: oa_asset_builder.libs.ui.widgets.asset_tree
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.ui.widgets.asset_tree.AssetTree
+
+
+
+
+.. py:class:: AssetTree(project, parent=None)
+
+   Bases: :py:obj:`oa.qt_utils.lazy_tree.LazyTree`
+
+   .. py:class:: EntityTypes
+
+
+   .. py:attribute:: item_clicked
+      
+
+      
+
+   .. py:method:: _init_icons()
+
+
+   .. py:method:: load_children_by_regex(regex)
+
+
+   .. py:method:: load_children(parent_item)
+
+
+   .. py:method:: _add_thumbnail_data(item, path)
+
+
+   .. py:method:: on_item_clicked(item)
+
+
+   .. py:method:: append_item(parent_item, label, entity_type, key=None, is_expandable=True)
+
+
+

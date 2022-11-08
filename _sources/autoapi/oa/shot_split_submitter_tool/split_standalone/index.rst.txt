@@ -1,0 +1,35 @@
+ :py:mod:`oa.shot_split_submitter_tool.split_standalone`
+================================================================================================================
+
+.. py:module:: oa.shot_split_submitter_tool.split_standalone
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_split_submitter_tool.split_standalone.main
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_split_submitter_tool.split_standalone.data
+
+
+.. py:function:: main(data)
+
+
+.. py:data:: data
+   
+
+   
+

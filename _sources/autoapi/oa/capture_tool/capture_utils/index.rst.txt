@@ -1,0 +1,42 @@
+ :py:mod:`oa.capture_tool.capture_utils`
+================================================================================
+
+.. py:module:: oa.capture_tool.capture_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.capture_tool.capture_utils.serialize_rect
+   oa.capture_tool.capture_utils.get_user_settings
+   oa.capture_tool.capture_utils.save_user_settings
+   oa.capture_tool.capture_utils.send_media_to_ticket_tool
+   oa.capture_tool.capture_utils.draw_cursor
+   oa.capture_tool.capture_utils.draw_text
+
+
+
+.. py:function:: serialize_rect(rect)
+
+
+.. py:function:: get_user_settings()
+
+
+.. py:function:: save_user_settings(items)
+
+
+.. py:function:: send_media_to_ticket_tool(path, host='localhost')
+
+
+.. py:function:: draw_cursor(qpainter, x, y, mouse_pixmap, highlight_size, highlight_color)
+
+
+.. py:function:: draw_text(qpainter, x, y, frame_num, font, fill_color, stroke_color)
+
+

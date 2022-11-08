@@ -1,0 +1,21 @@
+ :py:mod:`oa_utils.database.wrappers`
+==========================================================================
+
+.. py:module:: oa_utils.database.wrappers
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   w_anmclip/index.rst
+   w_file/index.rst
+   w_model/index.rst
+   w_revision/index.rst
+   w_scene/index.rst
+   w_show/index.rst
+   w_user/index.rst
+
+

@@ -1,0 +1,107 @@
+ :py:mod:`oa.anim_library.tool.utils.enums`
+======================================================================================
+
+.. py:module:: oa.anim_library.tool.utils.enums
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.utils.enums.QTagSize
+   oa.anim_library.tool.utils.enums.SelectionType
+   oa.anim_library.tool.utils.enums.SpaceType
+   oa.anim_library.tool.utils.enums.ImportType
+   oa.anim_library.tool.utils.enums.TagSearchType
+   oa.anim_library.tool.utils.enums.Servers
+
+
+
+
+.. py:class:: QTagSize
+
+   .. py:attribute:: Small
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Normal
+      :annotation: = 1
+
+      
+
+
+.. py:class:: SelectionType
+
+   .. py:attribute:: Selection
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: All
+      :annotation: = 1
+
+      
+
+
+.. py:class:: SpaceType
+
+   .. py:attribute:: Absolute
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Relative
+      :annotation: = 1
+
+      
+
+
+.. py:class:: ImportType
+
+   .. py:attribute:: Replace
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Insert
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: Merge
+      :annotation: = 2
+
+      
+
+
+.. py:class:: TagSearchType
+
+   .. py:attribute:: All
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Any
+      :annotation: = 1
+
+      
+
+
+.. py:class:: Servers
+
+   .. py:attribute:: Singapore
+      
+
+      
+
+   .. py:attribute:: Jakarta
+      
+
+      
+
+

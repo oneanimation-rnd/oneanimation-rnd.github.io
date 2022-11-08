@@ -1,0 +1,70 @@
+ :py:mod:`oa.shot_split_submitter_tool.widgets.files_list_widget`
+==================================================================================================================================
+
+.. py:module:: oa.shot_split_submitter_tool.widgets.files_list_widget
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_split_submitter_tool.widgets.files_list_widget.ListWidgetItem
+   oa.shot_split_submitter_tool.widgets.files_list_widget.FilesListWidget
+
+
+
+
+.. py:class:: ListWidgetItem(label, path, pixmap=None, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListWidgetItem`
+
+
+.. py:class:: FilesListWidget(icon_size=60, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListWidget`
+
+   .. py:attribute:: scn_added
+      
+
+      
+
+   .. py:attribute:: scn_removed
+      
+
+      
+
+   .. py:method:: paintEvent(paint_event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: dragEnterEvent(event)
+
+
+   .. py:method:: dragLeaveEvent(event)
+
+
+   .. py:method:: dragMoveEvent(event)
+
+
+   .. py:method:: dropEvent(event)
+
+
+   .. py:method:: add_items(paths)
+
+
+   .. py:method:: remove_items(rows)
+
+
+   .. py:method:: get_item_paths()
+
+
+   .. py:method:: selected_rows()
+
+
+

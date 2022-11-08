@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa_asset_builder.libs.description &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title=" oa_asset_builder.libs.storage" href="../storage/index.html" />
+    <link rel="prev" title=" oa_asset_builder.libs.ui.db_accessors" href="../ui/db_accessors/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder.libs</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder.libs</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder.libs.description</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/oa_asset_builder/libs/description/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa_asset_builder.libs.description">
+<span id="oa-asset-builder-libs-description"></span><h1> <a class="reference internal" href="#module-oa_asset_builder.libs.description" title="oa_asset_builder.libs.description"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder.libs.description</span></code></a><a class="headerlink" href="#module-oa_asset_builder.libs.description" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_asset_builder.libs.description.ObjectDescription" title="oa_asset_builder.libs.description.ObjectDescription"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObjectDescription</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_asset_builder.libs.description.MaterialDescription" title="oa_asset_builder.libs.description.MaterialDescription"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MaterialDescription</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_asset_builder.libs.description.InstanceDescription" title="oa_asset_builder.libs.description.InstanceDescription"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InstanceDescription</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_asset_builder.libs.description.AssetDescription" title="oa_asset_builder.libs.description.AssetDescription"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssetDescription</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.ObjectDescription">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_asset_builder.libs.description.</span></span><span class="sig-name descname"><span class="pre">ObjectDescription</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inf_object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.ObjectDescription" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.ObjectDescription.guid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">guid</span></span><a class="headerlink" href="#oa_asset_builder.libs.description.ObjectDescription.guid" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.ObjectDescription.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#oa_asset_builder.libs.description.ObjectDescription.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.ObjectDescription.abcpath">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">abcpath</span></span><a class="headerlink" href="#oa_asset_builder.libs.description.ObjectDescription.abcpath" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.ObjectDescription.material">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">material</span></span><a class="headerlink" href="#oa_asset_builder.libs.description.ObjectDescription.material" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.ObjectDescription.subdiv">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">subdiv</span></span><a class="headerlink" href="#oa_asset_builder.libs.description.ObjectDescription.subdiv" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.MaterialDescription">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_asset_builder.libs.description.</span></span><span class="sig-name descname"><span class="pre">MaterialDescription</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inf_material</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.MaterialDescription" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.MaterialDescription.guid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">guid</span></span><a class="headerlink" href="#oa_asset_builder.libs.description.MaterialDescription.guid" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.MaterialDescription.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#oa_asset_builder.libs.description.MaterialDescription.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.MaterialDescription.color">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">color</span></span><a class="headerlink" href="#oa_asset_builder.libs.description.MaterialDescription.color" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.InstanceDescription">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_asset_builder.libs.description.</span></span><span class="sig-name descname"><span class="pre">InstanceDescription</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inf_instance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.InstanceDescription" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.InstanceDescription.guid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">guid</span></span><a class="headerlink" href="#oa_asset_builder.libs.description.InstanceDescription.guid" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.InstanceDescription.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#oa_asset_builder.libs.description.InstanceDescription.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.InstanceDescription.abcpath">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">abcpath</span></span><a class="headerlink" href="#oa_asset_builder.libs.description.InstanceDescription.abcpath" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.InstanceDescription.master_guid">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">master_guid</span></span><a class="headerlink" href="#oa_asset_builder.libs.description.InstanceDescription.master_guid" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.AssetDescription">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_asset_builder.libs.description.</span></span><span class="sig-name descname"><span class="pre">AssetDescription</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inf_asset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage_manager</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.AssetDescription" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.AssetDescription.from_asset_path">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_asset_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_scene_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.AssetDescription.from_asset_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.AssetDescription.from_inf_asset">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_inf_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inf_asset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.AssetDescription.from_inf_asset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.AssetDescription._parse_description">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_parse_description</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.AssetDescription._parse_description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.AssetDescription.get_asm">
+<span class="sig-name descname"><span class="pre">get_asm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.AssetDescription.get_asm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.AssetDescription.get_asset_info">
+<span class="sig-name descname"><span class="pre">get_asset_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.AssetDescription.get_asset_info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.AssetDescription.get_asset_fullname">
+<span class="sig-name descname"><span class="pre">get_asset_fullname</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.AssetDescription.get_asset_fullname" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.AssetDescription.get_object_descriptions">
+<span class="sig-name descname"><span class="pre">get_object_descriptions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.AssetDescription.get_object_descriptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.AssetDescription.get_asset_descriptions">
+<span class="sig-name descname"><span class="pre">get_asset_descriptions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.AssetDescription.get_asset_descriptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.AssetDescription.get_instance_descriptions">
+<span class="sig-name descname"><span class="pre">get_instance_descriptions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.AssetDescription.get_instance_descriptions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_asset_builder.libs.description.AssetDescription.get_mat_description_map">
+<span class="sig-name descname"><span class="pre">get_mat_description_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_asset_builder.libs.description.AssetDescription.get_mat_description_map" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../ui/db_accessors/index.html" class="btn btn-neutral float-left" title=" oa_asset_builder.libs.ui.db_accessors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../storage/index.html" class="btn btn-neutral float-right" title=" oa_asset_builder.libs.storage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,1986 @@
+ :py:mod:`oa_utils.xml_info_api`
+================================================================
+
+.. py:module:: oa_utils.xml_info_api
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.xml_info_api.root
+   oa_utils.xml_info_api.INFAsset
+   oa_utils.xml_info_api.INFCluster
+   oa_utils.xml_info_api.INFGroup
+   oa_utils.xml_info_api.INFInfo
+   oa_utils.xml_info_api.INFInstance
+   oa_utils.xml_info_api.INFMaterial
+   oa_utils.xml_info_api.INFModel
+   oa_utils.xml_info_api.INFObject
+   oa_utils.xml_info_api.INFShot
+   oa_utils.xml_info_api.INFPass
+   oa_utils.xml_info_api.INFScene
+   oa_utils.xml_info_api.INFClusterList
+   oa_utils.xml_info_api.INFMemberList
+   oa_utils.xml_info_api.INFTargetList
+   oa_utils.xml_info_api.INFShotList
+   oa_utils.xml_info_api.INFGrpList
+   oa_utils.xml_info_api.INFModList
+   oa_utils.xml_info_api.INFInstList
+   oa_utils.xml_info_api.INFObjList
+   oa_utils.xml_info_api.INFPassList
+   oa_utils.xml_info_api.INFMatList
+   oa_utils.xml_info_api.INFTexList
+   oa_utils.xml_info_api.INFMember
+
+
+
+
+.. py:class:: root(type_='AssetInfo', syntax_version='4.0', Scene=None, Asset=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Scene()
+
+
+   .. py:method:: set_Scene(Scene)
+
+
+   .. py:method:: get_Asset()
+
+
+   .. py:method:: set_Asset(Asset)
+
+
+   .. py:method:: get_type()
+
+
+   .. py:method:: set_type(type_)
+
+
+   .. py:method:: get_syntax_version()
+
+
+   .. py:method:: set_syntax_version(syntax_version)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='root', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='root')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='root', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='root')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFAsset(name=None, level=None, res=None, prj=None, path=None, type_=None, id=None, AssetName=None, Resolution=None, Cache=None, Episode=None, Category=None, SubCategory=None, Models=None, Instances=None, Objects=None, Materials=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_AssetName()
+
+
+   .. py:method:: set_AssetName(AssetName)
+
+
+   .. py:method:: get_Resolution()
+
+
+   .. py:method:: set_Resolution(Resolution)
+
+
+   .. py:method:: get_Cache()
+
+
+   .. py:method:: set_Cache(Cache)
+
+
+   .. py:method:: get_Episode()
+
+
+   .. py:method:: set_Episode(Episode)
+
+
+   .. py:method:: get_Category()
+
+
+   .. py:method:: set_Category(Category)
+
+
+   .. py:method:: get_SubCategory()
+
+
+   .. py:method:: set_SubCategory(SubCategory)
+
+
+   .. py:method:: get_Models()
+
+
+   .. py:method:: set_Models(Models)
+
+
+   .. py:method:: get_Instances()
+
+
+   .. py:method:: set_Instances(Instances)
+
+
+   .. py:method:: get_Objects()
+
+
+   .. py:method:: set_Objects(Objects)
+
+
+   .. py:method:: get_Materials()
+
+
+   .. py:method:: set_Materials(Materials)
+
+
+   .. py:method:: get_name()
+
+
+   .. py:method:: set_name(name)
+
+
+   .. py:method:: get_level()
+
+
+   .. py:method:: set_level(level)
+
+
+   .. py:method:: get_res()
+
+
+   .. py:method:: set_res(res)
+
+
+   .. py:method:: get_prj()
+
+
+   .. py:method:: set_prj(prj)
+
+
+   .. py:method:: get_path()
+
+
+   .. py:method:: set_path(path)
+
+
+   .. py:method:: get_type()
+
+
+   .. py:method:: set_type(type_)
+
+
+   .. py:method:: get_id()
+
+
+   .. py:method:: set_id(id)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFAsset', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFAsset')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFAsset', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFAsset')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFCluster(material=None, type_=None, name=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_material()
+
+
+   .. py:method:: set_material(material)
+
+
+   .. py:method:: get_type()
+
+
+   .. py:method:: set_type(type_)
+
+
+   .. py:method:: get_name()
+
+
+   .. py:method:: set_name(name)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFCluster', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFCluster')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFCluster', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFCluster')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFGroup(viewvis=2, type_=None, name=None, rendvis=2, Members=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Members()
+
+
+   .. py:method:: set_Members(Members)
+
+
+   .. py:method:: get_viewvis()
+
+
+   .. py:method:: set_viewvis(viewvis)
+
+
+   .. py:method:: get_type()
+
+
+   .. py:method:: set_type(type_)
+
+
+   .. py:method:: get_name()
+
+
+   .. py:method:: set_name(name)
+
+
+   .. py:method:: get_rendvis()
+
+
+   .. py:method:: set_rendvis(rendvis)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFGroup', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFGroup')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFGroup', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFGroup')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFInfo(seqName=None, episode=None, rule=None, project=None, qControl=None, houdiniVersion=None, type_=None, Dir=None, FullName=None, ShotList=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Dir()
+
+
+   .. py:method:: set_Dir(Dir)
+
+
+   .. py:method:: get_FullName()
+
+
+   .. py:method:: set_FullName(FullName)
+
+
+   .. py:method:: get_ShotList()
+
+
+   .. py:method:: set_ShotList(ShotList)
+
+
+   .. py:method:: get_seqName()
+
+
+   .. py:method:: set_seqName(seqName)
+
+
+   .. py:method:: get_episode()
+
+
+   .. py:method:: set_episode(episode)
+
+
+   .. py:method:: get_rule()
+
+
+   .. py:method:: set_rule(rule)
+
+
+   .. py:method:: get_project()
+
+
+   .. py:method:: set_project(project)
+
+
+   .. py:method:: get_qControl()
+
+
+   .. py:method:: set_qControl(qControl)
+
+
+   .. py:method:: get_houdiniVersion()
+
+
+   .. py:method:: set_houdiniVersion(houdiniVersion)
+
+
+   .. py:method:: get_type()
+
+
+   .. py:method:: set_type(type_)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFInfo', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFInfo')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFInfo', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFInfo')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFInstance(path=None, master=None, name=None, id=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_path()
+
+
+   .. py:method:: set_path(path)
+
+
+   .. py:method:: get_master()
+
+
+   .. py:method:: set_master(master)
+
+
+   .. py:method:: get_name()
+
+
+   .. py:method:: set_name(name)
+
+
+   .. py:method:: get_id()
+
+
+   .. py:method:: set_id(id)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFInstance', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFInstance')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFInstance', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFInstance')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFMaterial(color=None, name=None, id=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_color()
+
+
+   .. py:method:: set_color(color)
+
+
+   .. py:method:: get_name()
+
+
+   .. py:method:: set_name(name)
+
+
+   .. py:method:: get_id()
+
+
+   .. py:method:: set_id(id)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFMaterial', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFMaterial')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFMaterial', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFMaterial')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFModel(path=None, id=None, name=None, Asset=None, Model=None, Object=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Asset()
+
+
+   .. py:method:: set_Asset(Asset)
+
+
+   .. py:method:: add_Asset(value)
+
+
+   .. py:method:: insert_Asset(index, value)
+
+
+   .. py:method:: get_Model()
+
+
+   .. py:method:: set_Model(Model)
+
+
+   .. py:method:: add_Model(value)
+
+
+   .. py:method:: insert_Model(index, value)
+
+
+   .. py:method:: get_Object()
+
+
+   .. py:method:: set_Object(Object)
+
+
+   .. py:method:: add_Object(value)
+
+
+   .. py:method:: insert_Object(index, value)
+
+
+   .. py:method:: get_path()
+
+
+   .. py:method:: set_path(path)
+
+
+   .. py:method:: get_id()
+
+
+   .. py:method:: set_id(id)
+
+
+   .. py:method:: get_name()
+
+
+   .. py:method:: set_name(name)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFModel', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFModel')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFModel', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFModel')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFObject(path=None, material=None, type_=None, name=None, id=None, Clusters=None, Textures=None, subdiv=1)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Clusters()
+
+
+   .. py:method:: set_Clusters(Clusters)
+
+
+   .. py:method:: get_Textures()
+
+
+   .. py:method:: set_Textures(Textures)
+
+
+   .. py:method:: get_path()
+
+
+   .. py:method:: set_path(path)
+
+
+   .. py:method:: get_material()
+
+
+   .. py:method:: set_material(material)
+
+
+   .. py:method:: get_type()
+
+
+   .. py:method:: set_type(type_)
+
+
+   .. py:method:: get_name()
+
+
+   .. py:method:: set_name(name)
+
+
+   .. py:method:: get_id()
+
+
+   .. py:method:: set_id(id)
+
+
+   .. py:method:: get_subdiv()
+
+
+   .. py:method:: set_subdiv(subdiv)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFObject', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFObject')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFObject', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFObject')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFShot(index=None, endFrame=None, startFrame=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_index()
+
+
+   .. py:method:: set_index(index)
+
+
+   .. py:method:: get_endFrame()
+
+
+   .. py:method:: set_endFrame(endFrame)
+
+
+   .. py:method:: get_startFrame()
+
+
+   .. py:method:: set_startFrame(startFrame)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFShot', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFShot')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFShot', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFShot')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFPass(frameStep=None, name=None, frameEnd=None, frameStart=None, Priority=None, IsRenderActive=None, OutputPicture=None, OutputFolder=None, RMPreset=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Priority()
+
+
+   .. py:method:: set_Priority(Priority)
+
+
+   .. py:method:: get_IsRenderActive()
+
+
+   .. py:method:: set_IsRenderActive(IsRenderActive)
+
+
+   .. py:method:: get_OutputPicture()
+
+
+   .. py:method:: set_OutputPicture(OutputPicture)
+
+
+   .. py:method:: get_OutputFolder()
+
+
+   .. py:method:: set_OutputFolder(OutputFolder)
+
+
+   .. py:method:: get_RMPreset()
+
+
+   .. py:method:: set_RMPreset(RMPreset)
+
+
+   .. py:method:: get_frameStep()
+
+
+   .. py:method:: set_frameStep(frameStep)
+
+
+   .. py:method:: get_name()
+
+
+   .. py:method:: set_name(name)
+
+
+   .. py:method:: get_frameEnd()
+
+
+   .. py:method:: set_frameEnd(frameEnd)
+
+
+   .. py:method:: get_frameStart()
+
+
+   .. py:method:: set_frameStart(frameStart)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFPass', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFPass')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFPass', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFPass')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFScene(Info=None, Assets=None, Passes=None, Groups=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Info()
+
+
+   .. py:method:: set_Info(Info)
+
+
+   .. py:method:: get_Assets()
+
+
+   .. py:method:: set_Assets(Assets)
+
+
+   .. py:method:: get_Passes()
+
+
+   .. py:method:: set_Passes(Passes)
+
+
+   .. py:method:: get_Groups()
+
+
+   .. py:method:: set_Groups(Groups)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFScene', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFScene')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFScene', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFScene')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFClusterList(Cluster=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Cluster()
+
+
+   .. py:method:: set_Cluster(Cluster)
+
+
+   .. py:method:: add_Cluster(value)
+
+
+   .. py:method:: insert_Cluster(index, value)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFClusterList', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFClusterList')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFClusterList', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFClusterList')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFMemberList(Member=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Member()
+
+
+   .. py:method:: set_Member(Member)
+
+
+   .. py:method:: add_Member(value)
+
+
+   .. py:method:: insert_Member(index, value)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFMemberList', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFMemberList')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFMemberList', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFMemberList')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFTargetList(Object=None, Cluster=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Object()
+
+
+   .. py:method:: set_Object(Object)
+
+
+   .. py:method:: add_Object(value)
+
+
+   .. py:method:: insert_Object(index, value)
+
+
+   .. py:method:: get_Cluster()
+
+
+   .. py:method:: set_Cluster(Cluster)
+
+
+   .. py:method:: add_Cluster(value)
+
+
+   .. py:method:: insert_Cluster(index, value)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFTargetList', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFTargetList')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFTargetList', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFTargetList')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFShotList(Shot=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Shot()
+
+
+   .. py:method:: set_Shot(Shot)
+
+
+   .. py:method:: add_Shot(value)
+
+
+   .. py:method:: insert_Shot(index, value)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFShotList', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFShotList')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFShotList', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFShotList')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFGrpList(Group=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Group()
+
+
+   .. py:method:: set_Group(Group)
+
+
+   .. py:method:: add_Group(value)
+
+
+   .. py:method:: insert_Group(index, value)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFGrpList', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFGrpList')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFGrpList', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFGrpList')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFModList(Asset=None, Model=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Asset()
+
+
+   .. py:method:: set_Asset(Asset)
+
+
+   .. py:method:: add_Asset(value)
+
+
+   .. py:method:: insert_Asset(index, value)
+
+
+   .. py:method:: get_Model()
+
+
+   .. py:method:: set_Model(Model)
+
+
+   .. py:method:: add_Model(value)
+
+
+   .. py:method:: insert_Model(index, value)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFModList', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFModList')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFModList', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFModList')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFInstList(Instance=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Instance()
+
+
+   .. py:method:: set_Instance(Instance)
+
+
+   .. py:method:: add_Instance(value)
+
+
+   .. py:method:: insert_Instance(index, value)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFInstList', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFInstList')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFInstList', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFInstList')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFObjList(Object=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Object()
+
+
+   .. py:method:: set_Object(Object)
+
+
+   .. py:method:: add_Object(value)
+
+
+   .. py:method:: insert_Object(index, value)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFObjList', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFObjList')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFObjList', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFObjList')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFPassList(Pass=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Pass()
+
+
+   .. py:method:: set_Pass(Pass)
+
+
+   .. py:method:: add_Pass(value)
+
+
+   .. py:method:: insert_Pass(index, value)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFPassList', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFPassList')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFPassList', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFPassList')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFMatList(Material=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Material()
+
+
+   .. py:method:: set_Material(Material)
+
+
+   .. py:method:: add_Material(value)
+
+
+   .. py:method:: insert_Material(index, value)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFMatList', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFMatList')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFMatList', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFMatList')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFTexList(Texture=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_Texture()
+
+
+   .. py:method:: set_Texture(Texture)
+
+
+   .. py:method:: add_Texture(value)
+
+
+   .. py:method:: insert_Texture(index, value)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFTexList', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFTexList')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFTexList', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFTexList')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+
+.. py:class:: INFMember(id=None, name=None, mdlpath=None)
+
+   Bases: :py:obj:`generatedssuper.GeneratedsSuper`
+
+   .. py:attribute:: subclass
+      
+
+      
+
+   .. py:attribute:: superclass
+      
+
+      
+
+   .. py:attribute:: factory
+      
+
+      
+
+   .. py:method:: factory(*args_, **kwargs_)
+      :staticmethod:
+
+
+   .. py:method:: get_id()
+
+
+   .. py:method:: set_id(id)
+
+
+   .. py:method:: get_name()
+
+
+   .. py:method:: set_name(name)
+
+
+   .. py:method:: get_mdlpath()
+
+
+   .. py:method:: set_mdlpath(mdlpath)
+
+
+   .. py:method:: hasContent_()
+
+
+   .. py:method:: export(outfile, level, namespace_='', name_='INFMember', namespacedef_='', pretty_print=True)
+
+
+   .. py:method:: exportAttributes(outfile, level, already_processed, namespace_='', name_='INFMember')
+
+
+   .. py:method:: exportChildren(outfile, level, namespace_='', name_='INFMember', fromsubclass_=False, pretty_print=True)
+
+
+   .. py:method:: exportLiteral(outfile, level, name_='INFMember')
+
+
+   .. py:method:: exportLiteralAttributes(outfile, level, already_processed, name_)
+
+
+   .. py:method:: exportLiteralChildren(outfile, level, name_)
+
+
+   .. py:method:: build(node)
+
+
+   .. py:method:: buildAttributes(node, attrs, already_processed)
+
+
+   .. py:method:: buildChildren(child_, node, nodeName_, fromsubclass_=False)
+
+
+

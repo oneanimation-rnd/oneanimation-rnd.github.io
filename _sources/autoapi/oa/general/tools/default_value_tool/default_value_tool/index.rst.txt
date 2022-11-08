@@ -1,0 +1,145 @@
+ :py:mod:`oa.general.tools.default_value_tool.default_value_tool`
+==================================================================================================================================
+
+.. py:module:: oa.general.tools.default_value_tool.default_value_tool
+
+.. autoapi-nested-parse::
+
+   The only way to set an attribute's default value is through script.
+   This wraps that into an interface so it's friendlier for users.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.default_value_tool.default_value_tool.DefaultValueTool
+   oa.general.tools.default_value_tool.default_value_tool.CustomSpinBox
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.default_value_tool.default_value_tool.launch
+
+
+
+.. py:class:: DefaultValueTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: callback
+      
+
+      
+
+   .. py:attribute:: inst
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: delete_inst()
+      :staticmethod:
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: assign_selection()
+
+
+   .. py:method:: add_callback()
+
+
+   .. py:method:: remove_callback()
+
+
+   .. py:method:: set_title()
+
+
+   .. py:method:: collect_attrs()
+
+
+   .. py:method:: remove_rows()
+
+
+   .. py:method:: get_default_value(plug)
+
+
+   .. py:method:: generate_rows()
+
+
+   .. py:method:: on_selection_changed(client_data)
+
+
+   .. py:method:: on_load_default_clicked(index, spinbox)
+
+
+   .. py:method:: on_set_clicked(index, spinbox)
+
+
+
+.. py:class:: CustomSpinBox(spinbox_type, value=0, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QLineEdit`
+
+   Tries to mimic behavior from Maya's internal slider that's found in the channel box.
+
+   .. py:attribute:: IntSpinBox
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: DoubleSpinBox
+      :annotation: = 1
+
+      
+
+   .. py:method:: wheelEvent(event)
+
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: mouseReleaseEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: getStepsMultiplier(event)
+
+
+   .. py:method:: setMinimum(value)
+
+
+   .. py:method:: setMaximum(value)
+
+
+   .. py:method:: setSteps(steps)
+
+
+   .. py:method:: value()
+
+
+   .. py:method:: setValue(value)
+
+
+
+.. py:function:: launch()
+
+

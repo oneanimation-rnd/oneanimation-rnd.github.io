@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.animation.tools.constraint_tool_old.constraint_widgets &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.animation.tools.convert_to_local_prp" href="../../convert_to_local_prp/index.html" />
+    <link rel="prev" title=" oa.animation.tools.constraint_tool_old.constraint_tool" href="../constraint_tool/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.constraint_tool_old</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.constraint_tool_old.constraint_widgets</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/animation/tools/constraint_tool_old/constraint_widgets/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.animation.tools.constraint_tool_old.constraint_widgets">
+<span id="oa-animation-tools-constraint-tool-old-constraint-widgets"></span><h1> <a class="reference internal" href="#module-oa.animation.tools.constraint_tool_old.constraint_widgets" title="oa.animation.tools.constraint_tool_old.constraint_widgets"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.constraint_tool_old.constraint_widgets</span></code></a><a class="headerlink" href="#module-oa.animation.tools.constraint_tool_old.constraint_widgets" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode" title="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TreeNode</span></code></a></p></td>
+<td><p>The tree's model will be populated with this.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem" title="oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DelegateItem</span></code></a></p></td>
+<td><p>Manages dynamic spinboxes to be used in a tree's cell.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.ProxyModel" title="oa.animation.tools.constraint_tool_old.constraint_widgets.ProxyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProxyModel</span></code></a></p></td>
+<td><p>Proxy used between QTreeView and QAbstractItemModel to filter and sort items.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel" title="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TreeModel</span></code></a></p></td>
+<td><p>QTreeView uses this class to handle all its data for best performance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView" title="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TreeView</span></code></a></p></td>
+<td><p>Used to display assets in a hierarchy.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool_old.constraint_widgets.</span></span><span class="sig-name descname"><span class="pre">TreeNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The tree’s model will be populated with this.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.ConstraintType">
+<span class="sig-name descname"><span class="pre">ConstraintType</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.ConstraintType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.OffsetType">
+<span class="sig-name descname"><span class="pre">OffsetType</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.OffsetType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.TargetType">
+<span class="sig-name descname"><span class="pre">TargetType</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.TargetType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.WeightType">
+<span class="sig-name descname"><span class="pre">WeightType</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.WeightType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.data">
+<span class="sig-name descname"><span class="pre">data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.setData">
+<span class="sig-name descname"><span class="pre">setData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.setData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.appendChild">
+<span class="sig-name descname"><span class="pre">appendChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.appendChild" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.child">
+<span class="sig-name descname"><span class="pre">child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.child" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.childrenCount">
+<span class="sig-name descname"><span class="pre">childrenCount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.childrenCount" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.hasChildren">
+<span class="sig-name descname"><span class="pre">hasChildren</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.hasChildren" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.row">
+<span class="sig-name descname"><span class="pre">row</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.row" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.columnCount">
+<span class="sig-name descname"><span class="pre">columnCount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.columnCount" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.removeChildren">
+<span class="sig-name descname"><span class="pre">removeChildren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode.removeChildren" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool_old.constraint_widgets.</span></span><span class="sig-name descname"><span class="pre">DelegateItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStyledItemDelegate</span></code></p>
+<p>Manages dynamic spinboxes to be used in a tree’s cell.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem.active_index">
+<span class="sig-name descname"><span class="pre">active_index</span></span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem.active_index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem.eventFilter">
+<span class="sig-name descname"><span class="pre">eventFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem.eventFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Catches close event.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem.createEditor">
+<span class="sig-name descname"><span class="pre">createEditor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem.createEditor" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a spinbox when the cell is clicked.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem.setEditorData">
+<span class="sig-name descname"><span class="pre">setEditorData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">editor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem.setEditorData" title="Permalink to this definition"></a></dt>
+<dd><p>Sets value to spinbox.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem.setModelData">
+<span class="sig-name descname"><span class="pre">setModelData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">editor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxy_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem.setModelData" title="Permalink to this definition"></a></dt>
+<dd><p>Adds spinbox’s value to the tree node’s internal data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem.paint">
+<span class="sig-name descname"><span class="pre">paint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">painter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem.paint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.ProxyModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool_old.constraint_widgets.</span></span><span class="sig-name descname"><span class="pre">ProxyModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.ProxyModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtCore.QSortFilterProxyModel</span></code></p>
+<p>Proxy used between QTreeView and QAbstractItemModel to filter and sort items.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.ProxyModel.filterAcceptsRow">
+<span class="sig-name descname"><span class="pre">filterAcceptsRow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.ProxyModel.filterAcceptsRow" title="Permalink to this definition"></a></dt>
+<dd><p>Sub-classed to filter what items are seen.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool_old.constraint_widgets.</span></span><span class="sig-name descname"><span class="pre">TreeModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtCore.QAbstractItemModel</span></code></p>
+<p>QTreeView uses this class to handle all its data for best performance.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.columnCount">
+<span class="sig-name descname"><span class="pre">columnCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.QModelIndex()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.columnCount" title="Permalink to this definition"></a></dt>
+<dd><p>Gets tree’s column count.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.rowCount">
+<span class="sig-name descname"><span class="pre">rowCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.QModelIndex()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.rowCount" title="Permalink to this definition"></a></dt>
+<dd><p>Gets tree’s row count.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.index">
+<span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.QModelIndex()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.index" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an item’s QModelIndex.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.parent" title="Permalink to this definition"></a></dt>
+<dd><p>Gets index’s parent QModelIndex.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.hasChildren">
+<span class="sig-name descname"><span class="pre">hasChildren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.hasChildren" title="Permalink to this definition"></a></dt>
+<dd><p>Checks is index has any children.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.data">
+<span class="sig-name descname"><span class="pre">data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.data" title="Permalink to this definition"></a></dt>
+<dd><p>Displays internal data and determines how it looks.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.setData">
+<span class="sig-name descname"><span class="pre">setData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.Qt.EditRole</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.setData" title="Permalink to this definition"></a></dt>
+<dd><p>Edit this to determine how the model should set data back onto TreeNode objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.flags">
+<span class="sig-name descname"><span class="pre">flags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.flags" title="Permalink to this definition"></a></dt>
+<dd><p>Sets a role for columns.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.headerData">
+<span class="sig-name descname"><span class="pre">headerData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">section</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.headerData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.removeRows">
+<span class="sig-name descname"><span class="pre">removeRows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.removeRows" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes rows and its internal data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.add_constraint_to_tree">
+<span class="sig-name descname"><span class="pre">add_constraint_to_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constraint_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">emit_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expand</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.add_constraint_to_tree" title="Permalink to this definition"></a></dt>
+<dd><p>Adds supplied constraint data to the tree.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.get_tree_node_index">
+<span class="sig-name descname"><span class="pre">get_tree_node_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree_node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.get_tree_node_index" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a TreeNode’s QModelIndex.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel.get_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool_old.constraint_widgets.</span></span><span class="sig-name descname"><span class="pre">TreeView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTreeView</span></code></p>
+<p>Used to display assets in a hierarchy.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.enterEvent">
+<span class="sig-name descname"><span class="pre">enterEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.enterEvent" title="Permalink to this definition"></a></dt>
+<dd><p>Removes tip from paint event.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.paintEvent" title="Permalink to this definition"></a></dt>
+<dd><p>Shows temporary tip until the mouse enters its view.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.keyPressEvent">
+<span class="sig-name descname"><span class="pre">keyPressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.keyPressEvent" title="Permalink to this definition"></a></dt>
+<dd><p>Needed so this doesn’t override keys to be passed to the viewport.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.selectionChanged">
+<span class="sig-name descname"><span class="pre">selectionChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selected</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deselected</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.selectionChanged" title="Permalink to this definition"></a></dt>
+<dd><p>Selects the object from the current row.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.key_target_on_trigger">
+<span class="sig-name descname"><span class="pre">key_target_on_trigger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.key_target_on_trigger" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.key_all_targets_on_trigger">
+<span class="sig-name descname"><span class="pre">key_all_targets_on_trigger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.key_all_targets_on_trigger" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.del_target_on_trigger">
+<span class="sig-name descname"><span class="pre">del_target_on_trigger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.del_target_on_trigger" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.del_constraint_on_trigger">
+<span class="sig-name descname"><span class="pre">del_constraint_on_trigger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.del_constraint_on_trigger" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.set_target_weight">
+<span class="sig-name descname"><span class="pre">set_target_weight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree_node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.set_target_weight" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.get_constraint_index">
+<span class="sig-name descname"><span class="pre">get_constraint_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.get_constraint_index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.menu_triggered">
+<span class="sig-name descname"><span class="pre">menu_triggered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mouse_point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.menu_triggered" title="Permalink to this definition"></a></dt>
+<dd><p>Builds context menu depending on what nodeType is selected.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.populate_tree">
+<span class="sig-name descname"><span class="pre">populate_tree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.populate_tree" title="Permalink to this definition"></a></dt>
+<dd><p>Reset and add TreeNode objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.add_targets_to_view">
+<span class="sig-name descname"><span class="pre">add_targets_to_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.add_targets_to_view" title="Permalink to this definition"></a></dt>
+<dd><p>Adds new targets to the selected constraint then updates the view.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>targets</strong> (<em>string</em><em>[</em><em>]</em>) – List of objects to add as targets.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.update_weight_values">
+<span class="sig-name descname"><span class="pre">update_weight_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView.update_weight_values" title="Permalink to this definition"></a></dt>
+<dd><p>Gets called regularly from a timer, so beware that this stays optimized.
+Updates the targets weights with the current values in the scene.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../constraint_tool/index.html" class="btn btn-neutral float-left" title=" oa.animation.tools.constraint_tool_old.constraint_tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../convert_to_local_prp/index.html" class="btn btn-neutral float-right" title=" oa.animation.tools.convert_to_local_prp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

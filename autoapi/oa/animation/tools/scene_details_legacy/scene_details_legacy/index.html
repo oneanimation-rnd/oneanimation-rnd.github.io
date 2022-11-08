@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.animation.tools.scene_details_legacy.scene_details_legacy &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.animation.tools.scene_details_legacy.version_check_cb" href="../version_check_cb/index.html" />
+    <link rel="prev" title=" oa.animation.tools.scene_details_legacy.resources" href="../resources/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.scene_details_legacy</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.scene_details_legacy.scene_details_legacy</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/animation/tools/scene_details_legacy/scene_details_legacy/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.animation.tools.scene_details_legacy.scene_details_legacy">
+<span id="oa-animation-tools-scene-details-legacy-scene-details-legacy"></span><h1> <a class="reference internal" href="#module-oa.animation.tools.scene_details_legacy.scene_details_legacy" title="oa.animation.tools.scene_details_legacy.scene_details_legacy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.scene_details_legacy.scene_details_legacy</span></code></a><a class="headerlink" href="#module-oa.animation.tools.scene_details_legacy.scene_details_legacy" title="Permalink to this heading"></a></h1>
+<p>This tool is a replacement of the reference editor for artists.
+This minimizes the risk of renaming the namespace and messing with the reference’s path.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails" title="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SceneDetails</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.Table" title="oa.animation.tools.scene_details_legacy.scene_details_legacy.Table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table</span></code></a></p></td>
+<td><p>A table that emits certain keys.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox" title="oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableComboBox</span></code></a></p></td>
+<td><p>A simple combobox that emits when it is clicked.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.CustomTableWidgetItem" title="oa.animation.tools.scene_details_legacy.scene_details_legacy.CustomTableWidgetItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomTableWidgetItem</span></code></a></p></td>
+<td><p>Makes it possible to sort by column with cells using widgets.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox" title="oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VersionComboBox</span></code></a></p></td>
+<td><p>Triggers a floating tooltip when mouse is over it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.FloatingToolTip" title="oa.animation.tools.scene_details_legacy.scene_details_legacy.FloatingToolTip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FloatingToolTip</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details_legacy.scene_details_legacy.</span></span><span class="sig-name descname"><span class="pre">SceneDetails</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.tool_name">
+<span class="sig-name descname"><span class="pre">tool_name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">sceneDetailsTool</span></em><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.tool_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.instance">
+<span class="sig-name descname"><span class="pre">instance</span></span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.instance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_open_cb_id">
+<span class="sig-name descname"><span class="pre">on_open_cb_id</span></span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_open_cb_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_new_cb_id">
+<span class="sig-name descname"><span class="pre">on_new_cb_id</span></span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_new_cb_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.ThumbnailColumn">
+<span class="sig-name descname"><span class="pre">ThumbnailColumn</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.ThumbnailColumn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.NspColumn">
+<span class="sig-name descname"><span class="pre">NspColumn</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.NspColumn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.VersionColumn">
+<span class="sig-name descname"><span class="pre">VersionColumn</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.VersionColumn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.ResolutionColumn">
+<span class="sig-name descname"><span class="pre">ResolutionColumn</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.ResolutionColumn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.LoadedColumn">
+<span class="sig-name descname"><span class="pre">LoadedColumn</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.LoadedColumn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_version_entered">
+<span class="sig-name descname"><span class="pre">on_version_entered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nsp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_version_entered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_version_leave">
+<span class="sig-name descname"><span class="pre">on_version_leave</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_version_leave" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.add_callbacks">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">add_callbacks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.add_callbacks" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.remove_callbacks">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remove_callbacks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.remove_callbacks" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_trigger_auto_close">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">on_trigger_auto_close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_trigger_auto_close" title="Permalink to this definition"></a></dt>
+<dd><p>Gets called on loading or starting a new scene.
+Forces any open instance to be closed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.closeEvent">
+<span class="sig-name descname"><span class="pre">closeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.closeEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_filter_return_pressed">
+<span class="sig-name descname"><span class="pre">on_filter_return_pressed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_filter_return_pressed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.create_gui">
+<span class="sig-name descname"><span class="pre">create_gui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.create_gui" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_select_from_scene_clicked">
+<span class="sig-name descname"><span class="pre">on_select_from_scene_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_select_from_scene_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_item_changed">
+<span class="sig-name descname"><span class="pre">on_item_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_item_changed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_hide_geo_clicked">
+<span class="sig-name descname"><span class="pre">on_hide_geo_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_hide_geo_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_show_geo_clicked">
+<span class="sig-name descname"><span class="pre">on_show_geo_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_show_geo_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_hide_ctrl_clicked">
+<span class="sig-name descname"><span class="pre">on_hide_ctrl_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_hide_ctrl_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_show_ctrl_clicked">
+<span class="sig-name descname"><span class="pre">on_show_ctrl_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_show_ctrl_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_loaded_toggled">
+<span class="sig-name descname"><span class="pre">on_loaded_toggled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_loaded_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_load_sel_clicked">
+<span class="sig-name descname"><span class="pre">on_load_sel_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_load_sel_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_unload_sel_clicked">
+<span class="sig-name descname"><span class="pre">on_unload_sel_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_unload_sel_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_thumbnail_pressed">
+<span class="sig-name descname"><span class="pre">on_thumbnail_pressed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_thumbnail_pressed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_combobox_clicked">
+<span class="sig-name descname"><span class="pre">on_combobox_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_combobox_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_version_combobox_changed">
+<span class="sig-name descname"><span class="pre">on_version_combobox_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_version_combobox_changed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_res_combobox_changed">
+<span class="sig-name descname"><span class="pre">on_res_combobox_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_res_combobox_changed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_switch_gpu_clicked">
+<span class="sig-name descname"><span class="pre">on_switch_gpu_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_switch_gpu_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_switch_rdr_clicked">
+<span class="sig-name descname"><span class="pre">on_switch_rdr_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_switch_rdr_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_update_all_clicked">
+<span class="sig-name descname"><span class="pre">on_update_all_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_update_all_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_select_sel_clicked">
+<span class="sig-name descname"><span class="pre">on_select_sel_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_select_sel_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_select_srt_clicked">
+<span class="sig-name descname"><span class="pre">on_select_srt_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_select_srt_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_replace_sel_clicked">
+<span class="sig-name descname"><span class="pre">on_replace_sel_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_replace_sel_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_remove_sel_clicked">
+<span class="sig-name descname"><span class="pre">on_remove_sel_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_remove_sel_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_open_ref_path">
+<span class="sig-name descname"><span class="pre">on_open_ref_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_open_ref_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_select_all_clicked">
+<span class="sig-name descname"><span class="pre">on_select_all_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_select_all_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_invert_select_clicked">
+<span class="sig-name descname"><span class="pre">on_invert_select_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.on_invert_select_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.delete_instance">
+<span class="sig-name descname"><span class="pre">delete_instance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.delete_instance" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes any instances of this class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.wrap_layout">
+<span class="sig-name descname"><span class="pre">wrap_layout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widgets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.wrap_layout" title="Permalink to this definition"></a></dt>
+<dd><p>Helper function that takes supplied widgets and wraps them all in a layout.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>widgets</strong> – A list of QWidgets.</p></li>
+<li><p><strong>orientation</strong> – QtCore.Qt.Orientation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The new layout item.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.get_selected_rows">
+<span class="sig-name descname"><span class="pre">get_selected_rows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.get_selected_rows" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a list of integers of selected rows.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.update_by_row">
+<span class="sig-name descname"><span class="pre">update_by_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.update_by_row" title="Permalink to this definition"></a></dt>
+<dd><p>Update asset to its latest version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>row</strong> (<em>int</em>) – The row to act on.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The path it was updated to.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.update_filepath">
+<span class="sig-name descname"><span class="pre">update_filepath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.update_filepath" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.get_layer_state">
+<span class="sig-name descname"><span class="pre">get_layer_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.get_layer_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.set_layer_state">
+<span class="sig-name descname"><span class="pre">set_layer_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_show</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.set_layer_state" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the asset layer’s visibility.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>layer_name</strong> (<em>string</em>) – The name to search with.</p></li>
+<li><p><strong>do_show</strong> (<em>bool</em>) – Hides on False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.toggle_gpu_vis">
+<span class="sig-name descname"><span class="pre">toggle_gpu_vis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">do_show</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.toggle_gpu_vis" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the visibility of all gpu objects from selected rows.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>do_show</strong> (<em>bool</em>) – Hides on False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.set_loaded_state">
+<span class="sig-name descname"><span class="pre">set_loaded_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.set_loaded_state" title="Permalink to this definition"></a></dt>
+<dd><p>Sets if the reference is loaded or unloaded.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> (<em>int</em>) – The row to act on.</p></li>
+<li><p><strong>state</strong> (<em>bool</em>) – Unloads on False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.refresh_list">
+<span class="sig-name descname"><span class="pre">refresh_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.refresh_list" title="Permalink to this definition"></a></dt>
+<dd><p>Re-collects data to sync with the scene and redraws the table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.store_scroll_pos">
+<span class="sig-name descname"><span class="pre">store_scroll_pos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.store_scroll_pos" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.restore_scroll_pos">
+<span class="sig-name descname"><span class="pre">restore_scroll_pos</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.restore_scroll_pos" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.store_selection">
+<span class="sig-name descname"><span class="pre">store_selection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.store_selection" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.restore_selection">
+<span class="sig-name descname"><span class="pre">restore_selection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.restore_selection" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.populate_list">
+<span class="sig-name descname"><span class="pre">populate_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.populate_list" title="Permalink to this definition"></a></dt>
+<dd><p>Clears the table’s contents and re-fills it with its current data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.switch_res">
+<span class="sig-name descname"><span class="pre">switch_res</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nsp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails.switch_res" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.Table">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details_legacy.scene_details_legacy.</span></span><span class="sig-name descname"><span class="pre">Table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.Table" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTableWidget</span></code></p>
+<p>A table that emits certain keys.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.Table.invert_pressed">
+<span class="sig-name descname"><span class="pre">invert_pressed</span></span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.Table.invert_pressed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.Table.wheel_triggered">
+<span class="sig-name descname"><span class="pre">wheel_triggered</span></span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.Table.wheel_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.Table.wheelEvent">
+<span class="sig-name descname"><span class="pre">wheelEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.Table.wheelEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.Table.keyPressEvent">
+<span class="sig-name descname"><span class="pre">keyPressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.Table.keyPressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details_legacy.scene_details_legacy.</span></span><span class="sig-name descname"><span class="pre">TableComboBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QComboBox</span></code></p>
+<p>A simple combobox that emits when it is clicked.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox.clicked">
+<span class="sig-name descname"><span class="pre">clicked</span></span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox.clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox.mousePressEvent">
+<span class="sig-name descname"><span class="pre">mousePressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox.mousePressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox.wheelEvent">
+<span class="sig-name descname"><span class="pre">wheelEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox.wheelEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.CustomTableWidgetItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details_legacy.scene_details_legacy.</span></span><span class="sig-name descname"><span class="pre">CustomTableWidgetItem</span></span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.CustomTableWidgetItem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTableWidgetItem</span></code></p>
+<p>Makes it possible to sort by column with cells using widgets.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.CustomTableWidgetItem.__lt__">
+<span class="sig-name descname"><span class="pre">__lt__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.CustomTableWidgetItem.__lt__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.CustomTableWidgetItem.__hash__">
+<span class="sig-name descname"><span class="pre">__hash__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.CustomTableWidgetItem.__hash__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.CustomTableWidgetItem.update_value">
+<span class="sig-name descname"><span class="pre">update_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.CustomTableWidgetItem.update_value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details_legacy.scene_details_legacy.</span></span><span class="sig-name descname"><span class="pre">VersionComboBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nsp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox" title="oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TableComboBox</span></code></a></p>
+<p>Triggers a floating tooltip when mouse is over it.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox.entered">
+<span class="sig-name descname"><span class="pre">entered</span></span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox.entered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox.leave">
+<span class="sig-name descname"><span class="pre">leave</span></span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox.leave" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox.mousePressEvent">
+<span class="sig-name descname"><span class="pre">mousePressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox.mousePressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox.mouseMoveEvent">
+<span class="sig-name descname"><span class="pre">mouseMoveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox.mouseMoveEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox.enterEvent">
+<span class="sig-name descname"><span class="pre">enterEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox.enterEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox.leaveEvent">
+<span class="sig-name descname"><span class="pre">leaveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox.leaveEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.FloatingToolTip">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details_legacy.scene_details_legacy.</span></span><span class="sig-name descname"><span class="pre">FloatingToolTip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.FloatingToolTip" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QDialog</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details_legacy.scene_details_legacy.FloatingToolTip.showEvent">
+<span class="sig-name descname"><span class="pre">showEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details_legacy.scene_details_legacy.FloatingToolTip.showEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../resources/index.html" class="btn btn-neutral float-left" title=" oa.animation.tools.scene_details_legacy.resources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../version_check_cb/index.html" class="btn btn-neutral float-right" title=" oa.animation.tools.scene_details_legacy.version_check_cb" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

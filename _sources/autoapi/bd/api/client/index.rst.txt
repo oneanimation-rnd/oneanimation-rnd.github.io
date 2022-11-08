@@ -1,0 +1,54 @@
+ :py:mod:`bd.api.client`
+================================================
+
+.. py:module:: bd.api.client
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.api.client.Session
+
+
+
+
+.. py:class:: Session
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: _auth(headers)
+
+
+   .. py:method:: execute(query, variable_values=None, use_filecache=True)
+
+
+   .. py:method:: subscribe(query, handler)
+
+
+   .. py:method:: unsubscribe(operation_id)
+
+
+   .. py:method:: add_event_listener(event_type, handler)
+
+
+   .. py:method:: remove_event_listener(subscription_id)
+
+
+   .. py:method:: _get_subscription_manager()
+
+
+   .. py:method:: _init_event_subscription()
+
+
+   .. py:method:: get_user_id()
+
+
+   .. py:method:: close()
+
+
+

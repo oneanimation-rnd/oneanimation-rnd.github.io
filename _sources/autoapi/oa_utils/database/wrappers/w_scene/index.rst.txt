@@ -1,0 +1,124 @@
+ :py:mod:`oa_utils.database.wrappers.w_scene`
+==========================================================================================
+
+.. py:module:: oa_utils.database.wrappers.w_scene
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_scene.WSceneMeta
+   oa_utils.database.wrappers.w_scene.WScene
+   oa_utils.database.wrappers.w_scene.WSceneXsiMeta
+   oa_utils.database.wrappers.w_scene.WSceneXsi
+   oa_utils.database.wrappers.w_scene.WSceneMayaMeta
+   oa_utils.database.wrappers.w_scene.WSceneMaya
+   oa_utils.database.wrappers.w_scene.WSceneHoudiniMeta
+   oa_utils.database.wrappers.w_scene.WSceneHoudini
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_scene.LOGGER
+   oa_utils.database.wrappers.w_scene.ShotData
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:data:: ShotData
+   
+
+   
+
+.. py:class:: WSceneMeta
+
+   Bases: :py:obj:`type`
+
+   .. py:attribute:: ENTITY
+      
+
+      
+
+   .. py:method:: __getattr__(name)
+      :classmethod:
+
+
+
+.. py:class:: WScene(scene)
+
+   .. py:property:: file
+
+
+   .. py:property:: wrapped
+
+
+   .. py:method:: upsert(unique_id, project, episode, sequence, _type, shot_data_list, references=None)
+      :classmethod:
+
+
+   .. py:method:: build_unique_id(project, filepath)
+      :classmethod:
+
+
+   .. py:method:: __getattr__(name)
+
+
+
+.. py:class:: WSceneXsiMeta
+
+   Bases: :py:obj:`WSceneMeta`
+
+   .. py:attribute:: ENTITY
+      
+
+      
+
+
+.. py:class:: WSceneXsi(scene)
+
+   Bases: :py:obj:`WScene`
+
+
+.. py:class:: WSceneMayaMeta
+
+   Bases: :py:obj:`WSceneMeta`
+
+   .. py:attribute:: ENTITY
+      
+
+      
+
+
+.. py:class:: WSceneMaya(scene)
+
+   Bases: :py:obj:`WScene`
+
+
+.. py:class:: WSceneHoudiniMeta
+
+   Bases: :py:obj:`WSceneMeta`
+
+   .. py:attribute:: ENTITY
+      
+
+      
+
+
+.. py:class:: WSceneHoudini(scene)
+
+   Bases: :py:obj:`WScene`
+
+

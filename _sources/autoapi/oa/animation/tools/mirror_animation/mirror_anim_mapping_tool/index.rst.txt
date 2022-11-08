@@ -1,0 +1,121 @@
+ :py:mod:`oa.animation.tools.mirror_animation.mirror_anim_mapping_tool`
+==============================================================================================================================================
+
+.. py:module:: oa.animation.tools.mirror_animation.mirror_anim_mapping_tool
+
+.. autoapi-nested-parse::
+
+   This tool helps facilitate setting up mapping for mirroring animation.
+   We can determine what controls need to be swapped, and which need to flip during mirroring.
+   The mapping also includes what attribute should be inverted, as not all axes may be perfectly symmetrical between mirror objects.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       import mirror_mapping_tool
+       mirror_mapping_tool.launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.mirror_animation.mirror_anim_mapping_tool.MirrorAnimMappingTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.mirror_animation.mirror_anim_mapping_tool.launch
+
+
+
+.. py:class:: MirrorAnimMappingTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = mirrorAnimMappingTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: swap_filter_on_edited()
+
+
+   .. py:method:: flip_filter_on_edited()
+
+
+   .. py:method:: swap_view_on_selected_changed(index)
+
+
+   .. py:method:: flip_view_on_selected_changed(index)
+
+
+   .. py:method:: swap_add_on_clicked()
+
+
+   .. py:method:: flip_add_on_clicked()
+
+
+   .. py:method:: swap_remove_on_clicked()
+
+
+   .. py:method:: flip_remove_on_clicked()
+
+
+   .. py:method:: swap_checkbox_on_changed()
+
+
+   .. py:method:: flip_checkbox_on_changed()
+
+
+   .. py:method:: auto_map_on_clicked()
+
+
+   .. py:method:: apply_swap_filter()
+
+
+   .. py:method:: apply_flip_filter()
+
+
+   .. py:method:: add_mapping_by_selection(map_type)
+
+
+   .. py:method:: remove_by_selection(view)
+
+
+   .. py:method:: set_mapping_by_selection(view, checkbox_dict)
+
+
+
+.. py:function:: launch()
+
+

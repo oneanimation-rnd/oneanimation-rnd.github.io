@@ -1,0 +1,112 @@
+ :py:mod:`oa.shot_builder.helpers`
+====================================================================
+
+.. py:module:: oa.shot_builder.helpers
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.helpers.build_shot
+   oa.shot_builder.helpers.import_shot
+   oa.shot_builder.helpers.export_shot
+   oa.shot_builder.helpers.update_shot
+   oa.shot_builder.helpers.import_contexts
+   oa.shot_builder.helpers.export_contexts
+   oa.shot_builder.helpers.export_lighting_to_location
+   oa.shot_builder.helpers.import_lighting_from_location
+   oa.shot_builder.helpers._cleanup_embedded_definitions
+   oa.shot_builder.helpers.is_update_required
+   oa.shot_builder.helpers._freeze_definitions
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.helpers.this
+   oa.shot_builder.helpers._log
+   oa.shot_builder.helpers._msglog
+   oa.shot_builder.helpers._client
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:data:: _client
+   
+
+   
+
+.. py:function:: build_shot(source_scn_path=None, shot_index=None, suppress_save_prompt=False)
+
+   Create a new houdini shot from the provided source scene and shot index.
+
+   Kwargs:
+       source_scn_path(str): a path to the source scene.
+       shot_index(int): an index of the shot to build.
+       suppress_save_prompt(bool): don't show the save changes dialog.
+
+   :returns: True on success.
+
+
+.. py:function:: import_shot(hou_scn_path=None, suppress_save_prompt=False)
+
+   Import an already existing houdini shot.
+
+   Kwargs:
+       hou_scn_path(str): houdini scene path.
+       suppress_save_prompt(bool): don't show the save changes dialog.
+
+   :returns: True on success.
+
+
+.. py:function:: export_shot(comment='', contexts=None)
+
+   Function called when the user asks to export the scene to the server.
+
+
+.. py:function:: update_shot(contexts=None, throw_errors=False)
+
+
+.. py:function:: import_contexts(contexts=None, hou_scn_path=None)
+
+
+.. py:function:: export_contexts(contexts=None, comment='')
+
+
+.. py:function:: export_lighting_to_location()
+
+
+.. py:function:: import_lighting_from_location()
+
+
+.. py:function:: _cleanup_embedded_definitions()
+
+
+.. py:function:: is_update_required(old_description, new_description)
+
+
+.. py:function:: _freeze_definitions()
+
+

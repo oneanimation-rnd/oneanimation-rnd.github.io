@@ -1,0 +1,30 @@
+ :py:mod:`oa.rigging.tools`
+======================================================
+
+.. py:module:: oa.rigging.tools
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   auto_rigging/index.rst
+   calisthenics/index.rst
+   crocodile/index.rst
+   edit_skin/index.rst
+   face_rig_2d/index.rst
+   fk_chain_tool/index.rst
+   ik_fk_switch_tool/index.rst
+   mirror_tool/index.rst
+   motion_path_fix/index.rst
+   motion_path_tool/index.rst
+   resize_ctrl_tool/index.rst
+   rope_auto_rigger/index.rst
+   skin_import_export/index.rst
+   skinning_constraint/index.rst
+   weak_ref_tool/index.rst
+   weights_editor_tool/index.rst
+
+

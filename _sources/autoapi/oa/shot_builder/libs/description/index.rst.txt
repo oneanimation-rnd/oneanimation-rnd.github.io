@@ -1,0 +1,146 @@
+ :py:mod:`oa.shot_builder.libs.description`
+======================================================================================
+
+.. py:module:: oa.shot_builder.libs.description
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.libs.description.ISceneDescription
+   oa.shot_builder.libs.description.XMLSceneDescription
+   oa.shot_builder.libs.description.SceneDescription
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.libs.description.parse_description
+   oa.shot_builder.libs.description.cache_description
+   oa.shot_builder.libs.description.load_cached
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.libs.description.this
+   oa.shot_builder.libs.description._log
+   oa.shot_builder.libs.description._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:class:: ISceneDescription
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: project
+      :abstractmethod:
+
+
+   .. py:property:: episode
+      :abstractmethod:
+
+
+   .. py:property:: sequence
+      :abstractmethod:
+
+
+   .. py:property:: fullname
+      :abstractmethod:
+
+
+   .. py:property:: assets
+      :abstractmethod:
+
+
+   .. py:property:: shots
+      :abstractmethod:
+
+
+
+.. py:class:: XMLSceneDescription(description_path)
+
+   Bases: :py:obj:`ISceneDescription`
+
+   .. py:property:: project
+
+
+   .. py:property:: episode
+
+
+   .. py:property:: sequence
+
+
+   .. py:property:: fullname
+
+
+   .. py:property:: assets
+
+
+   .. py:property:: shots
+
+
+   .. py:method:: _extract_data(description_path)
+      :classmethod:
+
+
+
+.. py:class:: SceneDescription(description_path)
+
+   Bases: :py:obj:`ISceneDescription`
+
+   Added for backward compatibility.
+
+   .. py:property:: project
+
+
+   .. py:property:: episode
+
+
+   .. py:property:: sequence
+
+
+   .. py:property:: fullname
+
+
+   .. py:property:: assets
+
+
+   .. py:property:: shots
+
+
+
+.. py:function:: parse_description(description_path)
+
+
+.. py:function:: cache_description(description)
+
+
+.. py:function:: load_cached()
+
+

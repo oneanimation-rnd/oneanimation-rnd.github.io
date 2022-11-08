@@ -1,0 +1,70 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.enums`
+==========================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.enums
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.enums.ColorTheme
+   oa.rigging.tools.weights_editor_tool.enums.WeightOperation
+   oa.rigging.tools.weights_editor_tool.enums.SmoothOperation
+
+
+
+
+.. py:class:: ColorTheme
+
+   .. py:attribute:: Max
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Maya
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: Softimage
+      :annotation: = 2
+
+      
+
+
+.. py:class:: WeightOperation
+
+   .. py:attribute:: Absolute
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Relative
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: Percentage
+      :annotation: = 2
+
+      
+
+
+.. py:class:: SmoothOperation
+
+   .. py:attribute:: Normal
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: AllInfluences
+      :annotation: = 1
+
+      
+
+

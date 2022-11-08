@@ -1,0 +1,30 @@
+ :py:mod:`oa.general.libs.project_settings.color_management_settings`
+==========================================================================================================================================
+
+.. py:module:: oa.general.libs.project_settings.color_management_settings
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.project_settings.color_management_settings.get_yml_root
+   oa.general.libs.project_settings.color_management_settings.is_cm_enabled_from_config
+   oa.general.libs.project_settings.color_management_settings.set_cm_from_config
+
+
+
+.. py:function:: get_yml_root()
+
+
+.. py:function:: is_cm_enabled_from_config()
+
+
+.. py:function:: set_cm_from_config()
+
+

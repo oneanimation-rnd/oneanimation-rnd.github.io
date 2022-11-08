@@ -1,0 +1,75 @@
+ :py:mod:`oa.animation.tools.scene_exporter.scene_exporter_tool`
+================================================================================================================================
+
+.. py:module:: oa.animation.tools.scene_exporter.scene_exporter_tool
+
+.. autoapi-nested-parse::
+
+   The interface for scene exporter.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_exporter.scene_exporter_tool.CustomTextEdit
+   oa.animation.tools.scene_exporter.scene_exporter_tool.SceneExporterTool
+
+
+
+
+.. py:class:: CustomTextEdit(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTextEdit`
+
+   Sub-classed to allow placeholders.
+
+   .. py:method:: paintEvent(e)
+
+
+
+.. py:class:: SceneExporterTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = sceneExporterTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: export_clicked
+      
+
+      
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: export_on_clicked()
+
+
+

@@ -1,0 +1,128 @@
+ :py:mod:`oa.animation.tools.shot_splitter.shot_splitter_tool`
+============================================================================================================================
+
+.. py:module:: oa.animation.tools.shot_splitter.shot_splitter_tool
+
+.. autoapi-nested-parse::
+
+   The interface for shot splitter.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.shot_splitter.shot_splitter_tool.CellCheckBox
+   oa.animation.tools.shot_splitter.shot_splitter_tool.ShotSplitterTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.shot_splitter.shot_splitter_tool.open_window
+
+
+
+.. py:class:: CellCheckBox(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   Procedurally generated to be used inside a table's cell.
+
+   .. py:attribute:: checked
+      
+
+      
+
+   .. py:method:: checkbox_on_checked(state)
+
+
+
+.. py:class:: ShotSplitterTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = shotSplitterTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: shots_check_all_on_click()
+
+
+   .. py:method:: shots_uncheck_all_on_click()
+
+
+   .. py:method:: assets_check_all_on_click()
+
+
+   .. py:method:: assets_uncheck_all_on_click()
+
+
+   .. py:method:: asset_on_checked(state)
+
+      Toggles enabled state of the row under the cursor.
+
+
+   .. py:method:: shot_on_checked(state)
+
+      Toggles enabled state of the row under the cursor.
+
+
+   .. py:method:: section_on_clicked(index)
+
+      Toggles all checkboxes from the table when header is clicked.
+
+
+   .. py:method:: split_shots_on_clicked()
+
+
+   .. py:method:: set_table_checkboxes(table, state)
+
+
+   .. py:method:: fill_shots_table()
+
+      Fills table with all shots found in SceneCP.
+
+
+   .. py:method:: fill_assets_table()
+
+      Fills table with all assets detected in the scene.
+
+
+   .. py:method:: get_checked_rows(table)
+
+      Returns a list of all checked rows from supplied table.
+
+
+
+.. py:function:: open_window()
+
+

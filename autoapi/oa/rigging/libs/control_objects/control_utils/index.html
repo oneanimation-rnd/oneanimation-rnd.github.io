@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.rigging.libs.control_objects.control_utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.rigging.libs.rig_resolutions" href="../../rig_resolutions/index.html" />
+    <link rel="prev" title=" oa.rigging.libs.control_objects" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.libs</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.libs.control_objects</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.libs.control_objects.control_utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/rigging/libs/control_objects/control_utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.rigging.libs.control_objects.control_utils">
+<span id="oa-rigging-libs-control-objects-control-utils"></span><h1> <a class="reference internal" href="#module-oa.rigging.libs.control_objects.control_utils" title="oa.rigging.libs.control_objects.control_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.libs.control_objects.control_utils</span></code></a><a class="headerlink" href="#module-oa.rigging.libs.control_objects.control_utils" title="Permalink to this heading"></a></h1>
+<p>Stores curves in a file so they can be imported later.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+<dt>Bugs:</dt><dd><ul class="simple">
+<li><p>Currently doesn’t support curves with 2 degrees.</p></li>
+</ul>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.control_objects.control_utils.NameInputDialog" title="oa.rigging.libs.control_objects.control_utils.NameInputDialog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NameInputDialog</span></code></a></p></td>
+<td><p>Simple pop-up to get user's input to determine the control's name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.libs.control_objects.control_utils.SizeInputDialog" title="oa.rigging.libs.control_objects.control_utils.SizeInputDialog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SizeInputDialog</span></code></a></p></td>
+<td><p>Simple pop-up to get user's input to determine the control's size.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.control_objects.control_utils.get_settings" title="oa.rigging.libs.control_objects.control_utils.get_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_settings</span></code></a>()</p></td>
+<td><p>Gets a dictionary of settings from a json file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.libs.control_objects.control_utils.save_settings" title="oa.rigging.libs.control_objects.control_utils.save_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_settings</span></code></a>(**kwargs)</p></td>
+<td><p>Saves all keywords to a json file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.control_objects.control_utils.get_size_input" title="oa.rigging.libs.control_objects.control_utils.get_size_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_size_input</span></code></a>()</p></td>
+<td><p>Opens a window to set default size, then saves it to settings.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.libs.control_objects.control_utils.curve_to_json" title="oa.rigging.libs.control_objects.control_utils.curve_to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">curve_to_json</span></code></a>(curve)</p></td>
+<td><p>Converts a curve to data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.control_objects.control_utils.export_preset" title="oa.rigging.libs.control_objects.control_utils.export_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_preset</span></code></a>(curve, output_dir[, preset_name])</p></td>
+<td><p>Exports a shape to json file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.libs.control_objects.control_utils.import_preset" title="oa.rigging.libs.control_objects.control_utils.import_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_preset</span></code></a>(preset_name[, size, name, parent, ...])</p></td>
+<td><p>Imports an exported shape via json format.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.control_objects.control_utils.create_ctrls" title="oa.rigging.libs.control_objects.control_utils.create_ctrls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_ctrls</span></code></a>(preset_name, add_nul[, input_name])</p></td>
+<td><p>Helper function to create multiple controls.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.libs.control_objects.control_utils.list_presets" title="oa.rigging.libs.control_objects.control_utils.list_presets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_presets</span></code></a>([full_path])</p></td>
+<td><p>Gets and returns a list of all presets.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.control_objects.control_utils.set_wire_color" title="oa.rigging.libs.control_objects.control_utils.set_wire_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_wire_color</span></code></a>(obj, value)</p></td>
+<td><p>Sets a color to all of an object's shapes.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.control_objects.control_utils.presets_dir" title="oa.rigging.libs.control_objects.control_utils.presets_dir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">presets_dir</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.rigging.libs.control_objects.control_utils.presets_dir">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.control_objects.control_utils.</span></span><span class="sig-name descname"><span class="pre">presets_dir</span></span><a class="headerlink" href="#oa.rigging.libs.control_objects.control_utils.presets_dir" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.rigging.libs.control_objects.control_utils.NameInputDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.control_objects.control_utils.</span></span><span class="sig-name descname"><span class="pre">NameInputDialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'newControl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.control_objects.control_utils.NameInputDialog" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QInputDialog</span></code></p>
+<p>Simple pop-up to get user’s input to determine the control’s name.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.rigging.libs.control_objects.control_utils.SizeInputDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.control_objects.control_utils.</span></span><span class="sig-name descname"><span class="pre">SizeInputDialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.control_objects.control_utils.SizeInputDialog" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QInputDialog</span></code></p>
+<p>Simple pop-up to get user’s input to determine the control’s size.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.control_objects.control_utils.get_settings">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.control_objects.control_utils.</span></span><span class="sig-name descname"><span class="pre">get_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.control_objects.control_utils.get_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a dictionary of settings from a json file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.control_objects.control_utils.save_settings">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.control_objects.control_utils.</span></span><span class="sig-name descname"><span class="pre">save_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.control_objects.control_utils.save_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Saves all keywords to a json file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.control_objects.control_utils.get_size_input">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.control_objects.control_utils.</span></span><span class="sig-name descname"><span class="pre">get_size_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.control_objects.control_utils.get_size_input" title="Permalink to this definition"></a></dt>
+<dd><p>Opens a window to set default size, then saves it to settings.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.control_objects.control_utils.curve_to_json">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.control_objects.control_utils.</span></span><span class="sig-name descname"><span class="pre">curve_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curve</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.control_objects.control_utils.curve_to_json" title="Permalink to this definition"></a></dt>
+<dd><p>Converts a curve to data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>curve</strong> – An object with curve shapes.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of dictionaries that represents the curves.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.control_objects.control_utils.export_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.control_objects.control_utils.</span></span><span class="sig-name descname"><span class="pre">export_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curve</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.control_objects.control_utils.export_preset" title="Permalink to this definition"></a></dt>
+<dd><p>Exports a shape to json file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>curve</strong> – An object with curve shapes.</p></li>
+<li><p><strong>output_dir</strong> – Full path to a directory to export preset to.</p></li>
+<li><p><strong>preset_name</strong> – The name to set the preset’s file. If nothing is supplied, it uses the object’s name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.control_objects.control_utils.import_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.control_objects.control_utils.</span></span><span class="sig-name descname"><span class="pre">import_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preset_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_nul</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.control_objects.control_utils.import_preset" title="Permalink to this definition"></a></dt>
+<dd><p>Imports an exported shape via json format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>preset_name</strong> – Preset name to import.</p></li>
+<li><p><strong>size</strong> – Size multiplier. If nothing is supplied it tries to use the value from its settings file.</p></li>
+<li><p><strong>name</strong> – If an empty string is supplied it will use the preset’s name.</p></li>
+<li><p><strong>parent</strong> – The object to parent the new control to.</p></li>
+<li><p><strong>align</strong> – Aligns the new control this object.</p></li>
+<li><p><strong>color_index</strong> – Passing as an integer (between 1-31) will use Maya’s internal colorIndex.
+Passing a 3 float list (between 0-1) will use rgb.</p></li>
+<li><p><strong>input_name</strong> – Prompts user to enter a name.</p></li>
+<li><p><strong>add_nul</strong> – Adds an empty group on top of the ctrl to zero it out.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of the control’s nul and object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.control_objects.control_utils.create_ctrls">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.control_objects.control_utils.</span></span><span class="sig-name descname"><span class="pre">create_ctrls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preset_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_nul</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.control_objects.control_utils.create_ctrls" title="Permalink to this definition"></a></dt>
+<dd><p>Helper function to create multiple controls.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.control_objects.control_utils.list_presets">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.control_objects.control_utils.</span></span><span class="sig-name descname"><span class="pre">list_presets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">full_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.control_objects.control_utils.list_presets" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a list of all presets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>full_path</strong> – Option to return absolute paths.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.control_objects.control_utils.set_wire_color">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.control_objects.control_utils.</span></span><span class="sig-name descname"><span class="pre">set_wire_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.control_objects.control_utils.set_wire_color" title="Permalink to this definition"></a></dt>
+<dd><p>Sets a color to all of an object’s shapes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> – An object’s name.</p></li>
+<li><p><strong>color_index</strong> – Passing as an integer (between 1-31) will use Maya’s internal colorIndex.
+Passing a 3 float list (between 0-1) will use rgb.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title=" oa.rigging.libs.control_objects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../rig_resolutions/index.html" class="btn btn-neutral float-right" title=" oa.rigging.libs.rig_resolutions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

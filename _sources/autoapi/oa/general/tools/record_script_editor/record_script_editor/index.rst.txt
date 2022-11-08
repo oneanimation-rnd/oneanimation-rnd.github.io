@@ -1,0 +1,38 @@
+ :py:mod:`oa.general.tools.record_script_editor.record_script_editor`
+==========================================================================================================================================
+
+.. py:module:: oa.general.tools.record_script_editor.record_script_editor
+
+.. autoapi-nested-parse::
+
+   A simple tool to record what's going on in the Script Editor's output.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.record_script_editor.record_script_editor.get_log_path
+   oa.general.tools.record_script_editor.record_script_editor.enable_recording
+   oa.general.tools.record_script_editor.record_script_editor.disable_recording
+
+
+
+.. py:function:: get_log_path()
+
+
+.. py:function:: enable_recording()
+
+
+.. py:function:: disable_recording()
+
+

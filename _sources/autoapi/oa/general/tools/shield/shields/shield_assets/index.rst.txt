@@ -1,0 +1,19 @@
+ :py:mod:`oa.general.tools.shield.shields.shield_assets`
+================================================================================================================
+
+.. py:module:: oa.general.tools.shield.shields.shield_assets
+
+
+Module Contents
+---------------
+
+.. py:data:: paths
+   :annotation: = ['$checks/assets/anim_curves.py', '$checks/assets/anim_lib_check.py',...
+
+   
+
+.. py:data:: shield
+   
+
+   
+

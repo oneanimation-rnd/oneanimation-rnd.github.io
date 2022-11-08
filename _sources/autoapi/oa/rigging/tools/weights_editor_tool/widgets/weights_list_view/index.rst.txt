@@ -1,0 +1,102 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.widgets.weights_list_view`
+==================================================================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.widgets.weights_list_view
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.widgets.weights_list_view.ListView
+   oa.rigging.tools.weights_editor_tool.widgets.weights_list_view.ListModel
+
+
+
+
+.. py:class:: ListView(editor_inst)
+
+   Bases: :py:obj:`oa.rigging.tools.weights_editor_tool.widgets.abstract_weights_view.AbstractWeightsView`
+
+   .. py:method:: closeEditor(editor, hint)
+
+      Enables multiple cells to be set.
+
+
+   .. py:method:: sort_ascending_on_triggered()
+
+
+   .. py:method:: sort_descending_on_triggered()
+
+
+   .. py:method:: sort_inf_name_on_triggered()
+
+
+   .. py:method:: end_update()
+
+
+   .. py:method:: reorder_by_name(order=QtCore.Qt.AscendingOrder)
+
+
+   .. py:method:: reorder_by_values(order)
+
+
+   .. py:method:: color_headers()
+
+
+   .. py:method:: select_items_by_inf(inf)
+
+
+   .. py:method:: get_selected_verts_and_infs()
+
+
+   .. py:method:: save_table_selection()
+
+      Saves table's selection to a data set.
+
+      :returns: A dictionary representing the selection.
+                {inf_name:[vert_index, ..]}
+
+
+   .. py:method:: load_table_selection(selection_data)
+
+      Attempts to load selection by supplied data set.
+
+      :param selection_data: See save method for data's structure.
+      :type selection_data: dict
+
+
+
+.. py:class:: ListModel(editor_inst, parent=None)
+
+   Bases: :py:obj:`oa.rigging.tools.weights_editor_tool.widgets.abstract_weights_view.AbstractModel`
+
+   .. py:method:: rowCount(parent)
+
+
+   .. py:method:: columnCount(parent)
+
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: setData(index, value, role)
+
+      Qt doesn't handle multiple cell edits very well.
+      This is the only place we can get the user's input, so first we check if it's valid first.
+      If not, all other cells will be ignored.
+
+
+   .. py:method:: headerData(index, orientation, role)
+
+      Deterimines the header's labels and style.
+
+
+   .. py:method:: get_average_weight(inf)
+
+
+

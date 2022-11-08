@@ -1,0 +1,52 @@
+ :py:mod:`oa.animation.tools.constraint_tool.color_dialog`
+====================================================================================================================
+
+.. py:module:: oa.animation.tools.constraint_tool.color_dialog
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool.color_dialog.ColorDialog
+   oa.animation.tools.constraint_tool.color_dialog.ColorButton
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool.color_dialog.launch
+
+
+
+.. py:class:: ColorDialog(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: picked_color
+      
+
+      
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: picked_color_on_clicked(color)
+
+
+
+.. py:class:: ColorButton(color, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QPushButton`
+
+
+.. py:function:: launch(parent=None)
+
+

@@ -1,0 +1,48 @@
+ :py:mod:`oa.animation.libs.scene_info_wrapper`
+==============================================================================================
+
+.. py:module:: oa.animation.libs.scene_info_wrapper
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.libs.scene_info_wrapper.SceneInfoWrapper
+
+
+
+
+.. py:class:: SceneInfoWrapper
+
+   Bases: :py:obj:`object`
+
+   
+   A wrapper that collects data from the current scene to describe it.
+
+   .. py:method:: get_local_dir()
+
+
+   .. py:method:: get_scene_assets()
+
+      Gets current referenced assets in the scene.
+
+
+   .. py:method:: get_scene_shots()
+
+      Gets shots data from SceneCP.
+
+
+   .. py:method:: set_time()
+
+
+   .. py:method:: collect_data()
+
+      Fills in properties with data from the current scene.
+
+
+

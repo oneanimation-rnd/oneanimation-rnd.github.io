@@ -1,0 +1,111 @@
+ :py:mod:`oa.animation.tools.constraint_tool_old.constraint_tool`
+==================================================================================================================================
+
+.. py:module:: oa.animation.tools.constraint_tool_old.constraint_tool
+
+.. autoapi-nested-parse::
+
+   Constraint tool
+
+   Interface to unify and manage constraints in animation scenes.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       tool = ConstraintTool()
+       tool.run()
+
+   Constraint's structure:
+       - obj (Object that is being constrain)
+
+       - constraint_nul (obj is parent constraint to this)
+           - offset_loc (Used to set keys on offsets or weights to targets)
+
+       - target
+           - target_loc (Constraining constraint_nul to this. Shares same transform as obj, so that there's less flipping.)
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool_old.constraint_tool.ConstraintTool
+
+
+
+
+.. py:class:: ConstraintTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = constraintToolDepreciated
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: cb_scene_update
+      
+
+      
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: timer_on_tick()
+
+
+   .. py:method:: scene_on_update(client_data)
+
+
+   .. py:method:: refresh_on_click()
+
+
+   .. py:method:: expand_on_click()
+
+
+   .. py:method:: collapse_on_click()
+
+
+   .. py:method:: add_target_on_click()
+
+
+   .. py:method:: add_world_target_on_click()
+
+
+   .. py:method:: create_constraint_on_click()
+
+
+   .. py:method:: setup_gui()
+
+      Setups data for interface.
+
+
+   .. py:method:: add_callbacks()
+
+
+   .. py:method:: remove_callbacks()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+

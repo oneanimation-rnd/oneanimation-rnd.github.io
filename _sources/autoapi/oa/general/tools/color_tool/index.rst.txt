@@ -1,0 +1,16 @@
+ :py:mod:`oa.general.tools.color_tool`
+============================================================================
+
+.. py:module:: oa.general.tools.color_tool
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   color_tool/index.rst
+   color_utils/index.rst
+
+

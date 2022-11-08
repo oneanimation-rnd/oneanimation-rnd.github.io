@@ -1,0 +1,64 @@
+ :py:mod:`oa.general.tools.taskman_submitter.auth`
+====================================================================================================
+
+.. py:module:: oa.general.tools.taskman_submitter.auth
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.taskman_submitter.auth.TaskmanAuth
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.taskman_submitter.auth.get_authenticated_task_request
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.taskman_submitter.auth.OpenMayaUI
+
+
+.. py:data:: OpenMayaUI
+   
+
+   
+
+.. py:class:: TaskmanAuth(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: _apply_last_user_name()
+
+
+   .. py:method:: _store_user_name()
+
+
+   .. py:method:: _accept()
+
+
+   .. py:method:: serialize_credentials()
+
+
+   .. py:method:: ask_for_credentials(task_request, parent=None)
+      :classmethod:
+
+
+
+.. py:function:: get_authenticated_task_request(parent=None)
+
+

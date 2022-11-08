@@ -1,0 +1,30 @@
+ :py:mod:`oa.palette.scripts.save_palette`
+====================================================================================
+
+.. py:module:: oa.palette.scripts.save_palette
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.palette.scripts.save_palette._get_parent_asset
+   oa.palette.scripts.save_palette._choose_output_path
+   oa.palette.scripts.save_palette.run
+
+
+
+.. py:function:: _get_parent_asset(node)
+
+
+.. py:function:: _choose_output_path(node)
+
+
+.. py:function:: run(node, check_matching_definition=False)
+
+

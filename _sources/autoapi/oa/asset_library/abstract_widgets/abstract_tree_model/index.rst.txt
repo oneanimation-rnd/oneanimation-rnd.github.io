@@ -1,0 +1,67 @@
+ :py:mod:`oa.asset_library.abstract_widgets.abstract_tree_model`
+================================================================================================================================
+
+.. py:module:: oa.asset_library.abstract_widgets.abstract_tree_model
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_library.abstract_widgets.abstract_tree_model.AbstractTreeModel
+
+
+
+
+.. py:class:: AbstractTreeModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractItemModel`
+
+   QTreeView uses this class to handle all its data for best performance.
+
+   .. py:method:: columnCount(index=QtCore.QModelIndex())
+
+
+   .. py:method:: rowCount(index=QtCore.QModelIndex())
+
+
+   .. py:method:: index(row, column, index=QtCore.QModelIndex())
+
+
+   .. py:method:: parent(index)
+
+
+   .. py:method:: hasChildren(index)
+
+
+   .. py:method:: data(index, role)
+
+      Edit this to determine how the model should get its data from tree nodes.
+
+
+   .. py:method:: setData(index, value, role=QtCore.Qt.EditRole)
+
+      Edit this to determine how the model should set data back onto tree nodes.
+
+
+   .. py:method:: flags(index)
+
+      Sets a role for columns.
+
+
+   .. py:method:: headerData(section, orientation, role)
+
+
+   .. py:method:: get_default_flag(index)
+
+
+   .. py:method:: get_data(asset_type)
+
+      Collects data and creates the model's tree nodes.
+
+
+

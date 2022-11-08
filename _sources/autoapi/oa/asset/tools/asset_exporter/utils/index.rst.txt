@@ -1,0 +1,280 @@
+ :py:mod:`oa.asset.tools.asset_exporter.utils`
+============================================================================================
+
+.. py:module:: oa.asset.tools.asset_exporter.utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_exporter.utils.ViewportOff
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_exporter.utils.popup_message
+   oa.asset.tools.asset_exporter.utils.make_temp_dir
+   oa.asset.tools.asset_exporter.utils.save_temp_scene
+   oa.asset.tools.asset_exporter.utils.get_top_nodes
+   oa.asset.tools.asset_exporter.utils.export_selection
+   oa.asset.tools.asset_exporter.utils.traverse_to_asset_root
+   oa.asset.tools.asset_exporter.utils.get_first_root_nul
+   oa.asset.tools.asset_exporter.utils.get_scene_root_nuls
+   oa.asset.tools.asset_exporter.utils.clean_display_layers
+   oa.asset.tools.asset_exporter.utils.get_current_panel
+   oa.asset.tools.asset_exporter.utils.get_isolate_objs
+   oa.asset.tools.asset_exporter.utils.get_viewport_settings
+   oa.asset.tools.asset_exporter.utils.pre_capture_setup
+   oa.asset.tools.asset_exporter.utils.restore_viewport
+   oa.asset.tools.asset_exporter.utils.screengrab_viewport
+   oa.asset.tools.asset_exporter.utils.screengrab_viewport_depreciated
+   oa.asset.tools.asset_exporter.utils.capture_preview
+   oa.asset.tools.asset_exporter.utils.get_children_ref_paths
+   oa.asset.tools.asset_exporter.utils.paint_rest_coords
+   oa.asset.tools.asset_exporter.utils.add_rest_coords
+   oa.asset.tools.asset_exporter.utils.get_object_sets
+   oa.asset.tools.asset_exporter.utils.get_latest_version
+   oa.asset.tools.asset_exporter.utils.read_annotation
+   oa.asset.tools.asset_exporter.utils.add_database_entry_by_data
+   oa.asset.tools.asset_exporter.utils.from_asset_path
+   oa.asset.tools.asset_exporter.utils.add_database_entry
+   oa.asset.tools.asset_exporter.utils.lock_transforms
+   oa.asset.tools.asset_exporter.utils.get_dag_path
+   oa.asset.tools.asset_exporter.utils.is_node_visible
+   oa.asset.tools.asset_exporter.utils.add_asset_cp
+   oa.asset.tools.asset_exporter.utils.create_gpu_cache
+   oa.asset.tools.asset_exporter.utils.create_gpu_resolution
+   oa.asset.tools.asset_exporter.utils.cache_base_pose
+
+
+
+.. py:class:: ViewportOff
+
+   Bases: :py:obj:`object`
+
+   Uses "with" statement to disable the viewport's drawing inside its block.
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(exit_type, exit_val, exit_traceback)
+
+
+
+.. py:function:: popup_message(title, msg, icon=QtWidgets.QMessageBox.NoIcon, buttons=[QtWidgets.QMessageBox.Ok], parent=None)
+
+   Convenient method to display a message.
+
+   :param title: The window's title.
+   :param msg: The window's main content.
+   :param icon: Either a pixmap or QtWidgets.QMessageBox.Icon.
+   :param buttons: A list of QtWidgets.QMessage.StandardButton.
+   :param parent: A QWidget to center the message to.
+
+   :returns: The QtWidgets.QMessage.StandardButton enum that was chosen.
+
+
+.. py:function:: make_temp_dir()
+
+
+.. py:function:: save_temp_scene(name)
+
+
+.. py:function:: get_top_nodes()
+
+   Gets and returns a list of objects at the top of the scene's hierarchy.
+   Excludes default cameras.
+
+
+.. py:function:: export_selection(output_path)
+
+   Removes everything but the asset that's being exported so it can cleanly prune out all extra objects.
+
+
+.. py:function:: traverse_to_asset_root(objs)
+
+   A generator to get an object's asset root nul.
+   This skips any referenced objects to work with nested assets.
+
+   :param objs: A list of transform names.
+
+   :Yields: The object's asset root nul or None.
+
+
+.. py:function:: get_first_root_nul(objs)
+
+   Gets and returns the root nul of the first asset that is detected.
+
+   :param objs: A list of object names.
+
+   :returns: An asset's root nul, or None if nothing was found.
+
+
+.. py:function:: get_scene_root_nuls()
+
+   Gets and returns a list of root nuls in the whole scene.
+   Excludes nested assets.
+
+
+.. py:function:: clean_display_layers()
+
+   Unhides all layers and sets RDR's layer as reference mode.
+   Also deletes any unused layers.
+
+
+.. py:function:: get_current_panel()
+
+   Gets and returns the name of the active viewport.
+   If the active panel is not a viewport it returns persp's viewport.
+
+
+.. py:function:: get_isolate_objs(panel=None)
+
+   Gets a list of objects that are currently in the isolate set.
+
+   :param panel: The panel to check the set from.
+
+   :returns: A list of objects.
+
+
+.. py:function:: get_viewport_settings()
+
+   Collects active viewport's current state to a dictionary.
+
+   :returns: A dictionary of the viewport's data.
+
+
+.. py:function:: pre_capture_setup(isolate_objs=[])
+
+   Prepares the viewport for capture.
+
+   :param isolate_objs: A list of objects to isolate for capture.
+
+   :returns: A dictionary of the viewport's previous settings.
+
+
+.. py:function:: restore_viewport(viewport_settings)
+
+   Restores the active viewport to the supplied settings.
+
+   :param viewport_settings: Supply a dictionary returned from get_viewport_settings()
+
+
+.. py:function:: screengrab_viewport(path, width, height)
+
+   Saves a screen grab of the active viewport to a file.
+
+   :param path: Full path to save the image to.
+   :param width: Image's output width.
+   :param height: Image's output height.
+
+
+.. py:function:: screengrab_viewport_depreciated(path, width, height, img_type='jpg')
+
+   Saves a screen grab of the active viewport to a file.
+   This has out of order redraw issues.
+
+   :param path: Full path to save the image to.
+   :param width: Image's output width.
+   :param height: Image's output height.
+   :param img_type: Image's output extension.
+
+
+.. py:function:: capture_preview(output_path, width=640, height=400, isolate_objs=[])
+
+   Captures a single frame to a jpg file.
+
+   :param output_path: Full jpg path to save to.
+   :param frame: Frame number to capture from.
+   :param width: Image's width.
+   :param height: Image's height.
+   :param isolate_objs: A list of objects to isolate for capture.
+
+
+.. py:function:: get_children_ref_paths(obj)
+
+
+.. py:function:: paint_rest_coords(dag_path)
+
+   Paints the current colorSet map to bake the supplied mesh's vertex points to rgb.
+
+
+.. py:function:: add_rest_coords(obj)
+
+
+.. py:function:: get_object_sets()
+
+   Gets and returns a list of all object sets in the scene.
+
+
+.. py:function:: get_latest_version(file_entry_id)
+
+   Gets and returns the file entry's latest version number.
+
+
+.. py:function:: read_annotation(path)
+
+   Reads annotation file and returns a dictionary of values.
+
+   :param scene_path: A full path to an existing ma.txt file.
+
+
+.. py:function:: add_database_entry_by_data(project, asset_type, level, category, name, rdr_path, comments, model_description, thumbnail, resolution='RDR')
+
+
+.. py:function:: from_asset_path(scene_path)
+
+   Reads descriptor and annotation files and returns a dictionary of values that define that asset and version.
+
+   :param scene_path: A full path to an existing maya scene file.
+
+
+.. py:function:: add_database_entry(scene_path)
+
+   Adds asset entry for old and new databases.
+
+   :param scene_path: Full path to an existing maya scene on the server.
+
+
+.. py:function:: lock_transforms(obj, channels=['tx', 'ty', 'tz', 'rx', 'ry', 'rz', 'sx', 'sy', 'sz'])
+
+
+.. py:function:: get_dag_path(obj)
+
+   Creates an MDagPath object with supplied name.
+
+   :param obj: Name of an existing object.
+
+   :returns: The object wrapped in an MDagPath.
+
+
+.. py:function:: is_node_visible(shape)
+
+   Checks and returns if the supplied node is visible.
+
+
+.. py:function:: add_asset_cp(obj, res)
+
+
+.. py:function:: create_gpu_cache(output_path)
+
+   Collects objects from assets in the scene and caches them.
+
+   :param output_path: A full path where to cache out to.
+
+
+.. py:function:: create_gpu_resolution(output_scn_path)
+
+
+.. py:function:: cache_base_pose(output_cache_path, ref_path, batch_mode, namespace=None)
+
+

@@ -1,0 +1,165 @@
+ :py:mod:`oa.asset.tools.asset_creator.asset_creator`
+==========================================================================================================
+
+.. py:module:: oa.asset.tools.asset_creator.asset_creator
+
+.. autoapi-nested-parse::
+
+   Creates project's directory structure for assets.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_creator.asset_creator.NameValidator
+   oa.asset.tools.asset_creator.asset_creator.AssetCreator
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_creator.asset_creator.collect_assets
+   oa.asset.tools.asset_creator.asset_creator.string_sanity_check
+   oa.asset.tools.asset_creator.asset_creator.create_new_directory
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_creator.asset_creator.all_categories
+   oa.asset.tools.asset_creator.asset_creator.all_levels
+
+
+.. py:data:: all_categories
+   
+
+   
+
+.. py:data:: all_levels
+   :annotation: = ['ENV', 'SET']
+
+   
+
+.. py:class:: NameValidator(parent=None)
+
+   Bases: :py:obj:`PySide2.QtGui.QValidator`
+
+   Validates strings that don't contain any illegal characters.
+
+   .. py:method:: validate(value, pos)
+
+
+
+.. py:function:: collect_assets(project, asset_type, level, category, name)
+
+
+.. py:function:: string_sanity_check(word)
+
+   Performs a series of checks to determine if the supplied string is clean.
+
+   :param word:
+   :type word: string
+
+   :returns: True if all checks passed.
+
+
+.. py:function:: create_new_directory(asset_type, project, name, category=None, level=None)
+
+   Creates a new asset directory and its structure on the server via ftp.
+   Also checks-in its initial entry into the database.
+
+   :param asset_type: CHR, CAM, PRP, LOC.
+   :type asset_type: string
+   :param project: Project's name.
+   :type project: string
+   :param name: Asset's name.
+   :type name: string
+   :param category: Asset's category (for PRP and LOC assets only).
+   :type category: string
+   :param level: Asset's location level (for LOC assets only).
+   :type level: string
+
+   Retuns:
+       A full path to the new directory on success.
+
+
+.. py:class:: AssetCreator(asset_type, default_level=None, default_category=None, close_on_create=False, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   Tool to create new assets on the server.
+
+   :param asset_type: CAM, CHR, PRP, or LOC
+   :type asset_type: string
+   :param default_level: ENV or SET
+   :type default_level: string
+   :param default_category: Sets the combobox to default to this value.
+   :type default_category: string
+   :param close_on_create: Interface closes when a new asset is created.
+   :type close_on_create: bool
+   :param parent: Widget to parent this to.
+   :type parent: QtWidgets.QWidget
+
+   .. py:attribute:: tool_name
+      :annotation: = assetCreator
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: asset_created
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: run()
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: level_on_change()
+
+
+   .. py:method:: gui_on_change()
+
+
+   .. py:method:: create_on_click()
+
+
+   .. py:method:: accept_asset()
+
+
+   .. py:method:: reject_asset(label)
+
+
+

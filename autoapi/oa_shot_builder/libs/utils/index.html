@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa_shot_builder.libs.utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title=" oa_shot_builder.helpers" href="../../helpers/index.html" />
+    <link rel="prev" title=" oa_shot_builder.libs.state" href="../state/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder.libs</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder.libs</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder.libs.utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/oa_shot_builder/libs/utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa_shot_builder.libs.utils">
+<span id="oa-shot-builder-libs-utils"></span><h1> <a class="reference internal" href="#module-oa_shot_builder.libs.utils" title="oa_shot_builder.libs.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder.libs.utils</span></code></a><a class="headerlink" href="#module-oa_shot_builder.libs.utils" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.get_context_short_name" title="oa_shot_builder.libs.utils.get_context_short_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_context_short_name</span></code></a>(long_name)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils._hide_subnet_inputs" title="oa_shot_builder.libs.utils._hide_subnet_inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_hide_subnet_inputs</span></code></a>(subnet[, num_hidden_inputs])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.get_lightrig_for_asset" title="oa_shot_builder.libs.utils.get_lightrig_for_asset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_lightrig_for_asset</span></code></a>(node, lightrig_type)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.publish_lightrig_for_asset" title="oa_shot_builder.libs.utils.publish_lightrig_for_asset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">publish_lightrig_for_asset</span></code></a>(node, lightrig_type, comment)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.get_lightrig_types_for_asset" title="oa_shot_builder.libs.utils.get_lightrig_types_for_asset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_lightrig_types_for_asset</span></code></a>(node)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.get_guid" title="oa_shot_builder.libs.utils.get_guid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_guid</span></code></a>(node)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.get_scene_name" title="oa_shot_builder.libs.utils.get_scene_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scene_name</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.fit_timeline" title="oa_shot_builder.libs.utils.fit_timeline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_timeline</span></code></a>(fr_start, fr_end)</p></td>
+<td><p>Fits timeline playback range.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.get_source_scene_path" title="oa_shot_builder.libs.utils.get_source_scene_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_source_scene_path</span></code></a>([episode, sequence, shot])</p></td>
+<td><p>Gets path to the original source scene.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.get_selected_contexts" title="oa_shot_builder.libs.utils.get_selected_contexts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_selected_contexts</span></code></a>(contexts, **kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.convert_to_description_path" title="oa_shot_builder.libs.utils.convert_to_description_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_to_description_path</span></code></a>(source_scn_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.publish_context_gallery" title="oa_shot_builder.libs.utils.publish_context_gallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">publish_context_gallery</span></code></a>([identifier, context, comment])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.save_context_to_gallery" title="oa_shot_builder.libs.utils.save_context_to_gallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_context_to_gallery</span></code></a>(context, filename)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.load_context_from_gallery" title="oa_shot_builder.libs.utils.load_context_from_gallery"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_context_from_gallery</span></code></a>(gallery_path[, context])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.get_shot_context_identifier" title="oa_shot_builder.libs.utils.get_shot_context_identifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_shot_context_identifier</span></code></a>(context[, episode, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.get_shot_context_item" title="oa_shot_builder.libs.utils.get_shot_context_item"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_shot_context_item</span></code></a>(context[, episode, sequence, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.create_structure_subnet" title="oa_shot_builder.libs.utils.create_structure_subnet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_structure_subnet</span></code></a>(parent, name)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.get_structure_subnet" title="oa_shot_builder.libs.utils.get_structure_subnet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_structure_subnet</span></code></a>(parent, name)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.set_viewport_camera" title="oa_shot_builder.libs.utils.set_viewport_camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_viewport_camera</span></code></a>(cam)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.freeze_definitions" title="oa_shot_builder.libs.utils.freeze_definitions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">freeze_definitions</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils.this" title="oa_shot_builder.libs.utils.this"><code class="xref py py-obj docutils literal notranslate"><span class="pre">this</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils._scanned_dirs" title="oa_shot_builder.libs.utils._scanned_dirs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_scanned_dirs</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_shot_builder.libs.utils._context_map" title="oa_shot_builder.libs.utils._context_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_context_map</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.this">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">this</span></span><a class="headerlink" href="#oa_shot_builder.libs.utils.this" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils._scanned_dirs">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">_scanned_dirs</span></span><a class="headerlink" href="#oa_shot_builder.libs.utils._scanned_dirs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils._context_map">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">_context_map</span></span><a class="headerlink" href="#oa_shot_builder.libs.utils._context_map" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.get_context_short_name">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">get_context_short_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">long_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.get_context_short_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils._hide_subnet_inputs">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">_hide_subnet_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subnet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_hidden_inputs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils._hide_subnet_inputs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.get_lightrig_for_asset">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">get_lightrig_for_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lightrig_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.get_lightrig_for_asset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.publish_lightrig_for_asset">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">publish_lightrig_for_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lightrig_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.publish_lightrig_for_asset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.get_lightrig_types_for_asset">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">get_lightrig_types_for_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.get_lightrig_types_for_asset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.get_guid">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">get_guid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.get_guid" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.get_scene_name">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">get_scene_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.get_scene_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.fit_timeline">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">fit_timeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fr_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fr_end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.fit_timeline" title="Permalink to this definition"></a></dt>
+<dd><p>Fits timeline playback range.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.get_source_scene_path">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">get_source_scene_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">episode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.get_source_scene_path" title="Permalink to this definition"></a></dt>
+<dd><p>Gets path to the original source scene.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.get_selected_contexts">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">get_selected_contexts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contexts</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.get_selected_contexts" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.convert_to_description_path">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">convert_to_description_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_scn_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.convert_to_description_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.publish_context_gallery">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">publish_context_gallery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'effects'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.publish_context_gallery" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.save_context_to_gallery">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">save_context_to_gallery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.save_context_to_gallery" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.load_context_from_gallery">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">load_context_from_gallery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gallery_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'effects'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.load_context_from_gallery" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.get_shot_context_identifier">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">get_shot_context_identifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">episode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.get_shot_context_identifier" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.get_shot_context_item">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">get_shot_context_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">episode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.get_shot_context_item" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.create_structure_subnet">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">create_structure_subnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.create_structure_subnet" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.get_structure_subnet">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">get_structure_subnet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.get_structure_subnet" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.set_viewport_camera">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">set_viewport_camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cam</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.set_viewport_camera" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_shot_builder.libs.utils.freeze_definitions">
+<span class="sig-prename descclassname"><span class="pre">oa_shot_builder.libs.utils.</span></span><span class="sig-name descname"><span class="pre">freeze_definitions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_shot_builder.libs.utils.freeze_definitions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../state/index.html" class="btn btn-neutral float-left" title=" oa_shot_builder.libs.state" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../helpers/index.html" class="btn btn-neutral float-right" title=" oa_shot_builder.helpers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

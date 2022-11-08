@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.asset.tools.asset_instancer.asset_instancer &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.asset.tools.asset_instancer.display_scene_instances" href="../display_scene_instances/index.html" />
+    <link rel="prev" title=" oa.asset.tools.asset_instancer" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.asset_instancer</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.asset_instancer.asset_instancer</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/asset/tools/asset_instancer/asset_instancer/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.asset.tools.asset_instancer.asset_instancer">
+<span id="oa-asset-tools-asset-instancer-asset-instancer"></span><h1> <a class="reference internal" href="#module-oa.asset.tools.asset_instancer.asset_instancer" title="oa.asset.tools.asset_instancer.asset_instancer"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.asset_instancer.asset_instancer</span></code></a><a class="headerlink" href="#module-oa.asset.tools.asset_instancer.asset_instancer" title="Permalink to this heading"></a></h1>
+<p>Cleanly creates an instance of a whole asset.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_instancer.asset_instancer.SizeInputDialog" title="oa.asset.tools.asset_instancer.asset_instancer.SizeInputDialog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SizeInputDialog</span></code></a></p></td>
+<td><p>Simple pop-up to get user's input to determine the control's size.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_instancer.asset_instancer.get_settings" title="oa.asset.tools.asset_instancer.asset_instancer.get_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_settings</span></code></a>()</p></td>
+<td><p>Gets a dictionary of settings from a json file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_instancer.asset_instancer.save_settings" title="oa.asset.tools.asset_instancer.asset_instancer.save_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_settings</span></code></a>(**kwargs)</p></td>
+<td><p>Saves all keywords to a json file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_instancer.asset_instancer.contains_instances" title="oa.asset.tools.asset_instancer.asset_instancer.contains_instances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contains_instances</span></code></a>(ref_path)</p></td>
+<td><p>Recursively goes through references to detect any instances.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_instancer.asset_instancer.get_all_rdr_nuls" title="oa.asset.tools.asset_instancer.asset_instancer.get_all_rdr_nuls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_rdr_nuls</span></code></a>(ref_path[, all_rdr_nuls])</p></td>
+<td><p>Recursively goes through references to get all RDR_NUL.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_instancer.asset_instancer.instance_assets" title="oa.asset.tools.asset_instancer.asset_instancer.instance_assets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instance_assets</span></code></a>(objs[, count, select, color])</p></td>
+<td><p>Creates an instance of a referenced asset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_instancer.asset_instancer.instance_multiple" title="oa.asset.tools.asset_instancer.asset_instancer.instance_multiple"><code class="xref py py-obj docutils literal notranslate"><span class="pre">instance_multiple</span></code></a>()</p></td>
+<td><p>Pops-up a spinner to set the count of instance to create with the current selection.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_instancer.asset_instancer.rebuild_instance" title="oa.asset.tools.asset_instancer.asset_instancer.rebuild_instance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rebuild_instance</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_instancer.asset_instancer.get_shader" title="oa.asset.tools.asset_instancer.asset_instancer.get_shader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_shader</span></code></a>(obj)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_instancer.asset_instancer.reassign_inst_materials" title="oa.asset.tools.asset_instancer.asset_instancer.reassign_inst_materials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reassign_inst_materials</span></code></a>()</p></td>
+<td><p>Reassigns materials on all instances to fix any broken connections.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_instancer.asset_instancer.SizeInputDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_instancer.asset_instancer.</span></span><span class="sig-name descname"><span class="pre">SizeInputDialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">default_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_instancer.asset_instancer.SizeInputDialog" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QInputDialog</span></code></p>
+<p>Simple pop-up to get user’s input to determine the control’s size.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_instancer.asset_instancer.get_settings">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_instancer.asset_instancer.</span></span><span class="sig-name descname"><span class="pre">get_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_instancer.asset_instancer.get_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a dictionary of settings from a json file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_instancer.asset_instancer.save_settings">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_instancer.asset_instancer.</span></span><span class="sig-name descname"><span class="pre">save_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_instancer.asset_instancer.save_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Saves all keywords to a json file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_instancer.asset_instancer.contains_instances">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_instancer.asset_instancer.</span></span><span class="sig-name descname"><span class="pre">contains_instances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_instancer.asset_instancer.contains_instances" title="Permalink to this definition"></a></dt>
+<dd><p>Recursively goes through references to detect any instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ref_path</strong> (<em>string</em>) – Unresolved reference path.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if there was an instance found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_instancer.asset_instancer.get_all_rdr_nuls">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_instancer.asset_instancer.</span></span><span class="sig-name descname"><span class="pre">get_all_rdr_nuls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_rdr_nuls</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_instancer.asset_instancer.get_all_rdr_nuls" title="Permalink to this definition"></a></dt>
+<dd><p>Recursively goes through references to get all RDR_NUL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ref_path</strong> (<em>string</em>) – Unresolved referenced path.</p></li>
+<li><p><strong>all_rdr_nuls</strong> (<em>string</em>) – Keep this as None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of all RDR_NULs that was detected in each reference.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_instancer.asset_instancer.instance_assets">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_instancer.asset_instancer.</span></span><span class="sig-name descname"><span class="pre">instance_assets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[1,</span> <span class="pre">1,</span> <span class="pre">0]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_instancer.asset_instancer.instance_assets" title="Permalink to this definition"></a></dt>
+<dd><p>Creates an instance of a referenced asset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>objs</strong> (<em>string</em><em>[</em><em>]</em>) – A list of referenced objects.</p></li>
+<li><p><strong>count</strong> (<em>int</em>) – The number of instances to create.</p></li>
+<li><p><strong>select</strong> (<em>bool</em>) – Selects new instance if enabled.</p></li>
+<li><p><strong>color</strong> (<em>float</em><em>[</em><em>]</em>) – RGB value of the instance’s handle.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of the new instances.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_instancer.asset_instancer.instance_multiple">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_instancer.asset_instancer.</span></span><span class="sig-name descname"><span class="pre">instance_multiple</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_instancer.asset_instancer.instance_multiple" title="Permalink to this definition"></a></dt>
+<dd><p>Pops-up a spinner to set the count of instance to create with the current selection.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_instancer.asset_instancer.rebuild_instance">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_instancer.asset_instancer.</span></span><span class="sig-name descname"><span class="pre">rebuild_instance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_instancer.asset_instancer.rebuild_instance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_instancer.asset_instancer.get_shader">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_instancer.asset_instancer.</span></span><span class="sig-name descname"><span class="pre">get_shader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_instancer.asset_instancer.get_shader" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_instancer.asset_instancer.reassign_inst_materials">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_instancer.asset_instancer.</span></span><span class="sig-name descname"><span class="pre">reassign_inst_materials</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_instancer.asset_instancer.reassign_inst_materials" title="Permalink to this definition"></a></dt>
+<dd><p>Reassigns materials on all instances to fix any broken connections.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title=" oa.asset.tools.asset_instancer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../display_scene_instances/index.html" class="btn btn-neutral float-right" title=" oa.asset.tools.asset_instancer.display_scene_instances" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

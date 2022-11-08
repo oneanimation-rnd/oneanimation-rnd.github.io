@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa_utils.database.lib.entity &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title=" oa_utils.database.lib.providers" href="../providers/index.html" />
+    <link rel="prev" title=" oa_utils.database.lib" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.database</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.database</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.database.lib</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.database.lib.entity</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/oa_utils/database/lib/entity/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa_utils.database.lib.entity">
+<span id="oa-utils-database-lib-entity"></span><h1> <a class="reference internal" href="#module-oa_utils.database.lib.entity" title="oa_utils.database.lib.entity"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.database.lib.entity</span></code></a><a class="headerlink" href="#module-oa_utils.database.lib.entity" title="Permalink to this heading"></a></h1>
+<p>This module defines a database schema.</p>
+<p>In order to store and retrieve data from the database in a more
+user-friendly manner, we have to associate every database document
+type with a class defining the structure of that document.</p>
+<p>Check mongoengine documentation for more information on that subject.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.EntityTypes" title="oa_utils.database.lib.entity.EntityTypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EntityTypes</span></code></a></p></td>
+<td><p>Entity type enumerator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.IUser" title="oa_utils.database.lib.entity.IUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IUser</span></code></a></p></td>
+<td><p>Base abstract class for all 'user' document schemas.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.IDescriptable" title="oa_utils.database.lib.entity.IDescriptable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IDescriptable</span></code></a></p></td>
+<td><p>Abstract class for all documents that have description.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.Revision" title="oa_utils.database.lib.entity.Revision"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Revision</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.FileEntry" title="oa_utils.database.lib.entity.FileEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileEntry</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.IMetaEntry" title="oa_utils.database.lib.entity.IMetaEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMetaEntry</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.IMetaEntryEmbedded" title="oa_utils.database.lib.entity.IMetaEntryEmbedded"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMetaEntryEmbedded</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.Asset" title="oa_utils.database.lib.entity.Asset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Asset</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.IVisual" title="oa_utils.database.lib.entity.IVisual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IVisual</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.IVisualUrl" title="oa_utils.database.lib.entity.IVisualUrl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IVisualUrl</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.IProjectItem" title="oa_utils.database.lib.entity.IProjectItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IProjectItem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.IEpisodeItem" title="oa_utils.database.lib.entity.IEpisodeItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IEpisodeItem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.ISequenceItem" title="oa_utils.database.lib.entity.ISequenceItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ISequenceItem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.ITaggable" title="oa_utils.database.lib.entity.ITaggable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ITaggable</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.User" title="oa_utils.database.lib.entity.User"><code class="xref py py-obj docutils literal notranslate"><span class="pre">User</span></code></a></p></td>
+<td><p>Base abstract class for all 'user' document schemas.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.Model" title="oa_utils.database.lib.entity.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Model</span></code></a></p></td>
+<td><p>Abstract class for all documents that have description.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.ModelXsi" title="oa_utils.database.lib.entity.ModelXsi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModelXsi</span></code></a></p></td>
+<td><p>Abstract class for all documents that have description.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.ModelMaya" title="oa_utils.database.lib.entity.ModelMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModelMaya</span></code></a></p></td>
+<td><p>Abstract class for all documents that have description.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.ModelHoudini" title="oa_utils.database.lib.entity.ModelHoudini"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ModelHoudini</span></code></a></p></td>
+<td><p>Abstract class for all documents that have description.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.Scene" title="oa_utils.database.lib.entity.Scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Scene</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.SceneXsi" title="oa_utils.database.lib.entity.SceneXsi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SceneXsi</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.SceneMaya" title="oa_utils.database.lib.entity.SceneMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SceneMaya</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.SceneHoudini" title="oa_utils.database.lib.entity.SceneHoudini"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SceneHoudini</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.Design" title="oa_utils.database.lib.entity.Design"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Design</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.Texture" title="oa_utils.database.lib.entity.Texture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Texture</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.database.lib.entity.AnmClip" title="oa_utils.database.lib.entity.AnmClip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnmClip</span></code></a></p></td>
+<td><p>Abstract class for all documents that have description.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.EntityTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">EntityTypes</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.EntityTypes" title="Permalink to this definition"></a></dt>
+<dd><p>Entity type enumerator.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IUser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">IUser</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IUser" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.Document</span></code></p>
+<p>Base abstract class for all ‘user’ document schemas.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IUser.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IUser.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IUser.email">
+<span class="sig-name descname"><span class="pre">email</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IUser.email" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IUser.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IUser.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IDescriptable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">IDescriptable</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IDescriptable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.Document</span></code></p>
+<p>Abstract class for all documents that have description.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IDescriptable.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IDescriptable.description" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IDescriptable.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IDescriptable.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Revision">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">Revision</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Revision" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.EmbeddedDocument</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Revision.version">
+<span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Revision.version" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Revision.comment">
+<span class="sig-name descname"><span class="pre">comment</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Revision.comment" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Revision.user">
+<span class="sig-name descname"><span class="pre">user</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Revision.user" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Revision.date">
+<span class="sig-name descname"><span class="pre">date</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Revision.date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Revision.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Revision.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.FileEntry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">FileEntry</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.FileEntry" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.Document</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.FileEntry.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.FileEntry.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.FileEntry.entity_type">
+<span class="sig-name descname"><span class="pre">entity_type</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.FileEntry.entity_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.FileEntry.filepath">
+<span class="sig-name descname"><span class="pre">filepath</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.FileEntry.filepath" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.FileEntry.revisions">
+<span class="sig-name descname"><span class="pre">revisions</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.FileEntry.revisions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.FileEntry.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.FileEntry.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IMetaEntry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">IMetaEntry</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IMetaEntry" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.Document</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IMetaEntry.file">
+<span class="sig-name descname"><span class="pre">file</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IMetaEntry.file" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IMetaEntry.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IMetaEntry.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IMetaEntryEmbedded">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">IMetaEntryEmbedded</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IMetaEntryEmbedded" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.EmbeddedDocument</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IMetaEntryEmbedded.file">
+<span class="sig-name descname"><span class="pre">file</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IMetaEntryEmbedded.file" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IMetaEntryEmbedded.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IMetaEntryEmbedded.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Asset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">Asset</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Asset" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.Document</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Asset.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Asset.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IVisual">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">IVisual</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IVisual" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.Document</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IVisual.thumbnail">
+<span class="sig-name descname"><span class="pre">thumbnail</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IVisual.thumbnail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IVisual.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IVisual.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IVisualUrl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">IVisualUrl</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IVisualUrl" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.Document</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IVisualUrl.thumbnail">
+<span class="sig-name descname"><span class="pre">thumbnail</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IVisualUrl.thumbnail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IVisualUrl.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IVisualUrl.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IProjectItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">IProjectItem</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IProjectItem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.Document</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IProjectItem.project">
+<span class="sig-name descname"><span class="pre">project</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IProjectItem.project" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IProjectItem.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IProjectItem.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IEpisodeItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">IEpisodeItem</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IEpisodeItem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.Document</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IEpisodeItem.episode">
+<span class="sig-name descname"><span class="pre">episode</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IEpisodeItem.episode" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.IEpisodeItem.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.IEpisodeItem.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.ISequenceItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">ISequenceItem</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.ISequenceItem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.Document</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.ISequenceItem.sequence">
+<span class="sig-name descname"><span class="pre">sequence</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.ISequenceItem.sequence" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.ISequenceItem.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.ISequenceItem.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.ITaggable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">ITaggable</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.ITaggable" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.Document</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.ITaggable.tags">
+<span class="sig-name descname"><span class="pre">tags</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.ITaggable.tags" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.ITaggable.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.ITaggable.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.User">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">User</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.User" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.database.lib.entity.IUser" title="oa_utils.database.lib.entity.IUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IUser</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.IVisualUrl" title="oa_utils.database.lib.entity.IVisualUrl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IVisualUrl</span></code></a></p>
+<p>Base abstract class for all ‘user’ document schemas.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.User.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.User.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">Model</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.database.lib.entity.Asset" title="oa_utils.database.lib.entity.Asset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Asset</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.IProjectItem" title="oa_utils.database.lib.entity.IProjectItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IProjectItem</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.IVisualUrl" title="oa_utils.database.lib.entity.IVisualUrl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IVisualUrl</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.ITaggable" title="oa_utils.database.lib.entity.ITaggable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ITaggable</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.IDescriptable" title="oa_utils.database.lib.entity.IDescriptable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IDescriptable</span></code></a></p>
+<p>Abstract class for all documents that have description.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.Resolutions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Resolutions</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.Resolutions" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.EmbeddedDocument</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.Resolutions.ANI">
+<span class="sig-name descname"><span class="pre">ANI</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.Resolutions.ANI" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.Resolutions.RDR">
+<span class="sig-name descname"><span class="pre">RDR</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.Resolutions.RDR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.Resolutions.PRX">
+<span class="sig-name descname"><span class="pre">PRX</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.Resolutions.PRX" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.Resolutions.DFM">
+<span class="sig-name descname"><span class="pre">DFM</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.Resolutions.DFM" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.type">
+<span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.level">
+<span class="sig-name descname"><span class="pre">level</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.level" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.category">
+<span class="sig-name descname"><span class="pre">category</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.category" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.resolutions">
+<span class="sig-name descname"><span class="pre">resolutions</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.resolutions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.depreciated">
+<span class="sig-name descname"><span class="pre">depreciated</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.depreciated" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Model.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Model.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.ModelXsi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">ModelXsi</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.ModelXsi" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.database.lib.entity.Model" title="oa_utils.database.lib.entity.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Model</span></code></a></p>
+<p>Abstract class for all documents that have description.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.ModelXsi.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.ModelXsi.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.ModelMaya">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">ModelMaya</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.ModelMaya" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.database.lib.entity.Model" title="oa_utils.database.lib.entity.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Model</span></code></a></p>
+<p>Abstract class for all documents that have description.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.ModelMaya.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.ModelMaya.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.ModelHoudini">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">ModelHoudini</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.ModelHoudini" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.database.lib.entity.Model" title="oa_utils.database.lib.entity.Model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Model</span></code></a></p>
+<p>Abstract class for all documents that have description.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.ModelHoudini.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.ModelHoudini.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">Scene</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.database.lib.entity.IProjectItem" title="oa_utils.database.lib.entity.IProjectItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IProjectItem</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.IEpisodeItem" title="oa_utils.database.lib.entity.IEpisodeItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IEpisodeItem</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.ISequenceItem" title="oa_utils.database.lib.entity.ISequenceItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ISequenceItem</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.IMetaEntry" title="oa_utils.database.lib.entity.IMetaEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMetaEntry</span></code></a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene.Shot">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Shot</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene.Shot" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.EmbeddedDocument</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene.Shot.index">
+<span class="sig-name descname"><span class="pre">index</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene.Shot.index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene.Shot.fr_start">
+<span class="sig-name descname"><span class="pre">fr_start</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene.Shot.fr_start" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene.Shot.fr_end">
+<span class="sig-name descname"><span class="pre">fr_end</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene.Shot.fr_end" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene.RefAsset">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RefAsset</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene.RefAsset" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">mongoengine.EmbeddedDocument</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene.RefAsset.version">
+<span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene.RefAsset.version" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene.RefAsset.asset">
+<span class="sig-name descname"><span class="pre">asset</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene.RefAsset.asset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene.type">
+<span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene.type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene.shots">
+<span class="sig-name descname"><span class="pre">shots</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene.shots" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene.refs">
+<span class="sig-name descname"><span class="pre">refs</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene.refs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Scene.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Scene.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.SceneXsi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">SceneXsi</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.SceneXsi" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.database.lib.entity.Scene" title="oa_utils.database.lib.entity.Scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Scene</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.SceneXsi.rule">
+<span class="sig-name descname"><span class="pre">rule</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.SceneXsi.rule" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.SceneXsi.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.SceneXsi.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.SceneMaya">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">SceneMaya</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.SceneMaya" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.database.lib.entity.Scene" title="oa_utils.database.lib.entity.Scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Scene</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.SceneMaya.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.SceneMaya.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.SceneHoudini">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">SceneHoudini</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.SceneHoudini" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.database.lib.entity.Scene" title="oa_utils.database.lib.entity.Scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Scene</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.SceneHoudini.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.SceneHoudini.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Design">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">Design</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Design" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.database.lib.entity.Asset" title="oa_utils.database.lib.entity.Asset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Asset</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.IMetaEntry" title="oa_utils.database.lib.entity.IMetaEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMetaEntry</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.IVisual" title="oa_utils.database.lib.entity.IVisual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IVisual</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Design.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Design.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Texture">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">Texture</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Texture" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.database.lib.entity.Asset" title="oa_utils.database.lib.entity.Asset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Asset</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.IMetaEntry" title="oa_utils.database.lib.entity.IMetaEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMetaEntry</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.IVisual" title="oa_utils.database.lib.entity.IVisual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IVisual</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.Texture.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.Texture.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.AnmClip">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.database.lib.entity.</span></span><span class="sig-name descname"><span class="pre">AnmClip</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.AnmClip" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.database.lib.entity.IMetaEntry" title="oa_utils.database.lib.entity.IMetaEntry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IMetaEntry</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.IDescriptable" title="oa_utils.database.lib.entity.IDescriptable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IDescriptable</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.IVisualUrl" title="oa_utils.database.lib.entity.IVisualUrl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IVisualUrl</span></code></a>, <a class="reference internal" href="#oa_utils.database.lib.entity.ITaggable" title="oa_utils.database.lib.entity.ITaggable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ITaggable</span></code></a></p>
+<p>Abstract class for all documents that have description.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.AnmClip.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.AnmClip.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.AnmClip.project">
+<span class="sig-name descname"><span class="pre">project</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.AnmClip.project" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.AnmClip.active">
+<span class="sig-name descname"><span class="pre">active</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.AnmClip.active" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.AnmClip.label">
+<span class="sig-name descname"><span class="pre">label</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.AnmClip.label" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.AnmClip.target">
+<span class="sig-name descname"><span class="pre">target</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.AnmClip.target" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa_utils.database.lib.entity.AnmClip.meta">
+<span class="sig-name descname"><span class="pre">meta</span></span><a class="headerlink" href="#oa_utils.database.lib.entity.AnmClip.meta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title=" oa_utils.database.lib" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../providers/index.html" class="btn btn-neutral float-right" title=" oa_utils.database.lib.providers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.asset.tools.costumes.costumes_creator &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.asset.tools.costumes.costumes_importer" href="../costumes_importer/index.html" />
+    <link rel="prev" title=" oa.asset.tools.costumes" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.costumes</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.costumes.costumes_creator</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/asset/tools/costumes/costumes_creator/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.asset.tools.costumes.costumes_creator">
+<span id="oa-asset-tools-costumes-costumes-creator"></span><h1> <a class="reference internal" href="#module-oa.asset.tools.costumes.costumes_creator" title="oa.asset.tools.costumes.costumes_creator"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.costumes.costumes_creator</span></code></a><a class="headerlink" href="#module-oa.asset.tools.costumes.costumes_creator" title="Permalink to this heading"></a></h1>
+<p>An interface that helps attaches props to a character then exports it as a costume.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+<dt>Usage:</dt><dd><p>launch()</p>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator" title="oa.asset.tools.costumes.costumes_creator.CostumeCreator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CostumeCreator</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.costumes.costumes_creator.CustomTableWidget" title="oa.asset.tools.costumes.costumes_creator.CustomTableWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomTableWidget</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.costumes.costumes_creator.CustomListWidget" title="oa.asset.tools.costumes.costumes_creator.CustomListWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomListWidget</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.costumes.costumes_creator.ConnectionItem" title="oa.asset.tools.costumes.costumes_creator.ConnectionItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConnectionItem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.costumes.costumes_creator.GroupItem" title="oa.asset.tools.costumes.costumes_creator.GroupItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GroupItem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.costumes.costumes_creator.ThumbnailPreview" title="oa.asset.tools.costumes.costumes_creator.ThumbnailPreview"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThumbnailPreview</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.costumes.costumes_creator.launch" title="oa.asset.tools.costumes.costumes_creator.launch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.asset.tools.costumes.costumes_creator.</span></span><span class="sig-name descname"><span class="pre">CostumeCreator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_nul</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.showEvent">
+<span class="sig-name descname"><span class="pre">showEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.showEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.closeEvent">
+<span class="sig-name descname"><span class="pre">closeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.closeEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.create_gui">
+<span class="sig-name descname"><span class="pre">create_gui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.create_gui" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.set_texture_deformer_column">
+<span class="sig-name descname"><span class="pre">set_texture_deformer_column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.set_texture_deformer_column" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.set_smooth_column">
+<span class="sig-name descname"><span class="pre">set_smooth_column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.set_smooth_column" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.fill_list">
+<span class="sig-name descname"><span class="pre">fill_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.fill_list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.fill_costume_names">
+<span class="sig-name descname"><span class="pre">fill_costume_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.fill_costume_names" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.fill_fields_from_costume">
+<span class="sig-name descname"><span class="pre">fill_fields_from_costume</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.fill_fields_from_costume" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.update_thumbnail">
+<span class="sig-name descname"><span class="pre">update_thumbnail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.update_thumbnail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.show_help_screen">
+<span class="sig-name descname"><span class="pre">show_help_screen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.show_help_screen" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_menu_on_requested">
+<span class="sig-name descname"><span class="pre">on_menu_on_requested</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_menu_on_requested" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_bind_list_double_clicked">
+<span class="sig-name descname"><span class="pre">on_bind_list_double_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_bind_list_double_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_select_source_triggered">
+<span class="sig-name descname"><span class="pre">on_select_source_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_select_source_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_select_target_triggered">
+<span class="sig-name descname"><span class="pre">on_select_target_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_select_target_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_remove_triggered">
+<span class="sig-name descname"><span class="pre">on_remove_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_remove_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_add_texture_deformer_triggered">
+<span class="sig-name descname"><span class="pre">on_add_texture_deformer_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_add_texture_deformer_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_remove_texture_deformer_triggered">
+<span class="sig-name descname"><span class="pre">on_remove_texture_deformer_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_remove_texture_deformer_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_smooth_skin_clicked">
+<span class="sig-name descname"><span class="pre">on_smooth_skin_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_smooth_skin_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_bind_clicked">
+<span class="sig-name descname"><span class="pre">on_bind_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bind_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_bind_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_thumbnail_clicked">
+<span class="sig-name descname"><span class="pre">on_thumbnail_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_thumbnail_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_create_costume_clicked">
+<span class="sig-name descname"><span class="pre">on_create_costume_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_create_costume_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_group_manager_clicked">
+<span class="sig-name descname"><span class="pre">on_group_manager_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CostumeCreator.on_group_manager_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomTableWidget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.asset.tools.costumes.costumes_creator.</span></span><span class="sig-name descname"><span class="pre">CustomTableWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tooltip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomTableWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTableWidget</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomTableWidget.Column">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Column</span></span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomTableWidget.Column" title="Permalink to this definition"></a></dt>
+<dd><dl class="py attribute">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomTableWidget.Column.Name">
+<span class="sig-name descname"><span class="pre">Name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomTableWidget.Column.Name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomTableWidget.Column.Texture">
+<span class="sig-name descname"><span class="pre">Texture</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomTableWidget.Column.Texture" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomTableWidget.Column.Smooth">
+<span class="sig-name descname"><span class="pre">Smooth</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomTableWidget.Column.Smooth" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomTableWidget.double_clicked">
+<span class="sig-name descname"><span class="pre">double_clicked</span></span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomTableWidget.double_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomTableWidget.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paint_event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomTableWidget.paintEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomTableWidget.mouseDoubleClickEvent">
+<span class="sig-name descname"><span class="pre">mouseDoubleClickEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomTableWidget.mouseDoubleClickEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomTableWidget.selected_items">
+<span class="sig-name descname"><span class="pre">selected_items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomTableWidget.selected_items" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomListWidget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.asset.tools.costumes.costumes_creator.</span></span><span class="sig-name descname"><span class="pre">CustomListWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tooltip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomListWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QListWidget</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomListWidget.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paint_event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomListWidget.paintEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomListWidget.mouseDoubleClickEvent">
+<span class="sig-name descname"><span class="pre">mouseDoubleClickEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomListWidget.mouseDoubleClickEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomListWidget.keyPressEvent">
+<span class="sig-name descname"><span class="pre">keyPressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomListWidget.keyPressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.CustomListWidget.toggle_selected_items">
+<span class="sig-name descname"><span class="pre">toggle_selected_items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.CustomListWidget.toggle_selected_items" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.ConnectionItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.asset.tools.costumes.costumes_creator.</span></span><span class="sig-name descname"><span class="pre">ConnectionItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bind_method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.ConnectionItem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTableWidgetItem</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.GroupItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.asset.tools.costumes.costumes_creator.</span></span><span class="sig-name descname"><span class="pre">GroupItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.GroupItem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QListWidgetItem</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.ThumbnailPreview">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.asset.tools.costumes.costumes_creator.</span></span><span class="sig-name descname"><span class="pre">ThumbnailPreview</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.ThumbnailPreview" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QPushButton</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.ThumbnailPreview.enterEvent">
+<span class="sig-name descname"><span class="pre">enterEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.ThumbnailPreview.enterEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.ThumbnailPreview.leaveEvent">
+<span class="sig-name descname"><span class="pre">leaveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.ThumbnailPreview.leaveEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.ThumbnailPreview.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paint_event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.ThumbnailPreview.paintEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.costumes.costumes_creator.launch">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.costumes.costumes_creator.</span></span><span class="sig-name descname"><span class="pre">launch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.costumes.costumes_creator.launch" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title=" oa.asset.tools.costumes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../costumes_importer/index.html" class="btn btn-neutral float-right" title=" oa.asset.tools.costumes.costumes_importer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

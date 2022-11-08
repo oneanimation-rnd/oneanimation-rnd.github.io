@@ -1,0 +1,107 @@
+ :py:mod:`oa_utils.helpers`
+======================================================
+
+.. py:module:: oa_utils.helpers
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.helpers.build_path
+   oa_utils.helpers.build_name
+   oa_utils.helpers.get_unc_path
+   oa_utils.helpers.tokenize
+   oa_utils.helpers.untokenize
+   oa_utils.helpers.is_path
+   oa_utils.helpers.is_file_path
+   oa_utils.helpers.is_folder_path
+   oa_utils.helpers.get_incremented_path
+   oa_utils.helpers.get_maxversion_path
+
+
+
+.. py:function:: build_path(*args)
+
+
+.. py:function:: build_name(*args)
+
+
+.. py:function:: get_unc_path(path)
+
+   get resolved drive mapping path
+
+
+.. py:function:: tokenize(path)
+
+   return a converted path with proper token taken from environment variable
+
+
+.. py:function:: untokenize(path)
+
+   return the path without tokens
+
+
+.. py:function:: is_path(inputPath)
+
+   Checks whether the inputPath string can be
+   a valid path to some file.
+
+   :param inputPath: input file path
+   :type inputPath: str
+
+   :returns: True if it's a file path, False otherwise
+   :rtype: bool
+
+
+.. py:function:: is_file_path(inputPath)
+
+   Checks whether the inputPath string can be
+   a valid path to some file.
+
+   :param inputPath: input file path
+   :type inputPath: str
+
+   :returns: True if it's a file path, False otherwise
+   :rtype: bool
+
+
+.. py:function:: is_folder_path(inputPath)
+
+   Checks whether the inputPath string can be
+   a valid path to some folder.
+
+   :param inputPath: input folder path
+   :type inputPath: str
+
+   :returns: True if it's a folder path, False otherwise
+   :rtype: bool
+
+
+.. py:function:: get_incremented_path(path)
+
+   Gets an incremented version of the file.
+
+   :param path: file path to get the version from.
+   :type path: str
+
+   :returns: a new incremented path.
+   :rtype: str
+
+
+.. py:function:: get_maxversion_path(path)
+
+   Gets a maximum version of the file.
+
+   :param path: file path to match the version to.
+   :type path: str
+
+   :returns: a maximum version path.
+   :rtype: str
+
+

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.rigging.libs.rigging_libs &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title=" oa.rigging.tools" href="../../tools/index.html" />
+    <link rel="prev" title=" oa.rigging.libs.blendshape_groups" href="../blendshape_groups/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.libs</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.libs.rigging_libs</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/oa/rigging/libs/rigging_libs/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.rigging.libs.rigging_libs">
+<span id="oa-rigging-libs-rigging-libs"></span><h1> <a class="reference internal" href="#module-oa.rigging.libs.rigging_libs" title="oa.rigging.libs.rigging_libs"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.libs.rigging_libs</span></code></a><a class="headerlink" href="#module-oa.rigging.libs.rigging_libs" title="Permalink to this heading"></a></h1>
+<p>Holds generic functions specifically for rigging.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.ObjectWrapper" title="oa.rigging.libs.rigging_libs.ObjectWrapper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObjectWrapper</span></code></a></p></td>
+<td><p>Wrapper for a maya node so it's not name dependent.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.attach_follicle" title="oa.rigging.libs.rigging_libs.attach_follicle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">attach_follicle</span></code></a>(obj[, u_value, v_value, name])</p></td>
+<td><p>Attaches a hair follicle to a mesh object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.add_follicles_to_vertices" title="oa.rigging.libs.rigging_libs.add_follicles_to_vertices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_follicles_to_vertices</span></code></a>([select])</p></td>
+<td><p>Creates a new follicle for each selected vertex.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.create_weak_ref" title="oa.rigging.libs.rigging_libs.create_weak_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_weak_ref</span></code></a>(container_obj, weak_ref_obj, attr_name)</p></td>
+<td><p>Connects one object to another via weak reference.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.get_weak_ref" title="oa.rigging.libs.rigging_libs.get_weak_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_weak_ref</span></code></a>(obj, attr)</p></td>
+<td><p>Gets and returns the attribute's weak reference that it's pointing to.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.convert_name_to_type" title="oa.rigging.libs.rigging_libs.convert_name_to_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_name_to_type</span></code></a>(node_type, obj)</p></td>
+<td><p>Uses supplied arguments to return a new name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.create_node" title="oa.rigging.libs.rigging_libs.create_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_node</span></code></a>(node_type, name)</p></td>
+<td><p>Creates a new maya object with the supplied name and returns it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.add_child_node" title="oa.rigging.libs.rigging_libs.add_child_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_child_node</span></code></a>(node_type, obj[, name])</p></td>
+<td><p>Creates a new node, aligns then parents it to the supplied object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.add_child_nodes_to_sel" title="oa.rigging.libs.rigging_libs.add_child_nodes_to_sel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_child_nodes_to_sel</span></code></a>(node_type[, select])</p></td>
+<td><p>Creates a child nodes on selection.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.add_parent_node" title="oa.rigging.libs.rigging_libs.add_parent_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_parent_node</span></code></a>(node_type, obj[, name])</p></td>
+<td><p>Creates a new node, aligns then parents the supplied object to it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.add_parent_nodes_to_sel" title="oa.rigging.libs.rigging_libs.add_parent_nodes_to_sel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_parent_nodes_to_sel</span></code></a>(node_type[, select])</p></td>
+<td><p>Creates a parent nodes on selection.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.add_node_at_components" title="oa.rigging.libs.rigging_libs.add_node_at_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_node_at_components</span></code></a>(node_type[, select, name])</p></td>
+<td><p>Creates a new node and aligns it to the average position of selected components.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.libs.rigging_libs.suffixes" title="oa.rigging.libs.rigging_libs.suffixes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">suffixes</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.suffixes">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">suffixes</span></span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.suffixes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.ObjectWrapper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">ObjectWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.ObjectWrapper" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">maya.OpenMaya.MDagPath</span></code></p>
+<p>Wrapper for a maya node so it’s not name dependent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj_name</strong> (<em>string</em>) – An existing object to wrap.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.ObjectWrapper.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.ObjectWrapper.__str__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.ObjectWrapper.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.ObjectWrapper.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.attach_follicle">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">attach_follicle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'newFollicle'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.attach_follicle" title="Permalink to this definition"></a></dt>
+<dd><p>Attaches a hair follicle to a mesh object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – A name of the mesh object to attach to.</p></li>
+<li><p><strong>u_value</strong> (<em>float</em>) – A value between 0.0 to 1.0 to set its horizontal space.</p></li>
+<li><p><strong>v_value</strong> (<em>float</em>) – A value between 0.0 to 1.0 to set its vertical space.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – Name of the new follicle.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of the follicle’s nul and shape.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.add_follicles_to_vertices">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">add_follicles_to_vertices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">select</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.add_follicles_to_vertices" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new follicle for each selected vertex.
+Object must have uvs in order this to work.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>select</strong> (<em>bool</em>) – Selects new follicles on true.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of the new follicles.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.create_weak_ref">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">create_weak_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">container_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weak_ref_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.create_weak_ref" title="Permalink to this definition"></a></dt>
+<dd><p>Connects one object to another via weak reference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>container_obj</strong> (<em>string</em>) – Object to hold weak references.</p></li>
+<li><p><strong>weak_ref_obj</strong> (<em>string</em>) – Objects to be referenced.</p></li>
+<li><p><strong>attr_name</strong> (<em>string</em>) – Name of attribute.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.get_weak_ref">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">get_weak_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.get_weak_ref" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the attribute’s weak reference that it’s pointing to.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.convert_name_to_type">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">convert_name_to_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.convert_name_to_type" title="Permalink to this definition"></a></dt>
+<dd><p>Uses supplied arguments to return a new name.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.create_node">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">create_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.create_node" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new maya object with the supplied name and returns it.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.add_child_node">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">add_child_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.add_child_node" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new node, aligns then parents it to the supplied object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_type</strong> (<em>string</em>) – The node type to create the new objects as.</p></li>
+<li><p><strong>obj</strong> (<em>string</em>) – The object to align and parent to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An ObjectWrapper of the new node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.add_child_nodes_to_sel">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">add_child_nodes_to_sel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.add_child_nodes_to_sel" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a child nodes on selection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_type</strong> (<em>string</em>) – The node type to create the new objects as.</p></li>
+<li><p><strong>select</strong> (<em>bool</em>) – Selects the new nodes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of all the new nodes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.add_parent_node">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">add_parent_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.add_parent_node" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new node, aligns then parents the supplied object to it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_type</strong> (<em>string</em>) – The node type to create the new objects as.</p></li>
+<li><p><strong>obj</strong> (<em>string</em>) – The object to align and parent to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An ObjectWrapper of the new node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.add_parent_nodes_to_sel">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">add_parent_nodes_to_sel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.add_parent_nodes_to_sel" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a parent nodes on selection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_type</strong> (<em>string</em>) – The node type to create the new objects as.</p></li>
+<li><p><strong>select</strong> (<em>bool</em>) – Selects the new nodes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of all the new nodes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.libs.rigging_libs.add_node_at_components">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.libs.rigging_libs.</span></span><span class="sig-name descname"><span class="pre">add_node_at_components</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">select</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.libs.rigging_libs.add_node_at_components" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new node and aligns it to the average position of selected components.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node_type</strong> (<em>string</em>) – The node type to create the new objects as.</p></li>
+<li><p><strong>select</strong> (<em>bool</em>) – Selects the new node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The new node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../blendshape_groups/index.html" class="btn btn-neutral float-left" title=" oa.rigging.libs.blendshape_groups" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../tools/index.html" class="btn btn-neutral float-right" title=" oa.rigging.tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

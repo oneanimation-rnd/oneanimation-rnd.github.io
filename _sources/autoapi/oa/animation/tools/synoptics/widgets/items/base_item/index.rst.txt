@@ -1,0 +1,79 @@
+ :py:mod:`oa.animation.tools.synoptics.widgets.items.base_item`
+==============================================================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.widgets.items.base_item
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.widgets.items.base_item.BaseItem
+
+
+
+
+.. py:class:: BaseItem(view, item_type, item_color=None, name='', txt='', font=None, custom_path='', mirrored=False, is_selectable=True, view_scale=1.0, m_trigger_item=None, z_value=0)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QGraphicsPathItem`
+
+   Has the core functionality of how all items should work.
+
+   :param view:
+   :type view: QGraphicsView
+   :param item_type: "square", "circle", "rectangle", "triangle", "text", "custom"
+   :type item_type: string
+   :param item_color:
+   :type item_color: QColor
+   :param name:
+   :type name: string
+   :param font:
+   :type font: QFont
+   :param custom_path:
+   :type custom_path: QPainterPath
+   :param mirrored: Flips it horizontally.
+   :type mirrored: bool
+   :param is_selectable: User isn't able to click it in the viewer.
+   :type is_selectable: bool
+   :param view_scale: Helps scale it when the window resizes.
+   :type view_scale: float
+
+   .. py:method:: hoverEnterEvent(event)
+
+
+   .. py:method:: hoverLeaveEvent(event)
+
+
+   .. py:method:: mouseReleaseEvent(event)
+
+      Stop items from popping back to origin on next move.
+
+
+   .. py:method:: set_name(name)
+
+
+   .. py:method:: setup_color(QColor)
+
+
+   .. py:method:: set_default_color()
+
+
+   .. py:method:: set_hover_color()
+
+
+   .. py:method:: set_opacity(opacity)
+
+
+   .. py:method:: is_mirrored()
+
+
+   .. py:method:: mirror()
+
+      Flips object horizontally on the spot.
+
+
+

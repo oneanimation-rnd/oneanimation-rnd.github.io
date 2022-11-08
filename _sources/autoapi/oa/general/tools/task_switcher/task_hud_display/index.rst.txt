@@ -1,0 +1,88 @@
+ :py:mod:`oa.general.tools.task_switcher.task_hud_display`
+====================================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.task_hud_display
+
+.. autoapi-nested-parse::
+
+   Displays the current task on corner of the viewport.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.task_hud_display.TaskHudDisplay
+
+
+
+
+.. py:class:: TaskHudDisplay
+
+   .. py:attribute:: label_name
+      :annotation: = currentTask
+
+      
+
+   .. py:attribute:: button_name
+      :annotation: = taskSwitcherButton
+
+      
+
+   .. py:method:: run_switch_task_tool()
+      :staticmethod:
+
+      Opens tool to switch to a new task.
+
+
+   .. py:method:: get_hud_icon()
+      :staticmethod:
+
+
+   .. py:method:: get_hud_string()
+      :staticmethod:
+
+      Gets a string representation of the current task.
+
+
+   .. py:method:: save_settings(key_values)
+      :classmethod:
+
+
+   .. py:method:: fetch_settings()
+      :classmethod:
+
+
+   .. py:method:: save_visibility(enabled)
+      :classmethod:
+
+
+   .. py:method:: fetch_visibility()
+      :classmethod:
+
+
+   .. py:method:: block_exists(block_name)
+      :classmethod:
+
+
+   .. py:method:: add()
+      :classmethod:
+
+      Display HUD controls.
+
+
+   .. py:method:: remove()
+      :classmethod:
+
+      Remove HUD controls.
+
+
+

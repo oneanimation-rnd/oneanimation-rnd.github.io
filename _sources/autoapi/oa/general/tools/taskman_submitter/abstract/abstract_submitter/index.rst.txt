@@ -1,0 +1,80 @@
+ :py:mod:`oa.general.tools.taskman_submitter.abstract.abstract_submitter`
+==================================================================================================================================================
+
+.. py:module:: oa.general.tools.taskman_submitter.abstract.abstract_submitter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.taskman_submitter.abstract.abstract_submitter.AbstractSubmitter
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.taskman_submitter.abstract.abstract_submitter.OpenMayaUI
+
+
+.. py:data:: OpenMayaUI
+   
+
+   
+
+.. py:class:: AbstractSubmitter(parent=None)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: type
+      
+
+      
+
+   .. py:method:: _get_pixmap_from_resources(name)
+      :staticmethod:
+
+
+   .. py:method:: _get_maya_main_widget()
+      :staticmethod:
+
+
+   .. py:method:: _ask_for_reason(parent=None)
+      :staticmethod:
+
+
+   .. py:method:: connect_to_database(collection_name, hosts=(), replica_set_name='rs0', read_pref=None, db_name='test-main-db')
+      :staticmethod:
+
+
+   .. py:method:: get_task_request(parent=None)
+      :staticmethod:
+
+
+   .. py:method:: ask_for_confirmation(msg, title=None, parent=None)
+      :classmethod:
+
+
+   .. py:method:: display_success(msg=None, title=None, parent=None)
+      :classmethod:
+
+
+   .. py:method:: clear_tasks()
+
+
+   .. py:method:: add_task(*args)
+      :abstractmethod:
+
+
+   .. py:method:: submit_tasks()
+
+
+

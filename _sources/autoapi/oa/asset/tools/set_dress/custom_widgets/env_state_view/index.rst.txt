@@ -1,0 +1,80 @@
+ :py:mod:`oa.asset.tools.set_dress.custom_widgets.env_state_view`
+==================================================================================================================================
+
+.. py:module:: oa.asset.tools.set_dress.custom_widgets.env_state_view
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.custom_widgets.env_state_view.EnvStateView
+   oa.asset.tools.set_dress.custom_widgets.env_state_view.EnvStateModel
+
+
+
+
+.. py:class:: EnvStateView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableView`
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+
+.. py:class:: EnvStateModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractTableModel`
+
+   .. py:attribute:: THUMBNAIL_COLUMN
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: NAME_COLUMN
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: DESCRIPTION_COLUMN
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: USER_COLUMN
+      :annotation: = 3
+
+      
+
+   .. py:method:: rowCount(parent)
+
+
+   .. py:method:: columnCount(parent)
+
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: headerData(column, orientation, role)
+
+
+   .. py:method:: flags(index)
+
+
+   .. py:method:: begin_update()
+
+
+   .. py:method:: end_update()
+
+
+   .. py:method:: get_data(wmodel_id)
+
+
+

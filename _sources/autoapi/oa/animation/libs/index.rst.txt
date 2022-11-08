@@ -1,0 +1,24 @@
+ :py:mod:`oa.animation.libs`
+========================================================
+
+.. py:module:: oa.animation.libs
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   anim_curves/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   scene_info_wrapper/index.rst
+
+

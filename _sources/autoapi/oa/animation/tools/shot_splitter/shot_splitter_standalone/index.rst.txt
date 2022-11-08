@@ -1,0 +1,30 @@
+ :py:mod:`oa.animation.tools.shot_splitter.shot_splitter_standalone`
+========================================================================================================================================
+
+.. py:module:: oa.animation.tools.shot_splitter.shot_splitter_standalone
+
+.. autoapi-nested-parse::
+
+   Jobs on the farm will call this script to split a shot and save it to a new scene file.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.shot_splitter.shot_splitter_standalone.main
+
+
+
+.. py:function:: main()
+
+

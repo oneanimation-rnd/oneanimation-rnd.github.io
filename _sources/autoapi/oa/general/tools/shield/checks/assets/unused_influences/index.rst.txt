@@ -1,0 +1,39 @@
+ :py:mod:`oa.general.tools.shield.checks.assets.unused_influences`
+====================================================================================================================================
+
+.. py:module:: oa.general.tools.shield.checks.assets.unused_influences
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.shield.checks.assets.unused_influences.Check
+
+
+
+
+.. py:class:: Check
+
+   Bases: :py:obj:`oa.general.tools.shield.templates.check_template.CheckTemplate`
+
+   .. py:method:: get_unused_influences(skin_cluster)
+      :staticmethod:
+
+
+   .. py:method:: run()
+
+      This check fails if it raises any error.
+      Raise script_utils.CheckError to display it in the interface.
+
+
+   .. py:method:: auto_fix()
+
+      Comment this function out if this check shouldn't have an auto-fix.
+
+
+

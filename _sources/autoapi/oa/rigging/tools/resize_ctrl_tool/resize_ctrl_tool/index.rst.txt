@@ -1,0 +1,52 @@
+ :py:mod:`oa.rigging.tools.resize_ctrl_tool.resize_ctrl_tool`
+==========================================================================================================================
+
+.. py:module:: oa.rigging.tools.resize_ctrl_tool.resize_ctrl_tool
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.resize_ctrl_tool.resize_ctrl_tool.ResizeCtrl
+
+
+
+
+.. py:class:: ResizeCtrl
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: delete_inst()
+      :classmethod:
+
+
+   .. py:method:: run()
+      :classmethod:
+
+
+   .. py:method:: create_widgets()
+
+
+   .. py:method:: connect_widgets()
+
+
+   .. py:method:: create_layout()
+
+
+   .. py:method:: command_run_button()
+
+
+   .. py:method:: delete_command()
+
+
+

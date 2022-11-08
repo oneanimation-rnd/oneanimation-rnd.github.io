@@ -1,0 +1,56 @@
+ :py:mod:`oa.mat_gui.core.gui_utils`
+========================================================================
+
+.. py:module:: oa.mat_gui.core.gui_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.mat_gui.core.gui_utils.remap
+   oa.mat_gui.core.gui_utils.lerp_color
+   oa.mat_gui.core.gui_utils.load_pixmap
+   oa.mat_gui.core.gui_utils.start_qanim
+   oa.mat_gui.core.gui_utils.get_elided_text
+   oa.mat_gui.core.gui_utils.set_pixmap_hsv
+   oa.mat_gui.core.gui_utils.crop_thumbnail
+   oa.mat_gui.core.gui_utils.copy_to_clipboard
+   oa.mat_gui.core.gui_utils.apply_maya_style
+
+
+
+.. py:function:: remap(value, old_min, old_max, new_min, new_max)
+
+
+.. py:function:: lerp_color(qcolor1, qcolor2, value)
+
+
+.. py:function:: load_pixmap(file_name, width=None, height=None, tint_color=None, mode=QtCore.Qt.SmoothTransformation)
+
+
+.. py:function:: start_qanim(qproperty_anim, start_value, end_value)
+
+
+.. py:function:: get_elided_text(txt, font_metrics, rect, text_elide_mode=QtCore.Qt.ElideRight)
+
+
+.. py:function:: set_pixmap_hsv(pixmap, hue=None, saturation=None, value=None)
+
+
+.. py:function:: crop_thumbnail(pixmap, width, height, mode=QtCore.Qt.SmoothTransformation)
+
+
+.. py:function:: copy_to_clipboard(txt)
+
+
+.. py:function:: apply_maya_style(qapplication)
+
+   Tries to match Maya's style for stand-alone applications.
+
+

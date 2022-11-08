@@ -1,0 +1,48 @@
+ :py:mod:`oa.general.tools.shield.templates.check_template`
+======================================================================================================================
+
+.. py:module:: oa.general.tools.shield.templates.check_template
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.shield.templates.check_template.CheckTemplate
+
+
+
+
+.. py:class:: CheckTemplate(name=None, description=None, block_type=None)
+
+   Bases: :py:obj:`object`
+
+   All checks need to inherit from this class and must sub-class the run method.
+   Problematic objects can be displayed in the interface by adding them with add_objects method.
+
+   :param name: The check's name.
+   :param description: A simple description of what the check is looking for.
+   :param block_type: enums.BlockType
+
+   .. py:method:: run()
+      :abstractmethod:
+
+      This check passes if this returns True, otherwise the check is a fail.
+
+
+   .. py:method:: clear_objects()
+
+
+   .. py:method:: add_objects(objs)
+
+      Wraps dag nodes as a DagWrapper, or dg nodes as a DGWrapper.
+      Then appends wrappers to objects.
+
+      :param objs: A list of existing objects.
+
+
+

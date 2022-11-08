@@ -1,0 +1,88 @@
+ :py:mod:`oa.general.tools.task_switcher.widgets.rnd_widgets`
+==========================================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.widgets.rnd_widgets
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.widgets.rnd_widgets.RndTab
+   oa.general.tools.task_switcher.widgets.rnd_widgets.FileBrowserWidget
+   oa.general.tools.task_switcher.widgets.rnd_widgets.FileSystemModel
+   oa.general.tools.task_switcher.widgets.rnd_widgets.IconProvider
+
+
+
+
+.. py:class:: RndTab(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: on_switch_to_rnd_clicked()
+
+
+
+.. py:class:: FileBrowserWidget(start_path='', parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTreeView`
+
+   A file browser that can be used as a widget.
+
+   .. py:attribute:: item_selected
+      
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+      Expands/Collapses item if it has children.
+
+
+   .. py:method:: header_on_click(section)
+
+
+   .. py:method:: current_index_on_change(index)
+
+
+   .. py:method:: set_filters(filter_list)
+
+
+   .. py:method:: set_path(path)
+
+
+   .. py:method:: get_selected_file(index=None)
+
+      Gets and returns the full path of the current selected file.
+
+
+
+.. py:class:: FileSystemModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QFileSystemModel`
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: headerData(section, orientation, role)
+
+
+
+.. py:class:: IconProvider(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QFileIconProvider`
+
+   Ripped and tweaked example from nullege.com to use custom icons.
+
+   .. py:method:: icon(icontype_or_qfileinfo)
+
+
+

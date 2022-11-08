@@ -1,0 +1,17 @@
+ :py:mod:`oa.anim_library.tool.dialogs`
+==============================================================================
+
+.. py:module:: oa.anim_library.tool.dialogs
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   create_clip_dialog/index.rst
+   edit_clip_dialog/index.rst
+   selection_set_dialog/index.rst
+
+

@@ -1,0 +1,15 @@
+ :py:mod:`oa.modeling.tools.selection`
+============================================================================
+
+.. py:module:: oa.modeling.tools.selection
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   selection/index.rst
+
+

@@ -1,0 +1,111 @@
+ :py:mod:`bd.hooks`
+======================================
+
+.. py:module:: bd.hooks
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   exceptions/index.rst
+   executor/index.rst
+   loader/index.rst
+   main/index.rst
+   registry/index.rst
+
+
+Package Contents
+----------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.hooks.load
+   bd.hooks.execute
+   bd.hooks.get_active_registry
+
+
+
+.. py:function:: load(hook_search_paths=None)
+
+   Find and load all the available hooks.
+
+   :param hook_search_paths: A list of directories
+                             in which to search plugins.
+   :type hook_search_paths: list[str]
+
+
+.. py:function:: execute(hook_name, *args, **kwargs)
+
+   Get all hook items registered under the specified hook name
+   and prepare a HookExecutor object with the provided arguments.
+
+   :param hook_name: A hook name.
+   :type hook_name: str
+   :param \*args: Variable length argument list.
+   :param \*\*kwargs: Arbitrary keyword arguments.
+
+   :returns: hook executor object.
+   :rtype: bd.hooks.executor.HookExecutor
+
+
+.. py:function:: get_active_registry()
+
+
+.. py:exception:: HookError(message=None, details=None)
+
+   Bases: :py:obj:`Error`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: HookNotFoundError(message=None, details=None)
+
+   Bases: :py:obj:`HookError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+   .. py:attribute:: default_message
+      :annotation: = Unable to find a hook '{hook_name}'
+
+      
+
+
+.. py:exception:: CallbackExecutionError(message=None, details=None)
+
+   Bases: :py:obj:`HookError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+   .. py:attribute:: default_message
+      :annotation: = Failed to execute callback '{callback}' for hook '{hook_name}'. {exc_msg}
+
+      
+
+
+.. py:exception:: InvalidCallbackError(message=None, details=None)
+
+   Bases: :py:obj:`HookError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+   .. py:attribute:: default_message
+      :annotation: = Invalid callback '{callback}' provided for '{hook_name}' hook
+
+      
+
+

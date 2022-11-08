@@ -1,0 +1,21 @@
+ :py:mod:`oa.general.tools.task_switcher.widgets`
+==================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.widgets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   assets_viewer/index.rst
+   file_browser_widget/index.rst
+   rnd_widgets/index.rst
+   search_dialog/index.rst
+   shot_nums_viewer/index.rst
+   shot_widgets/index.rst
+   shots_viewer/index.rst
+
+

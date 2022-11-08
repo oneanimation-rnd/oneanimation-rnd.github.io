@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.animation.tools.visibility_set_tool.visibility_set_utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.asset" href="../../../../asset/index.html" />
+    <link rel="prev" title=" oa.animation.tools.visibility_set_tool.visibility_set_tool" href="../visibility_set_tool/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.visibility_set_tool</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/animation/tools/visibility_set_tool/visibility_set_utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.animation.tools.visibility_set_tool.visibility_set_utils">
+<span id="oa-animation-tools-visibility-set-tool-visibility-set-utils"></span><h1> <a class="reference internal" href="#module-oa.animation.tools.visibility_set_tool.visibility_set_utils" title="oa.animation.tools.visibility_set_tool.visibility_set_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils</span></code></a><a class="headerlink" href="#module-oa.animation.tools.visibility_set_tool.visibility_set_utils" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.get_icon" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.get_icon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_icon</span></code></a>(file_name[, width, height])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.connect_to_db" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.connect_to_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect_to_db</span></code></a>([hosts, replica_set_name, read_pref, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.get_asset_id" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.get_asset_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_asset_id</span></code></a>(obj)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.get_database_entry" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.get_database_entry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_database_entry</span></code></a>([asset_id, collection])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.list_vis_sets" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.list_vis_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_vis_sets</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.validate_selection" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.validate_selection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_selection</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.save_vis_set" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.save_vis_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_vis_set</span></code></a>(set_name)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.remove_vis_set" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.remove_vis_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_vis_set</span></code></a>(asset_id, set_name[, collection])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.rename_vis_set" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.rename_vis_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename_vis_set</span></code></a>(asset_id, old_set_name, new_set_name[, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.add_meshes_to_set" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.add_meshes_to_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_meshes_to_set</span></code></a>(asset_id, set_name, meshes[, collection])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.remove_meshes_from_set" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.remove_meshes_from_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_meshes_from_set</span></code></a>(asset_id, set_name, meshes[, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.is_plug_connectable" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.is_plug_connectable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_plug_connectable</span></code></a>(plug)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.set_visibility" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.set_visibility"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_visibility</span></code></a>(transform, show[, set_name])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.toggle_vis_set" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.toggle_vis_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toggle_vis_set</span></code></a>(set_name)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.unhide_all_vis_sets" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.unhide_all_vis_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unhide_all_vis_sets</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.store_vis_sets" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.store_vis_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">store_vis_sets</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.restore_vis_sets" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.restore_vis_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restore_vis_sets</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.stored_vis_sets" title="oa.animation.tools.visibility_set_tool.visibility_set_utils.stored_vis_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stored_vis_sets</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.stored_vis_sets">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">stored_vis_sets</span></span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.stored_vis_sets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.get_icon">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">get_icon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.get_icon" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.connect_to_db">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">connect_to_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hosts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replica_set_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rs0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read_pref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'maya'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'visibility_sets'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.connect_to_db" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.get_asset_id">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">get_asset_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.get_asset_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.get_database_entry">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">get_database_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.get_database_entry" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.list_vis_sets">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">list_vis_sets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.list_vis_sets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.validate_selection">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">validate_selection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.validate_selection" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.save_vis_set">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">save_vis_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.save_vis_set" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.remove_vis_set">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">remove_vis_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.remove_vis_set" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.rename_vis_set">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">rename_vis_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_set_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_set_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.rename_vis_set" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.add_meshes_to_set">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">add_meshes_to_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.add_meshes_to_set" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.remove_meshes_from_set">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">remove_meshes_from_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.remove_meshes_from_set" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.is_plug_connectable">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">is_plug_connectable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plug</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.is_plug_connectable" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.set_visibility">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">set_visibility</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.set_visibility" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.toggle_vis_set">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">toggle_vis_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.toggle_vis_set" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.unhide_all_vis_sets">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">unhide_all_vis_sets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.unhide_all_vis_sets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.store_vis_sets">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">store_vis_sets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.store_vis_sets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.visibility_set_tool.visibility_set_utils.restore_vis_sets">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.visibility_set_tool.visibility_set_utils.</span></span><span class="sig-name descname"><span class="pre">restore_vis_sets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.visibility_set_tool.visibility_set_utils.restore_vis_sets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../visibility_set_tool/index.html" class="btn btn-neutral float-left" title=" oa.animation.tools.visibility_set_tool.visibility_set_tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../../asset/index.html" class="btn btn-neutral float-right" title=" oa.asset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

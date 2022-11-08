@@ -1,0 +1,404 @@
+ :py:mod:`oa.mat_gui.widgets.asset_treeview.asset_treeview`
+======================================================================================================================
+
+.. py:module:: oa.mat_gui.widgets.asset_treeview.asset_treeview
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase
+   oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetProxyModel
+   oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel
+   oa.mat_gui.widgets.asset_treeview.asset_treeview.WorkerSignals
+   oa.mat_gui.widgets.asset_treeview.asset_treeview.Worker
+   oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate
+   oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode
+   oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeView
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.mat_gui.widgets.asset_treeview.asset_treeview.launch_example
+
+
+
+.. py:class:: AssetTreeViewBase(asset_type, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTreeView`
+
+   .. py:attribute:: indexes_checked
+      
+
+      
+
+   .. py:attribute:: selection_changed
+      
+
+      
+
+   .. py:attribute:: double_clicked
+      
+
+      
+
+   .. py:attribute:: menu_triggered
+      
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: paintEvent(paint_event)
+
+
+   .. py:method:: mouseReleaseEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: wheelEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: selectionChanged(selected, deselected)
+
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+
+   .. py:method:: _on_menu_on_requested(point)
+
+
+   .. py:method:: _on_expanded(top_index)
+
+
+   .. py:method:: _on_collapsed(top_index)
+
+
+   .. py:method:: _on_header_section_clicked(column)
+
+
+   .. py:method:: _on_open_dir_triggered()
+
+
+   .. py:method:: _on_copy_to_clipboard_triggered()
+
+
+   .. py:method:: source_index(index=None)
+
+
+   .. py:method:: toggle_check_state(indexes)
+
+
+   .. py:method:: selected_indexes(column=None)
+
+
+   .. py:method:: last_selected_index(column=None)
+
+
+   .. py:method:: select_indexes(indexes, clear=True, flags=None)
+
+
+   .. py:method:: iterator(**kwargs)
+
+
+   .. py:method:: checked_iterator()
+
+
+   .. py:method:: checked_count()
+
+
+   .. py:method:: checked_ids()
+
+
+   .. py:method:: set_checked_ids(_ids)
+
+
+   .. py:method:: set_index_by_id(_id)
+
+
+   .. py:method:: clear_tree()
+
+
+   .. py:method:: fill_tree()
+
+      Reset and add tree node objects.
+
+
+   .. py:method:: set_project(project)
+
+
+   .. py:method:: update_filter(pattern)
+
+      Updates proxy's filter string.
+
+
+
+.. py:class:: AssetProxyModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QSortFilterProxyModel`
+
+   Proxy used between QTreeView and QAbstractItemModel to filter and sort items.
+
+   .. py:method:: lessThan(left_index, right_index)
+
+      Built-in function to determine how to sort column.
+
+
+   .. py:method:: filterAcceptsRow(row, parent_index)
+
+      Built-in function to filter what items are seen.
+
+
+   .. py:method:: has_accepted_children(pattern, tree_node)
+
+      Recursively searches through tree node's children to see if it matches the supplied pattern.
+      This is used so for filtering so that the parent remains visible if it has a valid child.
+
+
+
+.. py:class:: AssetTreeModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractItemModel`
+
+   
+   QTreeView uses this class to handle all its data for best performance.
+
+   .. py:attribute:: ColumnName
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: ColumnType
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: ColumnCheckBox
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: BackgroundDepreciated
+      
+
+      
+
+   .. py:attribute:: updated_data
+      
+
+      
+
+   .. py:method:: columnCount(index=QtCore.QModelIndex())
+
+
+   .. py:method:: rowCount(index=QtCore.QModelIndex())
+
+
+   .. py:method:: index(row, column, index=QtCore.QModelIndex())
+
+
+   .. py:method:: parent(index)
+
+
+   .. py:method:: hasChildren(index)
+
+
+   .. py:method:: data(index, role)
+
+      Edit this to determine how the model should get its data from tree nodes.
+
+
+   .. py:method:: setData(index, value, role=QtCore.Qt.EditRole)
+
+      Edit this to determine how the model should set data back onto tree nodes.
+
+
+   .. py:method:: flags(index)
+
+      Sets a role for columns.
+
+
+   .. py:method:: headerData(section, orientation, role)
+
+
+   .. py:method:: _on_worker_finished(index, qimage, status)
+
+
+   .. py:method:: _get_data(asset_type)
+
+      Collects assets from the database.
+
+      :param asset_type:
+      :type asset_type: Vars.TabTypes
+
+
+   .. py:method:: iterator(index=None, column=None, checked_only=False)
+
+
+   .. py:method:: checked_iterator()
+
+
+   .. py:method:: toggle_thumbnails()
+
+
+
+.. py:class:: WorkerSignals
+
+   Bases: :py:obj:`PySide2.QtCore.QObject`
+
+   Signals must inherit from QObject, so this is a workaround to signal from a QRunnable object.
+
+   .. py:attribute:: finished
+      
+
+      
+
+
+.. py:class:: Worker(index, img_path, qsize)
+
+   Bases: :py:obj:`PySide2.QtCore.QRunnable`
+
+   Executes code in a separate thread to load and trim thumbnail.
+   Communicates with the ThreadPool it spawned from via signals.
+
+   .. py:attribute:: StatusOk
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: StatusError
+      :annotation: = 1
+
+      
+
+   .. py:method:: run()
+
+
+
+.. py:class:: StyledItemDelegate(parent)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QStyledItemDelegate`
+
+   .. py:attribute:: Foreground
+      
+
+      
+
+   .. py:attribute:: ForegroundSelected
+      
+
+      
+
+   .. py:attribute:: ForegroundDisabled
+      
+
+      
+
+   .. py:method:: paint(painter, option, index)
+
+
+   .. py:method:: editorEvent(event, model, option, index)
+
+
+   .. py:method:: _get_checkbox_rect(option)
+
+
+
+.. py:class:: AssetTreeNode(parent, node_type, _data, meta_data=None)
+
+   Bases: :py:obj:`object`
+
+   The tree's model will be populated with this.
+
+   .. py:attribute:: NotProcessed
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Processing
+      :annotation: = 1
+
+      
+
+   .. py:method:: data(column)
+
+      Fetches data by column.
+
+
+   .. py:method:: setData(column, value)
+
+      Sets value to internal data.
+
+
+   .. py:method:: appendChild(node_type, _data, meta_data=None)
+
+      Appends a new AssetTreeNode child to self.
+
+
+   .. py:method:: removeChild(position)
+
+
+   .. py:method:: removeChildren()
+
+
+   .. py:method:: child(row)
+
+      Fetches child by relative row index.
+
+
+   .. py:method:: childrenCount()
+
+      Gets number of children.
+
+
+   .. py:method:: hasChildren()
+
+      Returns True if self has children.
+
+
+   .. py:method:: row()
+
+      Gets self's current row index.
+
+
+   .. py:method:: columnCount()
+
+      Gets self's number of columns.
+
+
+   .. py:method:: latest_version_info()
+
+
+
+.. py:class:: AssetTreeView(asset_type, show_depreciated=True, show_header=True, checkable=False, selection_mode=QtWidgets.QAbstractItemView.ExtendedSelection, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: update_filter_completer()
+
+
+   .. py:method:: on_filter_return_pressed()
+
+
+
+.. py:function:: launch_example()
+
+

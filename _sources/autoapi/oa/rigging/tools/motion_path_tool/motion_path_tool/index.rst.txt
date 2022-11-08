@@ -1,0 +1,116 @@
+ :py:mod:`oa.rigging.tools.motion_path_tool.motion_path_tool`
+==========================================================================================================================
+
+.. py:module:: oa.rigging.tools.motion_path_tool.motion_path_tool
+
+.. autoapi-nested-parse::
+
+   Helper tool to constraint objects on a curve in a fast manner.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.motion_path_tool.motion_path_tool.MotionPathTool
+
+
+
+
+.. py:class:: MotionPathTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = motionPathTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: launch()
+      :classmethod:
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: restore()
+
+      Restores the tool's state from a json file.
+
+
+   .. py:method:: save()
+
+      Saves the tool's current state to a json file.
+
+
+   .. py:method:: color_on_clicked()
+
+
+   .. py:method:: upv_color_on_clicked()
+
+
+   .. py:method:: front_axis_on_change()
+
+      Switches up axis if it's the same axis.
+
+
+   .. py:method:: up_axis_on_change()
+
+      Switches front axis if it's the same axis.
+
+
+   .. py:method:: pick_up_object_on_clicked()
+
+
+   .. py:method:: attach_on_click()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: wrap_layout(widgets, orientation)
+
+      Helper function that takes supplied widgets and wraps them all in a layout.
+
+      :param widgets: A list of QWidgets.
+      :param orientation: QtCore.Qt.Orientation
+
+      :returns: The new layout item.
+
+
+   .. py:method:: set_color_to_button(qcolor, button)
+
+
+   .. py:method:: get_color_from_button(button)
+
+
+   .. py:method:: set_color_by_dialog(button)
+
+
+   .. py:method:: update_visibility()
+
+      Updates interface items depending on what the current settings are.
+
+
+

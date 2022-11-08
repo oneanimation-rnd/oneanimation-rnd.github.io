@@ -1,0 +1,94 @@
+ :py:mod:`bd.api.utils.cache`
+==========================================================
+
+.. py:module:: bd.api.utils.cache
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.api.utils.cache.BaseAtomicFileCache
+   bd.api.utils.cache.JsonAtomicFileCache
+   bd.api.utils.cache.PickleAtomicFileCache
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.api.utils.cache.build_query_id
+   bd.api.utils.cache.build_id
+
+
+
+.. py:class:: BaseAtomicFileCache(working_dir)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: _loads(content_string)
+      :abstractmethod:
+
+
+   .. py:method:: _dumps(data)
+      :abstractmethod:
+
+
+   .. py:method:: __contains__(cache_key)
+
+
+   .. py:method:: __getitem__(cache_key)
+
+      Retrieve value from a cache key.
+
+
+   .. py:method:: __setitem__(cache_key, value)
+
+
+   .. py:method:: remove(cache_key)
+
+
+   .. py:method:: _get_filename(cache_key)
+
+
+
+.. py:class:: JsonAtomicFileCache(working_dir)
+
+   Bases: :py:obj:`BaseAtomicFileCache`
+
+   .. py:method:: _loads(content_string)
+
+
+   .. py:method:: _dumps(data)
+
+
+   .. py:method:: _serialize_datetime(value, iso=False)
+
+
+   .. py:method:: _get_filename(cache_key)
+
+
+
+.. py:class:: PickleAtomicFileCache(working_dir)
+
+   Bases: :py:obj:`BaseAtomicFileCache`
+
+   .. py:method:: _loads(content_string)
+
+
+   .. py:method:: _dumps(data)
+
+
+
+.. py:function:: build_query_id(query, variable_values=None, **kwargs)
+
+
+.. py:function:: build_id(data)
+
+

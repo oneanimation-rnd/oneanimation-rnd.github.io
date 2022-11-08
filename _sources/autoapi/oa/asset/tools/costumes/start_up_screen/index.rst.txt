@@ -1,0 +1,42 @@
+ :py:mod:`oa.asset.tools.costumes.start_up_screen`
+====================================================================================================
+
+.. py:module:: oa.asset.tools.costumes.start_up_screen
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.costumes.start_up_screen.StartUpScreen
+
+
+
+
+.. py:class:: StartUpScreen(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: add_page(relative_gif_path, title, description)
+
+
+   .. py:method:: update_pages()
+
+
+   .. py:method:: prev_page()
+
+
+   .. py:method:: next_page()
+
+
+

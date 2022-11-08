@@ -1,0 +1,113 @@
+ :py:mod:`oa.asset.libs.reference_wrapper`
+====================================================================================
+
+.. py:module:: oa.asset.libs.reference_wrapper
+
+.. autoapi-nested-parse::
+
+   Collects data from a reference and its nested references and adds it to a wrapper.
+   This makes it easier to traverse assets when doing caching or writing the scene's descriptor.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.reference_wrapper.ReferenceWrapper
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.reference_wrapper.get_dag_path
+   oa.asset.libs.reference_wrapper.is_node_visible
+   oa.asset.libs.reference_wrapper.is_node_visible_by_vis_attr
+   oa.asset.libs.reference_wrapper.is_in_force_to_houdini_set
+   oa.asset.libs.reference_wrapper.is_render_set_member
+   oa.asset.libs.reference_wrapper.get_parent
+   oa.asset.libs.reference_wrapper.is_instance_child
+   oa.asset.libs.reference_wrapper.get_instance_master
+   oa.asset.libs.reference_wrapper.flatten_ref_wrappers
+
+
+
+.. py:class:: ReferenceWrapper(ref_path, parent_ref=None)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: collect_data(ref_path)
+
+
+
+.. py:function:: get_dag_path(obj)
+
+   Creates an MDagPath object with supplied name.
+
+   :param obj: Name of an existing object.
+   :type obj: string
+
+   :returns: The object wrapped in an MDagPath.
+
+   :raises AssertionError: If object can't be found in the scene.
+
+
+.. py:function:: is_node_visible(shape)
+
+   Checks and returns if the supplied node is visible.
+
+
+.. py:function:: is_node_visible_by_vis_attr(shape)
+
+
+.. py:function:: is_in_force_to_houdini_set(obj)
+
+
+.. py:function:: is_render_set_member(obj)
+
+   Checks and returns if supplied node is a member of any render set.
+
+
+.. py:function:: get_parent(obj)
+
+   Gets and returns parent of the supplied object.
+
+
+.. py:function:: is_instance_child(obj)
+
+   Traverses through parent objects to determine if it belongs to an instance.
+
+   :param obj: An object's name.
+   :type obj: string
+
+   :returns: True if it detects an instance master on top of its hierarchy.
+
+
+.. py:function:: get_instance_master(inst)
+
+   Gets instance's instance master.
+
+   :param inst: Object with an instance id.
+   :type inst: string
+
+   :returns: A dictionary of the instance master and the object it was instancing.
+
+
+.. py:function:: flatten_ref_wrappers(ref_wrappers)
+
+   A generator so that it's possible to loop through a wrapper and all of its children at once
+
+   :param ref_wrappers: Pass the top wrapper in a list.
+   :type ref_wrappers: ReferenceWrapper[]
+
+

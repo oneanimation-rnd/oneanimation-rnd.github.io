@@ -1,0 +1,44 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.classes.command_lock_infs`
+==================================================================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.classes.command_lock_infs
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.classes.command_lock_infs.CommandLockInfs
+
+
+
+
+.. py:class:: CommandLockInfs(editor_cls, description, infs, enabled, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QUndoCommand`
+
+   Command to toggle influence locks.
+
+   :param editor_cls:
+   :type editor_cls: WeightsEditor
+   :param description: The label to show up to describe this action.
+   :type description: string
+   :param infs: A list of influence objects to operate on.
+   :type infs: string[]
+   :param enabled: The state to set all the new locks to.
+   :type enabled: bool
+
+   .. py:method:: lock_infs(use_redo_value)
+
+
+   .. py:method:: redo()
+
+
+   .. py:method:: undo()
+
+
+

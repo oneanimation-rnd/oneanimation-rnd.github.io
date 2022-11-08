@@ -1,0 +1,22 @@
+ :py:mod:`oa.palette.scripts.unbind_palettes`
+==========================================================================================
+
+.. py:module:: oa.palette.scripts.unbind_palettes
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.palette.scripts.unbind_palettes.run
+
+
+
+.. py:function:: run(node)
+
+

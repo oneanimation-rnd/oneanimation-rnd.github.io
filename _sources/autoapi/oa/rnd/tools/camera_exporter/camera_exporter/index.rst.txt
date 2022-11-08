@@ -1,0 +1,101 @@
+ :py:mod:`oa.rnd.tools.camera_exporter.camera_exporter`
+==============================================================================================================
+
+.. py:module:: oa.rnd.tools.camera_exporter.camera_exporter
+
+.. autoapi-nested-parse::
+
+   Exports shot camera and selected locators as .ma file compatible with After Effects.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.camera_exporter.camera_exporter._create_camera_instance
+   oa.rnd.tools.camera_exporter.camera_exporter._get_shot_camera_shape
+   oa.rnd.tools.camera_exporter.camera_exporter._bake_animation
+   oa.rnd.tools.camera_exporter.camera_exporter._export
+   oa.rnd.tools.camera_exporter.camera_exporter._open_file
+   oa.rnd.tools.camera_exporter.camera_exporter._update_render_settings
+   oa.rnd.tools.camera_exporter.camera_exporter._create_locators_from_selection
+   oa.rnd.tools.camera_exporter.camera_exporter.is_scene_modified
+   oa.rnd.tools.camera_exporter.camera_exporter.is_task
+   oa.rnd.tools.camera_exporter.camera_exporter.export_camera
+
+
+
+.. py:function:: _create_camera_instance(src_cam_shape)
+
+   Create camera instance in world space.
+
+   Create a transform on the scene root level and put the provided camera shape underneath it.
+   Parent constraint that transform to the original camera to inherit all the transformations in
+   world space.
+
+   :returns: path to the new camera.
+   :rtype: str
+
+
+.. py:function:: _get_shot_camera_shape()
+
+   Get current shot camera shape node.
+
+   :returns: camera shape path.
+   :rtype: str
+
+
+.. py:function:: _bake_animation(cam_xform, locators, start_frame=1, end_frame=100)
+
+   Bake animation into per-frame keys.
+
+   :param cam_xform: path to camera transform node.
+   :type cam_xform: str
+   :param locators: paths to locator nodes.
+   :type locators: list[str]
+   :param start_frame: start frame of the range to bake.
+   :type start_frame: int
+   :param end_frame: end frame of the range to bake.
+   :type end_frame: int
+
+
+.. py:function:: _export(camera, locators, output_path)
+
+   Export camera and selected locators to the specified scene path.
+
+   :param camera: shot camera path.
+   :type camera: str
+   :param locators: locators to export.
+   :type locators: list[str]
+   :param output_path: output scene file path.
+   :type output_path: str
+
+
+.. py:function:: _open_file(path)
+
+
+.. py:function:: _update_render_settings()
+
+   Update render settings with proper resolution and camera.
+
+
+.. py:function:: _create_locators_from_selection(selected_nodes)
+
+   Create constrained locators from all the selected transforms.
+
+
+.. py:function:: is_scene_modified()
+
+
+.. py:function:: is_task()
+
+
+.. py:function:: export_camera(shot_number_str, output_dir, reopen_src_scene=True)
+
+

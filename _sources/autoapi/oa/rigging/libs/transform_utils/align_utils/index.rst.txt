@@ -1,0 +1,47 @@
+ :py:mod:`oa.rigging.libs.transform_utils.align_utils`
+============================================================================================================
+
+.. py:module:: oa.rigging.libs.transform_utils.align_utils
+
+.. autoapi-nested-parse::
+
+   Author: Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.transform_utils.align_utils.align_transform
+   oa.rigging.libs.transform_utils.align_utils.align_position
+   oa.rigging.libs.transform_utils.align_utils.align_rotation
+
+
+
+.. py:function:: align_transform(objs=[])
+
+   Simple function to align to the last object in the list.
+   :param objs: List of object names.
+   :type objs: string[]
+
+
+.. py:function:: align_position(objs=[])
+
+   Simple function to align to the last object in the list.
+   :param objs: List of object names.
+   :type objs: string[]
+
+
+.. py:function:: align_rotation(objs=[])
+
+   Simple function to align to the last object in the list.
+   :param objs: List of object names.
+   :type objs: string[]
+
+

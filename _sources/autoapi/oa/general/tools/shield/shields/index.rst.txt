@@ -1,0 +1,16 @@
+ :py:mod:`oa.general.tools.shield.shields`
+====================================================================================
+
+.. py:module:: oa.general.tools.shield.shields
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   shield_assets/index.rst
+   shield_scenes/index.rst
+
+

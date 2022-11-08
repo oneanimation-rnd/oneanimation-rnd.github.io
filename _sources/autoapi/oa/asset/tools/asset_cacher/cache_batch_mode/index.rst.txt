@@ -1,0 +1,51 @@
+ :py:mod:`oa.asset.tools.asset_cacher.cache_batch_mode`
+==============================================================================================================
+
+.. py:module:: oa.asset.tools.asset_cacher.cache_batch_mode
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_cacher.cache_batch_mode.run_batch_command
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_cacher.cache_batch_mode.args
+
+
+.. py:function:: run_batch_command(output_path, rdr_path, start_frame, end_frame, create_log, namespace=None, timeout=300)
+
+   Uses Maya batch mode to cache an asset as it's much faster than the interface.
+   Calls this module's main function during batch mode.
+
+   :param output_path: Full path to where it should cache to.
+   :type output_path: string
+   :param rdr_path: Full path to an existing asset scene to reference and cache with.
+   :type rdr_path: string
+   :param start_frame: Cache from this frame.
+   :type start_frame: float
+   :param end_frame: Cache to this frame.
+   :type end_frame: float
+   :param create_log:
+   :type create_log: bool
+   :param timeout: Amount of seconds it takes for the job to timeout and mark as fail.
+   :type timeout: float
+
+
+.. py:data:: args
+   
+
+   
+

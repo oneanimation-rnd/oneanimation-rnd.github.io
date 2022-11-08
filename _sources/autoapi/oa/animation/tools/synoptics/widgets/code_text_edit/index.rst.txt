@@ -1,0 +1,68 @@
+ :py:mod:`oa.animation.tools.synoptics.widgets.code_text_edit`
+============================================================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.widgets.code_text_edit
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.widgets.code_text_edit.CodeTextEdit
+   oa.animation.tools.synoptics.widgets.code_text_edit.CustomScrollBar
+   oa.animation.tools.synoptics.widgets.code_text_edit.BlankScrollBar
+   oa.animation.tools.synoptics.widgets.code_text_edit.LineNumbersBar
+
+
+
+
+.. py:class:: CodeTextEdit(text='', parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: on_scrollbar_slider_changed(value)
+
+
+   .. py:method:: on_text_changed()
+
+
+
+.. py:class:: CustomScrollBar(orientation, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QScrollBar`
+
+   .. py:attribute:: slider_changed
+      
+
+      
+
+   .. py:method:: sliderChange(change)
+
+
+
+.. py:class:: BlankScrollBar(orientation, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QScrollBar`
+
+   .. py:method:: paintEvent(event)
+
+
+
+.. py:class:: LineNumbersBar(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTextEdit`
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: wheelEvent(event)
+
+
+   .. py:method:: update_line_numbers(text_edit)
+
+
+

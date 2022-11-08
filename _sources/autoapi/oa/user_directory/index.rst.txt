@@ -1,0 +1,38 @@
+ :py:mod:`oa.user_directory`
+========================================================
+
+.. py:module:: oa.user_directory
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   client/index.rst
+   constants/index.rst
+   exceptions/index.rst
+   info/index.rst
+
+
+Package Contents
+----------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.user_directory.get_user
+   oa.user_directory.list_users
+
+
+
+.. py:function:: get_user(name)
+
+
+.. py:function:: list_users()
+
+

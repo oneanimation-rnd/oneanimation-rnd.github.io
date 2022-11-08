@@ -1,0 +1,188 @@
+ :py:mod:`oa.rnd.tools.batch_scene_exporter.batch_scene_exporter`
+==================================================================================================================================
+
+.. py:module:: oa.rnd.tools.batch_scene_exporter.batch_scene_exporter
+
+.. autoapi-nested-parse::
+
+   Processes multiple assets through Maya's standalone executable to export them.
+
+   It works as follows:
+       - Opens scene file.
+       - Runs supplied Python command.
+       - Performs Shield checks.
+       - Runs scene exporter.
+       - Moves onto next scene.
+
+   Results are listed at the end of the session.
+
+   There is a debug mode that will go trough the same process except it'll skip the export.
+   This helps determine the success rate and give a chance to tweak the Python command or scenes before pulling the trigger.
+
+   The Python command could be left empty to force an update with the asset 'as is'.
+
+   Usage:
+       # Run this function with your parameters.
+       launch(**{"scn_paths":["PATH_TO_A_MAYA_SCENE.ma"],
+                 "pycommand":"print 'Hello world!'",
+                 "comments":"This is my awesome check-in comment.",
+                 "debug":False
+                 "debug_output_path":None})
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.batch_scene_exporter.batch_scene_exporter.BashColors
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.batch_scene_exporter.batch_scene_exporter.launch
+   oa.rnd.tools.batch_scene_exporter.batch_scene_exporter.write_current_pid
+   oa.rnd.tools.batch_scene_exporter.batch_scene_exporter.read_last_used_pid
+   oa.rnd.tools.batch_scene_exporter.batch_scene_exporter.does_pid_exist
+   oa.rnd.tools.batch_scene_exporter.batch_scene_exporter.is_another_batch_running
+   oa.rnd.tools.batch_scene_exporter.batch_scene_exporter.generate_data_file
+   oa.rnd.tools.batch_scene_exporter.batch_scene_exporter.build_bash_command
+   oa.rnd.tools.batch_scene_exporter.batch_scene_exporter.run_shield_checks
+   oa.rnd.tools.batch_scene_exporter.batch_scene_exporter.run
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.batch_scene_exporter.batch_scene_exporter.temp_pid_path
+   oa.rnd.tools.batch_scene_exporter.batch_scene_exporter.data_path
+
+
+.. py:data:: temp_pid_path
+   
+
+   
+
+.. py:class:: BashColors
+
+   .. py:attribute:: PURPLE
+      :annotation: = [95m
+
+      
+
+   .. py:attribute:: BLUE
+      :annotation: = [94m
+
+      
+
+   .. py:attribute:: GREEN
+      :annotation: = [92m
+
+      
+
+   .. py:attribute:: YELLOW
+      :annotation: = [93m
+
+      
+
+   .. py:attribute:: RED
+      :annotation: = [91m
+
+      
+
+   .. py:attribute:: NORMAL
+      :annotation: = [0m
+
+      
+
+   .. py:attribute:: BOLD
+      :annotation: = [1m
+
+      
+
+   .. py:attribute:: UNDERLINE
+      :annotation: = [4m
+
+      
+
+
+.. py:function:: launch(**kwargs)
+
+   Opens a new terminal window and runs a batch export session with the supplied arguments.
+   Arguments must match `build_bash_command` function.
+
+
+.. py:function:: write_current_pid()
+
+
+.. py:function:: read_last_used_pid()
+
+
+.. py:function:: does_pid_exist(pid)
+
+
+.. py:function:: is_another_batch_running()
+
+   In batch its pid is stored in a file when running.
+   This will check if that pid still exists to prevent multiple batches running,
+
+
+.. py:function:: generate_data_file(**kwargs)
+
+   Creates a json file for batch to read and collect from later.
+
+
+.. py:function:: build_bash_command(data_path)
+
+   Generates a bash command that can be ran in the terminal.
+
+   :param scn_paths: A list of full paths to scene files.
+   :type scn_paths: string[]
+   :param pycommand: The command it will execute prior to publishing. If the command produces an error the asset is skipped.
+   :type pycommand: string
+   :param comments: The check-in comment.
+   :type comments: string
+   :param debug: Runs like normal except it doesn't publish, so the command can be tested first.
+   :type debug: bool
+   :param debug_output_path: Only when debug is enabled, any scene that passes will be saved so it can be reviewed later.
+   :type debug_output_path: string
+
+
+.. py:function:: run_shield_checks()
+
+   Runs all asset shield checks in the current scene.
+   Raises an exception if a check fails.
+   Minor checks are forgiven and ignored.
+
+
+.. py:function:: run(scn_paths, command, comment, debug=False, debug_output_path=None)
+
+   Goes through assets one by one.
+   Opens the latest wip file, switches task to it, runs the command, runs shield, then exports.
+
+   :param command: The command to execute. This can be left empty to simply force a publish.
+   :type command: string
+   :param comment: The check-in comment.
+   :type comment: string
+   :param debug: Runs like normal except it doesn't publish, so the command can be tested first.
+   :type debug: bool
+   :param debug_output_path: Only when debug is enabled, any scene that passes will be saved so it can be reviewed later.
+   :type debug_output_path: bool
+
+
+.. py:data:: data_path
+   
+
+   
+

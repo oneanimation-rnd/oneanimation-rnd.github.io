@@ -1,0 +1,122 @@
+ :py:mod:`oa.rigging.tools.face_rig_2d.face_rig_2d`
+======================================================================================================
+
+.. py:module:: oa.rigging.tools.face_rig_2d.face_rig_2d
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.face_rig_2d.face_rig_2d.FaceRig2DTools
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.face_rig_2d.face_rig_2d.mayaHandle
+   oa.rigging.tools.face_rig_2d.face_rig_2d.mayaMainWindow
+
+
+.. py:data:: mayaHandle
+   
+
+   
+
+.. py:data:: mayaMainWindow
+   
+
+   
+
+.. py:class:: FaceRig2DTools(*args, **kwargs)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: delete_inst()
+      :classmethod:
+
+
+   .. py:method:: run()
+      :classmethod:
+
+
+   .. py:method:: import_face_rig(scn_path)
+      :staticmethod:
+
+
+   .. py:method:: transfer_button_clicked()
+
+
+   .. py:method:: add_shapes_button_clicked()
+
+
+   .. py:method:: bind_shrink_wraps_clicked()
+
+
+   .. py:method:: transfer_rigging_objects()
+      :staticmethod:
+
+      Starts moving objects over to the character rig.
+
+
+   .. py:method:: setup_shrink_wraps(shrink_wrap_node)
+
+      Sets up the shrinkWrap default values
+
+
+   .. py:method:: setup_face_geometry()
+
+      Prepares the face geometry to be bound to the rig
+
+
+   .. py:method:: connect_shapes()
+
+      This puts it all together.
+
+
+   .. py:method:: create_attributes(input_geo)
+      :staticmethod:
+
+      This will create the driving attributes on the appropriate controller.
+
+
+   .. py:method:: create_node_structure(shape_name, enum_count, input_geo, ctrl)
+      :staticmethod:
+
+      This creates the connection for the nodes for each shape.
+
+
+   .. py:method:: create_secondary_node_structure(cond_node, enum_count, input_geo)
+      :staticmethod:
+
+      Creates the secondary structure for the teeth and the tongue.
+
+
+   .. py:method:: organize_selection()
+      :staticmethod:
+
+      This organizes the selection into an ordered list of all the shapes that will be driven by the same nodes.
+
+
+   .. py:method:: start_bind_shrink_wrap()
+
+
+   .. py:method:: bind_face_geometry(new_geometries_list)
+
+      Binds the selected geometries to the characters face rig
+
+
+

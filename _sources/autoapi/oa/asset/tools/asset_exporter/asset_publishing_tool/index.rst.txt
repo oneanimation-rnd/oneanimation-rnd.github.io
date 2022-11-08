@@ -1,0 +1,90 @@
+ :py:mod:`oa.asset.tools.asset_exporter.asset_publishing_tool`
+============================================================================================================================
+
+.. py:module:: oa.asset.tools.asset_exporter.asset_publishing_tool
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_exporter.asset_publishing_tool.CustomTextEdit
+   oa.asset.tools.asset_exporter.asset_publishing_tool.AssetPublishingTool
+
+
+
+
+.. py:class:: CustomTextEdit(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTextEdit`
+
+   Sub-classed to allow placeholders.
+
+   .. py:method:: paintEvent(e)
+
+
+
+.. py:class:: AssetPublishingTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   Interface to set thumbnail and comments.
+
+   .. py:attribute:: tool_name
+      :annotation: = assetPublishingTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: published_clicked
+      
+
+      
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: set_thumbnail_on_click()
+
+
+   .. py:method:: publish_on_click()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: assign_thumbnail()
+
+      Assigns thumbnail to the preview button.
+
+
+   .. py:method:: capture_preview()
+
+      Sets an image of the current viewport to the button.
+
+
+   .. py:method:: publish_asset()
+
+      Emits signal to publish asset.
+
+
+

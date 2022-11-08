@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.mat_gui.widgets.asset_treeview.asset_treeview &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.mat_gui.widgets.search_bar" href="../../search_bar/index.html" />
+    <link rel="prev" title=" oa.mat_gui.widgets.asset_treeview" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui.widgets</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui.widgets.asset_treeview</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui.widgets.asset_treeview.asset_treeview</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/mat_gui/widgets/asset_treeview/asset_treeview/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.mat_gui.widgets.asset_treeview.asset_treeview">
+<span id="oa-mat-gui-widgets-asset-treeview-asset-treeview"></span><h1> <a class="reference internal" href="#module-oa.mat_gui.widgets.asset_treeview.asset_treeview" title="oa.mat_gui.widgets.asset_treeview.asset_treeview"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui.widgets.asset_treeview.asset_treeview</span></code></a><a class="headerlink" href="#module-oa.mat_gui.widgets.asset_treeview.asset_treeview" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase" title="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssetTreeViewBase</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetProxyModel" title="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetProxyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssetProxyModel</span></code></a></p></td>
+<td><p>Proxy used between QTreeView and QAbstractItemModel to filter and sort items.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel" title="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssetTreeModel</span></code></a></p></td>
+<td><p>QTreeView uses this class to handle all its data for best performance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.WorkerSignals" title="oa.mat_gui.widgets.asset_treeview.asset_treeview.WorkerSignals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WorkerSignals</span></code></a></p></td>
+<td><p>Signals must inherit from QObject, so this is a workaround to signal from a QRunnable object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.Worker" title="oa.mat_gui.widgets.asset_treeview.asset_treeview.Worker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Worker</span></code></a></p></td>
+<td><p>Executes code in a separate thread to load and trim thumbnail.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate" title="oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StyledItemDelegate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode" title="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssetTreeNode</span></code></a></p></td>
+<td><p>The tree's model will be populated with this.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeView" title="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssetTreeView</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.launch_example" title="oa.mat_gui.widgets.asset_treeview.asset_treeview.launch_example"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch_example</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.mat_gui.widgets.asset_treeview.asset_treeview.</span></span><span class="sig-name descname"><span class="pre">AssetTreeViewBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTreeView</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.indexes_checked">
+<span class="sig-name descname"><span class="pre">indexes_checked</span></span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.indexes_checked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.selection_changed">
+<span class="sig-name descname"><span class="pre">selection_changed</span></span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.selection_changed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.double_clicked">
+<span class="sig-name descname"><span class="pre">double_clicked</span></span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.double_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.menu_triggered">
+<span class="sig-name descname"><span class="pre">menu_triggered</span></span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.menu_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.showEvent">
+<span class="sig-name descname"><span class="pre">showEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.showEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paint_event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.paintEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.mouseReleaseEvent">
+<span class="sig-name descname"><span class="pre">mouseReleaseEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.mouseReleaseEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.mouseMoveEvent">
+<span class="sig-name descname"><span class="pre">mouseMoveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.mouseMoveEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.wheelEvent">
+<span class="sig-name descname"><span class="pre">wheelEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.wheelEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.leaveEvent">
+<span class="sig-name descname"><span class="pre">leaveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.leaveEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.keyPressEvent">
+<span class="sig-name descname"><span class="pre">keyPressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.keyPressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.selectionChanged">
+<span class="sig-name descname"><span class="pre">selectionChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selected</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deselected</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.selectionChanged" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.mouseDoubleClickEvent">
+<span class="sig-name descname"><span class="pre">mouseDoubleClickEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.mouseDoubleClickEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase._on_menu_on_requested">
+<span class="sig-name descname"><span class="pre">_on_menu_on_requested</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase._on_menu_on_requested" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase._on_expanded">
+<span class="sig-name descname"><span class="pre">_on_expanded</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase._on_expanded" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase._on_collapsed">
+<span class="sig-name descname"><span class="pre">_on_collapsed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase._on_collapsed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase._on_header_section_clicked">
+<span class="sig-name descname"><span class="pre">_on_header_section_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase._on_header_section_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase._on_open_dir_triggered">
+<span class="sig-name descname"><span class="pre">_on_open_dir_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase._on_open_dir_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase._on_copy_to_clipboard_triggered">
+<span class="sig-name descname"><span class="pre">_on_copy_to_clipboard_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase._on_copy_to_clipboard_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.source_index">
+<span class="sig-name descname"><span class="pre">source_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.source_index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.toggle_check_state">
+<span class="sig-name descname"><span class="pre">toggle_check_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indexes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.toggle_check_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.selected_indexes">
+<span class="sig-name descname"><span class="pre">selected_indexes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.selected_indexes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.last_selected_index">
+<span class="sig-name descname"><span class="pre">last_selected_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.last_selected_index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.select_indexes">
+<span class="sig-name descname"><span class="pre">select_indexes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.select_indexes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.iterator">
+<span class="sig-name descname"><span class="pre">iterator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.iterator" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.checked_iterator">
+<span class="sig-name descname"><span class="pre">checked_iterator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.checked_iterator" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.checked_count">
+<span class="sig-name descname"><span class="pre">checked_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.checked_count" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.checked_ids">
+<span class="sig-name descname"><span class="pre">checked_ids</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.checked_ids" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.set_checked_ids">
+<span class="sig-name descname"><span class="pre">set_checked_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_ids</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.set_checked_ids" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.set_index_by_id">
+<span class="sig-name descname"><span class="pre">set_index_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.set_index_by_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.clear_tree">
+<span class="sig-name descname"><span class="pre">clear_tree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.clear_tree" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.fill_tree">
+<span class="sig-name descname"><span class="pre">fill_tree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.fill_tree" title="Permalink to this definition"></a></dt>
+<dd><p>Reset and add tree node objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.set_project">
+<span class="sig-name descname"><span class="pre">set_project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.set_project" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.update_filter">
+<span class="sig-name descname"><span class="pre">update_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeViewBase.update_filter" title="Permalink to this definition"></a></dt>
+<dd><p>Updates proxy’s filter string.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetProxyModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.mat_gui.widgets.asset_treeview.asset_treeview.</span></span><span class="sig-name descname"><span class="pre">AssetProxyModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetProxyModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtCore.QSortFilterProxyModel</span></code></p>
+<p>Proxy used between QTreeView and QAbstractItemModel to filter and sort items.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetProxyModel.lessThan">
+<span class="sig-name descname"><span class="pre">lessThan</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">left_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetProxyModel.lessThan" title="Permalink to this definition"></a></dt>
+<dd><p>Built-in function to determine how to sort column.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetProxyModel.filterAcceptsRow">
+<span class="sig-name descname"><span class="pre">filterAcceptsRow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetProxyModel.filterAcceptsRow" title="Permalink to this definition"></a></dt>
+<dd><p>Built-in function to filter what items are seen.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetProxyModel.has_accepted_children">
+<span class="sig-name descname"><span class="pre">has_accepted_children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tree_node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetProxyModel.has_accepted_children" title="Permalink to this definition"></a></dt>
+<dd><p>Recursively searches through tree node’s children to see if it matches the supplied pattern.
+This is used so for filtering so that the parent remains visible if it has a valid child.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.mat_gui.widgets.asset_treeview.asset_treeview.</span></span><span class="sig-name descname"><span class="pre">AssetTreeModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtCore.QAbstractItemModel</span></code></p>
+<p>QTreeView uses this class to handle all its data for best performance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.ColumnName">
+<span class="sig-name descname"><span class="pre">ColumnName</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.ColumnName" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.ColumnType">
+<span class="sig-name descname"><span class="pre">ColumnType</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.ColumnType" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.ColumnCheckBox">
+<span class="sig-name descname"><span class="pre">ColumnCheckBox</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.ColumnCheckBox" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.BackgroundDepreciated">
+<span class="sig-name descname"><span class="pre">BackgroundDepreciated</span></span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.BackgroundDepreciated" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.updated_data">
+<span class="sig-name descname"><span class="pre">updated_data</span></span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.updated_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.columnCount">
+<span class="sig-name descname"><span class="pre">columnCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.QModelIndex()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.columnCount" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.rowCount">
+<span class="sig-name descname"><span class="pre">rowCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.QModelIndex()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.rowCount" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.index">
+<span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.QModelIndex()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.parent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.hasChildren">
+<span class="sig-name descname"><span class="pre">hasChildren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.hasChildren" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.data">
+<span class="sig-name descname"><span class="pre">data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.data" title="Permalink to this definition"></a></dt>
+<dd><p>Edit this to determine how the model should get its data from tree nodes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.setData">
+<span class="sig-name descname"><span class="pre">setData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.Qt.EditRole</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.setData" title="Permalink to this definition"></a></dt>
+<dd><p>Edit this to determine how the model should set data back onto tree nodes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.flags">
+<span class="sig-name descname"><span class="pre">flags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.flags" title="Permalink to this definition"></a></dt>
+<dd><p>Sets a role for columns.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.headerData">
+<span class="sig-name descname"><span class="pre">headerData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">section</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.headerData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel._on_worker_finished">
+<span class="sig-name descname"><span class="pre">_on_worker_finished</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qimage</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel._on_worker_finished" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel._get_data">
+<span class="sig-name descname"><span class="pre">_get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel._get_data" title="Permalink to this definition"></a></dt>
+<dd><p>Collects assets from the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>asset_type</strong> (<a class="reference internal" href="../../../../general/tools/task_switcher/task_switcher_utils/index.html#oa.general.tools.task_switcher.task_switcher_utils.Vars.TabTypes" title="oa.general.tools.task_switcher.task_switcher_utils.Vars.TabTypes"><em>Vars.TabTypes</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.iterator">
+<span class="sig-name descname"><span class="pre">iterator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checked_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.iterator" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.checked_iterator">
+<span class="sig-name descname"><span class="pre">checked_iterator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.checked_iterator" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.toggle_thumbnails">
+<span class="sig-name descname"><span class="pre">toggle_thumbnails</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeModel.toggle_thumbnails" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.WorkerSignals">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.mat_gui.widgets.asset_treeview.asset_treeview.</span></span><span class="sig-name descname"><span class="pre">WorkerSignals</span></span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.WorkerSignals" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></p>
+<p>Signals must inherit from QObject, so this is a workaround to signal from a QRunnable object.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.WorkerSignals.finished">
+<span class="sig-name descname"><span class="pre">finished</span></span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.WorkerSignals.finished" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.Worker">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.mat_gui.widgets.asset_treeview.asset_treeview.</span></span><span class="sig-name descname"><span class="pre">Worker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qsize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.Worker" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtCore.QRunnable</span></code></p>
+<p>Executes code in a separate thread to load and trim thumbnail.
+Communicates with the ThreadPool it spawned from via signals.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.Worker.StatusOk">
+<span class="sig-name descname"><span class="pre">StatusOk</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.Worker.StatusOk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.Worker.StatusError">
+<span class="sig-name descname"><span class="pre">StatusError</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.Worker.StatusError" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.Worker.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.Worker.run" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.mat_gui.widgets.asset_treeview.asset_treeview.</span></span><span class="sig-name descname"><span class="pre">StyledItemDelegate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStyledItemDelegate</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate.Foreground">
+<span class="sig-name descname"><span class="pre">Foreground</span></span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate.Foreground" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate.ForegroundSelected">
+<span class="sig-name descname"><span class="pre">ForegroundSelected</span></span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate.ForegroundSelected" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate.ForegroundDisabled">
+<span class="sig-name descname"><span class="pre">ForegroundDisabled</span></span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate.ForegroundDisabled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate.paint">
+<span class="sig-name descname"><span class="pre">paint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">painter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate.paint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate.editorEvent">
+<span class="sig-name descname"><span class="pre">editorEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate.editorEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate._get_checkbox_rect">
+<span class="sig-name descname"><span class="pre">_get_checkbox_rect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">option</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.StyledItemDelegate._get_checkbox_rect" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.mat_gui.widgets.asset_treeview.asset_treeview.</span></span><span class="sig-name descname"><span class="pre">AssetTreeNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The tree’s model will be populated with this.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.NotProcessed">
+<span class="sig-name descname"><span class="pre">NotProcessed</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.NotProcessed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.Processing">
+<span class="sig-name descname"><span class="pre">Processing</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.Processing" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.data">
+<span class="sig-name descname"><span class="pre">data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.data" title="Permalink to this definition"></a></dt>
+<dd><p>Fetches data by column.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.setData">
+<span class="sig-name descname"><span class="pre">setData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.setData" title="Permalink to this definition"></a></dt>
+<dd><p>Sets value to internal data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.appendChild">
+<span class="sig-name descname"><span class="pre">appendChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.appendChild" title="Permalink to this definition"></a></dt>
+<dd><p>Appends a new AssetTreeNode child to self.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.removeChild">
+<span class="sig-name descname"><span class="pre">removeChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.removeChild" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.removeChildren">
+<span class="sig-name descname"><span class="pre">removeChildren</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.removeChildren" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.child">
+<span class="sig-name descname"><span class="pre">child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.child" title="Permalink to this definition"></a></dt>
+<dd><p>Fetches child by relative row index.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.childrenCount">
+<span class="sig-name descname"><span class="pre">childrenCount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.childrenCount" title="Permalink to this definition"></a></dt>
+<dd><p>Gets number of children.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.hasChildren">
+<span class="sig-name descname"><span class="pre">hasChildren</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.hasChildren" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True if self has children.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.row">
+<span class="sig-name descname"><span class="pre">row</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.row" title="Permalink to this definition"></a></dt>
+<dd><p>Gets self’s current row index.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.columnCount">
+<span class="sig-name descname"><span class="pre">columnCount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.columnCount" title="Permalink to this definition"></a></dt>
+<dd><p>Gets self’s number of columns.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.latest_version_info">
+<span class="sig-name descname"><span class="pre">latest_version_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeNode.latest_version_info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.mat_gui.widgets.asset_treeview.asset_treeview.</span></span><span class="sig-name descname"><span class="pre">AssetTreeView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_depreciated</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_header</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtWidgets.QAbstractItemView.ExtendedSelection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeView.update_filter_completer">
+<span class="sig-name descname"><span class="pre">update_filter_completer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeView.update_filter_completer" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeView.on_filter_return_pressed">
+<span class="sig-name descname"><span class="pre">on_filter_return_pressed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.AssetTreeView.on_filter_return_pressed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.mat_gui.widgets.asset_treeview.asset_treeview.launch_example">
+<span class="sig-prename descclassname"><span class="pre">oa.mat_gui.widgets.asset_treeview.asset_treeview.</span></span><span class="sig-name descname"><span class="pre">launch_example</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.mat_gui.widgets.asset_treeview.asset_treeview.launch_example" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title=" oa.mat_gui.widgets.asset_treeview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../search_bar/index.html" class="btn btn-neutral float-right" title=" oa.mat_gui.widgets.search_bar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

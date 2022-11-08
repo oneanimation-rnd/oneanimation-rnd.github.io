@@ -1,0 +1,80 @@
+ :py:mod:`oa.shot_split_submitter_tool.shot_split_submitter_tool`
+==================================================================================================================================
+
+.. py:module:: oa.shot_split_submitter_tool.shot_split_submitter_tool
+
+.. autoapi-nested-parse::
+
+   This is a stand-alone tool to submit Maya scenes onto Afanasy for shot splitting and caching.
+
+   Usage:
+       # Open the tool's interface
+       launch()
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_split_submitter_tool.shot_split_submitter_tool.ShotSplitSubmitterTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_split_submitter_tool.shot_split_submitter_tool.launch
+   oa.shot_split_submitter_tool.shot_split_submitter_tool.main
+
+
+
+.. py:class:: ShotSplitSubmitterTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: tool_name
+      :annotation: = shotSplitSubmitterTool
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: on_scn_added(scn_path)
+
+
+   .. py:method:: on_scn_removed(scn_path)
+
+
+   .. py:method:: on_scn_list_sel_changed()
+
+
+   .. py:method:: on_shots_checkbox_changed(show_row, checked)
+
+
+   .. py:method:: on_assets_checkbox_changed(asset_row, checked)
+
+
+   .. py:method:: run_on_clicked()
+
+
+
+.. py:function:: launch()
+
+
+.. py:function:: main()
+
+

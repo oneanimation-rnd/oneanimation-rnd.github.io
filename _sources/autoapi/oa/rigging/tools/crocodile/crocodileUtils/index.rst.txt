@@ -1,0 +1,104 @@
+ :py:mod:`oa.rigging.tools.crocodile.crocodileUtils`
+========================================================================================================
+
+.. py:module:: oa.rigging.tools.crocodile.crocodileUtils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.crocodile.crocodileUtils.stealSkinWeights
+   oa.rigging.tools.crocodile.crocodileUtils.stealSkinning
+   oa.rigging.tools.crocodile.crocodileUtils.stealShapes
+   oa.rigging.tools.crocodile.crocodileUtils.stealUvs
+   oa.rigging.tools.crocodile.crocodileUtils.stealMaterials
+   oa.rigging.tools.crocodile.crocodileUtils.stealAll
+   oa.rigging.tools.crocodile.crocodileUtils.exposePlug
+   oa.rigging.tools.crocodile.crocodileUtils.restorePlug
+   oa.rigging.tools.crocodile.crocodileUtils.extractRenderMeshes
+   oa.rigging.tools.crocodile.crocodileUtils.exportRenderMeshesToTemp
+   oa.rigging.tools.crocodile.crocodileUtils.importRenderMeshesFromTemp
+   oa.rigging.tools.crocodile.crocodileUtils.displayTextures
+   oa.rigging.tools.crocodile.crocodileUtils.restoreOldMaterials
+   oa.rigging.tools.crocodile.crocodileUtils.createCheckeredMaterial
+   oa.rigging.tools.crocodile.crocodileUtils.applyCheckeredMaterial
+   oa.rigging.tools.crocodile.crocodileUtils.transferAllUvs
+
+
+
+.. py:exception:: MissingDeformer
+
+   Bases: :py:obj:`BaseException`
+
+   Common base class for all exceptions
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:function:: stealSkinWeights(fromSkin, toSkin, surfaceAssociation='closestPoint', no_mirror=True)
+
+
+.. py:function:: stealSkinning(source, targets, surfaceAssociation='closestPoint')
+
+   This will use the copy skin weights command to steal the skinning.
+   It will automate all of the preparation work required in order to get this
+   to work properly.
+
+
+.. py:function:: stealShapes(source, target, lastWrapSettings=True, thresh=0, maxDist=1, exclusive=True, autoThresh=True, falloff=0)
+
+   This will steal the shapes from the 2nd selected object and pass them to
+   the first, as well as reconnect all of the original driving attributes.
+   Can define wrap's settings using optional parameters by disabling @lastWrapSettings
+
+
+.. py:function:: stealUvs(source, target, sampleSpace=0, searchMethod=3)
+
+   This will use the transferAttributes command to steal UV's.
+   Argument "space" refers to the sampleSpace used in the transfer.  0 = World Space, 5 = Topology
+
+
+.. py:function:: stealMaterials(source, target, searchMethod=3)
+
+
+.. py:function:: stealAll(source, target)
+
+   This will run all of the operations at once.
+
+
+.. py:function:: exposePlug(plug, value)
+
+
+.. py:function:: restorePlug(plug, values)
+
+
+.. py:function:: extractRenderMeshes()
+
+
+.. py:function:: exportRenderMeshesToTemp()
+
+
+.. py:function:: importRenderMeshesFromTemp()
+
+
+.. py:function:: displayTextures()
+
+
+.. py:function:: restoreOldMaterials()
+
+
+.. py:function:: createCheckeredMaterial(uvSize)
+
+
+.. py:function:: applyCheckeredMaterial(uvSize=15)
+
+
+.. py:function:: transferAllUvs()
+
+

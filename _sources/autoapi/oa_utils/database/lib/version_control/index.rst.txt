@@ -1,0 +1,105 @@
+ :py:mod:`oa_utils.database.lib.version_control`
+================================================================================================
+
+.. py:module:: oa_utils.database.lib.version_control
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.lib.version_control.AbsVersionControl
+   oa_utils.database.lib.version_control.VersionControlMedusa
+   oa_utils.database.lib.version_control.VersionControlLDAP
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.lib.version_control.LOGGER
+   oa_utils.database.lib.version_control.vc
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:class:: AbsVersionControl(asset_path)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: get_noversion_path(tokenize=True)
+      :abstractmethod:
+
+
+   .. py:method:: get_versioned_path(version)
+      :abstractmethod:
+
+
+   .. py:method:: get_version()
+      :abstractmethod:
+
+
+   .. py:method:: get_revisions()
+      :abstractmethod:
+
+
+   .. py:method:: get_last_revision()
+      :abstractmethod:
+
+
+
+.. py:class:: VersionControlMedusa(asset_path)
+
+   Bases: :py:obj:`AbsVersionControl`
+
+   .. py:method:: get_noversion_path(tokenize=True)
+
+
+   .. py:method:: get_versioned_path(version)
+
+
+   .. py:method:: get_revisions()
+
+
+   .. py:method:: get_last_revision()
+
+
+   .. py:method:: get_version()
+
+
+
+.. py:class:: VersionControlLDAP(asset_path)
+
+   Bases: :py:obj:`AbsVersionControl`
+
+   .. py:method:: get_noversion_path(tokenize=True)
+
+
+   .. py:method:: get_versioned_path(version)
+
+
+   .. py:method:: get_revisions()
+
+
+   .. py:method:: get_last_revision()
+
+
+   .. py:method:: get_version()
+
+
+
+.. py:data:: vc
+   
+
+   
+

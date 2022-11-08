@@ -1,0 +1,148 @@
+ :py:mod:`oa.asset.tools.costumes.groups_manager`
+==================================================================================================
+
+.. py:module:: oa.asset.tools.costumes.groups_manager
+
+.. autoapi-nested-parse::
+
+   To support a costume to attach on multiple similar characters, we assign specific characters to groups.
+   This interface facilitates creating and assigning characters to groups.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.costumes.groups_manager.GroupsManager
+   oa.asset.tools.costumes.groups_manager.GroupItem
+   oa.asset.tools.costumes.groups_manager.GroupsListWidget
+   oa.asset.tools.costumes.groups_manager.AssetStandardItem
+   oa.asset.tools.costumes.groups_manager.AssetListView
+   oa.asset.tools.costumes.groups_manager.AssetListModel
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.costumes.groups_manager.launch
+
+
+
+.. py:class:: GroupsManager(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: fill_group_names()
+
+
+   .. py:method:: update_database()
+
+
+   .. py:method:: set_row_height(height=30)
+
+
+   .. py:method:: on_group_names_selection_changed()
+
+
+   .. py:method:: on_assets_filter_pressed()
+
+
+   .. py:method:: on_add_group_clicked()
+
+
+   .. py:method:: on_remove_group_clicked()
+
+
+   .. py:method:: on_remove_asset_clicked()
+
+
+   .. py:method:: on_items_dropped(_ids)
+
+
+
+.. py:class:: GroupItem(_id, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListWidgetItem`
+
+
+.. py:class:: GroupsListWidget(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListWidget`
+
+   .. py:method:: paintEvent(paint_event)
+
+
+
+.. py:class:: AssetStandardItem(label, thumbnail)
+
+   Bases: :py:obj:`PySide2.QtGui.QStandardItem`
+
+
+.. py:class:: AssetListView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListView`
+
+   .. py:attribute:: items_dropped
+      
+
+      
+
+   .. py:method:: dragEnterEvent(event)
+
+
+   .. py:method:: dragMoveEvent(event)
+
+
+   .. py:method:: dropEvent(event)
+
+
+   .. py:method:: fill_list(asset_type)
+
+
+   .. py:method:: paintEvent(paint_event)
+
+
+
+.. py:class:: AssetListModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtGui.QStandardItemModel`
+
+   .. py:method:: mimeData(indexes)
+
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: get_data(asset_type, pattern='')
+
+
+   .. py:method:: add_item(_id, thumbnail)
+
+
+   .. py:method:: apply_filter(pattern)
+
+
+
+.. py:function:: launch(parent=None)
+
+

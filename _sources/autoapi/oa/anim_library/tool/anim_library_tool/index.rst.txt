@@ -1,0 +1,247 @@
+ :py:mod:`oa.anim_library.tool.anim_library_tool`
+==================================================================================================
+
+.. py:module:: oa.anim_library.tool.anim_library_tool
+
+.. autoapi-nested-parse::
+
+   Animation library
+
+   Interface to create, edit, and delete animation clips.
+   Clips are stored physically in the RND project on the asset drive, and its meta-data is stored in the database.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.anim_library_tool.AnimLibrary
+   oa.anim_library.tool.anim_library_tool.ClipsContainer
+   oa.anim_library.tool.anim_library_tool.TagsContainer
+   oa.anim_library.tool.anim_library_tool.CustomScrollArea
+   oa.anim_library.tool.anim_library_tool.ClipFrame
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.anim_library_tool.launch
+
+
+
+.. py:class:: AnimLibrary(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: on_projects_changed()
+
+      Callback to update project clips when switching project
+
+
+   .. py:method:: interrupt_on_triggered()
+
+
+   .. py:method:: clip_on_entered()
+
+      Display the clip's info with a custom tooltip.
+
+
+   .. py:method:: clip_on_exited()
+
+
+   .. py:method:: clip_on_mouse_moved(qpoint)
+
+      Makes tooltip follow the mouse.
+
+
+   .. py:method:: wheel_on_triggered()
+
+      Hides tool tip, otherwise it doesn't trigger leave event for its current clip.
+
+
+   .. py:method:: create_clip_on_clicked()
+
+
+   .. py:method:: edit_sel_sets_on_clicked()
+
+
+   .. py:method:: tags_on_created(qtag)
+
+
+   .. py:method:: tags_on_loaded()
+
+
+   .. py:method:: popular_tags_on_toggled(state)
+
+
+   .. py:method:: popular_tag_on_clicked()
+
+
+   .. py:method:: popular_tag_del_on_clicked()
+
+
+   .. py:method:: settings_on_toggled(state)
+
+
+   .. py:method:: clip_on_deleted(clip_frame)
+
+
+   .. py:method:: on_tags_option_clicked(*args)
+
+
+   .. py:method:: refresh_on_clicked()
+
+
+   .. py:method:: del_previous_instance()
+
+      Deletes any previous instance of this class.
+
+
+   .. py:method:: save_state()
+
+
+   .. py:method:: restore_state()
+
+
+   .. py:method:: load_anm_plugin()
+
+
+   .. py:method:: recollect_tags()
+
+      Populates combobox's auto-complete with all tags.
+
+
+   .. py:method:: fill_projects_list()
+
+      Populates project combobox and set current project.
+
+
+   .. py:method:: fill_clip_names()
+
+
+   .. py:method:: update_search_fields()
+
+
+   .. py:method:: update_clips()
+
+      Update the frame with clips filtered by the active tags.
+
+
+   .. py:method:: get_loaded_tags()
+
+      Gets and returns a list of active tags.
+
+
+   .. py:method:: fill_popular_tags()
+
+      Populates frame with the user's most popular tags.
+
+      :param all_tags: Skips if tag isn't found in this list of tags.
+                       If not supplied, collects all tags from the database.
+
+
+   .. py:method:: add_to_popular_count(tag_name)
+
+
+
+.. py:class:: ClipsContainer(label, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QGroupBox`
+
+   Displays a tip if it's empty.
+
+   .. py:method:: paintEvent(paint_event)
+
+
+
+.. py:class:: TagsContainer(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QFrame`
+
+   Displays a tip if it's empty.
+
+   .. py:method:: paintEvent(paint_event)
+
+
+
+.. py:class:: CustomScrollArea(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QScrollArea`
+
+   Needed to expose the mouse wheel event.
+
+   .. py:attribute:: wheel_triggered
+      
+
+      
+
+   .. py:method:: wheelEvent(wheel_event)
+
+
+
+.. py:class:: ClipFrame(label, qclip, meta_data=None, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QFrame`
+
+   .. py:attribute:: clip_entered
+      
+
+      
+
+   .. py:attribute:: clip_exited
+      
+
+      
+
+   .. py:attribute:: mouse_moved
+      
+
+      
+
+   .. py:method:: on_edit_click()
+
+
+   .. py:method:: on_double_click()
+
+
+   .. py:method:: on_right_click(mouse_event)
+
+
+   .. py:method:: filepath()
+
+
+
+.. py:function:: launch()
+
+

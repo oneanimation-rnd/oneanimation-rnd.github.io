@@ -1,0 +1,19 @@
+ :py:mod:`oa.asset_builder.libs.delegates`
+====================================================================================
+
+.. py:module:: oa.asset_builder.libs.delegates
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   assets/index.rst
+   instances/index.rst
+   objects/index.rst
+   shading/index.rst
+   vopnets/index.rst
+
+

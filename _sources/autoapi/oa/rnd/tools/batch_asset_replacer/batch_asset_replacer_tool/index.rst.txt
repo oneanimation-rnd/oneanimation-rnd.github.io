@@ -1,0 +1,114 @@
+ :py:mod:`oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_tool`
+============================================================================================================================================
+
+.. py:module:: oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_tool
+
+.. autoapi-nested-parse::
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       import batch_asset_replacer_tool
+       batch_asset_replacer_tool.launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_tool.BatchAssetReplacerTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_tool.launch
+
+
+
+.. py:class:: BatchAssetReplacerTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = batchAssetReplacerTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: save_state()
+
+
+   .. py:method:: load_state()
+
+
+   .. py:method:: set_debug_enabled_state()
+
+
+   .. py:method:: filter_on_edited()
+
+
+   .. py:method:: debug_checkbox_on_changed(state)
+
+
+   .. py:method:: on_begin_progress(dir_count, dir_name)
+
+
+   .. py:method:: on_update_progress(value)
+
+
+   .. py:method:: on_end_progress()
+
+
+   .. py:method:: on_row_count_changed(count)
+
+
+   .. py:method:: remove_on_clicked()
+
+
+   .. py:method:: open_dir_on_clicked()
+
+
+   .. py:method:: add_mapping_items(view, no_duplicates)
+
+
+   .. py:method:: to_left_on_clicked()
+
+
+   .. py:method:: to_right_on_clicked()
+
+
+   .. py:method:: run_on_clicked()
+
+
+
+.. py:function:: launch()
+
+

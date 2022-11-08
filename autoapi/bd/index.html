@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> bd &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title=" bd.api" href="api/index.html" />
+    <link rel="prev" title="API DOCS" href="../../api.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="hooks/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.hooks</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="storage/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#package-contents">Package Contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bd.__path__"><code class="docutils literal notranslate"><span class="pre">__path__</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bd.__path__">__path__</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api.html">API DOCS</a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/autoapi/bd/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-bd">
+<span id="bd"></span><h1> <a class="reference internal" href="#module-bd" title="bd"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a><a class="headerlink" href="#module-bd" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/transport/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api.transport</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/transport/https/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api.transport.https</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api.utils</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/utils/cache/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api.utils.cache</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/utils/decorators/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api.utils.decorators</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/utils/gql/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api.utils.gql</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/utils/jwt/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api.utils.jwt</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/auth/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api.auth</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/client/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api.client</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/constants/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api.constants</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/errors/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api.errors</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/subscriptions/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api.subscriptions</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hooks/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.hooks</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hooks/exceptions/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.hooks.exceptions</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hooks/executor/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.hooks.executor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hooks/loader/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.hooks.loader</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hooks/main/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.hooks.main</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="hooks/registry/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.hooks.registry</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="storage/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="storage/structure/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.structure</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="storage/structure/item/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.structure.item</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage/structure/schema/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.structure.schema</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="storage/accessor/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.accessor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/adapter/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.adapter</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/component/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.component</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/core/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/edits/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.edits</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/enums/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.enums</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/errors/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.errors</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/formatter/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.formatter</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/helpers/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.helpers</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/mixins/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.mixins</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/queries/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.queries</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/validation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.validation</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Permalink to this heading"></a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="bd.__path__">
+<span class="sig-prename descclassname"><span class="pre">bd.</span></span><span class="sig-name descname"><span class="pre">__path__</span></span><a class="headerlink" href="#bd.__path__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../api.html" class="btn btn-neutral float-left" title="API DOCS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api/index.html" class="btn btn-neutral float-right" title=" bd.api" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+ :py:mod:`oa_shot_builder.libs.ui.widgets`
+====================================================================================
+
+.. py:module:: oa_shot_builder.libs.ui.widgets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   shot_selector/index.rst
+   shot_tree/index.rst
+
+

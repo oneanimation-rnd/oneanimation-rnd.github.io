@@ -1,0 +1,16 @@
+ :py:mod:`oa.anim_library`
+====================================================
+
+.. py:module:: oa.anim_library
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   anm_format/index.rst
+   tool/index.rst
+
+

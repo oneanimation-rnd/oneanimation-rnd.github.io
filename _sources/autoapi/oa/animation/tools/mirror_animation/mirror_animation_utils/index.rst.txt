@@ -1,0 +1,112 @@
+ :py:mod:`oa.animation.tools.mirror_animation.mirror_animation_utils`
+==========================================================================================================================================
+
+.. py:module:: oa.animation.tools.mirror_animation.mirror_animation_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.mirror_animation.mirror_animation_utils.wrap_layout
+   oa.animation.tools.mirror_animation.mirror_animation_utils.get_maya_window
+   oa.animation.tools.mirror_animation.mirror_animation_utils.popup_error_msg
+   oa.animation.tools.mirror_animation.mirror_animation_utils.get_facing
+   oa.animation.tools.mirror_animation.mirror_animation_utils.is_centered
+   oa.animation.tools.mirror_animation.mirror_animation_utils.get_axes_to_flip
+   oa.animation.tools.mirror_animation.mirror_animation_utils.get_all_ctrls
+   oa.animation.tools.mirror_animation.mirror_animation_utils.add_mapping_node
+   oa.animation.tools.mirror_animation.mirror_animation_utils.collect_auto_mapping
+   oa.animation.tools.mirror_animation.mirror_animation_utils.set_auto_mapping
+   oa.animation.tools.mirror_animation.mirror_animation_utils.mirror_anim
+   oa.animation.tools.mirror_animation.mirror_animation_utils.mirror_asset
+
+
+
+.. py:function:: wrap_layout(widgets, orientation)
+
+   Helper function that takes supplied widgets and wraps them all in a layout.
+
+   :param widgets: A list of QWidgets.
+   :param orientation: QtCore.Qt.Orientation
+
+   :returns: The new layout item.
+
+
+.. py:function:: get_maya_window()
+
+
+.. py:function:: popup_error_msg(title, msg, parent=None, print_traceback=True)
+
+
+.. py:function:: get_facing(obj, axis)
+
+   Determines what direction an axis is facing.
+
+   :param obj: The object to check.
+   :type obj: string
+   :param axis: Inputs can be x, y, z.
+   :type axis: string
+
+   :returns: Possible directions are left, right, up, down, front, back.
+
+
+.. py:function:: is_centered(obj)
+
+   Determines if the supplied object is in the center of the world's x plane.
+
+
+.. py:function:: get_axes_to_flip(obj, mobj)
+
+   Compares directions of both objects to determine what channels need to be reversed
+   in order for them to mirror symmetrically.
+
+
+.. py:function:: get_all_ctrls()
+
+
+.. py:function:: add_mapping_node()
+
+   Creates an empty transform that contains the mirroring's mapping data as json format.
+
+
+.. py:function:: collect_auto_mapping()
+
+   This should run when the asset is in its default pose.
+   It will check all controls to determine if they should be swapped or flipped on itself during mirroring.
+   It also collects which axes need to be flipped for swapping objects.
+
+   :returns: A dictionary to represent mapping data.
+
+
+.. py:function:: set_auto_mapping()
+
+   This should run when the asset is in its default pose.
+   Quick function to collect mapping and set it on the mapping node.
+
+
+.. py:function:: mirror_anim(nsp, selection_only, time=None, skip=[])
+
+   The core that mirrors the animation.
+   Instead of using matrix math, it uses anim curve functions to manipulate them.
+
+   :param nsp: The namespace to operate on.
+   :type nsp: string
+   :param selection_only: Filters only selected controls when True.
+   :type selection_only: bool
+   :param time: A two item tuple to operate on keys that lie in this time range.
+   :type time: float[]
+   :param skip: A list of control names to ignore.
+   :type skip: string[]
+
+
+.. py:function:: mirror_asset(selection_only, skip=[])
+
+   Convenience function to mirror the first selected assets.
+
+

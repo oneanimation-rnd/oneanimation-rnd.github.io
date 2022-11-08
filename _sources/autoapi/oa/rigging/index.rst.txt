@@ -1,0 +1,16 @@
+ :py:mod:`oa.rigging`
+==========================================
+
+.. py:module:: oa.rigging
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   libs/index.rst
+   tools/index.rst
+
+

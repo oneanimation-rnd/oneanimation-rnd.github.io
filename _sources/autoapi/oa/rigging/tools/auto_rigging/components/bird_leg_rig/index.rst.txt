@@ -1,0 +1,22 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.components.bird_leg_rig`
+================================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.components.bird_leg_rig
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.components.bird_leg_rig.rig_leg
+
+
+
+.. py:function:: rig_leg(main_color=[0.3, 0.8, 0.3], main_color2=[0.7, 1, 0.7], alt_color=[0.8, 0.3, 0.3], alt_color2=[1, 0.7, 0.7], rig_scale=1, **kobjs)
+
+

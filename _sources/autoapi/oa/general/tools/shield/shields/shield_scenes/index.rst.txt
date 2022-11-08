@@ -1,0 +1,19 @@
+ :py:mod:`oa.general.tools.shield.shields.shield_scenes`
+================================================================================================================
+
+.. py:module:: oa.general.tools.shield.shields.shield_scenes
+
+
+Module Contents
+---------------
+
+.. py:data:: paths
+   :annotation: = ['$checks/scenes/local_gpu_nodes.py', '$checks/scenes/asset_project.py',...
+
+   
+
+.. py:data:: shield
+   
+
+   
+

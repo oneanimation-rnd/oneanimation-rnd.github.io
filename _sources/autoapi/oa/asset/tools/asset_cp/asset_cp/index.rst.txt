@@ -1,0 +1,37 @@
+ :py:mod:`oa.asset.tools.asset_cp.asset_cp`
+======================================================================================
+
+.. py:module:: oa.asset.tools.asset_cp.asset_cp
+
+.. autoapi-nested-parse::
+
+   Asset cp is a collection of meta-data to describe an asset.
+   This is stored on the asset's root nul as a custom attribute string.
+   The data is stored as a json string.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_cp.asset_cp.add_asset_cp
+
+
+
+.. py:function:: add_asset_cp(obj)
+
+   Creates and adds asset cp to the supplied object.
+
+   :param obj: Object to add asset cp onto.
+   :type obj: string
+
+

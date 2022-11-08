@@ -1,0 +1,104 @@
+ :py:mod:`oa.animation.tools.capture.capture_cp`
+================================================================================================
+
+.. py:module:: oa.animation.tools.capture.capture_cp
+
+.. autoapi-nested-parse::
+
+   Author:
+       Angeline
+
+   Refactored:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.capture.capture_cp.CaptureCP
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.capture.capture_cp.lock_attr
+   oa.animation.tools.capture.capture_cp.create_attr
+
+
+
+.. py:class:: CaptureCP
+
+   Bases: :py:obj:`object`
+
+   Handles the capture CP.
+
+   .. py:method:: update_capt_info(update_dict)
+
+      Updates the internal persistent data.
+
+      :param update_dict: Stores some of the previous settings from the capture.
+      :type update_dict: dict
+
+
+   .. py:method:: dump_info()
+
+      Writes the info to the capture cp's custom attribute.
+
+
+   .. py:method:: get_info()
+
+      Gets the previous capture info from the custom attribute.
+
+
+   .. py:method:: is_custom_range()
+
+
+   .. py:method:: get_last_custom_frame_range()
+
+
+   .. py:method:: get_last_local_path()
+
+
+   .. py:method:: get_last_dailies_path()
+
+
+   .. py:method:: get_last_remote_path()
+
+
+   .. py:method:: create_capture_cp()
+
+      Creates a group object with a custom attribute to store previous capture settings.
+
+
+
+.. py:function:: lock_attr(obj, lock_list)
+
+   Locks attributes supplied attributes.
+
+   :param obj: Object's name.
+   :type obj: string
+   :param lock_list: List of attribute names.
+   :type lock_list: string[]
+
+
+.. py:function:: create_attr(obj, dargs)
+
+   Creates the custom attribute on the supplied object.
+
+   :param obj: Object's name.
+   :type obj: string
+   :param dargs: pairs of {maya command flags: flag value} based on addAttr maya command.
+   :type dargs: dict
+
+   :returns: The custom attribute's name.
+
+

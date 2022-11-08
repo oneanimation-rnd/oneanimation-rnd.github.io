@@ -1,0 +1,50 @@
+ :py:mod:`oa.rigging.libs.rig_resolutions.wip_file`
+======================================================================================================
+
+.. py:module:: oa.rigging.libs.rig_resolutions.wip_file
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.rig_resolutions.wip_file.FileNameEditor
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.rig_resolutions.wip_file.push_wip_to_share
+   oa.rigging.libs.rig_resolutions.wip_file.copy_to_clipboard
+
+
+
+.. py:class:: FileNameEditor(txt, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: text()
+
+
+
+.. py:function:: push_wip_to_share()
+
+   Pushes current scene file to your shared folder.
+
+
+.. py:function:: copy_to_clipboard(txt)
+
+   Copies supplied string to the clipboard.
+   stackoverflow.com/questions/7606062
+
+

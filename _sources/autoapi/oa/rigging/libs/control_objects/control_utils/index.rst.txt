@@ -1,0 +1,145 @@
+ :py:mod:`oa.rigging.libs.control_objects.control_utils`
+================================================================================================================
+
+.. py:module:: oa.rigging.libs.control_objects.control_utils
+
+.. autoapi-nested-parse::
+
+   Stores curves in a file so they can be imported later.
+
+   Author:
+       Jason Labbe
+
+   Bugs:
+       - Currently doesn't support curves with 2 degrees.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.control_objects.control_utils.NameInputDialog
+   oa.rigging.libs.control_objects.control_utils.SizeInputDialog
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.control_objects.control_utils.get_settings
+   oa.rigging.libs.control_objects.control_utils.save_settings
+   oa.rigging.libs.control_objects.control_utils.get_size_input
+   oa.rigging.libs.control_objects.control_utils.curve_to_json
+   oa.rigging.libs.control_objects.control_utils.export_preset
+   oa.rigging.libs.control_objects.control_utils.import_preset
+   oa.rigging.libs.control_objects.control_utils.create_ctrls
+   oa.rigging.libs.control_objects.control_utils.list_presets
+   oa.rigging.libs.control_objects.control_utils.set_wire_color
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.control_objects.control_utils.presets_dir
+
+
+.. py:data:: presets_dir
+   
+
+   
+
+.. py:class:: NameInputDialog(default_text='newControl', parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QInputDialog`
+
+   Simple pop-up to get user's input to determine the control's name.
+
+
+.. py:class:: SizeInputDialog(default_value=1, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QInputDialog`
+
+   Simple pop-up to get user's input to determine the control's size.
+
+
+.. py:function:: get_settings()
+
+   Gets a dictionary of settings from a json file.
+
+
+.. py:function:: save_settings(**kwargs)
+
+   Saves all keywords to a json file.
+
+
+.. py:function:: get_size_input()
+
+   Opens a window to set default size, then saves it to settings.
+
+
+.. py:function:: curve_to_json(curve)
+
+   Converts a curve to data.
+
+   :param curve: An object with curve shapes.
+
+   :returns: A list of dictionaries that represents the curves.
+
+
+.. py:function:: export_preset(curve, output_dir, preset_name=None)
+
+   Exports a shape to json file.
+
+   :param curve: An object with curve shapes.
+   :param output_dir: Full path to a directory to export preset to.
+   :param preset_name: The name to set the preset's file. If nothing is supplied, it uses the object's name.
+
+
+.. py:function:: import_preset(preset_name, size=None, name='', parent='', align='', color_index=None, input_name=False, add_nul=True)
+
+   Imports an exported shape via json format.
+
+   :param preset_name: Preset name to import.
+   :param size: Size multiplier. If nothing is supplied it tries to use the value from its settings file.
+   :param name: If an empty string is supplied it will use the preset's name.
+   :param parent: The object to parent the new control to.
+   :param align: Aligns the new control this object.
+   :param color_index: Passing as an integer (between 1-31) will use Maya's internal colorIndex.
+                       Passing a 3 float list (between 0-1) will use rgb.
+   :param input_name: Prompts user to enter a name.
+   :param add_nul: Adds an empty group on top of the ctrl to zero it out.
+
+   :returns: A list of the control's nul and object.
+
+
+.. py:function:: create_ctrls(preset_name, add_nul, input_name=False)
+
+   Helper function to create multiple controls.
+
+
+.. py:function:: list_presets(full_path=False)
+
+   Gets and returns a list of all presets.
+
+   :param full_path: Option to return absolute paths.
+
+
+.. py:function:: set_wire_color(obj, value)
+
+   Sets a color to all of an object's shapes.
+
+   :param obj: An object's name.
+   :param color_index: Passing as an integer (between 1-31) will use Maya's internal colorIndex.
+                       Passing a 3 float list (between 0-1) will use rgb.
+
+

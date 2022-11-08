@@ -1,0 +1,34 @@
+ :py:mod:`oa.user_directory.info`
+==================================================================
+
+.. py:module:: oa.user_directory.info
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.user_directory.info.UserInfo
+
+
+
+
+.. py:class:: UserInfo(uid, email, fullname, department)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+

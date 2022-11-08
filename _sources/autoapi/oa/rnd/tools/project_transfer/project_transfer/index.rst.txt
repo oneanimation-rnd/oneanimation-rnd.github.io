@@ -1,0 +1,108 @@
+ :py:mod:`oa.rnd.tools.project_transfer.project_transfer`
+==================================================================================================================
+
+.. py:module:: oa.rnd.tools.project_transfer.project_transfer
+
+.. autoapi-nested-parse::
+
+   Transfers assets from another project to the current project via checking it in.
+   Reference paths are re-mapped to point at the new project.
+
+   There a few gotchas right now.
+       - It only transfers the latest version.
+       - It assumes the asset doesn't exist, so there's no handling for that.
+       - It doesn't transfer over textures.
+       - It re-points reference paths to v001 since those will be new transfers anyways.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.project_transfer.project_transfer.create_rdr_nul
+   oa.rnd.tools.project_transfer.project_transfer.remap_path
+   oa.rnd.tools.project_transfer.project_transfer.remap_reference_paths
+   oa.rnd.tools.project_transfer.project_transfer.get_old_db_wrapper
+   oa.rnd.tools.project_transfer.project_transfer.get_full_name
+   oa.rnd.tools.project_transfer.project_transfer.get_file_entry
+   oa.rnd.tools.project_transfer.project_transfer.get_latest_path
+   oa.rnd.tools.project_transfer.project_transfer.update_display_layers
+   oa.rnd.tools.project_transfer.project_transfer.disable_color_management
+   oa.rnd.tools.project_transfer.project_transfer.remove_render_setup
+   oa.rnd.tools.project_transfer.project_transfer.check_in_asset
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.project_transfer.project_transfer.FROM_PROJECT
+   oa.rnd.tools.project_transfer.project_transfer.TO_PROJECT
+
+
+.. py:data:: FROM_PROJECT
+   :annotation: = ODDLF2
+
+   
+
+.. py:data:: TO_PROJECT
+   
+
+   
+
+.. py:function:: create_rdr_nul()
+
+   Creates an empty rdr nul if it doesn't exist.
+   Some older assets didn't have any, but it's required by Shield.
+
+
+.. py:function:: remap_path(path, to_version=None)
+
+   Re-maps a path to point to the new project.
+
+
+.. py:function:: remap_reference_paths()
+
+   Re-maps all references to point to the new project.
+
+
+.. py:function:: get_old_db_wrapper(id)
+
+
+.. py:function:: get_full_name(wmodel_wrapper)
+
+   Gets and returns the asset's full name.
+
+
+.. py:function:: get_file_entry(wmodel_wrapper)
+
+   Gets and returns the model wrapper's RDR file entry.
+
+
+.. py:function:: get_latest_path(wmodel_wrapper)
+
+   Gets and returns the model wrapper's latest RDR scene path.
+
+
+.. py:function:: update_display_layers()
+
+   Sorts controls and render meshes to layers.
+
+
+.. py:function:: disable_color_management()
+
+
+.. py:function:: remove_render_setup()
+
+
+.. py:function:: check_in_asset(wmodel_wrapper)
+
+

@@ -1,0 +1,173 @@
+ :py:mod:`oa.general.tools.task_switcher.widgets.file_browser_widget`
+==========================================================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.widgets.file_browser_widget
+
+.. autoapi-nested-parse::
+
+   A widget to point a path to it and displays its contents like a file browser.
+   Because it's using Qt's QFileSystemModel it's incredibly faster than using a custom treeview.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget
+   oa.general.tools.task_switcher.widgets.file_browser_widget.FileSystemModel
+   oa.general.tools.task_switcher.widgets.file_browser_widget.IconProvider
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.widgets.file_browser_widget.strip_version
+   oa.general.tools.task_switcher.widgets.file_browser_widget.get_latest_path
+
+
+
+.. py:function:: strip_version(path)
+
+   Removes the supplied path's version.
+
+   :param path: A full path to an existing file.
+   :type path: string
+
+   :returns: The same path with no version.
+
+
+.. py:function:: get_latest_path(path_no_ver)
+
+   Gets the latest version of the supplied path.
+
+   :param path_no_ver: A full path that doesn't have a version.
+   :type path_no_ver: string
+
+   :returns: An existing file to the latest version, or itself if it failed.
+
+
+.. py:class:: FileBrowserWidget(start_path='', display_latest=False, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTreeView`
+
+   A browser for managing local files.
+
+   .. py:attribute:: selection_changed
+      
+
+      
+
+   .. py:attribute:: load_scene_triggered
+      
+
+      
+
+   .. py:method:: keyPressEvent(key_event)
+
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+      Expands/Collapses item if it has children.
+
+
+   .. py:method:: selectionChanged(selected, deselected)
+
+
+   .. py:method:: header_on_click(section)
+
+
+   .. py:method:: on_browser_context_triggered(point)
+
+
+   .. py:method:: on_open_dir_triggered()
+
+
+   .. py:method:: on_copy_to_clipboard_triggered()
+
+
+   .. py:method:: on_new_folder_triggered()
+
+
+   .. py:method:: on_rename_triggered()
+
+
+   .. py:method:: on_delete_triggered()
+
+
+   .. py:method:: on_run_selected_triggered()
+
+
+   .. py:method:: set_filters(filter_list)
+
+
+   .. py:method:: show_scenes_only(state)
+
+
+   .. py:method:: set_path(root_path)
+
+
+   .. py:method:: get_selected_file()
+
+      Gets and returns the full path of the current selected file.
+
+
+   .. py:method:: add_new_folder()
+
+
+   .. py:method:: copy_path_to_clipboard()
+
+
+   .. py:method:: run_selected_file()
+
+
+   .. py:method:: delete_selected_file()
+
+
+
+.. py:class:: FileSystemModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QFileSystemModel`
+
+   Manages filters for what files get hidden or displayed.
+
+   .. py:method:: data(index, role)
+
+      Manages what data should be displayed.
+
+
+   .. py:method:: on_path_changed(root_path)
+
+      Re-collect paths if the user navigates to a new location.
+
+
+   .. py:method:: collect_paths_to_display(force_update=False)
+
+      From the browser's current path, recursively collects paths that are the latest version.
+
+      :param force_update: Triggers view to redraw itself.
+                           This is useful if this method is being called outside of this class.
+      :type force_update: bool
+
+
+
+.. py:class:: IconProvider(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QFileIconProvider`
+
+   Manages which icon is displayed for a file.
+
+   .. py:method:: icon(icontype_or_qfileinfo)
+
+
+

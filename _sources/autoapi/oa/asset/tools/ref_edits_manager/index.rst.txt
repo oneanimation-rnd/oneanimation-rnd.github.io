@@ -1,0 +1,26 @@
+ :py:mod:`oa.asset.tools.ref_edits_manager`
+======================================================================================
+
+.. py:module:: oa.asset.tools.ref_edits_manager
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   widgets/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   batch_cleaner/index.rst
+   ref_edits_manager/index.rst
+   utils/index.rst
+
+

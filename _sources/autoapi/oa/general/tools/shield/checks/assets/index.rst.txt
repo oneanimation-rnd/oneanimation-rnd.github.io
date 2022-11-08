@@ -1,0 +1,71 @@
+ :py:mod:`oa.general.tools.shield.checks.assets`
+================================================================================================
+
+.. py:module:: oa.general.tools.shield.checks.assets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   anim_curves/index.rst
+   anim_lib_check/index.rst
+   asset_structure_names/index.rst
+   bad_history/index.rst
+   color_management/index.rst
+   control_pivot_offsets/index.rst
+   corrupt_skin_clusters/index.rst
+   ctrl_set_check/index.rst
+   default_materials/index.rst
+   dependency_cycles/index.rst
+   double_transforms/index.rst
+   duplicate_names/index.rst
+   editing_blendshapes/index.rst
+   empty_layers/index.rst
+   empty_resolutions/index.rst
+   expressions/index.rst
+   floating_namespaces/index.rst
+   frame_rate/index.rst
+   frozen_controls/index.rst
+   geometry_tag_id/index.rst
+   has_virus/index.rst
+   instance_masters/index.rst
+   instances/index.rst
+   is_mental_ray_loaded/index.rst
+   is_rig_scalable/index.rst
+   is_turtle_enabled/index.rst
+   is_visibility_keyable/index.rst
+   large_textures/index.rst
+   local_reference_paths/index.rst
+   material_names/index.rst
+   material_tag_id/index.rst
+   mesh_no_verts/index.rst
+   mesh_pivot_offsets/index.rst
+   mirror_anim_mapping/index.rst
+   missing_geo/index.rst
+   multiple_orig_nodes/index.rst
+   multiple_roots/index.rst
+   multiple_uv_sets/index.rst
+   naming_conventions/index.rst
+   negative_scale/index.rst
+   no_inherit_transforms/index.rst
+   no_poly_count/index.rst
+   no_resolutions/index.rst
+   non_local_connections/index.rst
+   non_manifold/index.rst
+   open_cl/index.rst
+   rdr_loaded/index.rst
+   references/index.rst
+   render_set_check/index.rst
+   render_setup/index.rst
+   root_exists/index.rst
+   scale_on_render_objs/index.rst
+   stragglers/index.rst
+   subdivisions/index.rst
+   unknown_plugins/index.rst
+   unused_influences/index.rst
+   weak_references/index.rst
+
+

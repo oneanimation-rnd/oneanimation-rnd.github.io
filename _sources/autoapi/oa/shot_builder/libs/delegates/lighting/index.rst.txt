@@ -1,0 +1,83 @@
+ :py:mod:`oa.shot_builder.libs.delegates.lighting`
+====================================================================================================
+
+.. py:module:: oa.shot_builder.libs.delegates.lighting
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.libs.delegates.lighting.setup
+   oa.shot_builder.libs.delegates.lighting._ensure_lighting_ropnet
+   oa.shot_builder.libs.delegates.lighting._fix_deprecated_geobuilders
+   oa.shot_builder.libs.delegates.lighting._get_gallery_path
+   oa.shot_builder.libs.delegates.lighting.load_lighting
+   oa.shot_builder.libs.delegates.lighting.save_lighting
+   oa.shot_builder.libs.delegates.lighting.save
+   oa.shot_builder.libs.delegates.lighting._connect_drivers_to_take
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.libs.delegates.lighting.this
+   oa.shot_builder.libs.delegates.lighting._log
+   oa.shot_builder.libs.delegates.lighting._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:function:: setup(episode=None, sequence=None, shot=None, version=None)
+
+   Attempt to load the lightrig from the shot or, if it
+   wasn't exported, from the environment asset.
+
+
+
+.. py:function:: _ensure_lighting_ropnet()
+
+
+.. py:function:: _fix_deprecated_geobuilders()
+
+
+.. py:function:: _get_gallery_path(episode=None, sequence=None, shot=None, version=None)
+
+   Returns a path to the gallery which should be applied
+   to the lightrig.
+
+
+
+.. py:function:: load_lighting(gallery_path)
+
+
+.. py:function:: save_lighting(gallery_path, comment='')
+
+
+.. py:function:: save(comment='')
+
+
+.. py:function:: _connect_drivers_to_take()
+
+

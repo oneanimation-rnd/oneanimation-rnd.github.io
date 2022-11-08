@@ -1,0 +1,55 @@
+ :py:mod:`oa_shot_builder.libs.delegates.caching`
+==================================================================================================
+
+.. py:module:: oa_shot_builder.libs.delegates.caching
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.delegates.caching.get_cache_map
+   oa_shot_builder.libs.delegates.caching._apply_asset_cache
+   oa_shot_builder.libs.delegates.caching._apply_cam_asset_cache
+   oa_shot_builder.libs.delegates.caching.setup
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.delegates.caching.this
+   oa_shot_builder.libs.delegates.caching._log
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:function:: get_cache_map()
+
+
+.. py:function:: _apply_asset_cache(asset_node, asset_description, cache_path)
+
+
+.. py:function:: _apply_cam_asset_cache(cam_asset_node, asset_description, abc_path)
+
+
+.. py:function:: setup(use_latest=True)
+
+   Applies cache to all assets based on their guids.
+
+

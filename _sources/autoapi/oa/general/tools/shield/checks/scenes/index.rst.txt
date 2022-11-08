@@ -1,0 +1,34 @@
+ :py:mod:`oa.general.tools.shield.checks.scenes`
+================================================================================================
+
+.. py:module:: oa.general.tools.shield.checks.scenes
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   asset_project/index.rst
+   blend_attribute_keys/index.rst
+   camera_exists/index.rst
+   camera_local_pivots/index.rst
+   duplicated_meshes/index.rst
+   frame_rate/index.rst
+   geom_ids/index.rst
+   get_scene_cp_shots/index.rst
+   is_env_in_scene/index.rst
+   is_mental_ray_loaded/index.rst
+   latest_assets/index.rst
+   local_assets/index.rst
+   local_gpu_nodes/index.rst
+   locked_references/index.rst
+   muted_dof/index.rst
+   namespace_instance_number/index.rst
+   no_poly_count/index.rst
+   reference_namespace/index.rst
+   scene_cp_exists/index.rst
+   unloaded_references/index.rst
+
+

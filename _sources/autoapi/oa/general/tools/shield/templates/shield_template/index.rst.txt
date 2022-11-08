@@ -1,0 +1,53 @@
+ :py:mod:`oa.general.tools.shield.templates.shield_template`
+========================================================================================================================
+
+.. py:module:: oa.general.tools.shield.templates.shield_template
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.shield.templates.shield_template.ShieldTemplate
+
+
+
+
+.. py:class:: ShieldTemplate(module_paths=[])
+
+   Bases: :py:obj:`PySide2.QtCore.QObject`
+
+   .. py:attribute:: checks_end
+      
+
+      
+
+   .. py:attribute:: check_finished
+      
+
+      
+
+   .. py:method:: add_check(path)
+
+      Adds a new CheckTemplate instance.
+
+      :param path: A path to an existing python module.
+                   Can also use '$checks' get modules from this tool's checks directory.
+
+
+   .. py:method:: run_check(check)
+
+      Runs CheckTemplate instance's run method.
+      It's considered a pass if no errors are raised.
+
+
+   .. py:method:: run_all_checks()
+
+      Runs all checks that are loaded.
+
+
+

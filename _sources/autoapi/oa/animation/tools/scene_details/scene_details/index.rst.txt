@@ -1,0 +1,125 @@
+ :py:mod:`oa.animation.tools.scene_details.scene_details`
+==================================================================================================================
+
+.. py:module:: oa.animation.tools.scene_details.scene_details
+
+.. autoapi-nested-parse::
+
+   An upgraded version of a previous tool that list all of our assets in the scene.
+   It also gives the ability to convert any asset to GPU to increase the scene's performance.
+   An object set and layer viewers are bundled in it to prevent using the Outliner.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_details.scene_details.SceneDetails
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_details.scene_details.launch
+
+
+
+.. py:class:: SceneDetails(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: tool_name
+      :annotation: = sceneDetailsTool
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: on_start_progress(count, label)
+
+
+   .. py:method:: on_next_progress()
+
+
+   .. py:method:: on_progress_finished()
+
+
+   .. py:method:: on_refs_data_updated()
+
+
+   .. py:method:: update_refs_filter_completer()
+
+
+   .. py:method:: run_start_up_screen()
+
+
+   .. py:method:: on_refs_filter_return_pressed()
+
+
+   .. py:method:: on_sets_filter_return_pressed()
+
+
+   .. py:method:: on_layers_filter_return_pressed()
+
+
+   .. py:method:: on_treeview_selection_changed(current, previous)
+
+
+   .. py:method:: on_treeview_delay_selection_changed()
+
+      Treeview is funky when trying to get its true currentIndex.
+      On most events the selectionModel isn't synced up, so calling this with a singleShot solves this.
+
+
+   .. py:method:: on_show_thumbnails_toggled(show)
+
+
+   .. py:method:: on_show_inst_masters_toggled(show)
+
+
+   .. py:method:: on_show_hierarchy_toggled(show)
+
+
+   .. py:method:: create_search_bar(placeholder='')
+
+
+   .. py:method:: load_settings()
+
+
+   .. py:method:: save_settings(**kwargs)
+
+
+   .. py:method:: save_state()
+
+
+   .. py:method:: load_state()
+
+
+   .. py:method:: set_buttons_enabled_state(enabled)
+
+
+   .. py:method:: update_support_views()
+
+
+
+.. py:function:: launch()
+
+

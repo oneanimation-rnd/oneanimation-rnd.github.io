@@ -1,0 +1,82 @@
+ :py:mod:`oa.animation.tools.key_breakdown.key_breakdown_utils`
+==============================================================================================================================
+
+.. py:module:: oa.animation.tools.key_breakdown.key_breakdown_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.key_breakdown.key_breakdown_utils.map_range
+   oa.animation.tools.key_breakdown.key_breakdown_utils.get_adjacent_keys
+   oa.animation.tools.key_breakdown.key_breakdown_utils.get_keys_info
+   oa.animation.tools.key_breakdown.key_breakdown_utils.set_keys_info
+   oa.animation.tools.key_breakdown.key_breakdown_utils.get_selected_attrs
+   oa.animation.tools.key_breakdown.key_breakdown_utils.set_color_to_keys
+
+
+
+.. py:function:: map_range(value, left_min, left_max, right_min, right_max)
+
+   Ripped from
+   https://stackoverflow.com/questions/1969240/mapping-a-range-of-values-to-another
+
+
+.. py:function:: get_adjacent_keys(plug, frame)
+
+   Gets and returns a list of the 2 neighboring keys from the supplied time.
+
+   :param plug: An object's attribute.
+   :type plug: string
+   :param frame: The frame to get its relative neighbors with.
+   :type frame: float
+
+   :returns: A list of 2 floats.
+
+
+.. py:function:: get_keys_info(objs, frame, filters=[])
+
+   Gets a data structure of the objects and their neighbouring keys/values.
+
+   :param objs: A list of objects.
+   :type objs: string[]
+   :param frame: The frame number to query from.
+   :type frame: float
+
+   :returns: {attr:[(prev_time, prev_value), (next_time, next_value)]}}
+   :rtype: {object_name
+
+
+.. py:function:: set_keys_info(keys_info, bias, as_breakdown_key=False)
+
+   Sets a key on the current frame with a value that biases from an object's previous or next keys.
+
+   :param keys_info: A data structure to parse through.
+   :type keys_info: dict
+   :param bias: A value from -100 to 100, to determine if the value should prefer the previous or next keys.
+                Supplying a value beyond 100 can be used to 'overshoot' the new value.
+   :type bias: float
+   :param as_breakdown_key: Makes new keys green.
+   :type as_breakdown_key: bool
+
+
+.. py:function:: get_selected_attrs()
+
+   Gets and returns a list of selected attributes from the main channel box.
+
+
+.. py:function:: set_color_to_keys(qcolor)
+
+   Collects all anim curves from the selected attributes and sets their keys to the supplied color.
+   If not attributes are selected from the channel box it will color all anim curves from the selection.
+
+   :param qcolor: The color to set the keys to.
+   :type qcolor: QColor
+
+

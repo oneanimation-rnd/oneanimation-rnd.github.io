@@ -1,0 +1,53 @@
+ :py:mod:`oa.shot_split_submitter_tool.utils`
+==========================================================================================
+
+.. py:module:: oa.shot_split_submitter_tool.utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_split_submitter_tool.utils.popup_msg
+   oa.shot_split_submitter_tool.utils.get_location_data
+   oa.shot_split_submitter_tool.utils.validate_scn_file
+   oa.shot_split_submitter_tool.utils.get_latest_scn_paths
+   oa.shot_split_submitter_tool.utils.read_scn_descriptor
+   oa.shot_split_submitter_tool.utils.submit_job_by_namespaces
+
+
+
+.. py:exception:: ValidateError
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:function:: popup_msg(widget, title, msg, img_name)
+
+
+.. py:function:: get_location_data()
+
+
+.. py:function:: validate_scn_file(path)
+
+
+.. py:function:: get_latest_scn_paths(starting_dir)
+
+   Recursively collect all the latest scene files.
+
+
+.. py:function:: read_scn_descriptor(descriptor_path)
+
+
+.. py:function:: submit_job_by_namespaces(scn_path, shots, namespaces, project, ep, seq, run_frustum=True, job_prefix='', pre_roll=5, post_roll=5, user='render', update_filter=())
+
+

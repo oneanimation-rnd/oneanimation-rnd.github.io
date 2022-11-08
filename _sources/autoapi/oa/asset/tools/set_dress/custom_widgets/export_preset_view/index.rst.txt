@@ -1,0 +1,126 @@
+ :py:mod:`oa.asset.tools.set_dress.custom_widgets.export_preset_view`
+==========================================================================================================================================
+
+.. py:module:: oa.asset.tools.set_dress.custom_widgets.export_preset_view
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.custom_widgets.export_preset_view.ExportPresetView
+   oa.asset.tools.set_dress.custom_widgets.export_preset_view.ExportPresetModel
+   oa.asset.tools.set_dress.custom_widgets.export_preset_view.StyledItemDelegate
+
+
+
+
+.. py:class:: ExportPresetView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableView`
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+
+.. py:class:: ExportPresetModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractTableModel`
+
+   .. py:class:: Column
+
+      .. py:attribute:: Thumbnail
+         :annotation: = 0
+
+         
+
+      .. py:attribute:: Name
+         :annotation: = 1
+
+         
+
+      .. py:attribute:: Description
+         :annotation: = 2
+
+         
+
+      .. py:attribute:: Episode
+         :annotation: = 3
+
+         
+
+      .. py:attribute:: User
+         :annotation: = 4
+
+         
+
+
+   .. py:method:: rowCount(parent)
+
+
+   .. py:method:: columnCount(parent)
+
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: headerData(value, orientation, role)
+
+
+   .. py:method:: flags(index)
+
+
+   .. py:method:: begin_update()
+
+
+   .. py:method:: end_update()
+
+
+   .. py:method:: get_data(wmodel_id)
+
+
+   .. py:method:: update_color(row, qcolor)
+
+
+
+.. py:class:: StyledItemDelegate(parent)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QStyledItemDelegate`
+
+   .. py:attribute:: Foreground
+      
+
+      
+
+   .. py:attribute:: ForegroundSelected
+      
+
+      
+
+   .. py:attribute:: ForegroundDisabled
+      
+
+      
+
+   .. py:attribute:: Padding
+      :annotation: = 5
+
+      
+
+   .. py:method:: paint(painter, option, index)
+
+
+

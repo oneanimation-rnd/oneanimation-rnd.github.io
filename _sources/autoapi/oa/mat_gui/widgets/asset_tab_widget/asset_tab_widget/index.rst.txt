@@ -1,0 +1,41 @@
+ :py:mod:`oa.mat_gui.widgets.asset_tab_widget.asset_tab_widget`
+==============================================================================================================================
+
+.. py:module:: oa.mat_gui.widgets.asset_tab_widget.asset_tab_widget
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.mat_gui.widgets.asset_tab_widget.asset_tab_widget.AssetTabWidget
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.mat_gui.widgets.asset_tab_widget.asset_tab_widget.launch_example
+
+
+
+.. py:class:: AssetTabWidget(initial_tab=None, parent=None, **kwargs)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTabWidget`
+
+   .. py:method:: tab_index(asset_type)
+
+
+   .. py:method:: set_project(project)
+
+
+
+.. py:function:: launch_example()
+
+

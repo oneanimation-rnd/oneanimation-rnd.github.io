@@ -1,0 +1,24 @@
+ :py:mod:`oa.rnd.libs.debug_utils`
+====================================================================
+
+.. py:module:: oa.rnd.libs.debug_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.libs.debug_utils.list_current_solutions
+
+
+
+.. py:function:: list_current_solutions()
+
+   Prints out every solution's version its sym link is pointing to.
+
+

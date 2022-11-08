@@ -1,0 +1,44 @@
+ :py:mod:`oa.animation.tools.scene_details_legacy.version_check_cb`
+======================================================================================================================================
+
+.. py:module:: oa.animation.tools.scene_details_legacy.version_check_cb
+
+.. autoapi-nested-parse::
+
+   Setup callback to check reference versions on open.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_details_legacy.version_check_cb.VersionCheckCB
+
+
+
+
+.. py:class:: VersionCheckCB
+
+   .. py:attribute:: id
+      
+
+      
+
+   .. py:method:: add_version_check_cb()
+      :staticmethod:
+
+
+   .. py:method:: remove_version_check_cb()
+      :staticmethod:
+
+
+   .. py:method:: on_trigger_version_check(arg)
+      :staticmethod:
+
+
+

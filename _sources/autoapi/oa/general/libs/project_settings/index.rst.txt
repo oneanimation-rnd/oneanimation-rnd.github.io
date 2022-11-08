@@ -1,0 +1,16 @@
+ :py:mod:`oa.general.libs.project_settings`
+======================================================================================
+
+.. py:module:: oa.general.libs.project_settings
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   color_management_settings/index.rst
+   global_scale_settings/index.rst
+
+

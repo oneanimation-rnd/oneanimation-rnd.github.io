@@ -1,0 +1,53 @@
+ :py:mod:`oa.general.libs.global_settings`
+====================================================================================
+
+.. py:module:: oa.general.libs.global_settings
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.global_settings.get_path
+   oa.general.libs.global_settings.get_settings
+   oa.general.libs.global_settings.set_settings
+   oa.general.libs.global_settings.get_value
+   oa.general.libs.global_settings.remove_settings
+
+
+
+.. py:function:: get_path()
+
+   Returns a full path to the json file that contains the settings.
+
+
+.. py:function:: get_settings()
+
+   Returns a dictionary of all settings.
+   Returns an empty dictionary if the file doesn't exist.
+
+
+.. py:function:: set_settings(key_and_values)
+
+   Appends the supplied values to the settings file.
+
+   :param key_and_values: A dictionary to update the settings with.
+
+
+.. py:function:: get_value(key)
+
+   Returns the key's value from the settings file.
+
+
+.. py:function:: remove_settings(keys)
+
+   Removes all supplied keys from the settings file.
+
+   :param keys: Can pass a string or list of strings.
+
+

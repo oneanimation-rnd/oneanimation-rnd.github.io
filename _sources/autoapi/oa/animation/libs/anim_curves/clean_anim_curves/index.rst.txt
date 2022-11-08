@@ -1,0 +1,35 @@
+ :py:mod:`oa.animation.libs.anim_curves.clean_anim_curves`
+====================================================================================================================
+
+.. py:module:: oa.animation.libs.anim_curves.clean_anim_curves
+
+.. autoapi-nested-parse::
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.libs.anim_curves.clean_anim_curves.CleanAnimCurves
+
+
+
+
+.. py:class:: CleanAnimCurves
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: removeAllKeys()
+
+      Removes all anim curves in the scene, but ignores SDK keys
+
+
+

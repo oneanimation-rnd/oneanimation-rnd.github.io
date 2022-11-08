@@ -1,0 +1,195 @@
+ :py:mod:`oa.animation.tools.synoptics.synoptics_viewer`
+================================================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.synoptics_viewer
+
+.. autoapi-nested-parse::
+
+   Tool to use a synoptics gui for a character (reference only)
+
+   Author:
+       Jason Labbe
+
+   .. rubric:: Notes
+
+   - Mouse events are a bit of a mess because it's trying to mimic how Maya handles selection, but is fighting against Qt's native behavior.
+
+   Bugs;
+       - Can't figure out how to center synoptics in the center of the layout while respecting resizing.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.synoptics_viewer.SynopticsViewer
+   oa.animation.tools.synoptics.synoptics_viewer.TabWidget
+   oa.animation.tools.synoptics.synoptics_viewer.View
+   oa.animation.tools.synoptics.synoptics_viewer.UndoStack
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.synoptics_viewer.launch
+
+
+
+.. py:class:: SynopticsViewer(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   The viewer's main interface.
+
+   .. py:attribute:: on_open_cb_id
+      
+
+      
+
+   .. py:attribute:: on_new_cb_id
+      
+
+      
+
+   .. py:method:: add_callbacks()
+      :staticmethod:
+
+
+   .. py:method:: remove_callbacks()
+      :staticmethod:
+
+
+   .. py:method:: on_trigger_auto_close(*arg)
+      :staticmethod:
+
+      Gets called on loading or starting a new scene.
+      Forces any open instance to be closed.
+
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: resizeEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: add_break_line(vertical)
+
+      Adds a line to act as a seperator.
+
+      :param vertical: Orientates it vertically when True, otherwise horizontally.
+      :type vertical: bool
+
+      :returns: The new widget.
+
+
+   .. py:method:: get_icon(file_name)
+
+
+   .. py:method:: add_tab(syn_path, namespace)
+
+
+   .. py:method:: load_tab(tab_index)
+
+
+   .. py:method:: fix_aspect_ratio()
+
+
+   .. py:method:: fix_aspect_ratio_OLD()
+
+      Re-scales window according to the current synoptic's aspect ratio.
+
+
+   .. py:method:: rescale_view(w, h)
+
+
+   .. py:method:: load_asset(index)
+
+
+   .. py:method:: refresh_assets()
+
+
+   .. py:method:: collect_assets_info()
+
+
+   .. py:method:: jump_to_selected_asset()
+
+
+   .. py:method:: set_taskbar(message, warning=False)
+
+
+   .. py:method:: show_help()
+
+
+   .. py:method:: run()
+
+
+
+.. py:class:: TabWidget(syn_path, namespace, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   A tab that will hold a synoptics view.
+
+
+.. py:class:: View(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QGraphicsView`
+
+   Custom behaviour to the viewer's view and scene.
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+      Overridden so it doesn't clear the selection.
+
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: mouseReleaseEvent(event)
+
+
+   .. py:method:: keyPressEvent(e)
+
+      Lets the viewport have focus on key presses.
+
+
+   .. py:method:: set_bg_image(path)
+
+
+   .. py:method:: rescale_contents()
+
+
+   .. py:method:: load(path='')
+
+
+
+.. py:class:: UndoStack(name='')
+
+   Bases: :py:obj:`object`
+
+   Uses 'with' statement to encapsulate a chunk of code to as an undo block.
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(type, value, traceback)
+
+
+
+.. py:function:: launch()
+
+

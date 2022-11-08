@@ -1,0 +1,263 @@
+ :py:mod:`oa.asset.libs.maya_assets`
+========================================================================
+
+.. py:module:: oa.asset.libs.maya_assets
+
+.. autoapi-nested-parse::
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.maya_assets.create_weak_ref
+   oa.asset.libs.maya_assets.get_weak_ref
+   oa.asset.libs.maya_assets.create_string_attr
+   oa.asset.libs.maya_assets.lock_transforms
+   oa.asset.libs.maya_assets.create_asset_template
+   oa.asset.libs.maya_assets.traverse_to_asset_root
+   oa.asset.libs.maya_assets.get_first_root_nul
+   oa.asset.libs.maya_assets.get_selected_root_nuls
+   oa.asset.libs.maya_assets.get_scene_root_nuls
+   oa.asset.libs.maya_assets.get_render_objs
+   oa.asset.libs.maya_assets.parent_geo_to_asset
+   oa.asset.libs.maya_assets.parent_geo_to_last_selection
+   oa.asset.libs.maya_assets.parent_to_cog_ctrl
+   oa.asset.libs.maya_assets.create_asset_set
+   oa.asset.libs.maya_assets.create_render_set
+   oa.asset.libs.maya_assets.create_ctrl_set
+   oa.asset.libs.maya_assets.add_controls_to_ctrl_set
+   oa.asset.libs.maya_assets.add_to_render_set
+   oa.asset.libs.maya_assets.is_mesh
+   oa.asset.libs.maya_assets.build_database_id
+   oa.asset.libs.maya_assets.create_layer
+   oa.asset.libs.maya_assets.sort_objects_to_layers
+   oa.asset.libs.maya_assets.unreference_all_layers
+   oa.asset.libs.maya_assets.isolate_assets
+   oa.asset.libs.maya_assets.assign_default_mat
+   oa.asset.libs.maya_assets.add_offset_ctrl
+   oa.asset.libs.maya_assets.add_ignore_history_attr
+   oa.asset.libs.maya_assets.remove_ignore_history_attr
+   oa.asset.libs.maya_assets.add_to_set
+   oa.asset.libs.maya_assets.add_to_no_cull_set
+   oa.asset.libs.maya_assets.add_to_force_to_houdini_set
+   oa.asset.libs.maya_assets.namespaces_iterator
+   oa.asset.libs.maya_assets.collapse_all_namespaces
+
+
+
+.. py:function:: create_weak_ref(obj, weak_ref, attr_name)
+
+   Connects one object to another via weak reference.
+
+   :param obj: Object to hold weak reference.
+   :type obj: string
+   :param weak_ref: Object that will be connected to weak reference attribute.
+   :type weak_ref: string
+   :param attr_name: Name of attribute.
+   :type attr_name: string
+
+
+.. py:function:: get_weak_ref(obj, attr)
+
+   Gets and returns the attribute's weak reference that it's pointing to.
+
+
+.. py:function:: create_string_attr(obj, attr_name, value, lock=True)
+
+   Adds a new string attribute.
+
+   :param obj: Object to add attribute to.
+   :type obj: string
+   :param attr_name: The attribute's name.
+   :type attr_name: string
+   :param value: The attribute's default value.
+   :type value: string
+   :param lock: The attribute's default lock state.
+   :type lock: bool
+
+
+.. py:function:: lock_transforms(obj)
+
+
+.. py:function:: create_asset_template(global_srt_style='circleArrows', cog_style='fatFlatArrow', rig_type='ROOT', size=1.0, select=True, create_sets=True)
+
+   Creates and sets up the generic template that all assets should follow.
+
+   :returns: A list of object names.
+             [ROOT_NUL, NOTOUCH_NUL, globalSRT_CTRL, cog_NUL, cog_CTRL]
+
+
+.. py:function:: traverse_to_asset_root(objs, local=True, refs=True)
+
+   A generator to get an object's asset root nul.
+   This skips any referenced objects to work with nested assets.
+
+   :param objs: A list of transform names.
+   :param local: Accept non-referenced root nuls.
+   :param refs: Accept referenced root nuls.
+
+   :Yields: The object's asset root nul or None.
+
+
+.. py:function:: get_first_root_nul(objs, local=True, refs=True)
+
+   Gets and returns the root nul of the first asset that is detected.
+
+   :param objs: A list of object names.
+
+   :returns: An asset's root nul, or None if nothing was found.
+
+
+.. py:function:: get_selected_root_nuls(objs, local=True, refs=True)
+
+
+.. py:function:: get_scene_root_nuls(local=True, refs=True)
+
+   Gets and returns a list of root nuls in the whole scene.
+   Excludes nested assets.
+
+
+.. py:function:: get_render_objs(root_nul)
+
+   Gets and returns a list of an asset's render objects.
+   Excludes nested assets.
+
+   :param root_nul: An asset's root nul.
+   :type root_nul: string
+
+
+.. py:function:: parent_geo_to_asset(resolution_type, objs=None, parent_obj=None)
+
+   Parents a geometry under the rig's NOTOUCH_NUL.
+   If resolution is "RDR", all supplied objects will be added to the render set.
+
+   :param objs: List of objects to parent. If None, defaults to current selection.
+   :type objs: string[]
+   :param resolution_type: A nul with a corresponding name will be created under NOTOUCH_NUL, where the meshes will be stored.
+                           Typically "RDR" for hiRes or "ANI" for lowRes.
+   :type resolution_type: string
+   :param parent_obj: If supplied, objects will parent to an empty nul that has a constraint to this object.
+   :type parent_obj: string
+
+
+.. py:function:: parent_geo_to_last_selection(resolution_type)
+
+   Parents current selection to the last selected object.
+   Mostly coded for a shelf item to call it.
+
+   :param resolution_type: A nul with a corresponding name will be created under NOTOUCH_NUL, where the meshes will be stored.
+                           Typically "RDR" for hiRes or "ANI" for lowRes.
+   :type resolution_type: string
+
+
+.. py:function:: parent_to_cog_ctrl(objs=None)
+
+   Parent objects to asset's cog_CTRL.
+
+   :param objs: List of objects to parent.
+   :type objs: string[]
+
+
+.. py:function:: create_asset_set(set_name, set_attr_name)
+
+   Creates a generic set and gets set as a weak reference by the asset's root nul.
+
+
+.. py:function:: create_render_set()
+
+
+.. py:function:: create_ctrl_set()
+
+
+.. py:function:: add_controls_to_ctrl_set(objs=None)
+
+   Add supplied control objects to the asset's ctrl set.
+
+   :param objs: If not supplied, adds all controls in the scene.
+   :type objs: string[]
+
+
+.. py:function:: add_to_render_set(objs)
+
+   Adds supplied mesh objects to the asset's render set.
+
+
+.. py:function:: is_mesh(obj)
+
+   Returns True if the supplied object has geometry shapes.
+
+
+.. py:function:: build_database_id(root_nul)
+
+   Uses its asset info attribute to build its corresponding database id.
+
+
+.. py:function:: create_layer(layer_name, objs=[], layer_color=None, layer_display_type=None)
+
+   Creates a layer.
+
+   :param layer_name: Name to set the layer. It will replace an existing one.
+   :type layer_name: string
+   :param objs: Collection of objects to add layer to. Default will create an empty layer.
+   :type objs: string[]
+   :param layer_color: Value from 0-255 (although anything above 60 appears to only be gray)
+   :type layer_color: int
+   :param layer_display_type: 0=Normal, 1=Template, 2=Reference
+   :type layer_display_type: int
+
+   :returns: New layer's name.
+
+
+.. py:function:: sort_objects_to_layers()
+
+   Creates a layer for control objects.
+   Creates a layer from meshes for each resolutions.
+
+
+.. py:function:: unreference_all_layers()
+
+
+.. py:function:: isolate_assets()
+
+   Isolates any selected asset and any non-referenced objects.
+
+
+.. py:function:: assign_default_mat(*args)
+
+
+.. py:function:: add_offset_ctrl(root_nul=None, offset_members=[], ctrl_size=1, ctrl_color=18)
+
+
+.. py:function:: add_ignore_history_attr(objs)
+
+
+.. py:function:: remove_ignore_history_attr(objs)
+
+
+.. py:function:: add_to_set(objs, set_name)
+
+
+.. py:function:: add_to_no_cull_set(objs=None)
+
+
+.. py:function:: add_to_force_to_houdini_set(objs=None)
+
+   Currently only works when setting on a root nul or a mesh object.
+
+
+.. py:function:: namespaces_iterator(iter_nsp=[':'])
+
+
+.. py:function:: collapse_all_namespaces()
+
+

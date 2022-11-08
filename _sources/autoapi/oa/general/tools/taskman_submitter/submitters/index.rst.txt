@@ -1,0 +1,196 @@
+ :py:mod:`oa.general.tools.taskman_submitter.submitters`
+================================================================================================================
+
+.. py:module:: oa.general.tools.taskman_submitter.submitters
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.taskman_submitter.submitters.DebugTaskSubmitter
+   oa.general.tools.taskman_submitter.submitters.AssetArchiveSubmitter
+   oa.general.tools.taskman_submitter.submitters.EpisodeArchiveSubmitter
+   oa.general.tools.taskman_submitter.submitters.SequenceArchiveSubmitter
+   oa.general.tools.taskman_submitter.submitters.SceneArchiveSubmitter
+   oa.general.tools.taskman_submitter.submitters.SynopticsArchiveSubmitter
+   oa.general.tools.taskman_submitter.submitters.SetDressArchiveSubmitter
+   oa.general.tools.taskman_submitter.submitters.CostumeArchiveSubmitter
+   oa.general.tools.taskman_submitter.submitters.TextureArchiveSubmitter
+   oa.general.tools.taskman_submitter.submitters.AnimClipArchiveSubmitter
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.taskman_submitter.submitters.filter_none_and_concat_array
+
+
+
+.. py:function:: filter_none_and_concat_array(array, char='_')
+
+
+.. py:class:: DebugTaskSubmitter
+
+   Bases: :py:obj:`oa.general.tools.taskman_submitter.abstract.abstract_submitter.AbstractSubmitter`
+
+   .. py:attribute:: type
+      :annotation: = debug-task
+
+      
+
+   .. py:method:: add_task(**kwargs)
+
+
+   .. py:method:: dummy_submit(**kwargs)
+      :classmethod:
+
+
+
+.. py:class:: AssetArchiveSubmitter
+
+   Bases: :py:obj:`oa.general.tools.taskman_submitter.abstract.abstract_submitter.AbstractSubmitter`
+
+   .. py:attribute:: type
+      :annotation: = asset-archive
+
+      
+
+   .. py:method:: add_task(project, asset_type, name, level=None, category=None)
+
+
+
+.. py:class:: EpisodeArchiveSubmitter
+
+   Bases: :py:obj:`oa.general.tools.taskman_submitter.abstract.abstract_submitter.AbstractSubmitter`
+
+   .. py:attribute:: type
+      :annotation: = episode-archive
+
+      
+
+   .. py:method:: add_task(project, episode)
+
+
+
+.. py:class:: SequenceArchiveSubmitter
+
+   Bases: :py:obj:`oa.general.tools.taskman_submitter.abstract.abstract_submitter.AbstractSubmitter`
+
+   .. py:attribute:: type
+      :annotation: = sequence-archive
+
+      
+
+   .. py:method:: add_task(project, episode, sequence)
+
+
+
+.. py:class:: SceneArchiveSubmitter
+
+   Bases: :py:obj:`oa.general.tools.taskman_submitter.abstract.abstract_submitter.AbstractSubmitter`
+
+   .. py:attribute:: type
+      :annotation: = scene-archive
+
+      
+
+   .. py:method:: extract_names_from_base_name(base_name)
+      :staticmethod:
+
+
+   .. py:method:: add_task(project, episode, sequence, shot_type, shot_range)
+
+
+
+.. py:class:: SynopticsArchiveSubmitter
+
+   Bases: :py:obj:`oa.general.tools.taskman_submitter.abstract.abstract_submitter.AbstractSubmitter`
+
+   .. py:attribute:: type
+      :annotation: = synoptics-archive
+
+      
+
+   .. py:method:: add_task(project, asset_type, asset_name, synop_name, level=None, category=None)
+
+
+
+.. py:class:: SetDressArchiveSubmitter
+
+   Bases: :py:obj:`oa.general.tools.taskman_submitter.abstract.abstract_submitter.AbstractSubmitter`
+
+   .. py:class:: PresetType
+
+      Bases: :py:obj:`enum.Enum`
+
+      Generic enumeration.
+
+      Derive from this class to define new enumerations.
+
+      .. py:attribute:: Preset
+         :annotation: = 0
+
+         
+
+      .. py:attribute:: EnvState
+         :annotation: = 1
+
+         
+
+
+   .. py:attribute:: type
+      :annotation: = set-dress-archive
+
+      
+
+   .. py:method:: add_task(project, asset_name, preset_name, preset_type)
+
+
+
+.. py:class:: CostumeArchiveSubmitter
+
+   Bases: :py:obj:`oa.general.tools.taskman_submitter.abstract.abstract_submitter.AbstractSubmitter`
+
+   .. py:attribute:: type
+      :annotation: = costume-archive
+
+      
+
+   .. py:method:: add_task(project, costume_name)
+
+
+
+.. py:class:: TextureArchiveSubmitter
+
+   Bases: :py:obj:`oa.general.tools.taskman_submitter.abstract.abstract_submitter.AbstractSubmitter`
+
+   .. py:attribute:: type
+      :annotation: = texture-archive
+
+      
+
+   .. py:method:: add_task(project, asset_type, asset_name, texture_name, level=None, category=None)
+
+
+
+.. py:class:: AnimClipArchiveSubmitter
+
+   Bases: :py:obj:`oa.general.tools.taskman_submitter.abstract.abstract_submitter.AbstractSubmitter`
+
+   .. py:attribute:: type
+      :annotation: = anim-clip-archive
+
+      
+
+   .. py:method:: add_task(anim_clip_id)
+
+
+

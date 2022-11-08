@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.asset.tools.asset_exporter.utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.asset.tools.asset_instancer" href="../../asset_instancer/index.html" />
+    <link rel="prev" title=" oa.asset.tools.asset_exporter.asset_publishing_tool" href="../asset_publishing_tool/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.asset_exporter</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.asset_exporter.utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/asset/tools/asset_exporter/utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.asset.tools.asset_exporter.utils">
+<span id="oa-asset-tools-asset-exporter-utils"></span><h1> <a class="reference internal" href="#module-oa.asset.tools.asset_exporter.utils" title="oa.asset.tools.asset_exporter.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.asset_exporter.utils</span></code></a><a class="headerlink" href="#module-oa.asset.tools.asset_exporter.utils" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.ViewportOff" title="oa.asset.tools.asset_exporter.utils.ViewportOff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ViewportOff</span></code></a></p></td>
+<td><p>Uses &quot;with&quot; statement to disable the viewport's drawing inside its block.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.popup_message" title="oa.asset.tools.asset_exporter.utils.popup_message"><code class="xref py py-obj docutils literal notranslate"><span class="pre">popup_message</span></code></a>(title, msg[, icon, buttons, parent])</p></td>
+<td><p>Convenient method to display a message.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.make_temp_dir" title="oa.asset.tools.asset_exporter.utils.make_temp_dir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_temp_dir</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.save_temp_scene" title="oa.asset.tools.asset_exporter.utils.save_temp_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_temp_scene</span></code></a>(name)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.get_top_nodes" title="oa.asset.tools.asset_exporter.utils.get_top_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_top_nodes</span></code></a>()</p></td>
+<td><p>Gets and returns a list of objects at the top of the scene's hierarchy.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.export_selection" title="oa.asset.tools.asset_exporter.utils.export_selection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_selection</span></code></a>(output_path)</p></td>
+<td><p>Removes everything but the asset that's being exported so it can cleanly prune out all extra objects.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.traverse_to_asset_root" title="oa.asset.tools.asset_exporter.utils.traverse_to_asset_root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">traverse_to_asset_root</span></code></a>(objs)</p></td>
+<td><p>A generator to get an object's asset root nul.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.get_first_root_nul" title="oa.asset.tools.asset_exporter.utils.get_first_root_nul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_first_root_nul</span></code></a>(objs)</p></td>
+<td><p>Gets and returns the root nul of the first asset that is detected.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.get_scene_root_nuls" title="oa.asset.tools.asset_exporter.utils.get_scene_root_nuls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scene_root_nuls</span></code></a>()</p></td>
+<td><p>Gets and returns a list of root nuls in the whole scene.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.clean_display_layers" title="oa.asset.tools.asset_exporter.utils.clean_display_layers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clean_display_layers</span></code></a>()</p></td>
+<td><p>Unhides all layers and sets RDR's layer as reference mode.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.get_current_panel" title="oa.asset.tools.asset_exporter.utils.get_current_panel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_current_panel</span></code></a>()</p></td>
+<td><p>Gets and returns the name of the active viewport.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.get_isolate_objs" title="oa.asset.tools.asset_exporter.utils.get_isolate_objs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_isolate_objs</span></code></a>([panel])</p></td>
+<td><p>Gets a list of objects that are currently in the isolate set.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.get_viewport_settings" title="oa.asset.tools.asset_exporter.utils.get_viewport_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_viewport_settings</span></code></a>()</p></td>
+<td><p>Collects active viewport's current state to a dictionary.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.pre_capture_setup" title="oa.asset.tools.asset_exporter.utils.pre_capture_setup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pre_capture_setup</span></code></a>([isolate_objs])</p></td>
+<td><p>Prepares the viewport for capture.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.restore_viewport" title="oa.asset.tools.asset_exporter.utils.restore_viewport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restore_viewport</span></code></a>(viewport_settings)</p></td>
+<td><p>Restores the active viewport to the supplied settings.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.screengrab_viewport" title="oa.asset.tools.asset_exporter.utils.screengrab_viewport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screengrab_viewport</span></code></a>(path, width, height)</p></td>
+<td><p>Saves a screen grab of the active viewport to a file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.screengrab_viewport_depreciated" title="oa.asset.tools.asset_exporter.utils.screengrab_viewport_depreciated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screengrab_viewport_depreciated</span></code></a>(path, width, height[, ...])</p></td>
+<td><p>Saves a screen grab of the active viewport to a file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.capture_preview" title="oa.asset.tools.asset_exporter.utils.capture_preview"><code class="xref py py-obj docutils literal notranslate"><span class="pre">capture_preview</span></code></a>(output_path[, width, height, isolate_objs])</p></td>
+<td><p>Captures a single frame to a jpg file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.get_children_ref_paths" title="oa.asset.tools.asset_exporter.utils.get_children_ref_paths"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_children_ref_paths</span></code></a>(obj)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.paint_rest_coords" title="oa.asset.tools.asset_exporter.utils.paint_rest_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">paint_rest_coords</span></code></a>(dag_path)</p></td>
+<td><p>Paints the current colorSet map to bake the supplied mesh's vertex points to rgb.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.add_rest_coords" title="oa.asset.tools.asset_exporter.utils.add_rest_coords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_rest_coords</span></code></a>(obj)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.get_object_sets" title="oa.asset.tools.asset_exporter.utils.get_object_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_object_sets</span></code></a>()</p></td>
+<td><p>Gets and returns a list of all object sets in the scene.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.get_latest_version" title="oa.asset.tools.asset_exporter.utils.get_latest_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_latest_version</span></code></a>(file_entry_id)</p></td>
+<td><p>Gets and returns the file entry's latest version number.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.read_annotation" title="oa.asset.tools.asset_exporter.utils.read_annotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_annotation</span></code></a>(path)</p></td>
+<td><p>Reads annotation file and returns a dictionary of values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.add_database_entry_by_data" title="oa.asset.tools.asset_exporter.utils.add_database_entry_by_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_database_entry_by_data</span></code></a>(project, asset_type, level, ...)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.from_asset_path" title="oa.asset.tools.asset_exporter.utils.from_asset_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_asset_path</span></code></a>(scene_path)</p></td>
+<td><p>Reads descriptor and annotation files and returns a dictionary of values that define that asset and version.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.add_database_entry" title="oa.asset.tools.asset_exporter.utils.add_database_entry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_database_entry</span></code></a>(scene_path)</p></td>
+<td><p>Adds asset entry for old and new databases.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.lock_transforms" title="oa.asset.tools.asset_exporter.utils.lock_transforms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lock_transforms</span></code></a>(obj[, channels])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.get_dag_path" title="oa.asset.tools.asset_exporter.utils.get_dag_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dag_path</span></code></a>(obj)</p></td>
+<td><p>Creates an MDagPath object with supplied name.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.is_node_visible" title="oa.asset.tools.asset_exporter.utils.is_node_visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_node_visible</span></code></a>(shape)</p></td>
+<td><p>Checks and returns if the supplied node is visible.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.add_asset_cp" title="oa.asset.tools.asset_exporter.utils.add_asset_cp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_asset_cp</span></code></a>(obj, res)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.create_gpu_cache" title="oa.asset.tools.asset_exporter.utils.create_gpu_cache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_gpu_cache</span></code></a>(output_path)</p></td>
+<td><p>Collects objects from assets in the scene and caches them.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.create_gpu_resolution" title="oa.asset.tools.asset_exporter.utils.create_gpu_resolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_gpu_resolution</span></code></a>(output_scn_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_exporter.utils.cache_base_pose" title="oa.asset.tools.asset_exporter.utils.cache_base_pose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cache_base_pose</span></code></a>(output_cache_path, ref_path, batch_mode)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.ViewportOff">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">ViewportOff</span></span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.ViewportOff" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Uses “with” statement to disable the viewport’s drawing inside its block.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.ViewportOff.__enter__">
+<span class="sig-name descname"><span class="pre">__enter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.ViewportOff.__enter__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.ViewportOff.__exit__">
+<span class="sig-name descname"><span class="pre">__exit__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exit_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exit_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exit_traceback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.ViewportOff.__exit__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.popup_message">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">popup_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtWidgets.QMessageBox.NoIcon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buttons</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[QtWidgets.QMessageBox.Ok]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.popup_message" title="Permalink to this definition"></a></dt>
+<dd><p>Convenient method to display a message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> – The window’s title.</p></li>
+<li><p><strong>msg</strong> – The window’s main content.</p></li>
+<li><p><strong>icon</strong> – Either a pixmap or QtWidgets.QMessageBox.Icon.</p></li>
+<li><p><strong>buttons</strong> – A list of QtWidgets.QMessage.StandardButton.</p></li>
+<li><p><strong>parent</strong> – A QWidget to center the message to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The QtWidgets.QMessage.StandardButton enum that was chosen.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.make_temp_dir">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">make_temp_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.make_temp_dir" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.save_temp_scene">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">save_temp_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.save_temp_scene" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.get_top_nodes">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">get_top_nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.get_top_nodes" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a list of objects at the top of the scene’s hierarchy.
+Excludes default cameras.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.export_selection">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">export_selection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.export_selection" title="Permalink to this definition"></a></dt>
+<dd><p>Removes everything but the asset that’s being exported so it can cleanly prune out all extra objects.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.traverse_to_asset_root">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">traverse_to_asset_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.traverse_to_asset_root" title="Permalink to this definition"></a></dt>
+<dd><p>A generator to get an object’s asset root nul.
+This skips any referenced objects to work with nested assets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objs</strong> – A list of transform names.</p>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p>The object’s asset root nul or None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.get_first_root_nul">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">get_first_root_nul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.get_first_root_nul" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the root nul of the first asset that is detected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objs</strong> – A list of object names.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An asset’s root nul, or None if nothing was found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.get_scene_root_nuls">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">get_scene_root_nuls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.get_scene_root_nuls" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a list of root nuls in the whole scene.
+Excludes nested assets.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.clean_display_layers">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">clean_display_layers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.clean_display_layers" title="Permalink to this definition"></a></dt>
+<dd><p>Unhides all layers and sets RDR’s layer as reference mode.
+Also deletes any unused layers.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.get_current_panel">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">get_current_panel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.get_current_panel" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the name of the active viewport.
+If the active panel is not a viewport it returns persp’s viewport.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.get_isolate_objs">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">get_isolate_objs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">panel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.get_isolate_objs" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a list of objects that are currently in the isolate set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>panel</strong> – The panel to check the set from.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.get_viewport_settings">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">get_viewport_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.get_viewport_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Collects active viewport’s current state to a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A dictionary of the viewport’s data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.pre_capture_setup">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">pre_capture_setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">isolate_objs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.pre_capture_setup" title="Permalink to this definition"></a></dt>
+<dd><p>Prepares the viewport for capture.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>isolate_objs</strong> – A list of objects to isolate for capture.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary of the viewport’s previous settings.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.restore_viewport">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">restore_viewport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">viewport_settings</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.restore_viewport" title="Permalink to this definition"></a></dt>
+<dd><p>Restores the active viewport to the supplied settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>viewport_settings</strong> – Supply a dictionary returned from get_viewport_settings()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.screengrab_viewport">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">screengrab_viewport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.screengrab_viewport" title="Permalink to this definition"></a></dt>
+<dd><p>Saves a screen grab of the active viewport to a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> – Full path to save the image to.</p></li>
+<li><p><strong>width</strong> – Image’s output width.</p></li>
+<li><p><strong>height</strong> – Image’s output height.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.screengrab_viewport_depreciated">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">screengrab_viewport_depreciated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'jpg'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.screengrab_viewport_depreciated" title="Permalink to this definition"></a></dt>
+<dd><p>Saves a screen grab of the active viewport to a file.
+This has out of order redraw issues.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> – Full path to save the image to.</p></li>
+<li><p><strong>width</strong> – Image’s output width.</p></li>
+<li><p><strong>height</strong> – Image’s output height.</p></li>
+<li><p><strong>img_type</strong> – Image’s output extension.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.capture_preview">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">capture_preview</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">640</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isolate_objs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.capture_preview" title="Permalink to this definition"></a></dt>
+<dd><p>Captures a single frame to a jpg file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output_path</strong> – Full jpg path to save to.</p></li>
+<li><p><strong>frame</strong> – Frame number to capture from.</p></li>
+<li><p><strong>width</strong> – Image’s width.</p></li>
+<li><p><strong>height</strong> – Image’s height.</p></li>
+<li><p><strong>isolate_objs</strong> – A list of objects to isolate for capture.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.get_children_ref_paths">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">get_children_ref_paths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.get_children_ref_paths" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.paint_rest_coords">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">paint_rest_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dag_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.paint_rest_coords" title="Permalink to this definition"></a></dt>
+<dd><p>Paints the current colorSet map to bake the supplied mesh’s vertex points to rgb.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.add_rest_coords">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">add_rest_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.add_rest_coords" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.get_object_sets">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">get_object_sets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.get_object_sets" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a list of all object sets in the scene.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.get_latest_version">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">get_latest_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_entry_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.get_latest_version" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the file entry’s latest version number.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.read_annotation">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">read_annotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.read_annotation" title="Permalink to this definition"></a></dt>
+<dd><p>Reads annotation file and returns a dictionary of values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>scene_path</strong> – A full path to an existing ma.txt file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.add_database_entry_by_data">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">add_database_entry_by_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asset_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rdr_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comments</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thumbnail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'RDR'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.add_database_entry_by_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.from_asset_path">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">from_asset_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.from_asset_path" title="Permalink to this definition"></a></dt>
+<dd><p>Reads descriptor and annotation files and returns a dictionary of values that define that asset and version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>scene_path</strong> – A full path to an existing maya scene file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.add_database_entry">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">add_database_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scene_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.add_database_entry" title="Permalink to this definition"></a></dt>
+<dd><p>Adds asset entry for old and new databases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>scene_path</strong> – Full path to an existing maya scene on the server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.lock_transforms">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">lock_transforms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['tx',</span> <span class="pre">'ty',</span> <span class="pre">'tz',</span> <span class="pre">'rx',</span> <span class="pre">'ry',</span> <span class="pre">'rz',</span> <span class="pre">'sx',</span> <span class="pre">'sy',</span> <span class="pre">'sz']</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.lock_transforms" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.get_dag_path">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">get_dag_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.get_dag_path" title="Permalink to this definition"></a></dt>
+<dd><p>Creates an MDagPath object with supplied name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> – Name of an existing object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The object wrapped in an MDagPath.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.is_node_visible">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">is_node_visible</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.is_node_visible" title="Permalink to this definition"></a></dt>
+<dd><p>Checks and returns if the supplied node is visible.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.add_asset_cp">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">add_asset_cp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.add_asset_cp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.create_gpu_cache">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">create_gpu_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.create_gpu_cache" title="Permalink to this definition"></a></dt>
+<dd><p>Collects objects from assets in the scene and caches them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>output_path</strong> – A full path where to cache out to.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.create_gpu_resolution">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">create_gpu_resolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_scn_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.create_gpu_resolution" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_exporter.utils.cache_base_pose">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_exporter.utils.</span></span><span class="sig-name descname"><span class="pre">cache_base_pose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_cache_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_exporter.utils.cache_base_pose" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../asset_publishing_tool/index.html" class="btn btn-neutral float-left" title=" oa.asset.tools.asset_exporter.asset_publishing_tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../asset_instancer/index.html" class="btn btn-neutral float-right" title=" oa.asset.tools.asset_instancer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+ :py:mod:`oa.anim_library.tool.widgets.qtag_edit`
+==================================================================================================
+
+.. py:module:: oa.anim_library.tool.widgets.qtag_edit
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.widgets.qtag_edit.QTagEdit
+
+
+
+
+.. py:class:: QTagEdit(tags_layout, items=[], min_chars=3, max_chars=20, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QComboBox`
+
+   An editable field to search and create QTag objects.
+
+   :param tags_layout: A layout to link this widget to when creating new QTags.
+   :param items: A list of strings to add as default items.
+   :param parent: This widget's parent to assign to.
+
+   .. py:attribute:: space_pressed
+      
+
+      
+
+   .. py:attribute:: tags_loaded
+      
+
+      
+
+   .. py:attribute:: tag_created
+      
+
+      
+
+   .. py:method:: keyPressEvent(key_event)
+
+
+   .. py:method:: get_tags_from_edit()
+
+      Parses through text in the edit to get multiple tags.
+
+      :returns: A list of tags.
+
+
+   .. py:method:: tag_on_complete()
+
+
+   .. py:method:: get_tag_index(label)
+
+      Gets and returns index of a QTag that matches the supplied label.
+
+
+   .. py:method:: has_tag(label)
+
+
+   .. py:method:: tag_delete_on_click()
+
+      Deletes a QTag.
+
+
+   .. py:method:: validate_word(word)
+
+      Performs series of checks on the supplied word to see if it's a valid to be used.
+
+
+   .. py:method:: add_tags(labels)
+
+      Assigns multiple QTags to layout.
+
+      :param labels: A list of words to use as tags.
+
+
+   .. py:method:: add_tag(label)
+
+      Creates and adds a new tag to the layout.
+
+
+

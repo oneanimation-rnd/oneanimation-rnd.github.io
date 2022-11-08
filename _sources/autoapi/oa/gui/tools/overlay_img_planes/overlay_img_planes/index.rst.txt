@@ -1,0 +1,69 @@
+ :py:mod:`oa.gui.tools.overlay_img_planes.overlay_img_planes`
+==========================================================================================================================
+
+.. py:module:: oa.gui.tools.overlay_img_planes.overlay_img_planes
+
+.. autoapi-nested-parse::
+
+   Uses a camera image plane to display an overlay that sticks to the camera.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       create_on_all_panels()  # Creates buttons on all panels.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.tools.overlay_img_planes.overlay_img_planes.find_qobject
+   oa.gui.tools.overlay_img_planes.overlay_img_planes.get_viewport_bar
+   oa.gui.tools.overlay_img_planes.overlay_img_planes.delete_panel_button
+   oa.gui.tools.overlay_img_planes.overlay_img_planes.delete_on_all_panels
+   oa.gui.tools.overlay_img_planes.overlay_img_planes.create_panel_button
+   oa.gui.tools.overlay_img_planes.overlay_img_planes.create_on_all_panels
+   oa.gui.tools.overlay_img_planes.overlay_img_planes.get_img_plane_by_panel
+   oa.gui.tools.overlay_img_planes.overlay_img_planes.select_overlay_plane
+   oa.gui.tools.overlay_img_planes.overlay_img_planes.remove_cam_overlay_img
+   oa.gui.tools.overlay_img_planes.overlay_img_planes.set_cam_overlay_img
+
+
+
+.. py:function:: find_qobject(name, cast_type)
+
+
+.. py:function:: get_viewport_bar(panel_name)
+
+
+.. py:function:: delete_panel_button(panel_name)
+
+
+.. py:function:: delete_on_all_panels()
+
+
+.. py:function:: create_panel_button(panel_name)
+
+
+.. py:function:: create_on_all_panels()
+
+
+.. py:function:: get_img_plane_by_panel(panel_name)
+
+
+.. py:function:: select_overlay_plane(panel_name)
+
+
+.. py:function:: remove_cam_overlay_img(panel_name)
+
+
+.. py:function:: set_cam_overlay_img(panel_name, img_name, rot=0)
+
+

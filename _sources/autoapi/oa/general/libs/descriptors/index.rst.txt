@@ -1,0 +1,15 @@
+ :py:mod:`oa.general.libs.descriptors`
+============================================================================
+
+.. py:module:: oa.general.libs.descriptors
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   xml_info_maya/index.rst
+
+

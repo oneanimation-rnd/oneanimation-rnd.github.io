@@ -1,0 +1,104 @@
+ :py:mod:`oa_utils.database.wrappers.w_model`
+==========================================================================================
+
+.. py:module:: oa_utils.database.wrappers.w_model
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_model.WModelMeta
+   oa_utils.database.wrappers.w_model.WModel
+   oa_utils.database.wrappers.w_model.WModelXsiMeta
+   oa_utils.database.wrappers.w_model.WModelXsi
+   oa_utils.database.wrappers.w_model.WModelMayaMeta
+   oa_utils.database.wrappers.w_model.WModelMaya
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_model.LOGGER
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:class:: WModelMeta
+
+   Bases: :py:obj:`type`
+
+   .. py:attribute:: ENTITY
+      
+
+      
+
+   .. py:method:: __getattr__(name)
+      :classmethod:
+
+
+
+.. py:class:: WModel(model)
+
+   .. py:property:: file
+
+
+   .. py:property:: wrapped
+
+
+   .. py:method:: upsert(unique_id, _type, name, resolution=None, project=None, category=None, level=None, description=None, tags=None, thumbnail=None)
+      :classmethod:
+
+
+   .. py:method:: build_unique_id(project, mdl_type, mdl_name, mdl_category=None, mdl_level=None)
+      :classmethod:
+
+
+   .. py:method:: add_tags(tags)
+
+
+   .. py:method:: __getattr__(name)
+
+
+
+.. py:class:: WModelXsiMeta
+
+   Bases: :py:obj:`WModelMeta`
+
+   .. py:attribute:: ENTITY
+      
+
+      
+
+
+.. py:class:: WModelXsi(model)
+
+   Bases: :py:obj:`WModel`
+
+
+.. py:class:: WModelMayaMeta
+
+   Bases: :py:obj:`WModelMeta`
+
+   .. py:attribute:: ENTITY
+      
+
+      
+
+
+.. py:class:: WModelMaya(model)
+
+   Bases: :py:obj:`WModel`
+
+

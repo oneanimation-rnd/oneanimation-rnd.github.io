@@ -1,0 +1,25 @@
+ :py:mod:`oa.general.tools`
+======================================================
+
+.. py:module:: oa.general.tools
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   color_tool/index.rst
+   daily_reminder/index.rst
+   default_value_tool/index.rst
+   layer_manager/index.rst
+   naming_tool/index.rst
+   pipeline_updates/index.rst
+   record_script_editor/index.rst
+   reorder_attributes_tool/index.rst
+   shield/index.rst
+   task_switcher/index.rst
+   taskman_submitter/index.rst
+
+

@@ -1,0 +1,198 @@
+ :py:mod:`oa.rigging.tools.rope_auto_rigger.color_picker`
+==================================================================================================================
+
+.. py:module:: oa.rigging.tools.rope_auto_rigger.color_picker
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.rope_auto_rigger.color_picker.ColorPicker
+   oa.rigging.tools.rope_auto_rigger.color_picker.HueSlider
+   oa.rigging.tools.rope_auto_rigger.color_picker.SatSlider
+   oa.rigging.tools.rope_auto_rigger.color_picker.ValSlider
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.rope_auto_rigger.color_picker.remap
+
+
+
+.. py:function:: remap(val, old_min, old_max, new_min, new_max)
+
+
+.. py:class:: ColorPicker(hue=0, sat=255, val=255, close_policy=None, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:class:: ClosePolicy
+
+      .. py:attribute:: NoPolicy
+         :annotation: = 0
+
+         
+
+      .. py:attribute:: CloseOnMouseExit
+         :annotation: = 1
+
+         
+
+
+   .. py:attribute:: color_changed
+      
+
+      
+
+   .. py:method:: launch(qcolor=None, parent=None)
+      :classmethod:
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: _create_gui()
+
+
+   .. py:method:: _display_color(qcolor)
+
+
+   .. py:method:: _on_color_changed(**args)
+
+
+   .. py:method:: _on_rejected()
+
+
+   .. py:method:: _on_hue_slider_changed(value)
+
+
+   .. py:method:: _on_hue_spinbox_changed(value)
+
+
+   .. py:method:: _on_sat_slider_changed(value)
+
+
+   .. py:method:: _on_sat_spinbox_changed(value)
+
+
+   .. py:method:: _on_val_slider_changed(value)
+
+
+   .. py:method:: _on_val_spinbox_changed(value)
+
+
+   .. py:method:: out_color()
+
+
+
+.. py:class:: HueSlider(hue=0, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: hue_changed
+      
+
+      
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: wheelEvent(event)
+
+
+   .. py:method:: paintEvent(event)
+
+
+   .. py:method:: set_hue(hue)
+
+
+   .. py:method:: set_slider_pos(x)
+
+
+
+.. py:class:: SatSlider(hue=0, sat=255, val=255, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: sat_changed
+      
+
+      
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: wheelEvent(event)
+
+
+   .. py:method:: paintEvent(event)
+
+
+   .. py:method:: set_slider_pos(x)
+
+
+   .. py:method:: set_hue(hue)
+
+
+   .. py:method:: set_sat(sat)
+
+
+   .. py:method:: set_val(val)
+
+
+
+.. py:class:: ValSlider(hue=0, sat=255, val=255, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: val_changed
+      
+
+      
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: wheelEvent(event)
+
+
+   .. py:method:: paintEvent(event)
+
+
+   .. py:method:: set_slider_pos(x)
+
+
+   .. py:method:: set_hue(hue)
+
+
+   .. py:method:: set_sat(sat)
+
+
+   .. py:method:: set_val(val)
+
+
+

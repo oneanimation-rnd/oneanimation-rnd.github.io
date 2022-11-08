@@ -1,0 +1,39 @@
+ :py:mod:`oa.palette.scripts.archive_palette`
+==========================================================================================
+
+.. py:module:: oa.palette.scripts.archive_palette
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.palette.scripts.archive_palette._authenticate
+   oa.palette.scripts.archive_palette.run
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.palette.scripts.archive_palette.NUM_AUTH_ATTEMPTS
+
+
+.. py:data:: NUM_AUTH_ATTEMPTS
+   :annotation: = 3
+
+   
+
+.. py:function:: _authenticate(task_request)
+
+
+.. py:function:: run(palette_node)
+
+

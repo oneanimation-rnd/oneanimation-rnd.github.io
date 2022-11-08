@@ -1,0 +1,17 @@
+ :py:mod:`oa.animation.tools.shot_splitter`
+======================================================================================
+
+.. py:module:: oa.animation.tools.shot_splitter
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   shot_splitter/index.rst
+   shot_splitter_standalone/index.rst
+   shot_splitter_tool/index.rst
+
+

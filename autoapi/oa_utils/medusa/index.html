@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa_utils.medusa &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title=" oa_utils.takes" href="../takes/index.html" />
+    <link rel="prev" title=" oa_utils.logger" href="../logger/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../config/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../helpers/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.helpers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ldap_control/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.ldap_control</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../logger/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.logger</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.medusa</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../takes/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.takes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vcs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.vcs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xml_info_api/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.xml_info_api</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xml_info_hou/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.xml_info_hou</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.medusa</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/oa_utils/medusa/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa_utils.medusa">
+<span id="oa-utils-medusa"></span><h1> <a class="reference internal" href="#module-oa_utils.medusa" title="oa_utils.medusa"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.medusa</span></code></a><a class="headerlink" href="#module-oa_utils.medusa" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.medusa.FTPMedusa" title="oa_utils.medusa.FTPMedusa"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FTPMedusa</span></code></a></p></td>
+<td><p>This class provides functionality to export data</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.medusa.DEP_EXT" title="oa_utils.medusa.DEP_EXT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DEP_EXT</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py exception">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusaError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.medusa.</span></span><span class="sig-name descname"><span class="pre">FTPMedusaError</span></span><a class="headerlink" href="#oa_utils.medusa.FTPMedusaError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa_utils.medusa.DEP_EXT">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.medusa.</span></span><span class="sig-name descname"><span class="pre">DEP_EXT</span></span><a class="headerlink" href="#oa_utils.medusa.DEP_EXT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.medusa.</span></span><span class="sig-name descname"><span class="pre">FTPMedusa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">server</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">config.get_value('ftp/host')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">login</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">config.get_value('ftp/username')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pswd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">config.get_value('ftp/password')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quiet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class provides functionality to export data
+to an asset drive through an FTP protocol.</p>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>with FTPMedusa() as ftp:</dt><dd><p>ftp.checkIn(localFile, destFile, annotation)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#oa_utils.medusa.FTPMedusaError" title="oa_utils.medusa.FTPMedusaError"><strong>FTPMedusaError</strong></a> – if something goes fatally wrong</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._connect">
+<span class="sig-name descname"><span class="pre">_connect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._connect" title="Permalink to this definition"></a></dt>
+<dd><p>Here we get local info and connect to the FTP server.</p>
+<dl class="simple">
+<dt>Kwargs:</dt><dd><p>server(str): servers ip address to connect to.
+user(str): user name.
+paswd(str): password.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if everything is ok, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa.mkDir">
+<span class="sig-name descname"><span class="pre">mkDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destDir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa.mkDir" title="Permalink to this definition"></a></dt>
+<dd><p>Recursively creates all intermediate directories in the path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>destDir</strong> (<em>str</em>) – path to a directory (not a file path). ( “INSECT/…” )</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the folder is created, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._try_lock">
+<span class="sig-name descname"><span class="pre">_try_lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ftpFilePath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._try_lock" title="Permalink to this definition"></a></dt>
+<dd><p>Tries to rename provided file to ‘fileName.lock’ file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ftpFilePath</strong> (<em>str</em>) – ftp path to a file on the asset drive. ( “INSECT/…”).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True on successfull lock, otherwise False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa.upload">
+<span class="sig-name descname"><span class="pre">upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">localFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa.upload" title="Permalink to this definition"></a></dt>
+<dd><p>Uploads localFile to the server. And puts descriptive .txt file
+with it if annotation isn’t an empty string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>localFilePath</strong> (<em>str</em>) – path to a file on a local computer.</p></li>
+<li><p><strong>destFilePath</strong> (<em>str</em>) – path to a file on the asset drive. ( “INSECT/…”)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Kwargs:</dt><dd><p>annotation(str): comments.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True on successfull upload, otherwise False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa.moveRemoteFile">
+<span class="sig-name descname"><span class="pre">moveRemoteFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sourceRemoteFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destRemoteFilePath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa.moveRemoteFile" title="Permalink to this definition"></a></dt>
+<dd><p>Moves remote file to another location on the server renaming it if necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sourceRemoteFilePath</strong> (<em>str</em>) – source file path on the server. ( “INSECT/…”)</p></li>
+<li><p><strong>destRemoteFilePath</strong> (<em>str</em>) – destination file path on the server. ( “INSECT/…”)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa.removeRemoteFile">
+<span class="sig-name descname"><span class="pre">removeRemoteFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remoteFileName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">permanent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa.removeRemoteFile" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes remote file from the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>remoteFileName</strong> (<em>str</em>) – file path on the server</p></li>
+<li><p><strong>)</strong><strong>.</strong> (<em>( </em><em>skynetssetPROJECTSINSECT</em><em>...</em><em> or </em><em>/Volumes/asset/PROJECTS/INSECT/</em><em>...</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa.removeRemoteDir">
+<span class="sig-name descname"><span class="pre">removeRemoteDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remoteDirName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa.removeRemoteDir" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes remote folder from the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>remoteFileName</strong> (<em>str</em>) – file path on the server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._folderExists">
+<span class="sig-name descname"><span class="pre">_folderExists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destDir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._folderExists" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether folder exists on the server or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>destDir</strong> (<em>str</em>) – destination folder path on the server ( “INSECT/…”).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the folder exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._fileExists">
+<span class="sig-name descname"><span class="pre">_fileExists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destFilePath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._fileExists" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether file exists on the server or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>destFilePath</strong> (<em>str</em>) – destination file path on the server ( “INSECT/…”).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the file exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._rmDir">
+<span class="sig-name descname"><span class="pre">_rmDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ftpFolderPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._rmDir" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._rmFile">
+<span class="sig-name descname"><span class="pre">_rmFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ftpFilePath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._rmFile" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._rmTree">
+<span class="sig-name descname"><span class="pre">_rmTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._rmTree" title="Permalink to this definition"></a></dt>
+<dd><p>Recursively delete a directory tree on a remote server.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._rmOldVers">
+<span class="sig-name descname"><span class="pre">_rmOldVers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destOldDir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destFileName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxVersions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._rmOldVers" title="Permalink to this definition"></a></dt>
+<dd><p>Removes old versions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>destOldDir</strong> (<em>str</em>) – “OLD” folder path on the server.</p></li>
+<li><p><strong>destFileName</strong> (<em>str</em>) – destination file name ( name.ext without a full path ).</p></li>
+<li><p><strong>version</strong> (<em>int</em>) – gratest version number of the file in the “OLD” dir</p></li>
+<li><p><strong>maxVersions</strong> (<em>int</em>) – maximum versions to keep on the server</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._getMaxVersion">
+<span class="sig-name descname"><span class="pre">_getMaxVersion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destOldDir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._getMaxVersion" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the maximum version of the file in the “OLD” folder on the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>destOldDir</strong> (<em>str</em>) – “OLD” folder path on the server.</p></li>
+<li><p><strong>fileName</strong> (<em>str</em>) – file name to get version of ( name.ext without a full path ).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>number of the maximum file version.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa.ftpProcessPaths">
+<span class="sig-name descname"><span class="pre">ftpProcessPaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">localFilePath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa.ftpProcessPaths" title="Permalink to this definition"></a></dt>
+<dd><p>Makes any path readable by an ftp server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>destFilePath</strong> (<em>str</em>) – path to a file on the asset drive</p></li>
+<li><p><strong>)</strong><strong>.</strong> (<em>( </em><em>skynetssetPROJECTSINSECT</em><em>...</em><em> or </em><em>/Volumes/asset/PROJECTS/INSECT/</em><em>...</em>) – </p></li>
+<li><p><strong>localFilePath</strong> (<em>str</em>) – path to a file on a local computer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>destination file path (INSECT/…)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._versionControl">
+<span class="sig-name descname"><span class="pre">_versionControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxVersions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._versionControl" title="Permalink to this definition"></a></dt>
+<dd><p>Creates new version path.</p>
+<p>Disassembles destFilePath and creates a new path
+with latest version in it ( v001 ),    which points
+to an “OLD” directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>destFilePath</strong> – ftp file path.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>versioned file path</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._checkIntegrity">
+<span class="sig-name descname"><span class="pre">_checkIntegrity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">localFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ftpFilePath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._checkIntegrity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._zip_dir">
+<span class="sig-name descname"><span class="pre">_zip_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dirPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zipFile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._zip_dir" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._zip_list">
+<span class="sig-name descname"><span class="pre">_zip_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pathList</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zipFile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._zip_list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa.checkInFolder">
+<span class="sig-name descname"><span class="pre">checkInFolder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">localFolderPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxVersions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa.checkInFolder" title="Permalink to this definition"></a></dt>
+<dd><p>CheckIn local folder to the server as zip archive.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>localFolderPath</strong> (<em>str</em>) – path to a folder on a local computer.</p></li>
+<li><p><strong>destFilePath</strong> (<em>str</em>) – path to a zip file or folder on the asset drive.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Kwargs:</dt><dd><p>annotation(str): comments.
+maxVersions(int): a maximum amount of versions to store in the “OLD” dir ( -1 = infinite )</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa.checkInFiles">
+<span class="sig-name descname"><span class="pre">checkInFiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">localFilePaths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destArchivePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxVersions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa.checkInFiles" title="Permalink to this definition"></a></dt>
+<dd><p>CheckIn a list of local files to the server as a zip archive.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>localFilePaths</strong> (<em>list</em>) – list of file paths on a local computer.</p></li>
+<li><p><strong>destFilePath</strong> (<em>str</em>) – path to a zip file or folder on the asset drive.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Kwargs:</dt><dd><p>annotation(str): comments.
+maxVersions(int): a maximum amount of versions to store in the “OLD” dir ( -1 = infinite )</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa.checkIn">
+<span class="sig-name descname"><span class="pre">checkIn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">localFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destFilePath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxVersions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forceUnlock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa.checkIn" title="Permalink to this definition"></a></dt>
+<dd><p>CheckIn localFile to the server and create new version in ‘OLD’ folder.</p>
+<p>Before uploading file to the server it checks if the file with the same
+name is already on the asset drive. If so, it moves this file to an ‘OLD’ folder and
+adds version number in it’s name. After that it uploads local file to remote destination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>localFilePath</strong> (<em>str</em>) – path to a file on a local computer.</p></li>
+<li><p><strong>destFilePath</strong> (<em>str</em>) – path to a file or folder on the asset drive.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Kwargs:</dt><dd><p>annotation(str): comments.
+maxVersions(int): a maximum amount of versions to store in the “OLD” dir ( -1 = infinite )</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa._disconnect">
+<span class="sig-name descname"><span class="pre">_disconnect</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa._disconnect" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa.__enter__">
+<span class="sig-name descname"><span class="pre">__enter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa.__enter__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.medusa.FTPMedusa.__exit__">
+<span class="sig-name descname"><span class="pre">__exit__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traceback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.medusa.FTPMedusa.__exit__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../logger/index.html" class="btn btn-neutral float-left" title=" oa_utils.logger" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../takes/index.html" class="btn btn-neutral float-right" title=" oa_utils.takes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

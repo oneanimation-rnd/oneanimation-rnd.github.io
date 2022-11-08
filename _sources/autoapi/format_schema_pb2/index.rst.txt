@@ -1,0 +1,29 @@
+ :py:mod:`format_schema_pb2`
+========================================================
+
+.. py:module:: format_schema_pb2
+
+.. autoapi-nested-parse::
+
+   Generated protocol buffer code.
+
+
+
+Module Contents
+---------------
+
+.. py:data:: _sym_db
+   
+
+   
+
+.. py:data:: DESCRIPTOR
+   
+
+   
+
+.. py:data:: _options
+   
+
+   
+

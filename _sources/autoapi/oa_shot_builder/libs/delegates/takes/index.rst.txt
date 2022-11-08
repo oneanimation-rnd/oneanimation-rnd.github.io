@@ -1,0 +1,71 @@
+ :py:mod:`oa_shot_builder.libs.delegates.takes`
+==============================================================================================
+
+.. py:module:: oa_shot_builder.libs.delegates.takes
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.delegates.takes.serialize
+   oa_shot_builder.libs.delegates.takes.deserialize
+   oa_shot_builder.libs.delegates.takes.setup
+   oa_shot_builder.libs.delegates.takes._ensure_single_take
+   oa_shot_builder.libs.delegates.takes._reformat_take_code_output
+   oa_shot_builder.libs.delegates.takes._reformat_take_code_input
+   oa_shot_builder.libs.delegates.takes._build_guid_path
+   oa_shot_builder.libs.delegates.takes._get_node_from_guid_path
+   oa_shot_builder.libs.delegates.takes._get_child_by_guid
+
+
+
+.. py:function:: serialize(name)
+
+
+.. py:function:: deserialize(name, data)
+
+
+.. py:function:: setup()
+
+
+.. py:function:: _ensure_single_take(take_name, parent_take)
+
+
+.. py:function:: _reformat_take_code_output(take_creation_code)
+
+
+.. py:function:: _reformat_take_code_input(take_creation_code, take_name)
+
+   Reformat the code so it is possible to apply it
+   to the objects without any errors.
+
+   For .take file structure reference see
+   https://www.sidefx.com/forum/topic/4691/
+
+   Change all the GUID paths to real node paths or
+   remove references if the node doesn't exist in
+   the scene.
+
+   :param take_creation_code: .take file contents.
+   :type take_creation_code: str
+   :param take_name: the name of the take to format.
+   :type take_name: str
+
+   :returns: Reformatted code on success.
+
+
+.. py:function:: _build_guid_path(entry)
+
+
+.. py:function:: _get_node_from_guid_path(guid_path)
+
+
+.. py:function:: _get_child_by_guid(parent, guid)
+
+

@@ -1,0 +1,276 @@
+ :py:mod:`oa.animation.tools.constraint_tool.treeview`
+============================================================================================================
+
+.. py:module:: oa.animation.tools.constraint_tool.treeview
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool.treeview.TreeView
+   oa.animation.tools.constraint_tool.treeview.ProxyModel
+   oa.animation.tools.constraint_tool.treeview.TreeModel
+   oa.animation.tools.constraint_tool.treeview.TreeNode
+
+
+
+
+.. py:class:: TreeView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTreeView`
+
+   .. py:attribute:: key_pressed
+      
+
+      
+
+   .. py:attribute:: data_updated
+      
+
+      
+
+   .. py:attribute:: selection_changed
+      
+
+      
+
+   .. py:method:: selectionChanged(selected, deselected)
+
+
+   .. py:method:: paintEvent(paint_event)
+
+
+   .. py:method:: keyPressEvent(key_event)
+
+
+   .. py:method:: on_header_section_clicked(column)
+
+
+   .. py:method:: selected_indexes()
+
+
+   .. py:method:: select_indexes(indexes, clear=True, flags=None)
+
+
+   .. py:method:: traverse_all_rows(**kwargs)
+
+
+   .. py:method:: traverse_top_rows()
+
+      A generator that iterates through selected rows, but skips a row if it's not the very top.
+
+
+   .. py:method:: traverse_parent_rows()
+
+      A generator that iterates through selected rows, but skips a row if its parent is selected.
+      Effectively it's going through all top-most rows.
+
+
+   .. py:method:: traverse_offset_objs()
+
+
+   .. py:method:: clear_tree()
+
+
+   .. py:method:: fill_tree(restore_selection=True)
+
+
+   .. py:method:: update_filter(pattern)
+
+
+   .. py:method:: get_default_tree_node()
+
+
+   .. py:method:: save_selection()
+
+
+   .. py:method:: load_selection()
+
+
+
+.. py:class:: ProxyModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QSortFilterProxyModel`
+
+   Proxy used between QTreeView and QAbstractItemModel to filter and sort items.
+
+   .. py:method:: lessThan(source_left, source_right)
+
+
+   .. py:method:: filterAcceptsRow(row, parent_index)
+
+      Built-in function to filter what items are seen.
+
+
+   .. py:method:: has_accepted_children(pattern, tree_node)
+
+      Recursively searches through tree node's children to see if it matches the supplied pattern.
+      This is used so for filtering so that the parent remains visible if it has a valid child.
+
+
+   .. py:method:: does_pattern_match(pattern, tree_node)
+
+
+
+.. py:class:: TreeModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractItemModel`
+
+   .. py:attribute:: ColumnName
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: ColumnActive
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: SmallList
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: BigList
+      :annotation: = 1
+
+      
+
+   .. py:method:: set_list_size(list_size)
+
+
+   .. py:method:: columnCount(index=QtCore.QModelIndex())
+
+
+   .. py:method:: rowCount(index=QtCore.QModelIndex())
+
+
+   .. py:method:: index(row, column, parent_index=QtCore.QModelIndex())
+
+
+   .. py:method:: parent(index)
+
+
+   .. py:method:: hasChildren(index)
+
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: setData(index, value, role=QtCore.Qt.EditRole)
+
+
+   .. py:method:: flags(index)
+
+
+   .. py:method:: headerData(section, orientation, role)
+
+
+   .. py:method:: removeRows(row, count, parent=QtCore.QModelIndex())
+
+
+   .. py:method:: supportedDropActions()
+
+
+   .. py:method:: mimeTypes()
+
+
+   .. py:method:: mimeData(indexes)
+
+
+   .. py:method:: dropMimeData(data, action, row, column, parent)
+
+
+   .. py:method:: view()
+
+
+   .. py:method:: load_icons()
+
+
+   .. py:method:: traverse_all_rows(index=None, column=None)
+
+
+   .. py:method:: tree_node_to_index(tree_node, row=None, column=None)
+
+
+   .. py:method:: get_data()
+
+
+   .. py:method:: append_group_node(name)
+
+
+   .. py:method:: append_global_set()
+
+
+   .. py:method:: append_node(octrl, parent_tree_node=None)
+
+
+
+.. py:class:: TreeNode(parent, node_type, _data, meta_data=None)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: GroupType
+      :annotation: = group
+
+      
+
+   .. py:attribute:: ConstraintType
+      :annotation: = constraint
+
+      
+
+   .. py:method:: data(column)
+
+
+   .. py:method:: setData(column, value)
+
+
+   .. py:method:: appendTreeNode(tree_node)
+
+
+   .. py:method:: appendChild(node_type, _data, meta_data=None)
+
+
+   .. py:method:: removeChild(position)
+
+
+   .. py:method:: removeChildren()
+
+
+   .. py:method:: removeSomeChildren(position, count)
+
+
+   .. py:method:: removeParent()
+
+
+   .. py:method:: child(row)
+
+
+   .. py:method:: childrenCount()
+
+
+   .. py:method:: hasChildren()
+
+
+   .. py:method:: row()
+
+
+   .. py:method:: columnCount()
+
+
+   .. py:method:: collect_active()
+
+
+   .. py:method:: get_loaded_state()
+
+
+   .. py:method:: serialize()
+
+
+

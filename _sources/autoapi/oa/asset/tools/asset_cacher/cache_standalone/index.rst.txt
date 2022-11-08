@@ -1,0 +1,41 @@
+ :py:mod:`oa.asset.tools.asset_cacher.cache_standalone`
+==============================================================================================================
+
+.. py:module:: oa.asset.tools.asset_cacher.cache_standalone
+
+.. autoapi-nested-parse::
+
+   Jobs on Afanasy will call this script to perform cache exports onto the cache drive.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_cacher.cache_standalone.update_ref
+   oa.asset.tools.asset_cacher.cache_standalone.main
+
+
+
+.. py:function:: update_ref(ref_node, inf_asset_list)
+
+   Updates reference and its nested references by matching reference ids from a INFAsset.
+
+   :param ref_node: A reference node.
+   :type ref_node: string
+   :param inf_asset_list:
+   :type inf_asset_list: INFAsset[]
+
+
+.. py:function:: main()
+
+

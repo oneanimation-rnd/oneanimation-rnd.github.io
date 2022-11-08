@@ -1,0 +1,114 @@
+ :py:mod:`oa.asset.tools.asset_instancer.asset_instancer`
+==================================================================================================================
+
+.. py:module:: oa.asset.tools.asset_instancer.asset_instancer
+
+.. autoapi-nested-parse::
+
+   Cleanly creates an instance of a whole asset.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_instancer.asset_instancer.SizeInputDialog
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_instancer.asset_instancer.get_settings
+   oa.asset.tools.asset_instancer.asset_instancer.save_settings
+   oa.asset.tools.asset_instancer.asset_instancer.contains_instances
+   oa.asset.tools.asset_instancer.asset_instancer.get_all_rdr_nuls
+   oa.asset.tools.asset_instancer.asset_instancer.instance_assets
+   oa.asset.tools.asset_instancer.asset_instancer.instance_multiple
+   oa.asset.tools.asset_instancer.asset_instancer.rebuild_instance
+   oa.asset.tools.asset_instancer.asset_instancer.get_shader
+   oa.asset.tools.asset_instancer.asset_instancer.reassign_inst_materials
+
+
+
+.. py:class:: SizeInputDialog(default_value=1, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QInputDialog`
+
+   Simple pop-up to get user's input to determine the control's size.
+
+
+.. py:function:: get_settings()
+
+   Gets a dictionary of settings from a json file.
+
+
+.. py:function:: save_settings(**kwargs)
+
+   Saves all keywords to a json file.
+
+
+.. py:function:: contains_instances(ref_path)
+
+   Recursively goes through references to detect any instances.
+
+   :param ref_path: Unresolved reference path.
+   :type ref_path: string
+
+   :returns: True if there was an instance found.
+
+
+.. py:function:: get_all_rdr_nuls(ref_path, all_rdr_nuls=None)
+
+   Recursively goes through references to get all RDR_NUL.
+
+   :param ref_path: Unresolved referenced path.
+   :type ref_path: string
+   :param all_rdr_nuls: Keep this as None.
+   :type all_rdr_nuls: string
+
+   :returns: A list of all RDR_NULs that was detected in each reference.
+
+
+.. py:function:: instance_assets(objs, count=1, select=True, color=[1, 1, 0])
+
+   Creates an instance of a referenced asset.
+
+   :param objs: A list of referenced objects.
+   :type objs: string[]
+   :param count: The number of instances to create.
+   :type count: int
+   :param select: Selects new instance if enabled.
+   :type select: bool
+   :param color: RGB value of the instance's handle.
+   :type color: float[]
+
+   :returns: A list of the new instances.
+
+
+.. py:function:: instance_multiple()
+
+   Pops-up a spinner to set the count of instance to create with the current selection.
+
+
+.. py:function:: rebuild_instance()
+
+
+.. py:function:: get_shader(obj)
+
+
+.. py:function:: reassign_inst_materials()
+
+   Reassigns materials on all instances to fix any broken connections.
+
+

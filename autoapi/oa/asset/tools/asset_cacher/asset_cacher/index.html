@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.asset.tools.asset_cacher.asset_cacher &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.asset.tools.asset_cacher.cache_batch_mode" href="../cache_batch_mode/index.html" />
+    <link rel="prev" title=" oa.asset.tools.asset_cacher" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.asset_cacher</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/asset/tools/asset_cacher/asset_cacher/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.asset.tools.asset_cacher.asset_cacher">
+<span id="oa-asset-tools-asset-cacher-asset-cacher"></span><h1> <a class="reference internal" href="#module-oa.asset.tools.asset_cacher.asset_cacher" title="oa.asset.tools.asset_cacher.asset_cacher"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher</span></code></a><a class="headerlink" href="#module-oa.asset.tools.asset_cacher.asset_cacher" title="Permalink to this heading"></a></h1>
+<p>Creates alembic caches for assets.</p>
+<p>This is only meant to be used on the farm, and not locally.</p>
+<p>Connecting a shape has been optimized significantly by George “I only need a day to fix it” Samushyia.
+Before it was done purely with script and was error-prone and slow, but now it uses nodes to make it work in real-time.
+Thank you for saving my ass!</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.get_dag_path" title="oa.asset.tools.asset_cacher.asset_cacher.get_dag_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dag_path</span></code></a>(obj)</p></td>
+<td><p>Creates an MDagPath object with supplied name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.get_scene_ref_nodes" title="oa.asset.tools.asset_cacher.asset_cacher.get_scene_ref_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scene_ref_nodes</span></code></a>()</p></td>
+<td><p>Gets and returns a list of all top reference nodes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.get_asset_by_ref_path" title="oa.asset.tools.asset_cacher.asset_cacher.get_asset_by_ref_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_asset_by_ref_path</span></code></a>(ref_path)</p></td>
+<td><p>Detects any rootNuls in reference path and returns it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.create_alembic_cache" title="oa.asset.tools.asset_cacher.asset_cacher.create_alembic_cache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_alembic_cache</span></code></a>(cache_output, cache_root, ...)</p></td>
+<td><p>Creates an abc file with hierarchy.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.connect_shape" title="oa.asset.tools.asset_cacher.asset_cacher.connect_shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect_shape</span></code></a>(in_shape, cache_root[, ignore_vis, ...])</p></td>
+<td><p>Creates a new transform and connects supplied shape to it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.delete_empty_nuls" title="oa.asset.tools.asset_cacher.asset_cacher.delete_empty_nuls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_empty_nuls</span></code></a>(cache_root)</p></td>
+<td><p>Deletes nuls with no meshes under it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.create_cache_structure" title="oa.asset.tools.asset_cacher.asset_cacher.create_cache_structure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_cache_structure</span></code></a>(ref_wrapper)</p></td>
+<td><p>Creates a hierarchy of nuls and connects meshes to it without</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.create_scene_cache_structure" title="oa.asset.tools.asset_cacher.asset_cacher.create_scene_cache_structure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_scene_cache_structure</span></code></a>()</p></td>
+<td><p>Mostly used for debugging.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.get_shot_ranges" title="oa.asset.tools.asset_cacher.asset_cacher.get_shot_ranges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_shot_ranges</span></code></a>(shot)</p></td>
+<td><p>Get a shot's start and end frame numbers from sceneCP.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.cache_asset" title="oa.asset.tools.asset_cacher.asset_cacher.cache_asset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cache_asset</span></code></a>(output_path, ref_path, start_frame, end_frame)</p></td>
+<td><p>Caches out a referenced asset.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.submit_job" title="oa.asset.tools.asset_cacher.asset_cacher.submit_job"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit_job</span></code></a>(ref_nodes, shot[, job, block_mask, ...])</p></td>
+<td><p>Submits a job to cache a shot onto the farm.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.inf_assets_generator" title="oa.asset.tools.asset_cacher.asset_cacher.inf_assets_generator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inf_assets_generator</span></code></a>(inf_asset_list)</p></td>
+<td><p>Loops through assets to collect and yield itself and nested assets.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.asset_cacher.asset_cacher.get_descriptor_data" title="oa.asset.tools.asset_cacher.asset_cacher.get_descriptor_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_descriptor_data</span></code></a>(mainf_path)</p></td>
+<td><p>Reads maINF file and returns a flatten list of its INFAssets.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.get_dag_path">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">get_dag_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.get_dag_path" title="Permalink to this definition"></a></dt>
+<dd><p>Creates an MDagPath object with supplied name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> (<em>string</em>) – Name of an existing object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The object wrapped in an MDagPath.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – If object can’t be found in the scene.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.get_scene_ref_nodes">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">get_scene_ref_nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.get_scene_ref_nodes" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a list of all top reference nodes.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.get_asset_by_ref_path">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">get_asset_by_ref_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.get_asset_by_ref_path" title="Permalink to this definition"></a></dt>
+<dd><p>Detects any rootNuls in reference path and returns it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ref_path</strong> (<em>string</em>) – Resolved reference path.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Asset’s root nul object or None if it can’t find it.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.create_alembic_cache">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">create_alembic_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cache_output</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_relative_sample</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.create_alembic_cache" title="Permalink to this definition"></a></dt>
+<dd><p>Creates an abc file with hierarchy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cache_output</strong> (<em>string</em>) – Full path to abc file to export to.</p></li>
+<li><p><strong>cache_root</strong> (<em>string</em>) – The cache structure’s root to export with.</p></li>
+<li><p><strong>start_frame</strong> (<em>float</em>) – Cache from this frame.</p></li>
+<li><p><strong>end_frame</strong> (<em>float</em>) – Cache to this frame.</p></li>
+<li><p><strong>frame_relative_sample</strong> (<em>float</em>) – Sub-frame samples.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.connect_shape">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">connect_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_vis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_inst_master</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.connect_shape" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new transform and connects supplied shape to it.
+This is used to build the cache structure without changing existing hierarchies.</p>
+<p>Meshes will offset their pivot to its center with nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_shape</strong> (<em>string</em>) – Shape to connect.</p></li>
+<li><p><strong>cache_root</strong> (<em>string</em>) – New transform’s parent.</p></li>
+<li><p><strong>ignore_vis</strong> (<em>bool</em>) – Connects shape anyways even if it’s hidden (mostly for ENVs.)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>New transform.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.delete_empty_nuls">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">delete_empty_nuls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cache_root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.delete_empty_nuls" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes nuls with no meshes under it.
+This is to clean up any excessive nodes in the cache structure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cache_root</strong> (<em>string</em>) – Cache structure’s root nul.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.create_cache_structure">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">create_cache_structure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_wrapper</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.create_cache_structure" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a hierarchy of nuls and connects meshes to it without
+changing asset’s existing hierarchies.</p>
+<p>This function recursively calls itself.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ref_wrapper</strong> (<a class="reference internal" href="../../../libs/reference_wrapper/index.html#oa.asset.libs.reference_wrapper.ReferenceWrapper" title="oa.asset.libs.reference_wrapper.ReferenceWrapper"><em>ReferenceWrapper</em></a>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The top nul from the cache structure.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.create_scene_cache_structure">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">create_scene_cache_structure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.create_scene_cache_structure" title="Permalink to this definition"></a></dt>
+<dd><p>Mostly used for debugging.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.get_shot_ranges">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">get_shot_ranges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.get_shot_ranges" title="Permalink to this definition"></a></dt>
+<dd><p>Get a shot’s start and end frame numbers from sceneCP.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>shot</strong> (<em>string</em>) – Shot name with zero padding.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list with the shot’s start and end frames.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – If it can’t find the SceneCP or the shot in it.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.cache_asset">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">cache_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_relative_sample</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.cache_asset" title="Permalink to this definition"></a></dt>
+<dd><p>Caches out a referenced asset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output_path</strong> (<em>string</em>) – Full path to where it should cache to.</p></li>
+<li><p><strong>ref_path</strong> (<em>string</em>) – Resolved reference path.</p></li>
+<li><p><strong>start_frame</strong> (<em>float</em>) – First frame to cache from.</p></li>
+<li><p><strong>end_frame</strong> (<em>float</em>) – Last frame to cache to.</p></li>
+<li><p><strong>frame_relative_sample</strong> (<em>float</em>) – Subframes to be cached.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.submit_job">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">submit_job</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">job</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pre_roll</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_roll</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.submit_job" title="Permalink to this definition"></a></dt>
+<dd><p>Submits a job to cache a shot onto the farm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ref_nodes</strong> (<em>string</em><em>[</em><em>]</em>) – List of reference nodes.</p></li>
+<li><p><strong>shot</strong> (<em>string</em>) – Shot name with zero padding.</p></li>
+<li><p><strong>job</strong> (<em>af.Job</em>) – Job to append block to. If none is supplied one will be created.</p></li>
+<li><p><strong>block_mask</strong> (<em>string</em>) – Name of another block to wait on. This is mostly for shot splitting.</p></li>
+<li><p><strong>project</strong> (<em>string</em>) – </p></li>
+<li><p><strong>ep</strong> (<em>string</em>) – </p></li>
+<li><p><strong>seq</strong> (<em>string</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.inf_assets_generator">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">inf_assets_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inf_asset_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.inf_assets_generator" title="Permalink to this definition"></a></dt>
+<dd><p>Loops through assets to collect and yield itself and nested assets.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.asset_cacher.asset_cacher.get_descriptor_data">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.asset_cacher.asset_cacher.</span></span><span class="sig-name descname"><span class="pre">get_descriptor_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mainf_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.asset_cacher.asset_cacher.get_descriptor_data" title="Permalink to this definition"></a></dt>
+<dd><p>Reads maINF file and returns a flatten list of its INFAssets.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title=" oa.asset.tools.asset_cacher" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../cache_batch_mode/index.html" class="btn btn-neutral float-right" title=" oa.asset.tools.asset_cacher.cache_batch_mode" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

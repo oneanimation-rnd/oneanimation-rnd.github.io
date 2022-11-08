@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.general.tools.task_switcher.widgets.file_browser_widget &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../../" id="documentation_options" src="../../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" />
+    <link rel="next" title=" oa.general.tools.task_switcher.widgets.rnd_widgets" href="../rnd_widgets/index.html" />
+    <link rel="prev" title=" oa.general.tools.task_switcher.widgets.assets_viewer" href="../assets_viewer/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.task_switcher</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.task_switcher.widgets</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.task_switcher.widgets.file_browser_widget</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../../_sources/autoapi/oa/general/tools/task_switcher/widgets/file_browser_widget/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.general.tools.task_switcher.widgets.file_browser_widget">
+<span id="oa-general-tools-task-switcher-widgets-file-browser-widget"></span><h1> <a class="reference internal" href="#module-oa.general.tools.task_switcher.widgets.file_browser_widget" title="oa.general.tools.task_switcher.widgets.file_browser_widget"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.task_switcher.widgets.file_browser_widget</span></code></a><a class="headerlink" href="#module-oa.general.tools.task_switcher.widgets.file_browser_widget" title="Permalink to this heading"></a></h1>
+<p>A widget to point a path to it and displays its contents like a file browser.
+Because it’s using Qt’s QFileSystemModel it’s incredibly faster than using a custom treeview.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget" title="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileBrowserWidget</span></code></a></p></td>
+<td><p>A browser for managing local files.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileSystemModel" title="oa.general.tools.task_switcher.widgets.file_browser_widget.FileSystemModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileSystemModel</span></code></a></p></td>
+<td><p>Manages filters for what files get hidden or displayed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.IconProvider" title="oa.general.tools.task_switcher.widgets.file_browser_widget.IconProvider"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IconProvider</span></code></a></p></td>
+<td><p>Manages which icon is displayed for a file.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.strip_version" title="oa.general.tools.task_switcher.widgets.file_browser_widget.strip_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">strip_version</span></code></a>(path)</p></td>
+<td><p>Removes the supplied path's version.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.get_latest_path" title="oa.general.tools.task_switcher.widgets.file_browser_widget.get_latest_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_latest_path</span></code></a>(path_no_ver)</p></td>
+<td><p>Gets the latest version of the supplied path.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.strip_version">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.task_switcher.widgets.file_browser_widget.</span></span><span class="sig-name descname"><span class="pre">strip_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.strip_version" title="Permalink to this definition"></a></dt>
+<dd><p>Removes the supplied path’s version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>string</em>) – A full path to an existing file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The same path with no version.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.get_latest_path">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.task_switcher.widgets.file_browser_widget.</span></span><span class="sig-name descname"><span class="pre">get_latest_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_no_ver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.get_latest_path" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the latest version of the supplied path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path_no_ver</strong> (<em>string</em>) – A full path that doesn’t have a version.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An existing file to the latest version, or itself if it failed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.general.tools.task_switcher.widgets.file_browser_widget.</span></span><span class="sig-name descname"><span class="pre">FileBrowserWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">display_latest</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTreeView</span></code></p>
+<p>A browser for managing local files.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.selection_changed">
+<span class="sig-name descname"><span class="pre">selection_changed</span></span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.selection_changed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.load_scene_triggered">
+<span class="sig-name descname"><span class="pre">load_scene_triggered</span></span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.load_scene_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.keyPressEvent">
+<span class="sig-name descname"><span class="pre">keyPressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.keyPressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.mouseDoubleClickEvent">
+<span class="sig-name descname"><span class="pre">mouseDoubleClickEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.mouseDoubleClickEvent" title="Permalink to this definition"></a></dt>
+<dd><p>Expands/Collapses item if it has children.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.selectionChanged">
+<span class="sig-name descname"><span class="pre">selectionChanged</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selected</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deselected</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.selectionChanged" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.header_on_click">
+<span class="sig-name descname"><span class="pre">header_on_click</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">section</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.header_on_click" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_browser_context_triggered">
+<span class="sig-name descname"><span class="pre">on_browser_context_triggered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_browser_context_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_open_dir_triggered">
+<span class="sig-name descname"><span class="pre">on_open_dir_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_open_dir_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_copy_to_clipboard_triggered">
+<span class="sig-name descname"><span class="pre">on_copy_to_clipboard_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_copy_to_clipboard_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_new_folder_triggered">
+<span class="sig-name descname"><span class="pre">on_new_folder_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_new_folder_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_rename_triggered">
+<span class="sig-name descname"><span class="pre">on_rename_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_rename_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_delete_triggered">
+<span class="sig-name descname"><span class="pre">on_delete_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_delete_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_run_selected_triggered">
+<span class="sig-name descname"><span class="pre">on_run_selected_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.on_run_selected_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.set_filters">
+<span class="sig-name descname"><span class="pre">set_filters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.set_filters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.show_scenes_only">
+<span class="sig-name descname"><span class="pre">show_scenes_only</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.show_scenes_only" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.set_path">
+<span class="sig-name descname"><span class="pre">set_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.set_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.get_selected_file">
+<span class="sig-name descname"><span class="pre">get_selected_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.get_selected_file" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the full path of the current selected file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.add_new_folder">
+<span class="sig-name descname"><span class="pre">add_new_folder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.add_new_folder" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.copy_path_to_clipboard">
+<span class="sig-name descname"><span class="pre">copy_path_to_clipboard</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.copy_path_to_clipboard" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.run_selected_file">
+<span class="sig-name descname"><span class="pre">run_selected_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.run_selected_file" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.delete_selected_file">
+<span class="sig-name descname"><span class="pre">delete_selected_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileBrowserWidget.delete_selected_file" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileSystemModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.general.tools.task_switcher.widgets.file_browser_widget.</span></span><span class="sig-name descname"><span class="pre">FileSystemModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileSystemModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QFileSystemModel</span></code></p>
+<p>Manages filters for what files get hidden or displayed.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileSystemModel.data">
+<span class="sig-name descname"><span class="pre">data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileSystemModel.data" title="Permalink to this definition"></a></dt>
+<dd><p>Manages what data should be displayed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileSystemModel.on_path_changed">
+<span class="sig-name descname"><span class="pre">on_path_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileSystemModel.on_path_changed" title="Permalink to this definition"></a></dt>
+<dd><p>Re-collect paths if the user navigates to a new location.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.FileSystemModel.collect_paths_to_display">
+<span class="sig-name descname"><span class="pre">collect_paths_to_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force_update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.FileSystemModel.collect_paths_to_display" title="Permalink to this definition"></a></dt>
+<dd><p>From the browser’s current path, recursively collects paths that are the latest version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>force_update</strong> (<em>bool</em>) – Triggers view to redraw itself.
+This is useful if this method is being called outside of this class.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.IconProvider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.general.tools.task_switcher.widgets.file_browser_widget.</span></span><span class="sig-name descname"><span class="pre">IconProvider</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.IconProvider" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QFileIconProvider</span></code></p>
+<p>Manages which icon is displayed for a file.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.task_switcher.widgets.file_browser_widget.IconProvider.icon">
+<span class="sig-name descname"><span class="pre">icon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">icontype_or_qfileinfo</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.task_switcher.widgets.file_browser_widget.IconProvider.icon" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../assets_viewer/index.html" class="btn btn-neutral float-left" title=" oa.general.tools.task_switcher.widgets.assets_viewer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../rnd_widgets/index.html" class="btn btn-neutral float-right" title=" oa.general.tools.task_switcher.widgets.rnd_widgets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

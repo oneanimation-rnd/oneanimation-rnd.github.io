@@ -1,0 +1,88 @@
+ :py:mod:`oa.animation.tools.visibility_set_tool.visibility_set_tool`
+==========================================================================================================================================
+
+.. py:module:: oa.animation.tools.visibility_set_tool.visibility_set_tool
+
+.. autoapi-nested-parse::
+
+   This tool stores collections of meshes in the database so that we can easily toggle their visibility.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.visibility_set_tool.visibility_set_tool.VisibilitySetTool
+   oa.animation.tools.visibility_set_tool.visibility_set_tool.ListWidget
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.visibility_set_tool.visibility_set_tool.launch
+
+
+
+.. py:class:: VisibilitySetTool(ref_obj, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: update_sets_list()
+
+
+   .. py:method:: update_meshes_list()
+
+
+   .. py:method:: get_selected_set()
+
+
+   .. py:method:: on_sets_list_selection_changed()
+
+
+   .. py:method:: on_create_set_clicked()
+
+
+   .. py:method:: on_remove_set_clicked()
+
+
+   .. py:method:: on_rename_set_clicked()
+
+
+   .. py:method:: on_add_mesh_clicked()
+
+
+   .. py:method:: on_remove_mesh_clicked()
+
+
+   .. py:method:: on_select_mesh_clicked()
+
+
+
+.. py:class:: ListWidget(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListWidget`
+
+   .. py:method:: store_selection()
+
+
+   .. py:method:: restore_selection()
+
+
+
+.. py:function:: launch()
+
+

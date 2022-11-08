@@ -1,0 +1,161 @@
+ :py:mod:`oa.asset.tools.costumes.costumes_importer`
+========================================================================================================
+
+.. py:module:: oa.asset.tools.costumes.costumes_importer
+
+.. autoapi-nested-parse::
+
+   An interface to list all available costumes a character can import, then is able to mix-and-match different costumes onto a character.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.costumes.costumes_importer.CostumeImporter
+   oa.asset.tools.costumes.costumes_importer.ScrollArea
+   oa.asset.tools.costumes.costumes_importer.CustomFrame
+   oa.asset.tools.costumes.costumes_importer.ThumbnailPreview
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.costumes.costumes_importer.launch
+
+
+
+.. py:class:: CostumeImporter(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: scn_selection_callback
+      
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: remove_selection_callback()
+
+
+   .. py:method:: add_selection_callback()
+
+
+   .. py:method:: update_object()
+
+
+   .. py:method:: update_costumes()
+
+
+   .. py:method:: update_filter()
+
+
+   .. py:method:: on_scroll_area_wheel_triggered()
+
+
+   .. py:method:: on_scn_selection_changed(client_data)
+
+
+   .. py:method:: on_remove_selected_clicked()
+
+
+   .. py:method:: on_show_active_toggled(toggled)
+
+
+   .. py:method:: on_thumbnail_clicked()
+
+
+   .. py:method:: on_thumbnail_entered(event)
+
+
+   .. py:method:: on_thumbnail_exited(event)
+
+
+   .. py:method:: on_thumbnail_mouse_moved(event)
+
+
+
+.. py:class:: ScrollArea(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QScrollArea`
+
+   .. py:attribute:: wheel_triggered
+      
+
+      
+
+   .. py:method:: wheelEvent(event)
+
+
+
+.. py:class:: CustomFrame(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QFrame`
+
+   .. py:method:: paintEvent(paint_event)
+
+
+   .. py:method:: set_label(txt)
+
+
+
+.. py:class:: ThumbnailPreview(_id, name, checked, img, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QPushButton`
+
+   .. py:attribute:: entered
+      
+
+      
+
+   .. py:attribute:: exited
+      
+
+      
+
+   .. py:attribute:: mouse_moved
+      
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: enterEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: paintEvent(paint_event)
+
+
+
+.. py:function:: launch()
+
+

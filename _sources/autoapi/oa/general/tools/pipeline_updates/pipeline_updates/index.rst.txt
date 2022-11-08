@@ -1,0 +1,94 @@
+ :py:mod:`oa.general.tools.pipeline_updates.pipeline_updates`
+==========================================================================================================================
+
+.. py:module:: oa.general.tools.pipeline_updates.pipeline_updates
+
+.. autoapi-nested-parse::
+
+   Displays any new pipeline updates so users can keep up to date of what's new.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.pipeline_updates.pipeline_updates.PipelineUpdatesWindow
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.pipeline_updates.pipeline_updates.launch
+   oa.general.tools.pipeline_updates.pipeline_updates.get_session_version
+   oa.general.tools.pipeline_updates.pipeline_updates.set_session_version
+   oa.general.tools.pipeline_updates.pipeline_updates.get_launch_on_startup
+   oa.general.tools.pipeline_updates.pipeline_updates.set_launch_on_startup
+   oa.general.tools.pipeline_updates.pipeline_updates.get_commits
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.pipeline_updates.pipeline_updates.SOLUTION_VERSION_PROP
+   oa.general.tools.pipeline_updates.pipeline_updates.LAUNCH_ON_STARTUP_PROP
+   oa.general.tools.pipeline_updates.pipeline_updates.tool
+   oa.general.tools.pipeline_updates.pipeline_updates.commits_path
+
+
+.. py:data:: SOLUTION_VERSION_PROP
+   :annotation: = animation_qt5_version
+
+   
+
+.. py:data:: LAUNCH_ON_STARTUP_PROP
+   :annotation: = launch_pipeline_updates_on_startup
+
+   
+
+.. py:data:: tool
+   
+
+   
+
+.. py:data:: commits_path
+   
+
+   
+
+.. py:function:: launch()
+
+
+.. py:function:: get_session_version()
+
+
+.. py:function:: set_session_version(num)
+
+
+.. py:function:: get_launch_on_startup()
+
+
+.. py:function:: set_launch_on_startup(enabled)
+
+
+.. py:function:: get_commits()
+
+
+.. py:class:: PipelineUpdatesWindow(commits, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: on_startup_toggled(enabled)
+
+
+

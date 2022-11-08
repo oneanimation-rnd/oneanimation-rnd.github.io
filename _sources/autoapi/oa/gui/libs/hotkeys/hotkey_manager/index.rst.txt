@@ -1,0 +1,26 @@
+ :py:mod:`oa.gui.libs.hotkeys.hotkey_manager`
+==========================================================================================
+
+.. py:module:: oa.gui.libs.hotkeys.hotkey_manager
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.libs.hotkeys.hotkey_manager.register_hotkey
+   oa.gui.libs.hotkeys.hotkey_manager.add_show_all_attributes
+
+
+
+.. py:function:: register_hotkey(name, annotation, command, default, key, ctrl=False, alt=False, shift=False, category='One Animation', language='python')
+
+
+.. py:function:: add_show_all_attributes()
+
+

@@ -1,0 +1,49 @@
+ :py:mod:`bd.api.transport.https`
+==================================================================
+
+.. py:module:: bd.api.transport.https
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.api.transport.https.HTTPSTransport
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.api.transport.https.FILECACHE
+
+
+.. py:data:: FILECACHE
+   
+
+   
+
+.. py:class:: HTTPSTransport(url, auth=None, timeout=None, max_retries=1)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: execute(query, variable_values=None, use_filecache=True)
+
+
+   .. py:method:: _get_result(query, variable_values=None)
+
+
+   .. py:method:: _make_call(query, variable_values=None)
+
+
+   .. py:method:: _send(payload)
+
+
+

@@ -1,0 +1,284 @@
+ :py:mod:`oa_utils.medusa`
+====================================================
+
+.. py:module:: oa_utils.medusa
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.medusa.FTPMedusa
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.medusa.DEP_EXT
+
+
+.. py:exception:: FTPMedusaError
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:data:: DEP_EXT
+   
+
+   
+
+.. py:class:: FTPMedusa(server=config.get_value('ftp/host'), login=config.get_value('ftp/username'), pswd=config.get_value('ftp/password'), quiet=False)
+
+   Bases: :py:obj:`object`
+
+   This class provides functionality to export data
+   to an asset drive through an FTP protocol.
+
+   .. rubric:: Example
+
+   with FTPMedusa() as ftp:
+       ftp.checkIn(localFile, destFile, annotation)
+
+   :raises FTPMedusaError: if something goes fatally wrong
+
+   .. py:method:: _connect()
+
+      Here we get local info and connect to the FTP server.
+
+      Kwargs:
+          server(str): servers ip address to connect to.
+          user(str): user name.
+          paswd(str): password.
+
+      :returns: True if everything is ok, False otherwise.
+
+
+   .. py:method:: mkDir(destDir)
+
+      Recursively creates all intermediate directories in the path.
+
+      :param destDir: path to a directory (not a file path). ( "INSECT/..." )
+      :type destDir: str
+
+      :returns: True if the folder is created, False otherwise.
+
+
+   .. py:method:: _try_lock(ftpFilePath)
+
+      Tries to rename provided file to 'fileName.lock' file.
+
+      :param ftpFilePath: ftp path to a file on the asset drive. ( "INSECT/...").
+      :type ftpFilePath: str
+
+      :returns: True on successfull lock, otherwise False
+
+
+   .. py:method:: upload(localFilePath, destFilePath, annotation='')
+
+      Uploads localFile to the server. And puts descriptive .txt file
+      with it if annotation isn't an empty string.
+
+      :param localFilePath: path to a file on a local computer.
+      :type localFilePath: str
+      :param destFilePath: path to a file on the asset drive. ( "INSECT/...")
+      :type destFilePath: str
+
+      Kwargs:
+          annotation(str): comments.
+
+      :returns: True on successfull upload, otherwise False
+
+
+   .. py:method:: moveRemoteFile(sourceRemoteFilePath, destRemoteFilePath)
+
+      Moves remote file to another location on the server renaming it if necessary.
+
+      :param sourceRemoteFilePath: source file path on the server. ( "INSECT/...")
+      :type sourceRemoteFilePath: str
+      :param destRemoteFilePath: destination file path on the server. ( "INSECT/...")
+      :type destRemoteFilePath: str
+
+
+   .. py:method:: removeRemoteFile(remoteFileName, permanent=True)
+
+      Deletes remote file from the server.
+
+      :param remoteFileName: file path on the server
+      :type remoteFileName: str
+      :param ( \skynetsset\PROJECTS\INSECT\... or /Volumes/asset/PROJECTS/INSECT/... ).:
+
+
+   .. py:method:: removeRemoteDir(remoteDirName, recursive=False)
+
+      Deletes remote folder from the server.
+
+      :param remoteFileName: file path on the server.
+      :type remoteFileName: str
+
+
+   .. py:method:: _folderExists(destDir)
+
+      Checks whether folder exists on the server or not.
+
+      :param destDir: destination folder path on the server ( "INSECT/...").
+      :type destDir: str
+
+      :returns: True if the folder exists.
+
+
+   .. py:method:: _fileExists(destFilePath)
+
+      Checks whether file exists on the server or not.
+
+      :param destFilePath: destination file path on the server ( "INSECT/...").
+      :type destFilePath: str
+
+      :returns: True if the file exists.
+
+
+   .. py:method:: _rmDir(ftpFolderPath)
+
+
+   .. py:method:: _rmFile(ftpFilePath)
+
+
+   .. py:method:: _rmTree(path)
+
+      Recursively delete a directory tree on a remote server.
+
+
+   .. py:method:: _rmOldVers(destOldDir, destFileName, version, maxVersions)
+
+      Removes old versions.
+
+      :param destOldDir: "OLD" folder path on the server.
+      :type destOldDir: str
+      :param destFileName: destination file name ( name.ext without a full path ).
+      :type destFileName: str
+      :param version: gratest version number of the file in the "OLD" dir
+      :type version: int
+      :param maxVersions: maximum versions to keep on the server
+      :type maxVersions: int
+
+
+   .. py:method:: _getMaxVersion(destOldDir, fileName)
+
+      Gets the maximum version of the file in the "OLD" folder on the server.
+
+      :param destOldDir: "OLD" folder path on the server.
+      :type destOldDir: str
+      :param fileName: file name to get version of ( name.ext without a full path ).
+      :type fileName: str
+
+      :returns: number of the maximum file version.
+      :rtype: int
+
+
+   .. py:method:: ftpProcessPaths(destFilePath, localFilePath)
+
+      Makes any path readable by an ftp server.
+
+      :param destFilePath: path to a file on the asset drive
+      :type destFilePath: str
+      :param ( \skynetsset\PROJECTS\INSECT\... or /Volumes/asset/PROJECTS/INSECT/... ).:
+      :param localFilePath: path to a file on a local computer.
+      :type localFilePath: str
+
+      :returns: destination file path (INSECT/...)
+      :rtype: str
+
+
+   .. py:method:: _versionControl(destFilePath, maxVersions)
+
+      Creates new version path.
+
+      Disassembles destFilePath and creates a new path
+      with latest version in it ( v001 ),    which points
+      to an "OLD" directory.
+
+      :param destFilePath: ftp file path.
+
+      :returns: versioned file path
+      :rtype: str
+
+
+   .. py:method:: _checkIntegrity(localFilePath, ftpFilePath)
+
+
+   .. py:method:: _zip_dir(dirPath, zipFile)
+
+
+   .. py:method:: _zip_list(pathList, zipFile)
+
+
+   .. py:method:: checkInFolder(localFolderPath, destFilePath, annotation='', maxVersions=-1)
+
+      CheckIn local folder to the server as zip archive.
+
+      :param localFolderPath: path to a folder on a local computer.
+      :type localFolderPath: str
+      :param destFilePath: path to a zip file or folder on the asset drive.
+      :type destFilePath: str
+
+      Kwargs:
+          annotation(str): comments.
+          maxVersions(int): a maximum amount of versions to store in the "OLD" dir ( -1 = infinite )
+
+
+
+   .. py:method:: checkInFiles(localFilePaths, destArchivePath, annotation='', maxVersions=-1)
+
+      CheckIn a list of local files to the server as a zip archive.
+
+      :param localFilePaths: list of file paths on a local computer.
+      :type localFilePaths: list
+      :param destFilePath: path to a zip file or folder on the asset drive.
+      :type destFilePath: str
+
+      Kwargs:
+          annotation(str): comments.
+          maxVersions(int): a maximum amount of versions to store in the "OLD" dir ( -1 = infinite )
+
+
+
+   .. py:method:: checkIn(localFilePath, destFilePath, annotation='', maxVersions=-1, forceUnlock=False)
+
+      CheckIn localFile to the server and create new version in 'OLD' folder.
+
+      Before uploading file to the server it checks if the file with the same
+      name is already on the asset drive. If so, it moves this file to an 'OLD' folder and
+      adds version number in it's name. After that it uploads local file to remote destination.
+
+      :param localFilePath: path to a file on a local computer.
+      :type localFilePath: str
+      :param destFilePath: path to a file or folder on the asset drive.
+      :type destFilePath: str
+
+      Kwargs:
+          annotation(str): comments.
+          maxVersions(int): a maximum amount of versions to store in the "OLD" dir ( -1 = infinite )
+
+
+
+   .. py:method:: _disconnect()
+
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(type, value, traceback)
+
+
+

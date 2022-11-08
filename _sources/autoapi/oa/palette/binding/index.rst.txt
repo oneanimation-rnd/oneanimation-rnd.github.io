@@ -1,0 +1,84 @@
+ :py:mod:`oa.palette.binding`
+==========================================================
+
+.. py:module:: oa.palette.binding
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.palette.binding._add_creation_code
+   oa.palette.binding.get_bound_items
+   oa.palette.binding._add_binding_data
+   oa.palette.binding._remove_binding_data
+   oa.palette.binding.bind_palette
+   oa.palette.binding.unbind_palettes
+   oa.palette.binding.unbind_missing_children
+   oa.palette.binding._create_subnets
+   oa.palette.binding._create_bound_node
+   oa.palette.binding.create_bound_nodes
+
+
+
+.. py:function:: _add_creation_code(node)
+
+
+.. py:function:: get_bound_items(node=None, definition=None)
+
+
+.. py:function:: _add_binding_data(dst_node, src_node, src_library_dir=None)
+
+
+.. py:function:: _remove_binding_data(definition, palette_node_types=())
+
+
+.. py:function:: bind_palette(dst_node, src_node, src_library_dir=None)
+
+   Binds palette to another palette by modifying
+   'OnCreated' and 'palettes' sections.
+
+   :param dst_node: a node to bind to.
+   :type dst_node: hou.Node
+   :param src_node: a node to bind.
+   :type src_node: hou.Node
+   :param src_library_dir: a directory where the source
+                           type definition is stored.
+   :type src_library_dir: str
+
+
+.. py:function:: unbind_palettes(node, palette_node_types=())
+
+   Removes palette binding by modifying 'palettes' sections.
+
+   :param node: a node to unbind palettes from.
+   :type node: hou.Node
+   :param palette_node_types: a list of all palette types
+                              we want to unbind from the current node.
+   :type palette_node_types: list[str]
+
+
+.. py:function:: unbind_missing_children(node, definition=None)
+
+
+.. py:function:: _create_subnets(subnet_path)
+
+   Creates a path using subnet nodes and returns the last node in it.
+
+   :param subnet_path: subnet path to create.
+   :type subnet_path: str
+
+
+.. py:function:: _create_bound_node(node_path, node_type)
+
+   Create palette node if it doesn`t exist yet.
+
+
+.. py:function:: create_bound_nodes(node_type)
+
+

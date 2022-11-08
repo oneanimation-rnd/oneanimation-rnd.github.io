@@ -1,0 +1,99 @@
+ :py:mod:`oa.general.tools.shield.shield_interface`
+======================================================================================================
+
+.. py:module:: oa.general.tools.shield.shield_interface
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.shield.shield_interface.ShieldInterface
+   oa.general.tools.shield.shield_interface.CheckFrame
+
+
+
+
+.. py:class:: ShieldInterface(shield_template, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   Main interface to display a shield template.
+
+   .. py:attribute:: tool_name
+      :annotation: = shieldInterface
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: continue_clicked
+      
+
+      
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: closeEvent(close_event)
+
+
+   .. py:method:: auto_fix_on_trigger()
+
+
+   .. py:method:: on_checks_end()
+
+
+   .. py:method:: on_check_finished()
+
+
+   .. py:method:: run_checks_on_click()
+
+
+   .. py:method:: continue_on_click()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: run_shield_checks()
+
+
+
+.. py:class:: CheckFrame(check_inst, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QFrame`
+
+   A widget that represents a single check.
+   Includes a list of problematic objects, and an auto-fix button.
+
+   .. py:attribute:: ran_auto_fix
+      
+
+      
+
+   .. py:method:: item_on_click()
+
+
+   .. py:method:: auto_fix_on_click()
+
+
+   .. py:method:: show_objects_list()
+
+
+   .. py:method:: change_display_by_status(status)
+
+
+

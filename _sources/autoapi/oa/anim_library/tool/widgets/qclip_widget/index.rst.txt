@@ -1,0 +1,134 @@
+ :py:mod:`oa.anim_library.tool.widgets.qclip_widget`
+========================================================================================================
+
+.. py:module:: oa.anim_library.tool.widgets.qclip_widget
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.widgets.qclip_widget.QClipWidget
+
+
+
+
+.. py:class:: QClipWidget(editable, gif_path=None, gif_data=None, icon_width=224, icon_height=140, speed=100, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QToolButton`
+
+   
+   A widget that displays an animated gif with a simple trackbar control
+   on the bottom.
+
+   Either a gif's path or binary data must be supplied to initialize.
+
+   :param editable: Displays edit button when enabled.
+   :param gif_path: A full path to an existing gif.
+   :param gif_data: Binary data from a gif file.
+   :param speed: The rate that the gif should play.
+   :param parent: A widget to parent to.
+
+   .. py:attribute:: double_clicked
+      
+
+      
+
+   .. py:attribute:: right_clicked
+      
+
+      
+
+   .. py:attribute:: edit_clicked
+      
+
+      
+
+   .. py:attribute:: entered
+      
+
+      
+
+   .. py:attribute:: exited
+      
+
+      
+
+   .. py:attribute:: mouse_moved
+      
+
+      
+
+   .. py:attribute:: PencilIcon
+      
+
+      
+
+   .. py:attribute:: PencilHoverIcon
+      
+
+      
+
+   .. py:attribute:: PencilPressedIcon
+      
+
+      
+
+   .. py:method:: setup_preview()
+
+
+   .. py:method:: create_clip()
+
+
+   .. py:method:: setup_clip()
+
+
+   .. py:method:: resizeEvent(resize_event)
+
+      Re-calculates steps for the timebar.
+
+
+   .. py:method:: enterEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(mouse_event)
+
+
+   .. py:method:: mousePressEvent(mouse_event)
+
+
+   .. py:method:: mouseReleaseEvent(mouse_event)
+
+
+   .. py:method:: mouseDoubleClickEvent(mouse_event)
+
+
+   .. py:method:: paintEvent(paint_event)
+
+
+   .. py:method:: clip_on_frame_change()
+
+
+   .. py:method:: get_frame_steps()
+
+
+   .. py:method:: set_by_file(path)
+
+
+   .. py:method:: set_by_data(data)
+
+
+   .. py:method:: update_clip_frame(mouse_event)
+
+      Plays clip if mouse is not hovering over timebar.
+      Otherwise goes to the frame that the mouse is at.
+
+
+

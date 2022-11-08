@@ -1,0 +1,22 @@
+ :py:mod:`oa_palette.scripts.bind_palette`
+====================================================================================
+
+.. py:module:: oa_palette.scripts.bind_palette
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_palette.scripts.bind_palette.run
+
+
+
+.. py:function:: run(dst_node)
+
+

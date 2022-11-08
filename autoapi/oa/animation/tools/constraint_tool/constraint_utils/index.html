@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.animation.tools.constraint_tool.constraint_utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.animation.tools.constraint_tool.enums" href="../enums/index.html" />
+    <link rel="prev" title=" oa.animation.tools.constraint_tool.constraint_tool" href="../constraint_tool/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.constraint_tool</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/animation/tools/constraint_tool/constraint_utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.animation.tools.constraint_tool.constraint_utils">
+<span id="oa-animation-tools-constraint-tool-constraint-utils"></span><h1> <a class="reference internal" href="#module-oa.animation.tools.constraint_tool.constraint_utils" title="oa.animation.tools.constraint_tool.constraint_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils</span></code></a><a class="headerlink" href="#module-oa.animation.tools.constraint_tool.constraint_utils" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.UndoStack" title="oa.animation.tools.constraint_tool.constraint_utils.UndoStack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UndoStack</span></code></a></p></td>
+<td><p>Includes all operations as a single chunk so Maya can undo/redo all at once.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.get_full_img_path" title="oa.animation.tools.constraint_tool.constraint_utils.get_full_img_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_full_img_path</span></code></a>(file_name)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.load_pixmap" title="oa.animation.tools.constraint_tool.constraint_utils.load_pixmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_pixmap</span></code></a>(file_name[, width, height])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.display_error" title="oa.animation.tools.constraint_tool.constraint_utils.display_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display_error</span></code></a>(err[, parent])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.get_weak_ref" title="oa.animation.tools.constraint_tool.constraint_utils.get_weak_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_weak_ref</span></code></a>(obj, attr_name)</p></td>
+<td><p>Gets and returns the attribute weak reference object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.create_weak_ref" title="oa.animation.tools.constraint_tool.constraint_utils.create_weak_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_weak_ref</span></code></a>(obj, weak_ref, attr_name)</p></td>
+<td><p>Connects one object to another via weak reference.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.toggle_transform_locks" title="oa.animation.tools.constraint_tool.constraint_utils.toggle_transform_locks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toggle_transform_locks</span></code></a>(obj, lock)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.get_scene_constraints" title="oa.animation.tools.constraint_tool.constraint_utils.get_scene_constraints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scene_constraints</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.add_members_to_obj_set" title="oa.animation.tools.constraint_tool.constraint_utils.add_members_to_obj_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_members_to_obj_set</span></code></a>(new_members, obj_set)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.create_group" title="oa.animation.tools.constraint_tool.constraint_utils.create_group"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_group</span></code></a>(name)</p></td>
+<td><p>Creates a new object set to group constraint ctrls to.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.switch_to_group" title="oa.animation.tools.constraint_tool.constraint_utils.switch_to_group"><code class="xref py py-obj docutils literal notranslate"><span class="pre">switch_to_group</span></code></a>(objs, group_name)</p></td>
+<td><p>Removes supplied objects from other constraint object sets and adds them to the supplied one.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.set_constraint_color" title="oa.animation.tools.constraint_tool.constraint_utils.set_constraint_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_constraint_color</span></code></a>(objs, qcolor)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.remove_constraint_color" title="oa.animation.tools.constraint_tool.constraint_utils.remove_constraint_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_constraint_color</span></code></a>(objs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.get_constraint_color" title="oa.animation.tools.constraint_tool.constraint_utils.get_constraint_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_constraint_color</span></code></a>(obj)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.get_pair_blend" title="oa.animation.tools.constraint_tool.constraint_utils.get_pair_blend"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_pair_blend</span></code></a>(obj, axis_type)</p></td>
+<td><p>Gets and returns the channel's pairBlend driver, if it exists.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.get_pair_blend_attr" title="oa.animation.tools.constraint_tool.constraint_utils.get_pair_blend_attr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_pair_blend_attr</span></code></a>(pair_blend)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.attach_motion_path" title="oa.animation.tools.constraint_tool.constraint_utils.attach_motion_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">attach_motion_path</span></code></a>(obj, path[, u_value, up_type, ...])</p></td>
+<td><p>Manually creates a new motion path and attaches the supplied object to it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.can_add_constraint" title="oa.animation.tools.constraint_tool.constraint_utils.can_add_constraint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">can_add_constraint</span></code></a>(obj, target, constraint_type)</p></td>
+<td><p>Does a series of sanity checks to see if the constraint can be added.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.create_offset" title="oa.animation.tools.constraint_tool.constraint_utils.create_offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_offset</span></code></a>(obj, target, constraint_type, style, ...)</p></td>
+<td><p>Creates an offset control and nul.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.set_keys_and_step" title="oa.animation.tools.constraint_tool.constraint_utils.set_keys_and_step"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_keys_and_step</span></code></a>(plug[, prev_val, val])</p></td>
+<td><p>Sets a key for the previous and current frame and sets first key's out tangent to step.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.add_constraint" title="oa.animation.tools.constraint_tool.constraint_utils.add_constraint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_constraint</span></code></a>(obj, target, constraint_type[, ...])</p></td>
+<td><p>Adds a new constraint to the target with the supplied constraint type.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.set_key_off" title="oa.animation.tools.constraint_tool.constraint_utils.set_key_off"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_key_off</span></code></a>(onuls)</p></td>
+<td><p>Disables constraint on the supplied offset nuls.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.set_key_on" title="oa.animation.tools.constraint_tool.constraint_utils.set_key_on"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_key_on</span></code></a>(onuls)</p></td>
+<td><p>Enables the constraint on the supplied offset nuls.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.global_set" title="oa.animation.tools.constraint_tool.constraint_utils.global_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">global_set</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.costumes_set" title="oa.animation.tools.constraint_tool.constraint_utils.costumes_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">costumes_set</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.constraint_tool.constraint_utils.costumes_color" title="oa.animation.tools.constraint_tool.constraint_utils.costumes_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">costumes_color</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.global_set">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">global_set</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">constraint_ctrls</span></em><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.global_set" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.costumes_set">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">costumes_set</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">costumes</span></em><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.costumes_set" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.costumes_color">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">costumes_color</span></span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.costumes_color" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.UndoStack">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">UndoStack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.UndoStack" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Includes all operations as a single chunk so Maya can undo/redo all at once.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.UndoStack.__enter__">
+<span class="sig-name descname"><span class="pre">__enter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.UndoStack.__enter__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.UndoStack.__exit__">
+<span class="sig-name descname"><span class="pre">__exit__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traceback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.UndoStack.__exit__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.get_full_img_path">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">get_full_img_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.get_full_img_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.load_pixmap">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">load_pixmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.load_pixmap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.display_error">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">display_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">err</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.display_error" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.get_weak_ref">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">get_weak_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.get_weak_ref" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the attribute weak reference object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.create_weak_ref">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">create_weak_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weak_ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.create_weak_ref" title="Permalink to this definition"></a></dt>
+<dd><p>Connects one object to another via weak reference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> – Container to hold weak reference.</p></li>
+<li><p><strong>weak_ref</strong> – Object to reference.</p></li>
+<li><p><strong>attr_name</strong> – Name of the attribute.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.toggle_transform_locks">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">toggle_transform_locks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.toggle_transform_locks" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.get_scene_constraints">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">get_scene_constraints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.get_scene_constraints" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.add_members_to_obj_set">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">add_members_to_obj_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_members</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj_set</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.add_members_to_obj_set" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.create_group">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">create_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.create_group" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new object set to group constraint ctrls to.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.switch_to_group">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">switch_to_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.switch_to_group" title="Permalink to this definition"></a></dt>
+<dd><p>Removes supplied objects from other constraint object sets and adds them to the supplied one.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.set_constraint_color">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">set_constraint_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qcolor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.set_constraint_color" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.remove_constraint_color">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">remove_constraint_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.remove_constraint_color" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.get_constraint_color">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">get_constraint_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.get_constraint_color" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.get_pair_blend">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">get_pair_blend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.get_pair_blend" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the channel’s pairBlend driver, if it exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> – The object to check on.</p></li>
+<li><p><strong>axis_type</strong> – 0=Translate, 1=Rotate.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.get_pair_blend_attr">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">get_pair_blend_attr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pair_blend</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.get_pair_blend_attr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.attach_motion_path">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">attach_motion_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">up_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fraction_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'motionPath'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.attach_motion_path" title="Permalink to this definition"></a></dt>
+<dd><p>Manually creates a new motion path and attaches the supplied object to it.
+cmds.pathAnimation() is notorious for not being friendly with undoing properly.
+Also pathAnimation creates a non-fatal cycle by default, which is annoying.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.can_add_constraint">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">can_add_constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.can_add_constraint" title="Permalink to this definition"></a></dt>
+<dd><p>Does a series of sanity checks to see if the constraint can be added.
+An exception is raised if it fails.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> – The object to constraint.</p></li>
+<li><p><strong>target</strong> – The object that will drive the constraint.</p></li>
+<li><p><strong>constraint_type</strong> – enums.ConstraintType.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.create_offset">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">create_offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">global_set</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.create_offset" title="Permalink to this definition"></a></dt>
+<dd><p>Creates an offset control and nul.
+offset_ctrl=Object the animators will use. The object constraints to this.
+offset_nul=Constraints with the target.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> – The object to constraint.</p></li>
+<li><p><strong>target</strong> – The object to drive the constraint.</p></li>
+<li><p><strong>constraint_type</strong> – enums.ConstraintType.</p></li>
+<li><p><strong>style</strong> – The offset’s shape style.</p></li>
+<li><p><strong>size</strong> – The size of the offset ctrl.</p></li>
+<li><p><strong>color</strong> – An rgb 3-float list to color the offset ctrl.</p></li>
+<li><p><strong>group</strong> – The object set the offset ctrl should be added to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of the offset nul and offset ctrl.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.set_keys_and_step">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">set_keys_and_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plug</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prev_val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.set_keys_and_step" title="Permalink to this definition"></a></dt>
+<dd><p>Sets a key for the previous and current frame and sets first key’s out tangent to step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>plug</strong> – The plug to set keys on.</p></li>
+<li><p><strong>prev_val</strong> – The value to set on the first key, otherwise it just inserts itself.</p></li>
+<li><p><strong>val</strong> – The value to set on the second key, otherwise it just inserts itself.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.add_constraint">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">add_constraint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraint_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sphere'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[255,</span> <span class="pre">0,</span> <span class="pre">0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">set_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">global_set</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.add_constraint" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a new constraint to the target with the supplied constraint type.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.set_key_off">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">set_key_off</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">onuls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.set_key_off" title="Permalink to this definition"></a></dt>
+<dd><p>Disables constraint on the supplied offset nuls.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.constraint_tool.constraint_utils.set_key_on">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.constraint_tool.constraint_utils.</span></span><span class="sig-name descname"><span class="pre">set_key_on</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">onuls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.constraint_tool.constraint_utils.set_key_on" title="Permalink to this definition"></a></dt>
+<dd><p>Enables the constraint on the supplied offset nuls.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../constraint_tool/index.html" class="btn btn-neutral float-left" title=" oa.animation.tools.constraint_tool.constraint_tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../enums/index.html" class="btn btn-neutral float-right" title=" oa.animation.tools.constraint_tool.enums" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

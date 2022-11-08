@@ -1,0 +1,168 @@
+ :py:mod:`oa_utils.database.wrappers.w_show`
+========================================================================================
+
+.. py:module:: oa_utils.database.wrappers.w_show
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_show.Collections
+   oa_utils.database.wrappers.w_show.AnimSoftwares
+   oa_utils.database.wrappers.w_show.WShow
+   oa_utils.database.wrappers.w_show.WEpisode
+   oa_utils.database.wrappers.w_show.WSequence
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_show.string_to_digit
+   oa_utils.database.wrappers.w_show.natural_keys
+   oa_utils.database.wrappers.w_show.order_dict_by_name
+   oa_utils.database.wrappers.w_show.get_anim_software
+   oa_utils.database.wrappers.w_show.connect_to_db
+   oa_utils.database.wrappers.w_show.camel_case_to_title
+   oa_utils.database.wrappers.w_show.get_episode_title
+   oa_utils.database.wrappers.w_show.write_all_from_disc
+   oa_utils.database.wrappers.w_show.write_from_disc
+   oa_utils.database.wrappers.w_show.generic_add_entry
+   oa_utils.database.wrappers.w_show.generic_add_entries
+   oa_utils.database.wrappers.w_show.fetch_show_data
+
+
+
+.. py:class:: Collections
+
+   .. py:attribute:: Shows
+      :annotation: = shows
+
+      
+
+   .. py:attribute:: Episodes
+      :annotation: = episodes
+
+      
+
+   .. py:attribute:: Sequences
+      :annotation: = sequences
+
+      
+
+
+.. py:class:: AnimSoftwares
+
+   .. py:attribute:: Maya
+      :annotation: = maya
+
+      
+
+   .. py:attribute:: Softimage
+      :annotation: = softimage
+
+      
+
+
+.. py:class:: WShow(project, active=True, anim_software='', title='', description='', thumbnail='')
+
+   .. py:method:: fetch_entry(project, show_collection=None)
+      :classmethod:
+
+
+   .. py:method:: entry_exists(_id, show_collection=None)
+      :staticmethod:
+
+
+   .. py:method:: get_id()
+
+
+   .. py:method:: serialize()
+
+
+
+.. py:class:: WEpisode(project, name, title='', description='', thumbnail='')
+
+   .. py:method:: fetch_entry(project, episode, ep_collection=None)
+      :classmethod:
+
+
+   .. py:method:: id(project, episode)
+      :staticmethod:
+
+
+   .. py:method:: entry_exists(_id, ep_collection=None)
+      :staticmethod:
+
+
+   .. py:method:: get_id()
+
+
+   .. py:method:: serialize()
+
+
+
+.. py:class:: WSequence(project, episode, name, description='', thumbnail='')
+
+   .. py:method:: fetch_entry(project, episode, sequence, seq_collection=None)
+      :classmethod:
+
+
+   .. py:method:: id(project, episode, sequence)
+      :staticmethod:
+
+
+   .. py:method:: entry_exists(_id, seq_collection=None)
+      :staticmethod:
+
+
+   .. py:method:: get_id()
+
+
+   .. py:method:: serialize()
+
+
+
+.. py:function:: string_to_digit(txt)
+
+
+.. py:function:: natural_keys(txt)
+
+
+.. py:function:: order_dict_by_name(dictionary)
+
+
+.. py:function:: get_anim_software(project)
+
+
+.. py:function:: connect_to_db(hosts=(), replica_set_name='rs0', read_pref=None, db_name='test-main-db', collection_name=Collections.Shows)
+
+
+.. py:function:: camel_case_to_title(word)
+
+
+.. py:function:: get_episode_title(project, episode_name)
+
+
+.. py:function:: write_all_from_disc(verbose=True)
+
+
+.. py:function:: write_from_disc(project, verbose=True)
+
+
+.. py:function:: generic_add_entry(wrapper, db_collection, verbose=False)
+
+
+.. py:function:: generic_add_entries(wrappers, db_collection_name, verbose=False)
+
+
+.. py:function:: fetch_show_data(project, batch_size=1000)
+
+

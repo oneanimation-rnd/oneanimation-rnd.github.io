@@ -1,0 +1,72 @@
+ :py:mod:`oa.rigging.tools.weak_ref_tool.weak_ref_tool`
+==============================================================================================================
+
+.. py:module:: oa.rigging.tools.weak_ref_tool.weak_ref_tool
+
+.. autoapi-nested-parse::
+
+   Simple tool to create weak references.
+   Weak references are pointers to an object via attribute, so it's not name dependent.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weak_ref_tool.weak_ref_tool.WeakRefTool
+
+
+
+
+.. py:class:: WeakRefTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = weakRefTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: container_on_click()
+
+
+   .. py:method:: weak_ref_on_click()
+
+
+   .. py:method:: create_on_click()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: get_short_name(obj)
+
+
+   .. py:method:: create_weak_ref(container_obj, weak_ref_obj, attr)
+
+
+

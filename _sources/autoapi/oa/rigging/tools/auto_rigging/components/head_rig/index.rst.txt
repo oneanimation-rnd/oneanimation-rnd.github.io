@@ -1,0 +1,22 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.components.head_rig`
+========================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.components.head_rig
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.components.head_rig.rig
+
+
+
+.. py:function:: rig(root_nul, neck, head, head_tip, rig_scale=1, control_color=25, stretchy=False)
+
+

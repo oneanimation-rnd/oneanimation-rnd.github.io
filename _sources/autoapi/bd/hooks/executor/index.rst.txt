@@ -1,0 +1,70 @@
+ :py:mod:`bd.hooks.executor`
+========================================================
+
+.. py:module:: bd.hooks.executor
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.hooks.executor.HookExecutor
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.hooks.executor.LOGGER
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:class:: HookExecutor(hook_items, *args, **kwargs)
+
+   Bases: :py:obj:`object`
+
+   This class allows user to choose how to execute the hooks.
+
+   Constructor.
+
+   :param hook_items:
+   :type hook_items: list[bd.hooks.registry.HookItem]
+   :param \*args: Variable length argument list.
+   :param \*\*kwargs: Arbitrary keyword arguments.
+
+   .. py:method:: all(result_callback=None, safe_execute=False)
+
+      Execute all the hook callbacks sequentially.
+
+      :param result_callback: A callback to pass
+                              each hook item execution result into.
+      :type result_callback: callable
+      :param safe_execute:
+      :type safe_execute: bool
+
+      :raises CallbackExecutionError: Raised if safe_execute is False and any error
+          occurs during the callback execution.
+
+
+   .. py:method:: one()
+
+      Execute only the first hook callback.
+
+      :returns: Return value from the executed callback.
+
+      :raises CallbackExecutionError: Raised on any error
+          during callback execution.
+
+
+

@@ -1,0 +1,52 @@
+ :py:mod:`oa.asset.tools.set_dress.reference_wrapper`
+==========================================================================================================
+
+.. py:module:: oa.asset.tools.set_dress.reference_wrapper
+
+.. autoapi-nested-parse::
+
+   Collects data from a reference and its nested references and adds it to a wrapper.
+   This makes it easier to traverse assets when doing caching or writing the scene's descriptor.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.reference_wrapper.ReferenceWrapper
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.reference_wrapper.flatten_ref_wrappers
+
+
+
+.. py:class:: ReferenceWrapper(ref_path, parent_ref=None)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: collect_data(ref_path)
+
+
+
+.. py:function:: flatten_ref_wrappers(ref_wrappers)
+
+   A generator so that it's possible to loop through a wrapper and all of its children at once
+
+   :param ref_wrappers: Pass the top wrapper in a list.
+   :type ref_wrappers: ReferenceWrapper[]
+
+

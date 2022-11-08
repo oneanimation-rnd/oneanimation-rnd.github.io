@@ -1,0 +1,38 @@
+ :py:mod:`oa.rigging.tools.skin_import_export.maya_progress_bar`
+================================================================================================================================
+
+.. py:module:: oa.rigging.tools.skin_import_export.maya_progress_bar
+
+.. autoapi-nested-parse::
+
+   Author: Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.skin_import_export.maya_progress_bar.MayaProgressBar
+
+
+
+
+.. py:class:: MayaProgressBar(arrayLength, name='Processing')
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(type, value, traceback)
+
+
+   .. py:method:: next()
+
+
+

@@ -1,0 +1,38 @@
+ :py:mod:`oa.asset.tools.ref_edits_manager.utils`
+==================================================================================================
+
+.. py:module:: oa.asset.tools.ref_edits_manager.utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.ref_edits_manager.utils.load_pixmap
+   oa.asset.tools.ref_edits_manager.utils.export_edits
+   oa.asset.tools.ref_edits_manager.utils.clean_ref_edits_contents
+   oa.asset.tools.ref_edits_manager.utils.apply_edits_to_ref
+   oa.asset.tools.ref_edits_manager.utils.get_qstringlistmodel
+
+
+
+.. py:function:: load_pixmap(file_name, width=None, height=None, mode=QtCore.Qt.SmoothTransformation)
+
+
+.. py:function:: export_edits(ref_path, output_dir)
+
+
+.. py:function:: clean_ref_edits_contents(edits_path)
+
+
+.. py:function:: apply_edits_to_ref(ref_path, edits_path)
+
+
+.. py:function:: get_qstringlistmodel()
+
+

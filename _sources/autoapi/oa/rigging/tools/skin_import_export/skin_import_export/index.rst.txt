@@ -1,0 +1,225 @@
+ :py:mod:`oa.rigging.tools.skin_import_export.skin_import_export`
+==================================================================================================================================
+
+.. py:module:: oa.rigging.tools.skin_import_export.skin_import_export
+
+.. autoapi-nested-parse::
+
+   Author:
+       Jason Labbe
+
+   Info:
+       Uses internal file format (skin) to import and export skin weights.
+       Dual-quaternion weights are supported.
+
+   Skin file format:
+       Uses cPickle to dump nested dictionaries to a file.
+
+       {
+           "version": float
+           "object": string
+
+           "skinCluster": {
+               "vert_count": int,
+               "influence_count": int,
+               "max_influences": int,
+               "skinning_method": int,
+               "dqs_support_non_rigid": bool
+           }
+
+           "influences": {
+               inf_id: {
+                   "name": string,
+                   "world_matrix": float[]
+               }
+           }
+
+           "verts": {
+               vert_index: {
+                   "weights": {inf_name: weight..},
+                   "world_pos": float[]},
+                   "dq": float
+               }
+           }
+       }
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.skin_import_export.skin_import_export.launch_file_picker
+   oa.rigging.tools.skin_import_export.skin_import_export.to_m_object
+   oa.rigging.tools.skin_import_export.skin_import_export.get_distance
+   oa.rigging.tools.skin_import_export.skin_import_export.get_selected_verts
+   oa.rigging.tools.skin_import_export.skin_import_export.collect_deformers
+   oa.rigging.tools.skin_import_export.skin_import_export.get_skin_cluster
+   oa.rigging.tools.skin_import_export.skin_import_export.get_influence_ids
+   oa.rigging.tools.skin_import_export.skin_import_export.get_influence_by_name
+   oa.rigging.tools.skin_import_export.skin_import_export.build_skin_cluster
+   oa.rigging.tools.skin_import_export.skin_import_export.get_skin_data
+   oa.rigging.tools.skin_import_export.skin_import_export.set_skin_weights
+   oa.rigging.tools.skin_import_export.skin_import_export.export_skin
+   oa.rigging.tools.skin_import_export.skin_import_export.export_all_skin
+   oa.rigging.tools.skin_import_export.skin_import_export.import_skin
+   oa.rigging.tools.skin_import_export.skin_import_export.import_all_skin
+   oa.rigging.tools.skin_import_export.skin_import_export.run_export_tool
+   oa.rigging.tools.skin_import_export.skin_import_export.run_export_all_tool
+   oa.rigging.tools.skin_import_export.skin_import_export.run_import_tool
+   oa.rigging.tools.skin_import_export.skin_import_export.run_import_all_tool
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.skin_import_export.skin_import_export.last_browsing_path
+
+
+.. py:data:: last_browsing_path
+   
+
+   
+
+.. py:function:: launch_file_picker(file_mode, caption, ext='skin', name=None)
+
+
+.. py:function:: to_m_object(obj)
+
+   Wraps supplied object to an MObject.
+
+
+.. py:function:: get_distance(pos_1, pos_2)
+
+   Returns the distance between two points.
+
+   :param pos_1:
+   :type pos_1: float[]
+   :param pos_2:
+   :type pos_2: float[]
+
+
+.. py:function:: get_selected_verts()
+
+   Extracts a list of vertex numbers from the selection.
+
+
+.. py:function:: collect_deformers(obj)
+
+   Collects a list of the object's deformers with proper history order.
+
+
+.. py:function:: get_skin_cluster(obj)
+
+   Returns the supplied object's skinCluster.
+
+
+.. py:function:: get_influence_ids(skin_cluster)
+
+   Collects all influences and its ids from the supplied skinCluster.
+
+   :returns: {id(int):inf_name(string)}
+   :rtype: A dictionary
+
+
+.. py:function:: get_influence_by_name(name)
+
+   Searches scene for object with the supplied name.
+
+   :returns: The object's name or None if it doesn't exist.
+
+
+.. py:function:: build_skin_cluster(obj, skin_jnts, max_infs=5, skin_method=0, name='skinCluster')
+
+   Creates a skinCluster with supplied joints.
+
+   :param obj: Object to add skinCluster to.
+   :type obj: string
+   :param skin_jnts: List of joints to skin with.
+   :type skin_jnts: string[]
+   :param max_infs: Number of max influences skinCluster.
+   :type max_infs: int
+   :param skin_method: Skinning method of skinCluster.
+   :type skin_method: int
+   :param name: The name of the new sking cluster.
+   :type name: string
+
+   :returns: The name of the new skinCluster.
+
+
+.. py:function:: get_skin_data(skin_cluster)
+
+   Re-factored code by Tyler Thornock (www.charactersetup.com/tutorial_skinWeights.html)
+   Faster than cmds.skinPercent() and more practical than OpenMaya.MFnSkinCluster()
+
+   :param skin_cluster: A skinCluster's name.
+   :type skin_cluster: string
+
+   :returns: A dictionary.
+             {vert_index: {"weights": {inf_name: weight_value...}, "dq": float}}
+
+
+.. py:function:: set_skin_weights(obj, skin_weights)
+
+   Sets weights to all vertexes.
+
+   :param obj:
+   :type obj: string
+   :param skin_weights: {vert_index: {"weights": {inf_name: weight_value..}, "dq": float}}
+   :type skin_weights: dict[]
+
+
+.. py:function:: export_skin(obj, file_path)
+
+   Exports skin weights to a file.
+
+   :param obj: An object's name.
+   :type obj: string
+   :param file_path: An absolute path to save weights to.
+   :type file_path: string
+
+
+.. py:function:: export_all_skin(output_dir)
+
+
+.. py:function:: import_skin(obj, file_path, use_world_positions=False, vert_filter=[], threshold=0.05)
+
+   Imports skin weights from a file.
+
+   :param obj: An object's name.
+   :type obj: string
+   :param file_path: An absolute path to save weights to.
+   :type file_path: string
+   :param use_world_positions: False=loads by point order, True=loads by world positions
+   :type use_world_positions: boolean
+   :param vert_filter: List of vertex numbers to import weights on. If empty it will import all all vertexes.
+   :type vert_filter: int[]
+   :param threshold: Used in loading world positions only.
+                     Higher value=Loads faster and less accurate weights
+                     Lower value=Loads slower and more accurate weights.
+   :type threshold: float
+
+
+.. py:function:: import_all_skin(input_dir, use_world_positions)
+
+
+.. py:function:: run_export_tool()
+
+
+.. py:function:: run_export_all_tool()
+
+
+.. py:function:: run_import_tool(use_world_positions)
+
+
+.. py:function:: run_import_all_tool(use_world_positions)
+
+

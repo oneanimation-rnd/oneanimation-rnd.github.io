@@ -1,0 +1,132 @@
+ :py:mod:`oa.animation.tools.offset_animation.offset_animation_utils`
+==========================================================================================================================================
+
+.. py:module:: oa.animation.tools.offset_animation.offset_animation_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.offset_animation.offset_animation_utils.UndoStack
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.offset_animation.offset_animation_utils.popup_error_msg
+   oa.animation.tools.offset_animation.offset_animation_utils.create_offset_ctrl
+   oa.animation.tools.offset_animation.offset_animation_utils.xform_to_matrix
+   oa.animation.tools.offset_animation.offset_animation_utils.matrix_to_xform
+   oa.animation.tools.offset_animation.offset_animation_utils.get_keys_time
+   oa.animation.tools.offset_animation.offset_animation_utils.remove_offset_setup
+   oa.animation.tools.offset_animation.offset_animation_utils.get_anim_lib_objs
+   oa.animation.tools.offset_animation.offset_animation_utils.start_edit
+   oa.animation.tools.offset_animation.offset_animation_utils.cancel_edit
+   oa.animation.tools.offset_animation.offset_animation_utils.commit_edit
+   oa.animation.tools.offset_animation.offset_animation_utils.offset_space_all
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.offset_animation.offset_animation_utils.offset_ctrl
+   oa.animation.tools.offset_animation.offset_animation_utils.ref_xform
+   oa.animation.tools.offset_animation.offset_animation_utils.nsp
+
+
+.. py:data:: offset_ctrl
+   :annotation: = offset_anim_CTRL
+
+   
+
+.. py:data:: ref_xform
+   
+
+   
+
+.. py:data:: nsp
+   
+
+   
+
+.. py:class:: UndoStack(name='action')
+
+   Includes all operations as a single chunk so Maya can undo/redo all at once.
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(type, value, traceback)
+
+
+
+.. py:function:: popup_error_msg(parent, title, msg, print_traceback=True)
+
+
+.. py:function:: create_offset_ctrl()
+
+
+.. py:function:: xform_to_matrix(xform)
+
+   Converts a list of floats to a matrix wrapper.
+
+   :param xform: A transform using cmds.xform
+
+   :returns: A MTransformationMatrix wrapper.
+
+
+.. py:function:: matrix_to_xform(mmatrix)
+
+   Converts an MMatrix wrapper to a list of floats.
+
+   :param mmatrix: An MMatrix wrapper.
+
+   :returns: A list that represents the transform.
+
+
+.. py:function:: get_keys_time(obj, attrs)
+
+   Collects frame numbers that keys are on.
+
+   :param obj: Object to check with.
+   :param attrs: A list of attribute names to check with.
+
+   :returns: A list of frame numbers.
+
+
+.. py:function:: remove_offset_setup()
+
+
+.. py:function:: get_anim_lib_objs(nsp)
+
+
+.. py:function:: start_edit()
+
+
+.. py:function:: cancel_edit()
+
+
+.. py:function:: commit_edit(start_frame, end_frame)
+
+
+.. py:function:: offset_space_all(start_frame, end_frame, offset_objs, offset_xform)
+
+   Applies an offset on supplied controls so they can append to space.
+
+   :param start_frame: Frame to begin modifying keys from.
+   :param end_frame: Frame to end modifying keys to.
+   :param offset_objs: Objects from the asset's anim lib set to transform and offset.
+   :param offset_xform: A list of floats to define a transform to offset from.
+
+

@@ -1,0 +1,123 @@
+ :py:mod:`oa.rnd.tools.batch_asset_replacer.widgets.mapping_widget`
+======================================================================================================================================
+
+.. py:module:: oa.rnd.tools.batch_asset_replacer.widgets.mapping_widget
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.batch_asset_replacer.widgets.mapping_widget.MappingWidget
+   oa.rnd.tools.batch_asset_replacer.widgets.mapping_widget.MappingListView
+   oa.rnd.tools.batch_asset_replacer.widgets.mapping_widget.MappingItem
+   oa.rnd.tools.batch_asset_replacer.widgets.mapping_widget.MappingListModel
+
+
+
+
+.. py:class:: MappingWidget(orientation=QtCore.Qt.Horizontal, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: sync_selection(row, view)
+
+
+   .. py:method:: left_on_selection_changed(row)
+
+
+   .. py:method:: right_on_selection_changed(row)
+
+
+   .. py:method:: left_move_up_on_clicked()
+
+
+   .. py:method:: left_move_down_on_clicked()
+
+
+   .. py:method:: left_remove_on_clicked()
+
+
+   .. py:method:: left_remove_all_on_clicked()
+
+
+   .. py:method:: right_move_up_on_clicked()
+
+
+   .. py:method:: right_move_down_on_clicked()
+
+
+   .. py:method:: right_remove_on_clicked()
+
+
+   .. py:method:: right_remove_all_on_clicked()
+
+
+
+.. py:class:: MappingListView(mapping_type, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListView`
+
+   .. py:attribute:: SOURCE_TYPE
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: TARGET_TYPE
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: MOVE_UP
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: MOVE_DOWN
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: selection_changed
+      
+
+      
+
+   .. py:method:: paintEvent(paint_event)
+
+      Shows tooltip when it's empty.
+
+
+   .. py:method:: selectionChanged(selected, deselected)
+
+
+   .. py:method:: add_items(items, no_duplicates=False)
+
+
+   .. py:method:: move(move_dir)
+
+
+   .. py:method:: remove_selection()
+
+
+   .. py:method:: select(row)
+
+
+
+.. py:class:: MappingItem(id, thumbnail)
+
+   Bases: :py:obj:`PySide2.QtGui.QStandardItem`
+
+
+.. py:class:: MappingListModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtGui.QStandardItemModel`
+
+   .. py:method:: data(index, role)
+
+
+

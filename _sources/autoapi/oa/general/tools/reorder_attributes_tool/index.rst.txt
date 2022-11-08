@@ -1,0 +1,57 @@
+ :py:mod:`oa.general.tools.reorder_attributes_tool`
+======================================================================================================
+
+.. py:module:: oa.general.tools.reorder_attributes_tool
+
+.. autoapi-nested-parse::
+
+   Reorder attributes in Maya.
+   .. figure:: /_images/reorderAttributesExample.png
+      :align: center
+
+   `Link to Video <https://vimeo.com/210495749>`_
+   Installation
+   ============
+   * Extract the content of the .rar file anywhere on disk.
+   * Drag the reorderAttributes.mel file in Maya to permanently install the script.
+   .. note::
+
+      A button called Reorder Attributes will be added to the Channel Box ->
+      Edit menu. Clicking this button will open up an ui that will allow the user to
+      drag and drop the attributes to reorder. Attributes are deleted in the new
+      order and the undo commands is then ran to redo the attributes in the order
+      preferred. There is an option to sort the attribute list in alphabetical
+      order by right clicking the list to display the order menu.
+      A thank you too Nick Hughes for showing me the power of the undo command
+      and how it can be used to sort attributes.
+
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   reorder_attributes_ui/index.rst
+   utils/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: __author__
+   :annotation: = Robert Joosten
+
+   
+
+.. py:data:: __version__
+   :annotation: = 0.9.5
+
+   
+
+.. py:data:: __email__
+   :annotation: = rwm.joosten@gmail.com
+
+   
+

@@ -1,0 +1,181 @@
+ :py:mod:`oa.animation.tools.spring_tool.spring_utils`
+============================================================================================================
+
+.. py:module:: oa.animation.tools.spring_tool.spring_utils
+
+.. autoapi-nested-parse::
+
+   Instead of a traditional live utility node this simulates the dynamics in memory then bakes it to keyframes.
+   The physics model is simply a steering behavior where it tries to seek its original position (seeking steering behavior).
+   Since rotation in 3d space can be a pandora box of pain, it's simply mapping the position's deltas to its rotation. It currently doesn't support dynamics in twisting.
+   A scene's scale plays a huge role. Settings that work in a small scene scale will likely need to be tweaked to work in a bigger scene scale.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.spring_tool.spring_utils.UndoStack
+   oa.animation.tools.spring_tool.spring_utils.DynamicObj
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.spring_tool.spring_utils.get_icon
+   oa.animation.tools.spring_tool.spring_utils.connect_to_db
+   oa.animation.tools.spring_tool.spring_utils.get_database_entry
+   oa.animation.tools.spring_tool.spring_utils.list_presets
+   oa.animation.tools.spring_tool.spring_utils.create_preset
+   oa.animation.tools.spring_tool.spring_utils.remove_preset
+   oa.animation.tools.spring_tool.spring_utils.rename_preset
+   oa.animation.tools.spring_tool.spring_utils.update_preset_values
+   oa.animation.tools.spring_tool.spring_utils.add_dyn_obj_to_preset
+   oa.animation.tools.spring_tool.spring_utils.remove_dyn_obj_from_preset
+   oa.animation.tools.spring_tool.spring_utils.get_asset_id
+   oa.animation.tools.spring_tool.spring_utils.xform_to_matrix
+   oa.animation.tools.spring_tool.spring_utils.remap
+   oa.animation.tools.spring_tool.spring_utils.lerp
+   oa.animation.tools.spring_tool.spring_utils.clamp
+   oa.animation.tools.spring_tool.spring_utils.get_shot_ranges
+   oa.animation.tools.spring_tool.spring_utils.get_range_by_priority
+   oa.animation.tools.spring_tool.spring_utils.sim_preset
+   oa.animation.tools.spring_tool.spring_utils.sim_objects
+
+
+
+.. py:function:: get_icon(file_name, width=None, height=None)
+
+
+.. py:function:: connect_to_db(hosts=(), replica_preset='rs0', read_pref=None, db_name='maya', collection_name='dyn_presets')
+
+
+.. py:function:: get_database_entry(asset_id=None, collection=None)
+
+
+.. py:function:: list_presets()
+
+
+.. py:function:: create_preset(asset_id, preset_name)
+
+
+.. py:function:: remove_preset(asset_id, preset_name, collection=None)
+
+
+.. py:function:: rename_preset(asset_id, old_name, new_name, collection=None)
+
+
+.. py:function:: update_preset_values(asset_id, preset, objs, collection=None, **dyn_settings)
+
+
+.. py:function:: add_dyn_obj_to_preset(asset_id, preset, translate, rotate, translate_mult, rotate_mult, settle, max_speed, air_drag, limit, objs=None, collection=None)
+
+
+.. py:function:: remove_dyn_obj_from_preset(asset_id, preset, objs, collection=None)
+
+
+.. py:function:: get_asset_id(obj)
+
+
+.. py:function:: xform_to_matrix(xform)
+
+
+.. py:function:: remap(value, in_min, in_max, out_min, out_max)
+
+
+.. py:function:: lerp(blend, value_1, value_2)
+
+
+.. py:function:: clamp(value, min_value, max_value)
+
+
+.. py:function:: get_shot_ranges(frame)
+
+
+.. py:function:: get_range_by_priority()
+
+   Uses different methods in order to find what range it should return.
+   1st checks if the user has a selected range in the timeline.
+   2nd checks if the user is within a shot's range.
+   If all else fails it returns the timeline's min/max range.
+
+
+.. py:function:: sim_preset(preset, namespace=None)
+
+
+.. py:function:: sim_objects(dyn_objs, start_frame, end_frame, euler_filter, steps=1, anim_layer=None, progress_bar=True)
+
+   Runs a sim on the supplied objects and bakes motion to keyframes.
+
+   :param dyn_objs: A list of objects to sim. Order does matter and it makes sense to sim from the top of the hierarchy to the bottom.
+   :type dyn_objs: DynamicObj[]
+   :param start_frame:
+   :type start_frame: int
+   :param end_frame:
+   :type end_frame: int
+   :param euler_filter: Run an euler filter on the anim curves.
+   :type euler_filter: bool
+   :param steps: Determines when to set a keyframe. A values of 3 would set a keyframe every 3 frames.
+   :type steps: int
+   :param anim_layer: A name of an animLayer to create keyframes on. If it's None, it will keyframe directly on the object.
+   :type anim_layer: string
+   :param progress_bar: Displays progress bar in the main window.
+   :type progress_bar: bool
+
+
+.. py:class:: UndoStack(name='action')
+
+   Bases: :py:obj:`object`
+
+   All operations are wrapped as a single chunk so Maya can undo/redo all at once.
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(exc_type, exc_val, exc_tb)
+
+
+
+.. py:class:: DynamicObj(obj, translate, rotate, translate_mult, rotate_mult, settle, max_speed, air_drag, limit, max_rot_angle)
+
+   Bases: :py:obj:`object`
+
+   :param translate: Apply dynamics onto translation channels.
+   :type translate: bool
+   :param rotate: Apply dynamics onto rotation channels.
+   :type rotate: bool
+   :param translate_mult: A multiplier for translation.
+   :type translate_mult: float
+   :param rotate_mult: A multiplier for rotation.
+   :type rotate_mult: float
+   :param max_rot_angle: The amount of degrees that the rotation is not allowed to exceed.
+   :type max_rot_angle: float
+   :param settle: A value between 0 - 1 (takes a while to settle, settles easily).
+   :type settle: float
+   :param max_speed: The maximum distance it's allowed to travel per frame.
+   :type max_speed: float
+   :param air_drag: A value between 0 - 1 (no drag, lots of drag).
+   :type air_drag: float
+   :param limit: A value betwen 0 - 1 (limited range of motion, lots of range of motion).
+   :type limit: float
+
+   .. py:method:: sim(start_frame, end_frame, steps, anim_layer)
+
+
+   .. py:method:: update_obj(frame, anim_layer)
+
+      Takes the values from the same and applies keyframes onto the object.
+
+
+

@@ -1,0 +1,132 @@
+ :py:mod:`oa.asset.libs.reference_tags`
+==============================================================================
+
+.. py:module:: oa.asset.libs.reference_tags
+
+.. autoapi-nested-parse::
+
+   Manages unique tags on references for lighting and rendering.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.reference_tags.ReferenceTags
+
+
+
+
+.. py:class:: ReferenceTags
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: before_create_ref_id
+      
+
+      
+
+   .. py:attribute:: after_create_ref_id
+      
+
+      
+
+   .. py:attribute:: before_import_id
+      
+
+      
+
+   .. py:attribute:: after_import_id
+      
+
+      
+
+   .. py:attribute:: Tag
+      :annotation: = referenceId
+
+      
+
+   .. py:method:: add_callbacks()
+
+
+   .. py:method:: remove_callbacks()
+
+
+   .. py:method:: get_tag(ref_node)
+
+      Gets an id from a reference node if it exists.
+
+      :param ref_node: A reference node.
+      :type ref_node: string
+
+      :returns: The node's reference id.
+
+
+   .. py:method:: set_tag(ref_node, force=False)
+
+      Tags reference node with a unique id.
+
+      :param ref_node: A reference node to tag
+      :type ref_node: string
+      :param force: Re-assigns a new id even if one already exists
+      :type force: bool
+
+      :returns: New reference id if tagging is successful.
+
+
+   .. py:method:: on_before_create_ref(arg)
+
+      Collects references and their ids.
+      Called before a reference is being created (excluding loading).
+      Also sets a tag with any reference node that isn't tagged yet.
+
+
+   .. py:method:: add_cb_before_create_ref()
+
+
+   .. py:method:: remove_cb_before_create_ref()
+
+
+   .. py:method:: on_after_create_ref(arg)
+
+      Called after a reference is being created (excluding loading).
+      After creating a new reference, tag the new reference nodes.
+
+
+   .. py:method:: add_cb_after_create_ref()
+
+
+   .. py:method:: remove_cb_after_create_ref()
+
+
+   .. py:method:: on_before_import(arg)
+
+      This is called before an import is about to happen.
+
+
+   .. py:method:: add_cb_before_import()
+
+
+   .. py:method:: remove_cb_before_import()
+
+
+   .. py:method:: on_after_import(arg)
+
+      This is called after an import is done.
+
+
+   .. py:method:: add_cb_after_import()
+
+
+   .. py:method:: remove_cb_after_import()
+
+
+

@@ -1,0 +1,118 @@
+ :py:mod:`oa.asset.tools.ref_edits_manager.widgets.edits_list_view`
+======================================================================================================================================
+
+.. py:module:: oa.asset.tools.ref_edits_manager.widgets.edits_list_view
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.ref_edits_manager.widgets.edits_list_view.EditsListView
+   oa.asset.tools.ref_edits_manager.widgets.edits_list_view.EditsProxyModel
+   oa.asset.tools.ref_edits_manager.widgets.edits_list_view.EditsListModel
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.ref_edits_manager.widgets.edits_list_view.QStringListModel
+
+
+.. py:data:: QStringListModel
+   
+
+   
+
+.. py:class:: EditsListView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListView`
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: _on_double_clicked(*args)
+
+
+   .. py:method:: _collect_indexes_by_pattern(pattern)
+
+
+   .. py:method:: load_file_contents(path)
+
+
+   .. py:method:: select_by_pattern(pattern)
+
+
+   .. py:method:: keep_selected_edits()
+
+
+   .. py:method:: remove_selected_edits()
+
+
+   .. py:method:: filter_by_pattern(pattern)
+
+
+   .. py:method:: set_long_names(enabled)
+
+
+   .. py:method:: commit_changes()
+
+
+   .. py:method:: total_row_rount()
+
+
+
+.. py:class:: EditsProxyModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QSortFilterProxyModel`
+
+   .. py:method:: filterAcceptsRow(row, parent_index)
+
+
+
+.. py:class:: EditsListModel(parent)
+
+   Bases: :py:obj:`QStringListModel`
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: _clean_row(row)
+
+
+   .. py:method:: is_line_secured(line)
+
+
+   .. py:method:: _identify_secured_rows()
+
+
+   .. py:method:: get_clean_contents(row)
+
+
+   .. py:method:: set_long_names(enabled)
+
+
+   .. py:method:: keep_row(row)
+
+
+   .. py:method:: add_row_to_remove(row)
+
+
+   .. py:method:: toggle_rows_to_remove(rows)
+
+
+   .. py:method:: load_file_contents(edits_path)
+
+
+   .. py:method:: get_contents_with_changes()
+
+
+

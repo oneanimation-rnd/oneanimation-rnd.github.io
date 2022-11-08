@@ -1,0 +1,53 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.classes.hotkey`
+============================================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.classes.hotkey
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.classes.hotkey.Hotkey
+
+
+
+
+.. py:class:: Hotkey(caption, key, func, ctrl=False, shift=False, alt=False)
+
+   .. py:attribute:: Defaults
+      
+
+      
+
+   .. py:method:: serialize_key_event(key_event)
+      :staticmethod:
+
+
+   .. py:method:: create_from_default(caption, func)
+      :classmethod:
+
+
+   .. py:method:: key_code()
+
+
+   .. py:method:: key_to_string()
+
+
+   .. py:method:: matches(other_hotkey)
+
+
+   .. py:method:: reset_to_default()
+
+
+   .. py:method:: serialize()
+
+
+   .. py:method:: copy()
+
+
+

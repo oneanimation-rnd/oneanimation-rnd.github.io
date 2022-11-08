@@ -1,0 +1,49 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.auto_rigs.face`
+==============================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.auto_rigs.face
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.auto_rigs.face.rig
+   oa.rigging.tools.auto_rigging.auto_rigs.face.get_facial_template
+   oa.rigging.tools.auto_rigging.auto_rigs.face.get_message_attrs
+   oa.rigging.tools.auto_rigging.auto_rigs.face.attrs_to_weak_refs
+   oa.rigging.tools.auto_rigging.auto_rigs.face.setup_rig_scale
+
+
+
+.. py:function:: rig()
+
+   Matches template's rig to its guide rig.
+
+
+.. py:function:: get_facial_template()
+
+   Gets and returns the facial's template's node.
+
+
+.. py:function:: get_message_attrs(obj)
+
+   Gets and returns a list of message type attribute names.
+
+
+.. py:function:: attrs_to_weak_refs(guide_nul)
+
+   Converts attribute strings to weak references.
+   Just needed this initially to setup the template.
+
+
+.. py:function:: setup_rig_scale(facial_template, delete_objs=False)
+
+   This will update the squash and stretch settings to work with the new head scale.
+
+

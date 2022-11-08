@@ -1,0 +1,79 @@
+ :py:mod:`oa.rigging.tools.edit_skin.edit_skin`
+==============================================================================================
+
+.. py:module:: oa.rigging.tools.edit_skin.edit_skin
+
+.. autoapi-nested-parse::
+
+   Author: Jason Labbe
+
+   Run editSkin() on a mesh with a skinCluster to enable edit mode. The skinCluster and constraints will be disabled so you can tweak joint positions.
+   Press ctrl+alt+q to exit edit mode and restore everything.
+
+   [[ TO DO ]]
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.edit_skin.edit_skin.MayaNode
+   oa.rigging.tools.edit_skin.edit_skin.EditSkinTool
+
+
+
+
+.. py:class:: MayaNode(longName)
+
+   Bases: :py:obj:`maya.OpenMaya.MDagPath`
+
+   .. py:method:: getName()
+
+
+
+.. py:class:: EditSkinTool
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: editMode
+      :annotation: = False
+
+      
+
+   .. py:attribute:: meshObj
+      
+
+      
+
+   .. py:attribute:: constraintObjs
+      
+
+      
+
+   .. py:method:: reset()
+
+
+   .. py:method:: getSkinCluster(obj)
+
+
+   .. py:method:: getHudString()
+
+
+   .. py:method:: editSkin(obj=None, includeConstraints=True)
+
+
+   .. py:method:: restoreSkin()
+
+
+   .. py:method:: editConstraints()
+
+
+   .. py:method:: restoreConstraints()
+
+
+

@@ -1,0 +1,545 @@
+ :py:mod:`oa.anim_library.tool.utils.images2gif`
+================================================================================================
+
+.. py:module:: oa.anim_library.tool.utils.images2gif
+
+.. autoapi-nested-parse::
+
+   Module images2gif (https://grass.osgeo.org/grass80/manuals/libpython/_modules/imaging/images2gif.html)
+
+   Provides functionality for reading and writing animated GIF images.
+   Use writeGif to write a series of numpy arrays or PIL images as an
+   animated GIF. Use readGif to read an animated gif as a series of numpy
+   arrays.
+
+   Note that since July 2004, all patents on the LZW compression patent have
+   expired. Therefore the GIF format may now be used freely.
+
+   Acknowledgements:
+
+   Many thanks to Ant1 for:
+
+   * noting the use of "palette=PIL.Image.ADAPTIVE", which significantly
+     improves the results.
+   * the modifications to save each image with its own palette, or optionally
+     the global palette (if its the same).
+
+   Many thanks to Marius van Voorden for porting the NeuQuant quantization
+   algorithm of Anthony Dekker to Python (See the NeuQuant class for its
+   license).
+
+   Many thanks to Alex Robinson for implementing the concept of subrectangles,
+   which (depening on image content) can give a very significant reduction in
+   file size.
+
+   This code is based on gifmaker (in the scripts folder of the source
+   distribution of PIL)
+
+
+   Useful links:
+
+     * http://tronche.com/computer-graphics/gif/
+     * http://en.wikipedia.org/wiki/Graphics_Interchange_Format
+     * http://www.w3.org/Graphics/GIF/spec-gif89a.txt
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.utils.images2gif.GifWriter
+   oa.anim_library.tool.utils.images2gif.NeuQuant
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.utils.images2gif.get_cKDTree
+   oa.anim_library.tool.utils.images2gif.checkImages
+   oa.anim_library.tool.utils.images2gif.intToBin
+   oa.anim_library.tool.utils.images2gif.writeGif
+   oa.anim_library.tool.utils.images2gif.writeGifPillow
+   oa.anim_library.tool.utils.images2gif.writeGifVisvis
+   oa.anim_library.tool.utils.images2gif.readGif
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.utils.images2gif.pillow
+   oa.anim_library.tool.utils.images2gif.np
+
+
+.. py:data:: pillow
+   :annotation: = True
+
+   
+
+.. py:data:: np
+   
+
+   
+
+.. py:function:: get_cKDTree()
+
+
+.. py:function:: checkImages(images)
+
+   checkImages(images)
+   Check numpy images and correct intensity range etc.
+   The same for all movie formats.
+
+   :param images:
+
+
+.. py:function:: intToBin(i)
+
+   Integer to two bytes
+
+
+.. py:class:: GifWriter
+
+   Class that contains methods for helping write the animated GIF file.
+
+   .. py:method:: getheaderAnim(im)
+
+      Get animation header. To replace PILs getheader()[0]
+
+      :param im:
+
+
+   .. py:method:: getImageDescriptor(im, xy=None)
+
+      Used for the local color table properties per image.
+      Otherwise global color table applies to all frames irrespective of
+      whether additional colors comes in play that require a redefined
+      palette. Still a maximum of 256 color per frame, obviously.
+
+      Written by Ant1 on 2010-08-22
+      Modified by Alex Robinson in Janurari 2011 to implement subrectangles.
+
+      :param im:
+      :param xy:
+
+
+   .. py:method:: getAppExt(loops=float('inf'))
+
+      Application extension. This part specifies the amount of loops.
+      If loops is 0 or inf, it goes on infinitely.
+
+      :param float loops:
+
+
+   .. py:method:: getGraphicsControlExt(duration=0.1, dispose=2)
+
+      Graphics Control Extension. A sort of header at the start of
+      each image. Specifies duration and transparency.
+
+      Dispose:
+
+        * 0 - No disposal specified.
+        * 1 - Do not dispose. The graphic is to be left in place.
+        * 2 - Restore to background color. The area used by the graphic
+          must be restored to the background color.
+        * 3 - Restore to previous. The decoder is required to restore the
+          area overwritten by the graphic with what was there prior to
+          rendering the graphic.
+        * 4-7 -To be defined.
+
+      :param double duration:
+      :param dispose:
+
+
+   .. py:method:: handleSubRectangles(images, subRectangles)
+
+      Handle the sub-rectangle stuff. If the rectangles are given by the
+      user, the values are checked. Otherwise the subrectangles are
+      calculated automatically.
+
+
+
+   .. py:method:: getSubRectangles(ims)
+
+      getSubRectangles(ims)
+
+      Calculate the minimal rectangles that need updating each frame.
+      Returns a two-element tuple containing the cropped images and a
+      list of x-y positions.
+
+      Calculating the subrectangles takes extra time, obviously. However,
+      if the image sizes were reduced, the actual writing of the GIF
+      goes faster. In some cases applying this method produces a GIF faster.
+
+
+
+   .. py:method:: convertImagesToPIL(images, dither, nq=0)
+
+      convertImagesToPIL(images, nq=0)
+
+      Convert images to Paletted PIL images, which can then be
+      written to a single animaged GIF.
+
+
+
+   .. py:method:: writeGifToFile(fp, images, durations, loops, xys, disposes)
+
+      writeGifToFile(fp, images, durations, loops, xys, disposes)
+
+      Given a set of images writes the bytes to the specified stream.
+      Requires different handling of palette for PIL and Pillow:
+      based on https://github.com/rec/echomesh/blob/master/
+      code/python/external/images2gif.py
+
+
+
+
+.. py:function:: writeGif(filename, images, duration=0.1, repeat=True, **kwargs)
+
+   Write an animated gif from the specified images.
+   Depending on which PIL library is used, either writeGifVisvis or writeGifPillow
+   is used here.
+
+   :param str filename: the name of the file to write the image to.
+   :param list images: should be a list consisting of PIL images or numpy
+                       arrays. The latter should be between 0 and 255 for
+                       integer types, and between 0 and 1 for float types.
+   :param duration: scalar or list of scalars The duration for all frames, or
+                    (if a list) for each frame.
+   :param repeat: bool or integer The amount of loops. If True, loops infinitetel
+   :param kwargs: additional parameters for writeGifVisvis
+
+
+
+.. py:function:: writeGifPillow(filename, images, duration=0.1, repeat=True)
+
+   Write an animated gif from the specified images.
+   Uses native Pillow implementation, which is available since Pillow 3.4.0.
+
+   :param str filename: the name of the file to write the image to.
+   :param list images: should be a list consisting of PIL images or numpy
+                       arrays. The latter should be between 0 and 255 for
+                       integer types, and between 0 and 1 for float types.
+   :param duration: scalar or list of scalars The duration for all frames, or
+                    (if a list) for each frame.
+   :param repeat: bool or integer The amount of loops. If True, loops infinitetel
+
+
+
+.. py:function:: writeGifVisvis(filename, images, duration=0.1, repeat=True, dither=False, nq=0, subRectangles=True, dispose=None)
+
+   Write an animated gif from the specified images.
+   Uses VisVis implementation. Unfortunately it produces corrupted GIF
+   with Pillow >= 3.4.0.
+
+   :param str filename: the name of the file to write the image to.
+   :param list images: should be a list consisting of PIL images or numpy
+                       arrays. The latter should be between 0 and 255 for
+                       integer types, and between 0 and 1 for float types.
+   :param duration: scalar or list of scalars The duration for all frames, or
+                    (if a list) for each frame.
+   :param repeat: bool or integer The amount of loops. If True, loops infinitetely.
+   :param bool dither: whether to apply dithering
+   :param int nq: If nonzero, applies the NeuQuant quantization algorithm to
+                  create the color palette. This algorithm is superior, but
+                  slower than the standard PIL algorithm. The value of nq is
+                  the quality parameter. 1 represents the best quality. 10 is
+                  in general a good tradeoff between quality and speed. When
+                  using this option, better results are usually obtained when
+                  subRectangles is False.
+   :param subRectangles: False, True, or a list of 2-element tuples
+                         Whether to use sub-rectangles. If True, the minimal
+                         rectangle that is required to update each frame is
+                         automatically detected. This can give significant
+                         reductions in file size, particularly if only a part
+                         of the image changes. One can also give a list of x-y
+                         coordinates if you want to do the cropping yourself.
+                         The default is True.
+   :param int dispose: how to dispose each frame. 1 means that each frame is
+                       to be left in place. 2 means the background color
+                       should be restored after each frame. 3 means the
+                       decoder should restore the previous frame. If
+                       subRectangles==False, the default is 2, otherwise it is 1.
+
+
+
+.. py:function:: readGif(filename, asNumpy=True)
+
+   Read images from an animated GIF file.  Returns a list of numpy
+   arrays, or, if asNumpy is false, a list if PIL images.
+
+
+
+.. py:class:: NeuQuant(image, samplefac=10, colors=256)
+
+   NeuQuant(image, samplefac=10, colors=256)
+
+   samplefac should be an integer number of 1 or higher, 1
+   being the highest quality, but the slowest performance.
+   With avalue of 10, one tenth of all pixels are used during
+   training. This value seems a nice tradeof between speed
+   and quality.
+
+   colors is the amount of colors to reduce the image to. This
+   should best be a power of two.
+
+   See also:
+   http://members.ozemail.com.au/~dekker/NEUQUANT.HTML
+
+   **License of the NeuQuant Neural-Net Quantization Algorithm**
+
+   Copyright (c) 1994 Anthony Dekker
+   Ported to python by Marius van Voorden in 2010
+
+   NEUQUANT Neural-Net quantization algorithm by Anthony Dekker, 1994.
+   See "Kohonen neural networks for optimal colour quantization"
+   in "network: Computation in Neural Systems" Vol. 5 (1994) pp 351-367.
+   for a discussion of the algorithm.
+   See also  http://members.ozemail.com.au/~dekker/NEUQUANT.HTML
+
+   Any party obtaining a copy of these files from the author, directly or
+   indirectly, is granted, free of charge, a full and unrestricted
+   irrevocable, world-wide, paid up, royalty-free, nonexclusive right and
+   license to deal in this software and documentation files (the "Software"),
+   including without limitation the rights to use, copy, modify, merge,
+   publish, distribute, sublicense, and/or sell copies of the Software, and
+   to permit persons who receive copies from any such party to do so, with
+   the only requirement being that this copyright notice remain intact.
+
+
+   .. py:attribute:: NCYCLES
+      
+
+      
+
+   .. py:attribute:: NETSIZE
+      
+
+      
+
+   .. py:attribute:: SPECIALS
+      
+
+      
+
+   .. py:attribute:: BGCOLOR
+      
+
+      
+
+   .. py:attribute:: CUTNETSIZE
+      
+
+      
+
+   .. py:attribute:: MAXNETPOS
+      
+
+      
+
+   .. py:attribute:: INITRAD
+      
+
+      
+
+   .. py:attribute:: RADIUSBIASSHIFT
+      
+
+      
+
+   .. py:attribute:: RADIUSBIAS
+      
+
+      
+
+   .. py:attribute:: INITBIASRADIUS
+      
+
+      
+
+   .. py:attribute:: RADIUSDEC
+      
+
+      
+
+   .. py:attribute:: ALPHABIASSHIFT
+      
+
+      
+
+   .. py:attribute:: INITALPHA
+      
+
+      
+
+   .. py:attribute:: GAMMA
+      
+
+      
+
+   .. py:attribute:: BETA
+      
+
+      
+
+   .. py:attribute:: BETAGAMMA
+      
+
+      
+
+   .. py:attribute:: network
+      
+
+      
+
+   .. py:attribute:: colormap
+      
+
+      
+
+   .. py:attribute:: netindex
+      
+
+      
+
+   .. py:attribute:: bias
+      
+
+      
+
+   .. py:attribute:: freq
+      
+
+      
+
+   .. py:attribute:: pimage
+      
+
+      
+
+   .. py:attribute:: PRIME1
+      :annotation: = 499
+
+      
+
+   .. py:attribute:: PRIME2
+      :annotation: = 491
+
+      
+
+   .. py:attribute:: PRIME3
+      :annotation: = 487
+
+      
+
+   .. py:attribute:: PRIME4
+      :annotation: = 503
+
+      
+
+   .. py:attribute:: MAXPRIME
+      
+
+      
+
+   .. py:attribute:: pixels
+      
+
+      
+
+   .. py:attribute:: samplefac
+      
+
+      
+
+   .. py:attribute:: a_s
+      
+
+      
+
+   .. py:method:: setconstants(samplefac, colors)
+
+
+   .. py:method:: writeColourMap(rgb, outstream)
+
+
+   .. py:method:: setUpArrays()
+
+
+   .. py:method:: altersingle(alpha, i, b, g, r)
+
+      Move neuron i towards biased (b, g, r) by factor alpha
+
+
+   .. py:method:: geta(alpha, rad)
+
+
+   .. py:method:: alterneigh(alpha, rad, i, b, g, r)
+
+
+   .. py:method:: contest(b, g, r)
+
+      Search for biased BGR values
+      Finds closest neuron (min dist) and updates self.freq
+      finds best neuron (min dist-self.bias) and returns position
+      for frequently chosen neurons, self.freq[i] is high and self.bias[i]
+      is negative self.bias[i] = self.GAMMA * ((1/self.NETSIZE)-self.freq[i])
+
+
+   .. py:method:: specialFind(b, g, r)
+
+
+   .. py:method:: learn()
+
+
+   .. py:method:: fix()
+
+
+   .. py:method:: inxbuild()
+
+
+   .. py:method:: paletteImage()
+
+      PIL weird interface for making a paletted image: create an image
+      which already has the palette, and use that in Image.quantize. This
+      function returns this palette image.
+
+
+   .. py:method:: quantize(image)
+
+      Use a kdtree to quickly find the closest palette colors for the
+      pixels
+
+      :param image:
+
+
+   .. py:method:: quantize_with_scipy(image)
+
+
+   .. py:method:: quantize_without_scipy(image)
+
+      " This function can be used if no scipy is available.
+      It's 7 times slower though.
+
+      :param image:
+
+
+   .. py:method:: convert(*color)
+
+
+   .. py:method:: inxsearch(r, g, b)
+
+      Search for BGR values 0..255 and return colour index
+
+
+

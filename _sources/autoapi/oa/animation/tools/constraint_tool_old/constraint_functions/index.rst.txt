@@ -1,0 +1,180 @@
+ :py:mod:`oa.animation.tools.constraint_tool_old.constraint_functions`
+============================================================================================================================================
+
+.. py:module:: oa.animation.tools.constraint_tool_old.constraint_functions
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool_old.constraint_functions.ObjectWrapper
+   oa.animation.tools.constraint_tool_old.constraint_functions.UndoStack
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool_old.constraint_functions.create_weak_ref
+   oa.animation.tools.constraint_tool_old.constraint_functions.get_weak_ref
+   oa.animation.tools.constraint_tool_old.constraint_functions.get_local_scale
+   oa.animation.tools.constraint_tool_old.constraint_functions.set_color
+   oa.animation.tools.constraint_tool_old.constraint_functions.lerp_color
+   oa.animation.tools.constraint_tool_old.constraint_functions.create_constraint
+   oa.animation.tools.constraint_tool_old.constraint_functions.delete_constraint
+   oa.animation.tools.constraint_tool_old.constraint_functions.add_target
+   oa.animation.tools.constraint_tool_old.constraint_functions.delete_target
+   oa.animation.tools.constraint_tool_old.constraint_functions.get_constraint_data
+   oa.animation.tools.constraint_tool_old.constraint_functions.get_scene_constraints
+
+
+
+.. py:class:: ObjectWrapper(obj_name)
+
+   Bases: :py:obj:`maya.OpenMaya.MDagPath`
+
+   Wrapper for a maya node so it's not name dependent.
+
+   :param obj_name: An existing object to wrap.
+   :type obj_name: string
+
+   .. py:method:: __str__()
+
+
+   .. py:method:: name()
+
+
+   .. py:method:: short_name()
+
+
+
+.. py:class:: UndoStack(name='')
+
+   Includes all operations as a single chunk so Maya can undo/redo all at once.
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(type, value, traceback)
+
+
+
+.. py:function:: create_weak_ref(obj, weak_ref_obj, attr_name)
+
+   Connects one object to another via weak reference.
+
+   :param obj: Object to hold weak reference.
+   :type obj: string
+   :param weak_ref_obj: Object to reference.
+   :type weak_ref_obj: string
+   :param attr_name: Name of attribute.
+   :type attr_name: string
+
+
+.. py:function:: get_weak_ref(obj, attr)
+
+
+.. py:function:: get_local_scale(obj)
+
+   Uses an object's bounding box to figure out what would be a good value for a locator's localScale.
+
+   :param obj:
+   :type obj: string
+
+   :returns: A float value.
+
+
+.. py:function:: set_color(obj, r, g, b)
+
+   Sets the supplied object's color.
+
+   :param obj:
+   :type obj: string
+   :param r:
+   :type r: float
+   :param g:
+   :type g: float
+   :param b:
+   :type b: float
+
+
+.. py:function:: lerp_color(start_color, end_color, blend_value)
+
+   Lerps between two colors by supplied blend value.
+
+   :param start_color:
+   :type start_color: QColor
+   :param end_color:
+   :type end_color: QColor
+   :param blend_value: A value between 0.0 to 1.0
+   :type blend_value: float
+
+   :returns: A new QColor.
+
+
+.. py:function:: create_constraint(obj)
+
+   Creates a constraint nul, where the animator can adjust all weights of the constraint.
+
+   :param obj: Object to create constraint nul under.
+   :type obj: string
+
+   :returns: Constraint nul's name.
+
+
+.. py:function:: delete_constraint(obj)
+
+   Deletes the constraint, its targets, and constraint nul.
+
+   :param obj: The object that is being constraint.
+   :type obj: string
+
+
+.. py:function:: add_target(obj, target=None)
+
+   Adds a target to an object to constraint to.
+
+   :param obj: Object that will be constrained.
+   :type obj: string
+   :param target: Option to use an object as a target, or the world if set as None
+   :type target: string
+
+   :returns: The new target's name.
+
+
+.. py:function:: delete_target(obj, target)
+
+   Deletes supplied target from object's parent constraint.
+
+   :param obj: Object with a parent constraint.
+   :type obj: string
+   :param target: Object to remove.
+   :type target: string
+
+   :returns: True on success.
+
+
+.. py:function:: get_constraint_data(constraint_obj)
+
+   Collects objects and data used for an object being constraint.
+
+   :param constraint_obj: Get data from this objects.
+   :type constraint_obj: string
+
+   :returns: A dictionary.
+
+
+.. py:function:: get_scene_constraints()
+
+   Collects all constraint data in the scene.
+
+   :returns: A list of dictionaries.
+
+

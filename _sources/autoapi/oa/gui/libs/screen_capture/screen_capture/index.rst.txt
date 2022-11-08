@@ -1,0 +1,32 @@
+ :py:mod:`oa.gui.libs.screen_capture.screen_capture`
+========================================================================================================
+
+.. py:module:: oa.gui.libs.screen_capture.screen_capture
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.libs.screen_capture.screen_capture.capture_viewport
+
+
+
+.. py:function:: capture_viewport(output_path, width=640, height=400)
+
+   Grabs active viewport and saves it to a file.
+   :param output_path: Full path to where to save the image to.
+   :type output_path: string
+   :param width:
+   :type width: int
+   :param height:
+   :type height: int
+
+   :returns: True on success.
+
+

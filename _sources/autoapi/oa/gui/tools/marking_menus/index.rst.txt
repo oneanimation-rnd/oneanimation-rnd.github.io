@@ -1,0 +1,15 @@
+ :py:mod:`oa.gui.tools.marking_menus`
+==========================================================================
+
+.. py:module:: oa.gui.tools.marking_menus
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   marking_menus/index.rst
+
+

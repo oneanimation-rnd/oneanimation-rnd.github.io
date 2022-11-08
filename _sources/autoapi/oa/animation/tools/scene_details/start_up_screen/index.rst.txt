@@ -1,0 +1,42 @@
+ :py:mod:`oa.animation.tools.scene_details.start_up_screen`
+======================================================================================================================
+
+.. py:module:: oa.animation.tools.scene_details.start_up_screen
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_details.start_up_screen.StartUpScreen
+
+
+
+
+.. py:class:: StartUpScreen(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: add_page(img_path, txt)
+
+
+   .. py:method:: update_page_label()
+
+
+   .. py:method:: prev_page()
+
+
+   .. py:method:: next_page()
+
+
+   .. py:method:: run_on_startup()
+
+
+

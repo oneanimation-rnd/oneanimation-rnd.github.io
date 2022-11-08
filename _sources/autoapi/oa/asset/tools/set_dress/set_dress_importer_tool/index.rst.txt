@@ -1,0 +1,137 @@
+ :py:mod:`oa.asset.tools.set_dress.set_dress_importer_tool`
+======================================================================================================================
+
+.. py:module:: oa.asset.tools.set_dress.set_dress_importer_tool
+
+.. autoapi-nested-parse::
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       tool = SetDressImporterTool()
+       tool.show()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.set_dress_importer_tool.SetDressImporterTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.set_dress_importer_tool.launch
+
+
+
+.. py:class:: SetDressImporterTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = setDressImporterTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: prevent_toggle()
+
+      In order to get icons working with groupboxes, the checkbox icon is replaced.
+      This is to prevent the user from still ticking it off so it doesn't disable it.
+
+
+   .. py:method:: select_row_by_scene_env()
+
+
+   .. py:method:: env_state_on_index_changed(index)
+
+
+   .. py:method:: env_view_on_selection(indexes)
+
+
+   .. py:method:: env_view_on_double_clicked(index)
+
+
+   .. py:method:: import_env_on_clicked()
+
+
+   .. py:method:: load_on_clicked()
+
+
+   .. py:method:: unload_on_clicked()
+
+
+   .. py:method:: remove_on_clicked()
+
+
+   .. py:method:: select_on_clicked()
+
+
+   .. py:method:: switch_gpu_on_clicked()
+
+
+   .. py:method:: switch_rdr_on_clicked()
+
+
+   .. py:method:: delete_on_clicked()
+
+
+   .. py:method:: lock_on_clicked()
+
+
+   .. py:method:: lock_vis_on_toggled(hide_locked)
+
+
+   .. py:method:: context_menu_on_requested(point)
+
+      Creates right-click menu at the supplied point.
+
+
+   .. py:method:: load_on_triggered()
+
+
+   .. py:method:: unload_on_triggered()
+
+
+   .. py:method:: remove_on_triggered()
+
+
+   .. py:method:: select_on_triggered()
+
+
+   .. py:method:: delete_on_triggered()
+
+
+
+.. py:function:: launch()
+
+

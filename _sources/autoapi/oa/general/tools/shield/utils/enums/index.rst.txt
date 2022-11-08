@@ -1,0 +1,153 @@
+ :py:mod:`oa.general.tools.shield.utils.enums`
+============================================================================================
+
+.. py:module:: oa.general.tools.shield.utils.enums
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.shield.utils.enums.BlockType
+   oa.general.tools.shield.utils.enums.CheckStatus
+   oa.general.tools.shield.utils.enums.Images
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.shield.utils.enums.resources_path
+
+
+.. py:data:: resources_path
+   
+
+   
+
+.. py:class:: BlockType
+
+   .. py:attribute:: Minor
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Major
+      :annotation: = 1
+
+      
+
+
+.. py:class:: CheckStatus
+
+   .. py:attribute:: NotChecked
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Ok
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: Fail
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: FatalError
+      :annotation: = 3
+
+      
+
+
+.. py:class:: Images
+
+   .. py:attribute:: Pass
+      
+
+      
+
+   .. py:attribute:: Fail
+      
+
+      
+
+   .. py:attribute:: Warning
+      
+
+      
+
+   .. py:attribute:: NoStatus
+      
+
+      
+
+   .. py:attribute:: ShieldPass
+      
+
+      
+
+   .. py:attribute:: ShieldFail
+      
+
+      
+
+   .. py:attribute:: ShieldWarning
+      
+
+      
+
+   .. py:attribute:: ShieldDefault
+      
+
+      
+
+   .. py:attribute:: Object
+      
+
+      
+
+   .. py:attribute:: Joint
+      
+
+      
+
+   .. py:attribute:: Locator
+      
+
+      
+
+   .. py:attribute:: Mesh
+      
+
+      
+
+   .. py:attribute:: NurbsCurve
+      
+
+      
+
+   .. py:attribute:: NurbsSurface
+      
+
+      
+
+   .. py:attribute:: Transform
+      
+
+      
+
+   .. py:attribute:: Fix
+      
+
+      
+
+

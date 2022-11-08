@@ -1,0 +1,43 @@
+ :py:mod:`oa_shot_builder.libs.info`
+========================================================================
+
+.. py:module:: oa_shot_builder.libs.info
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.info.get_shot_info
+   oa_shot_builder.libs.info.set_shot_info
+   oa_shot_builder.libs.info.has_shot_info
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.info.getter_mapping
+
+
+.. py:data:: getter_mapping
+   
+
+   
+
+.. py:function:: get_shot_info()
+
+
+.. py:function:: set_shot_info(**kwargs)
+
+
+.. py:function:: has_shot_info()
+
+

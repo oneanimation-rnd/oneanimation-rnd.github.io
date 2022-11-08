@@ -1,0 +1,130 @@
+ :py:mod:`oa.general.libs.descriptors.xml_info_maya`
+========================================================================================================
+
+.. py:module:: oa.general.libs.descriptors.xml_info_maya
+
+.. autoapi-nested-parse::
+
+   Exports scene and asset info to an maINF descriptor file.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.descriptors.xml_info_maya.get_scene_cp
+   oa.general.libs.descriptors.xml_info_maya.shot_range_to_string
+   oa.general.libs.descriptors.xml_info_maya.collect_shot_list
+   oa.general.libs.descriptors.xml_info_maya.get_scene_info
+   oa.general.libs.descriptors.xml_info_maya.export_scene
+   oa.general.libs.descriptors.xml_info_maya.is_instanced
+   oa.general.libs.descriptors.xml_info_maya.get_asset
+   oa.general.libs.descriptors.xml_info_maya.is_asset_empty
+   oa.general.libs.descriptors.xml_info_maya.remove_empty_assets
+   oa.general.libs.descriptors.xml_info_maya.get_scene_assets
+   oa.general.libs.descriptors.xml_info_maya.export_asset
+   oa.general.libs.descriptors.xml_info_maya.read_scene_descriptor
+
+
+
+.. py:function:: get_scene_cp()
+
+   Searches the scene for a SceneCP and returns it.
+
+
+.. py:function:: shot_range_to_string(scene_cp)
+
+   Builds a name to describe the scene with the first and last shot and returns it.
+
+   :param scene_cp: An object with a scene_info attribute.
+   :type scene_cp: string
+
+
+.. py:function:: collect_shot_list(scene_cp)
+
+   Collects all shot numbers and ranges into a wrapper and returns it.
+
+   :param scene_cp: An object with a scene_info attribute.
+   :type scene_cp: string
+
+
+.. py:function:: get_scene_info()
+
+   Collects scene's env variables and shots into a wrapper and returns it.
+
+
+.. py:function:: export_scene(output_path)
+
+   Exports the shot and all assets to a file.
+
+   :param output_path: Full path to a maINF file.
+   :type output_path: string
+
+
+.. py:function:: is_instanced(obj)
+
+   Goes up object's hierarchy to determine if it's an instance.
+
+   :param obj: Object's name.
+   :type obj: string
+
+   :returns: Object that has an instance id or None if it's not an instance.
+
+
+.. py:function:: get_asset(ref_path, is_shot)
+
+   Wraps asset into an xml hierarchy to be written for a descriptor.
+
+   :param ref_path: An unresolved reference path.
+   :type ref_path: string
+   :param is_shot: True if this is exporting for a shot.
+   :type is_shot: bool
+
+   :returns: The top INFAsset node.
+
+
+.. py:function:: is_asset_empty(inf_asset)
+
+
+.. py:function:: remove_empty_assets(inf_asset, parent=None)
+
+   Recursively goes through assets and removes any that have no objects and instances.
+
+   :param inf_asset: The root INFAsset node.
+   :type inf_asset: INFAsset
+   :param parent: inf_asset's parent INFAsset.
+   :type parent: INFAsset
+
+
+.. py:function:: get_scene_assets(is_shot)
+
+   Collects all assets into a wrapper and returns it.
+
+   :param is_shot: Set as True if the scene is a shot.
+   :type is_shot: bool
+
+
+.. py:function:: export_asset(output_path, top_ref_path=None)
+
+   Exports a single asset to a file
+
+   :param output_path: Full path to a maINF file.
+   :type output_path: string
+   :param top_ref_path: Forces top reference to point at this supplied path. Needed as a work-around to fake the path using a temp scene.
+   :type top_ref_path: string
+
+
+.. py:function:: read_scene_descriptor(mainf_path)
+
+   Gets and returns an xml_managers.xml_info_api.root object.
+
+

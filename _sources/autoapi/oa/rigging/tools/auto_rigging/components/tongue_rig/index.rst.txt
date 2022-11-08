@@ -1,0 +1,22 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.components.tongue_rig`
+============================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.components.tongue_rig
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.components.tongue_rig.rig_tongue
+
+
+
+.. py:function:: rig_tongue(jnts, rig_scale=3.0)
+
+

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.asset.libs.gpu_utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title=" oa.asset.libs.import_utils" href="../import_utils/index.html" />
+    <link rel="prev" title=" oa.asset.libs.geometry_tags" href="../geometry_tags/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.libs</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.libs.gpu_utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/oa/asset/libs/gpu_utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.asset.libs.gpu_utils">
+<span id="oa-asset-libs-gpu-utils"></span><h1> <a class="reference internal" href="#module-oa.asset.libs.gpu_utils" title="oa.asset.libs.gpu_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.libs.gpu_utils</span></code></a><a class="headerlink" href="#module-oa.asset.libs.gpu_utils" title="Permalink to this heading"></a></h1>
+<p>Utility functions to handle gpu caches dynamically generated from assets.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.add_after_open_callback" title="oa.asset.libs.gpu_utils.add_after_open_callback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_after_open_callback</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.remove_after_open_callback" title="oa.asset.libs.gpu_utils.remove_after_open_callback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_after_open_callback</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.on_after_open_triggered" title="oa.asset.libs.gpu_utils.on_after_open_triggered"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_after_open_triggered</span></code></a>(*args)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.get_files_after_date" title="oa.asset.libs.gpu_utils.get_files_after_date"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_files_after_date</span></code></a>(path, **kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.delete_old_caches" title="oa.asset.libs.gpu_utils.delete_old_caches"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_old_caches</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.to_tb" title="oa.asset.libs.gpu_utils.to_tb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_tb</span></code></a>(bytes_count)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.delete_caches_over_limit" title="oa.asset.libs.gpu_utils.delete_caches_over_limit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_caches_over_limit</span></code></a>([gb_limit])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.clean_up_caches" title="oa.asset.libs.gpu_utils.clean_up_caches"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clean_up_caches</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.get_ref_id" title="oa.asset.libs.gpu_utils.get_ref_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_ref_id</span></code></a>(ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.collect_gpu_nodes" title="oa.asset.libs.gpu_utils.collect_gpu_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collect_gpu_nodes</span></code></a>([shapes])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.full_namespace" title="oa.asset.libs.gpu_utils.full_namespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">full_namespace</span></code></a>(ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.is_inst_master" title="oa.asset.libs.gpu_utils.is_inst_master"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_inst_master</span></code></a>(ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.contains_inst_masters" title="oa.asset.libs.gpu_utils.contains_inst_masters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contains_inst_masters</span></code></a>(ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.contains_valid_assets" title="oa.asset.libs.gpu_utils.contains_valid_assets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contains_valid_assets</span></code></a>(ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.traverse_ref_hierarchy" title="oa.asset.libs.gpu_utils.traverse_ref_hierarchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">traverse_ref_hierarchy</span></code></a>(ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.traverse_ref_parents" title="oa.asset.libs.gpu_utils.traverse_ref_parents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">traverse_ref_parents</span></code></a>(ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.traverse_hierarchy_to_cache" title="oa.asset.libs.gpu_utils.traverse_hierarchy_to_cache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">traverse_hierarchy_to_cache</span></code></a>(ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.get_ref_gpu_nodes" title="oa.asset.libs.gpu_utils.get_ref_gpu_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_ref_gpu_nodes</span></code></a>(top_ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.get_cache_objs" title="oa.asset.libs.gpu_utils.get_cache_objs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_cache_objs</span></code></a>(top_ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.remove_gpu_nul_if_empty" title="oa.asset.libs.gpu_utils.remove_gpu_nul_if_empty"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_gpu_nul_if_empty</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.delete_ref_gpu_nodes" title="oa.asset.libs.gpu_utils.delete_ref_gpu_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_ref_gpu_nodes</span></code></a>(ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.ref_to_gpu" title="oa.asset.libs.gpu_utils.ref_to_gpu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ref_to_gpu</span></code></a>(ref_path, start, end)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.create_gpu_hierarchy" title="oa.asset.libs.gpu_utils.create_gpu_hierarchy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_gpu_hierarchy</span></code></a>(top_ref_path, start, end[, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.poly_reduce_ref" title="oa.asset.libs.gpu_utils.poly_reduce_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">poly_reduce_ref</span></code></a>(top_ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.export_gpu_cache" title="oa.asset.libs.gpu_utils.export_gpu_cache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_gpu_cache</span></code></a>(ref_path, start, end)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.get_ref_node_by_namespace" title="oa.asset.libs.gpu_utils.get_ref_node_by_namespace"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_ref_node_by_namespace</span></code></a>(nsp)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.import_gpu_cache" title="oa.asset.libs.gpu_utils.import_gpu_cache"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_gpu_cache</span></code></a>(gpu_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.load_invalid_gpu_nodes" title="oa.asset.libs.gpu_utils.load_invalid_gpu_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_invalid_gpu_nodes</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.switch_all_gpu_to_rdr" title="oa.asset.libs.gpu_utils.switch_all_gpu_to_rdr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">switch_all_gpu_to_rdr</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.get_objs_in_view" title="oa.asset.libs.gpu_utils.get_objs_in_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_objs_in_view</span></code></a>(cam, start_frame, end_frame[, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.run_frustum" title="oa.asset.libs.gpu_utils.run_frustum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_frustum</span></code></a>(cam, start_frame, end_frame[, exclude, ...])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.after_open_callback" title="oa.asset.libs.gpu_utils.after_open_callback"><code class="xref py py-obj docutils literal notranslate"><span class="pre">after_open_callback</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.libs.gpu_utils.cache_root_path" title="oa.asset.libs.gpu_utils.cache_root_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cache_root_path</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.after_open_callback">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">after_open_callback</span></span><a class="headerlink" href="#oa.asset.libs.gpu_utils.after_open_callback" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.cache_root_path">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">cache_root_path</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">/Volumes/data/gpu</span></em><a class="headerlink" href="#oa.asset.libs.gpu_utils.cache_root_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.MissingNodeError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">MissingNodeError</span></span><a class="headerlink" href="#oa.asset.libs.gpu_utils.MissingNodeError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseException</span></code></p>
+<p>Common base class for all exceptions</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.add_after_open_callback">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">add_after_open_callback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.add_after_open_callback" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.remove_after_open_callback">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">remove_after_open_callback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.remove_after_open_callback" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.on_after_open_triggered">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">on_after_open_triggered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.on_after_open_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.get_files_after_date">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">get_files_after_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.get_files_after_date" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.delete_old_caches">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">delete_old_caches</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.delete_old_caches" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.to_tb">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">to_tb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bytes_count</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.to_tb" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.delete_caches_over_limit">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">delete_caches_over_limit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gb_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.delete_caches_over_limit" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.clean_up_caches">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">clean_up_caches</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.clean_up_caches" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.get_ref_id">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">get_ref_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.get_ref_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.collect_gpu_nodes">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">collect_gpu_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shapes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.collect_gpu_nodes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.full_namespace">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">full_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.full_namespace" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.is_inst_master">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">is_inst_master</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.is_inst_master" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.contains_inst_masters">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">contains_inst_masters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.contains_inst_masters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.contains_valid_assets">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">contains_valid_assets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.contains_valid_assets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.traverse_ref_hierarchy">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">traverse_ref_hierarchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.traverse_ref_hierarchy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.traverse_ref_parents">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">traverse_ref_parents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.traverse_ref_parents" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.traverse_hierarchy_to_cache">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">traverse_hierarchy_to_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.traverse_hierarchy_to_cache" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.get_ref_gpu_nodes">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">get_ref_gpu_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top_ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.get_ref_gpu_nodes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.get_cache_objs">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">get_cache_objs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top_ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.get_cache_objs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.remove_gpu_nul_if_empty">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">remove_gpu_nul_if_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.remove_gpu_nul_if_empty" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.delete_ref_gpu_nodes">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">delete_ref_gpu_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.delete_ref_gpu_nodes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.ref_to_gpu">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">ref_to_gpu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.ref_to_gpu" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.create_gpu_hierarchy">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">create_gpu_hierarchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top_ref_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">import_gpus</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.create_gpu_hierarchy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.poly_reduce_ref">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">poly_reduce_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top_ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.poly_reduce_ref" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.export_gpu_cache">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">export_gpu_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.export_gpu_cache" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.get_ref_node_by_namespace">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">get_ref_node_by_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nsp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.get_ref_node_by_namespace" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.import_gpu_cache">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">import_gpu_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gpu_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.import_gpu_cache" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.load_invalid_gpu_nodes">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">load_invalid_gpu_nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.load_invalid_gpu_nodes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.switch_all_gpu_to_rdr">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">switch_all_gpu_to_rdr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.switch_all_gpu_to_rdr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.get_objs_in_view">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">get_objs_in_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cam</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.get_objs_in_view" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.libs.gpu_utils.run_frustum">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.libs.gpu_utils.</span></span><span class="sig-name descname"><span class="pre">run_frustum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cam</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('CHR',</span> <span class="pre">'CAM')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.libs.gpu_utils.run_frustum" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../geometry_tags/index.html" class="btn btn-neutral float-left" title=" oa.asset.libs.geometry_tags" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../import_utils/index.html" class="btn btn-neutral float-right" title=" oa.asset.libs.import_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

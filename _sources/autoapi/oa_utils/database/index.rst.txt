@@ -1,0 +1,27 @@
+ :py:mod:`oa_utils.database`
+========================================================
+
+.. py:module:: oa_utils.database
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   lib/index.rst
+   wrappers/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   client/index.rst
+   connection/index.rst
+   utils/index.rst
+
+

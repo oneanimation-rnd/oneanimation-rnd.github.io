@@ -1,0 +1,127 @@
+ :py:mod:`oa.asset_builder.libs.description`
+========================================================================================
+
+.. py:module:: oa.asset_builder.libs.description
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.libs.description.ObjectDescription
+   oa.asset_builder.libs.description.MaterialDescription
+   oa.asset_builder.libs.description.InstanceDescription
+   oa.asset_builder.libs.description.AssetDescription
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.libs.description._contains_matching_guids
+   oa.asset_builder.libs.description._parse_description
+   oa.asset_builder.libs.description.get_description
+
+
+
+.. py:function:: _contains_matching_guids(items)
+
+
+.. py:class:: ObjectDescription(inf_object)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: guid
+
+
+   .. py:property:: name
+
+
+   .. py:property:: abcpath
+
+
+   .. py:property:: material
+
+
+   .. py:property:: subdiv
+
+
+
+.. py:class:: MaterialDescription(inf_material)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: guid
+
+
+   .. py:property:: name
+
+
+   .. py:property:: color
+
+
+
+.. py:class:: InstanceDescription(inf_instance)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: guid
+
+
+   .. py:property:: name
+
+
+   .. py:property:: abcpath
+
+
+   .. py:property:: master_guid
+
+
+
+.. py:class:: AssetDescription(inf_asset)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: guid
+
+
+   .. py:method:: get_source_asset_path()
+
+
+   .. py:method:: get_root_directory()
+
+
+   .. py:method:: get_source_cache_path()
+
+
+   .. py:method:: get_asset_info()
+
+
+   .. py:method:: get_asset_fullname()
+
+
+   .. py:method:: get_object_descriptions()
+
+
+   .. py:method:: get_asset_descriptions()
+
+
+   .. py:method:: get_instance_descriptions()
+
+
+   .. py:method:: get_mat_description_map()
+
+
+
+.. py:function:: _parse_description(description_path)
+
+
+.. py:function:: get_description(description_path=None, inf_asset=None)
+
+

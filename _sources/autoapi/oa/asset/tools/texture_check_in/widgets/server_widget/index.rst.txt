@@ -1,0 +1,153 @@
+ :py:mod:`oa.asset.tools.texture_check_in.widgets.server_widget`
+================================================================================================================================
+
+.. py:module:: oa.asset.tools.texture_check_in.widgets.server_widget
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.texture_check_in.widgets.server_widget.ServerView
+   oa.asset.tools.texture_check_in.widgets.server_widget.ServerModel
+   oa.asset.tools.texture_check_in.widgets.server_widget.WorkerSignals
+   oa.asset.tools.texture_check_in.widgets.server_widget.Worker
+
+
+
+
+.. py:class:: ServerView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableView`
+
+   .. py:attribute:: selected_row
+      
+
+      
+
+   .. py:attribute:: double_clicked
+      
+
+      
+
+   .. py:attribute:: delete_pressed
+      
+
+      
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: resize_to_contents()
+
+
+   .. py:method:: update_contents()
+
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+
+   .. py:method:: selectionChanged(selected, deselected)
+
+
+
+.. py:class:: ServerModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractTableModel`
+
+   .. py:attribute:: NAME_COLUMN
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: PREVIEW_COLUMN
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: SIZE_COLUMN
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: TYPE_COLUMN
+      :annotation: = 3
+
+      
+
+   .. py:attribute:: DATE_COLUMN
+      :annotation: = 4
+
+      
+
+   .. py:method:: rowCount(parent)
+
+
+   .. py:method:: columnCount(parent)
+
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: headerData(column, orientation, role)
+
+
+   .. py:method:: flags(index)
+
+
+   .. py:method:: begin_update()
+
+
+   .. py:method:: end_update()
+
+
+   .. py:method:: clear()
+
+
+   .. py:method:: get_data(tex_path)
+
+
+   .. py:method:: on_worker_finished(row, icon, view_id, status)
+
+
+   .. py:method:: apply_filter(match)
+
+
+
+.. py:class:: WorkerSignals
+
+   Bases: :py:obj:`PySide2.QtCore.QObject`
+
+   Signals must inherit from QObject, so this is a workaround to signal from a QRunnable object.
+
+   .. py:attribute:: finished
+      
+
+      
+
+
+.. py:class:: Worker(row, img_path, view_id)
+
+   Bases: :py:obj:`PySide2.QtCore.QRunnable`
+
+   Executes code in a seperate thread.
+   Communicates with the ThreadPool it spawned from via signals.
+
+   .. py:attribute:: StatusOk
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: StatusError
+      :annotation: = 1
+
+      
+
+   .. py:method:: run()
+
+
+

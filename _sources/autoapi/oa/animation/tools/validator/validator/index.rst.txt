@@ -1,0 +1,149 @@
+ :py:mod:`oa.animation.tools.validator.validator`
+==================================================================================================
+
+.. py:module:: oa.animation.tools.validator.validator
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.validator.validator.ValidatorGUI
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.validator.validator.get_xml_scene
+   oa.animation.tools.validator.validator.map_scenes_to_shots
+   oa.animation.tools.validator.validator.filtered_scene_paths
+   oa.animation.tools.validator.validator.get_maya_window
+   oa.animation.tools.validator.validator.popup_error_msg
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.validator.validator.xsi_pipeline
+   oa.animation.tools.validator.validator.non_xml_scene_paths
+
+
+.. py:data:: xsi_pipeline
+   :annotation: = True
+
+   
+
+.. py:data:: non_xml_scene_paths
+   :annotation: = []
+
+   
+
+.. py:function:: get_xml_scene(xml_path)
+
+   Returns the scene object from the XML file
+
+
+.. py:function:: map_scenes_to_shots(collection, scn_file_path)
+
+   { shotIndex1: [scenePath1, scenePath2],
+     shotIndex2: [scenePath1],
+     shotIndex3: [scenePath1, scene],
+     ...
+   }
+
+
+.. py:function:: filtered_scene_paths(unfiltered_paths)
+
+
+.. py:function:: get_maya_window()
+
+
+.. py:function:: popup_error_msg(title, msg, parent=None, print_traceback=True)
+
+
+.. py:class:: ValidatorGUI(project=None, episode=None, resolution=None, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = validatorTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_gui(project, episode, resolution)
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: reset_labels()
+
+
+   .. py:method:: get_projects()
+
+
+   .. py:method:: get_episodes(project)
+
+
+   .. py:method:: open_folder(path)
+
+
+   .. py:method:: group_by_sequence(scn_paths)
+
+      { sequenceName:
+          { shotIndex1: [scenePath1, scenePath2],
+                         shotIndex2: [scenePath1],
+                         shotIndex3: [scenePath1, scene],
+                         ...
+          }
+      }
+
+
+   .. py:method:: get_invalid_scenes(project='', episode='', resolution='', print_output=False)
+
+
+   .. py:method:: show_invalid_scenes(project, episode, resolution)
+
+
+   .. py:method:: get_path_from_item(item)
+
+
+   .. py:method:: on_context_requested(view, point)
+
+
+   .. py:method:: on_open_folder_triggered(view, point)
+
+
+   .. py:method:: on_project_changed(index)
+
+
+   .. py:method:: on_detect_clicked()
+
+
+   .. py:method:: on_delete_clicked()
+
+
+

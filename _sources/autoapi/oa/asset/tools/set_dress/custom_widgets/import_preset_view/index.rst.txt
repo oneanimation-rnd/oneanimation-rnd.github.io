@@ -1,0 +1,158 @@
+ :py:mod:`oa.asset.tools.set_dress.custom_widgets.import_preset_view`
+==========================================================================================================================================
+
+.. py:module:: oa.asset.tools.set_dress.custom_widgets.import_preset_view
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.custom_widgets.import_preset_view.ImportPresetView
+   oa.asset.tools.set_dress.custom_widgets.import_preset_view.ImportPresetModel
+   oa.asset.tools.set_dress.custom_widgets.import_preset_view.StyledItemDelegate
+
+
+
+
+.. py:class:: ImportPresetView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableView`
+
+   .. py:method:: paintEvent(paint_event)
+
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: yield_selected_indexes()
+
+
+   .. py:method:: load_row(index)
+
+
+   .. py:method:: unload_row(index)
+
+
+   .. py:method:: remove_row(index)
+
+
+   .. py:method:: display_locked(hide_locked)
+
+
+   .. py:method:: fill_tree(wmodel_id)
+
+
+
+.. py:class:: ImportPresetModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractTableModel`
+
+   .. py:class:: Column
+
+      .. py:attribute:: Status
+         :annotation: = 0
+
+         
+
+      .. py:attribute:: Thumbnail
+         :annotation: = 1
+
+         
+
+      .. py:attribute:: Name
+         :annotation: = 2
+
+         
+
+      .. py:attribute:: Description
+         :annotation: = 3
+
+         
+
+      .. py:attribute:: Episode
+         :annotation: = 4
+
+         
+
+      .. py:attribute:: User
+         :annotation: = 5
+
+         
+
+
+   .. py:method:: rowCount(parent=None)
+
+
+   .. py:method:: columnCount(parent)
+
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: headerData(value, orientation, role)
+
+
+   .. py:method:: flags(index)
+
+
+   .. py:method:: begin_update()
+
+
+   .. py:method:: end_update()
+
+
+   .. py:method:: reset_model()
+
+
+   .. py:method:: get_data(wmodel_id)
+
+
+   .. py:method:: begin_update()
+
+
+   .. py:method:: end_update()
+
+
+
+.. py:class:: StyledItemDelegate(parent)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QStyledItemDelegate`
+
+   .. py:attribute:: Foreground
+      
+
+      
+
+   .. py:attribute:: ForegroundSelected
+      
+
+      
+
+   .. py:attribute:: ForegroundDisabled
+      
+
+      
+
+   .. py:attribute:: Padding
+      :annotation: = 5
+
+      
+
+   .. py:method:: paint(painter, option, index)
+
+
+

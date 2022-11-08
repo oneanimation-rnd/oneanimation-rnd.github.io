@@ -1,0 +1,49 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.classes.command_edit_weights`
+========================================================================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.classes.command_edit_weights
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.classes.command_edit_weights.CommandEditWeights
+
+
+
+
+.. py:class:: CommandEditWeights(editor_cls, description, obj, old_skin_data, new_skin_data, vert_indexes, table_selection, skip_first_redo=False, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QUndoCommand`
+
+   Command to edit skin weights.
+
+   :param editor_cls:
+   :type editor_cls: WeightsEditor
+   :param description: The label to show up to describe this action.
+   :type description: string
+   :param obj: An object with a skinCluster to edit weights on.
+   :type obj: string
+   :param old_skin_data: A copy of skin data to revert to.
+   :type old_skin_data: dict
+   :param new_skin_data: A copy of skin data to set to.
+   :type new_skin_data: dict
+   :param vert_indexes: A list of indexes to operate on.
+   :type vert_indexes: int[]
+   :param table_selection: Selection data to revert back to.
+   :type table_selection: dict
+   :param skip_first_redo: Qt forces redo to be executed right away. Enable this to skip it if it's not needed.
+   :type skip_first_redo: bool
+
+   .. py:method:: redo()
+
+
+   .. py:method:: undo()
+
+
+

@@ -1,0 +1,89 @@
+ :py:mod:`oa_shot_builder.libs.description`
+======================================================================================
+
+.. py:module:: oa_shot_builder.libs.description
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.description.ShotDescription
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.description.cache_description
+   oa_shot_builder.libs.description.load_cached
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.description.this
+   oa_shot_builder.libs.description._log
+   oa_shot_builder.libs.description._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:class:: ShotDescription(filename)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: project
+
+
+   .. py:property:: episode
+
+
+   .. py:property:: sequence
+
+
+   .. py:property:: fullname
+
+
+   .. py:property:: assets
+
+
+   .. py:property:: shots
+
+
+   .. py:method:: _parse_description(filename)
+      :classmethod:
+
+
+   .. py:method:: _extract_data()
+
+
+
+.. py:function:: cache_description(description)
+
+
+.. py:function:: load_cached()
+
+

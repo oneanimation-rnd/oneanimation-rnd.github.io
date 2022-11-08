@@ -1,0 +1,33 @@
+ :py:mod:`oa_asset_builder.libs.ui.widgets.details`
+======================================================================================================
+
+.. py:module:: oa_asset_builder.libs.ui.widgets.details
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.ui.widgets.details.AssetDetails
+
+
+
+
+.. py:class:: AssetDetails(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: _init_widgets()
+
+
+   .. py:method:: reload(asset_details=None)
+
+
+   .. py:method:: _build_asset_fullname(asset_details)
+
+
+

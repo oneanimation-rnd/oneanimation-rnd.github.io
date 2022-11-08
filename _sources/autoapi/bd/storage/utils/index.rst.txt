@@ -1,0 +1,93 @@
+ :py:mod:`bd.storage.utils`
+======================================================
+
+.. py:module:: bd.storage.utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.utils.PathUtils
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.utils.create_uid
+   bd.storage.utils.remove_extra_fields
+   bd.storage.utils.remove_extra_tags
+   bd.storage.utils.parse_mask
+   bd.storage.utils.match_tags
+   bd.storage.utils.json_encoder
+   bd.storage.utils.load_hooks
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.utils.putils
+
+
+.. py:function:: create_uid(tags, fields)
+
+
+.. py:function:: remove_extra_fields(fields)
+
+
+.. py:function:: remove_extra_tags(tags)
+
+
+.. py:function:: parse_mask(mask)
+
+
+.. py:function:: match_tags(mask, tags)
+
+   Check whether the tags match the provided mask.
+
+   :param mask: parsed or not parsed tag mask.
+   :type mask: list[str] or str
+   :param tags: list of tags to match.
+   :type tags: list[str]
+
+   :returns: True if matches, False otherwise.
+   :rtype: bool
+
+
+.. py:class:: PathUtils
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: walk(*args, **kwargs)
+
+
+   .. py:method:: _normpath(path)
+
+
+   .. py:method:: __getattr__(item)
+
+
+
+.. py:data:: putils
+   
+
+   
+
+.. py:function:: json_encoder(obj)
+
+
+.. py:function:: load_hooks()
+
+   Load hooks stored under current package.
+
+

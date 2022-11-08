@@ -1,0 +1,19 @@
+ :py:mod:`oa.anim_library.tool.widgets`
+==============================================================================
+
+.. py:module:: oa.anim_library.tool.widgets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   qclip_tooltip/index.rst
+   qclip_widget/index.rst
+   qflow_layout/index.rst
+   qtag_edit/index.rst
+   qtag_widget/index.rst
+
+

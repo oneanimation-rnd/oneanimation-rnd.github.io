@@ -1,0 +1,22 @@
+ :py:mod:`oa_hou_utils.misc`
+========================================================
+
+.. py:module:: oa_hou_utils.misc
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_hou_utils.misc.rename_node
+
+
+
+.. py:function:: rename_node(node, name)
+
+

@@ -1,0 +1,15 @@
+ :py:mod:`oa.animation.tools.mirror_animation.widgets`
+============================================================================================================
+
+.. py:module:: oa.animation.tools.mirror_animation.widgets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   mapping_view/index.rst
+
+

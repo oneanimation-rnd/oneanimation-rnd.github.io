@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.rigging.tools.fk_chain_tool.fk_chain_utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.rigging.tools.ik_fk_switch_tool" href="../../ik_fk_switch_tool/index.html" />
+    <link rel="prev" title=" oa.rigging.tools.fk_chain_tool.fk_chain_tool" href="../fk_chain_tool/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.fk_chain_tool</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/rigging/tools/fk_chain_tool/fk_chain_utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.rigging.tools.fk_chain_tool.fk_chain_utils">
+<span id="oa-rigging-tools-fk-chain-tool-fk-chain-utils"></span><h1> <a class="reference internal" href="#module-oa.rigging.tools.fk_chain_tool.fk_chain_utils" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils</span></code></a><a class="headerlink" href="#module-oa.rigging.tools.fk_chain_tool.fk_chain_utils" title="Permalink to this heading"></a></h1>
+<p>A collection of helper functions to create an fk chain.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_attr" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_attr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_attr</span></code></a>(obj, long_name, attr_value[, keyable, lock])</p></td>
+<td><p>Creates a custom attribute.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_weak_ref" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_weak_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_weak_ref</span></code></a>(obj, target, attr)</p></td>
+<td><p>Connects one object to another via weak reference.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_weak_ref" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_weak_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_weak_ref</span></code></a>(obj, attr)</p></td>
+<td><p>Checks connection of the supplied attribute and returns its weak reference.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.set_color" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.set_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_color</span></code></a>(objs, qcolor)</p></td>
+<td><p>Sets the object's wire color.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_distance" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_distance</span></code></a>(pos1, pos2)</p></td>
+<td><p>Gets and returns the distance between two points.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_between_pos" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_between_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_between_pos</span></code></a>(pos1, pos2, weight)</p></td>
+<td><p>Query a position between two objects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_root_by_objs" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_root_by_objs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_root_by_objs</span></code></a>(objs, attr)</p></td>
+<td><p>Get and returns all root nuls from supplied objects for templates or rigs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_template_root" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_template_root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_template_root</span></code></a>(objs)</p></td>
+<td><p>Uses get_root_by_objs to get all template root nuls</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_rig_root" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_rig_root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_rig_root</span></code></a>(objs)</p></td>
+<td><p>Uses get_root_by_objs to get all rig root nuls</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_template" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_template"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_template</span></code></a>(start, end, point_count)</p></td>
+<td><p>Creates a rig template to layout joint positions before finalizing them.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.rebuild_points_on_curve" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.rebuild_points_on_curve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rebuild_points_on_curve</span></code></a>(template_root, point_count)</p></td>
+<td><p>Deletes existing points from template curve and recreates them to the supplied count.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.parent_to_cog_srt" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.parent_to_cog_srt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent_to_cog_srt</span></code></a>(rig_root)</p></td>
+<td><p>Parents the rig's root to an asset's cog ctrl.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_rig" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_rig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_rig</span></code></a>(template_root[, control_type, name, color])</p></td>
+<td><p>Builds a rig on top of a template.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.rig_name" title="oa.rigging.tools.fk_chain_tool.fk_chain_utils.rig_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rig_name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.rig_name">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">rig_name</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">FK_CHAIN</span></em><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.rig_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_attr">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">create_attr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">long_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">keyable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_attr" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a custom attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – The object to add the new attribute on.</p></li>
+<li><p><strong>long_name</strong> (<em>string</em>) – The new attribute’s name.</p></li>
+<li><p><strong>attr_value</strong> (<em>typeless</em>) – The attribute’s default value. The type of this variable determines what kind of attribute will be built.</p></li>
+<li><p><strong>keyable</strong> (<em>bool</em>) – Shows attribute in the channel box.</p></li>
+<li><p><strong>lock</strong> (<em>bool</em>) – Locks the attribute.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_weak_ref">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">create_weak_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_weak_ref" title="Permalink to this definition"></a></dt>
+<dd><p>Connects one object to another via weak reference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – The object to hold the weak reference.</p></li>
+<li><p><strong>target</strong> (<em>string</em>) – The object that will be connected to the weak reference attribute.</p></li>
+<li><p><strong>attr</strong> (<em>string</em>) – The attribute’s name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_weak_ref">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">get_weak_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_weak_ref" title="Permalink to this definition"></a></dt>
+<dd><p>Checks connection of the supplied attribute and returns its weak reference.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – The object that holds the weak reference.</p></li>
+<li><p><strong>attr</strong> (<em>string</em>) – The attribute’s name.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The attribute’s weak reference object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.set_color">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">set_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qcolor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.set_color" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the object’s wire color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>objs</strong> (<em>string</em><em>[</em><em>]</em>) – A list of objects.</p></li>
+<li><p><strong>qcolor</strong> (<em>QtGui.QColor</em>) – The color to set to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_distance">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">get_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_distance" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the distance between two points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos1</strong> (<em>float</em><em>[</em><em>]</em>) – 1st position.</p></li>
+<li><p><strong>pos2</strong> (<em>float</em><em>[</em><em>]</em>) – 2nd position.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_between_pos">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">get_between_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_between_pos" title="Permalink to this definition"></a></dt>
+<dd><p>Query a position between two objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos1</strong> (<em>float</em><em>[</em><em>]</em>) – 1st position.</p></li>
+<li><p><strong>pos2</strong> (<em>float</em><em>[</em><em>]</em>) – 2nd position.</p></li>
+<li><p><strong>weight</strong> (<em>float</em>) – A number between 0 to 1.0. 0 being the start position, 1.0 being the end position.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A world position.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_root_by_objs">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">get_root_by_objs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_root_by_objs" title="Permalink to this definition"></a></dt>
+<dd><p>Get and returns all root nuls from supplied objects for templates or rigs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>objs</strong> (<em>string</em><em>[</em><em>]</em>) – A list of objects to check with.</p></li>
+<li><p><strong>attr</strong> (<em>string</em>) – The attribute name to match. (‘templateType’ or ‘rigType’)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of root nuls.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_template_root">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">get_template_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_template_root" title="Permalink to this definition"></a></dt>
+<dd><p>Uses get_root_by_objs to get all template root nuls</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_rig_root">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">get_rig_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_rig_root" title="Permalink to this definition"></a></dt>
+<dd><p>Uses get_root_by_objs to get all rig root nuls</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_template">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">create_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_count</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_template" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a rig template to layout joint positions before finalizing them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<em>string</em>) – An object to start building from.</p></li>
+<li><p><strong>end</strong> (<em>string</em>) – An object to end building to.</p></li>
+<li><p><strong>point_count</strong> (<em>int</em>) – The number of locators to create on the curve.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.rebuild_points_on_curve">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">rebuild_points_on_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template_root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_count</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.rebuild_points_on_curve" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes existing points from template curve and recreates them to the supplied count.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>template_root</strong> (<em>string</em>) – The template’s root nul.</p></li>
+<li><p><strong>point_count</strong> (<em>int</em>) – The number of locators to create on the curve.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of all new locators.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.parent_to_cog_srt">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">parent_to_cog_srt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rig_root</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.parent_to_cog_srt" title="Permalink to this definition"></a></dt>
+<dd><p>Parents the rig’s root to an asset’s cog ctrl.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rig_root</strong> (<em>string</em>) – A rig’s root.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_rig">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.fk_chain_tool.fk_chain_utils.</span></span><span class="sig-name descname"><span class="pre">create_rig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template_root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linearSphere'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtGui.QColor(0,</span> <span class="pre">100,</span> <span class="pre">0)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_rig" title="Permalink to this definition"></a></dt>
+<dd><p>Builds a rig on top of a template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>template_root</strong> (<em>string</em>) – The name of the template’s top nul.</p></li>
+<li><p><strong>control_type</strong> (<em>string</em>) – The rig’s controls style.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – The rig’s prefix.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../fk_chain_tool/index.html" class="btn btn-neutral float-left" title=" oa.rigging.tools.fk_chain_tool.fk_chain_tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../ik_fk_switch_tool/index.html" class="btn btn-neutral float-right" title=" oa.rigging.tools.ik_fk_switch_tool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

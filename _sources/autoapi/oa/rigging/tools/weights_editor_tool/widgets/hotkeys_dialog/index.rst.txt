@@ -1,0 +1,63 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.widgets.hotkeys_dialog`
+============================================================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.widgets.hotkeys_dialog
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.widgets.hotkeys_dialog.HotkeysDialog
+   oa.rigging.tools.weights_editor_tool.widgets.hotkeys_dialog.HotkeyEdit
+
+
+
+
+.. py:class:: HotkeysDialog(hotkeys, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: create_gui(hotkeys)
+
+
+   .. py:method:: launch(hotkeys, parent)
+      :classmethod:
+
+
+   .. py:method:: serialize()
+
+
+   .. py:method:: check_for_duplicate_hotkeys()
+
+
+   .. py:method:: reset_to_defaults_on_triggered()
+
+
+   .. py:method:: accept_on_clicked()
+
+
+
+.. py:class:: HotkeyEdit(hotkey, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QLineEdit`
+
+   .. py:attribute:: key_pressed
+      
+
+      
+
+   .. py:method:: keyPressEvent(key_event)
+
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: reset_to_default()
+
+
+

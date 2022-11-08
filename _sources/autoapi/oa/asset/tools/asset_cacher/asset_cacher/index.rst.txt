@@ -1,0 +1,190 @@
+ :py:mod:`oa.asset.tools.asset_cacher.asset_cacher`
+======================================================================================================
+
+.. py:module:: oa.asset.tools.asset_cacher.asset_cacher
+
+.. autoapi-nested-parse::
+
+   Creates alembic caches for assets.
+
+   This is only meant to be used on the farm, and not locally.
+
+   Connecting a shape has been optimized significantly by George "I only need a day to fix it" Samushyia.
+   Before it was done purely with script and was error-prone and slow, but now it uses nodes to make it work in real-time.
+   Thank you for saving my ass!
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_cacher.asset_cacher.get_dag_path
+   oa.asset.tools.asset_cacher.asset_cacher.get_scene_ref_nodes
+   oa.asset.tools.asset_cacher.asset_cacher.get_asset_by_ref_path
+   oa.asset.tools.asset_cacher.asset_cacher.create_alembic_cache
+   oa.asset.tools.asset_cacher.asset_cacher.connect_shape
+   oa.asset.tools.asset_cacher.asset_cacher.delete_empty_nuls
+   oa.asset.tools.asset_cacher.asset_cacher.create_cache_structure
+   oa.asset.tools.asset_cacher.asset_cacher.create_scene_cache_structure
+   oa.asset.tools.asset_cacher.asset_cacher.get_shot_ranges
+   oa.asset.tools.asset_cacher.asset_cacher.cache_asset
+   oa.asset.tools.asset_cacher.asset_cacher.submit_job
+   oa.asset.tools.asset_cacher.asset_cacher.inf_assets_generator
+   oa.asset.tools.asset_cacher.asset_cacher.get_descriptor_data
+
+
+
+.. py:function:: get_dag_path(obj)
+
+   Creates an MDagPath object with supplied name.
+
+   :param obj: Name of an existing object.
+   :type obj: string
+
+   :returns: The object wrapped in an MDagPath.
+
+   :raises AssertionError: If object can't be found in the scene.
+
+
+.. py:function:: get_scene_ref_nodes()
+
+   Gets and returns a list of all top reference nodes.
+
+
+.. py:function:: get_asset_by_ref_path(ref_path)
+
+   Detects any rootNuls in reference path and returns it.
+
+   :param ref_path: Resolved reference path.
+   :type ref_path: string
+
+   :returns: Asset's root nul object or None if it can't find it.
+
+
+.. py:function:: create_alembic_cache(cache_output, cache_root, start_frame, end_frame, frame_relative_sample)
+
+   Creates an abc file with hierarchy.
+
+   :param cache_output: Full path to abc file to export to.
+   :type cache_output: string
+   :param cache_root: The cache structure's root to export with.
+   :type cache_root: string
+   :param start_frame: Cache from this frame.
+   :type start_frame: float
+   :param end_frame: Cache to this frame.
+   :type end_frame: float
+   :param frame_relative_sample: Sub-frame samples.
+   :type frame_relative_sample: float
+
+
+.. py:function:: connect_shape(in_shape, cache_root, ignore_vis=False, is_inst_master=False)
+
+   Creates a new transform and connects supplied shape to it.
+   This is used to build the cache structure without changing existing hierarchies.
+
+   Meshes will offset their pivot to its center with nodes.
+
+   :param in_shape: Shape to connect.
+   :type in_shape: string
+   :param cache_root: New transform's parent.
+   :type cache_root: string
+   :param ignore_vis: Connects shape anyways even if it's hidden (mostly for ENVs.)
+   :type ignore_vis: bool
+
+   :returns: New transform.
+
+
+.. py:function:: delete_empty_nuls(cache_root)
+
+   Deletes nuls with no meshes under it.
+   This is to clean up any excessive nodes in the cache structure.
+
+   :param cache_root: Cache structure's root nul.
+   :type cache_root: string
+
+
+.. py:function:: create_cache_structure(ref_wrapper)
+
+   Creates a hierarchy of nuls and connects meshes to it without
+   changing asset's existing hierarchies.
+
+   This function recursively calls itself.
+
+   :param ref_wrapper:
+   :type ref_wrapper: ReferenceWrapper
+
+   :returns: The top nul from the cache structure.
+
+
+.. py:function:: create_scene_cache_structure()
+
+   Mostly used for debugging.
+
+
+.. py:function:: get_shot_ranges(shot)
+
+   Get a shot's start and end frame numbers from sceneCP.
+
+   :param shot: Shot name with zero padding.
+   :type shot: string
+
+   :returns: A list with the shot's start and end frames.
+
+   :raises AssertionError: If it can't find the SceneCP or the shot in it.
+
+
+.. py:function:: cache_asset(output_path, ref_path, start_frame, end_frame, frame_relative_sample=0.25)
+
+   Caches out a referenced asset.
+
+   :param output_path: Full path to where it should cache to.
+   :type output_path: string
+   :param ref_path: Resolved reference path.
+   :type ref_path: string
+   :param start_frame: First frame to cache from.
+   :type start_frame: float
+   :param end_frame: Last frame to cache to.
+   :type end_frame: float
+   :param frame_relative_sample: Subframes to be cached.
+   :type frame_relative_sample: float
+
+
+.. py:function:: submit_job(ref_nodes, shot, job=None, block_mask=None, project=None, ep=None, seq=None, pre_roll=0, post_roll=0)
+
+   Submits a job to cache a shot onto the farm.
+
+   :param ref_nodes: List of reference nodes.
+   :type ref_nodes: string[]
+   :param shot: Shot name with zero padding.
+   :type shot: string
+   :param job: Job to append block to. If none is supplied one will be created.
+   :type job: af.Job
+   :param block_mask: Name of another block to wait on. This is mostly for shot splitting.
+   :type block_mask: string
+   :param project:
+   :type project: string
+   :param ep:
+   :type ep: string
+   :param seq:
+   :type seq: string
+
+
+.. py:function:: inf_assets_generator(inf_asset_list)
+
+   Loops through assets to collect and yield itself and nested assets.
+
+
+.. py:function:: get_descriptor_data(mainf_path)
+
+   Reads maINF file and returns a flatten list of its INFAssets.
+
+

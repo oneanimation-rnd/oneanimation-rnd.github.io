@@ -1,0 +1,61 @@
+ :py:mod:`oa.palette.scripts`
+==========================================================
+
+.. py:module:: oa.palette.scripts
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   archive_palette/index.rst
+   bind_palette/index.rst
+   create_palette/index.rst
+   edit_palette/index.rst
+   save_palette/index.rst
+   switch_palette/index.rst
+   unbind_palettes/index.rst
+
+
+Package Contents
+----------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.palette.scripts.opmenu_palette_can_create
+   oa.palette.scripts.opmenu_palette_can_edit
+   oa.palette.scripts.opmenu_palette_can_archive
+   oa.palette.scripts.opmenu_palette_can_save
+   oa.palette.scripts.opmenu_palette_can_switch
+   oa.palette.scripts.opmenu_palette_can_bind
+   oa.palette.scripts.opmenu_palette_can_unbind
+
+
+
+.. py:function:: opmenu_palette_can_create(node_path)
+
+
+.. py:function:: opmenu_palette_can_edit(node_path)
+
+
+.. py:function:: opmenu_palette_can_archive(node_path)
+
+
+.. py:function:: opmenu_palette_can_save(node_path)
+
+
+.. py:function:: opmenu_palette_can_switch(node_path)
+
+
+.. py:function:: opmenu_palette_can_bind(node_path)
+
+
+.. py:function:: opmenu_palette_can_unbind(node_path)
+
+

@@ -1,0 +1,50 @@
+ :py:mod:`oa.gui.tools.search_maya_icons.search_maya_icons`
+======================================================================================================================
+
+.. py:module:: oa.gui.tools.search_maya_icons.search_maya_icons
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.tools.search_maya_icons.search_maya_icons.SearchMayaIconsTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.tools.search_maya_icons.search_maya_icons.launch
+
+
+
+.. py:class:: SearchMayaIconsTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: clear_icons()
+
+
+   .. py:method:: update_icons()
+
+
+   .. py:method:: show_error_msg(msg)
+
+
+   .. py:method:: on_filter_return_pressed(*args)
+
+
+   .. py:method:: on_icon_clicked()
+
+
+
+.. py:function:: launch()
+
+

@@ -1,0 +1,15 @@
+ :py:mod:`oa.mat_gui.widgets.asset_treeview`
+========================================================================================
+
+.. py:module:: oa.mat_gui.widgets.asset_treeview
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   asset_treeview/index.rst
+
+

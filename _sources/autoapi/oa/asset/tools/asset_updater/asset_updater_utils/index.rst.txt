@@ -1,0 +1,45 @@
+ :py:mod:`oa.asset.tools.asset_updater.asset_updater_utils`
+======================================================================================================================
+
+.. py:module:: oa.asset.tools.asset_updater.asset_updater_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_updater.asset_updater_utils.ObsoleteAsset
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_updater.asset_updater_utils.load_pixmap
+   oa.asset.tools.asset_updater.asset_updater_utils.connect_to_db
+   oa.asset.tools.asset_updater.asset_updater_utils.validate_versions
+   oa.asset.tools.asset_updater.asset_updater_utils.update_all_assets
+
+
+
+.. py:class:: ObsoleteAsset(ref_path, namespace, asset_type, level, root_nul, current_version, latest_version, latest_path, comment, thumbnail)
+
+
+.. py:function:: load_pixmap(file_name, width=None, height=None)
+
+
+.. py:function:: connect_to_db(hosts=(), replica_set_name='rs0', read_pref=None, db_name='test-main-db', collection_name='assets')
+
+
+.. py:function:: validate_versions()
+
+
+.. py:function:: update_all_assets(update_namespace=False)
+
+

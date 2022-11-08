@@ -1,0 +1,16 @@
+ :py:mod:`oa.gui.libs.menus`
+========================================================
+
+.. py:module:: oa.gui.libs.menus
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   rnd_menu/index.rst
+   task_menu/index.rst
+
+

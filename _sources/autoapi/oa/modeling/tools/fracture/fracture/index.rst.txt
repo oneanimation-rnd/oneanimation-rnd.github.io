@@ -1,0 +1,56 @@
+ :py:mod:`oa.modeling.tools.fracture.fracture`
+============================================================================================
+
+.. py:module:: oa.modeling.tools.fracture.fracture
+
+.. autoapi-nested-parse::
+
+   Helps cut up mesh for animation rigs.
+
+   Author:
+       Jason Labbe
+
+   To do:
+       - cut_mesh_by_curves may fail if the curve doesn't actually split the mesh in two, usually by awkward curves
+       - Extrude options to close holes are using hard-coded values. Need to compensate for the area size of the face
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.modeling.tools.fracture.fracture.sort_objs_by_type
+   oa.modeling.tools.fracture.fracture.cut_mesh_by_curves
+
+
+
+.. py:function:: sort_objs_by_type(objs=[])
+
+   Sorts collection of objects into a dictionary by its object type.
+
+   :param objs: A list of objects to pass through. It will default to the current selection if nothing is supplied.
+   :type objs: string[]
+
+
+.. py:function:: cut_mesh_by_curves(mesh_objs, curve_objs, close_mesh=False, triangulate=False)
+
+   Splits meshes with curves. Cutting is based on the current view.
+
+   :param mesh_objs: Collection of mesh objects to split
+   :type mesh_objs: string[]
+   :param curve_objs: Collection of curve objects that will cut
+   :type curve_objs: string[]
+   :param close_mesh: Closes the new mesh objects so there won't be any holes
+   :type close_mesh: bool
+   :param triangulate: Triangulates the new mesh objects
+   :type triangulate: bool
+
+   :returns: A list of all new mesh objects
+
+

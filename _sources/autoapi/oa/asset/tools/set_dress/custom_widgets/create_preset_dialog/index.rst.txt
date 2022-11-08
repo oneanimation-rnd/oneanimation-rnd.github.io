@@ -1,0 +1,103 @@
+ :py:mod:`oa.asset.tools.set_dress.custom_widgets.create_preset_dialog`
+==============================================================================================================================================
+
+.. py:module:: oa.asset.tools.set_dress.custom_widgets.create_preset_dialog
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.custom_widgets.create_preset_dialog.NameValidator
+   oa.asset.tools.set_dress.custom_widgets.create_preset_dialog.CreatePresetDialog
+
+
+
+
+.. py:class:: NameValidator(parent=None)
+
+   Bases: :py:obj:`PySide2.QtGui.QValidator`
+
+   Validates strings that don't contain any illegal characters.
+
+   .. py:method:: validate(in_val, pos)
+
+
+
+.. py:class:: CreatePresetDialog(env_wmodel_id, create_mode, name=None, description=None, episode=None, color=None, update=False, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = setDressCreatePreset
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: THUMBNAIL_WIDTH
+      :annotation: = 480
+
+      
+
+   .. py:attribute:: THUMBNAIL_HEIGHT
+      :annotation: = 300
+
+      
+
+   .. py:attribute:: PRESET_MODE
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: ENV_STATE_MODE
+      :annotation: = 1
+
+      
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: update_preview()
+
+
+   .. py:method:: capture_preview()
+
+
+   .. py:method:: color_on_clicked()
+
+
+   .. py:method:: on_picked_color(qcolor)
+
+
+   .. py:method:: cancel_on_clicked()
+
+
+   .. py:method:: episodic_on_state_changed(state)
+
+
+   .. py:method:: capture_on_clicked()
+
+
+   .. py:method:: create_on_clicked()
+
+
+

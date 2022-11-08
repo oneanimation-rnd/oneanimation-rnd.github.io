@@ -1,0 +1,98 @@
+ :py:mod:`oa.asset.tools.set_dress.set_dress_exporter_tool`
+======================================================================================================================
+
+.. py:module:: oa.asset.tools.set_dress.set_dress_exporter_tool
+
+.. autoapi-nested-parse::
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.set_dress_exporter_tool.SetDressExporterTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.set_dress_exporter_tool.launch
+
+
+
+.. py:class:: SetDressExporterTool(env_wmodel_id, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = setDressExporterTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: env_create_on_clicked()
+
+
+   .. py:method:: env_update_on_clicked()
+
+
+   .. py:method:: delete_from_table(table_view, index=None)
+
+
+   .. py:method:: env_delete_on_clicked()
+
+
+   .. py:method:: create_on_clicked()
+
+
+   .. py:method:: update_on_clicked()
+
+
+   .. py:method:: delete_on_clicked()
+
+
+   .. py:method:: lock_on_clicked()
+
+
+   .. py:method:: set_color_on_clicked()
+
+
+   .. py:method:: on_picked_color(color)
+
+
+
+.. py:function:: launch()
+
+

@@ -1,0 +1,37 @@
+ :py:mod:`oa.animation.tools`
+==========================================================
+
+.. py:module:: oa.animation.tools
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   anm_import_export/index.rst
+   attach_to_surface/index.rst
+   auto_rotate/index.rst
+   capture/index.rst
+   constraint_tool/index.rst
+   constraint_tool_old/index.rst
+   convert_to_local_prp/index.rst
+   deform_tool/index.rst
+   dof_tool/index.rst
+   frustum/index.rst
+   key_breakdown/index.rst
+   mirror_animation/index.rst
+   offset_animation/index.rst
+   scene_cp/index.rst
+   scene_details/index.rst
+   scene_details_legacy/index.rst
+   scene_exporter/index.rst
+   shot_creator/index.rst
+   shot_splitter/index.rst
+   spring_tool/index.rst
+   synoptics/index.rst
+   validator/index.rst
+   visibility_set_tool/index.rst
+
+

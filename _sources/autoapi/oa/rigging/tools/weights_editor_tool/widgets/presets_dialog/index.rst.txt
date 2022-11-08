@@ -1,0 +1,80 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.widgets.presets_dialog`
+============================================================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.widgets.presets_dialog
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.widgets.presets_dialog.PresetsDialog
+   oa.rigging.tools.weights_editor_tool.widgets.presets_dialog.PresetWidget
+   oa.rigging.tools.weights_editor_tool.widgets.presets_dialog.CustomValidator
+
+
+
+
+.. py:class:: PresetsDialog(add_presets, scale_presets, set_presets, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: Defaults
+      
+
+      
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: launch(add_presets, scale_presets, set_presets, parent)
+      :classmethod:
+
+
+   .. py:method:: serialize()
+
+
+   .. py:method:: reset_to_defaults_on_triggered()
+
+
+   .. py:method:: accept_on_clicked()
+
+
+
+.. py:class:: PresetWidget(caption, min_max_range, values, parent=None)
+
+   .. py:method:: set_values(values)
+
+
+   .. py:method:: on_values_updated(values)
+
+
+
+.. py:class:: CustomValidator(line_edit, min_max_range, parent=None)
+
+   Bases: :py:obj:`PySide2.QtGui.QValidator`
+
+   .. py:attribute:: values_updated
+      
+
+      
+
+   .. py:method:: num_to_str(num)
+      :staticmethod:
+
+
+   .. py:method:: clean_up_items(items)
+      :classmethod:
+
+
+   .. py:method:: validate(txt, pos)
+
+
+   .. py:method:: fixup(txt)
+
+
+

@@ -1,0 +1,80 @@
+ :py:mod:`oa.asset.tools.rbd_tool.rbd_tool`
+======================================================================================
+
+.. py:module:: oa.asset.tools.rbd_tool.rbd_tool
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.rbd_tool.rbd_tool.RBDToolSet
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.rbd_tool.rbd_tool.rbdToolLaunch
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.rbd_tool.rbd_tool.mayaHandle
+   oa.asset.tools.rbd_tool.rbd_tool.mayaMainWindow
+
+
+.. py:data:: mayaHandle
+   
+
+   
+
+.. py:data:: mayaMainWindow
+   
+
+   
+
+.. py:class:: RBDToolSet(*args, **kwargs)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: initUI()
+
+
+   .. py:method:: dropWindow(objs_str)
+
+
+   .. py:method:: setupButton_onClicked()
+
+      This is the button that does the pre setup stage for the Scatter Tool.
+
+
+   .. py:method:: preSimSetup()
+
+      Does all the MASH setup before user can run the Sim
+
+
+   .. py:method:: instancesButton_onClicked()
+
+      This is the button that converts the MASH instances into actual instances for the Scatter Tool.
+
+
+   .. py:method:: cleanupButton_onClicked()
+
+      This is the button that cleans up all the MASH nodes and other junk
+
+
+
+.. py:function:: rbdToolLaunch()
+
+

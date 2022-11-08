@@ -1,0 +1,312 @@
+ :py:mod:`oa.asset.tools.set_dress.set_dress_utils`
+======================================================================================================
+
+.. py:module:: oa.asset.tools.set_dress.set_dress_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.set_dress_utils.load_pixmap
+   oa.asset.tools.set_dress.set_dress_utils.connect_to_database
+   oa.asset.tools.set_dress.set_dress_utils.get_maya_window
+   oa.asset.tools.set_dress.set_dress_utils.popup_error_msg
+   oa.asset.tools.set_dress.set_dress_utils.popup_success_msg
+   oa.asset.tools.set_dress.set_dress_utils.wrap_layout
+   oa.asset.tools.set_dress.set_dress_utils.upload_files
+   oa.asset.tools.set_dress.set_dress_utils.get_user_avatar
+   oa.asset.tools.set_dress.set_dress_utils.get_asset_path
+   oa.asset.tools.set_dress.set_dress_utils.get_episodes
+   oa.asset.tools.set_dress.set_dress_utils.generate_uid
+   oa.asset.tools.set_dress.set_dress_utils.is_close_enough
+   oa.asset.tools.set_dress.set_dress_utils.add_string_attr
+   oa.asset.tools.set_dress.set_dress_utils.get_nested_refs
+   oa.asset.tools.set_dress.set_dress_utils.get_scene_ref_wrappers
+   oa.asset.tools.set_dress.set_dress_utils.get_wmodel_id_by_ref_node
+   oa.asset.tools.set_dress.set_dress_utils.get_latest_scene_by_wmodel_id
+   oa.asset.tools.set_dress.set_dress_utils.get_env_ref_node
+   oa.asset.tools.set_dress.set_dress_utils.collect_env_states
+   oa.asset.tools.set_dress.set_dress_utils.import_env
+   oa.asset.tools.set_dress.set_dress_utils.get_env_state
+   oa.asset.tools.set_dress.set_dress_utils.save_env_state
+   oa.asset.tools.set_dress.set_dress_utils.get_deltas
+   oa.asset.tools.set_dress.set_dress_utils.get_ref_deltas
+   oa.asset.tools.set_dress.set_dress_utils.collect_env_deltas
+   oa.asset.tools.set_dress.set_dress_utils.collect_scene_deltas
+   oa.asset.tools.set_dress.set_dress_utils.apply_deltas
+   oa.asset.tools.set_dress.set_dress_utils.upload_meta_data
+   oa.asset.tools.set_dress.set_dress_utils.set_lock_preset
+   oa.asset.tools.set_dress.set_dress_utils.export_set
+   oa.asset.tools.set_dress.set_dress_utils.reset_env_state
+   oa.asset.tools.set_dress.set_dress_utils.set_env_state
+   oa.asset.tools.set_dress.set_dress_utils.delete_env_state
+   oa.asset.tools.set_dress.set_dress_utils.delete_preset
+   oa.asset.tools.set_dress.set_dress_utils.load_preset
+   oa.asset.tools.set_dress.set_dress_utils.unload_preset
+   oa.asset.tools.set_dress.set_dress_utils.list_presets
+   oa.asset.tools.set_dress.set_dress_utils.get_scene_presets
+   oa.asset.tools.set_dress.set_dress_utils.load_unloaded_presets
+   oa.asset.tools.set_dress.set_dress_utils.switch_preset_resolution
+   oa.asset.tools.set_dress.set_dress_utils.remove_preset
+   oa.asset.tools.set_dress.set_dress_utils.select_preset
+   oa.asset.tools.set_dress.set_dress_utils.display_preset
+   oa.asset.tools.set_dress.set_dress_utils.get_current_panel
+   oa.asset.tools.set_dress.set_dress_utils.get_isolate_objs
+   oa.asset.tools.set_dress.set_dress_utils.get_viewport_settings
+   oa.asset.tools.set_dress.set_dress_utils.pre_capture_setup
+   oa.asset.tools.set_dress.set_dress_utils.restore_viewport
+   oa.asset.tools.set_dress.set_dress_utils.capture_preview
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.set_dress_utils.SD_IDS_ATTR
+   oa.asset.tools.set_dress.set_dress_utils.SD_REF_ID_ATTR
+   oa.asset.tools.set_dress.set_dress_utils.SD_ENV_STATE_ATTR
+   oa.asset.tools.set_dress.set_dress_utils.MISSING_STATUS
+   oa.asset.tools.set_dress.set_dress_utils.UNLOADED_STATUS
+   oa.asset.tools.set_dress.set_dress_utils.LOADED_STATUS
+
+
+.. py:data:: SD_IDS_ATTR
+   :annotation: = SD_IDS
+
+   
+
+.. py:data:: SD_REF_ID_ATTR
+   :annotation: = SD_REF_ID
+
+   
+
+.. py:data:: SD_ENV_STATE_ATTR
+   :annotation: = SD_ENV_STATE
+
+   
+
+.. py:data:: MISSING_STATUS
+   :annotation: = 0
+
+   
+
+.. py:data:: UNLOADED_STATUS
+   :annotation: = 1
+
+   
+
+.. py:data:: LOADED_STATUS
+   :annotation: = 2
+
+   
+
+.. py:function:: load_pixmap(file_name, width=None, height=None)
+
+
+.. py:function:: connect_to_database()
+
+
+.. py:function:: get_maya_window()
+
+
+.. py:function:: popup_error_msg(title, msg, parent=None, print_traceback=True)
+
+
+.. py:function:: popup_success_msg(title, msg, parent=None)
+
+
+.. py:function:: wrap_layout(widgets, orientation, parent=None)
+
+
+.. py:function:: upload_files(transfer_paths)
+
+
+.. py:function:: get_user_avatar(user)
+
+   Gets and returns a full path to the supplied user's avatar image.
+
+
+.. py:function:: get_asset_path(wmodel_id)
+
+   Checks database for asset's base path on the server.
+
+
+.. py:function:: get_episodes(project=None)
+
+   Returns a list of all available episode directories on the supplied project.
+
+
+.. py:function:: generate_uid(length=10)
+
+   Generates a random unique tag.
+   Testing is successful with a count of hundreds of millions being all unique.
+
+
+.. py:function:: is_close_enough(val1, val2)
+
+   Returns True if both values are only different from floating point precision errors.
+
+
+.. py:function:: add_string_attr(obj, attr_name, value, force=False)
+
+
+.. py:function:: get_nested_refs(top_ref_path)
+
+   Recursively collects all nested references into a flatten list.
+
+
+.. py:function:: get_scene_ref_wrappers()
+
+
+.. py:function:: get_wmodel_id_by_ref_node(ref_node)
+
+
+.. py:function:: get_latest_scene_by_wmodel_id(wmodel_id)
+
+   Gets a full path of the model's latest scene version.
+
+
+.. py:function:: get_env_ref_node()
+
+
+.. py:function:: collect_env_states(wmodel_id)
+
+
+.. py:function:: import_env(wmodel_id, res=None)
+
+
+.. py:function:: get_env_state(env_ref_node=None)
+
+   Gets the ENV's current state string.
+
+
+.. py:function:: save_env_state(name, description, thumbnail, update=False)
+
+
+.. py:function:: get_deltas(obj)
+
+   Collects all keyable attributes into a dictionary and returns it.
+
+
+.. py:function:: get_ref_deltas(ref_wrapper)
+
+
+.. py:function:: collect_env_deltas()
+
+   Collects deltas from all references in the scene.
+
+
+.. py:function:: collect_scene_deltas(ref_wrappers=None)
+
+   Collects deltas from all references in the scene.
+
+
+.. py:function:: apply_deltas(deltas, ref_node)
+
+
+.. py:function:: upload_meta_data(output_path, preset, description, locked, user=None, color=None, local=False)
+
+
+.. py:function:: set_lock_preset(meta_data_path, lock)
+
+
+.. py:function:: export_set(preset, description, thumbnail, color, episode=None, update=False)
+
+
+.. py:function:: reset_env_state()
+
+
+.. py:function:: set_env_state(sds_path)
+
+
+.. py:function:: delete_env_state(project, asset_name, preset_names, parent=None)
+
+
+.. py:function:: delete_preset(project, asset_name, preset_names, parent=None)
+
+
+.. py:function:: load_preset(sds_path, force=True)
+
+
+.. py:function:: unload_preset(wmodel_id, preset)
+
+
+.. py:function:: list_presets(wmodel_id)
+
+
+.. py:function:: get_scene_presets(env_ref_node=None)
+
+
+.. py:function:: load_unloaded_presets()
+
+
+.. py:function:: switch_preset_resolution(wmodel_id, preset, res)
+
+
+.. py:function:: remove_preset(wmodel_id, preset)
+
+   Returns True if ENV was removed.
+
+
+.. py:function:: select_preset(wmodel_id, presets)
+
+
+.. py:function:: display_preset(wmodel_id, presets, visibility)
+
+
+.. py:function:: get_current_panel()
+
+   Gets and returns the name of the active viewport.
+   If the active panel is not a viewport it returns persp's viewport.
+
+
+.. py:function:: get_isolate_objs(panel=None)
+
+   Gets a list of objects that are currently in the isolate set.
+
+   :param panel: The panel to check the set from.
+
+   :returns: A list of objects.
+
+
+.. py:function:: get_viewport_settings()
+
+   Collects active viewport's current state to a dictionary.
+
+   :returns: A dictionary of the viewport's data.
+
+
+.. py:function:: pre_capture_setup(isolate_objs=())
+
+   Prepares the viewport for capture.
+
+   :param isolate_objs: A list of objects to isolate for capture.
+
+   :returns: A dictionary of the viewport's previous settings.
+
+
+.. py:function:: restore_viewport(viewport_settings)
+
+   Restores the active viewport to the supplied settings.
+
+   :param viewport_settings: Supply a dictionary returned from get_viewport_settings()
+
+
+.. py:function:: capture_preview(output_path, width=640, height=400, isolate_objs=())
+
+   Captures a single frame to a jpg file.
+
+   :param output_path: Full jpg path to save to.
+   :param width: Image's width.
+   :param height: Image's height.
+   :param isolate_objs: A list of objects to isolate for capture.
+
+

@@ -1,0 +1,116 @@
+ :py:mod:`bd.storage.component`
+==============================================================
+
+.. py:module:: bd.storage.component
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.component.Revision
+   bd.storage.component.Component
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.component.log
+   bd.storage.component.Transaction
+
+
+.. py:data:: log
+   
+
+   
+
+.. py:data:: Transaction
+   
+
+   
+
+.. py:class:: Revision(component, **data)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: publish(comment=None, storage_pool=None)
+
+
+   .. py:method:: acquire()
+
+
+   .. py:method:: get_storage_item(checkout=False, storage_pool=None)
+
+
+   .. py:method:: remove()
+
+
+   .. py:method:: _checkout(published_item, storage_pool)
+
+      :param published_item:
+      :type published_item: MetaItem
+      :param storage_pool:
+      :type storage_pool: StoragePool
+
+      :rtype: MetaItem
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+
+.. py:class:: Component(identifier)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: tags
+
+
+   .. py:property:: fields
+
+
+   .. py:property:: id
+
+
+   .. py:method:: find_components(tags, fields, limit=100)
+      :classmethod:
+
+
+   .. py:method:: revisions(limit=10)
+
+
+   .. py:method:: latest_revision()
+
+
+   .. py:method:: create_revision(force_ownership=False)
+
+
+   .. py:method:: remove()
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+

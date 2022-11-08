@@ -1,0 +1,42 @@
+ :py:mod:`oa.gui.libs.eval_modes.eval_modes`
+========================================================================================
+
+.. py:module:: oa.gui.libs.eval_modes.eval_modes
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.libs.eval_modes.eval_modes.popup_success_msg
+   oa.gui.libs.eval_modes.eval_modes.save_settings
+   oa.gui.libs.eval_modes.eval_modes.load_settings
+   oa.gui.libs.eval_modes.eval_modes.switch_to_stable
+   oa.gui.libs.eval_modes.eval_modes.switch_to_balanced
+   oa.gui.libs.eval_modes.eval_modes.switch_to_turbo
+
+
+
+.. py:function:: popup_success_msg(title, msg)
+
+
+.. py:function:: save_settings(**kwargs)
+
+
+.. py:function:: load_settings()
+
+
+.. py:function:: switch_to_stable()
+
+
+.. py:function:: switch_to_balanced()
+
+
+.. py:function:: switch_to_turbo()
+
+

@@ -1,0 +1,87 @@
+ :py:mod:`oa.asset.tools.texture_check_in.helpers.thread_worker`
+================================================================================================================================
+
+.. py:module:: oa.asset.tools.texture_check_in.helpers.thread_worker
+
+.. autoapi-nested-parse::
+
+   Uses Qt's threading objects to check-in files with multiple threads.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.texture_check_in.helpers.thread_worker.ThreadSignals
+   oa.asset.tools.texture_check_in.helpers.thread_worker.Worker
+   oa.asset.tools.texture_check_in.helpers.thread_worker.ThreadPool
+
+
+
+
+.. py:class:: ThreadSignals
+
+   Bases: :py:obj:`PySide2.QtCore.QObject`
+
+   Signals must inherit from QObject, so this is a workaround to signal from a QRunnable object.
+
+   .. py:attribute:: finished
+      
+
+      
+
+
+.. py:class:: Worker(index, source_path, dest_dir)
+
+   Bases: :py:obj:`PySide2.QtCore.QRunnable`
+
+   Executes code in a seperate thread.
+   Communicates with the ThreadPool it spawned from via signals.
+
+   .. py:attribute:: StatusOk
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: StatusError
+      :annotation: = 1
+
+      
+
+   .. py:method:: run()
+
+
+
+.. py:class:: ThreadPool(max_thread_count=1)
+
+   Bases: :py:obj:`PySide2.QtCore.QObject`
+
+   Manages all Worker objects.
+
+   .. py:attribute:: pool_started
+      
+
+      
+
+   .. py:attribute:: pool_finished
+      
+
+      
+
+   .. py:attribute:: worker_finished
+      
+
+      
+
+   .. py:method:: worker_on_finished(index, status)
+
+
+   .. py:method:: start(source_paths, dest_dir)
+
+
+

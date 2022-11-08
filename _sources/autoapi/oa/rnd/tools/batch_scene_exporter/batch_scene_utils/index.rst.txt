@@ -1,0 +1,33 @@
+ :py:mod:`oa.rnd.tools.batch_scene_exporter.batch_scene_utils`
+============================================================================================================================
+
+.. py:module:: oa.rnd.tools.batch_scene_exporter.batch_scene_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.batch_scene_exporter.batch_scene_utils.wrap_layout
+   oa.rnd.tools.batch_scene_exporter.batch_scene_utils.get_latest_scn_files
+
+
+
+.. py:function:: wrap_layout(widgets, orientation)
+
+   Helper function that takes supplied widgets and wraps them all in a layout.
+
+   :param widgets: A list of QWidgets.
+   :param orientation: QtCore.Qt.Orientation
+
+   :returns: The new layout item.
+
+
+.. py:function:: get_latest_scn_files(dir)
+
+

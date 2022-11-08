@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.animation.tools.dof_tool.dof_utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.animation.tools.frustum" href="../../frustum/index.html" />
+    <link rel="prev" title=" oa.animation.tools.dof_tool.dof_tool" href="../dof_tool/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.dof_tool</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.dof_tool.dof_utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/animation/tools/dof_tool/dof_utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.animation.tools.dof_tool.dof_utils">
+<span id="oa-animation-tools-dof-tool-dof-utils"></span><h1> <a class="reference internal" href="#module-oa.animation.tools.dof_tool.dof_utils" title="oa.animation.tools.dof_tool.dof_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.dof_tool.dof_utils</span></code></a><a class="headerlink" href="#module-oa.animation.tools.dof_tool.dof_utils" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.ViewportOff" title="oa.animation.tools.dof_tool.dof_utils.ViewportOff"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ViewportOff</span></code></a></p></td>
+<td><p>Disables the viewport's redraw.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.UndoStack" title="oa.animation.tools.dof_tool.dof_utils.UndoStack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UndoStack</span></code></a></p></td>
+<td><p>Includes all operations as a single chunk so Maya can undo/redo all at once.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.load_pixmap" title="oa.animation.tools.dof_tool.dof_utils.load_pixmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_pixmap</span></code></a>(file_name[, width, height])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.get_eyes_target" title="oa.animation.tools.dof_tool.dof_utils.get_eyes_target"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_eyes_target</span></code></a>(objs)</p></td>
+<td><p>Tries to get eyes locator from supplied objects.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.get_shot_data" title="oa.animation.tools.dof_tool.dof_utils.get_shot_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_shot_data</span></code></a>()</p></td>
+<td><p>Gets and returns the scene cp's json data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.get_shot_range" title="oa.animation.tools.dof_tool.dof_utils.get_shot_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_shot_range</span></code></a>(time)</p></td>
+<td><p>Finds what shot it's in by the supplied time and returns the shot's info.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.get_shot_from_clip" title="oa.animation.tools.dof_tool.dof_utils.get_shot_from_clip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_shot_from_clip</span></code></a>(clip)</p></td>
+<td><p>Checks time of the supplied clip and determines what shot it belongs to.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.get_scene_cameras" title="oa.animation.tools.dof_tool.dof_utils.get_scene_cameras"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scene_cameras</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.is_a_camera_asset" title="oa.animation.tools.dof_tool.dof_utils.is_a_camera_asset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_a_camera_asset</span></code></a>(obj)</p></td>
+<td><p>Traverses up hierarchy to see if the supplied object is a camera asset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.add_string_attr" title="oa.animation.tools.dof_tool.dof_utils.add_string_attr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_string_attr</span></code></a>(obj, attr, value)</p></td>
+<td><p>Helper function to add a string attribute.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.fstop_to_string" title="oa.animation.tools.dof_tool.dof_utils.fstop_to_string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fstop_to_string</span></code></a>(value)</p></td>
+<td><p>Converts fstop value to a name that represents its strength.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.build_new_clip_name" title="oa.animation.tools.dof_tool.dof_utils.build_new_clip_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_new_clip_name</span></code></a>(target, value)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.lerp_color" title="oa.animation.tools.dof_tool.dof_utils.lerp_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lerp_color</span></code></a>(start_color, end_color, blend_value)</p></td>
+<td><p>Lerps between two colors by supplied blend value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.lerp_tri_colors" title="oa.animation.tools.dof_tool.dof_utils.lerp_tri_colors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lerp_tri_colors</span></code></a>(start_color, mid_color, end_color, value)</p></td>
+<td><p>Lerps between three colors by supplied blend value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.open_time_editor" title="oa.animation.tools.dof_tool.dof_utils.open_time_editor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_time_editor</span></code></a>()</p></td>
+<td><p>Opens up the time editor and creates dof composition.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.get_clip_ranges" title="oa.animation.tools.dof_tool.dof_utils.get_clip_ranges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_clip_ranges</span></code></a>(clip)</p></td>
+<td><p>Gets and returns the supplied clip's start and end frames.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.clip_has_holds" title="oa.animation.tools.dof_tool.dof_utils.clip_has_holds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clip_has_holds</span></code></a>(clip)</p></td>
+<td><p>Returns True if the supplied clip has holds in it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.apply_transitions" title="oa.animation.tools.dof_tool.dof_utils.apply_transitions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_transitions</span></code></a>()</p></td>
+<td><p>Adds transitions to all neighbouring clips.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.collect_surrounding_clips" title="oa.animation.tools.dof_tool.dof_utils.collect_surrounding_clips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collect_surrounding_clips</span></code></a>(time)</p></td>
+<td><p>Checks the previous, current, and next clips that are relative to the supplied time.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.create_clip" title="oa.animation.tools.dof_tool.dof_utils.create_clip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_clip</span></code></a>(focus_ctrl, target, fstop_plug, fstop, ...)</p></td>
+<td><p>Creates a new clip in the time editor.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.update_fstop" title="oa.animation.tools.dof_tool.dof_utils.update_fstop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_fstop</span></code></a>(value)</p></td>
+<td><p>Updates all selected animation clips with the supplied fstop.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.focus_new_locator" title="oa.animation.tools.dof_tool.dof_utils.focus_new_locator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">focus_new_locator</span></code></a>(focus_ctrl, cam_attrs_ctrl)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.set_new_focus" title="oa.animation.tools.dof_tool.dof_utils.set_new_focus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_new_focus</span></code></a>(focus_ctrl, cam_attrs_ctrl, target, fstop)</p></td>
+<td><p>Changes dof focus to the supplied target with the supplied fstop.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.bake_clips" title="oa.animation.tools.dof_tool.dof_utils.bake_clips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bake_clips</span></code></a>(focus_ctrl, cam_attrs_ctrl)</p></td>
+<td><p>Bakes clips to keys so that the dof is no longer driven from the time editor.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.unbake_clips" title="oa.animation.tools.dof_tool.dof_utils.unbake_clips"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unbake_clips</span></code></a>(focus_ctrl, cam_attrs_ctrl)</p></td>
+<td><p>Deletes all keys from focus and attributes ctrls and switches it back to be driven by clips.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.dof_tool.dof_utils.dof_comp" title="oa.animation.tools.dof_tool.dof_utils.dof_comp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dof_comp</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.dof_comp">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">dof_comp</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">dofComposition</span></em><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.dof_comp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.ViewportOff">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">ViewportOff</span></span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.ViewportOff" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Disables the viewport’s redraw.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.ViewportOff.__enter__">
+<span class="sig-name descname"><span class="pre">__enter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.ViewportOff.__enter__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.ViewportOff.__exit__">
+<span class="sig-name descname"><span class="pre">__exit__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_tb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.ViewportOff.__exit__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.UndoStack">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">UndoStack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.UndoStack" title="Permalink to this definition"></a></dt>
+<dd><p>Includes all operations as a single chunk so Maya can undo/redo all at once.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.UndoStack.__enter__">
+<span class="sig-name descname"><span class="pre">__enter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.UndoStack.__enter__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.UndoStack.__exit__">
+<span class="sig-name descname"><span class="pre">__exit__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_tb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.UndoStack.__exit__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.load_pixmap">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">load_pixmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.load_pixmap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.get_eyes_target">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">get_eyes_target</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.get_eyes_target" title="Permalink to this definition"></a></dt>
+<dd><p>Tries to get eyes locator from supplied objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objs</strong> (<em>string</em><em>[</em><em>]</em>) – A list of objects.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The asset’s eyes locator.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.get_shot_data">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">get_shot_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.get_shot_data" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the scene cp’s json data.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.get_shot_range">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">get_shot_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.get_shot_range" title="Permalink to this definition"></a></dt>
+<dd><p>Finds what shot it’s in by the supplied time and returns the shot’s info.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>time</strong> (<em>float</em>) – A frame to query from.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The shot’s name, start and end frames.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.get_shot_from_clip">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">get_shot_from_clip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clip</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.get_shot_from_clip" title="Permalink to this definition"></a></dt>
+<dd><p>Checks time of the supplied clip and determines what shot it belongs to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>clip</strong> (<em>string</em>) – A name of an animation clip.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The name of the clip’s shot.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.get_scene_cameras">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">get_scene_cameras</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.get_scene_cameras" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.is_a_camera_asset">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">is_a_camera_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.is_a_camera_asset" title="Permalink to this definition"></a></dt>
+<dd><p>Traverses up hierarchy to see if the supplied object is a camera asset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> (<em>string</em>) – An object to traverse from.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if it detects it as a camera asset.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.add_string_attr">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">add_string_attr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.add_string_attr" title="Permalink to this definition"></a></dt>
+<dd><p>Helper function to add a string attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – Object to add attribute on.</p></li>
+<li><p><strong>attr</strong> (<em>string</em>) – The attribute’s new.</p></li>
+<li><p><strong>value</strong> (<em>string</em>) – The attribute’s value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.fstop_to_string">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">fstop_to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.fstop_to_string" title="Permalink to this definition"></a></dt>
+<dd><p>Converts fstop value to a name that represents its strength.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>float</em>) – A range of 0.0 to 1.0.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.build_new_clip_name">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">build_new_clip_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.build_new_clip_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.lerp_color">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">lerp_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.lerp_color" title="Permalink to this definition"></a></dt>
+<dd><p>Lerps between two colors by supplied blend value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_color</strong> (<em>tuple</em>) – </p></li>
+<li><p><strong>end_color</strong> (<em>tuple</em>) – </p></li>
+<li><p><strong>blend_value</strong> (<em>float</em>) – A value between 0.0 to 1.0
+0.0=start_color
+0.5=50% mix of both colors
+1.0=end_color</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of rgb values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.lerp_tri_colors">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">lerp_tri_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mid_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.lerp_tri_colors" title="Permalink to this definition"></a></dt>
+<dd><p>Lerps between three colors by supplied blend value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_color</strong> (<em>tuple</em>) – </p></li>
+<li><p><strong>mid_color</strong> (<em>tuple</em>) – </p></li>
+<li><p><strong>end_color</strong> (<em>tuple</em>) – </p></li>
+<li><p><strong>value</strong> (<em>float</em>) – A value between 0.0 to 1.0
+0.0=start_color
+0.5=mid_color
+1.0=end_color</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of rgb values.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.open_time_editor">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">open_time_editor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.open_time_editor" title="Permalink to this definition"></a></dt>
+<dd><p>Opens up the time editor and creates dof composition.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.get_clip_ranges">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">get_clip_ranges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clip</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.get_clip_ranges" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the supplied clip’s start and end frames.
+There’s no built-in way to get the clip’s ‘real’ range, it needs to be calculated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>clip</strong> (<em>string</em>) – An animation clip’s name.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.clip_has_holds">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">clip_has_holds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clip</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.clip_has_holds" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True if the supplied clip has holds in it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>clip</strong> (<em>string</em>) – An animation clip’s name.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.apply_transitions">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">apply_transitions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.apply_transitions" title="Permalink to this definition"></a></dt>
+<dd><p>Adds transitions to all neighbouring clips.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.collect_surrounding_clips">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">collect_surrounding_clips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.collect_surrounding_clips" title="Permalink to this definition"></a></dt>
+<dd><p>Checks the previous, current, and next clips that are relative to the supplied time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>time</strong> (<em>int</em>) – A frame to check from.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list that contains the previous, current, and next clips.
+If a clip can’t be found it will append the clip as None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.create_clip">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">create_clip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">focus_ctrl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fstop_plug</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fstop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shot_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shot_end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dofClip'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(1,</span> <span class="pre">0,</span> <span class="pre">0)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.create_clip" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new clip in the time editor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>focus_ctrl</strong> (<em>string</em>) – The camera’s focus distance ctrl.</p></li>
+<li><p><strong>target</strong> (<em>string</em>) – The object to focus onto.</p></li>
+<li><p><strong>cam_attrs_ctrl</strong> (<em>string</em>) – The camera’s attribute ctrl.</p></li>
+<li><p><strong>fstop_plug</strong> (<em>string</em>) – The full name of the fstop’s attribute.</p></li>
+<li><p><strong>fstop</strong> (<em>float</em>) – Range of 0.0 to 1.0.</p></li>
+<li><p><strong>shot_start</strong> (<em>int</em>) – The frame that the new clip will snap from.</p></li>
+<li><p><strong>shot_end</strong> (<em>int</em>) – The farme that the new clip will snap to.</p></li>
+<li><p><strong>buffer</strong> (<em>int</em>) – The number of frames that the new clip must have a gap with its neighbours.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – The name of the new clip.</p></li>
+<li><p><strong>color</strong> (<em>tuple</em>) – Rgb values of the new clip.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The name of the new clip.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.update_fstop">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">update_fstop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.update_fstop" title="Permalink to this definition"></a></dt>
+<dd><p>Updates all selected animation clips with the supplied fstop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<em>float</em>) – Range of 0.0 to 1.0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.focus_new_locator">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">focus_new_locator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">focus_ctrl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cam_attrs_ctrl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.focus_new_locator" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.set_new_focus">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">set_new_focus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">focus_ctrl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cam_attrs_ctrl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fstop</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.set_new_focus" title="Permalink to this definition"></a></dt>
+<dd><p>Changes dof focus to the supplied target with the supplied fstop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>focus_ctrl</strong> (<em>string</em>) – The camera’s focus distance ctrl.</p></li>
+<li><p><strong>cam_attrs_ctrl</strong> (<em>string</em>) – The camera’s attribute ctrl.</p></li>
+<li><p><strong>target</strong> (<em>string</em>) – The object to focus onto.</p></li>
+<li><p><strong>fstop</strong> (<em>float</em>) – Range of 0.0 to 1.0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.bake_clips">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">bake_clips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">focus_ctrl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cam_attrs_ctrl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.bake_clips" title="Permalink to this definition"></a></dt>
+<dd><p>Bakes clips to keys so that the dof is no longer driven from the time editor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>focus_ctrl</strong> (<em>string</em>) – The camera’s focus distance ctrl.</p></li>
+<li><p><strong>cam_attrs_ctrl</strong> (<em>string</em>) – The camera’s attributes ctrl.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.dof_tool.dof_utils.unbake_clips">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.dof_tool.dof_utils.</span></span><span class="sig-name descname"><span class="pre">unbake_clips</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">focus_ctrl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cam_attrs_ctrl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.dof_tool.dof_utils.unbake_clips" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes all keys from focus and attributes ctrls and switches it back to be driven by clips.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>focus_ctrl</strong> (<em>string</em>) – The camera’s focus distance ctrl.</p></li>
+<li><p><strong>cam_attrs_ctrl</strong> (<em>string</em>) – The camera’s attributes ctrl.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../dof_tool/index.html" class="btn btn-neutral float-left" title=" oa.animation.tools.dof_tool.dof_tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../frustum/index.html" class="btn btn-neutral float-right" title=" oa.animation.tools.frustum" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

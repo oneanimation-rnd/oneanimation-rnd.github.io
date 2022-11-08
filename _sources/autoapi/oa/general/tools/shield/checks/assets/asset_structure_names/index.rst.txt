@@ -1,0 +1,46 @@
+ :py:mod:`oa.general.tools.shield.checks.assets.asset_structure_names`
+============================================================================================================================================
+
+.. py:module:: oa.general.tools.shield.checks.assets.asset_structure_names
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.shield.checks.assets.asset_structure_names.Check
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.shield.checks.assets.asset_structure_names.short_name
+
+
+
+.. py:function:: short_name(obj)
+
+
+.. py:class:: Check
+
+   Bases: :py:obj:`oa.general.tools.shield.templates.check_template.CheckTemplate`
+
+   .. py:method:: run()
+
+      This check fails if it raises any error.
+      Raise script_utils.CheckError to display it in the interface.
+
+
+   .. py:method:: auto_fix()
+
+      Comment this function out if this check shouldn't have an auto-fix.
+
+
+

@@ -1,0 +1,47 @@
+ :py:mod:`bd.hooks.main`
+================================================
+
+.. py:module:: bd.hooks.main
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.hooks.main.load
+   bd.hooks.main.execute
+   bd.hooks.main.get_active_registry
+
+
+
+.. py:function:: load(hook_search_paths=None)
+
+   Find and load all the available hooks.
+
+   :param hook_search_paths: A list of directories
+                             in which to search plugins.
+   :type hook_search_paths: list[str]
+
+
+.. py:function:: execute(hook_name, *args, **kwargs)
+
+   Get all hook items registered under the specified hook name
+   and prepare a HookExecutor object with the provided arguments.
+
+   :param hook_name: A hook name.
+   :type hook_name: str
+   :param \*args: Variable length argument list.
+   :param \*\*kwargs: Arbitrary keyword arguments.
+
+   :returns: hook executor object.
+   :rtype: bd.hooks.executor.HookExecutor
+
+
+.. py:function:: get_active_registry()
+
+

@@ -1,0 +1,26 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.components.eyes_rig`
+========================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.components.eyes_rig
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.components.eyes_rig.rig_eyelid
+   oa.rigging.tools.auto_rigging.components.eyes_rig.rig_eyes
+
+
+
+.. py:function:: rig_eyelid(eye_jnt, eyelid_ctrl, lid, outer_lid, mid_lid, inner_lid, prefix, suffix, is_bottom, is_left_side, rig_scale=1.0)
+
+
+.. py:function:: rig_eyes(root_nul, eye, pupil, eye_proxy, top_lid, top_lid_1, top_lid_2, top_lid_3, bottom_lid, bottom_lid_1, bottom_lid_2, bottom_lid_3, top_lid_ctrl, bottom_lid_ctrl, is_left_side, rig_scale=1.0)
+
+

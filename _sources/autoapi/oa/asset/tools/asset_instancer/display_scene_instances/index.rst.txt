@@ -1,0 +1,24 @@
+ :py:mod:`oa.asset.tools.asset_instancer.display_scene_instances`
+==================================================================================================================================
+
+.. py:module:: oa.asset.tools.asset_instancer.display_scene_instances
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_instancer.display_scene_instances.run
+
+
+
+.. py:function:: run()
+
+   Enables handles to display on all instances in the scene.
+
+

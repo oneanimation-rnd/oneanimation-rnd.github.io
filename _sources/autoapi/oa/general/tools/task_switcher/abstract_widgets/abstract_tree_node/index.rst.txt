@@ -1,0 +1,67 @@
+ :py:mod:`oa.general.tools.task_switcher.abstract_widgets.abstract_tree_node`
+==========================================================================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.abstract_widgets.abstract_tree_node
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.abstract_widgets.abstract_tree_node.AbstractTreeNode
+
+
+
+
+.. py:class:: AbstractTreeNode(_data=None, parent=None)
+
+   Bases: :py:obj:`object`
+
+   The tree's model will be populated with this.
+
+   .. py:method:: data(column)
+
+      Fetches data by column.
+
+
+   .. py:method:: setData(column, value)
+
+      Sets value to internal data.
+
+
+   .. py:method:: appendChild(_data)
+
+      Appends a new TreeNode child to self.
+      This needs to be sub-classed.
+
+
+   .. py:method:: child(row)
+
+      Fetches child by relative row index.
+
+
+   .. py:method:: childrenCount()
+
+      Gets number of children.
+
+
+   .. py:method:: hasChildren()
+
+      Returns True if self has children.
+
+
+   .. py:method:: row()
+
+      Gets self's current row index.
+
+
+   .. py:method:: columnCount()
+
+      Gets self's number of columns.
+
+
+

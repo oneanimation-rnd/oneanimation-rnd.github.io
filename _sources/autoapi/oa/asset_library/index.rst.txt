@@ -1,0 +1,27 @@
+ :py:mod:`oa.asset_library`
+======================================================
+
+.. py:module:: oa.asset_library
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   abstract_widgets/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   asset_library_tool/index.rst
+   asset_library_utils/index.rst
+   info_viewer_window/index.rst
+   search_dialog/index.rst
+
+

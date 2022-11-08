@@ -1,0 +1,16 @@
+ :py:mod:`oa.animation.tools.visibility_set_tool`
+==================================================================================================
+
+.. py:module:: oa.animation.tools.visibility_set_tool
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   visibility_set_tool/index.rst
+   visibility_set_utils/index.rst
+
+

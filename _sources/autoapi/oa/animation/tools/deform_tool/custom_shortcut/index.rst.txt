@@ -1,0 +1,53 @@
+ :py:mod:`oa.animation.tools.deform_tool.custom_shortcut`
+==================================================================================================================
+
+.. py:module:: oa.animation.tools.deform_tool.custom_shortcut
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.deform_tool.custom_shortcut.CustomShortcut
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.deform_tool.custom_shortcut.new_func
+
+
+
+.. py:class:: CustomShortcut(modifiers, key, allowed_panels=['modelPanel'], parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QShortcut`
+
+   .. py:attribute:: triggered
+      
+
+      
+
+   .. py:method:: get_maya_window()
+      :staticmethod:
+
+
+   .. py:method:: on_activated()
+
+
+   .. py:method:: run_native_shortcut()
+
+
+   .. py:method:: unregister()
+
+
+
+.. py:function:: new_func()
+
+

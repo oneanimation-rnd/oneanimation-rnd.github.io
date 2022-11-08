@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa_utils.takes &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title=" oa_utils.vcs" href="../vcs/index.html" />
+    <link rel="prev" title=" oa_utils.medusa" href="../medusa/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../config/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../helpers/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.helpers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ldap_control/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.ldap_control</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../logger/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../medusa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.medusa</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.takes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vcs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.vcs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xml_info_api/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.xml_info_api</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xml_info_hou/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.xml_info_hou</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.takes</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/oa_utils/takes/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa_utils.takes">
+<span id="oa-utils-takes"></span><h1> <a class="reference internal" href="#module-oa_utils.takes" title="oa_utils.takes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.takes</span></code></a><a class="headerlink" href="#module-oa_utils.takes" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.takes.TakeWrapper" title="oa_utils.takes.TakeWrapper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TakeWrapper</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.takes.Take" title="oa_utils.takes.Take"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Take</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.takes._takeErr" title="oa_utils.takes._takeErr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_takeErr</span></code></a>(cmd_err_output)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.takes.allTakes" title="oa_utils.takes.allTakes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">allTakes</span></code></a>()</p></td>
+<td><p>returns a tuple of all Take objects</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.takes.curTake" title="oa_utils.takes.curTake"><code class="xref py py-obj docutils literal notranslate"><span class="pre">curTake</span></code></a>()</p></td>
+<td><p>returns the current Take object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.takes.findTake" title="oa_utils.takes.findTake"><code class="xref py py-obj docutils literal notranslate"><span class="pre">findTake</span></code></a>(take_name)</p></td>
+<td><p>returnsTake object or None</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.takes.prefixForNewTakeNames" title="oa_utils.takes.prefixForNewTakeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prefixForNewTakeNames</span></code></a>()</p></td>
+<td><p>return the prefix used when creating new takes</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.takes.rootTake" title="oa_utils.takes.rootTake"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rootTake</span></code></a>()</p></td>
+<td><p>returns the root Take object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.takes.setCurTake" title="oa_utils.takes.setCurTake"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCurTake</span></code></a>(take)</p></td>
+<td><p>sets the active Take</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.takes.setAutoTake" title="oa_utils.takes.setAutoTake"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAutoTake</span></code></a>(switch)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.takes.setPrefixForNewTakeNames" title="oa_utils.takes.setPrefixForNewTakeNames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPrefixForNewTakeNames</span></code></a>([prefix_name])</p></td>
+<td><p>set the prefix used when vreating new takes</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.takes.</span></span><span class="sig-name descname"><span class="pre">TakeWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.__repr__" title="Permalink to this definition"></a></dt>
+<dd><p>Return repr(self).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.setName">
+<span class="sig-name descname"><span class="pre">setName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.setName" title="Permalink to this definition"></a></dt>
+<dd><p>Set this Takes name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.memoryUsageInBytes">
+<span class="sig-name descname"><span class="pre">memoryUsageInBytes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.memoryUsageInBytes" title="Permalink to this definition"></a></dt>
+<dd><p>Memory used by this Take in bytes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper._solveFullPath">
+<span class="sig-name descname"><span class="pre">_solveFullPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper._solveFullPath" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.fullPath">
+<span class="sig-name descname"><span class="pre">fullPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.fullPath" title="Permalink to this definition"></a></dt>
+<dd><p>Retrun the full path to this Take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.name" title="Permalink to this definition"></a></dt>
+<dd><p>Return the name of this take</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.destroy" title="Permalink to this definition"></a></dt>
+<dd><p>Destroy this Take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.asCode">
+<span class="sig-name descname"><span class="pre">asCode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.asCode" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the commands necessary to re-create this take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.saveToFile">
+<span class="sig-name descname"><span class="pre">saveToFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.saveToFile" title="Permalink to this definition"></a></dt>
+<dd><p>Save child or children of this take to specified filename</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.loadChildTakeFromFile">
+<span class="sig-name descname"><span class="pre">loadChildTakeFromFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.loadChildTakeFromFile" title="Permalink to this definition"></a></dt>
+<dd><p>Load Take from the specified filename as a child of this Take</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.addChildTake">
+<span class="sig-name descname"><span class="pre">addChildTake</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.addChildTake" title="Permalink to this definition"></a></dt>
+<dd><p>Add a child Take under this Take</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.children">
+<span class="sig-name descname"><span class="pre">children</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.children" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a tuple of Takes that are children of this Take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper._addRemoveParm">
+<span class="sig-name descname"><span class="pre">_addRemoveParm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper._addRemoveParm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.addParm">
+<span class="sig-name descname"><span class="pre">addParm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.addParm" title="Permalink to this definition"></a></dt>
+<dd><p>Include the specified parm in this Take</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.removeParm">
+<span class="sig-name descname"><span class="pre">removeParm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.removeParm" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the specified parm is from this take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.hasParm">
+<span class="sig-name descname"><span class="pre">hasParm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parm</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.hasParm" title="Permalink to this definition"></a></dt>
+<dd><p>Test if the specified parm is included in this take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.parms">
+<span class="sig-name descname"><span class="pre">parms</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.parms" title="Permalink to this definition"></a></dt>
+<dd><p>returns a tuple of hou.parms</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.removeAllParmsOfNode">
+<span class="sig-name descname"><span class="pre">removeAllParmsOfNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.removeAllParmsOfNode" title="Permalink to this definition"></a></dt>
+<dd><p>Remove all parameters from specified Node from this Take</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.addAllParmsOfNode">
+<span class="sig-name descname"><span class="pre">addAllParmsOfNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.addAllParmsOfNode" title="Permalink to this definition"></a></dt>
+<dd><p>Include all parameters from specified Node in this Take</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.addParmsFromTake">
+<span class="sig-name descname"><span class="pre">addParmsFromTake</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">take</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite_existing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.addParmsFromTake" title="Permalink to this definition"></a></dt>
+<dd><p>Include parameters from the specified Take in this Take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper._addRemoveFlag">
+<span class="sig-name descname"><span class="pre">_addRemoveFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper._addRemoveFlag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.addNodeBypassFlag">
+<span class="sig-name descname"><span class="pre">addNodeBypassFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.addNodeBypassFlag" title="Permalink to this definition"></a></dt>
+<dd><p>Include the specified node’s bypass flag in this Take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.addNodeDisplayFlag">
+<span class="sig-name descname"><span class="pre">addNodeDisplayFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.addNodeDisplayFlag" title="Permalink to this definition"></a></dt>
+<dd><p>Include the specified node’s display flag in this Take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.addNodeRenderFlag">
+<span class="sig-name descname"><span class="pre">addNodeRenderFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.addNodeRenderFlag" title="Permalink to this definition"></a></dt>
+<dd><p>Include the specified node’s render flag in this Take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.removeNodeBypassFlag">
+<span class="sig-name descname"><span class="pre">removeNodeBypassFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.removeNodeBypassFlag" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the specified node’s bypass flag from this Take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.removeNodeDisplayFlag">
+<span class="sig-name descname"><span class="pre">removeNodeDisplayFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.removeNodeDisplayFlag" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the specified node’s display flag from this Take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.removeNodeRenderFlag">
+<span class="sig-name descname"><span class="pre">removeNodeRenderFlag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.removeNodeRenderFlag" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the specified node’s render flag from this Take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.moveUnderTake">
+<span class="sig-name descname"><span class="pre">moveUnderTake</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">take</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.moveUnderTake" title="Permalink to this definition"></a></dt>
+<dd><p>Moves take and all its children under pecified parent Take.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa_utils.takes.TakeWrapper.insertTakeAbove">
+<span class="sig-name descname"><span class="pre">insertTakeAbove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.TakeWrapper.insertTakeAbove" title="Permalink to this definition"></a></dt>
+<dd><p>Insert the take between the specified Take and its parent.
+(becomes the new parent of the child takes)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.takes.Take">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.takes.</span></span><span class="sig-name descname"><span class="pre">Take</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.Take" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa_utils.takes.TakeWrapper" title="oa_utils.takes.TakeWrapper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TakeWrapper</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.takes._takeErr">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.takes.</span></span><span class="sig-name descname"><span class="pre">_takeErr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cmd_err_output</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes._takeErr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.takes.allTakes">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.takes.</span></span><span class="sig-name descname"><span class="pre">allTakes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.allTakes" title="Permalink to this definition"></a></dt>
+<dd><p>returns a tuple of all Take objects</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.takes.curTake">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.takes.</span></span><span class="sig-name descname"><span class="pre">curTake</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.curTake" title="Permalink to this definition"></a></dt>
+<dd><p>returns the current Take object</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.takes.findTake">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.takes.</span></span><span class="sig-name descname"><span class="pre">findTake</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">take_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.findTake" title="Permalink to this definition"></a></dt>
+<dd><p>returnsTake object or None</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.takes.prefixForNewTakeNames">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.takes.</span></span><span class="sig-name descname"><span class="pre">prefixForNewTakeNames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.prefixForNewTakeNames" title="Permalink to this definition"></a></dt>
+<dd><p>return the prefix used when creating new takes</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.takes.rootTake">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.takes.</span></span><span class="sig-name descname"><span class="pre">rootTake</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.rootTake" title="Permalink to this definition"></a></dt>
+<dd><p>returns the root Take object</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.takes.setCurTake">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.takes.</span></span><span class="sig-name descname"><span class="pre">setCurTake</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">take</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.setCurTake" title="Permalink to this definition"></a></dt>
+<dd><p>sets the active Take</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.takes.setAutoTake">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.takes.</span></span><span class="sig-name descname"><span class="pre">setAutoTake</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">switch</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.setAutoTake" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.takes.setPrefixForNewTakeNames">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.takes.</span></span><span class="sig-name descname"><span class="pre">setPrefixForNewTakeNames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'take'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.takes.setPrefixForNewTakeNames" title="Permalink to this definition"></a></dt>
+<dd><p>set the prefix used when vreating new takes</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../medusa/index.html" class="btn btn-neutral float-left" title=" oa_utils.medusa" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../vcs/index.html" class="btn btn-neutral float-right" title=" oa_utils.vcs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

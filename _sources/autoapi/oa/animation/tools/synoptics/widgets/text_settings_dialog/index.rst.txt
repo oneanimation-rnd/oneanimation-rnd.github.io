@@ -1,0 +1,35 @@
+ :py:mod:`oa.animation.tools.synoptics.widgets.text_settings_dialog`
+========================================================================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.widgets.text_settings_dialog
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.widgets.text_settings_dialog.TextSettingsDialog
+
+
+
+
+.. py:class:: TextSettingsDialog(font=None, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   A pop-up dialog to set a new text and its font.
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: get_text()
+
+
+   .. py:method:: get_font()
+
+
+

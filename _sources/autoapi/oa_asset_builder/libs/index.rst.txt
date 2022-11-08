@@ -1,0 +1,27 @@
+ :py:mod:`oa_asset_builder.libs`
+================================================================
+
+.. py:module:: oa_asset_builder.libs
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   delegates/index.rst
+   ui/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   description/index.rst
+   storage/index.rst
+   utils/index.rst
+
+

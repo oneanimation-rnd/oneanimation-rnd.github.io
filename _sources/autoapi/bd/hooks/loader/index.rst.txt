@@ -1,0 +1,57 @@
+ :py:mod:`bd.hooks.loader`
+====================================================
+
+.. py:module:: bd.hooks.loader
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.hooks.loader.get_searchpath
+   bd.hooks.loader.load
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.hooks.loader.LOGGER
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:function:: get_searchpath(root_dir)
+
+   Return a list of all subdirectories under the root directory.
+
+   This function goes to every subdirectory recursively and appends
+   it path to the resulting list.
+
+   :param root_dir: A parent directory.
+   :type root_dir: str
+
+   :returns: A list of subdirectories including the root directory.
+   :rtype: list[str]
+
+
+.. py:function:: load(registry, hook_search_paths)
+
+   Find and register all the available hooks.
+
+   :param registry: Plugin registry object.
+   :type registry: bd.hooks.registry.HookRegistry
+   :param hook_search_paths: A list of initial folders to search plugins at.
+   :type hook_search_paths: list[str]
+
+

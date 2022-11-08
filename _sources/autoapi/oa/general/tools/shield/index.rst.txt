@@ -1,0 +1,27 @@
+ :py:mod:`oa.general.tools.shield`
+====================================================================
+
+.. py:module:: oa.general.tools.shield
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   checks/index.rst
+   shields/index.rst
+   templates/index.rst
+   utils/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   shield_interface/index.rst
+
+

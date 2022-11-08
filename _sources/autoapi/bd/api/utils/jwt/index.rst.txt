@@ -1,0 +1,26 @@
+ :py:mod:`bd.api.utils.jwt`
+======================================================
+
+.. py:module:: bd.api.utils.jwt
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.api.utils.jwt.get_claims
+   bd.api.utils.jwt.is_token_expired
+
+
+
+.. py:function:: get_claims(id_token)
+
+
+.. py:function:: is_token_expired(id_token, delta=10)
+
+

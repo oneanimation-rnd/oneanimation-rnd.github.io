@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.animation.tools.scene_details.refs_treeview &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.animation.tools.scene_details.scene_details" href="../scene_details/index.html" />
+    <link rel="prev" title=" oa.animation.tools.scene_details.qflow_layout" href="../qflow_layout/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.scene_details</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.scene_details.refs_treeview</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/animation/tools/scene_details/refs_treeview/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.animation.tools.scene_details.refs_treeview">
+<span id="oa-animation-tools-scene-details-refs-treeview"></span><h1> <a class="reference internal" href="#module-oa.animation.tools.scene_details.refs_treeview" title="oa.animation.tools.scene_details.refs_treeview"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.scene_details.refs_treeview</span></code></a><a class="headerlink" href="#module-oa.animation.tools.scene_details.refs_treeview" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView" title="oa.animation.tools.scene_details.refs_treeview.RefsTreeView"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RefsTreeView</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details.refs_treeview.AssetProxyModel" title="oa.animation.tools.scene_details.refs_treeview.AssetProxyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssetProxyModel</span></code></a></p></td>
+<td><p>Proxy used between QTreeView and QAbstractItemModel to filter and sort items.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel" title="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssetTreeModel</span></code></a></p></td>
+<td><p>QTreeView uses this class to handle all its data for best performance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details.refs_treeview.StyledItemDelegate" title="oa.animation.tools.scene_details.refs_treeview.StyledItemDelegate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StyledItemDelegate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details.refs_treeview.ComboBoxEditor" title="oa.animation.tools.scene_details.refs_treeview.ComboBoxEditor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComboBoxEditor</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate" title="oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComboBoxDelegate</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode" title="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AssetTreeNode</span></code></a></p></td>
+<td><p>The tree's model will be populated with this.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details.refs_treeview.</span></span><span class="sig-name descname"><span class="pre">RefsTreeView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QTreeView</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.show_help_requested">
+<span class="sig-name descname"><span class="pre">show_help_requested</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.show_help_requested" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.show_thumbnails_toggled">
+<span class="sig-name descname"><span class="pre">show_thumbnails_toggled</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.show_thumbnails_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.show_inst_masters_toggled">
+<span class="sig-name descname"><span class="pre">show_inst_masters_toggled</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.show_inst_masters_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.show_hierarchy_toggled">
+<span class="sig-name descname"><span class="pre">show_hierarchy_toggled</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.show_hierarchy_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.data_updated">
+<span class="sig-name descname"><span class="pre">data_updated</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.data_updated" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.selection_changed">
+<span class="sig-name descname"><span class="pre">selection_changed</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.selection_changed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.TimeRange">
+<span class="sig-name descname"><span class="pre">TimeRange</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.TimeRange" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.ShotRange">
+<span class="sig-name descname"><span class="pre">ShotRange</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.ShotRange" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.SequenceRange">
+<span class="sig-name descname"><span class="pre">SequenceRange</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.SequenceRange" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paint_event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.paintEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.mouseReleaseEvent">
+<span class="sig-name descname"><span class="pre">mouseReleaseEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.mouseReleaseEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.mouseMoveEvent">
+<span class="sig-name descname"><span class="pre">mouseMoveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.mouseMoveEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.wheelEvent">
+<span class="sig-name descname"><span class="pre">wheelEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.wheelEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.leaveEvent">
+<span class="sig-name descname"><span class="pre">leaveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.leaveEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.keyPressEvent">
+<span class="sig-name descname"><span class="pre">keyPressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.keyPressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_expanded">
+<span class="sig-name descname"><span class="pre">on_expanded</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_expanded" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_collapsed">
+<span class="sig-name descname"><span class="pre">on_collapsed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_collapsed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_header_section_clicked">
+<span class="sig-name descname"><span class="pre">on_header_section_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_header_section_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_menu_on_requested">
+<span class="sig-name descname"><span class="pre">on_menu_on_requested</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_menu_on_requested" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_load_triggered">
+<span class="sig-name descname"><span class="pre">on_load_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_load_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_unload_triggered">
+<span class="sig-name descname"><span class="pre">on_unload_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_unload_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_replace_triggered">
+<span class="sig-name descname"><span class="pre">on_replace_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_replace_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_remove_triggered">
+<span class="sig-name descname"><span class="pre">on_remove_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_remove_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_update_triggered">
+<span class="sig-name descname"><span class="pre">on_update_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_update_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_update_all_triggered">
+<span class="sig-name descname"><span class="pre">on_update_all_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_update_all_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_create_gpu_triggered">
+<span class="sig-name descname"><span class="pre">on_create_gpu_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_create_gpu_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_run_frustum_triggered">
+<span class="sig-name descname"><span class="pre">on_run_frustum_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_run_frustum_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_run_frustum_shot_triggered">
+<span class="sig-name descname"><span class="pre">on_run_frustum_shot_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_run_frustum_shot_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_run_frustum_seq_triggered">
+<span class="sig-name descname"><span class="pre">on_run_frustum_seq_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_run_frustum_seq_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_select_all_triggered">
+<span class="sig-name descname"><span class="pre">on_select_all_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_select_all_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_select_globalsrt_triggered">
+<span class="sig-name descname"><span class="pre">on_select_globalsrt_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_select_globalsrt_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_select_from_maya_triggered">
+<span class="sig-name descname"><span class="pre">on_select_from_maya_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_select_from_maya_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_frame_camera_triggered">
+<span class="sig-name descname"><span class="pre">on_frame_camera_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_frame_camera_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_show_thumbnails_triggered">
+<span class="sig-name descname"><span class="pre">on_show_thumbnails_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_show_thumbnails_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_inst_masters_triggered">
+<span class="sig-name descname"><span class="pre">on_inst_masters_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_inst_masters_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_show_hierarchy_triggered">
+<span class="sig-name descname"><span class="pre">on_show_hierarchy_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_show_hierarchy_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_resync_triggered">
+<span class="sig-name descname"><span class="pre">on_resync_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_resync_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_show_help_triggered">
+<span class="sig-name descname"><span class="pre">on_show_help_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_show_help_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_open_dir_triggered">
+<span class="sig-name descname"><span class="pre">on_open_dir_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_open_dir_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_copy_dir_path_triggered">
+<span class="sig-name descname"><span class="pre">on_copy_dir_path_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_copy_dir_path_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_copy_ref_path_triggered">
+<span class="sig-name descname"><span class="pre">on_copy_ref_path_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_copy_ref_path_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_selection_changed">
+<span class="sig-name descname"><span class="pre">on_selection_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">previous</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.on_selection_changed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.selected_indexes">
+<span class="sig-name descname"><span class="pre">selected_indexes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.selected_indexes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.select_indexes">
+<span class="sig-name descname"><span class="pre">select_indexes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.select_indexes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.get_selected_ref_path">
+<span class="sig-name descname"><span class="pre">get_selected_ref_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.get_selected_ref_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.traverse_top_rows">
+<span class="sig-name descname"><span class="pre">traverse_top_rows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.traverse_top_rows" title="Permalink to this definition"></a></dt>
+<dd><p>A generator that iterates through selected rows, but skips a row if it’s not the very top.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.traverse_parent_rows">
+<span class="sig-name descname"><span class="pre">traverse_parent_rows</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.traverse_parent_rows" title="Permalink to this definition"></a></dt>
+<dd><p>A generator that iterates through selected rows, but skips a row if its parent is selected.
+Effectively it’s going through all top-most rows.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.clear_tree">
+<span class="sig-name descname"><span class="pre">clear_tree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.clear_tree" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.fill_tree">
+<span class="sig-name descname"><span class="pre">fill_tree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.fill_tree" title="Permalink to this definition"></a></dt>
+<dd><p>Reset and add tree node objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.update_filter">
+<span class="sig-name descname"><span class="pre">update_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.update_filter" title="Permalink to this definition"></a></dt>
+<dd><p>Updates proxy’s filter string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.get_selected_items_objs">
+<span class="sig-name descname"><span class="pre">get_selected_items_objs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'*'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.get_selected_items_objs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.set_thumbnails_vis">
+<span class="sig-name descname"><span class="pre">set_thumbnails_vis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.set_thumbnails_vis" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.set_inst_masters_vis">
+<span class="sig-name descname"><span class="pre">set_inst_masters_vis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.set_inst_masters_vis" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.set_hierarchy_vis">
+<span class="sig-name descname"><span class="pre">set_hierarchy_vis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.set_hierarchy_vis" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.RefsTreeView.run_frustum">
+<span class="sig-name descname"><span class="pre">run_frustum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_range_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.RefsTreeView.run_frustum" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetProxyModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details.refs_treeview.</span></span><span class="sig-name descname"><span class="pre">AssetProxyModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetProxyModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtCore.QSortFilterProxyModel</span></code></p>
+<p>Proxy used between QTreeView and QAbstractItemModel to filter and sort items.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetProxyModel.filterAcceptsRow">
+<span class="sig-name descname"><span class="pre">filterAcceptsRow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetProxyModel.filterAcceptsRow" title="Permalink to this definition"></a></dt>
+<dd><p>Built-in function to filter what items are seen.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetProxyModel.has_accepted_children">
+<span class="sig-name descname"><span class="pre">has_accepted_children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pattern</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tree_node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetProxyModel.has_accepted_children" title="Permalink to this definition"></a></dt>
+<dd><p>Recursively searches through tree node’s children to see if it matches the supplied pattern.
+This is used so for filtering so that the parent remains visible if it has a valid child.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details.refs_treeview.</span></span><span class="sig-name descname"><span class="pre">AssetTreeModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtCore.QAbstractItemModel</span></code></p>
+<p>QTreeView uses this class to handle all its data for best performance.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.ColumnNamespace">
+<span class="sig-name descname"><span class="pre">ColumnNamespace</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.ColumnNamespace" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.ColumnVersion">
+<span class="sig-name descname"><span class="pre">ColumnVersion</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.ColumnVersion" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.ColumnRes">
+<span class="sig-name descname"><span class="pre">ColumnRes</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.ColumnRes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.ColumnLoaded">
+<span class="sig-name descname"><span class="pre">ColumnLoaded</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.ColumnLoaded" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.ColumnThumbnail">
+<span class="sig-name descname"><span class="pre">ColumnThumbnail</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.ColumnThumbnail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.assets_updated">
+<span class="sig-name descname"><span class="pre">assets_updated</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.assets_updated" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.start_progress">
+<span class="sig-name descname"><span class="pre">start_progress</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.start_progress" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.next_progress">
+<span class="sig-name descname"><span class="pre">next_progress</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.next_progress" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.progress_finished">
+<span class="sig-name descname"><span class="pre">progress_finished</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.progress_finished" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.rows_changed">
+<span class="sig-name descname"><span class="pre">rows_changed</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.rows_changed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.data_updated">
+<span class="sig-name descname"><span class="pre">data_updated</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.data_updated" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.columnCount">
+<span class="sig-name descname"><span class="pre">columnCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.QModelIndex()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.columnCount" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.rowCount">
+<span class="sig-name descname"><span class="pre">rowCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.QModelIndex()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.rowCount" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.index">
+<span class="sig-name descname"><span class="pre">index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.QModelIndex()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.parent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.hasChildren">
+<span class="sig-name descname"><span class="pre">hasChildren</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.hasChildren" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.data">
+<span class="sig-name descname"><span class="pre">data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.data" title="Permalink to this definition"></a></dt>
+<dd><p>Edit this to determine how the model should get its data from tree nodes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.setData">
+<span class="sig-name descname"><span class="pre">setData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.Qt.EditRole</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.setData" title="Permalink to this definition"></a></dt>
+<dd><p>Edit this to determine how the model should set data back onto tree nodes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.flags">
+<span class="sig-name descname"><span class="pre">flags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.flags" title="Permalink to this definition"></a></dt>
+<dd><p>Sets a role for columns.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.headerData">
+<span class="sig-name descname"><span class="pre">headerData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">section</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">role</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.headerData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.store_eval_settings">
+<span class="sig-name descname"><span class="pre">store_eval_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.store_eval_settings" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.to_serial_mode">
+<span class="sig-name descname"><span class="pre">to_serial_mode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.to_serial_mode" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.restore_eval_settings">
+<span class="sig-name descname"><span class="pre">restore_eval_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.restore_eval_settings" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.get_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.create_nodes_by_refs">
+<span class="sig-name descname"><span class="pre">create_nodes_by_refs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_paths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.create_nodes_by_refs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.append_sub_nodes">
+<span class="sig-name descname"><span class="pre">append_sub_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.append_sub_nodes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.traverse_all_rows">
+<span class="sig-name descname"><span class="pre">traverse_all_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.traverse_all_rows" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.crop_thumbnail">
+<span class="sig-name descname"><span class="pre">crop_thumbnail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pixmap</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.crop_thumbnail" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.set_load_state">
+<span class="sig-name descname"><span class="pre">set_load_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.set_load_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.replace_refs">
+<span class="sig-name descname"><span class="pre">replace_refs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.replace_refs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.remove_refs">
+<span class="sig-name descname"><span class="pre">remove_refs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indexes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.remove_refs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.create_gpu">
+<span class="sig-name descname"><span class="pre">create_gpu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indexes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.create_gpu" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.set_version">
+<span class="sig-name descname"><span class="pre">set_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.set_version" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.update_to_latest">
+<span class="sig-name descname"><span class="pre">update_to_latest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indexes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.update_to_latest" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.update_all_old_versions">
+<span class="sig-name descname"><span class="pre">update_all_old_versions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeModel.update_all_old_versions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.StyledItemDelegate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details.refs_treeview.</span></span><span class="sig-name descname"><span class="pre">StyledItemDelegate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.StyledItemDelegate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QStyledItemDelegate</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.StyledItemDelegate.paint">
+<span class="sig-name descname"><span class="pre">paint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">painter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.StyledItemDelegate.paint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.ComboBoxEditor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details.refs_treeview.</span></span><span class="sig-name descname"><span class="pre">ComboBoxEditor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.ComboBoxEditor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QComboBox</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.ComboBoxEditor.entered">
+<span class="sig-name descname"><span class="pre">entered</span></span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.ComboBoxEditor.entered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.ComboBoxEditor.enterEvent">
+<span class="sig-name descname"><span class="pre">enterEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.ComboBoxEditor.enterEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details.refs_treeview.</span></span><span class="sig-name descname"><span class="pre">ComboBoxDelegate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#oa.animation.tools.scene_details.refs_treeview.StyledItemDelegate" title="oa.animation.tools.scene_details.refs_treeview.StyledItemDelegate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StyledItemDelegate</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate.createEditor">
+<span class="sig-name descname"><span class="pre">createEditor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate.createEditor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate.setEditorData">
+<span class="sig-name descname"><span class="pre">setEditorData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">editor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate.setEditorData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate.setModelData">
+<span class="sig-name descname"><span class="pre">setModelData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">editor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate.setModelData" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate.hide_asset_tool_tip">
+<span class="sig-name descname"><span class="pre">hide_asset_tool_tip</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate.hide_asset_tool_tip" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate.on_combobox_entered">
+<span class="sig-name descname"><span class="pre">on_combobox_entered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate.on_combobox_entered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.scene_details.refs_treeview.</span></span><span class="sig-name descname"><span class="pre">AssetTreeNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The tree’s model will be populated with this.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.data">
+<span class="sig-name descname"><span class="pre">data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.data" title="Permalink to this definition"></a></dt>
+<dd><p>Fetches data by column.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.setData">
+<span class="sig-name descname"><span class="pre">setData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.setData" title="Permalink to this definition"></a></dt>
+<dd><p>Sets value to internal data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.appendChild">
+<span class="sig-name descname"><span class="pre">appendChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.appendChild" title="Permalink to this definition"></a></dt>
+<dd><p>Appends a new AssetTreeNode child to self.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.removeChild">
+<span class="sig-name descname"><span class="pre">removeChild</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.removeChild" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.removeChildren">
+<span class="sig-name descname"><span class="pre">removeChildren</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.removeChildren" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.child">
+<span class="sig-name descname"><span class="pre">child</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.child" title="Permalink to this definition"></a></dt>
+<dd><p>Fetches child by relative row index.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.childrenCount">
+<span class="sig-name descname"><span class="pre">childrenCount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.childrenCount" title="Permalink to this definition"></a></dt>
+<dd><p>Gets number of children.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.hasChildren">
+<span class="sig-name descname"><span class="pre">hasChildren</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.hasChildren" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True if self has children.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.row">
+<span class="sig-name descname"><span class="pre">row</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.row" title="Permalink to this definition"></a></dt>
+<dd><p>Gets self’s current row index.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.columnCount">
+<span class="sig-name descname"><span class="pre">columnCount</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.columnCount" title="Permalink to this definition"></a></dt>
+<dd><p>Gets self’s number of columns.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.collect_version_info">
+<span class="sig-name descname"><span class="pre">collect_version_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.scene_details.refs_treeview.AssetTreeNode.collect_version_info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../qflow_layout/index.html" class="btn btn-neutral float-left" title=" oa.animation.tools.scene_details.qflow_layout" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../scene_details/index.html" class="btn btn-neutral float-right" title=" oa.animation.tools.scene_details.scene_details" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

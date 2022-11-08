@@ -1,0 +1,26 @@
+ :py:mod:`oa.user_directory.client`
+======================================================================
+
+.. py:module:: oa.user_directory.client
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.user_directory.client.list_users
+   oa.user_directory.client.get_user
+
+
+
+.. py:function:: list_users()
+
+
+.. py:function:: get_user(name)
+
+

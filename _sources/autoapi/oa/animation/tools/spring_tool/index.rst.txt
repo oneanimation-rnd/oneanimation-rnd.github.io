@@ -1,0 +1,19 @@
+ :py:mod:`oa.animation.tools.spring_tool`
+==================================================================================
+
+.. py:module:: oa.animation.tools.spring_tool
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   floating_tooltip/index.rst
+   spring_presets_tool/index.rst
+   spring_settings_dialog/index.rst
+   spring_tool/index.rst
+   spring_utils/index.rst
+
+

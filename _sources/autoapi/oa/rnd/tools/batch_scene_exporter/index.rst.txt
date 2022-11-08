@@ -1,0 +1,26 @@
+ :py:mod:`oa.rnd.tools.batch_scene_exporter`
+========================================================================================
+
+.. py:module:: oa.rnd.tools.batch_scene_exporter
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   widgets/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   batch_scene_exporter/index.rst
+   batch_scene_exporter_tool/index.rst
+   batch_scene_utils/index.rst
+
+

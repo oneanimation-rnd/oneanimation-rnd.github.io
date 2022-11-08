@@ -1,0 +1,91 @@
+ :py:mod:`oa.asset.tools.texture_check_in.widgets.check_in_widget`
+====================================================================================================================================
+
+.. py:module:: oa.asset.tools.texture_check_in.widgets.check_in_widget
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.texture_check_in.widgets.check_in_widget.CheckInListWidget
+   oa.asset.tools.texture_check_in.widgets.check_in_widget.ListWidgetItem
+
+
+
+
+.. py:class:: CheckInListWidget(icon_size=60, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListWidget`
+
+   .. py:class:: DragState
+
+      .. py:attribute:: Off
+         :annotation: = 0
+
+         
+
+      .. py:attribute:: On
+         :annotation: = 1
+
+         
+
+      .. py:attribute:: Valid
+         :annotation: = 2
+
+         
+
+      .. py:attribute:: Invalid
+         :annotation: = 3
+
+         
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: paintEvent(event)
+
+      Shows tooltip when it's empty.
+
+
+   .. py:method:: dragEnterEvent(event)
+
+
+   .. py:method:: dragMoveEvent(event)
+
+
+   .. py:method:: dropEvent(event)
+
+
+   .. py:method:: add_items(paths, add_icons=True)
+
+
+   .. py:method:: remove_items(indexes)
+
+
+   .. py:method:: remove_selected_items()
+
+
+   .. py:method:: get_item_paths()
+
+
+   .. py:method:: is_valid_type(path)
+
+
+   .. py:method:: selected_rows()
+
+
+   .. py:method:: get_pixmap(path)
+
+
+
+.. py:class:: ListWidgetItem(label, path, pixmap=None, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListWidgetItem`
+
+

@@ -1,0 +1,39 @@
+ :py:mod:`oa.hou_utils.ui`
+====================================================
+
+.. py:module:: oa.hou_utils.ui
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.hou_utils.ui.choose_revision
+   oa.hou_utils.ui.choose_file
+   oa.hou_utils.ui.get_selected_shot
+   oa.hou_utils.ui.choose_scn_from_tree
+
+
+
+.. py:function:: choose_revision(file_path, title='Select Revision', message='', exclusive=True, select_current=False)
+
+
+.. py:function:: choose_file(start_directory=None, pattern='*', title='Choose a file', chooser_mode=hou.fileChooserMode.Read)
+
+
+.. py:function:: get_selected_shot(shots)
+
+   Prompts the user to select a single shot from the list of shots.
+
+   :param shots: [(index, startFrame, endFrame), ... ]
+   :type shots: list
+
+
+.. py:function:: choose_scn_from_tree(scn_type='SH', scn_ext='ma', title='Choose Scene')
+
+

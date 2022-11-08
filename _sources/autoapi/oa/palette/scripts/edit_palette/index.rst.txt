@@ -1,0 +1,22 @@
+ :py:mod:`oa.palette.scripts.edit_palette`
+====================================================================================
+
+.. py:module:: oa.palette.scripts.edit_palette
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.palette.scripts.edit_palette.run
+
+
+
+.. py:function:: run(node)
+
+

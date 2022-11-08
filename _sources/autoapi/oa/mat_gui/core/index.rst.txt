@@ -1,0 +1,16 @@
+ :py:mod:`oa.mat_gui.core`
+====================================================
+
+.. py:module:: oa.mat_gui.core
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   consts/index.rst
+   gui_utils/index.rst
+
+

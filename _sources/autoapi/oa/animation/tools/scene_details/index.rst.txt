@@ -1,0 +1,22 @@
+ :py:mod:`oa.animation.tools.scene_details`
+======================================================================================
+
+.. py:module:: oa.animation.tools.scene_details
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   asset_tool_tip/index.rst
+   layers_treeview/index.rst
+   qflow_layout/index.rst
+   refs_treeview/index.rst
+   scene_details/index.rst
+   scene_details_utils/index.rst
+   sets_treeview/index.rst
+   start_up_screen/index.rst
+
+

@@ -1,0 +1,63 @@
+ :py:mod:`oa_utils.database.wrappers.w_file`
+========================================================================================
+
+.. py:module:: oa_utils.database.wrappers.w_file
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_file._meta
+   oa_utils.database.wrappers.w_file.WFileEntry
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_file.LOGGER
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:class:: _meta
+
+   Bases: :py:obj:`type`
+
+   .. py:method:: __getattr__(name)
+      :classmethod:
+
+
+
+.. py:class:: WFileEntry(file_entry)
+
+   .. py:property:: revisions
+
+
+   .. py:method:: upsert(unique_id, filepath, comment, entity_type, user=None, date=None)
+      :classmethod:
+
+
+   .. py:method:: build_unique_id(filepath, project=None)
+      :classmethod:
+
+
+   .. py:method:: wrapped()
+      :classmethod:
+
+
+   .. py:method:: __getattr__(name)
+
+
+

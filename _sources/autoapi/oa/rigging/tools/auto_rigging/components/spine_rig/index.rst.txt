@@ -1,0 +1,22 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.components.spine_rig`
+==========================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.components.spine_rig
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.components.spine_rig.rig
+
+
+
+.. py:function:: rig(root_nul, spine_jnts, hips, rig_scale=1, stretchy=False)
+
+

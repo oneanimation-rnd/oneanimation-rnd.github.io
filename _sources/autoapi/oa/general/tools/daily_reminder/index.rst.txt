@@ -1,0 +1,24 @@
+ :py:mod:`oa.general.tools.daily_reminder`
+====================================================================================
+
+.. py:module:: oa.general.tools.daily_reminder
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   reminders/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   daily_reminder/index.rst
+
+

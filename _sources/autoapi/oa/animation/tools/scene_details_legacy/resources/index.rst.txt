@@ -1,0 +1,6 @@
+ :py:mod:`oa.animation.tools.scene_details_legacy.resources`
+========================================================================================================================
+
+.. py:module:: oa.animation.tools.scene_details_legacy.resources
+
+

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa_palette.binding &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title=" oa_palette.palette" href="../palette/index.html" />
+    <link rel="prev" title=" oa_palette.scripts.unbind_palettes" href="../scripts/unbind_palettes/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette.binding</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette.utils</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette.binding</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/oa_palette/binding/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa_palette.binding">
+<span id="oa-palette-binding"></span><h1> <a class="reference internal" href="#module-oa_palette.binding" title="oa_palette.binding"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette.binding</span></code></a><a class="headerlink" href="#module-oa_palette.binding" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.binding._add_creation_code" title="oa_palette.binding._add_creation_code"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_add_creation_code</span></code></a>(definition)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.binding.get_bound_items" title="oa_palette.binding.get_bound_items"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_bound_items</span></code></a>([node, definition])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.binding._add_binding_data" title="oa_palette.binding._add_binding_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_add_binding_data</span></code></a>(dst_node, src_node)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.binding._remove_binding_data" title="oa_palette.binding._remove_binding_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_remove_binding_data</span></code></a>(definition[, palette_node_types])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.binding.bind_palette" title="oa_palette.binding.bind_palette"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bind_palette</span></code></a>(dst_node, src_node)</p></td>
+<td><p>Binds palette to another palette by modifying</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.binding.unbind_palettes" title="oa_palette.binding.unbind_palettes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unbind_palettes</span></code></a>(node[, palette_node_types])</p></td>
+<td><p>Removes palette binding by modifying 'palettes' sections.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.binding.unbind_missing_children" title="oa_palette.binding.unbind_missing_children"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unbind_missing_children</span></code></a>(node[, definition])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.binding._create_subnets" title="oa_palette.binding._create_subnets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_create_subnets</span></code></a>(subnet_path)</p></td>
+<td><p>Creates a path using subnet nodes and returns the last node in it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_palette.binding._create_bound_node" title="oa_palette.binding._create_bound_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_create_bound_node</span></code></a>(node_path, node_type)</p></td>
+<td><p>Create palette node if it doesn`t exist yet.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_palette.binding.create_bound_nodes" title="oa_palette.binding.create_bound_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_bound_nodes</span></code></a>(node_type)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.binding._add_creation_code">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.binding.</span></span><span class="sig-name descname"><span class="pre">_add_creation_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.binding._add_creation_code" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.binding.get_bound_items">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.binding.</span></span><span class="sig-name descname"><span class="pre">get_bound_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.binding.get_bound_items" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.binding._add_binding_data">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.binding.</span></span><span class="sig-name descname"><span class="pre">_add_binding_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dst_node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.binding._add_binding_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.binding._remove_binding_data">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.binding.</span></span><span class="sig-name descname"><span class="pre">_remove_binding_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">definition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">palette_node_types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.binding._remove_binding_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.binding.bind_palette">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.binding.</span></span><span class="sig-name descname"><span class="pre">bind_palette</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dst_node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src_node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.binding.bind_palette" title="Permalink to this definition"></a></dt>
+<dd><p>Binds palette to another palette by modifying
+‘OnCreated’ and ‘palettes’ sections.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dst_node</strong> (<em>hou.Node</em>) – a node to bind to.</p></li>
+<li><p><strong>src_node</strong> (<em>hou.Node</em>) – a node to bind.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.binding.unbind_palettes">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.binding.</span></span><span class="sig-name descname"><span class="pre">unbind_palettes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">palette_node_types</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.binding.unbind_palettes" title="Permalink to this definition"></a></dt>
+<dd><p>Removes palette binding by modifying ‘palettes’ sections.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> (<em>hou.Node</em>) – a node to unbind palettes from.</p></li>
+<li><p><strong>palette_node_types</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – a list of all palette types
+we want to unbind from the current node.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.binding.unbind_missing_children">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.binding.</span></span><span class="sig-name descname"><span class="pre">unbind_missing_children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">definition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.binding.unbind_missing_children" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.binding._create_subnets">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.binding.</span></span><span class="sig-name descname"><span class="pre">_create_subnets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subnet_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.binding._create_subnets" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a path using subnet nodes and returns the last node in it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>subnet_path</strong> (<em>str</em>) – subnet path to create.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.binding._create_bound_node">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.binding.</span></span><span class="sig-name descname"><span class="pre">_create_bound_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.binding._create_bound_node" title="Permalink to this definition"></a></dt>
+<dd><p>Create palette node if it doesn`t exist yet.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_palette.binding.create_bound_nodes">
+<span class="sig-prename descclassname"><span class="pre">oa_palette.binding.</span></span><span class="sig-name descname"><span class="pre">create_bound_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_palette.binding.create_bound_nodes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../scripts/unbind_palettes/index.html" class="btn btn-neutral float-left" title=" oa_palette.scripts.unbind_palettes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../palette/index.html" class="btn btn-neutral float-right" title=" oa_palette.palette" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

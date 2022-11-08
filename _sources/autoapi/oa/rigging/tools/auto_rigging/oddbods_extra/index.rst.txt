@@ -1,0 +1,104 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.oddbods_extra`
+============================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.oddbods_extra
+
+.. autoapi-nested-parse::
+
+   from oa.rigging.tools.auto_rigging.oddbods_auto_rigging import updatePrototypeRig001
+
+
+
+Module Contents
+---------------
+
+.. py:data:: newDeformer
+   
+
+   
+
+.. py:data:: newDeformer
+   
+
+   
+
+.. py:data:: newTargetClav
+   
+
+   
+
+.. py:data:: newTargetArm
+   
+
+   
+
+.. py:data:: newTargetArm
+   
+
+   
+
+.. py:data:: newTargetClav
+   
+
+   
+
+.. py:data:: pathObjects
+   :annotation: = ['arm_path_1_L_motion_path_UTL', 'arm_path_2_L_motion_path_UTL', 'arm_path_3_L_motion_path_UTL',...
+
+   
+
+.. py:data:: mouthChildren
+   
+
+   
+
+.. py:data:: clothList
+   :annotation: = ['cloth_brow_LShape1', 'cloth_bottom_MShape2', 'cloth_top_MShape3', 'cloth_top_RShape2',...
+
+   
+
+.. py:data:: faceList
+   :annotation: = ['lip_lower_1_LShape3', 'mouthShape2', 'lip_upper_MShape3', 'mouthShape1', 'brow_2_LShape1',...
+
+   
+
+.. py:data:: newDeformer
+   
+
+   
+
+.. py:data:: newDeformer
+   
+
+   
+
+.. py:data:: newTargetClav
+   
+
+   
+
+.. py:data:: newTargetArm
+   
+
+   
+
+.. py:data:: newTargetArm
+   
+
+   
+
+.. py:data:: newTargetClav
+   
+
+   
+
+.. py:data:: pathObjects
+   :annotation: = ['arm_path_1_R_motion_path_UTL', 'arm_path_2_R_motion_path_UTL', 'arm_path_3_R_motion_path_UTL',...
+
+   
+
+.. py:data:: matrixPlugs
+   
+
+   
+

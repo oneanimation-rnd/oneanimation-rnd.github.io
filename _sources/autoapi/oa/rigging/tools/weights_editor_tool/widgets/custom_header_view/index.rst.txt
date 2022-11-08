@@ -1,0 +1,44 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.widgets.custom_header_view`
+====================================================================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.widgets.custom_header_view
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.widgets.custom_header_view.CustomHeaderView
+
+
+
+
+.. py:class:: CustomHeaderView(orientation, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QHeaderView`
+
+   Emits different mouse events.
+
+   .. py:attribute:: header_left_clicked
+      
+
+      
+
+   .. py:attribute:: header_middle_clicked
+      
+
+      
+
+   .. py:attribute:: header_right_clicked
+      
+
+      
+
+   .. py:method:: mousePressEvent(event)
+
+
+

@@ -1,0 +1,20 @@
+ :py:mod:`oa.animation.tools.constraint_tool`
+==========================================================================================
+
+.. py:module:: oa.animation.tools.constraint_tool
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   color_dialog/index.rst
+   constraint_tool/index.rst
+   constraint_utils/index.rst
+   enums/index.rst
+   help_dialog/index.rst
+   treeview/index.rst
+
+

@@ -1,0 +1,85 @@
+ :py:mod:`oa.animation.tools.capture.file_browser_widget`
+==================================================================================================================
+
+.. py:module:: oa.animation.tools.capture.file_browser_widget
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.capture.file_browser_widget.FileSystemModel
+   oa.animation.tools.capture.file_browser_widget.FileBrowserWidget
+
+
+
+
+.. py:class:: FileSystemModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QFileSystemModel`
+
+   .. py:method:: set_filter(pattern)
+
+
+   .. py:method:: clean_up()
+
+
+   .. py:method:: get_temp_img_path(mov_path)
+
+
+   .. py:method:: worker_on_finish(index, mov_path, status)
+
+
+   .. py:method:: data(index, role)
+
+
+
+.. py:class:: FileBrowserWidget(start_path='', parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTreeView`
+
+   A file browser that can be used as a widget.
+
+   .. py:attribute:: double_clicked
+      
+
+      
+
+   .. py:attribute:: delete_pressed
+      
+
+      
+
+   .. py:method:: paintEvent(paint_event)
+
+
+   .. py:method:: keyPressEvent(key_event)
+
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: header_on_click(section)
+
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+      Expands/Collapses item if it has children.
+
+
+   .. py:method:: set_path(path)
+
+
+   .. py:method:: get_selected_file()
+
+      Gets and returns the full path of the current selected file.
+
+
+   .. py:method:: set_icon_display(enabled)
+
+
+

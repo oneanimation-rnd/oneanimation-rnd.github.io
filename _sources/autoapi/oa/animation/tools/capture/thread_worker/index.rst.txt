@@ -1,0 +1,77 @@
+ :py:mod:`oa.animation.tools.capture.thread_worker`
+======================================================================================================
+
+.. py:module:: oa.animation.tools.capture.thread_worker
+
+.. autoapi-nested-parse::
+
+   Uses Qt's threading objects to use generate thumbnails from videos via ffmpeg without interrupting the interface.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.capture.thread_worker.ThreadSignals
+   oa.animation.tools.capture.thread_worker.Worker
+   oa.animation.tools.capture.thread_worker.ThreadPool
+
+
+
+
+.. py:class:: ThreadSignals
+
+   Bases: :py:obj:`PySide2.QtCore.QObject`
+
+   Signals must inherit from QObject, so this is a workaround to signal from a QRunnable object.
+
+   .. py:attribute:: finished
+      
+
+      
+
+
+.. py:class:: Worker(index, mov_path, out_dir)
+
+   Bases: :py:obj:`PySide2.QtCore.QRunnable`
+
+   Executes code in a seperate thread.
+   Communicates with the ThreadPool it spawned from via signals.
+
+   .. py:attribute:: StatusOk
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: StatusError
+      :annotation: = 1
+
+      
+
+   .. py:method:: create_img_from_mov(mov_path)
+
+
+   .. py:method:: run()
+
+
+
+.. py:class:: ThreadPool(max_thread_count=5)
+
+   Bases: :py:obj:`PySide2.QtCore.QObject`
+
+   Manages all Worker objects.
+
+   .. py:attribute:: worker_finished
+      
+
+      
+
+   .. py:method:: start(index, mov_path, out_dir)
+
+
+

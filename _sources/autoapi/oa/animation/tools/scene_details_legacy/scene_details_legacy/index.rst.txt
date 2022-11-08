@@ -1,0 +1,365 @@
+ :py:mod:`oa.animation.tools.scene_details_legacy.scene_details_legacy`
+==============================================================================================================================================
+
+.. py:module:: oa.animation.tools.scene_details_legacy.scene_details_legacy
+
+.. autoapi-nested-parse::
+
+   This tool is a replacement of the reference editor for artists.
+   This minimizes the risk of renaming the namespace and messing with the reference's path.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_details_legacy.scene_details_legacy.SceneDetails
+   oa.animation.tools.scene_details_legacy.scene_details_legacy.Table
+   oa.animation.tools.scene_details_legacy.scene_details_legacy.TableComboBox
+   oa.animation.tools.scene_details_legacy.scene_details_legacy.CustomTableWidgetItem
+   oa.animation.tools.scene_details_legacy.scene_details_legacy.VersionComboBox
+   oa.animation.tools.scene_details_legacy.scene_details_legacy.FloatingToolTip
+
+
+
+
+.. py:class:: SceneDetails(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: tool_name
+      :annotation: = sceneDetailsTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: on_open_cb_id
+      
+
+      
+
+   .. py:attribute:: on_new_cb_id
+      
+
+      
+
+   .. py:attribute:: ThumbnailColumn
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: NspColumn
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: VersionColumn
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: ResolutionColumn
+      :annotation: = 3
+
+      
+
+   .. py:attribute:: LoadedColumn
+      :annotation: = 4
+
+      
+
+   .. py:method:: on_version_entered(nsp)
+
+
+   .. py:method:: on_version_leave()
+
+
+   .. py:method:: add_callbacks()
+      :staticmethod:
+
+
+   .. py:method:: remove_callbacks()
+      :staticmethod:
+
+
+   .. py:method:: on_trigger_auto_close(arg)
+      :staticmethod:
+
+      Gets called on loading or starting a new scene.
+      Forces any open instance to be closed.
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: on_filter_return_pressed()
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: on_select_from_scene_clicked()
+
+
+   .. py:method:: on_item_changed(item)
+
+
+   .. py:method:: on_hide_geo_clicked()
+
+
+   .. py:method:: on_show_geo_clicked()
+
+
+   .. py:method:: on_hide_ctrl_clicked()
+
+
+   .. py:method:: on_show_ctrl_clicked()
+
+
+   .. py:method:: on_loaded_toggled(item, state)
+
+
+   .. py:method:: on_load_sel_clicked()
+
+
+   .. py:method:: on_unload_sel_clicked()
+
+
+   .. py:method:: on_thumbnail_pressed(item)
+
+
+   .. py:method:: on_combobox_clicked(item)
+
+
+   .. py:method:: on_version_combobox_changed(item, index)
+
+
+   .. py:method:: on_res_combobox_changed(item, index)
+
+
+   .. py:method:: on_switch_gpu_clicked()
+
+
+   .. py:method:: on_switch_rdr_clicked()
+
+
+   .. py:method:: on_update_all_clicked()
+
+
+   .. py:method:: on_select_sel_clicked()
+
+
+   .. py:method:: on_select_srt_clicked()
+
+
+   .. py:method:: on_replace_sel_clicked()
+
+
+   .. py:method:: on_remove_sel_clicked()
+
+
+   .. py:method:: on_open_ref_path()
+
+
+   .. py:method:: on_select_all_clicked()
+
+
+   .. py:method:: on_invert_select_clicked()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: wrap_layout(widgets, orientation)
+
+      Helper function that takes supplied widgets and wraps them all in a layout.
+
+      :param widgets: A list of QWidgets.
+      :param orientation: QtCore.Qt.Orientation
+
+      :returns: The new layout item.
+
+
+   .. py:method:: get_selected_rows()
+
+      Gets and returns a list of integers of selected rows.
+
+
+   .. py:method:: update_by_row(row)
+
+      Update asset to its latest version.
+
+      :param row: The row to act on.
+      :type row: int
+
+      :returns: The path it was updated to.
+
+
+   .. py:method:: update_filepath()
+
+
+   .. py:method:: get_layer_state(row, layer_name)
+
+
+   .. py:method:: set_layer_state(layer_name, do_show)
+
+      Sets the asset layer's visibility.
+
+      :param layer_name: The name to search with.
+      :type layer_name: string
+      :param do_show: Hides on False.
+      :type do_show: bool
+
+
+   .. py:method:: toggle_gpu_vis(do_show)
+
+      Sets the visibility of all gpu objects from selected rows.
+
+      :param do_show: Hides on False.
+      :type do_show: bool
+
+
+   .. py:method:: set_loaded_state(row, state)
+
+      Sets if the reference is loaded or unloaded.
+
+      :param row: The row to act on.
+      :type row: int
+      :param state: Unloads on False.
+      :type state: bool
+
+
+   .. py:method:: refresh_list()
+
+      Re-collects data to sync with the scene and redraws the table.
+
+
+   .. py:method:: store_scroll_pos()
+
+
+   .. py:method:: restore_scroll_pos()
+
+
+   .. py:method:: store_selection()
+
+
+   .. py:method:: restore_selection()
+
+
+   .. py:method:: populate_list()
+
+      Clears the table's contents and re-fills it with its current data.
+
+
+   .. py:method:: switch_res(nsp, res)
+
+
+
+.. py:class:: Table(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableWidget`
+
+   A table that emits certain keys.
+
+   .. py:attribute:: invert_pressed
+      
+
+      
+
+   .. py:attribute:: wheel_triggered
+      
+
+      
+
+   .. py:method:: wheelEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+
+.. py:class:: TableComboBox(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QComboBox`
+
+   A simple combobox that emits when it is clicked.
+
+   .. py:attribute:: clicked
+      
+
+      
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: wheelEvent(event)
+
+
+
+.. py:class:: CustomTableWidgetItem
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableWidgetItem`
+
+   Makes it possible to sort by column with cells using widgets.
+
+   .. py:method:: __lt__(other)
+
+
+   .. py:method:: __hash__()
+
+
+   .. py:method:: update_value(value)
+
+
+
+.. py:class:: VersionComboBox(nsp=None, parent=None)
+
+   Bases: :py:obj:`TableComboBox`
+
+   Triggers a floating tooltip when mouse is over it.
+
+   .. py:attribute:: entered
+      
+
+      
+
+   .. py:attribute:: leave
+      
+
+      
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: enterEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+
+.. py:class:: FloatingToolTip(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: showEvent(event)
+
+
+

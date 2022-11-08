@@ -1,0 +1,56 @@
+ :py:mod:`oa.rigging.libs.rig_resolutions.rig_display`
+============================================================================================================
+
+.. py:module:: oa.rigging.libs.rig_resolutions.rig_display
+
+.. autoapi-nested-parse::
+
+   Author: Jason Labbe
+
+   Functions to toggle an asset's rig display.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.rig_resolutions.rig_display.RigDisplay
+
+
+
+
+.. py:class:: RigDisplay
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: getTopNode(obj)
+
+      Gets the top parent of an object.
+      :param obj <str>: Object name.
+
+      :returns: Top node of the hierarchy.
+
+
+   .. py:method:: addDontHideMe(objs=[])
+
+      Adds tag on objects that will cause the hiding function to skip over them.
+
+
+   .. py:method:: hideRiggingNodes(doHide, objs=[])
+
+      Hides/unhides an asset's rig.
+      :param doHide <bool>: Hides if True, unhides if False.
+      :param objs <str[]>: Collection of objects, defaults to selection if empty.
+
+
+   .. py:method:: smoothGeometry(doSmooth, objs=[])
+
+      Smooths asset's geometry.
+
+
+

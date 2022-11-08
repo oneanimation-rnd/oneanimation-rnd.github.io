@@ -1,0 +1,98 @@
+ :py:mod:`oa.asset.tools.asset_exporter.asset_exporter`
+==============================================================================================================
+
+.. py:module:: oa.asset.tools.asset_exporter.asset_exporter
+
+.. autoapi-nested-parse::
+
+   Deals with exporting and publishing an asset onto the server.
+
+   The exporter outputs the following:
+       - Original maya scene
+       - RDR maya scene
+       - Annotation file
+       - maINF descriptor file
+       - Base pose alembic cache
+       - Thumbnail
+       - GPU cache (except with CHRs)
+       - GPU maya scene (except with CHRs)
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       run_exporter()
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_exporter.asset_exporter.run_exporter
+   oa.asset.tools.asset_exporter.asset_exporter.check_in_file
+   oa.asset.tools.asset_exporter.asset_exporter.on_shield_passed
+   oa.asset.tools.asset_exporter.asset_exporter.on_publish_clicked
+   oa.asset.tools.asset_exporter.asset_exporter.pre_export_asset
+   oa.asset.tools.asset_exporter.asset_exporter.export_asset
+
+
+
+.. py:function:: run_exporter()
+
+   Exports the selected asset, if necessary.
+   Runs shield, runs asset publishing tool, then runs exporter.
+
+
+.. py:function:: check_in_file(transfer, local_path, publish_path, annotation='', remove_local_file=True, **metadata)
+
+   Creates an empty file to the specified path on the server.
+   Still need to write to this file.
+
+   :param transfer:
+   :type transfer: transfer_utils.Transfer
+   :param local_path: Full path to a file that will be transfered.
+   :type local_path: string
+   :param publish_path: Full path to file to save to.
+   :type publish_path: string
+   :param annotation: Creates a log file. Log file is not created if empty.
+   :type annotation: string
+   :param remove_local_file: Removes local path after it's done the check-in.
+   :type remove_local_file: bool
+   :param metadata: Extra data to put in annotation file.
+   :type metadata: dict
+
+   :returns: A path to the new file.
+
+
+.. py:function:: on_shield_passed()
+
+
+.. py:function:: on_publish_clicked(asset_wrapper)
+
+
+.. py:function:: pre_export_asset(asset_wrapper)
+
+   Cleans up scene, sets visibility of objects before exporting.
+
+   :param asset_wrapper:
+   :type asset_wrapper: AssetWrapper
+
+
+.. py:function:: export_asset(asset_wrapper, quiet=False, reopen_scene=True)
+
+   Checks-in RDR scene onto the server.
+
+   :param asset_wrapper: Wrapper to hold the asset's information.
+   :type asset_wrapper: AssetWrapper
+   :param quiet: Pops up messages if True.
+   :type quiet: bool
+   :param reopen_scene: Re-opens scene that exported originated from when export is done.
+   :type reopen_scene: bool
+
+

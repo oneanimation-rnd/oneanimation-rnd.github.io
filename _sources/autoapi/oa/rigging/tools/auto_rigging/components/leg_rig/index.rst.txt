@@ -1,0 +1,38 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.components.leg_rig`
+======================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.components.leg_rig
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.components.leg_rig.rig
+   oa.rigging.tools.auto_rigging.components.leg_rig.create_fk_leg
+   oa.rigging.tools.auto_rigging.components.leg_rig.create_ik_leg
+   oa.rigging.tools.auto_rigging.components.leg_rig.add_leg_twist_joints
+   oa.rigging.tools.auto_rigging.components.leg_rig.apply_noodle_legs
+
+
+
+.. py:function:: rig(objs, knee_upv=None, knee_no_flip=False, noodle_legs=False, rig_scale=6.0, fk_scale=6.0, control_color=31, suffix='')
+
+
+.. py:function:: create_fk_leg(hip, thigh, shin, leg_tip, foot, toe, toe_tip, leg_cp_ctrl, rig_scale=6.0, control_color=31, suffix='')
+
+
+.. py:function:: create_ik_leg(root_nul, no_touch_nul, hip, thigh, shin, leg_tip, foot, toe, toe_tip, leg_cp_ctrl, inside_piv_loc, outside_piv_loc, back_piv_loc, knee_upv=None, knee_no_flip=False, rig_scale=6.0, control_color=31, suffix='')
+
+
+.. py:function:: add_leg_twist_joints(hip, thigh, shin, leg_tip, foot, thigh_twist_count=3, shin_twist_count=3, rig_scale=6.0, control_color=31, suffix='')
+
+
+.. py:function:: apply_noodle_legs(no_touch_nul, hip, thigh, shin, leg_tip, foot, leg_cp_ctrl, rig_scale=1.0, control_color=31, suffix='')
+
+

@@ -1,0 +1,27 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool`
+==============================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   classes/index.rst
+   widgets/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   enums/index.rst
+   weights_editor/index.rst
+   weights_editor_utils/index.rst
+
+

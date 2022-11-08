@@ -1,0 +1,32 @@
+ :py:mod:`oa_utils.database.client`
+======================================================================
+
+.. py:module:: oa_utils.database.client
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.client.DBConnection
+
+
+
+
+.. py:class:: DBConnection(hosts=config.get_value('mongodb/hosts'), replica_set_name=config.get_value('mongodb/replica_set'), preference_type=pymongo.ReadPreference.PRIMARY_PREFERRED if config.get_value('studio') == 'SG' else pymongo.ReadPreference.SECONDARY_PREFERRED, db_name='asset_library', db_connection_name='assets', connect=False)
+
+   Bases: :py:obj:`object`
+
+   Initiates a new connection to the database.
+
+   .. py:method:: __getattr__(name)
+
+
+   .. py:method:: __del__()
+
+
+

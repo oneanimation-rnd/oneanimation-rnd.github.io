@@ -1,0 +1,16 @@
+ :py:mod:`oa.asset.tools.asset_updater`
+==============================================================================
+
+.. py:module:: oa.asset.tools.asset_updater
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   asset_updater_tool/index.rst
+   asset_updater_utils/index.rst
+
+

@@ -1,0 +1,58 @@
+ :py:mod:`oa_shot_builder.libs.delegates.contexts`
+====================================================================================================
+
+.. py:module:: oa_shot_builder.libs.delegates.contexts
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.delegates.contexts.setup
+   oa_shot_builder.libs.delegates.contexts.publish
+   oa_shot_builder.libs.delegates.contexts._get_gallery_storage_item_from_location
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.delegates.contexts.this
+   oa_shot_builder.libs.delegates.contexts._log
+   oa_shot_builder.libs.delegates.contexts._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:function:: setup(context, episode=None, sequence=None, shot=None, version=None)
+
+
+.. py:function:: publish(context, comment='')
+
+
+.. py:function:: _get_gallery_storage_item_from_location()
+
+   Returns a StorageItem for the gallery which should be loaded as the lightrig.
+
+
+

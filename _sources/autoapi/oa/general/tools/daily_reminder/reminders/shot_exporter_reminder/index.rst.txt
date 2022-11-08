@@ -1,0 +1,40 @@
+ :py:mod:`oa.general.tools.daily_reminder.reminders.shot_exporter_reminder`
+======================================================================================================================================================
+
+.. py:module:: oa.general.tools.daily_reminder.reminders.shot_exporter_reminder
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.daily_reminder.reminders.shot_exporter_reminder.get_scene_shots
+   oa.general.tools.daily_reminder.reminders.shot_exporter_reminder.build_publish_path
+   oa.general.tools.daily_reminder.reminders.shot_exporter_reminder.compare_latest_check_in
+   oa.general.tools.daily_reminder.reminders.shot_exporter_reminder.main
+
+
+
+.. py:function:: get_scene_shots()
+
+   Gets and returns a list of shots from the scene cp.
+
+
+.. py:function:: build_publish_path()
+
+   Builds a path to the current task's file it would publish to.
+
+
+.. py:function:: compare_latest_check_in(days)
+
+
+.. py:function:: main()
+
+   Runs the shot exporter if it hasn't been check-in over a day.
+
+

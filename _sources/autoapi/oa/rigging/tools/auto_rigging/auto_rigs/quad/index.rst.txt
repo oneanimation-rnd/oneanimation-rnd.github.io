@@ -1,0 +1,30 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.auto_rigs.quad`
+==============================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.auto_rigs.quad
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.auto_rigs.quad.rig
+   oa.rigging.tools.auto_rigging.auto_rigs.quad.create_quad_body_waves
+   oa.rigging.tools.auto_rigging.auto_rigs.quad.add_body_wave
+
+
+
+.. py:function:: rig(new_front_legs=True)
+
+
+.. py:function:: create_quad_body_waves(parent, body_ctrl, spine_2_ctrl, neck_ctrl, head_ctrl, ctrl_size=1)
+
+
+.. py:function:: add_body_wave(obj, axis, global_mult_plug, mult_plug, amp_plug, freq_plug, time_offset_plug, time_plug, name='newSinNode')
+
+

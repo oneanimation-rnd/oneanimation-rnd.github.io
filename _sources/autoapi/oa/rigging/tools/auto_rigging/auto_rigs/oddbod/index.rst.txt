@@ -1,0 +1,30 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.auto_rigs.oddbod`
+==================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.auto_rigs.oddbod
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.auto_rigs.oddbod.rig
+   oa.rigging.tools.auto_rigging.auto_rigs.oddbod.create_oddbod_body_waves
+   oa.rigging.tools.auto_rigging.auto_rigs.oddbod.add_body_wave
+
+
+
+.. py:function:: rig()
+
+
+.. py:function:: create_oddbod_body_waves(head_tip_jnt, body_ctrl, spine_ctrl, head_ctrl, head_top_ctrl, arm_offset_r_ctrl, arm_offset_l_ctrl, ctrl_size=1)
+
+
+.. py:function:: add_body_wave(obj, axis, global_mult_plug, mult_plug, amp_plug, freq_plug, time_offset_plug, time_plug, name='newSinNode')
+
+

@@ -1,0 +1,16 @@
+ :py:mod:`oa.asset.tools.ref_edits_manager.widgets`
+======================================================================================================
+
+.. py:module:: oa.asset.tools.ref_edits_manager.widgets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   edits_list_view/index.rst
+   reference_list_view/index.rst
+
+

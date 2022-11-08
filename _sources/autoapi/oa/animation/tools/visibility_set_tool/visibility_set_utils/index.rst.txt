@@ -1,0 +1,99 @@
+ :py:mod:`oa.animation.tools.visibility_set_tool.visibility_set_utils`
+============================================================================================================================================
+
+.. py:module:: oa.animation.tools.visibility_set_tool.visibility_set_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.get_icon
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.connect_to_db
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.get_asset_id
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.get_database_entry
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.list_vis_sets
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.validate_selection
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.save_vis_set
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.remove_vis_set
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.rename_vis_set
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.add_meshes_to_set
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.remove_meshes_from_set
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.is_plug_connectable
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.set_visibility
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.toggle_vis_set
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.unhide_all_vis_sets
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.store_vis_sets
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.restore_vis_sets
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.visibility_set_tool.visibility_set_utils.stored_vis_sets
+
+
+.. py:data:: stored_vis_sets
+   
+
+   
+
+.. py:function:: get_icon(file_name, width=None, height=None)
+
+
+.. py:function:: connect_to_db(hosts=(), replica_set_name='rs0', read_pref=None, db_name='maya', collection_name='visibility_sets')
+
+
+.. py:function:: get_asset_id(obj)
+
+
+.. py:function:: get_database_entry(asset_id=None, collection=None)
+
+
+.. py:function:: list_vis_sets()
+
+
+.. py:function:: validate_selection()
+
+
+.. py:function:: save_vis_set(set_name)
+
+
+.. py:function:: remove_vis_set(asset_id, set_name, collection=None)
+
+
+.. py:function:: rename_vis_set(asset_id, old_set_name, new_set_name, collection=None)
+
+
+.. py:function:: add_meshes_to_set(asset_id, set_name, meshes, collection=None)
+
+
+.. py:function:: remove_meshes_from_set(asset_id, set_name, meshes, collection=None)
+
+
+.. py:function:: is_plug_connectable(plug)
+
+
+.. py:function:: set_visibility(transform, show, set_name='')
+
+
+.. py:function:: toggle_vis_set(set_name)
+
+
+.. py:function:: unhide_all_vis_sets()
+
+
+.. py:function:: store_vis_sets()
+
+
+.. py:function:: restore_vis_sets()
+
+

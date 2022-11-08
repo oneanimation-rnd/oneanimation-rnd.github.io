@@ -1,0 +1,27 @@
+ :py:mod:`oa.rigging.tools.calisthenics.calisthenics`
+==========================================================================================================
+
+.. py:module:: oa.rigging.tools.calisthenics.calisthenics
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.calisthenics.calisthenics.Calisthenics
+
+
+
+
+.. py:class:: Calisthenics
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: addCalisthenics(objs=[], attrs=[], minVal=-90, maxVal=90)
+
+
+

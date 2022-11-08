@@ -1,0 +1,18 @@
+ :py:mod:`oa_shot_builder.libs.delegates`
+==================================================================================
+
+.. py:module:: oa_shot_builder.libs.delegates
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   assets/index.rst
+   caching/index.rst
+   contexts/index.rst
+   takes/index.rst
+
+

@@ -1,0 +1,93 @@
+ :py:mod:`oa.animation.tools.auto_rotate.auto_rotate_tool`
+====================================================================================================================
+
+.. py:module:: oa.animation.tools.auto_rotate.auto_rotate_tool
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.auto_rotate.auto_rotate_tool.AutoRotateTool
+   oa.animation.tools.auto_rotate.auto_rotate_tool.QuickToolTip
+   oa.animation.tools.auto_rotate.auto_rotate_tool.CustomButton
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.auto_rotate.auto_rotate_tool.launch
+
+
+
+.. py:class:: AutoRotateTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: wrap_layout(widgets, orientation)
+      :staticmethod:
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: create_tool_button(tooltip='', icon_path=None, label=None, icon_width=50, icon_height=50, button_style=QtCore.Qt.ToolButtonTextUnderIcon)
+
+
+   .. py:method:: on_set_wheel_clicked()
+
+
+   .. py:method:: on_select_wheel_clicked()
+
+
+   .. py:method:: on_create_master_clicked()
+
+
+   .. py:method:: on_select_master_clicked()
+
+
+   .. py:method:: on_create_directional_clicked()
+
+
+   .. py:method:: on_select_directional_clicked()
+
+
+   .. py:method:: on_unset_clicked()
+
+
+   .. py:method:: on_run_sim_clicked()
+
+
+
+.. py:class:: QuickToolTip(label, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QLabel`
+
+
+.. py:class:: CustomButton(tooltip, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QToolButton`
+
+   .. py:method:: enterEvent(event)
+
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+
+.. py:function:: launch()
+
+

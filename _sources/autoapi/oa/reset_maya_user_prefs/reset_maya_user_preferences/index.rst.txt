@@ -1,0 +1,56 @@
+ :py:mod:`oa.reset_maya_user_prefs.reset_maya_user_preferences`
+==============================================================================================================================
+
+.. py:module:: oa.reset_maya_user_prefs.reset_maya_user_preferences
+
+.. autoapi-nested-parse::
+
+   Maya's user preferences often get corrupted so this script deletes the files to reset them.
+
+   Usage:
+       delete_user_prefs("2018")
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.reset_maya_user_prefs.reset_maya_user_preferences.get_maya_processes
+   oa.reset_maya_user_prefs.reset_maya_user_preferences.delete_user_prefs
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.reset_maya_user_prefs.reset_maya_user_preferences.version
+
+
+.. py:exception:: MayaOpenException
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:function:: get_maya_processes()
+
+
+.. py:function:: delete_user_prefs(version)
+
+
+.. py:data:: version
+   
+
+   
+

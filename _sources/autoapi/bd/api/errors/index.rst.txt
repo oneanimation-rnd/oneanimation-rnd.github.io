@@ -1,0 +1,139 @@
+ :py:mod:`bd.api.errors`
+================================================
+
+.. py:module:: bd.api.errors
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.api.errors.classname
+
+
+
+.. py:exception:: APIClientError
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: AuthenticationError
+
+   Bases: :py:obj:`APIClientError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: NetworkError
+
+   Bases: :py:obj:`APIClientError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: UnauthorizedError
+
+   Bases: :py:obj:`APIClientError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: TransportError
+
+   Bases: :py:obj:`APIClientError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: InvalidInput
+
+   Bases: :py:obj:`AuthenticationError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: RequestError
+
+   Bases: :py:obj:`TransportError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: APITimeoutError
+
+   Bases: :py:obj:`TransportError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: ResourceNotFoundError
+
+   Bases: :py:obj:`TransportError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: ResourceUnreachableError
+
+   Bases: :py:obj:`TransportError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: RetryError
+
+   Bases: :py:obj:`TransportError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: IncompatibleResponse
+
+   Bases: :py:obj:`APIClientError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: GQLError(code, message)
+
+   Bases: :py:obj:`APIClientError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:function:: classname(o)
+
+

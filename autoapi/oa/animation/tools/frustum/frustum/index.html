@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.animation.tools.frustum.frustum &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.animation.tools.key_breakdown" href="../../key_breakdown/index.html" />
+    <link rel="prev" title=" oa.animation.tools.frustum" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.frustum</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.frustum.frustum</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/animation/tools/frustum/frustum/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.animation.tools.frustum.frustum">
+<span id="oa-animation-tools-frustum-frustum"></span><h1> <a class="reference internal" href="#module-oa.animation.tools.frustum.frustum" title="oa.animation.tools.frustum.frustum"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.frustum.frustum</span></code></a><a class="headerlink" href="#module-oa.animation.tools.frustum.frustum" title="Permalink to this heading"></a></h1>
+<p>Author: Jason Labbe</p>
+<p>Optimizes Maya scenes to purge any geometry that is outside of the
+camera’s view and center of interest.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_scene_cp" title="oa.animation.tools.frustum.frustum.get_scene_cp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scene_cp</span></code></a>()</p></td>
+<td><p>Gets SceneCP if it exists.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_scene_info" title="oa.animation.tools.frustum.frustum.get_scene_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scene_info</span></code></a>()</p></td>
+<td><p>Gets shot data from scene cp.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_shot_frame_ranges" title="oa.animation.tools.frustum.frustum.get_shot_frame_ranges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_shot_frame_ranges</span></code></a>(shot)</p></td>
+<td><p>Gets start and end frames of a shot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_camera" title="oa.animation.tools.frustum.frustum.get_camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_camera</span></code></a>()</p></td>
+<td><p>Gets scene's camera shape and returns it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.mdag_by_name" title="oa.animation.tools.frustum.frustum.mdag_by_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mdag_by_name</span></code></a>(name)</p></td>
+<td><p>Creates an MDagPath object with supplied name.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.is_instanced" title="oa.animation.tools.frustum.frustum.is_instanced"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_instanced</span></code></a>(obj)</p></td>
+<td><p>Checks and returns boolean if object is an instance or not.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_instance_number" title="oa.animation.tools.frustum.frustum.get_instance_number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_instance_number</span></code></a>(obj)</p></td>
+<td><p>Gets the object's unique instance number.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_instance_root" title="oa.animation.tools.frustum.frustum.get_instance_root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_instance_root</span></code></a>(obj)</p></td>
+<td><p>Goes up hierarchy until it finds the root object that defined the instance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_all_character_meshes" title="oa.animation.tools.frustum.frustum.get_all_character_meshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_character_meshes</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_scene_instances" title="oa.animation.tools.frustum.frustum.get_scene_instances"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scene_instances</span></code></a>()</p></td>
+<td><p>Gets and returns all instance roots in the scene.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.draw_bounding_box" title="oa.animation.tools.frustum.frustum.draw_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_bounding_box</span></code></a>(transform)</p></td>
+<td><p>Creates a box to represent the object's bounding box.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_camera_interest" title="oa.animation.tools.frustum.frustum.get_camera_interest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_camera_interest</span></code></a>(camera)</p></td>
+<td><p>Finds and returns position of a camera's center of interest.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_bounding_box" title="oa.animation.tools.frustum.frustum.get_bounding_box"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_bounding_box</span></code></a>(obj)</p></td>
+<td><p>Gets and returns object's bounding box information.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.aabb_collision_check" title="oa.animation.tools.frustum.frustum.aabb_collision_check"><code class="xref py py-obj docutils literal notranslate"><span class="pre">aabb_collision_check</span></code></a>(min_1, max_1, min_2, max_2)</p></td>
+<td><p>Compares two bounding boxes to see if they are colliding.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_char_ref_path" title="oa.animation.tools.frustum.frustum.get_char_ref_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_char_ref_path</span></code></a>(obj)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_asset_render_shapes" title="oa.animation.tools.frustum.frustum.get_asset_render_shapes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_asset_render_shapes</span></code></a>(ref_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_objs_in_view" title="oa.animation.tools.frustum.frustum.get_objs_in_view"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_objs_in_view</span></code></a>(camera[, frame_width, frame_height])</p></td>
+<td><p>Collects any geometries that are within view of supplied camera.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_objs_by_proximity" title="oa.animation.tools.frustum.frustum.get_objs_by_proximity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_objs_by_proximity</span></code></a>(camera, culling_area_size[, ...])</p></td>
+<td><p>Collects any geometries that are within a valid distance from the supplied camera's center of interest.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.get_objs_in_frustum" title="oa.animation.tools.frustum.frustum.get_objs_in_frustum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_objs_in_frustum</span></code></a>(camera[, culling_area_size, ...])</p></td>
+<td><p>Collects objects that are within the camera's frustum and center of interest.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.frustum.frustum.do_frustum_culling" title="oa.animation.tools.frustum.frustum.do_frustum_culling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">do_frustum_culling</span></code></a>(camera, shot[, culling_area_size, ...])</p></td>
+<td><p>Hides all meshes that are outside of the camera's frustum.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_scene_cp">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_scene_cp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_scene_cp" title="Permalink to this definition"></a></dt>
+<dd><p>Gets SceneCP if it exists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The name of the SceneCP, or None if it doesn’t exist.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AssertionError</strong> – When it can’t find it in the scene.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_scene_info">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_scene_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_scene_info" title="Permalink to this definition"></a></dt>
+<dd><p>Gets shot data from scene cp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A dictionary of all the shot info.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AssertionError</strong> – If the scene_info can’t be found on the SceneCP.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_shot_frame_ranges">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_shot_frame_ranges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shot</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_shot_frame_ranges" title="Permalink to this definition"></a></dt>
+<dd><p>Gets start and end frames of a shot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>shot</strong> (<em>string</em>) – Shot name including zero padding.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AssertionError</strong> – If it’s unable to find a shot in the SceneCP.</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list with the start and end frames.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_camera">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_camera</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_camera" title="Permalink to this definition"></a></dt>
+<dd><p>Gets scene’s camera shape and returns it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – If camera can’t be found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.mdag_by_name">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">mdag_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.mdag_by_name" title="Permalink to this definition"></a></dt>
+<dd><p>Creates an MDagPath object with supplied name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>string</em>) – Name of an existing object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The object wrapped in an MDagPath.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – If object can’t be found in the scene.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.is_instanced">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">is_instanced</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.is_instanced" title="Permalink to this definition"></a></dt>
+<dd><p>Checks and returns boolean if object is an instance or not.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_instance_number">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_instance_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_instance_number" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the object’s unique instance number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>An integer representing its instance number.
+An object that isn’t instanced will always return 0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_instance_root">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_instance_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_instance_root" title="Permalink to this definition"></a></dt>
+<dd><p>Goes up hierarchy until it finds the root object that defined the instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The name of the root object.
+An object that isn’t instanced will simply return itself.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_all_character_meshes">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_all_character_meshes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_all_character_meshes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_scene_instances">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_scene_instances</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_scene_instances" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns all instance roots in the scene.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.draw_bounding_box">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">draw_bounding_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.draw_bounding_box" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a box to represent the object’s bounding box.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>transform</strong> (<em>string</em>) – A transform’s name.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AssertionError</strong> – If transform doesn’t have a mesh shape.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_camera_interest">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_camera_interest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camera</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_camera_interest" title="Permalink to this definition"></a></dt>
+<dd><p>Finds and returns position of a camera’s center of interest.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>camera</strong> (<em>string</em>) – A camera’s name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A float list representing its position.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – If a camera is not supplied or it can’t find its coi attribute.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_bounding_box">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_bounding_box</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_bounding_box" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns object’s bounding box information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> (<em>string</em>) – Object’s transform, not its shape.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>2 lists of floats that represent the bounding box’s minimum and maximum positions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.aabb_collision_check">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">aabb_collision_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.aabb_collision_check" title="Permalink to this definition"></a></dt>
+<dd><p>Compares two bounding boxes to see if they are colliding.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min_1</strong> (<em>float</em><em>[</em><em>]</em>) – First bounding box’s min position.</p></li>
+<li><p><strong>max_1</strong> (<em>float</em><em>[</em><em>]</em>) – First bounding box’s max position.</p></li>
+<li><p><strong>min_2</strong> (<em>float</em><em>[</em><em>]</em>) – Second bounding box’s min position.</p></li>
+<li><p><strong>max_2</strong> (<em>float</em><em>[</em><em>]</em>) – Second bounding box’s max position.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A boolean to indicate if there is a collision.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_char_ref_path">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_char_ref_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_char_ref_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_asset_render_shapes">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_asset_render_shapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_asset_render_shapes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_objs_in_view">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_objs_in_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camera</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">960</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">540</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_objs_in_view" title="Permalink to this definition"></a></dt>
+<dd><p>Collects any geometries that are within view of supplied camera.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera</strong> (<em>string</em>) – A camera’s name.</p></li>
+<li><p><strong>frame_width</strong> (<em>float</em>) – </p></li>
+<li><p><strong>frame_height</strong> (<em>float</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Multi-array of geometry names and instances that are in view.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_objs_by_proximity">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_objs_by_proximity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camera</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">culling_area_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_meshes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_culling_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_objs_by_proximity" title="Permalink to this definition"></a></dt>
+<dd><p>Collects any geometries that are within a valid distance from the supplied camera’s center of interest.
+Works on the current frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera</strong> (<em>string</em>) – A camera’s name.</p></li>
+<li><p><strong>culling_area_size</strong> (<em>float</em>) – The size of the camera’s center of interest bounding box.</p></li>
+<li><p><strong>exclude_meshes</strong> (<em>string</em><em>[</em><em>]</em>) – List of mesh names to skip over.</p></li>
+<li><p><strong>draw_culling_area</strong> (<em>bool</em>) – Creates a box that represents the camera’s center of interest bounding box.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Multi-array of geometry names and instances that inside culling area.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.get_objs_in_frustum">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">get_objs_in_frustum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camera</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">culling_area_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">40.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclude_meshes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_culling_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.get_objs_in_frustum" title="Permalink to this definition"></a></dt>
+<dd><p>Collects objects that are within the camera’s frustum and center of interest.
+This is performed on the current frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera</strong> (<em>string</em>) – A camera’s name.</p></li>
+<li><p><strong>culling_area_size</strong> (<em>float</em>) – The size of the camera’s center of interest bounding box.</p></li>
+<li><p><strong>exclude_meshes</strong> (<em>string</em><em>[</em><em>]</em>) – A list of mesh names that it will skip over.</p></li>
+<li><p><strong>draw_culling_area</strong> (<em>bool</em>) – Creates a box that represents the camera’s center of interest bounding box.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Multi-array of geometry names and instances that are inside frustum.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.frustum.frustum.do_frustum_culling">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.frustum.frustum.</span></span><span class="sig-name descname"><span class="pre">do_frustum_culling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camera</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">culling_area_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">40.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_culling_area</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.frustum.frustum.do_frustum_culling" title="Permalink to this definition"></a></dt>
+<dd><p>Hides all meshes that are outside of the camera’s frustum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera</strong> (<em>string</em>) – A camera’s name.</p></li>
+<li><p><strong>shot</strong> (<em>string</em>) – A shot’s name with zero padding.</p></li>
+<li><p><strong>culling_area_size</strong> (<em>float</em>) – The size of the camera’s center of interest bounding box.</p></li>
+<li><p><strong>draw_culling_area</strong> (<em>bool</em>) – Creates a box that represents the camera’s center of interest bounding box.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Multi-array of geometry names and instances that are inside frustum.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title=" oa.animation.tools.frustum" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../key_breakdown/index.html" class="btn btn-neutral float-right" title=" oa.animation.tools.key_breakdown" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

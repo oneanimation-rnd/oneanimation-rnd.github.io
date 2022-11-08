@@ -1,0 +1,164 @@
+ :py:mod:`oa.general.tools.layer_manager.layer_manager`
+==============================================================================================================
+
+.. py:module:: oa.general.tools.layer_manager.layer_manager
+
+.. autoapi-nested-parse::
+
+   An extension to the built-in layers to better manage them.
+   Often their names get cut off from the ui making it hard to know what it is.
+
+   Author:
+       Jason Labbe
+
+   Bugs:
+       - Doesn't update if a layer was added or deleted
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.layer_manager.layer_manager.LayerItem
+   oa.general.tools.layer_manager.layer_manager.NameInputDialog
+   oa.general.tools.layer_manager.layer_manager.LayerManagerTool
+
+
+
+
+.. py:class:: LayerItem(txt, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTreeWidgetItem`
+
+   .. py:method:: getLayerName()
+
+
+   .. py:method:: getLayerManager()
+
+
+   .. py:method:: getLayerColor()
+
+
+   .. py:method:: openColorDialog()
+
+
+   .. py:method:: visibleToggled(state)
+
+
+   .. py:method:: displayTypeClicked()
+
+
+   .. py:method:: lodToggled(state)
+
+
+   .. py:method:: setVisibleStyle()
+
+
+   .. py:method:: setLodStyle()
+
+
+   .. py:method:: setDisplayTypeStyle()
+
+
+   .. py:method:: setColorStyle(QColor)
+
+
+
+.. py:class:: NameInputDialog(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QInputDialog`
+
+
+.. py:class:: LayerManagerTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = layerManagerTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: callbackIds
+      :annotation: = []
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: enterEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: attrChanged(msg, MPlug, otherMPlug, clientData)
+
+
+   .. py:method:: createCallbacks()
+
+
+   .. py:method:: removeCallbacks()
+
+
+   .. py:method:: collectLayers()
+
+
+   .. py:method:: referenceAllLayers()
+
+
+   .. py:method:: unreferenceAllLayers()
+
+
+   .. py:method:: filterItems()
+
+
+   .. py:method:: getNamespace(obj)
+
+
+   .. py:method:: addHeaderItem(label)
+
+
+   .. py:method:: addItem(label, parentItem=None)
+
+
+   .. py:method:: openContextMenu(pos)
+
+
+   .. py:method:: openEditWindow(item)
+
+
+   .. py:method:: addLayer(layerName='')
+
+
+   .. py:method:: addObjectsToLayer()
+
+
+   .. py:method:: deleteLayer(item)
+
+
+   .. py:method:: expandAllItems()
+
+
+   .. py:method:: collapseAllItems()
+
+
+   .. py:method:: listDoubleClicked(item)
+
+
+

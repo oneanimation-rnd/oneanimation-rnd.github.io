@@ -1,0 +1,44 @@
+ :py:mod:`oa.animation.tools.synoptics.widgets.items.custom_item_template`
+====================================================================================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.widgets.items.custom_item_template
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.widgets.items.custom_item_template.CustomItemTemplate
+
+
+
+
+.. py:class:: CustomItemTemplate(view)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QGraphicsPathItem`
+
+   A temp item used in synoptics designer while the user defines a new custom shape.
+
+   .. py:method:: add_point(x, y)
+
+
+   .. py:method:: undo_last_point()
+
+
+   .. py:method:: close()
+
+
+   .. py:method:: build_shape()
+
+
+   .. py:method:: cancel()
+
+
+   .. py:method:: draw()
+
+
+

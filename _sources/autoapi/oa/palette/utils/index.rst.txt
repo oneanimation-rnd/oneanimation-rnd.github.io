@@ -1,0 +1,115 @@
+ :py:mod:`oa.palette.utils`
+======================================================
+
+.. py:module:: oa.palette.utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.palette.utils.get_logger
+   oa.palette.utils.set_metadata
+   oa.palette.utils.get_metadata
+   oa.palette.utils.get_hda_section
+   oa.palette.utils._json_encoder
+   oa.palette.utils._convert_data
+   oa.palette.utils._json_decoder
+   oa.palette.utils.save_to_section
+   oa.palette.utils.load_from_section
+   oa.palette.utils.get_palette_infos
+   oa.palette.utils.is_locked_hda
+   oa.palette.utils.is_digital_asset
+   oa.palette.utils.is_from_scanned_dir
+   oa.palette.utils.make_embedded
+   oa.palette.utils.uninstall_type_definitions
+   oa.palette.utils.is_palette
+   oa.palette.utils.clear_definition_preferences
+   oa.palette.utils.keep_single_definition
+   oa.palette.utils.is_valid_comment
+   oa.palette.utils.update_nodes
+   oa.palette.utils.install
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.palette.utils.this
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:function:: get_logger(logger, ui=False)
+
+
+.. py:function:: set_metadata(definition, **kwargs)
+
+
+.. py:function:: get_metadata(definition)
+
+
+.. py:function:: get_hda_section(definition, section_name, create_section=False)
+
+
+.. py:function:: _json_encoder(obj)
+
+
+.. py:function:: _convert_data(data, ignore_dicts=False)
+
+
+.. py:function:: _json_decoder(obj)
+
+
+.. py:function:: save_to_section(section, data)
+
+
+.. py:function:: load_from_section(section)
+
+
+.. py:function:: get_palette_infos(section)
+
+
+.. py:function:: is_locked_hda(node)
+
+
+.. py:function:: is_digital_asset(node)
+
+
+.. py:function:: is_from_scanned_dir(path)
+
+
+.. py:function:: make_embedded(definition, type_name=None, menu_name=None)
+
+
+.. py:function:: uninstall_type_definitions(category, type_name)
+
+
+.. py:function:: is_palette(node)
+
+
+.. py:function:: clear_definition_preferences(node_type)
+
+
+.. py:function:: keep_single_definition(definition)
+
+
+.. py:function:: is_valid_comment(comment)
+
+
+.. py:function:: update_nodes(node_type)
+
+
+.. py:function:: install(type_name, palette_dir=None)
+
+

@@ -1,0 +1,403 @@
+ :py:mod:`oa_utils.xml_info_hou`
+================================================================
+
+.. py:module:: oa_utils.xml_info_hou
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.xml_info_hou.rootHou
+   oa_utils.xml_info_hou.INFAssetHou
+   oa_utils.xml_info_hou.INFClusterHou
+   oa_utils.xml_info_hou.INFGroupHou
+   oa_utils.xml_info_hou.INFInfoHou
+   oa_utils.xml_info_hou.INFInstanceHou
+   oa_utils.xml_info_hou.INFMaterialHou
+   oa_utils.xml_info_hou.INFModelHou
+   oa_utils.xml_info_hou.INFObjectHou
+   oa_utils.xml_info_hou.INFPassHou
+   oa_utils.xml_info_hou.INFShotHou
+   oa_utils.xml_info_hou.INFSceneHou
+   oa_utils.xml_info_hou.INFClusterListHou
+   oa_utils.xml_info_hou.INFMemberListHou
+   oa_utils.xml_info_hou.INFTargetListHou
+   oa_utils.xml_info_hou.INFShotListHou
+   oa_utils.xml_info_hou.INFGrpListHou
+   oa_utils.xml_info_hou.INFModListHou
+   oa_utils.xml_info_hou.INFInstListHou
+   oa_utils.xml_info_hou.INFObjListHou
+   oa_utils.xml_info_hou.INFPassListHou
+   oa_utils.xml_info_hou.INFMatListHou
+   oa_utils.xml_info_hou.INFTexListHou
+   oa_utils.xml_info_hou.INFMemberHou
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.xml_info_hou.parsexml_
+   oa_utils.xml_info_hou.get_root_tag
+   oa_utils.xml_info_hou.parse
+   oa_utils.xml_info_hou.parseEtree
+   oa_utils.xml_info_hou.parseString
+   oa_utils.xml_info_hou.parseLiteral
+   oa_utils.xml_info_hou.usage
+   oa_utils.xml_info_hou.main
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.xml_info_hou.etree_
+   oa_utils.xml_info_hou.Verbose_import_
+   oa_utils.xml_info_hou.XMLParser_import_library
+   oa_utils.xml_info_hou.XMLParser_import_library
+   oa_utils.xml_info_hou.ExternalEncoding
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.subclass
+   oa_utils.xml_info_hou.USAGE_TEXT
+
+
+.. py:data:: etree_
+   
+
+   
+
+.. py:data:: Verbose_import_
+   :annotation: = False
+
+   
+
+.. py:data:: XMLParser_import_library
+   
+
+   
+
+.. py:data:: XMLParser_import_library
+   
+
+   
+
+.. py:function:: parsexml_(*args, **kwargs)
+
+
+.. py:data:: ExternalEncoding
+   :annotation: = UTF-8
+
+   
+
+.. py:class:: rootHou(type_='AssetInfo', syntax_version='4.0', Scene=None, Asset=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.root`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFAssetHou(name=None, level=None, res=None, prj=None, path=None, type_=None, id=None, AssetName=None, Resolution=None, Episode=None, Category=None, SubCategory=None, Models=None, Instances=None, Objects=None, Materials=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFAsset`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFClusterHou(material=None, type_=None, name=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFCluster`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFGroupHou(viewvis=2, type_=None, name=None, rendvis=2, Members=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFGroup`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFInfoHou(seqName=None, episode=None, rule=None, project=None, houdiniVersion=None, type_=None, Dir=None, FullName=None, ShotList=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFInfo`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFInstanceHou(path=None, master=None, name=None, id=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFInstance`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFMaterialHou(color=None, name=None, id=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFMaterial`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFModelHou(path=None, id=None, name=None, Asset=None, Model=None, Object=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFModel`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFObjectHou(path=None, material=None, type_=None, name=None, id=None, Clusters=None, Textures=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFObject`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFPassHou(frameStep=None, name=None, frameEnd=None, frameStart=None, Priority=None, IsRenderActive=None, OutputPicture=None, OutputFolder=None, RMPreset=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFPass`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFShotHou(index=None, endFrame=None, startFrame=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFShot`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFSceneHou(Info=None, Assets=None, Groups=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFScene`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFClusterListHou(Cluster=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFClusterList`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFMemberListHou(Member=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFMemberList`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFTargetListHou(Object=None, Cluster=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFTargetList`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFShotListHou(Shot=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFShotList`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFGrpListHou(Group=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFGrpList`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFModListHou(Asset=None, Model=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFModList`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFInstListHou(Instance=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFInstList`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFObjListHou(Object=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFObjList`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFPassListHou(Pass=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFPassList`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFMatListHou(Material=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFMatList`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFTexListHou(Texture=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFTexList`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:class:: INFMemberHou(id=None, name=None, mdlpath=None)
+
+   Bases: :py:obj:`oa_utils.xml_info_api.INFMember`
+
+
+.. py:data:: subclass
+   
+
+   
+
+.. py:function:: get_root_tag(node)
+
+
+.. py:function:: parse(inFilename, silence=False)
+
+
+.. py:function:: parseEtree(inFilename, silence=False)
+
+
+.. py:function:: parseString(inString, silence=False)
+
+
+.. py:function:: parseLiteral(inFilename, silence=False)
+
+
+.. py:data:: USAGE_TEXT
+   :annotation: = Multiline-String
+
+    .. raw:: html
+
+        <details><summary>Show Value</summary>
+
+    .. code-block:: text
+        :linenos:
+
+        
+        Usage: python ???.py <infilename>
+
+
+    .. raw:: html
+
+        </details>
+
+   
+
+.. py:function:: usage()
+
+
+.. py:function:: main()
+
+

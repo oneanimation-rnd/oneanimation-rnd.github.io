@@ -1,0 +1,25 @@
+ :py:mod:`oa.rnd.tools.batch_asset_replacer`
+========================================================================================
+
+.. py:module:: oa.rnd.tools.batch_asset_replacer
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   widgets/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   batch_asset_replacer_tool/index.rst
+   batch_asset_replacer_utils/index.rst
+
+

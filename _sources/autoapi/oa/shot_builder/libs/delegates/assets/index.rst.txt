@@ -1,0 +1,108 @@
+ :py:mod:`oa.shot_builder.libs.delegates.assets`
+================================================================================================
+
+.. py:module:: oa.shot_builder.libs.delegates.assets
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.libs.delegates.assets.setup
+   oa.shot_builder.libs.delegates.assets.get_assets
+   oa.shot_builder.libs.delegates.assets.get_env_asset
+   oa.shot_builder.libs.delegates.assets.get_cam_asset
+   oa.shot_builder.libs.delegates.assets._get_subnet
+   oa.shot_builder.libs.delegates.assets._create_asset
+   oa.shot_builder.libs.delegates.assets._create_camera
+   oa.shot_builder.libs.delegates.assets._register_camera
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.libs.delegates.assets.this
+   oa.shot_builder.libs.delegates.assets._log
+   oa.shot_builder.libs.delegates.assets._msglog
+   oa.shot_builder.libs.delegates.assets.ab_helpers_logger
+   oa.shot_builder.libs.delegates.assets._cam_asset_node
+   oa.shot_builder.libs.delegates.assets._env_asset_node
+   oa.shot_builder.libs.delegates.assets._asset_nodes
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:data:: ab_helpers_logger
+   
+
+   
+
+.. py:data:: _cam_asset_node
+   
+
+   
+
+.. py:data:: _env_asset_node
+   
+
+   
+
+.. py:data:: _asset_nodes
+   
+
+   
+
+.. py:function:: setup()
+
+
+.. py:function:: get_assets()
+
+
+.. py:function:: get_env_asset()
+
+
+.. py:function:: get_cam_asset()
+
+
+.. py:function:: _get_subnet()
+
+
+.. py:function:: _create_asset(parent, asset_description)
+
+
+.. py:function:: _create_camera(guid)
+
+   Create a camera node of a particular type and position
+   it accordingly inside the nodes network
+
+   :param guid: global unique identifier.
+   :type guid: str
+
+   :returns: camera node.
+   :rtype: hou.Node
+
+
+.. py:function:: _register_camera()
+
+

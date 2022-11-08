@@ -1,0 +1,36 @@
+ :py:mod:`bd.storage`
+==========================================
+
+.. py:module:: bd.storage
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   structure/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   accessor/index.rst
+   adapter/index.rst
+   component/index.rst
+   core/index.rst
+   edits/index.rst
+   enums/index.rst
+   errors/index.rst
+   formatter/index.rst
+   helpers/index.rst
+   mixins/index.rst
+   queries/index.rst
+   utils/index.rst
+   validation/index.rst
+
+

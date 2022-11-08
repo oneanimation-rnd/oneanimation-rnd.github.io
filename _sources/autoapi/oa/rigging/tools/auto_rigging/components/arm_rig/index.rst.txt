@@ -1,0 +1,34 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.components.arm_rig`
+======================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.components.arm_rig
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.components.arm_rig.rig
+   oa.rigging.tools.auto_rigging.components.arm_rig.create_fk_arm
+   oa.rigging.tools.auto_rigging.components.arm_rig.create_ik_arm
+   oa.rigging.tools.auto_rigging.components.arm_rig.apply_noodle_arms
+
+
+
+.. py:function:: rig(objs, stretch_along_length=False, rig_scale=None, control_color=31, suffix='')
+
+
+.. py:function:: create_fk_arm(parent, arm, forearm, arm_tip, arm_cp_ctrl, rig_scale=1.0, control_color=31, suffix='')
+
+
+.. py:function:: create_ik_arm(root_nul, no_touch_nul, parent, clav, arm, forearm, arm_tip, hand, arm_cp_ctrl, elbow_upv=None, rig_scale=1.0, control_color=31, suffix='')
+
+
+.. py:function:: apply_noodle_arms(root_nul, no_touch_nul, clav, arm, forearm, arm_tip, hand, arm_cp_ctrl, rot_blend_ik, rot_blend_ik_buffer, add_wrist_half_jnt=True, stretch_along_length=False, rig_scale=1.0, control_color=31, suffix='')
+
+

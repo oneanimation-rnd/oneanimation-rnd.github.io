@@ -1,0 +1,160 @@
+ :py:mod:`oa.asset_library.asset_library_utils`
+==============================================================================================
+
+.. py:module:: oa.asset_library.asset_library_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_library.asset_library_utils.LogType
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_library.asset_library_utils.log
+   oa.asset_library.asset_library_utils.load_pixmap
+   oa.asset_library.asset_library_utils.popup_msg
+   oa.asset_library.asset_library_utils.create_tool_button
+   oa.asset_library.asset_library_utils.copy_to_clipboard
+   oa.asset_library.asset_library_utils.open_path
+   oa.asset_library.asset_library_utils.open_text_editor
+   oa.asset_library.asset_library_utils.get_projects
+   oa.asset_library.asset_library_utils.get_env_project
+   oa.asset_library.asset_library_utils.change_res_path
+   oa.asset_library.asset_library_utils.import_assets
+   oa.asset_library.asset_library_utils.import_camera
+   oa.asset_library.asset_library_utils.find_asset_in_anm_scenes
+   oa.asset_library.asset_library_utils.get_elided_text
+   oa.asset_library.asset_library_utils.set_pixmap_hsv
+   oa.asset_library.asset_library_utils.crop_thumbnail
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_library.asset_library_utils.asset_drive
+   oa.asset_library.asset_library_utils.remote_asset_drive
+
+
+.. py:data:: asset_drive
+   
+
+   
+
+.. py:data:: remote_asset_drive
+   
+
+   
+
+.. py:class:: LogType
+
+   .. py:attribute:: Normal
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Error
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: Warning
+      :annotation: = 2
+
+      
+
+
+.. py:function:: log(msg, msg_type=LogType.Normal)
+
+   Detects what environment it's in and chooses an appropriate method to print a message.
+
+   :param msg: Message to display.
+   :type msg: string
+   :param msg_type:
+   :type msg_type: LogType
+
+
+.. py:function:: load_pixmap(file_name, width=None, height=None, as_icon=False)
+
+
+.. py:function:: popup_msg(parent, title, msg, icon=None)
+
+   Displays a message.
+
+   :param parent: The widget to parent this to.
+   :param title: The window's titlebar label.
+   :param msg: The actual message.
+   :param icon: A full path to an existing png.
+
+
+.. py:function:: create_tool_button(text, icon, width=32, height=32, style=QtCore.Qt.ToolButtonTextBesideIcon, tooltip=None, parent=None)
+
+
+.. py:function:: copy_to_clipboard(txt)
+
+
+.. py:function:: open_path(path)
+
+
+.. py:function:: open_text_editor(path)
+
+
+.. py:function:: get_projects()
+
+   Gets and returns a list of all projects on the local asset drive.
+
+
+.. py:function:: get_env_project()
+
+   Gets and returns the project's name from the current environment it's in.
+
+
+.. py:function:: change_res_path(path, res)
+
+   Converts a path to point at a different resolution.
+
+   :param path: Absolute file path.
+   :type path: string
+   :param res: Resolution to point to.
+   :type res: string
+
+   :returns: An absolute path to the resolution.
+
+
+.. py:function:: import_assets(import_data)
+
+   Import assets inside application.
+   Assets are imported by priority of resolution: PRX->ANI->RDR
+
+   :param import_data: [project, scene path, quantity]
+   :type import_data: list[]
+
+
+.. py:function:: import_camera()
+
+
+.. py:function:: find_asset_in_anm_scenes(asset_id)
+
+
+.. py:function:: get_elided_text(txt, font_metrics, rect, text_elide_mode=QtCore.Qt.ElideRight)
+
+
+.. py:function:: set_pixmap_hsv(pixmap, hue=None, saturation=None, value=None)
+
+
+.. py:function:: crop_thumbnail(pixmap, width, height, mode=QtCore.Qt.SmoothTransformation)
+
+

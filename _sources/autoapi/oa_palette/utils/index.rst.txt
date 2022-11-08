@@ -1,0 +1,159 @@
+ :py:mod:`oa_palette.utils`
+======================================================
+
+.. py:module:: oa_palette.utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_palette.utils.get_logger
+   oa_palette.utils._parse_userinfo
+   oa_palette.utils._read_userinfo
+   oa_palette.utils._write_userinfo
+   oa_palette.utils.get_metadata
+   oa_palette.utils._get_metadata_from_userinfo
+   oa_palette.utils._get_metadata_from_section
+   oa_palette.utils.set_metadata
+   oa_palette.utils.get_binding_data
+   oa_palette.utils._get_binding_data_from_userinfo
+   oa_palette.utils._get_binding_data_from_section
+   oa_palette.utils.set_binding_data
+   oa_palette.utils.get_hda_section
+   oa_palette.utils._json_encoder
+   oa_palette.utils._convert_data
+   oa_palette.utils._json_decoder
+   oa_palette.utils.save_to_section
+   oa_palette.utils.load_from_section
+   oa_palette.utils.get_palette_infos
+   oa_palette.utils.is_locked_hda
+   oa_palette.utils.is_digital_asset
+   oa_palette.utils.is_from_scanned_dir
+   oa_palette.utils.make_embedded
+   oa_palette.utils.uninstall_type_definitions
+   oa_palette.utils.is_palette
+   oa_palette.utils.clear_definition_preferences
+   oa_palette.utils.keep_single_definition
+   oa_palette.utils.is_valid_comment
+   oa_palette.utils.update_nodes
+   oa_palette.utils.install
+   oa_palette.utils.get_storage_item_from_definition
+   oa_palette.utils.get_storage_item
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_palette.utils.scanned_dirs
+
+
+.. py:data:: scanned_dirs
+   
+
+   
+
+.. py:function:: get_logger(logger, ui=False)
+
+
+.. py:function:: _parse_userinfo(user_info_json, convert=True)
+
+
+.. py:function:: _read_userinfo(definition, check_key=None, convert=True)
+
+
+.. py:function:: _write_userinfo(definition, user_info)
+
+
+.. py:function:: get_metadata(definition)
+
+
+.. py:function:: _get_metadata_from_userinfo(definition, convert=True)
+
+
+.. py:function:: _get_metadata_from_section(definition)
+
+
+.. py:function:: set_metadata(definition, **kwargs)
+
+
+.. py:function:: get_binding_data(definition)
+
+
+.. py:function:: _get_binding_data_from_userinfo(definition, convert=True)
+
+
+.. py:function:: _get_binding_data_from_section(definition)
+
+
+.. py:function:: set_binding_data(definition, binding_data)
+
+
+.. py:function:: get_hda_section(definition, section_name, create_section=False)
+
+
+.. py:function:: _json_encoder(obj)
+
+
+.. py:function:: _convert_data(data, ignore_dicts=False)
+
+
+.. py:function:: _json_decoder(obj)
+
+
+.. py:function:: save_to_section(section, data)
+
+
+.. py:function:: load_from_section(section)
+
+
+.. py:function:: get_palette_infos(section)
+
+
+.. py:function:: is_locked_hda(node)
+
+
+.. py:function:: is_digital_asset(node)
+
+
+.. py:function:: is_from_scanned_dir(path)
+
+
+.. py:function:: make_embedded(definition, type_name=None, menu_name=None)
+
+
+.. py:function:: uninstall_type_definitions(category, type_name)
+
+
+.. py:function:: is_palette(node)
+
+
+.. py:function:: clear_definition_preferences(node_type)
+
+
+.. py:function:: keep_single_definition(definition)
+
+
+.. py:function:: is_valid_comment(comment)
+
+
+.. py:function:: update_nodes(node_type)
+
+
+.. py:function:: install(type_name, identifier)
+
+
+.. py:function:: get_storage_item_from_definition(definition, latest=False)
+
+
+.. py:function:: get_storage_item(identifier, latest=True)
+
+

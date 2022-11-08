@@ -1,0 +1,18 @@
+ :py:mod:`oa.animation.tools.deform_tool`
+==================================================================================
+
+.. py:module:: oa.animation.tools.deform_tool
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   custom_shortcut/index.rst
+   deform_tool/index.rst
+   deform_utils/index.rst
+   help_dialog/index.rst
+
+

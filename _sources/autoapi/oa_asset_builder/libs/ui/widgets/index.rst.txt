@@ -1,0 +1,18 @@
+ :py:mod:`oa_asset_builder.libs.ui.widgets`
+======================================================================================
+
+.. py:module:: oa_asset_builder.libs.ui.widgets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   asset_selector/index.rst
+   asset_tree/index.rst
+   details/index.rst
+   thumbnail/index.rst
+
+

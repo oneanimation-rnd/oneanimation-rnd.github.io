@@ -1,0 +1,76 @@
+ :py:mod:`oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_utils`
+==============================================================================================================================================
+
+.. py:module:: oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_utils.QBlocker
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_utils.get_maya_window
+   oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_utils.popup_error_msg
+   oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_utils.wrap_layout
+   oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_utils.get_latest_scn_files
+   oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_utils.asset_path_to_wmodel_id
+   oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_utils.build_batch_command
+   oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_utils.build_check_in_comments
+   oa.rnd.tools.batch_asset_replacer.batch_asset_replacer_utils.replace_refs
+
+
+
+.. py:class:: QBlocker(QObject)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(exc_type, exc_val, exc_tb)
+
+
+
+.. py:function:: get_maya_window()
+
+
+.. py:function:: popup_error_msg(title, msg, parent=None, print_traceback=True)
+
+
+.. py:function:: wrap_layout(widgets, orientation)
+
+   Helper function that takes supplied widgets and wraps them all in a layout.
+
+   :param widgets: A list of QWidgets.
+   :param orientation: QtCore.Qt.Orientation
+
+   :returns: The new layout item.
+
+
+.. py:function:: get_latest_scn_files(dir)
+
+
+.. py:function:: asset_path_to_wmodel_id(path)
+
+
+.. py:function:: build_batch_command(from_wmodel_ids, to_wmodel_ids)
+
+
+.. py:function:: build_check_in_comments(from_wmodel_ids, to_wmodel_ids)
+
+
+.. py:function:: replace_refs(from_wmodel_ids, to_wmodel_ids)
+
+

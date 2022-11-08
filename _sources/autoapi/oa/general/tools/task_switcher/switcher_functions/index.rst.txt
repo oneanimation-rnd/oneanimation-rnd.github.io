@@ -1,0 +1,104 @@
+ :py:mod:`oa.general.tools.task_switcher.switcher_functions`
+========================================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.switcher_functions
+
+.. autoapi-nested-parse::
+
+   Core functionality to switch tasks.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.switcher_functions.reset_env_variables
+   oa.general.tools.task_switcher.switcher_functions.create_workspace_file
+   oa.general.tools.task_switcher.switcher_functions.create_working_directories
+   oa.general.tools.task_switcher.switcher_functions.set_browser_default_to_scenes
+   oa.general.tools.task_switcher.switcher_functions.set_edit_paths
+   oa.general.tools.task_switcher.switcher_functions.switch_to_asset_task
+   oa.general.tools.task_switcher.switcher_functions.switch_to_shot_task
+   oa.general.tools.task_switcher.switcher_functions.switch_to_rnd_task
+   oa.general.tools.task_switcher.switcher_functions.current_task_to_string
+
+
+
+.. py:function:: reset_env_variables()
+
+   Resets all environment variables related to tasks.
+
+
+.. py:function:: create_workspace_file(file_path)
+
+   Creates file that defines default workspace.
+
+   :param file_path: Full path to where to write the new workspace.
+   :type file_path: string
+
+
+.. py:function:: create_working_directories()
+
+   Gets current working directory and creates local workspace.
+
+
+.. py:function:: set_browser_default_to_scenes()
+
+
+.. py:function:: set_edit_paths()
+
+
+.. py:function:: switch_to_asset_task(project_name, asset_type, asset_name, level=None, category=None, create_dirs=False)
+
+   Switches to supplied asset task.
+
+   :param project_name:
+   :type project_name: string
+   :param asset_type: CHR, CAM, PRP, LOC.
+   :type asset_type: string
+   :param asset_name:
+   :type asset_name: string
+   :param level: ENV, GEN, SET (for location asset types).
+   :type level: string
+   :param category: For location and prop asset types.
+   :type category: string
+   :param create_dirs: Creates workspace directories.
+   :type create_dirs: bool
+
+
+.. py:function:: switch_to_shot_task(project_name, ep, seq, shot_task_type, create_dirs=False)
+
+   Switches to supplied shot task.
+
+   :param project_name:
+   :type project_name: string
+   :param ep:
+   :type ep: string
+   :param seq:
+   :type seq: string
+   :param shot_task_type: ANM, LA
+   :type shot_task_type: string
+   :param create_dirs: Creates workspace directories.
+   :type create_dirs: bool
+
+
+.. py:function:: switch_to_rnd_task(create_dirs=False)
+
+   Switches to no task, the same as when Maya first starts up.
+
+
+.. py:function:: current_task_to_string()
+
+   Takes the current task and builds a name out of it.
+   Being in rnd task will return None.
+
+

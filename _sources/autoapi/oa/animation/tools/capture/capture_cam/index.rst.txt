@@ -1,0 +1,101 @@
+ :py:mod:`oa.animation.tools.capture.capture_cam`
+==================================================================================================
+
+.. py:module:: oa.animation.tools.capture.capture_cam
+
+.. autoapi-nested-parse::
+
+   Class to help manage the viewport and its displays.
+
+   Author:
+       Angeline
+
+   Refactored:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.capture.capture_cam.CaptureAg
+
+
+
+
+.. py:class:: CaptureAg
+
+   Bases: :py:obj:`object`
+
+   Manages the viewport for capturing.
+
+   .. py:method:: get_viewport_dof_button(model_panel)
+
+      Goes through nested layouts and returns the panel's DOF button's full name.
+
+
+   .. py:method:: store_viewport_settings()
+
+      Saves settings of the current state of the viewport.
+
+
+   .. py:method:: store_camera_settings(camera)
+
+
+   .. py:method:: restore_camera()
+
+
+   .. py:method:: get_scene_sound_node()
+
+      Gets and returns the current sound node the timeline is using, if any.
+
+
+   .. py:method:: capture_viewport(file_path, video_size, frame_range, include_sound, quality=50, compression='jpeg')
+
+      Runs a playblast.
+
+      :param file_path: The whole file path including the filename and extension.
+      :type file_path: string
+      :param video_size: Width and height of the video respectively.
+      :type video_size: int[]
+      :param frame_range: Start time and end time of the animation respectively.
+      :type frame_range: int[]
+      :param include_sound:
+      :type include_sound: bool
+      :param quality:
+      :type quality: int
+      :param compression: jpeg, png (run cmds.playblast(options=True) for more info)
+      :type compression: string
+
+
+   .. py:method:: setup_viewport_for_capture(render_cam_name, enable_dof, enable_ao, display_textures, viewport_mode, use_lights, show_settings, eval_mode='serial')
+
+      :param render_cam_name: Name of the camera that's used for capturing.
+      :type render_cam_name: string
+      :param enable_dof: Enables DOF on capture.
+      :type enable_dof: bool
+      :param enable_ao: Enables ambient occlusion on capture.
+      :type enable_ao: bool
+      :param display_textures: Enables textures to be displayed.
+      :type display_textures: bool
+      :param viewport_mode: Viewport mode of the camera that's used for capturing.
+      :type viewport_mode: string
+      :param use_lights: Uses all lights on True.
+      :type use_lights: bool
+      :param show_settings: A dictionary of data to determine what should be hidden in the view.
+      :type show_settings: dict
+      :param eval_mode: The evaluation type that the capture will run in.
+      :type eval_mode: string
+
+
+   .. py:method:: restore_viewport()
+
+      Restores the viewport settings to its previous stored settings.
+
+
+

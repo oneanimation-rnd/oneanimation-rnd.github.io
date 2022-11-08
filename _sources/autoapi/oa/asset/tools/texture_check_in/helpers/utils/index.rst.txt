@@ -1,0 +1,78 @@
+ :py:mod:`oa.asset.tools.texture_check_in.helpers.utils`
+================================================================================================================
+
+.. py:module:: oa.asset.tools.texture_check_in.helpers.utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.texture_check_in.helpers.utils.load_pixmap
+   oa.asset.tools.texture_check_in.helpers.utils.popup_error_msg
+   oa.asset.tools.texture_check_in.helpers.utils.file_size
+   oa.asset.tools.texture_check_in.helpers.utils.check_in_texture
+   oa.asset.tools.texture_check_in.helpers.utils.open_file
+   oa.asset.tools.texture_check_in.helpers.utils.get_projects
+   oa.asset.tools.texture_check_in.helpers.utils.query_assets_from_db
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.texture_check_in.helpers.utils.asset_drive
+
+
+.. py:data:: asset_drive
+   
+
+   
+
+.. py:function:: load_pixmap(file_name, width=None, height=None)
+
+
+.. py:function:: popup_error_msg(title, msg, parent=None, print_traceback=True)
+
+
+.. py:function:: file_size(nbytes)
+
+   https://stackoverflow.com/questions/14996453/python-libraries-to-calculate-human-readable-filesize-from-bytes
+
+
+.. py:function:: check_in_texture(source_path, dest_dir)
+
+   Generates renderer specific texture file from from the supplied file, and copies it onto the server.
+
+   :param source_path: Full path to a file to copy from.
+   :param dest_dir: Full path to a directory on the server to copy to.
+
+
+.. py:function:: open_file(path)
+
+   A system call to open the supplied file.
+
+   :param path: Full path to an existing file.
+
+
+.. py:function:: get_projects()
+
+   Gets and returns a list of available projects in the asset drive.
+   Excludes softimage and non-projects.
+
+
+.. py:function:: query_assets_from_db(project, asset_type)
+
+   Queries asset wrappers from the database.
+
+   :param project: A project on the asset drive.
+   :param asset_type: The asset's type.
+
+

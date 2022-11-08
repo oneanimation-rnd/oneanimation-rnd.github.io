@@ -1,0 +1,48 @@
+ :py:mod:`oa.asset.tools.set_dress.custom_widgets.env_state_combobox`
+==========================================================================================================================================
+
+.. py:module:: oa.asset.tools.set_dress.custom_widgets.env_state_combobox
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.custom_widgets.env_state_combobox.ComboBoxView
+   oa.asset.tools.set_dress.custom_widgets.env_state_combobox.ComboBoxModel
+   oa.asset.tools.set_dress.custom_widgets.env_state_combobox.EnvStateComboBox
+
+
+
+
+.. py:class:: ComboBoxView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableView`
+
+   .. py:method:: showEvent(event)
+
+
+
+.. py:class:: ComboBoxModel
+
+   Bases: :py:obj:`PySide2.QtGui.QStandardItemModel`
+
+
+.. py:class:: EnvStateComboBox(icon_size=150, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QComboBox`
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: add_row(name, thumbnail, description, user)
+
+
+   .. py:method:: get_data(wmodel_id)
+
+
+

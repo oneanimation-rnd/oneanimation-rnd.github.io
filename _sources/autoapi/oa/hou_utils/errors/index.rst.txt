@@ -1,0 +1,28 @@
+ :py:mod:`oa.hou_utils.errors`
+============================================================
+
+.. py:module:: oa.hou_utils.errors
+
+
+Module Contents
+---------------
+
+.. py:exception:: Error(message=None, details=None)
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+   .. py:attribute:: default_message
+      :annotation: = Unspecified error occured
+
+      
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+

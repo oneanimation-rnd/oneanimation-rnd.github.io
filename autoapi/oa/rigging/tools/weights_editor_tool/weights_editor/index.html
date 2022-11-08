@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.rigging.tools.weights_editor_tool.weights_editor &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.rigging.tools.weights_editor_tool.weights_editor_utils" href="../weights_editor_utils/index.html" />
+    <link rel="prev" title=" oa.rigging.tools.weights_editor_tool.enums" href="../enums/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.weights_editor_tool</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/rigging/tools/weights_editor_tool/weights_editor/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.rigging.tools.weights_editor_tool.weights_editor">
+<span id="oa-rigging-tools-weights-editor-tool-weights-editor"></span><h1> <a class="reference internal" href="#module-oa.rigging.tools.weights_editor_tool.weights_editor" title="oa.rigging.tools.weights_editor_tool.weights_editor"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor</span></code></a><a class="headerlink" href="#module-oa.rigging.tools.weights_editor_tool.weights_editor" title="Permalink to this heading"></a></h1>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+<dt>Credits:</dt><dd><dl class="simple">
+<dt>Smooth all influences is using Brave Rabbit’s brSmoothWeights plugin.</dt><dd><p><a class="reference external" href="https://www.github.com/IngoClemens/brSmoothWeights">https://www.github.com/IngoClemens/brSmoothWeights</a></p>
+</dd>
+</dl>
+</dd>
+<dt>Limitations:</dt><dd><ul class="simple">
+<li><p>Internal data won’t sync if weights or influences are modified externally. (ie: can’t paint weights while tool is open)</p></li>
+</ul>
+</dd>
+<dt>Example of usage:</dt><dd><p>from weights_editor_tool import weights_editor
+weights_editor.run()</p>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor" title="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WeightsEditor</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor.run" title="oa.rigging.tools.weights_editor_tool.weights_editor.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor.</span></span><span class="sig-name descname"><span class="pre">WeightsEditor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QMainWindow</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.version">
+<span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">2.1.2</span></em><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.version" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.instance">
+<span class="sig-name descname"><span class="pre">instance</span></span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.instance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.cb_selection_changed">
+<span class="sig-name descname"><span class="pre">cb_selection_changed</span></span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.cb_selection_changed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.shortcuts">
+<span class="sig-name descname"><span class="pre">shortcuts</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.shortcuts" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.run">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.run" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.del_prev_instance">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">del_prev_instance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.del_prev_instance" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes any previous window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.remove_shortcuts">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remove_shortcuts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.remove_shortcuts" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.create_gui">
+<span class="sig-name descname"><span class="pre">create_gui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.create_gui" title="Permalink to this definition"></a></dt>
+<dd><p>Creates all interface objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.update_window_title">
+<span class="sig-name descname"><span class="pre">update_window_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.update_window_title" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.get_active_weights_view">
+<span class="sig-name descname"><span class="pre">get_active_weights_view</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.get_active_weights_view" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.create_preset_layout">
+<span class="sig-name descname"><span class="pre">create_preset_layout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spinbox_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spinbox_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spinbox_steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spinbox_callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.create_preset_layout" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.append_preset_buttons">
+<span class="sig-name descname"><span class="pre">append_preset_buttons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset_callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tooltip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.append_preset_buttons" title="Permalink to this definition"></a></dt>
+<dd><p>Procedurally creates multiple preset buttons to adjust weights.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.append_add_presets_buttons">
+<span class="sig-name descname"><span class="pre">append_add_presets_buttons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.append_add_presets_buttons" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.append_scale_presets_buttons">
+<span class="sig-name descname"><span class="pre">append_scale_presets_buttons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.append_scale_presets_buttons" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.append_set_presets_buttons">
+<span class="sig-name descname"><span class="pre">append_set_presets_buttons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.append_set_presets_buttons" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.toggle_check_button">
+<span class="sig-name descname"><span class="pre">toggle_check_button</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">button</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.toggle_check_button" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.fetch_latest_tool_version">
+<span class="sig-name descname"><span class="pre">fetch_latest_tool_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.fetch_latest_tool_version" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.request_on_finished">
+<span class="sig-name descname"><span class="pre">request_on_finished</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.request_on_finished" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.update_tooltips">
+<span class="sig-name descname"><span class="pre">update_tooltips</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.update_tooltips" title="Permalink to this definition"></a></dt>
+<dd><p>Updates tooltips with the latest shortcuts.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.register_shortcuts">
+<span class="sig-name descname"><span class="pre">register_shortcuts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.register_shortcuts" title="Permalink to this definition"></a></dt>
+<dd><p>Installs temporary hotkeys that overrides Maya’s.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.get_obj_by_name">
+<span class="sig-name descname"><span class="pre">get_obj_by_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.get_obj_by_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_undo_buttons_enabled_state">
+<span class="sig-name descname"><span class="pre">set_undo_buttons_enabled_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_undo_buttons_enabled_state" title="Permalink to this definition"></a></dt>
+<dd><p>Checks the undo stack and determines enabled state and labels on undo/redo buttons.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.save_state">
+<span class="sig-name descname"><span class="pre">save_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.save_state" title="Permalink to this definition"></a></dt>
+<dd><p>Saves gui’s current state to a file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.fetch_settings">
+<span class="sig-name descname"><span class="pre">fetch_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.fetch_settings" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.restore_state">
+<span class="sig-name descname"><span class="pre">restore_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.restore_state" title="Permalink to this definition"></a></dt>
+<dd><p>Restores gui’s last state if the file is available.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.update_obj">
+<span class="sig-name descname"><span class="pre">update_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.update_obj" title="Permalink to this definition"></a></dt>
+<dd><p>Re-points tool to work on another object and re-collect its skin data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> (<em>string</em>) – Object to re-point to.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.collect_inf_locks">
+<span class="sig-name descname"><span class="pre">collect_inf_locks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.collect_inf_locks" title="Permalink to this definition"></a></dt>
+<dd><p>Collects a list of bools from active influences.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.toggle_inf_locks">
+<span class="sig-name descname"><span class="pre">toggle_inf_locks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.toggle_inf_locks" title="Permalink to this definition"></a></dt>
+<dd><p>Sets lock on influences by table’s columns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>infs</strong> (<em>string</em><em>[</em><em>]</em>) – A list of influence names to set.</p></li>
+<li><p><strong>enabled</strong> (<em>bool</em>) – Locks if True.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.get_all_infs">
+<span class="sig-name descname"><span class="pre">get_all_infs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.get_all_infs" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a list of all influences from the active skinCluster.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.get_selected_infs">
+<span class="sig-name descname"><span class="pre">get_selected_infs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.get_selected_infs" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a list of influences that effects selected vertexes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.collect_display_infs">
+<span class="sig-name descname"><span class="pre">collect_display_infs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.collect_display_infs" title="Permalink to this definition"></a></dt>
+<dd><p>Sets influences to be shown in the table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.recollect_table_data">
+<span class="sig-name descname"><span class="pre">recollect_table_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">update_skin_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_verts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_infs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_headers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_selection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.recollect_table_data" title="Permalink to this definition"></a></dt>
+<dd><p>Collects all necessary data to display the table and refreshes it.
+Optimize this method by setting some arguments to False.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.edit_weights">
+<span class="sig-name descname"><span class="pre">edit_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.edit_weights" title="Permalink to this definition"></a></dt>
+<dd><p>Sets new weight value while distributing the difference.
+Using the mode argument determines how input_value will be implemented.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_value</strong> (<em>float</em>) – Value between 0 to 1.0.</p></li>
+<li><p><strong>mode</strong> (<a class="reference internal" href="../enums/index.html#oa.rigging.tools.weights_editor_tool.enums.WeightOperation" title="oa.rigging.tools.weights_editor_tool.enums.WeightOperation"><em>enums.WeightOperation</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.hide_vert_colors">
+<span class="sig-name descname"><span class="pre">hide_vert_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.hide_vert_colors" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.update_vert_colors">
+<span class="sig-name descname"><span class="pre">update_vert_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vert_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.update_vert_colors" title="Permalink to this definition"></a></dt>
+<dd><p>Displays active influence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vert_filter</strong> (<em>int</em><em>[</em><em>]</em>) – List of vertex indexes to only operate on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.switch_color_style">
+<span class="sig-name descname"><span class="pre">switch_color_style</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color_theme</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.switch_color_style" title="Permalink to this definition"></a></dt>
+<dd><p>Changes color display to a different theme.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>color_theme</strong> (<a class="reference internal" href="../enums/index.html#oa.rigging.tools.weights_editor_tool.enums.ColorTheme" title="oa.rigging.tools.weights_editor_tool.enums.ColorTheme"><em>enums.ColorTheme</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.run_smooth">
+<span class="sig-name descname"><span class="pre">run_smooth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">smooth_operation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.run_smooth" title="Permalink to this definition"></a></dt>
+<dd><p>Smooths weights on selected vertexes with adjacent weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>smooth_operation</strong> (<a class="reference internal" href="../enums/index.html#oa.rigging.tools.weights_editor_tool.enums.SmoothOperation" title="oa.rigging.tools.weights_editor_tool.enums.SmoothOperation"><em>SmoothOperation</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.add_undo_command">
+<span class="sig-name descname"><span class="pre">add_undo_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_skin_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_skin_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vert_indexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_selection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_first_redo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.add_undo_command" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_color_inf">
+<span class="sig-name descname"><span class="pre">set_color_inf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_color_inf" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.update_inf_list">
+<span class="sig-name descname"><span class="pre">update_inf_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.update_inf_list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.apply_filter_to_inf_list">
+<span class="sig-name descname"><span class="pre">apply_filter_to_inf_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.apply_filter_to_inf_list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.mirror_weights">
+<span class="sig-name descname"><span class="pre">mirror_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selection_only</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.mirror_weights" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.grow_selection">
+<span class="sig-name descname"><span class="pre">grow_selection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.grow_selection" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.shrink_selection">
+<span class="sig-name descname"><span class="pre">shrink_selection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.shrink_selection" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.select_perimeter">
+<span class="sig-name descname"><span class="pre">select_perimeter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.select_perimeter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.select_edge_loop">
+<span class="sig-name descname"><span class="pre">select_edge_loop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.select_edge_loop" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.select_shell">
+<span class="sig-name descname"><span class="pre">select_shell</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.select_shell" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.select_ring_loop">
+<span class="sig-name descname"><span class="pre">select_ring_loop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.select_ring_loop" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.toggle_selected_inf_locks">
+<span class="sig-name descname"><span class="pre">toggle_selected_inf_locks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.toggle_selected_inf_locks" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.selection_on_changed">
+<span class="sig-name descname"><span class="pre">selection_on_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.selection_on_changed" title="Permalink to this definition"></a></dt>
+<dd><p>Triggers when user selects a new vertex in the viewport.
+Then refreshes table to be in sync.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.add_selection_callback">
+<span class="sig-name descname"><span class="pre">add_selection_callback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.add_selection_callback" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.remove_selection_callback">
+<span class="sig-name descname"><span class="pre">remove_selection_callback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.remove_selection_callback" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.closeEvent">
+<span class="sig-name descname"><span class="pre">closeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.closeEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.pick_obj_on_clicked">
+<span class="sig-name descname"><span class="pre">pick_obj_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.pick_obj_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.table_on_update_ended">
+<span class="sig-name descname"><span class="pre">table_on_update_ended</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">over_limit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.table_on_update_ended" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.weights_view_on_key_pressed">
+<span class="sig-name descname"><span class="pre">weights_view_on_key_pressed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.weights_view_on_key_pressed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.refresh_on_clicked">
+<span class="sig-name descname"><span class="pre">refresh_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.refresh_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.auto_update_on_toggled">
+<span class="sig-name descname"><span class="pre">auto_update_on_toggled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.auto_update_on_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_limit_on_triggered">
+<span class="sig-name descname"><span class="pre">set_limit_on_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_limit_on_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.header_on_middle_clicked">
+<span class="sig-name descname"><span class="pre">header_on_middle_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.header_on_middle_clicked" title="Permalink to this definition"></a></dt>
+<dd><p>Sets active influence to color with.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.select_by_infs_on_clicked">
+<span class="sig-name descname"><span class="pre">select_by_infs_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.select_by_infs_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.prune_on_clicked">
+<span class="sig-name descname"><span class="pre">prune_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.prune_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.mirror_skin_on_clicked">
+<span class="sig-name descname"><span class="pre">mirror_skin_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.mirror_skin_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.mirror_all_skin_on_clicked">
+<span class="sig-name descname"><span class="pre">mirror_all_skin_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.mirror_all_skin_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.copy_vertex_on_clicked">
+<span class="sig-name descname"><span class="pre">copy_vertex_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.copy_vertex_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.paste_vertex_on_clicked">
+<span class="sig-name descname"><span class="pre">paste_vertex_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.paste_vertex_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_add_on_clicked">
+<span class="sig-name descname"><span class="pre">set_add_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_add_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.add_preset_on_clicked">
+<span class="sig-name descname"><span class="pre">add_preset_on_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.add_preset_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_scale_on_clicked">
+<span class="sig-name descname"><span class="pre">set_scale_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_scale_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.scale_preset_on_clicked">
+<span class="sig-name descname"><span class="pre">scale_preset_on_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">perc</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.scale_preset_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_on_clicked">
+<span class="sig-name descname"><span class="pre">set_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_preset_on_clicked">
+<span class="sig-name descname"><span class="pre">set_preset_on_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.set_preset_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.hide_colors_on_toggled">
+<span class="sig-name descname"><span class="pre">hide_colors_on_toggled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checked</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.hide_colors_on_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.flood_to_closest_on_clicked">
+<span class="sig-name descname"><span class="pre">flood_to_closest_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.flood_to_closest_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.switch_color_on_clicked">
+<span class="sig-name descname"><span class="pre">switch_color_on_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.switch_color_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.launch_hotkeys_on_clicked">
+<span class="sig-name descname"><span class="pre">launch_hotkeys_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.launch_hotkeys_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.launch_presets_on_clicked">
+<span class="sig-name descname"><span class="pre">launch_presets_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.launch_presets_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.about_on_triggered">
+<span class="sig-name descname"><span class="pre">about_on_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.about_on_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.github_page_on_triggered">
+<span class="sig-name descname"><span class="pre">github_page_on_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.github_page_on_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.toggle_view_on_toggled">
+<span class="sig-name descname"><span class="pre">toggle_view_on_toggled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.toggle_view_on_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.show_utilities_on_toggled">
+<span class="sig-name descname"><span class="pre">show_utilities_on_toggled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.show_utilities_on_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.show_add_on_toggled">
+<span class="sig-name descname"><span class="pre">show_add_on_toggled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.show_add_on_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.show_scale_on_toggled">
+<span class="sig-name descname"><span class="pre">show_scale_on_toggled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.show_scale_on_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.show_set_on_toggled">
+<span class="sig-name descname"><span class="pre">show_set_on_toggled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.show_set_on_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.show_inf_on_toggled">
+<span class="sig-name descname"><span class="pre">show_inf_on_toggled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.show_inf_on_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.undo_on_click">
+<span class="sig-name descname"><span class="pre">undo_on_click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.undo_on_click" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.redo_on_click">
+<span class="sig-name descname"><span class="pre">redo_on_click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.redo_on_click" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.inf_list_on_middle_clicked">
+<span class="sig-name descname"><span class="pre">inf_list_on_middle_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.inf_list_on_middle_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.inf_list_on_toggle_lock_triggered">
+<span class="sig-name descname"><span class="pre">inf_list_on_toggle_lock_triggered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">infs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.inf_list_on_toggle_lock_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.add_inf_to_vert_on_clicked">
+<span class="sig-name descname"><span class="pre">add_inf_to_vert_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.add_inf_to_vert_on_clicked" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a very small weight value from selected influences to selected vertexes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.display_inf_on_triggered">
+<span class="sig-name descname"><span class="pre">display_inf_on_triggered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.display_inf_on_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.select_inf_verts_on_triggered">
+<span class="sig-name descname"><span class="pre">select_inf_verts_on_triggered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor.select_inf_verts_on_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor.run">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor.run" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../enums/index.html" class="btn btn-neutral float-left" title=" oa.rigging.tools.weights_editor_tool.enums" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../weights_editor_utils/index.html" class="btn btn-neutral float-right" title=" oa.rigging.tools.weights_editor_tool.weights_editor_utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

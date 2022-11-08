@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.asset.tools.set_dress.set_dress_utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.asset.tools.texture_check_in" href="../../texture_check_in/index.html" />
+    <link rel="prev" title=" oa.asset.tools.set_dress.set_dress_importer_tool" href="../set_dress_importer_tool/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.set_dress</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.set_dress.set_dress_utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/asset/tools/set_dress/set_dress_utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.asset.tools.set_dress.set_dress_utils">
+<span id="oa-asset-tools-set-dress-set-dress-utils"></span><h1> <a class="reference internal" href="#module-oa.asset.tools.set_dress.set_dress_utils" title="oa.asset.tools.set_dress.set_dress_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset.tools.set_dress.set_dress_utils</span></code></a><a class="headerlink" href="#module-oa.asset.tools.set_dress.set_dress_utils" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.load_pixmap" title="oa.asset.tools.set_dress.set_dress_utils.load_pixmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_pixmap</span></code></a>(file_name[, width, height])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.connect_to_database" title="oa.asset.tools.set_dress.set_dress_utils.connect_to_database"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect_to_database</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_maya_window" title="oa.asset.tools.set_dress.set_dress_utils.get_maya_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_maya_window</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.popup_error_msg" title="oa.asset.tools.set_dress.set_dress_utils.popup_error_msg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">popup_error_msg</span></code></a>(title, msg[, parent, print_traceback])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.popup_success_msg" title="oa.asset.tools.set_dress.set_dress_utils.popup_success_msg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">popup_success_msg</span></code></a>(title, msg[, parent])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.wrap_layout" title="oa.asset.tools.set_dress.set_dress_utils.wrap_layout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wrap_layout</span></code></a>(widgets, orientation[, parent])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.upload_files" title="oa.asset.tools.set_dress.set_dress_utils.upload_files"><code class="xref py py-obj docutils literal notranslate"><span class="pre">upload_files</span></code></a>(transfer_paths)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_user_avatar" title="oa.asset.tools.set_dress.set_dress_utils.get_user_avatar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_user_avatar</span></code></a>(user)</p></td>
+<td><p>Gets and returns a full path to the supplied user's avatar image.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_asset_path" title="oa.asset.tools.set_dress.set_dress_utils.get_asset_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_asset_path</span></code></a>(wmodel_id)</p></td>
+<td><p>Checks database for asset's base path on the server.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_episodes" title="oa.asset.tools.set_dress.set_dress_utils.get_episodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_episodes</span></code></a>([project])</p></td>
+<td><p>Returns a list of all available episode directories on the supplied project.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.generate_uid" title="oa.asset.tools.set_dress.set_dress_utils.generate_uid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_uid</span></code></a>([length])</p></td>
+<td><p>Generates a random unique tag.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.is_close_enough" title="oa.asset.tools.set_dress.set_dress_utils.is_close_enough"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_close_enough</span></code></a>(val1, val2)</p></td>
+<td><p>Returns True if both values are only different from floating point precision errors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.add_string_attr" title="oa.asset.tools.set_dress.set_dress_utils.add_string_attr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_string_attr</span></code></a>(obj, attr_name, value[, force])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_nested_refs" title="oa.asset.tools.set_dress.set_dress_utils.get_nested_refs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_nested_refs</span></code></a>(top_ref_path)</p></td>
+<td><p>Recursively collects all nested references into a flatten list.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_scene_ref_wrappers" title="oa.asset.tools.set_dress.set_dress_utils.get_scene_ref_wrappers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scene_ref_wrappers</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_wmodel_id_by_ref_node" title="oa.asset.tools.set_dress.set_dress_utils.get_wmodel_id_by_ref_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_wmodel_id_by_ref_node</span></code></a>(ref_node)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_latest_scene_by_wmodel_id" title="oa.asset.tools.set_dress.set_dress_utils.get_latest_scene_by_wmodel_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_latest_scene_by_wmodel_id</span></code></a>(wmodel_id)</p></td>
+<td><p>Gets a full path of the model's latest scene version.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_env_ref_node" title="oa.asset.tools.set_dress.set_dress_utils.get_env_ref_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_env_ref_node</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.collect_env_states" title="oa.asset.tools.set_dress.set_dress_utils.collect_env_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collect_env_states</span></code></a>(wmodel_id)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.import_env" title="oa.asset.tools.set_dress.set_dress_utils.import_env"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_env</span></code></a>(wmodel_id[, res])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_env_state" title="oa.asset.tools.set_dress.set_dress_utils.get_env_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_env_state</span></code></a>([env_ref_node])</p></td>
+<td><p>Gets the ENV's current state string.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.save_env_state" title="oa.asset.tools.set_dress.set_dress_utils.save_env_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_env_state</span></code></a>(name, description, thumbnail[, update])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_deltas" title="oa.asset.tools.set_dress.set_dress_utils.get_deltas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_deltas</span></code></a>(obj)</p></td>
+<td><p>Collects all keyable attributes into a dictionary and returns it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_ref_deltas" title="oa.asset.tools.set_dress.set_dress_utils.get_ref_deltas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_ref_deltas</span></code></a>(ref_wrapper)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.collect_env_deltas" title="oa.asset.tools.set_dress.set_dress_utils.collect_env_deltas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collect_env_deltas</span></code></a>()</p></td>
+<td><p>Collects deltas from all references in the scene.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.collect_scene_deltas" title="oa.asset.tools.set_dress.set_dress_utils.collect_scene_deltas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collect_scene_deltas</span></code></a>([ref_wrappers])</p></td>
+<td><p>Collects deltas from all references in the scene.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.apply_deltas" title="oa.asset.tools.set_dress.set_dress_utils.apply_deltas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_deltas</span></code></a>(deltas, ref_node)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.upload_meta_data" title="oa.asset.tools.set_dress.set_dress_utils.upload_meta_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">upload_meta_data</span></code></a>(output_path, preset, description, locked)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.set_lock_preset" title="oa.asset.tools.set_dress.set_dress_utils.set_lock_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_lock_preset</span></code></a>(meta_data_path, lock)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.export_set" title="oa.asset.tools.set_dress.set_dress_utils.export_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_set</span></code></a>(preset, description, thumbnail, color[, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.reset_env_state" title="oa.asset.tools.set_dress.set_dress_utils.reset_env_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset_env_state</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.set_env_state" title="oa.asset.tools.set_dress.set_dress_utils.set_env_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_env_state</span></code></a>(sds_path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.delete_env_state" title="oa.asset.tools.set_dress.set_dress_utils.delete_env_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_env_state</span></code></a>(project, asset_name, preset_names[, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.delete_preset" title="oa.asset.tools.set_dress.set_dress_utils.delete_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_preset</span></code></a>(project, asset_name, preset_names[, parent])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.load_preset" title="oa.asset.tools.set_dress.set_dress_utils.load_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_preset</span></code></a>(sds_path[, force])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.unload_preset" title="oa.asset.tools.set_dress.set_dress_utils.unload_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unload_preset</span></code></a>(wmodel_id, preset)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.list_presets" title="oa.asset.tools.set_dress.set_dress_utils.list_presets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_presets</span></code></a>(wmodel_id)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_scene_presets" title="oa.asset.tools.set_dress.set_dress_utils.get_scene_presets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scene_presets</span></code></a>([env_ref_node])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.load_unloaded_presets" title="oa.asset.tools.set_dress.set_dress_utils.load_unloaded_presets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_unloaded_presets</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.switch_preset_resolution" title="oa.asset.tools.set_dress.set_dress_utils.switch_preset_resolution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">switch_preset_resolution</span></code></a>(wmodel_id, preset, res)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.remove_preset" title="oa.asset.tools.set_dress.set_dress_utils.remove_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_preset</span></code></a>(wmodel_id, preset)</p></td>
+<td><p>Returns True if ENV was removed.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.select_preset" title="oa.asset.tools.set_dress.set_dress_utils.select_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_preset</span></code></a>(wmodel_id, presets)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.display_preset" title="oa.asset.tools.set_dress.set_dress_utils.display_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display_preset</span></code></a>(wmodel_id, presets, visibility)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_current_panel" title="oa.asset.tools.set_dress.set_dress_utils.get_current_panel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_current_panel</span></code></a>()</p></td>
+<td><p>Gets and returns the name of the active viewport.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_isolate_objs" title="oa.asset.tools.set_dress.set_dress_utils.get_isolate_objs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_isolate_objs</span></code></a>([panel])</p></td>
+<td><p>Gets a list of objects that are currently in the isolate set.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.get_viewport_settings" title="oa.asset.tools.set_dress.set_dress_utils.get_viewport_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_viewport_settings</span></code></a>()</p></td>
+<td><p>Collects active viewport's current state to a dictionary.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.pre_capture_setup" title="oa.asset.tools.set_dress.set_dress_utils.pre_capture_setup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pre_capture_setup</span></code></a>([isolate_objs])</p></td>
+<td><p>Prepares the viewport for capture.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.restore_viewport" title="oa.asset.tools.set_dress.set_dress_utils.restore_viewport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restore_viewport</span></code></a>(viewport_settings)</p></td>
+<td><p>Restores the active viewport to the supplied settings.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.capture_preview" title="oa.asset.tools.set_dress.set_dress_utils.capture_preview"><code class="xref py py-obj docutils literal notranslate"><span class="pre">capture_preview</span></code></a>(output_path[, width, height, isolate_objs])</p></td>
+<td><p>Captures a single frame to a jpg file.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.SD_IDS_ATTR" title="oa.asset.tools.set_dress.set_dress_utils.SD_IDS_ATTR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SD_IDS_ATTR</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.SD_REF_ID_ATTR" title="oa.asset.tools.set_dress.set_dress_utils.SD_REF_ID_ATTR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SD_REF_ID_ATTR</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.SD_ENV_STATE_ATTR" title="oa.asset.tools.set_dress.set_dress_utils.SD_ENV_STATE_ATTR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SD_ENV_STATE_ATTR</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.MISSING_STATUS" title="oa.asset.tools.set_dress.set_dress_utils.MISSING_STATUS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MISSING_STATUS</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.UNLOADED_STATUS" title="oa.asset.tools.set_dress.set_dress_utils.UNLOADED_STATUS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UNLOADED_STATUS</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.asset.tools.set_dress.set_dress_utils.LOADED_STATUS" title="oa.asset.tools.set_dress.set_dress_utils.LOADED_STATUS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LOADED_STATUS</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.SD_IDS_ATTR">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">SD_IDS_ATTR</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">SD_IDS</span></em><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.SD_IDS_ATTR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.SD_REF_ID_ATTR">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">SD_REF_ID_ATTR</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">SD_REF_ID</span></em><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.SD_REF_ID_ATTR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.SD_ENV_STATE_ATTR">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">SD_ENV_STATE_ATTR</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">SD_ENV_STATE</span></em><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.SD_ENV_STATE_ATTR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.MISSING_STATUS">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">MISSING_STATUS</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.MISSING_STATUS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.UNLOADED_STATUS">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">UNLOADED_STATUS</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.UNLOADED_STATUS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.LOADED_STATUS">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">LOADED_STATUS</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.LOADED_STATUS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.load_pixmap">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">load_pixmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.load_pixmap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.connect_to_database">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">connect_to_database</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.connect_to_database" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_maya_window">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_maya_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_maya_window" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.popup_error_msg">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">popup_error_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_traceback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.popup_error_msg" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.popup_success_msg">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">popup_success_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.popup_success_msg" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.wrap_layout">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">wrap_layout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widgets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.wrap_layout" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.upload_files">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">upload_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transfer_paths</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.upload_files" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_user_avatar">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_user_avatar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_user_avatar" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a full path to the supplied user’s avatar image.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_asset_path">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_asset_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wmodel_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_asset_path" title="Permalink to this definition"></a></dt>
+<dd><p>Checks database for asset’s base path on the server.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_episodes">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_episodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_episodes" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of all available episode directories on the supplied project.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.generate_uid">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">generate_uid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.generate_uid" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a random unique tag.
+Testing is successful with a count of hundreds of millions being all unique.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.is_close_enough">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">is_close_enough</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.is_close_enough" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True if both values are only different from floating point precision errors.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.add_string_attr">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">add_string_attr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.add_string_attr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_nested_refs">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_nested_refs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">top_ref_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_nested_refs" title="Permalink to this definition"></a></dt>
+<dd><p>Recursively collects all nested references into a flatten list.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_scene_ref_wrappers">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_scene_ref_wrappers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_scene_ref_wrappers" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_wmodel_id_by_ref_node">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_wmodel_id_by_ref_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_wmodel_id_by_ref_node" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_latest_scene_by_wmodel_id">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_latest_scene_by_wmodel_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wmodel_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_latest_scene_by_wmodel_id" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a full path of the model’s latest scene version.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_env_ref_node">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_env_ref_node</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_env_ref_node" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.collect_env_states">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">collect_env_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wmodel_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.collect_env_states" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.import_env">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">import_env</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wmodel_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.import_env" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_env_state">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_env_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_ref_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_env_state" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the ENV’s current state string.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.save_env_state">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">save_env_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thumbnail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.save_env_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_deltas">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_deltas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_deltas" title="Permalink to this definition"></a></dt>
+<dd><p>Collects all keyable attributes into a dictionary and returns it.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_ref_deltas">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_ref_deltas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_wrapper</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_ref_deltas" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.collect_env_deltas">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">collect_env_deltas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.collect_env_deltas" title="Permalink to this definition"></a></dt>
+<dd><p>Collects deltas from all references in the scene.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.collect_scene_deltas">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">collect_scene_deltas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ref_wrappers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.collect_scene_deltas" title="Permalink to this definition"></a></dt>
+<dd><p>Collects deltas from all references in the scene.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.apply_deltas">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">apply_deltas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deltas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.apply_deltas" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.upload_meta_data">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">upload_meta_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locked</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.upload_meta_data" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.set_lock_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">set_lock_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meta_data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lock</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.set_lock_preset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.export_set">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">export_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thumbnail</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">episode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.export_set" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.reset_env_state">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">reset_env_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.reset_env_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.set_env_state">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">set_env_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sds_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.set_env_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.delete_env_state">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">delete_env_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asset_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.delete_env_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.delete_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">delete_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asset_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.delete_preset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.load_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">load_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sds_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.load_preset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.unload_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">unload_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wmodel_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.unload_preset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.list_presets">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">list_presets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wmodel_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.list_presets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_scene_presets">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_scene_presets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">env_ref_node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_scene_presets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.load_unloaded_presets">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">load_unloaded_presets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.load_unloaded_presets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.switch_preset_resolution">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">switch_preset_resolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wmodel_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.switch_preset_resolution" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.remove_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">remove_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wmodel_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.remove_preset" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True if ENV was removed.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.select_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">select_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wmodel_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">presets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.select_preset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.display_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">display_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wmodel_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">presets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visibility</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.display_preset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_current_panel">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_current_panel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_current_panel" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the name of the active viewport.
+If the active panel is not a viewport it returns persp’s viewport.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_isolate_objs">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_isolate_objs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">panel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_isolate_objs" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a list of objects that are currently in the isolate set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>panel</strong> – The panel to check the set from.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.get_viewport_settings">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">get_viewport_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.get_viewport_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Collects active viewport’s current state to a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A dictionary of the viewport’s data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.pre_capture_setup">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">pre_capture_setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">isolate_objs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.pre_capture_setup" title="Permalink to this definition"></a></dt>
+<dd><p>Prepares the viewport for capture.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>isolate_objs</strong> – A list of objects to isolate for capture.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary of the viewport’s previous settings.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.restore_viewport">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">restore_viewport</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">viewport_settings</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.restore_viewport" title="Permalink to this definition"></a></dt>
+<dd><p>Restores the active viewport to the supplied settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>viewport_settings</strong> – Supply a dictionary returned from get_viewport_settings()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.asset.tools.set_dress.set_dress_utils.capture_preview">
+<span class="sig-prename descclassname"><span class="pre">oa.asset.tools.set_dress.set_dress_utils.</span></span><span class="sig-name descname"><span class="pre">capture_preview</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">640</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isolate_objs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.asset.tools.set_dress.set_dress_utils.capture_preview" title="Permalink to this definition"></a></dt>
+<dd><p>Captures a single frame to a jpg file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>output_path</strong> – Full jpg path to save to.</p></li>
+<li><p><strong>width</strong> – Image’s width.</p></li>
+<li><p><strong>height</strong> – Image’s height.</p></li>
+<li><p><strong>isolate_objs</strong> – A list of objects to isolate for capture.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../set_dress_importer_tool/index.html" class="btn btn-neutral float-left" title=" oa.asset.tools.set_dress.set_dress_importer_tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../texture_check_in/index.html" class="btn btn-neutral float-right" title=" oa.asset.tools.texture_check_in" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

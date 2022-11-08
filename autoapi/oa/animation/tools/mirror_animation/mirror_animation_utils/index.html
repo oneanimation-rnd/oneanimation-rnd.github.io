@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.animation.tools.mirror_animation.mirror_animation_utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.animation.tools.offset_animation" href="../../offset_animation/index.html" />
+    <link rel="prev" title=" oa.animation.tools.mirror_animation.mirror_anim_mapping_tool" href="../mirror_anim_mapping_tool/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.mirror_animation</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/animation/tools/mirror_animation/mirror_animation_utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.animation.tools.mirror_animation.mirror_animation_utils">
+<span id="oa-animation-tools-mirror-animation-mirror-animation-utils"></span><h1> <a class="reference internal" href="#module-oa.animation.tools.mirror_animation.mirror_animation_utils" title="oa.animation.tools.mirror_animation.mirror_animation_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils</span></code></a><a class="headerlink" href="#module-oa.animation.tools.mirror_animation.mirror_animation_utils" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.wrap_layout" title="oa.animation.tools.mirror_animation.mirror_animation_utils.wrap_layout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wrap_layout</span></code></a>(widgets, orientation)</p></td>
+<td><p>Helper function that takes supplied widgets and wraps them all in a layout.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.get_maya_window" title="oa.animation.tools.mirror_animation.mirror_animation_utils.get_maya_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_maya_window</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.popup_error_msg" title="oa.animation.tools.mirror_animation.mirror_animation_utils.popup_error_msg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">popup_error_msg</span></code></a>(title, msg[, parent, print_traceback])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.get_facing" title="oa.animation.tools.mirror_animation.mirror_animation_utils.get_facing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_facing</span></code></a>(obj, axis)</p></td>
+<td><p>Determines what direction an axis is facing.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.is_centered" title="oa.animation.tools.mirror_animation.mirror_animation_utils.is_centered"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_centered</span></code></a>(obj)</p></td>
+<td><p>Determines if the supplied object is in the center of the world's x plane.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.get_axes_to_flip" title="oa.animation.tools.mirror_animation.mirror_animation_utils.get_axes_to_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_axes_to_flip</span></code></a>(obj, mobj)</p></td>
+<td><p>Compares directions of both objects to determine what channels need to be reversed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.get_all_ctrls" title="oa.animation.tools.mirror_animation.mirror_animation_utils.get_all_ctrls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_ctrls</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.add_mapping_node" title="oa.animation.tools.mirror_animation.mirror_animation_utils.add_mapping_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_mapping_node</span></code></a>()</p></td>
+<td><p>Creates an empty transform that contains the mirroring's mapping data as json format.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.collect_auto_mapping" title="oa.animation.tools.mirror_animation.mirror_animation_utils.collect_auto_mapping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collect_auto_mapping</span></code></a>()</p></td>
+<td><p>This should run when the asset is in its default pose.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.set_auto_mapping" title="oa.animation.tools.mirror_animation.mirror_animation_utils.set_auto_mapping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_auto_mapping</span></code></a>()</p></td>
+<td><p>This should run when the asset is in its default pose.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.mirror_anim" title="oa.animation.tools.mirror_animation.mirror_animation_utils.mirror_anim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mirror_anim</span></code></a>(nsp, selection_only[, time, skip])</p></td>
+<td><p>The core that mirrors the animation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.mirror_asset" title="oa.animation.tools.mirror_animation.mirror_animation_utils.mirror_asset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mirror_asset</span></code></a>(selection_only[, skip])</p></td>
+<td><p>Convenience function to mirror the first selected assets.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.mirror_animation.mirror_animation_utils.wrap_layout">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils.</span></span><span class="sig-name descname"><span class="pre">wrap_layout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widgets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.wrap_layout" title="Permalink to this definition"></a></dt>
+<dd><p>Helper function that takes supplied widgets and wraps them all in a layout.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>widgets</strong> – A list of QWidgets.</p></li>
+<li><p><strong>orientation</strong> – QtCore.Qt.Orientation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The new layout item.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.mirror_animation.mirror_animation_utils.get_maya_window">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils.</span></span><span class="sig-name descname"><span class="pre">get_maya_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.get_maya_window" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.mirror_animation.mirror_animation_utils.popup_error_msg">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils.</span></span><span class="sig-name descname"><span class="pre">popup_error_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_traceback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.popup_error_msg" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.mirror_animation.mirror_animation_utils.get_facing">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils.</span></span><span class="sig-name descname"><span class="pre">get_facing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.get_facing" title="Permalink to this definition"></a></dt>
+<dd><p>Determines what direction an axis is facing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – The object to check.</p></li>
+<li><p><strong>axis</strong> (<em>string</em>) – Inputs can be x, y, z.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Possible directions are left, right, up, down, front, back.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.mirror_animation.mirror_animation_utils.is_centered">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils.</span></span><span class="sig-name descname"><span class="pre">is_centered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.is_centered" title="Permalink to this definition"></a></dt>
+<dd><p>Determines if the supplied object is in the center of the world’s x plane.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.mirror_animation.mirror_animation_utils.get_axes_to_flip">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils.</span></span><span class="sig-name descname"><span class="pre">get_axes_to_flip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mobj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.get_axes_to_flip" title="Permalink to this definition"></a></dt>
+<dd><p>Compares directions of both objects to determine what channels need to be reversed
+in order for them to mirror symmetrically.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.mirror_animation.mirror_animation_utils.get_all_ctrls">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils.</span></span><span class="sig-name descname"><span class="pre">get_all_ctrls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.get_all_ctrls" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.mirror_animation.mirror_animation_utils.add_mapping_node">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils.</span></span><span class="sig-name descname"><span class="pre">add_mapping_node</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.add_mapping_node" title="Permalink to this definition"></a></dt>
+<dd><p>Creates an empty transform that contains the mirroring’s mapping data as json format.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.mirror_animation.mirror_animation_utils.collect_auto_mapping">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils.</span></span><span class="sig-name descname"><span class="pre">collect_auto_mapping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.collect_auto_mapping" title="Permalink to this definition"></a></dt>
+<dd><p>This should run when the asset is in its default pose.
+It will check all controls to determine if they should be swapped or flipped on itself during mirroring.
+It also collects which axes need to be flipped for swapping objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A dictionary to represent mapping data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.mirror_animation.mirror_animation_utils.set_auto_mapping">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils.</span></span><span class="sig-name descname"><span class="pre">set_auto_mapping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.set_auto_mapping" title="Permalink to this definition"></a></dt>
+<dd><p>This should run when the asset is in its default pose.
+Quick function to collect mapping and set it on the mapping node.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.mirror_animation.mirror_animation_utils.mirror_anim">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils.</span></span><span class="sig-name descname"><span class="pre">mirror_anim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nsp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection_only</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.mirror_anim" title="Permalink to this definition"></a></dt>
+<dd><p>The core that mirrors the animation.
+Instead of using matrix math, it uses anim curve functions to manipulate them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nsp</strong> (<em>string</em>) – The namespace to operate on.</p></li>
+<li><p><strong>selection_only</strong> (<em>bool</em>) – Filters only selected controls when True.</p></li>
+<li><p><strong>time</strong> (<em>float</em><em>[</em><em>]</em>) – A two item tuple to operate on keys that lie in this time range.</p></li>
+<li><p><strong>skip</strong> (<em>string</em><em>[</em><em>]</em>) – A list of control names to ignore.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.mirror_animation.mirror_animation_utils.mirror_asset">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.mirror_animation.mirror_animation_utils.</span></span><span class="sig-name descname"><span class="pre">mirror_asset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selection_only</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.mirror_animation.mirror_animation_utils.mirror_asset" title="Permalink to this definition"></a></dt>
+<dd><p>Convenience function to mirror the first selected assets.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../mirror_anim_mapping_tool/index.html" class="btn btn-neutral float-left" title=" oa.animation.tools.mirror_animation.mirror_anim_mapping_tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../offset_animation/index.html" class="btn btn-neutral float-right" title=" oa.animation.tools.offset_animation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

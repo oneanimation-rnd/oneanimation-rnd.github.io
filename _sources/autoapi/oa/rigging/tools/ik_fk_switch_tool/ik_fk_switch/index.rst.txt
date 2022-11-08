@@ -1,0 +1,111 @@
+ :py:mod:`oa.rigging.tools.ik_fk_switch_tool.ik_fk_switch`
+====================================================================================================================
+
+.. py:module:: oa.rigging.tools.ik_fk_switch_tool.ik_fk_switch
+
+.. autoapi-nested-parse::
+
+   A IK FK switching tool for our auto-rigging biped rigs.
+
+   Author:
+       John Lienard
+
+   Usage:
+       launch()  # An arm control needs to be selected
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.ik_fk_switch_tool.ik_fk_switch.IKFKSwitch
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.ik_fk_switch_tool.ik_fk_switch.launch
+
+
+
+.. py:class:: IKFKSwitch(sel=None)
+
+   Bases: :py:obj:`object`
+
+   A class that will help with IK related tools, like an IK to FK switch.
+
+   .. py:method:: _verify_selection(sel)
+
+      Tests selection, and populates the variables.
+
+
+   .. py:method:: _findCurrentShot(timeNow)
+
+      returns 1st frame number of the shot you are in using values from sceneCP
+
+
+   .. py:method:: _keyCheckBlend(ctrl, attribute, value, ottType)
+
+      Checks if BLEND(ikfk switch&sticky) controller has no keyframes or keys in a previous shot.
+      If either, set keys to protect animation curves.
+
+
+   .. py:method:: _keyCheckCtrl(ctrl, attribute, ottType)
+
+      Checks if controller has no keyframes or keys in a previous shot.
+      If either, set keys to protect animation curves.
+
+
+   .. py:method:: _keyIKFKBlend(switch)
+
+      Keys the blend switch at current frame
+
+
+   .. py:method:: _setKeys(ikfk, preKey)
+
+      Sets keys on IK or FK Arm controls
+
+
+   .. py:method:: _preIKFKmove(ikfk)
+
+      Sets a key on the curve before matching IKFK swap to preserve animation
+
+
+   .. py:method:: ik_fk_swap()
+
+      The user runs this method to do the FK IK swap.
+
+
+   .. py:method:: _ik_to_fk()
+
+      This does the switch from IK to FK.
+
+
+   .. py:method:: _fk_to_ik()
+
+      This does the switch from FK to IK. I used OpenMaya2.0 for learning purposes.
+      Would have been easier with commands.
+
+
+   .. py:method:: _wrap_to_mobject(name)
+
+      This will wrap a string into an MObject.
+
+
+   .. py:method:: _getMatrix(node)
+
+      Gets the world matrix of an object based on name, downloaded from a site.
+
+
+
+.. py:function:: launch(sel=None)
+
+

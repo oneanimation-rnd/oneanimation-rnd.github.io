@@ -1,0 +1,63 @@
+ :py:mod:`oa.shot_builder.libs.delegates.effects`
+==================================================================================================
+
+.. py:module:: oa.shot_builder.libs.delegates.effects
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.libs.delegates.effects.setup
+   oa.shot_builder.libs.delegates.effects._ensure_effects_ropnet
+   oa.shot_builder.libs.delegates.effects.load_effects
+   oa.shot_builder.libs.delegates.effects.save_effects
+   oa.shot_builder.libs.delegates.effects.save
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.libs.delegates.effects.this
+   oa.shot_builder.libs.delegates.effects._log
+   oa.shot_builder.libs.delegates.effects._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:function:: setup(episode=None, sequence=None, shot=None, version=None)
+
+
+.. py:function:: _ensure_effects_ropnet()
+
+
+.. py:function:: load_effects(gallery_path)
+
+
+.. py:function:: save_effects(gallery_path, comment='')
+
+
+.. py:function:: save(comment='')
+
+

@@ -1,0 +1,93 @@
+ :py:mod:`bd.storage.edits`
+======================================================
+
+.. py:module:: bd.storage.edits
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.edits.MetadataEdit
+   bd.storage.edits.TagsEdit
+   bd.storage.edits.FieldsEdit
+
+
+
+
+.. py:class:: MetadataEdit
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: get_metadata(key)
+
+
+   .. py:method:: set_metadata(key, value)
+
+
+   .. py:method:: get_metadata_dict()
+
+
+   .. py:method:: set_metadata_dict(metadata)
+
+
+   .. py:method:: copy_metadata(item)
+
+
+
+.. py:class:: TagsEdit(tags)
+
+   Bases: :py:obj:`bd.storage.mixins.TagsMixin`
+
+   .. py:method:: remove_extra_tags()
+
+
+   .. py:method:: add_tag(tag)
+
+
+   .. py:method:: add_tags(*tags)
+
+
+   .. py:method:: remove_tag(tag)
+
+
+   .. py:method:: remove_tags(*tags)
+
+
+   .. py:method:: replace_tag(old_tag, new_tag)
+
+
+   .. py:method:: replace_tags(**kwargs)
+
+
+   .. py:method:: remove_all_tags()
+
+
+
+.. py:class:: FieldsEdit(fields=None)
+
+   Bases: :py:obj:`bd.storage.mixins.FieldsMixin`
+
+   .. py:method:: remove_extra_fields()
+
+
+   .. py:method:: set_field(name, value)
+
+
+   .. py:method:: update_fields(fields)
+
+
+   .. py:method:: pop_field(name)
+
+
+   .. py:method:: pop_fields(names)
+
+
+   .. py:method:: remove_all_fields()
+
+
+

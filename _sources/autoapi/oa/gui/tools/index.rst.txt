@@ -1,0 +1,18 @@
+ :py:mod:`oa.gui.tools`
+==============================================
+
+.. py:module:: oa.gui.tools
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   marking_menus/index.rst
+   overlay_img_planes/index.rst
+   search_maya_icons/index.rst
+   shelves/index.rst
+
+

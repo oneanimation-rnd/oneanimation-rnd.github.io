@@ -1,0 +1,75 @@
+ :py:mod:`oa.asset.tools.dp_asset_updater.dp_asset_updater_legacy`
+====================================================================================================================================
+
+.. py:module:: oa.asset.tools.dp_asset_updater.dp_asset_updater_legacy
+
+.. autoapi-nested-parse::
+
+   Changes reference paths directly in the ma file itself, so originally developed to update nested paths.
+
+   Author:
+       George
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.dp_asset_updater.dp_asset_updater_legacy.AssetSelector
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.dp_asset_updater.dp_asset_updater_legacy.iter_dependent_assets
+   oa.asset.tools.dp_asset_updater.dp_asset_updater_legacy.get_dependent_assets
+   oa.asset.tools.dp_asset_updater.dp_asset_updater_legacy.fix_ma_contents
+   oa.asset.tools.dp_asset_updater.dp_asset_updater_legacy.fix_xml_contents
+   oa.asset.tools.dp_asset_updater.dp_asset_updater_legacy.execute
+
+
+
+.. py:class:: AssetSelector(asset_names, title=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: _init_ui()
+
+
+   .. py:method:: _init_layout()
+
+
+   .. py:method:: _init_signals()
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: get_data(asset_names, title)
+      :classmethod:
+
+
+
+.. py:function:: iter_dependent_assets(proj_name, asset_type, asset_level, resolution='RDR')
+
+
+.. py:function:: get_dependent_assets(proj_name, search_asset_name, search_asset_path, dp_asset_type, dp_asset_level, dp_asset_resolution)
+
+
+.. py:function:: fix_ma_contents(dp_asset_path, asset_name, new_filepath)
+
+
+.. py:function:: fix_xml_contents(inf_path, asset_name, new_filepath)
+
+
+.. py:function:: execute()
+
+

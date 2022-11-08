@@ -1,0 +1,67 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.widgets.inf_list_view`
+==========================================================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.widgets.inf_list_view
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.widgets.inf_list_view.InfListView
+   oa.rigging.tools.weights_editor_tool.widgets.inf_list_view.InfListModel
+
+
+
+
+.. py:class:: InfListView(editor_inst, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListView`
+
+   .. py:attribute:: middle_clicked
+      
+
+      
+
+   .. py:attribute:: toggle_lock_triggered
+      
+
+      
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: on_double_clicked(index)
+
+
+   .. py:method:: begin_update()
+
+
+   .. py:method:: end_update()
+
+
+   .. py:method:: find_item(name)
+
+
+   .. py:method:: select_item(name)
+
+
+   .. py:method:: apply_filter(pattern)
+
+
+
+.. py:class:: InfListModel(editor_inst, parent=None)
+
+   Bases: :py:obj:`PySide2.QtGui.QStandardItemModel`
+
+   .. py:method:: data(index, role)
+
+
+

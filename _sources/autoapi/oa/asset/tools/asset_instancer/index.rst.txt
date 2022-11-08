@@ -1,0 +1,16 @@
+ :py:mod:`oa.asset.tools.asset_instancer`
+==================================================================================
+
+.. py:module:: oa.asset.tools.asset_instancer
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   asset_instancer/index.rst
+   display_scene_instances/index.rst
+
+

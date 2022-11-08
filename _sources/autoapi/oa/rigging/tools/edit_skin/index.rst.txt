@@ -1,0 +1,15 @@
+ :py:mod:`oa.rigging.tools.edit_skin`
+==========================================================================
+
+.. py:module:: oa.rigging.tools.edit_skin
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   edit_skin/index.rst
+
+

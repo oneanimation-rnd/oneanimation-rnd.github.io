@@ -1,0 +1,55 @@
+ :py:mod:`oa.asset.tools.visibility_switch_tool.visibility_switch_tool`
+==============================================================================================================================================
+
+.. py:module:: oa.asset.tools.visibility_switch_tool.visibility_switch_tool
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.visibility_switch_tool.visibility_switch_tool.VisibilitySwitchTool
+
+
+
+
+.. py:class:: VisibilitySwitchTool
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: delete_inst()
+      :classmethod:
+
+
+   .. py:method:: run()
+      :classmethod:
+
+
+   .. py:method:: create_widgets()
+
+
+   .. py:method:: connect_widgets()
+
+
+   .. py:method:: create_layout()
+
+
+   .. py:method:: set_lineEditer_list(item, list_name)
+
+
+   .. py:method:: connect_visibility(objs, vis_plug)
+
+
+   .. py:method:: commend_run_button()
+
+
+

@@ -1,0 +1,51 @@
+ :py:mod:`oa.asset_builder.libs.delegates.instances`
+========================================================================================================
+
+.. py:module:: oa.asset_builder.libs.delegates.instances
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.libs.delegates.instances.InstancesDelegate
+
+
+
+
+.. py:class:: InstancesDelegate(root_node, description, abc_path)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: setup()
+
+
+   .. py:method:: get_subnet()
+
+
+   .. py:method:: _create_subnet()
+
+
+   .. py:method:: _destroy_subnet()
+
+
+   .. py:method:: get_instances()
+
+
+   .. py:method:: _get_guid_to_asset_map()
+
+
+   .. py:method:: _update_instances(inst_descriptions)
+
+
+   .. py:method:: _create_instance()
+
+
+   .. py:method:: _update_instance_parms(instance, master, abc_paths)
+
+
+

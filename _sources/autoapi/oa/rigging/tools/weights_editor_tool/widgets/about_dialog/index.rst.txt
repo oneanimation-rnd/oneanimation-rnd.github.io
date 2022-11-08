@@ -1,0 +1,34 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.widgets.about_dialog`
+========================================================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.widgets.about_dialog
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.widgets.about_dialog.AboutDialog
+
+
+
+
+.. py:class:: AboutDialog(version, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: wrap_groupbox(title, msg)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: launch(version, parent)
+      :classmethod:
+
+
+

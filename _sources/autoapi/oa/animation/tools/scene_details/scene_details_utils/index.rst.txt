@@ -1,0 +1,79 @@
+ :py:mod:`oa.animation.tools.scene_details.scene_details_utils`
+==============================================================================================================================
+
+.. py:module:: oa.animation.tools.scene_details.scene_details_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_details.scene_details_utils.connect_to_db
+   oa.animation.tools.scene_details.scene_details_utils.wrap_layout
+   oa.animation.tools.scene_details.scene_details_utils.display_error
+   oa.animation.tools.scene_details.scene_details_utils.get_time_range
+   oa.animation.tools.scene_details.scene_details_utils.get_shot_range
+   oa.animation.tools.scene_details.scene_details_utils.get_sequence_range
+   oa.animation.tools.scene_details.scene_details_utils.load_pixmap
+   oa.animation.tools.scene_details.scene_details_utils.set_hsv
+   oa.animation.tools.scene_details.scene_details_utils.full_namespace
+   oa.animation.tools.scene_details.scene_details_utils.is_inst_master
+   oa.animation.tools.scene_details.scene_details_utils.set_layer_state
+   oa.animation.tools.scene_details.scene_details_utils.open_asset_library
+   oa.animation.tools.scene_details.scene_details_utils.copy_to_clipboard
+
+
+
+.. py:function:: connect_to_db(hosts=(), replica_set_name='rs0', read_pref=None, db_name='test-main-db', collection_name='assets')
+
+
+.. py:function:: wrap_layout(widgets, orientation, parent=None)
+
+
+.. py:exception:: MissingNodeError
+
+   Bases: :py:obj:`BaseException`
+
+   Common base class for all exceptions
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:function:: display_error(err)
+
+
+.. py:function:: get_time_range()
+
+
+.. py:function:: get_shot_range()
+
+
+.. py:function:: get_sequence_range()
+
+
+.. py:function:: load_pixmap(file_name, width=None, height=None)
+
+
+.. py:function:: set_hsv(pixmap, hue=None, saturation=None, value=None)
+
+
+.. py:function:: full_namespace(ref_path)
+
+
+.. py:function:: is_inst_master(ref_path)
+
+
+.. py:function:: set_layer_state(namespaces, suffix, do_show)
+
+
+.. py:function:: open_asset_library()
+
+
+.. py:function:: copy_to_clipboard(txt)
+
+

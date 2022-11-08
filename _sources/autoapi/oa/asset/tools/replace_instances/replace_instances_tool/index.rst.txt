@@ -1,0 +1,40 @@
+ :py:mod:`oa.asset.tools.replace_instances.replace_instances_tool`
+====================================================================================================================================
+
+.. py:module:: oa.asset.tools.replace_instances.replace_instances_tool
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.replace_instances.replace_instances_tool.getHierarchyRoot
+   oa.asset.tools.replace_instances.replace_instances_tool.replaceInstances
+   oa.asset.tools.replace_instances.replace_instances_tool.updateCleanReferences
+   oa.asset.tools.replace_instances.replace_instances_tool.run
+
+
+
+.. py:function:: getHierarchyRoot(selection='')
+
+   Traverses the heirarchy until it finds the Root_NUL
+
+
+.. py:function:: replaceInstances(instanceMaster)
+
+   This replaces all instances of the selected instance master
+
+
+.. py:function:: updateCleanReferences(instanceMaster)
+
+   This will delete all reference edits from the original
+
+
+.. py:function:: run()
+
+

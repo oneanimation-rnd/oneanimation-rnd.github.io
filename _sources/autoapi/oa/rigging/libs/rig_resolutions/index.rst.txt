@@ -1,0 +1,17 @@
+ :py:mod:`oa.rigging.libs.rig_resolutions`
+====================================================================================
+
+.. py:module:: oa.rigging.libs.rig_resolutions
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   general_functions/index.rst
+   rig_display/index.rst
+   wip_file/index.rst
+
+

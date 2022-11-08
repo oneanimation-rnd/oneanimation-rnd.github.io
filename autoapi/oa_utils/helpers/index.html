@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa_utils.helpers &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title=" oa_utils.ldap_control" href="../ldap_control/index.html" />
+    <link rel="prev" title=" oa_utils.config" href="../config/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../config/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.config</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.helpers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ldap_control/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.ldap_control</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../logger/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../medusa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.medusa</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../takes/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.takes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vcs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.vcs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xml_info_api/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.xml_info_api</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xml_info_hou/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.xml_info_hou</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.helpers</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/oa_utils/helpers/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa_utils.helpers">
+<span id="oa-utils-helpers"></span><h1> <a class="reference internal" href="#module-oa_utils.helpers" title="oa_utils.helpers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.helpers</span></code></a><a class="headerlink" href="#module-oa_utils.helpers" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.helpers.build_path" title="oa_utils.helpers.build_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_path</span></code></a>(*args)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.helpers.build_name" title="oa_utils.helpers.build_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_name</span></code></a>(*args)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.helpers.get_unc_path" title="oa_utils.helpers.get_unc_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_unc_path</span></code></a>(path)</p></td>
+<td><p>get resolved drive mapping path</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.helpers.tokenize" title="oa_utils.helpers.tokenize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tokenize</span></code></a>(path)</p></td>
+<td><p>return a converted path with proper token taken from environment variable</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.helpers.untokenize" title="oa_utils.helpers.untokenize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">untokenize</span></code></a>(path)</p></td>
+<td><p>return the path without tokens</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.helpers.is_path" title="oa_utils.helpers.is_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_path</span></code></a>(inputPath)</p></td>
+<td><p>Checks whether the inputPath string can be</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.helpers.is_file_path" title="oa_utils.helpers.is_file_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_file_path</span></code></a>(inputPath)</p></td>
+<td><p>Checks whether the inputPath string can be</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.helpers.is_folder_path" title="oa_utils.helpers.is_folder_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_folder_path</span></code></a>(inputPath)</p></td>
+<td><p>Checks whether the inputPath string can be</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.helpers.get_incremented_path" title="oa_utils.helpers.get_incremented_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_incremented_path</span></code></a>(path)</p></td>
+<td><p>Gets an incremented version of the file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.helpers.get_maxversion_path" title="oa_utils.helpers.get_maxversion_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_maxversion_path</span></code></a>(path)</p></td>
+<td><p>Gets a maximum version of the file.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.helpers.build_path">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.helpers.</span></span><span class="sig-name descname"><span class="pre">build_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.helpers.build_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.helpers.build_name">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.helpers.</span></span><span class="sig-name descname"><span class="pre">build_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.helpers.build_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.helpers.get_unc_path">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.helpers.</span></span><span class="sig-name descname"><span class="pre">get_unc_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.helpers.get_unc_path" title="Permalink to this definition"></a></dt>
+<dd><p>get resolved drive mapping path</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.helpers.tokenize">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.helpers.</span></span><span class="sig-name descname"><span class="pre">tokenize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.helpers.tokenize" title="Permalink to this definition"></a></dt>
+<dd><p>return a converted path with proper token taken from environment variable</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.helpers.untokenize">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.helpers.</span></span><span class="sig-name descname"><span class="pre">untokenize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.helpers.untokenize" title="Permalink to this definition"></a></dt>
+<dd><p>return the path without tokens</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.helpers.is_path">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.helpers.</span></span><span class="sig-name descname"><span class="pre">is_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.helpers.is_path" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether the inputPath string can be
+a valid path to some file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>inputPath</strong> (<em>str</em>) – input file path</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if it’s a file path, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.helpers.is_file_path">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.helpers.</span></span><span class="sig-name descname"><span class="pre">is_file_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.helpers.is_file_path" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether the inputPath string can be
+a valid path to some file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>inputPath</strong> (<em>str</em>) – input file path</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if it’s a file path, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.helpers.is_folder_path">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.helpers.</span></span><span class="sig-name descname"><span class="pre">is_folder_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.helpers.is_folder_path" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether the inputPath string can be
+a valid path to some folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>inputPath</strong> (<em>str</em>) – input folder path</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if it’s a folder path, False otherwise</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.helpers.get_incremented_path">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.helpers.</span></span><span class="sig-name descname"><span class="pre">get_incremented_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.helpers.get_incremented_path" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an incremented version of the file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – file path to get the version from.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a new incremented path.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.helpers.get_maxversion_path">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.helpers.</span></span><span class="sig-name descname"><span class="pre">get_maxversion_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.helpers.get_maxversion_path" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a maximum version of the file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – file path to match the version to.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a maximum version path.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../config/index.html" class="btn btn-neutral float-left" title=" oa_utils.config" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ldap_control/index.html" class="btn btn-neutral float-right" title=" oa_utils.ldap_control" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

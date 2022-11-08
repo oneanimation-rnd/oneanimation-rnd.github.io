@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> bd.storage.core &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title=" bd.storage.edits" href="../edits/index.html" />
+    <link rel="prev" title=" bd.storage.component" href="../component/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../api/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hooks/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.hooks</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.core</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/bd/storage/core/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-bd.storage.core">
+<span id="bd-storage-core"></span><h1> <a class="reference internal" href="#module-bd.storage.core" title="bd.storage.core"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.core</span></code></a><a class="headerlink" href="#module-bd.storage.core" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bd.storage.core.Identifier" title="bd.storage.core.Identifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Identifier</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bd.storage.core.MetaItem" title="bd.storage.core.MetaItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MetaItem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#bd.storage.core.StorageItem" title="bd.storage.core.StorageItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageItem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#bd.storage.core.StoragePool" title="bd.storage.core.StoragePool"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StoragePool</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="bd.storage.core.Identifier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.core.</span></span><span class="sig-name descname"><span class="pre">Identifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.Identifier" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../edits/index.html#bd.storage.edits.TagsEdit" title="bd.storage.edits.TagsEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bd.storage.edits.TagsEdit</span></code></a>, <a class="reference internal" href="../edits/index.html#bd.storage.edits.FieldsEdit" title="bd.storage.edits.FieldsEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bd.storage.edits.FieldsEdit</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.Identifier.hash">
+<span class="sig-name descname"><span class="pre">hash</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.Identifier.hash" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.Identifier.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.Identifier.copy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.Identifier.pure">
+<span class="sig-name descname"><span class="pre">pure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.Identifier.pure" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.Identifier.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.Identifier.__str__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.Identifier.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.Identifier.__repr__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bd.storage.core.MetaItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.core.</span></span><span class="sig-name descname"><span class="pre">MetaItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tags</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">schema_item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.MetaItem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../mixins/index.html#bd.storage.mixins.TagsMixin" title="bd.storage.mixins.TagsMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bd.storage.mixins.TagsMixin</span></code></a>, <a class="reference internal" href="../mixins/index.html#bd.storage.mixins.ChainItemMixin" title="bd.storage.mixins.ChainItemMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bd.storage.mixins.ChainItemMixin</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.MetaItem.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#bd.storage.core.MetaItem.type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.MetaItem.template">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">template</span></span><a class="headerlink" href="#bd.storage.core.MetaItem.template" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.MetaItem.storage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">storage</span></span><a class="headerlink" href="#bd.storage.core.MetaItem.storage" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.MetaItem.adapter">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">adapter</span></span><a class="headerlink" href="#bd.storage.core.MetaItem.adapter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.MetaItem.accessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">accessor</span></span><a class="headerlink" href="#bd.storage.core.MetaItem.accessor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.MetaItem.formatter">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">formatter</span></span><a class="headerlink" href="#bd.storage.core.MetaItem.formatter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.MetaItem.project">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">project</span></span><a class="headerlink" href="#bd.storage.core.MetaItem.project" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.MetaItem.get_storage_item">
+<span class="sig-name descname"><span class="pre">get_storage_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fields</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.MetaItem.get_storage_item" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.MetaItem.build_rpath">
+<span class="sig-name descname"><span class="pre">build_rpath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fields</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.MetaItem.build_rpath" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.MetaItem.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.MetaItem.__str__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.MetaItem.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.MetaItem.__repr__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.core.</span></span><span class="sig-name descname"><span class="pre">StorageItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../mixins/index.html#bd.storage.mixins.TagsMixin" title="bd.storage.mixins.TagsMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bd.storage.mixins.TagsMixin</span></code></a>, <a class="reference internal" href="../mixins/index.html#bd.storage.mixins.FieldsMixin" title="bd.storage.mixins.FieldsMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bd.storage.mixins.FieldsMixin</span></code></a>, <a class="reference internal" href="../edits/index.html#bd.storage.edits.MetadataEdit" title="bd.storage.edits.MetadataEdit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bd.storage.edits.MetadataEdit</span></code></a>, <a class="reference internal" href="../mixins/index.html#bd.storage.mixins.ChainItemMixin" title="bd.storage.mixins.ChainItemMixin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bd.storage.mixins.ChainItemMixin</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.rpath">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rpath</span></span><a class="headerlink" href="#bd.storage.core.StorageItem.rpath" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#bd.storage.core.StorageItem.type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.storage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">storage</span></span><a class="headerlink" href="#bd.storage.core.StorageItem.storage" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.accessor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">accessor</span></span><a class="headerlink" href="#bd.storage.core.StorageItem.accessor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.meta_item">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">meta_item</span></span><a class="headerlink" href="#bd.storage.core.StorageItem.meta_item" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.get_identifier">
+<span class="sig-name descname"><span class="pre">get_identifier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem.get_identifier" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.exists">
+<span class="sig-name descname"><span class="pre">exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check_upstream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem.exists" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.get_filesystem_path">
+<span class="sig-name descname"><span class="pre">get_filesystem_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem.get_filesystem_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_item_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upstream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem.read" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem._dump_metadata">
+<span class="sig-name descname"><span class="pre">_dump_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem._dump_metadata" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem._load_metadata">
+<span class="sig-name descname"><span class="pre">_load_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem._load_metadata" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_item_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upstream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem.write" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.pull">
+<span class="sig-name descname"><span class="pre">pull</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem.pull" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.push">
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with_metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem.push" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.make_directories">
+<span class="sig-name descname"><span class="pre">make_directories</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem.make_directories" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">propagate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem.remove" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem.__str__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StorageItem.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StorageItem.__repr__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="bd.storage.core.StoragePool">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.core.</span></span><span class="sig-name descname"><span class="pre">StoragePool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StoragePool" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.StoragePool.project">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">project</span></span><a class="headerlink" href="#bd.storage.core.StoragePool.project" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bd.storage.core.StoragePool.storages">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">storages</span></span><a class="headerlink" href="#bd.storage.core.StoragePool.storages" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StoragePool.get_global_instance">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_global_instance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StoragePool.get_global_instance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StoragePool.create">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_instance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StoragePool.create" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StoragePool.get_storage_item_from_filename">
+<span class="sig-name descname"><span class="pre">get_storage_item_from_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StoragePool.get_storage_item_from_filename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StoragePool.get_item">
+<span class="sig-name descname"><span class="pre">get_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tags</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StoragePool.get_item" title="Permalink to this definition"></a></dt>
+<dd><p>Find MetaItem by tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<a class="reference internal" href="../mixins/index.html#bd.storage.mixins.TagsMixin" title="bd.storage.mixins.TagsMixin"><em>TagsMixin</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#bd.storage.core.MetaItem" title="bd.storage.core.MetaItem">MetaItem</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StoragePool.get_storage_item">
+<span class="sig-name descname"><span class="pre">get_storage_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">identifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StoragePool.get_storage_item" title="Permalink to this definition"></a></dt>
+<dd><p>Create storage item for the provided identifier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>identifier</strong> (<a class="reference internal" href="#bd.storage.core.Identifier" title="bd.storage.core.Identifier"><em>Identifier</em></a>) – identifier object</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>storage item</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#bd.storage.core.StorageItem" title="bd.storage.core.StorageItem">StorageItem</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bd.storage.core.StoragePool._init_storages">
+<span class="sig-name descname"><span class="pre">_init_storages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bd.storage.core.StoragePool._init_storages" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize storages from provided configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Cached list of Storage objects.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../component/index.html" class="btn btn-neutral float-left" title=" bd.storage.component" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../edits/index.html" class="btn btn-neutral float-right" title=" bd.storage.edits" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

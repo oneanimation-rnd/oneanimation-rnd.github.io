@@ -1,0 +1,58 @@
+ :py:mod:`oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_utils`
+======================================================================================================================================
+
+.. py:module:: oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_utils.load_pixmap
+   oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_utils.wrap_layout
+   oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_utils.wrap_mfn_nurbs_curve
+   oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_utils.get_cv_positions
+   oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_utils.find_closest_param
+   oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_utils.find_closest_param_from_obj
+   oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_utils.create_locators_at_cps
+   oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_utils.create_sc_solver
+   oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_utils.get_rig_structure
+   oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_utils.create_rope_rig
+
+
+
+.. py:function:: load_pixmap(file_name, width=None, height=None)
+
+
+.. py:function:: wrap_layout(widgets, orientation)
+
+
+.. py:function:: wrap_mfn_nurbs_curve(curve)
+
+
+.. py:function:: get_cv_positions(curve)
+
+
+.. py:function:: find_closest_param(mpoint, curve)
+
+
+.. py:function:: find_closest_param_from_obj(obj, curve)
+
+
+.. py:function:: create_locators_at_cps(curve, upv_curve)
+
+
+.. py:function:: create_sc_solver(obj_1, obj_2, name, rgb=None, size=1, parent=None, hdl_parent=None)
+
+
+.. py:function:: get_rig_structure()
+
+
+.. py:function:: create_rope_rig(curve, upv_curve, ctrl_steps, master_cvs=[], size=1.0, prefix='ropeRig', root_color=None, ctrl_color=None, ctrl_alt_color=None, ctrl_sub_color=None)
+
+

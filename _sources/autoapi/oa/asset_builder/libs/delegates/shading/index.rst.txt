@@ -1,0 +1,105 @@
+ :py:mod:`oa.asset_builder.libs.delegates.shading`
+====================================================================================================
+
+.. py:module:: oa.asset_builder.libs.delegates.shading
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.libs.delegates.shading.ShadingDelegate
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.libs.delegates.shading.this
+   oa.asset_builder.libs.delegates.shading._log
+   oa.asset_builder.libs.delegates.shading._msglog
+   oa.asset_builder.libs.delegates.shading._tex_regex
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:data:: _tex_regex
+   
+
+   
+
+.. py:class:: ShadingDelegate(root_node, description)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: setup(force_rebuild=False)
+
+
+   .. py:method:: update_textures()
+
+
+   .. py:method:: _get_textures()
+
+
+   .. py:method:: get_subnet()
+
+
+   .. py:method:: _create_subnet()
+
+
+   .. py:method:: _create_palette()
+
+
+   .. py:method:: _load_palette()
+
+
+   .. py:method:: _setup_shopnet_node()
+
+      Creates a 'shopnet' node to build shading networks in it.
+
+
+   .. py:method:: _create_suboutput_node(parent, name, guid, is_subdiv)
+
+
+   .. py:method:: _update_suboutput_node(suboutput, is_subdiv)
+
+
+   .. py:method:: _apply_color(shader, mat_description)
+
+
+   .. py:method:: _apply_textures(shader, mat_description)
+
+
+   .. py:method:: _add_default_shader(suboutput, mat_description)
+
+
+   .. py:method:: _setup_shading_network(shopnet, obj_descriptions, mat_description_map)
+
+
+   .. py:method:: _get_palette_menu_name()
+
+
+   .. py:method:: _get_palette_type_name()
+
+
+

@@ -1,0 +1,408 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.weights_editor`
+============================================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.weights_editor
+
+.. autoapi-nested-parse::
+
+   Author:
+       Jason Labbe
+
+   Credits:
+       Smooth all influences is using Brave Rabbit's brSmoothWeights plugin.
+           https://www.github.com/IngoClemens/brSmoothWeights
+
+   Limitations:
+       - Internal data won't sync if weights or influences are modified externally. (ie: can't paint weights while tool is open)
+
+   Example of usage:
+       from weights_editor_tool import weights_editor
+       weights_editor.run()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.weights_editor.WeightsEditor
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.weights_editor.run
+
+
+
+.. py:class:: WeightsEditor(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QMainWindow`
+
+   .. py:attribute:: version
+      :annotation: = 2.1.2
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: cb_selection_changed
+      
+
+      
+
+   .. py:attribute:: shortcuts
+      :annotation: = []
+
+      
+
+   .. py:method:: run()
+      :classmethod:
+
+
+   .. py:method:: del_prev_instance()
+      :classmethod:
+
+      Deletes any previous window.
+
+
+   .. py:method:: remove_shortcuts()
+      :classmethod:
+
+
+   .. py:method:: create_gui()
+
+      Creates all interface objects.
+
+
+   .. py:method:: update_window_title()
+
+
+   .. py:method:: get_active_weights_view()
+
+
+   .. py:method:: create_preset_layout(spinbox_min, spinbox_max, spinbox_steps, spinbox_callback, caption, suffix='')
+
+
+   .. py:method:: append_preset_buttons(values, layout, preset_callback, tooltip, suffix='')
+
+      Procedurally creates multiple preset buttons to adjust weights.
+
+
+   .. py:method:: append_add_presets_buttons(values)
+
+
+   .. py:method:: append_scale_presets_buttons(values)
+
+
+   .. py:method:: append_set_presets_buttons(values)
+
+
+   .. py:method:: toggle_check_button(button)
+
+
+   .. py:method:: fetch_latest_tool_version()
+
+
+   .. py:method:: request_on_finished(manager, response)
+
+
+   .. py:method:: update_tooltips()
+
+      Updates tooltips with the latest shortcuts.
+
+
+   .. py:method:: register_shortcuts()
+
+      Installs temporary hotkeys that overrides Maya's.
+
+
+   .. py:method:: get_obj_by_name(obj)
+
+
+   .. py:method:: set_undo_buttons_enabled_state()
+
+      Checks the undo stack and determines enabled state and labels on undo/redo buttons.
+
+
+   .. py:method:: save_state()
+
+      Saves gui's current state to a file.
+
+
+   .. py:method:: fetch_settings()
+
+
+   .. py:method:: restore_state()
+
+      Restores gui's last state if the file is available.
+
+
+   .. py:method:: update_obj(obj)
+
+      Re-points tool to work on another object and re-collect its skin data.
+
+      :param obj: Object to re-point to.
+      :type obj: string
+
+
+   .. py:method:: collect_inf_locks()
+
+      Collects a list of bools from active influences.
+
+
+   .. py:method:: toggle_inf_locks(infs, enabled)
+
+      Sets lock on influences by table's columns.
+
+      :param infs: A list of influence names to set.
+      :type infs: string[]
+      :param enabled: Locks if True.
+      :type enabled: bool
+
+
+   .. py:method:: get_all_infs()
+
+      Gets and returns a list of all influences from the active skinCluster.
+
+
+   .. py:method:: get_selected_infs()
+
+      Gets and returns a list of influences that effects selected vertexes.
+
+
+   .. py:method:: collect_display_infs()
+
+      Sets influences to be shown in the table.
+
+
+   .. py:method:: recollect_table_data(update_skin_data=True, update_verts=True, update_infs=True, update_headers=True, load_selection=True)
+
+      Collects all necessary data to display the table and refreshes it.
+      Optimize this method by setting some arguments to False.
+
+
+   .. py:method:: edit_weights(input_value, mode)
+
+      Sets new weight value while distributing the difference.
+      Using the mode argument determines how input_value will be implemented.
+
+      :param input_value: Value between 0 to 1.0.
+      :type input_value: float
+      :param mode:
+      :type mode: enums.WeightOperation
+
+
+   .. py:method:: hide_vert_colors(obj=None)
+
+
+   .. py:method:: update_vert_colors(vert_filter=[])
+
+      Displays active influence.
+
+      :param vert_filter: List of vertex indexes to only operate on.
+      :type vert_filter: int[]
+
+
+   .. py:method:: switch_color_style(color_theme)
+
+      Changes color display to a different theme.
+
+      :param color_theme:
+      :type color_theme: enums.ColorTheme
+
+
+   .. py:method:: run_smooth(smooth_operation)
+
+      Smooths weights on selected vertexes with adjacent weights.
+
+      :param smooth_operation:
+      :type smooth_operation: SmoothOperation
+
+
+   .. py:method:: add_undo_command(description, obj, old_skin_data, new_skin_data, vert_indexes, table_selection, skip_first_redo=False)
+
+
+   .. py:method:: set_color_inf(inf)
+
+
+   .. py:method:: update_inf_list()
+
+
+   .. py:method:: apply_filter_to_inf_list()
+
+
+   .. py:method:: mirror_weights(selection_only)
+
+
+   .. py:method:: grow_selection()
+
+
+   .. py:method:: shrink_selection()
+
+
+   .. py:method:: select_perimeter()
+
+
+   .. py:method:: select_edge_loop()
+
+
+   .. py:method:: select_shell()
+
+
+   .. py:method:: select_ring_loop()
+
+
+   .. py:method:: toggle_selected_inf_locks()
+
+
+   .. py:method:: selection_on_changed(*args)
+
+      Triggers when user selects a new vertex in the viewport.
+      Then refreshes table to be in sync.
+
+
+   .. py:method:: add_selection_callback()
+
+
+   .. py:method:: remove_selection_callback()
+
+
+   .. py:method:: closeEvent(*args)
+
+
+   .. py:method:: pick_obj_on_clicked()
+
+
+   .. py:method:: table_on_update_ended(over_limit)
+
+
+   .. py:method:: weights_view_on_key_pressed(key_event)
+
+
+   .. py:method:: refresh_on_clicked()
+
+
+   .. py:method:: auto_update_on_toggled()
+
+
+   .. py:method:: set_limit_on_triggered()
+
+
+   .. py:method:: header_on_middle_clicked(inf)
+
+      Sets active influence to color with.
+
+
+   .. py:method:: select_by_infs_on_clicked()
+
+
+   .. py:method:: prune_on_clicked()
+
+
+   .. py:method:: mirror_skin_on_clicked()
+
+
+   .. py:method:: mirror_all_skin_on_clicked()
+
+
+   .. py:method:: copy_vertex_on_clicked()
+
+
+   .. py:method:: paste_vertex_on_clicked()
+
+
+   .. py:method:: set_add_on_clicked()
+
+
+   .. py:method:: add_preset_on_clicked(value)
+
+
+   .. py:method:: set_scale_on_clicked()
+
+
+   .. py:method:: scale_preset_on_clicked(perc)
+
+
+   .. py:method:: set_on_clicked()
+
+
+   .. py:method:: set_preset_on_clicked(value)
+
+
+   .. py:method:: hide_colors_on_toggled(checked)
+
+
+   .. py:method:: flood_to_closest_on_clicked()
+
+
+   .. py:method:: switch_color_on_clicked(index)
+
+
+   .. py:method:: launch_hotkeys_on_clicked()
+
+
+   .. py:method:: launch_presets_on_clicked()
+
+
+   .. py:method:: about_on_triggered()
+
+
+   .. py:method:: github_page_on_triggered()
+
+
+   .. py:method:: toggle_view_on_toggled(enabled)
+
+
+   .. py:method:: show_utilities_on_toggled(enabled)
+
+
+   .. py:method:: show_add_on_toggled(enabled)
+
+
+   .. py:method:: show_scale_on_toggled(enabled)
+
+
+   .. py:method:: show_set_on_toggled(enabled)
+
+
+   .. py:method:: show_inf_on_toggled(enabled)
+
+
+   .. py:method:: undo_on_click()
+
+
+   .. py:method:: redo_on_click()
+
+
+   .. py:method:: inf_list_on_middle_clicked(inf)
+
+
+   .. py:method:: inf_list_on_toggle_lock_triggered(infs)
+
+
+   .. py:method:: add_inf_to_vert_on_clicked()
+
+      Adds a very small weight value from selected influences to selected vertexes.
+
+
+   .. py:method:: display_inf_on_triggered(inf)
+
+
+   .. py:method:: select_inf_verts_on_triggered(inf)
+
+
+
+.. py:function:: run()
+
+

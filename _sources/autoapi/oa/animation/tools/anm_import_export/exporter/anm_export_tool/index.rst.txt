@@ -1,0 +1,60 @@
+ :py:mod:`oa.animation.tools.anm_import_export.exporter.anm_export_tool`
+================================================================================================================================================
+
+.. py:module:: oa.animation.tools.anm_import_export.exporter.anm_export_tool
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.anm_import_export.exporter.anm_export_tool.AnmExportTool
+
+
+
+
+.. py:class:: AnmExportTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = anmExportTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: export_on_click()
+
+
+   .. py:method:: start_assign_on_click()
+
+
+   .. py:method:: end_assign_on_click()
+
+
+   .. py:method:: load_plugin()
+
+
+

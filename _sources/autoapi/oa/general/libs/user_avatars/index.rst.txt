@@ -1,0 +1,24 @@
+ :py:mod:`oa.general.libs.user_avatars`
+==============================================================================
+
+.. py:module:: oa.general.libs.user_avatars
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.user_avatars.upload_avatar
+
+
+
+.. py:function:: upload_avatar(img_size=100)
+
+   Opens a window to pick an image and uploads it on both servers.
+
+

@@ -1,0 +1,25 @@
+ :py:mod:`oa.animation.tools.synoptics`
+==============================================================================
+
+.. py:module:: oa.animation.tools.synoptics
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   widgets/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   synoptics_designer/index.rst
+   synoptics_viewer/index.rst
+
+

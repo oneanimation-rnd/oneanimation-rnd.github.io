@@ -1,0 +1,22 @@
+ :py:mod:`oa.palette.scripts.switch_palette`
+========================================================================================
+
+.. py:module:: oa.palette.scripts.switch_palette
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.palette.scripts.switch_palette.run
+
+
+
+.. py:function:: run(palette_node)
+
+

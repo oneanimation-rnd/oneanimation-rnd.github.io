@@ -1,0 +1,103 @@
+ :py:mod:`bd.storage.accessor`
+============================================================
+
+.. py:module:: bd.storage.accessor
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.accessor.BaseAccessor
+   bd.storage.accessor.FileSystemAccessor
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.accessor.log
+
+
+.. py:data:: log
+   
+
+   
+
+.. py:class:: BaseAccessor(root=None)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: root()
+
+
+   .. py:method:: resolve(rpath)
+
+
+   .. py:method:: convert_filename_to_rpath(filename)
+
+
+   .. py:method:: read(rpath)
+      :abstractmethod:
+
+
+   .. py:method:: write(rpath, data)
+      :abstractmethod:
+
+
+   .. py:method:: make_dir(rpath, recursive=False)
+      :abstractmethod:
+
+
+   .. py:method:: exists(rpath)
+      :abstractmethod:
+
+
+   .. py:method:: list(rpath, relative=False, recursive=True)
+      :abstractmethod:
+
+
+   .. py:method:: rm(rpath)
+      :abstractmethod:
+
+
+   .. py:method:: get_filesystem_path(rpath)
+
+
+
+.. py:class:: FileSystemAccessor(root=None)
+
+   Bases: :py:obj:`BaseAccessor`
+
+   .. py:method:: resolve(rpath)
+
+
+   .. py:method:: read(rpath)
+
+
+   .. py:method:: write(rpath, data)
+
+
+   .. py:method:: list(rpath, relative=True, recursive=True)
+
+
+   .. py:method:: make_dir(rpath, recursive=False)
+
+
+   .. py:method:: rm(rpath)
+
+
+   .. py:method:: exists(rpath)
+
+
+   .. py:method:: get_filesystem_path(rpath)
+
+
+

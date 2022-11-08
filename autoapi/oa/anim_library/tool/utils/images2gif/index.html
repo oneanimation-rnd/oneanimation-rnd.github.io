@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.anim_library.tool.utils.images2gif &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.anim_library.tool.widgets" href="../../widgets/index.html" />
+    <link rel="prev" title=" oa.anim_library.tool.utils.enums" href="../enums/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library.tool</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library.tool.utils</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library.tool.utils.images2gif</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/anim_library/tool/utils/images2gif/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.anim_library.tool.utils.images2gif">
+<span id="oa-anim-library-tool-utils-images2gif"></span><h1> <a class="reference internal" href="#module-oa.anim_library.tool.utils.images2gif" title="oa.anim_library.tool.utils.images2gif"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library.tool.utils.images2gif</span></code></a><a class="headerlink" href="#module-oa.anim_library.tool.utils.images2gif" title="Permalink to this heading"></a></h1>
+<p>Module images2gif (<a class="reference external" href="https://grass.osgeo.org/grass80/manuals/libpython/_modules/imaging/images2gif.html">https://grass.osgeo.org/grass80/manuals/libpython/_modules/imaging/images2gif.html</a>)</p>
+<p>Provides functionality for reading and writing animated GIF images.
+Use writeGif to write a series of numpy arrays or PIL images as an
+animated GIF. Use readGif to read an animated gif as a series of numpy
+arrays.</p>
+<p>Note that since July 2004, all patents on the LZW compression patent have
+expired. Therefore the GIF format may now be used freely.</p>
+<p>Acknowledgements:</p>
+<p>Many thanks to Ant1 for:</p>
+<ul class="simple">
+<li><p>noting the use of “palette=PIL.Image.ADAPTIVE”, which significantly
+improves the results.</p></li>
+<li><p>the modifications to save each image with its own palette, or optionally
+the global palette (if its the same).</p></li>
+</ul>
+<p>Many thanks to Marius van Voorden for porting the NeuQuant quantization
+algorithm of Anthony Dekker to Python (See the NeuQuant class for its
+license).</p>
+<p>Many thanks to Alex Robinson for implementing the concept of subrectangles,
+which (depening on image content) can give a very significant reduction in
+file size.</p>
+<p>This code is based on gifmaker (in the scripts folder of the source
+distribution of PIL)</p>
+<p>Useful links:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://tronche.com/computer-graphics/gif/">http://tronche.com/computer-graphics/gif/</a></p></li>
+<li><p><a class="reference external" href="http://en.wikipedia.org/wiki/Graphics_Interchange_Format">http://en.wikipedia.org/wiki/Graphics_Interchange_Format</a></p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Graphics/GIF/spec-gif89a.txt">http://www.w3.org/Graphics/GIF/spec-gif89a.txt</a></p></li>
+</ul>
+</div></blockquote>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.anim_library.tool.utils.images2gif.GifWriter" title="oa.anim_library.tool.utils.images2gif.GifWriter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GifWriter</span></code></a></p></td>
+<td><p>Class that contains methods for helping write the animated GIF file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.anim_library.tool.utils.images2gif.NeuQuant" title="oa.anim_library.tool.utils.images2gif.NeuQuant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NeuQuant</span></code></a></p></td>
+<td><p>NeuQuant(image, samplefac=10, colors=256)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.anim_library.tool.utils.images2gif.get_cKDTree" title="oa.anim_library.tool.utils.images2gif.get_cKDTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_cKDTree</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.anim_library.tool.utils.images2gif.checkImages" title="oa.anim_library.tool.utils.images2gif.checkImages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">checkImages</span></code></a>(images)</p></td>
+<td><p>checkImages(images)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.anim_library.tool.utils.images2gif.intToBin" title="oa.anim_library.tool.utils.images2gif.intToBin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intToBin</span></code></a>(i)</p></td>
+<td><p>Integer to two bytes</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.anim_library.tool.utils.images2gif.writeGif" title="oa.anim_library.tool.utils.images2gif.writeGif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeGif</span></code></a>(filename, images[, duration, repeat])</p></td>
+<td><p>Write an animated gif from the specified images.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.anim_library.tool.utils.images2gif.writeGifPillow" title="oa.anim_library.tool.utils.images2gif.writeGifPillow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeGifPillow</span></code></a>(filename, images[, duration, repeat])</p></td>
+<td><p>Write an animated gif from the specified images.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.anim_library.tool.utils.images2gif.writeGifVisvis" title="oa.anim_library.tool.utils.images2gif.writeGifVisvis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeGifVisvis</span></code></a>(filename, images[, duration, repeat, ...])</p></td>
+<td><p>Write an animated gif from the specified images.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.anim_library.tool.utils.images2gif.readGif" title="oa.anim_library.tool.utils.images2gif.readGif"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readGif</span></code></a>(filename[, asNumpy])</p></td>
+<td><p>Read images from an animated GIF file.  Returns a list of numpy</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.anim_library.tool.utils.images2gif.pillow" title="oa.anim_library.tool.utils.images2gif.pillow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pillow</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.anim_library.tool.utils.images2gif.np" title="oa.anim_library.tool.utils.images2gif.np"><code class="xref py py-obj docutils literal notranslate"><span class="pre">np</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.pillow">
+<span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.utils.images2gif.</span></span><span class="sig-name descname"><span class="pre">pillow</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.pillow" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.np">
+<span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.utils.images2gif.</span></span><span class="sig-name descname"><span class="pre">np</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.np" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.get_cKDTree">
+<span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.utils.images2gif.</span></span><span class="sig-name descname"><span class="pre">get_cKDTree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.get_cKDTree" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.checkImages">
+<span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.utils.images2gif.</span></span><span class="sig-name descname"><span class="pre">checkImages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.checkImages" title="Permalink to this definition"></a></dt>
+<dd><p>checkImages(images)
+Check numpy images and correct intensity range etc.
+The same for all movie formats.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>images</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.intToBin">
+<span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.utils.images2gif.</span></span><span class="sig-name descname"><span class="pre">intToBin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.intToBin" title="Permalink to this definition"></a></dt>
+<dd><p>Integer to two bytes</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.GifWriter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.utils.images2gif.</span></span><span class="sig-name descname"><span class="pre">GifWriter</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.GifWriter" title="Permalink to this definition"></a></dt>
+<dd><p>Class that contains methods for helping write the animated GIF file.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.GifWriter.getheaderAnim">
+<span class="sig-name descname"><span class="pre">getheaderAnim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.GifWriter.getheaderAnim" title="Permalink to this definition"></a></dt>
+<dd><p>Get animation header. To replace PILs getheader()[0]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>im</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.GifWriter.getImageDescriptor">
+<span class="sig-name descname"><span class="pre">getImageDescriptor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">im</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.GifWriter.getImageDescriptor" title="Permalink to this definition"></a></dt>
+<dd><p>Used for the local color table properties per image.
+Otherwise global color table applies to all frames irrespective of
+whether additional colors comes in play that require a redefined
+palette. Still a maximum of 256 color per frame, obviously.</p>
+<p>Written by Ant1 on 2010-08-22
+Modified by Alex Robinson in Janurari 2011 to implement subrectangles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>im</strong> – </p></li>
+<li><p><strong>xy</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.GifWriter.getAppExt">
+<span class="sig-name descname"><span class="pre">getAppExt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">float('inf')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.GifWriter.getAppExt" title="Permalink to this definition"></a></dt>
+<dd><p>Application extension. This part specifies the amount of loops.
+If loops is 0 or inf, it goes on infinitely.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>loops</strong> (<em>float</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.GifWriter.getGraphicsControlExt">
+<span class="sig-name descname"><span class="pre">getGraphicsControlExt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dispose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.GifWriter.getGraphicsControlExt" title="Permalink to this definition"></a></dt>
+<dd><p>Graphics Control Extension. A sort of header at the start of
+each image. Specifies duration and transparency.</p>
+<p>Dispose:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>0 - No disposal specified.</p></li>
+<li><p>1 - Do not dispose. The graphic is to be left in place.</p></li>
+<li><p>2 - Restore to background color. The area used by the graphic
+must be restored to the background color.</p></li>
+<li><p>3 - Restore to previous. The decoder is required to restore the
+area overwritten by the graphic with what was there prior to
+rendering the graphic.</p></li>
+<li><p>4-7 -To be defined.</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>duration</strong> (<em>double</em>) – </p></li>
+<li><p><strong>dispose</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.GifWriter.handleSubRectangles">
+<span class="sig-name descname"><span class="pre">handleSubRectangles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subRectangles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.GifWriter.handleSubRectangles" title="Permalink to this definition"></a></dt>
+<dd><p>Handle the sub-rectangle stuff. If the rectangles are given by the
+user, the values are checked. Otherwise the subrectangles are
+calculated automatically.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.GifWriter.getSubRectangles">
+<span class="sig-name descname"><span class="pre">getSubRectangles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ims</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.GifWriter.getSubRectangles" title="Permalink to this definition"></a></dt>
+<dd><p>getSubRectangles(ims)</p>
+<p>Calculate the minimal rectangles that need updating each frame.
+Returns a two-element tuple containing the cropped images and a
+list of x-y positions.</p>
+<p>Calculating the subrectangles takes extra time, obviously. However,
+if the image sizes were reduced, the actual writing of the GIF
+goes faster. In some cases applying this method produces a GIF faster.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.GifWriter.convertImagesToPIL">
+<span class="sig-name descname"><span class="pre">convertImagesToPIL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dither</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.GifWriter.convertImagesToPIL" title="Permalink to this definition"></a></dt>
+<dd><p>convertImagesToPIL(images, nq=0)</p>
+<p>Convert images to Paletted PIL images, which can then be
+written to a single animaged GIF.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.GifWriter.writeGifToFile">
+<span class="sig-name descname"><span class="pre">writeGifToFile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">images</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">durations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loops</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disposes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.GifWriter.writeGifToFile" title="Permalink to this definition"></a></dt>
+<dd><p>writeGifToFile(fp, images, durations, loops, xys, disposes)</p>
+<p>Given a set of images writes the bytes to the specified stream.
+Requires different handling of palette for PIL and Pillow:
+based on <a class="reference external" href="https://github.com/rec/echomesh/blob/master/">https://github.com/rec/echomesh/blob/master/</a>
+code/python/external/images2gif.py</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.writeGif">
+<span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.utils.images2gif.</span></span><span class="sig-name descname"><span class="pre">writeGif</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">images</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.writeGif" title="Permalink to this definition"></a></dt>
+<dd><p>Write an animated gif from the specified images.
+Depending on which PIL library is used, either writeGifVisvis or writeGifPillow
+is used here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – the name of the file to write the image to.</p></li>
+<li><p><strong>images</strong> (<em>list</em>) – should be a list consisting of PIL images or numpy
+arrays. The latter should be between 0 and 255 for
+integer types, and between 0 and 1 for float types.</p></li>
+<li><p><strong>duration</strong> – scalar or list of scalars The duration for all frames, or
+(if a list) for each frame.</p></li>
+<li><p><strong>repeat</strong> – bool or integer The amount of loops. If True, loops infinitetel</p></li>
+<li><p><strong>kwargs</strong> – additional parameters for writeGifVisvis</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.writeGifPillow">
+<span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.utils.images2gif.</span></span><span class="sig-name descname"><span class="pre">writeGifPillow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">images</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.writeGifPillow" title="Permalink to this definition"></a></dt>
+<dd><p>Write an animated gif from the specified images.
+Uses native Pillow implementation, which is available since Pillow 3.4.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – the name of the file to write the image to.</p></li>
+<li><p><strong>images</strong> (<em>list</em>) – should be a list consisting of PIL images or numpy
+arrays. The latter should be between 0 and 255 for
+integer types, and between 0 and 1 for float types.</p></li>
+<li><p><strong>duration</strong> – scalar or list of scalars The duration for all frames, or
+(if a list) for each frame.</p></li>
+<li><p><strong>repeat</strong> – bool or integer The amount of loops. If True, loops infinitetel</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.writeGifVisvis">
+<span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.utils.images2gif.</span></span><span class="sig-name descname"><span class="pre">writeGifVisvis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">images</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dither</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subRectangles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dispose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.writeGifVisvis" title="Permalink to this definition"></a></dt>
+<dd><p>Write an animated gif from the specified images.
+Uses VisVis implementation. Unfortunately it produces corrupted GIF
+with Pillow &gt;= 3.4.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – the name of the file to write the image to.</p></li>
+<li><p><strong>images</strong> (<em>list</em>) – should be a list consisting of PIL images or numpy
+arrays. The latter should be between 0 and 255 for
+integer types, and between 0 and 1 for float types.</p></li>
+<li><p><strong>duration</strong> – scalar or list of scalars The duration for all frames, or
+(if a list) for each frame.</p></li>
+<li><p><strong>repeat</strong> – bool or integer The amount of loops. If True, loops infinitetely.</p></li>
+<li><p><strong>dither</strong> (<em>bool</em>) – whether to apply dithering</p></li>
+<li><p><strong>nq</strong> (<em>int</em>) – If nonzero, applies the NeuQuant quantization algorithm to
+create the color palette. This algorithm is superior, but
+slower than the standard PIL algorithm. The value of nq is
+the quality parameter. 1 represents the best quality. 10 is
+in general a good tradeoff between quality and speed. When
+using this option, better results are usually obtained when
+subRectangles is False.</p></li>
+<li><p><strong>subRectangles</strong> – False, True, or a list of 2-element tuples
+Whether to use sub-rectangles. If True, the minimal
+rectangle that is required to update each frame is
+automatically detected. This can give significant
+reductions in file size, particularly if only a part
+of the image changes. One can also give a list of x-y
+coordinates if you want to do the cropping yourself.
+The default is True.</p></li>
+<li><p><strong>dispose</strong> (<em>int</em>) – how to dispose each frame. 1 means that each frame is
+to be left in place. 2 means the background color
+should be restored after each frame. 3 means the
+decoder should restore the previous frame. If
+subRectangles==False, the default is 2, otherwise it is 1.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.readGif">
+<span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.utils.images2gif.</span></span><span class="sig-name descname"><span class="pre">readGif</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asNumpy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.readGif" title="Permalink to this definition"></a></dt>
+<dd><p>Read images from an animated GIF file.  Returns a list of numpy
+arrays, or, if asNumpy is false, a list if PIL images.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.utils.images2gif.</span></span><span class="sig-name descname"><span class="pre">NeuQuant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samplefac</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant" title="Permalink to this definition"></a></dt>
+<dd><p>NeuQuant(image, samplefac=10, colors=256)</p>
+<p>samplefac should be an integer number of 1 or higher, 1
+being the highest quality, but the slowest performance.
+With avalue of 10, one tenth of all pixels are used during
+training. This value seems a nice tradeof between speed
+and quality.</p>
+<p>colors is the amount of colors to reduce the image to. This
+should best be a power of two.</p>
+<p>See also:
+<a class="reference external" href="http://members.ozemail.com.au/~dekker/NEUQUANT.HTML">http://members.ozemail.com.au/~dekker/NEUQUANT.HTML</a></p>
+<p><strong>License of the NeuQuant Neural-Net Quantization Algorithm</strong></p>
+<p>Copyright (c) 1994 Anthony Dekker
+Ported to python by Marius van Voorden in 2010</p>
+<p>NEUQUANT Neural-Net quantization algorithm by Anthony Dekker, 1994.
+See “Kohonen neural networks for optimal colour quantization”
+in “network: Computation in Neural Systems” Vol. 5 (1994) pp 351-367.
+for a discussion of the algorithm.
+See also  <a class="reference external" href="http://members.ozemail.com.au/~dekker/NEUQUANT.HTML">http://members.ozemail.com.au/~dekker/NEUQUANT.HTML</a></p>
+<p>Any party obtaining a copy of these files from the author, directly or
+indirectly, is granted, free of charge, a full and unrestricted
+irrevocable, world-wide, paid up, royalty-free, nonexclusive right and
+license to deal in this software and documentation files (the “Software”),
+including without limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of the Software, and
+to permit persons who receive copies from any such party to do so, with
+the only requirement being that this copyright notice remain intact.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.NCYCLES">
+<span class="sig-name descname"><span class="pre">NCYCLES</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.NCYCLES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.NETSIZE">
+<span class="sig-name descname"><span class="pre">NETSIZE</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.NETSIZE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.SPECIALS">
+<span class="sig-name descname"><span class="pre">SPECIALS</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.SPECIALS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.BGCOLOR">
+<span class="sig-name descname"><span class="pre">BGCOLOR</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.BGCOLOR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.CUTNETSIZE">
+<span class="sig-name descname"><span class="pre">CUTNETSIZE</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.CUTNETSIZE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.MAXNETPOS">
+<span class="sig-name descname"><span class="pre">MAXNETPOS</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.MAXNETPOS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.INITRAD">
+<span class="sig-name descname"><span class="pre">INITRAD</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.INITRAD" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.RADIUSBIASSHIFT">
+<span class="sig-name descname"><span class="pre">RADIUSBIASSHIFT</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.RADIUSBIASSHIFT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.RADIUSBIAS">
+<span class="sig-name descname"><span class="pre">RADIUSBIAS</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.RADIUSBIAS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.INITBIASRADIUS">
+<span class="sig-name descname"><span class="pre">INITBIASRADIUS</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.INITBIASRADIUS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.RADIUSDEC">
+<span class="sig-name descname"><span class="pre">RADIUSDEC</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.RADIUSDEC" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.ALPHABIASSHIFT">
+<span class="sig-name descname"><span class="pre">ALPHABIASSHIFT</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.ALPHABIASSHIFT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.INITALPHA">
+<span class="sig-name descname"><span class="pre">INITALPHA</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.INITALPHA" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.GAMMA">
+<span class="sig-name descname"><span class="pre">GAMMA</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.GAMMA" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.BETA">
+<span class="sig-name descname"><span class="pre">BETA</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.BETA" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.BETAGAMMA">
+<span class="sig-name descname"><span class="pre">BETAGAMMA</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.BETAGAMMA" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.network">
+<span class="sig-name descname"><span class="pre">network</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.network" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.colormap">
+<span class="sig-name descname"><span class="pre">colormap</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.colormap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.netindex">
+<span class="sig-name descname"><span class="pre">netindex</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.netindex" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.bias">
+<span class="sig-name descname"><span class="pre">bias</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.bias" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.freq">
+<span class="sig-name descname"><span class="pre">freq</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.freq" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.pimage">
+<span class="sig-name descname"><span class="pre">pimage</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.pimage" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.PRIME1">
+<span class="sig-name descname"><span class="pre">PRIME1</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">499</span></em><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.PRIME1" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.PRIME2">
+<span class="sig-name descname"><span class="pre">PRIME2</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">491</span></em><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.PRIME2" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.PRIME3">
+<span class="sig-name descname"><span class="pre">PRIME3</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">487</span></em><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.PRIME3" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.PRIME4">
+<span class="sig-name descname"><span class="pre">PRIME4</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">503</span></em><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.PRIME4" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.MAXPRIME">
+<span class="sig-name descname"><span class="pre">MAXPRIME</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.MAXPRIME" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.pixels">
+<span class="sig-name descname"><span class="pre">pixels</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.pixels" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.samplefac">
+<span class="sig-name descname"><span class="pre">samplefac</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.samplefac" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.a_s">
+<span class="sig-name descname"><span class="pre">a_s</span></span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.a_s" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.setconstants">
+<span class="sig-name descname"><span class="pre">setconstants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samplefac</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.setconstants" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.writeColourMap">
+<span class="sig-name descname"><span class="pre">writeColourMap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rgb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outstream</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.writeColourMap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.setUpArrays">
+<span class="sig-name descname"><span class="pre">setUpArrays</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.setUpArrays" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.altersingle">
+<span class="sig-name descname"><span class="pre">altersingle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.altersingle" title="Permalink to this definition"></a></dt>
+<dd><p>Move neuron i towards biased (b, g, r) by factor alpha</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.geta">
+<span class="sig-name descname"><span class="pre">geta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.geta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.alterneigh">
+<span class="sig-name descname"><span class="pre">alterneigh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.alterneigh" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.contest">
+<span class="sig-name descname"><span class="pre">contest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.contest" title="Permalink to this definition"></a></dt>
+<dd><p>Search for biased BGR values
+Finds closest neuron (min dist) and updates self.freq
+finds best neuron (min dist-self.bias) and returns position
+for frequently chosen neurons, self.freq[i] is high and self.bias[i]
+is negative self.bias[i] = self.GAMMA * ((1/self.NETSIZE)-self.freq[i])</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.specialFind">
+<span class="sig-name descname"><span class="pre">specialFind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.specialFind" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.learn">
+<span class="sig-name descname"><span class="pre">learn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.learn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.fix">
+<span class="sig-name descname"><span class="pre">fix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.fix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.inxbuild">
+<span class="sig-name descname"><span class="pre">inxbuild</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.inxbuild" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.paletteImage">
+<span class="sig-name descname"><span class="pre">paletteImage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.paletteImage" title="Permalink to this definition"></a></dt>
+<dd><p>PIL weird interface for making a paletted image: create an image
+which already has the palette, and use that in Image.quantize. This
+function returns this palette image.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.quantize">
+<span class="sig-name descname"><span class="pre">quantize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.quantize" title="Permalink to this definition"></a></dt>
+<dd><p>Use a kdtree to quickly find the closest palette colors for the
+pixels</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.quantize_with_scipy">
+<span class="sig-name descname"><span class="pre">quantize_with_scipy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.quantize_with_scipy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.quantize_without_scipy">
+<span class="sig-name descname"><span class="pre">quantize_without_scipy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.quantize_without_scipy" title="Permalink to this definition"></a></dt>
+<dd><p>” This function can be used if no scipy is available.
+It’s 7 times slower though.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.convert">
+<span class="sig-name descname"><span class="pre">convert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.convert" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.utils.images2gif.NeuQuant.inxsearch">
+<span class="sig-name descname"><span class="pre">inxsearch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.utils.images2gif.NeuQuant.inxsearch" title="Permalink to this definition"></a></dt>
+<dd><p>Search for BGR values 0..255 and return colour index</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../enums/index.html" class="btn btn-neutral float-left" title=" oa.anim_library.tool.utils.enums" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../widgets/index.html" class="btn btn-neutral float-right" title=" oa.anim_library.tool.widgets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

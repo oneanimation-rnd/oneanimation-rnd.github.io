@@ -1,0 +1,47 @@
+ :py:mod:`oa.mat_gui.core.consts`
+==================================================================
+
+.. py:module:: oa.mat_gui.core.consts
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.mat_gui.core.consts.AssetType
+
+
+
+
+.. py:class:: AssetType
+
+   .. py:attribute:: Chr
+      :annotation: = CHR
+
+      
+
+   .. py:attribute:: Cam
+      :annotation: = CAM
+
+      
+
+   .. py:attribute:: Prp
+      :annotation: = PRP
+
+      
+
+   .. py:attribute:: Env
+      :annotation: = ENV
+
+      
+
+   .. py:attribute:: Set
+      :annotation: = SET
+
+      
+
+

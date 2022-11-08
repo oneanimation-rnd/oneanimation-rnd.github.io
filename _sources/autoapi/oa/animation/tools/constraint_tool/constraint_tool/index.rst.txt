@@ -1,0 +1,208 @@
+ :py:mod:`oa.animation.tools.constraint_tool.constraint_tool`
+==========================================================================================================================
+
+.. py:module:: oa.animation.tools.constraint_tool.constraint_tool
+
+.. autoapi-nested-parse::
+
+   Displays our constraints in the scene so we can control how they work and track them.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool.constraint_tool.ConstraintTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool.constraint_tool.launch
+
+
+
+.. py:class:: ConstraintTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: tool_name
+      :annotation: = constraintTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: on_open_cb_id
+      
+
+      
+
+   .. py:attribute:: on_new_cb_id
+      
+
+      
+
+   .. py:attribute:: on_time_change_cb_id
+      
+
+      
+
+   .. py:method:: add_callbacks()
+      :staticmethod:
+
+
+   .. py:method:: remove_callbacks()
+      :staticmethod:
+
+
+   .. py:method:: on_trigger_auto_close(arg)
+      :staticmethod:
+
+      Gets called on loading or starting a new scene.
+      Forces any open instance to be closed.
+
+
+   .. py:method:: on_trigger_time_changed(*args)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: display_blend_setting_warning()
+
+
+   .. py:method:: resizeEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: wrap_layout(widgets, orientation)
+
+
+   .. py:method:: show_help_page()
+
+
+   .. py:method:: save_settings()
+
+
+   .. py:method:: load_settings()
+
+
+   .. py:method:: update_search_completer()
+
+
+   .. py:method:: add_constraint(constraint_type)
+
+
+   .. py:method:: get_row_item(row, obj_type)
+
+
+   .. py:method:: display_groupbox(enabled, groupbox, frame)
+
+
+   .. py:method:: on_search_bar_return_pressed()
+
+
+   .. py:method:: on_treeview_selection_changed(*args)
+
+
+   .. py:method:: on_add_groupbox_toggled(enabled)
+
+
+   .. py:method:: on_control_groupbox_toggled(enabled)
+
+
+   .. py:method:: on_list_key_pressed(event)
+
+
+   .. py:method:: on_add_point_clicked()
+
+
+   .. py:method:: on_add_orient_clicked()
+
+
+   .. py:method:: on_add_parent_clicked()
+
+
+   .. py:method:: on_add_path_clicked()
+
+
+   .. py:method:: on_key_off_clicked()
+
+
+   .. py:method:: on_key_on_clicked()
+
+
+   .. py:method:: on_add_group_clicked()
+
+
+   .. py:method:: on_delete_cnst_clicked()
+
+
+   .. py:method:: on_select_ctrl_clicked()
+
+
+   .. py:method:: on_select_constrainer_clicked()
+
+
+   .. py:method:: on_select_slave_clicked()
+
+
+   .. py:method:: on_select_weights_clicked()
+
+
+   .. py:method:: on_select_motion_path_clicked()
+
+
+   .. py:method:: on_set_color_clicked()
+
+
+   .. py:method:: on_picked_color(color)
+
+
+   .. py:method:: on_list_size_toggled(state)
+
+
+   .. py:method:: on_refresh_clicked()
+
+
+   .. py:method:: on_control_color_clicked()
+
+
+
+.. py:function:: launch()
+
+

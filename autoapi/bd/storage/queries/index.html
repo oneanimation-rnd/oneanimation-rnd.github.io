@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> bd.storage.queries &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title=" bd.storage.utils" href="../utils/index.html" />
+    <link rel="prev" title=" bd.storage.mixins" href="../mixins/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../api/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hooks/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.hooks</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.queries</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/bd/storage/queries/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-bd.storage.queries">
+<span id="bd-storage-queries"></span><h1> <a class="reference internal" href="#module-bd.storage.queries" title="bd.storage.queries"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.queries</span></code></a><a class="headerlink" href="#module-bd.storage.queries" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<dl class="py data">
+<dt class="sig sig-object py" id="bd.storage.queries.FIND_COMPONENTS_QUERY">
+<span class="sig-prename descclassname"><span class="pre">bd.storage.queries.</span></span><span class="sig-name descname"><span class="pre">FIND_COMPONENTS_QUERY</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Multiline-String</span></em><a class="headerlink" href="#bd.storage.queries.FIND_COMPONENTS_QUERY" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-text notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>query FindComponents($tags: jsonb!, $fields: jsonb!, $limit: Int = 100) {
+<span class="linenos"> 2</span>    components(
+<span class="linenos"> 3</span>        where: {
+<span class="linenos"> 4</span>            tags: {_contains: $tags},
+<span class="linenos"> 5</span>            fields: {_contains: $fields}
+<span class="linenos"> 6</span>        },
+<span class="linenos"> 7</span>        order_by: {created_at: desc},
+<span class="linenos"> 8</span>        limit: $limit
+<span class="linenos"> 9</span>    ) {
+<span class="linenos">10</span>        id
+<span class="linenos">11</span>        tags
+<span class="linenos">12</span>        fields
+<span class="linenos">13</span>    }
+<span class="linenos">14</span>}
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="bd.storage.queries.GET_REVISIONS_QUERY">
+<span class="sig-prename descclassname"><span class="pre">bd.storage.queries.</span></span><span class="sig-name descname"><span class="pre">GET_REVISIONS_QUERY</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Multiline-String</span></em><a class="headerlink" href="#bd.storage.queries.GET_REVISIONS_QUERY" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-text notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>query GetRevisions($id: String!, $limit: Int = 10) {
+<span class="linenos"> 2</span>    component_revisions(
+<span class="linenos"> 3</span>        where: {
+<span class="linenos"> 4</span>            component_id: {_eq: $id}
+<span class="linenos"> 5</span>        },
+<span class="linenos"> 6</span>        order_by: {id: desc},
+<span class="linenos"> 7</span>        limit: $limit
+<span class="linenos"> 8</span>    ) {
+<span class="linenos"> 9</span>        id
+<span class="linenos">10</span>        version
+<span class="linenos">11</span>        published
+<span class="linenos">12</span>        comment
+<span class="linenos">13</span>        created_at
+<span class="linenos">14</span>        user {
+<span class="linenos">15</span>            id
+<span class="linenos">16</span>            email
+<span class="linenos">17</span>            picture
+<span class="linenos">18</span>        }
+<span class="linenos">19</span>    }
+<span class="linenos">20</span>}
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="bd.storage.queries.REMOVE_COMPONENT_MUTATION">
+<span class="sig-prename descclassname"><span class="pre">bd.storage.queries.</span></span><span class="sig-name descname"><span class="pre">REMOVE_COMPONENT_MUTATION</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Multiline-String</span></em><a class="headerlink" href="#bd.storage.queries.REMOVE_COMPONENT_MUTATION" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-text notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>mutation RemoveComponent($id: String!) {
+<span class="linenos">2</span>    delete_component_by_pk(id: $id) {
+<span class="linenos">3</span>        id
+<span class="linenos">4</span>    }
+<span class="linenos">5</span>}
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="bd.storage.queries.CREATE_REVISION_MUTATION">
+<span class="sig-prename descclassname"><span class="pre">bd.storage.queries.</span></span><span class="sig-name descname"><span class="pre">CREATE_REVISION_MUTATION</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Multiline-String</span></em><a class="headerlink" href="#bd.storage.queries.CREATE_REVISION_MUTATION" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-text notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>mutation CreateRevision($id: String!, $tags: jsonb!, $fields: jsonb!) {
+<span class="linenos"> 2</span>    insert_component_revisions_one(
+<span class="linenos"> 3</span>        object: {
+<span class="linenos"> 4</span>            published: false,
+<span class="linenos"> 5</span>            component: {
+<span class="linenos"> 6</span>                data: {
+<span class="linenos"> 7</span>                    id: $id,
+<span class="linenos"> 8</span>                    tags: $tags,
+<span class="linenos"> 9</span>                    fields: $fields
+<span class="linenos">10</span>                },
+<span class="linenos">11</span>                on_conflict: {
+<span class="linenos">12</span>                    constraint: components_pkey,
+<span class="linenos">13</span>                    update_columns: id
+<span class="linenos">14</span>                }
+<span class="linenos">15</span>            }
+<span class="linenos">16</span>        },
+<span class="linenos">17</span>        on_conflict: {
+<span class="linenos">18</span>            constraint: component_revisions_component_id_version_key,
+<span class="linenos">19</span>            update_columns: component_id
+<span class="linenos">20</span>        }
+<span class="linenos">21</span>    ) {
+<span class="linenos">22</span>        id
+<span class="linenos">23</span>        version
+<span class="linenos">24</span>        published
+<span class="linenos">25</span>        comment
+<span class="linenos">26</span>        created_at
+<span class="linenos">27</span>        user_id
+<span class="linenos">28</span>        user {
+<span class="linenos">29</span>            email
+<span class="linenos">30</span>        }
+<span class="linenos">31</span>    }
+<span class="linenos">32</span>}
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="bd.storage.queries.PUBLISH_REVISION_MUTATION">
+<span class="sig-prename descclassname"><span class="pre">bd.storage.queries.</span></span><span class="sig-name descname"><span class="pre">PUBLISH_REVISION_MUTATION</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Multiline-String</span></em><a class="headerlink" href="#bd.storage.queries.PUBLISH_REVISION_MUTATION" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-text notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>mutation PublishRevision($revision_id: Int!, $comment: String) {
+<span class="linenos">2</span>    update_component_revisions_by_pk(
+<span class="linenos">3</span>        _set: {published: true, comment: $comment},
+<span class="linenos">4</span>        pk_columns: {id: $revision_id }
+<span class="linenos">5</span>    ) {
+<span class="linenos">6</span>        id
+<span class="linenos">7</span>    }
+<span class="linenos">8</span>}
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="bd.storage.queries.ACQUIRE_REVISION_MUTATION">
+<span class="sig-prename descclassname"><span class="pre">bd.storage.queries.</span></span><span class="sig-name descname"><span class="pre">ACQUIRE_REVISION_MUTATION</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Multiline-String</span></em><a class="headerlink" href="#bd.storage.queries.ACQUIRE_REVISION_MUTATION" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-text notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>mutation AcquireRevision($revision_id: Int!, $user_id: String!) {
+<span class="linenos">2</span>    update_component_revisions_by_pk(
+<span class="linenos">3</span>        _set: {user_id: $user_id},
+<span class="linenos">4</span>        pk_columns: {id: $revision_id}
+<span class="linenos">5</span>    ) {
+<span class="linenos">6</span>        id
+<span class="linenos">7</span>    }
+<span class="linenos">8</span>}
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="bd.storage.queries.REMOVE_REVISION_MUTATION">
+<span class="sig-prename descclassname"><span class="pre">bd.storage.queries.</span></span><span class="sig-name descname"><span class="pre">REMOVE_REVISION_MUTATION</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Multiline-String</span></em><a class="headerlink" href="#bd.storage.queries.REMOVE_REVISION_MUTATION" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-text notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>mutation RemoveRevision($id: Int!) {
+<span class="linenos">2</span>    delete_component_revisions_by_pk(id: $id) {
+<span class="linenos">3</span>        id
+<span class="linenos">4</span>    }
+<span class="linenos">5</span>}
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../mixins/index.html" class="btn btn-neutral float-left" title=" bd.storage.mixins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../utils/index.html" class="btn btn-neutral float-right" title=" bd.storage.utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

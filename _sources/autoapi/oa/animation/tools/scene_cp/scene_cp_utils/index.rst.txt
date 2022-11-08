@@ -1,0 +1,44 @@
+ :py:mod:`oa.animation.tools.scene_cp.scene_cp_utils`
+==========================================================================================================
+
+.. py:module:: oa.animation.tools.scene_cp.scene_cp_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_cp.scene_cp_utils.load_pixmap
+   oa.animation.tools.scene_cp.scene_cp_utils.add_scene_cp
+   oa.animation.tools.scene_cp.scene_cp_utils.get_seq_shot_ranges
+   oa.animation.tools.scene_cp.scene_cp_utils.get_scene_cp_info
+   oa.animation.tools.scene_cp.scene_cp_utils.go_to_next_shot
+   oa.animation.tools.scene_cp.scene_cp_utils.go_to_previous_shot
+
+
+
+.. py:function:: load_pixmap(file_name, width=None, height=None)
+
+
+.. py:function:: add_scene_cp()
+
+   Creates and adds the scene cp to the scene.
+
+
+.. py:function:: get_seq_shot_ranges(project=None, ep=None, seq=None, shot_type=None)
+
+
+.. py:function:: get_scene_cp_info()
+
+
+.. py:function:: go_to_next_shot()
+
+
+.. py:function:: go_to_previous_shot()
+
+

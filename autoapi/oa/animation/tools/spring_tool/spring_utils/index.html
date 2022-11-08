@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.animation.tools.spring_tool.spring_utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.animation.tools.synoptics" href="../../synoptics/index.html" />
+    <link rel="prev" title=" oa.animation.tools.spring_tool.spring_tool" href="../spring_tool/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.spring_tool</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.spring_tool.spring_utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/animation/tools/spring_tool/spring_utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.animation.tools.spring_tool.spring_utils">
+<span id="oa-animation-tools-spring-tool-spring-utils"></span><h1> <a class="reference internal" href="#module-oa.animation.tools.spring_tool.spring_utils" title="oa.animation.tools.spring_tool.spring_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.spring_tool.spring_utils</span></code></a><a class="headerlink" href="#module-oa.animation.tools.spring_tool.spring_utils" title="Permalink to this heading"></a></h1>
+<p>Instead of a traditional live utility node this simulates the dynamics in memory then bakes it to keyframes.
+The physics model is simply a steering behavior where it tries to seek its original position (seeking steering behavior).
+Since rotation in 3d space can be a pandora box of pain, it’s simply mapping the position’s deltas to its rotation. It currently doesn’t support dynamics in twisting.
+A scene’s scale plays a huge role. Settings that work in a small scene scale will likely need to be tweaked to work in a bigger scene scale.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.UndoStack" title="oa.animation.tools.spring_tool.spring_utils.UndoStack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UndoStack</span></code></a></p></td>
+<td><p>All operations are wrapped as a single chunk so Maya can undo/redo all at once.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.DynamicObj" title="oa.animation.tools.spring_tool.spring_utils.DynamicObj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DynamicObj</span></code></a></p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param translate</dt>
+<dd class="field-odd"><p>Apply dynamics onto translation channels.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.get_icon" title="oa.animation.tools.spring_tool.spring_utils.get_icon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_icon</span></code></a>(file_name[, width, height])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.connect_to_db" title="oa.animation.tools.spring_tool.spring_utils.connect_to_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect_to_db</span></code></a>([hosts, replica_preset, read_pref, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.get_database_entry" title="oa.animation.tools.spring_tool.spring_utils.get_database_entry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_database_entry</span></code></a>([asset_id, collection])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.list_presets" title="oa.animation.tools.spring_tool.spring_utils.list_presets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list_presets</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.create_preset" title="oa.animation.tools.spring_tool.spring_utils.create_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_preset</span></code></a>(asset_id, preset_name)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.remove_preset" title="oa.animation.tools.spring_tool.spring_utils.remove_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_preset</span></code></a>(asset_id, preset_name[, collection])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.rename_preset" title="oa.animation.tools.spring_tool.spring_utils.rename_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename_preset</span></code></a>(asset_id, old_name, new_name[, collection])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.update_preset_values" title="oa.animation.tools.spring_tool.spring_utils.update_preset_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_preset_values</span></code></a>(asset_id, preset, objs[, collection])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.add_dyn_obj_to_preset" title="oa.animation.tools.spring_tool.spring_utils.add_dyn_obj_to_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_dyn_obj_to_preset</span></code></a>(asset_id, preset, translate, ...)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.remove_dyn_obj_from_preset" title="oa.animation.tools.spring_tool.spring_utils.remove_dyn_obj_from_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_dyn_obj_from_preset</span></code></a>(asset_id, preset, objs[, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.get_asset_id" title="oa.animation.tools.spring_tool.spring_utils.get_asset_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_asset_id</span></code></a>(obj)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.xform_to_matrix" title="oa.animation.tools.spring_tool.spring_utils.xform_to_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xform_to_matrix</span></code></a>(xform)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.remap" title="oa.animation.tools.spring_tool.spring_utils.remap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remap</span></code></a>(value, in_min, in_max, out_min, out_max)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.lerp" title="oa.animation.tools.spring_tool.spring_utils.lerp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lerp</span></code></a>(blend, value_1, value_2)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.clamp" title="oa.animation.tools.spring_tool.spring_utils.clamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clamp</span></code></a>(value, min_value, max_value)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.get_shot_ranges" title="oa.animation.tools.spring_tool.spring_utils.get_shot_ranges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_shot_ranges</span></code></a>(frame)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.get_range_by_priority" title="oa.animation.tools.spring_tool.spring_utils.get_range_by_priority"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_range_by_priority</span></code></a>()</p></td>
+<td><p>Uses different methods in order to find what range it should return.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.sim_preset" title="oa.animation.tools.spring_tool.spring_utils.sim_preset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sim_preset</span></code></a>(preset[, namespace])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.sim_objects" title="oa.animation.tools.spring_tool.spring_utils.sim_objects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sim_objects</span></code></a>(dyn_objs, start_frame, end_frame, euler_filter)</p></td>
+<td><p>Runs a sim on the supplied objects and bakes motion to keyframes.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.get_icon">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">get_icon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.get_icon" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.connect_to_db">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">connect_to_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hosts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replica_preset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rs0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read_pref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'maya'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'dyn_presets'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.connect_to_db" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.get_database_entry">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">get_database_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.get_database_entry" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.list_presets">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">list_presets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.list_presets" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.create_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">create_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.create_preset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.remove_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">remove_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.remove_preset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.rename_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">rename_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.rename_preset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.update_preset_values">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">update_preset_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">dyn_settings</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.update_preset_values" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.add_dyn_obj_to_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">add_dyn_obj_to_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translate_mult</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotate_mult</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">air_drag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.add_dyn_obj_to_preset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.remove_dyn_obj_from_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">remove_dyn_obj_from_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asset_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.remove_dyn_obj_from_preset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.get_asset_id">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">get_asset_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.get_asset_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.xform_to_matrix">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">xform_to_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xform</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.xform_to_matrix" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.remap">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">remap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_max</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.remap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.lerp">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">lerp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value_2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.lerp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.clamp">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">clamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.clamp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.get_shot_ranges">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">get_shot_ranges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.get_shot_ranges" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.get_range_by_priority">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">get_range_by_priority</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.get_range_by_priority" title="Permalink to this definition"></a></dt>
+<dd><p>Uses different methods in order to find what range it should return.
+1st checks if the user has a selected range in the timeline.
+2nd checks if the user is within a shot’s range.
+If all else fails it returns the timeline’s min/max range.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.sim_preset">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">sim_preset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.sim_preset" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.sim_objects">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">sim_objects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dyn_objs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">euler_filter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anim_layer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress_bar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.sim_objects" title="Permalink to this definition"></a></dt>
+<dd><p>Runs a sim on the supplied objects and bakes motion to keyframes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dyn_objs</strong> (<a class="reference internal" href="#oa.animation.tools.spring_tool.spring_utils.DynamicObj" title="oa.animation.tools.spring_tool.spring_utils.DynamicObj"><em>DynamicObj</em></a><em>[</em><em>]</em>) – A list of objects to sim. Order does matter and it makes sense to sim from the top of the hierarchy to the bottom.</p></li>
+<li><p><strong>start_frame</strong> (<em>int</em>) – </p></li>
+<li><p><strong>end_frame</strong> (<em>int</em>) – </p></li>
+<li><p><strong>euler_filter</strong> (<em>bool</em>) – Run an euler filter on the anim curves.</p></li>
+<li><p><strong>steps</strong> (<em>int</em>) – Determines when to set a keyframe. A values of 3 would set a keyframe every 3 frames.</p></li>
+<li><p><strong>anim_layer</strong> (<em>string</em>) – A name of an animLayer to create keyframes on. If it’s None, it will keyframe directly on the object.</p></li>
+<li><p><strong>progress_bar</strong> (<em>bool</em>) – Displays progress bar in the main window.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.UndoStack">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">UndoStack</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'action'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.UndoStack" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>All operations are wrapped as a single chunk so Maya can undo/redo all at once.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.UndoStack.__enter__">
+<span class="sig-name descname"><span class="pre">__enter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.UndoStack.__enter__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.UndoStack.__exit__">
+<span class="sig-name descname"><span class="pre">__exit__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_tb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.UndoStack.__exit__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.DynamicObj">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.spring_tool.spring_utils.</span></span><span class="sig-name descname"><span class="pre">DynamicObj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translate_mult</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotate_mult</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">air_drag</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_rot_angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.DynamicObj" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>translate</strong> (<em>bool</em>) – Apply dynamics onto translation channels.</p></li>
+<li><p><strong>rotate</strong> (<em>bool</em>) – Apply dynamics onto rotation channels.</p></li>
+<li><p><strong>translate_mult</strong> (<em>float</em>) – A multiplier for translation.</p></li>
+<li><p><strong>rotate_mult</strong> (<em>float</em>) – A multiplier for rotation.</p></li>
+<li><p><strong>max_rot_angle</strong> (<em>float</em>) – The amount of degrees that the rotation is not allowed to exceed.</p></li>
+<li><p><strong>settle</strong> (<em>float</em>) – A value between 0 - 1 (takes a while to settle, settles easily).</p></li>
+<li><p><strong>max_speed</strong> (<em>float</em>) – The maximum distance it’s allowed to travel per frame.</p></li>
+<li><p><strong>air_drag</strong> (<em>float</em>) – A value between 0 - 1 (no drag, lots of drag).</p></li>
+<li><p><strong>limit</strong> (<em>float</em>) – A value betwen 0 - 1 (limited range of motion, lots of range of motion).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.DynamicObj.sim">
+<span class="sig-name descname"><span class="pre">sim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anim_layer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.DynamicObj.sim" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.spring_tool.spring_utils.DynamicObj.update_obj">
+<span class="sig-name descname"><span class="pre">update_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anim_layer</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.spring_tool.spring_utils.DynamicObj.update_obj" title="Permalink to this definition"></a></dt>
+<dd><p>Takes the values from the same and applies keyframes onto the object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../spring_tool/index.html" class="btn btn-neutral float-left" title=" oa.animation.tools.spring_tool.spring_tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../synoptics/index.html" class="btn btn-neutral float-right" title=" oa.animation.tools.synoptics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

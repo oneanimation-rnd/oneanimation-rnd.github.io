@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.capture_tool.capture_worker &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title=" oa.general" href="../../general/index.html" />
+    <link rel="prev" title=" oa.capture_tool.capture_utils" href="../capture_utils/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool.capture_worker</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/oa/capture_tool/capture_worker/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.capture_tool.capture_worker">
+<span id="oa-capture-tool-capture-worker"></span><h1> <a class="reference internal" href="#module-oa.capture_tool.capture_worker" title="oa.capture_tool.capture_worker"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool.capture_worker</span></code></a><a class="headerlink" href="#module-oa.capture_tool.capture_worker" title="Permalink to this heading"></a></h1>
+<p>Capturing must be done as a balancing act in order to capture with a decent frame rate while not overflowing the machine’s memory.</p>
+<p>A ThreadPool is ran on a separate thread to capture pixmaps of the screen at a constant rate.
+For high res/long captures it’s imperative to dump those pixmaps on disc during capturing otherwise the machine’s memory will fill and make the machine unresponsive.</p>
+<p>To solve this we use a series of Queue and Thread objects that will save all the pixmaps from separate threads.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.capture_tool.capture_worker.ThreadPool" title="oa.capture_tool.capture_worker.ThreadPool"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadPool</span></code></a></p></td>
+<td><p>Manages all Worker objects.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.capture_tool.capture_worker.ThreadSignals" title="oa.capture_tool.capture_worker.ThreadSignals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ThreadSignals</span></code></a></p></td>
+<td><p>Signals must inherit from QObject, so this is a workaround to signal from a QRunnable object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.capture_tool.capture_worker.Worker" title="oa.capture_tool.capture_worker.Worker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Worker</span></code></a></p></td>
+<td><p>Captures screen as pixmaps in a separate thread.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.capture_tool.capture_worker.clear_temp_dir" title="oa.capture_tool.capture_worker.clear_temp_dir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clear_temp_dir</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.capture_tool.capture_worker.temp_capture_dir" title="oa.capture_tool.capture_worker.temp_capture_dir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">temp_capture_dir</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.temp_capture_dir">
+<span class="sig-prename descclassname"><span class="pre">oa.capture_tool.capture_worker.</span></span><span class="sig-name descname"><span class="pre">temp_capture_dir</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">/Volumes/data/.temp_capture_imgs</span></em><a class="headerlink" href="#oa.capture_tool.capture_worker.temp_capture_dir" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.clear_temp_dir">
+<span class="sig-prename descclassname"><span class="pre">oa.capture_tool.capture_worker.</span></span><span class="sig-name descname"><span class="pre">clear_temp_dir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.capture_tool.capture_worker.clear_temp_dir" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadPool">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.capture_tool.capture_worker.</span></span><span class="sig-name descname"><span class="pre">ThreadPool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadPool" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></p>
+<p>Manages all Worker objects.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadPool.frame_changed">
+<span class="sig-name descname"><span class="pre">frame_changed</span></span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadPool.frame_changed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadPool.pixmap_saved">
+<span class="sig-name descname"><span class="pre">pixmap_saved</span></span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadPool.pixmap_saved" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadPool.capture_cancelled">
+<span class="sig-name descname"><span class="pre">capture_cancelled</span></span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadPool.capture_cancelled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadPool.capture_stopped">
+<span class="sig-name descname"><span class="pre">capture_stopped</span></span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadPool.capture_stopped" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadPool.capture_finished">
+<span class="sig-name descname"><span class="pre">capture_finished</span></span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadPool.capture_finished" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadPool.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadPool.start" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadPool.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadPool.stop" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadPool.cancel">
+<span class="sig-name descname"><span class="pre">cancel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadPool.cancel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadSignals">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.capture_tool.capture_worker.</span></span><span class="sig-name descname"><span class="pre">ThreadSignals</span></span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadSignals" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtCore.QObject</span></code></p>
+<p>Signals must inherit from QObject, so this is a workaround to signal from a QRunnable object.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadSignals.frame_changed">
+<span class="sig-name descname"><span class="pre">frame_changed</span></span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadSignals.frame_changed" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadSignals.pixmap_saved">
+<span class="sig-name descname"><span class="pre">pixmap_saved</span></span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadSignals.pixmap_saved" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadSignals.capture_cancelled">
+<span class="sig-name descname"><span class="pre">capture_cancelled</span></span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadSignals.capture_cancelled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadSignals.capture_stopped">
+<span class="sig-name descname"><span class="pre">capture_stopped</span></span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadSignals.capture_stopped" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.ThreadSignals.capture_finished">
+<span class="sig-name descname"><span class="pre">capture_finished</span></span><a class="headerlink" href="#oa.capture_tool.capture_worker.ThreadSignals.capture_finished" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.Worker">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.capture_tool.capture_worker.</span></span><span class="sig-name descname"><span class="pre">Worker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.capture_tool.capture_worker.Worker" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtCore.QRunnable</span></code></p>
+<p>Captures screen as pixmaps in a separate thread.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.Worker.StatusOk">
+<span class="sig-name descname"><span class="pre">StatusOk</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#oa.capture_tool.capture_worker.Worker.StatusOk" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.Worker.StatusError">
+<span class="sig-name descname"><span class="pre">StatusError</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#oa.capture_tool.capture_worker.Worker.StatusError" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.Worker.Stop">
+<span class="sig-name descname"><span class="pre">Stop</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#oa.capture_tool.capture_worker.Worker.Stop" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.Worker.Cancel">
+<span class="sig-name descname"><span class="pre">Cancel</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#oa.capture_tool.capture_worker.Worker.Cancel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.Worker.inst">
+<span class="sig-name descname"><span class="pre">inst</span></span><a class="headerlink" href="#oa.capture_tool.capture_worker.Worker.inst" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.Worker.add_writer_workers">
+<span class="sig-name descname"><span class="pre">add_writer_workers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thread_count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.capture_tool.capture_worker.Worker.add_writer_workers" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.Worker.save_pixmaps">
+<span class="sig-name descname"><span class="pre">save_pixmaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quality</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.capture_tool.capture_worker.Worker.save_pixmaps" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.Worker.capture">
+<span class="sig-name descname"><span class="pre">capture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rect</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capture_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.04</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.capture_tool.capture_worker.Worker.capture" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.Worker.clear_queue">
+<span class="sig-name descname"><span class="pre">clear_queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.capture_tool.capture_worker.Worker.clear_queue" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.Worker.reset_global_vars">
+<span class="sig-name descname"><span class="pre">reset_global_vars</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.capture_tool.capture_worker.Worker.reset_global_vars" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.capture_tool.capture_worker.Worker.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.capture_tool.capture_worker.Worker.run" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../capture_utils/index.html" class="btn btn-neutral float-left" title=" oa.capture_tool.capture_utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../general/index.html" class="btn btn-neutral float-right" title=" oa.general" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

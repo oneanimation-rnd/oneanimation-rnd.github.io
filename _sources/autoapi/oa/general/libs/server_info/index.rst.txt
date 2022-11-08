@@ -1,0 +1,35 @@
+ :py:mod:`oa.general.libs.server_info`
+============================================================================
+
+.. py:module:: oa.general.libs.server_info
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.server_info.get_location
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.server_info.servers
+
+
+.. py:data:: servers
+   
+
+   
+
+.. py:function:: get_location()
+
+

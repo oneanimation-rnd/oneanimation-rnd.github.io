@@ -1,0 +1,178 @@
+ :py:mod:`oa.asset.libs.gpu_utils`
+====================================================================
+
+.. py:module:: oa.asset.libs.gpu_utils
+
+.. autoapi-nested-parse::
+
+   Utility functions to handle gpu caches dynamically generated from assets.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.gpu_utils.add_after_open_callback
+   oa.asset.libs.gpu_utils.remove_after_open_callback
+   oa.asset.libs.gpu_utils.on_after_open_triggered
+   oa.asset.libs.gpu_utils.get_files_after_date
+   oa.asset.libs.gpu_utils.delete_old_caches
+   oa.asset.libs.gpu_utils.to_tb
+   oa.asset.libs.gpu_utils.delete_caches_over_limit
+   oa.asset.libs.gpu_utils.clean_up_caches
+   oa.asset.libs.gpu_utils.get_ref_id
+   oa.asset.libs.gpu_utils.collect_gpu_nodes
+   oa.asset.libs.gpu_utils.full_namespace
+   oa.asset.libs.gpu_utils.is_inst_master
+   oa.asset.libs.gpu_utils.contains_inst_masters
+   oa.asset.libs.gpu_utils.contains_valid_assets
+   oa.asset.libs.gpu_utils.traverse_ref_hierarchy
+   oa.asset.libs.gpu_utils.traverse_ref_parents
+   oa.asset.libs.gpu_utils.traverse_hierarchy_to_cache
+   oa.asset.libs.gpu_utils.get_ref_gpu_nodes
+   oa.asset.libs.gpu_utils.get_cache_objs
+   oa.asset.libs.gpu_utils.remove_gpu_nul_if_empty
+   oa.asset.libs.gpu_utils.delete_ref_gpu_nodes
+   oa.asset.libs.gpu_utils.ref_to_gpu
+   oa.asset.libs.gpu_utils.create_gpu_hierarchy
+   oa.asset.libs.gpu_utils.poly_reduce_ref
+   oa.asset.libs.gpu_utils.export_gpu_cache
+   oa.asset.libs.gpu_utils.get_ref_node_by_namespace
+   oa.asset.libs.gpu_utils.import_gpu_cache
+   oa.asset.libs.gpu_utils.load_invalid_gpu_nodes
+   oa.asset.libs.gpu_utils.switch_all_gpu_to_rdr
+   oa.asset.libs.gpu_utils.get_objs_in_view
+   oa.asset.libs.gpu_utils.run_frustum
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.gpu_utils.after_open_callback
+   oa.asset.libs.gpu_utils.cache_root_path
+
+
+.. py:data:: after_open_callback
+   
+
+   
+
+.. py:data:: cache_root_path
+   :annotation: = /Volumes/data/gpu
+
+   
+
+.. py:exception:: MissingNodeError
+
+   Bases: :py:obj:`BaseException`
+
+   Common base class for all exceptions
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:function:: add_after_open_callback()
+
+
+.. py:function:: remove_after_open_callback()
+
+
+.. py:function:: on_after_open_triggered(*args)
+
+
+.. py:function:: get_files_after_date(path, **kwargs)
+
+
+.. py:function:: delete_old_caches()
+
+
+.. py:function:: to_tb(bytes_count)
+
+
+.. py:function:: delete_caches_over_limit(gb_limit=5)
+
+
+.. py:function:: clean_up_caches()
+
+
+.. py:function:: get_ref_id(ref_path)
+
+
+.. py:function:: collect_gpu_nodes(shapes=True)
+
+
+.. py:function:: full_namespace(ref_path)
+
+
+.. py:function:: is_inst_master(ref_path)
+
+
+.. py:function:: contains_inst_masters(ref_path)
+
+
+.. py:function:: contains_valid_assets(ref_path)
+
+
+.. py:function:: traverse_ref_hierarchy(ref_path)
+
+
+.. py:function:: traverse_ref_parents(ref_path)
+
+
+.. py:function:: traverse_hierarchy_to_cache(ref_path)
+
+
+.. py:function:: get_ref_gpu_nodes(top_ref_path)
+
+
+.. py:function:: get_cache_objs(top_ref_path)
+
+
+.. py:function:: remove_gpu_nul_if_empty()
+
+
+.. py:function:: delete_ref_gpu_nodes(ref_path)
+
+
+.. py:function:: ref_to_gpu(ref_path, start, end)
+
+
+.. py:function:: create_gpu_hierarchy(top_ref_path, start, end, import_gpus=True)
+
+
+.. py:function:: poly_reduce_ref(top_ref_path)
+
+
+.. py:function:: export_gpu_cache(ref_path, start, end)
+
+
+.. py:function:: get_ref_node_by_namespace(nsp)
+
+
+.. py:function:: import_gpu_cache(gpu_path)
+
+
+.. py:function:: load_invalid_gpu_nodes()
+
+
+.. py:function:: switch_all_gpu_to_rdr()
+
+
+.. py:function:: get_objs_in_view(cam, start_frame, end_frame, show_progress_bar=False)
+
+
+.. py:function:: run_frustum(cam, start_frame, end_frame, exclude=('CHR', 'CAM'), show_progress_bar=False)
+
+

@@ -1,0 +1,73 @@
+ :py:mod:`oa_asset_builder.helpers`
+======================================================================
+
+.. py:module:: oa_asset_builder.helpers
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.helpers.build_asset_ui
+   oa_asset_builder.helpers.import_asset_ui
+   oa_asset_builder.helpers.install_asset
+   oa_asset_builder.helpers.publish_selected_assets
+   oa_asset_builder.helpers.publish_asset
+   oa_asset_builder.helpers._publish_bound_palettes
+   oa_asset_builder.helpers.create_asset_in_shot
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.helpers.this
+   oa_asset_builder.helpers._log
+   oa_asset_builder.helpers._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:function:: build_asset_ui()
+
+
+.. py:function:: import_asset_ui()
+
+
+.. py:function:: install_asset(asset_description)
+
+
+.. py:function:: publish_selected_assets()
+
+
+.. py:function:: publish_asset(asset_node, comment='')
+
+   Function called when the user asks to publish the scene to the server.
+
+
+.. py:function:: _publish_bound_palettes(asset_node, comment='')
+
+
+.. py:function:: create_asset_in_shot(parent, asset_description)
+
+

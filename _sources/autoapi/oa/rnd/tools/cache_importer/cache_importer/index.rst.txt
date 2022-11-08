@@ -1,0 +1,104 @@
+ :py:mod:`oa.rnd.tools.cache_importer.cache_importer`
+==========================================================================================================
+
+.. py:module:: oa.rnd.tools.cache_importer.cache_importer
+
+.. autoapi-nested-parse::
+
+   A tool to quickly import a shot's latest caches to check that they're ok.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.cache_importer.cache_importer.CacheImporter
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.cache_importer.cache_importer.disable_display_colors
+   oa.rnd.tools.cache_importer.cache_importer.display_instances
+   oa.rnd.tools.cache_importer.cache_importer.strip_version
+   oa.rnd.tools.cache_importer.cache_importer.import_cache
+   oa.rnd.tools.cache_importer.cache_importer.get_descriptor_info
+   oa.rnd.tools.cache_importer.cache_importer.import_path_caches
+   oa.rnd.tools.cache_importer.cache_importer.run
+
+
+
+.. py:function:: disable_display_colors()
+
+
+.. py:function:: display_instances()
+
+
+.. py:function:: strip_version(path)
+
+   Removes version string from supplied path.
+
+   :param A full path.:
+
+   :returns: A new path without its version.
+
+
+.. py:function:: import_cache(alembic_path)
+
+   Imports supplied abc file.
+
+
+.. py:function:: get_descriptor_info(mainf_path)
+
+
+.. py:function:: import_path_caches(mainf_path)
+
+   Imports latest versions of caches from maINF file.
+
+
+.. py:class:: CacheImporter(root_path, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: tool_name
+      :annotation: = cacheImporter
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: on_shot_double_click(index)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+
+.. py:function:: run()
+
+

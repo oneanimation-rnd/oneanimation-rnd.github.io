@@ -1,0 +1,261 @@
+ :py:mod:`oa.animation.tools.scene_details.layers_treeview`
+======================================================================================================================
+
+.. py:module:: oa.animation.tools.scene_details.layers_treeview
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_details.layers_treeview.LayersTreeView
+   oa.animation.tools.scene_details.layers_treeview.AssetProxyModel
+   oa.animation.tools.scene_details.layers_treeview.AssetTreeModel
+   oa.animation.tools.scene_details.layers_treeview.CellButtonDelegate
+   oa.animation.tools.scene_details.layers_treeview.ButtonDelegate
+   oa.animation.tools.scene_details.layers_treeview.AssetTreeNode
+
+
+
+
+.. py:class:: LayersTreeView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTreeView`
+
+   .. py:attribute:: selection_changed
+      
+
+      
+
+   .. py:method:: mouseReleaseEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: on_menu_on_requested(point)
+
+
+   .. py:method:: on_select_triggered()
+
+
+   .. py:method:: on_show_namespaces_triggered()
+
+
+   .. py:method:: on_visible_triggered(all_layers)
+
+
+   .. py:method:: on_hide_triggered(all_layers)
+
+
+   .. py:method:: on_normal_triggered(all_layers)
+
+
+   .. py:method:: on_template_triggered(all_layers)
+
+
+   .. py:method:: on_reference_triggered(all_layers)
+
+
+   .. py:method:: on_full_triggered(all_layers)
+
+
+   .. py:method:: on_bbox_triggered(all_layers)
+
+
+   .. py:method:: traverse_layers(column, indexes=None)
+
+
+   .. py:method:: set_visibility(index, value)
+
+
+   .. py:method:: set_display_type(index, value)
+
+
+   .. py:method:: set_level_of_detail(index, value)
+
+
+   .. py:method:: get_root_index()
+
+
+   .. py:method:: selected_indexes()
+
+
+   .. py:method:: clear_tree()
+
+
+   .. py:method:: fill_tree(namespaces)
+
+      Reset and add tree node objects.
+
+
+   .. py:method:: expose_buttons()
+
+
+   .. py:method:: update_filter(pattern)
+
+      Updates proxy's filter string.
+
+
+
+.. py:class:: AssetProxyModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QSortFilterProxyModel`
+
+   Proxy used between QTreeView and QAbstractItemModel to filter and sort items.
+
+   .. py:method:: filterAcceptsRow(row, parent_index)
+
+      Built-in function to filter what items are seen.
+
+
+   .. py:method:: has_accepted_children(pattern, tree_node)
+
+      Recursively searches through tree node's children to see if it matches the supplied pattern.
+      This is used so for filtering so that the parent remains visible if it has a valid child.
+
+
+
+.. py:class:: AssetTreeModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractItemModel`
+
+   
+   QTreeView uses this class to handle all its data for best performance.
+
+   .. py:attribute:: ColumnName
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: ColumnVisibility
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: ColumnDisplay
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: ColumnBBox
+      :annotation: = 3
+
+      
+
+   .. py:method:: columnCount(index=QtCore.QModelIndex())
+
+
+   .. py:method:: rowCount(index=QtCore.QModelIndex())
+
+
+   .. py:method:: index(row, column, index=QtCore.QModelIndex())
+
+
+   .. py:method:: parent(index)
+
+
+   .. py:method:: hasChildren(index)
+
+
+   .. py:method:: data(index, role)
+
+      Edit this to determine how the model should get its data from tree nodes.
+
+
+   .. py:method:: setData(index, value, role=QtCore.Qt.EditRole)
+
+      Edit this to determine how the model should set data back onto tree nodes.
+
+
+   .. py:method:: flags(index)
+
+      Sets a role for columns.
+
+
+   .. py:method:: headerData(section, orientation, role)
+
+
+   .. py:method:: get_data(namespaces)
+
+
+   .. py:method:: traverse_all_rows(index=None)
+
+
+
+.. py:class:: CellButtonDelegate(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QPushButton`
+
+   .. py:method:: set_button_label(column)
+
+
+
+.. py:class:: ButtonDelegate(parent)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QStyledItemDelegate`
+
+   .. py:method:: createEditor(parent, option, index)
+
+
+   .. py:method:: clicked(index, button, treeview)
+
+
+
+.. py:class:: AssetTreeNode(parent, node_type, _data, meta_data=None)
+
+   Bases: :py:obj:`object`
+
+   The tree's model will be populated with this.
+
+   .. py:method:: data(column)
+
+      Fetches data by column.
+
+
+   .. py:method:: setData(column, value)
+
+      Sets value to internal data.
+
+
+   .. py:method:: appendChild(node_type, _data, meta_data=None)
+
+      Appends a new AssetTreeNode child to self.
+
+
+   .. py:method:: removeChild(position)
+
+
+   .. py:method:: removeChildren()
+
+
+   .. py:method:: child(row)
+
+      Fetches child by relative row index.
+
+
+   .. py:method:: childrenCount()
+
+      Gets number of children.
+
+
+   .. py:method:: hasChildren()
+
+      Returns True if self has children.
+
+
+   .. py:method:: row()
+
+      Gets self's current row index.
+
+
+   .. py:method:: columnCount()
+
+      Gets self's number of columns.
+
+
+

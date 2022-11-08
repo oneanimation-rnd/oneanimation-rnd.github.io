@@ -1,0 +1,163 @@
+ :py:mod:`oa.general.tools.task_switcher.task_switcher_tool`
+========================================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.task_switcher_tool
+
+.. autoapi-nested-parse::
+
+   Task switcher tool
+
+   Gui interface for artists to switch between tasks.
+
+   It essentially switches Maya's workspace to point to different paths
+   and to setup environment variables used in many tools.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.task_switcher_tool.TaskSwitcherTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.task_switcher_tool.launch
+
+
+
+.. py:class:: TaskSwitcherTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: create_gui()
+
+      Tasks frame
+
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: on_asset_menu_triggered(index, menu)
+
+
+   .. py:method:: on_assets_viewer_double_clicked(index)
+
+
+   .. py:method:: on_shots_viewer_double_clicked(index)
+
+
+   .. py:method:: on_shots_viewer_selection_changed()
+
+
+   .. py:method:: on_rnd_selection_changed(index)
+
+
+   .. py:method:: on_asset_selection_changed(indexes)
+
+
+   .. py:method:: on_shot_selection_changed(indexes)
+
+
+   .. py:method:: on_open_server_path_clicked()
+
+
+   .. py:method:: on_open_browser_path_clicked()
+
+
+   .. py:method:: on_save_scene_clicked()
+
+
+   .. py:method:: on_file_browser_selection_changed(indexes)
+
+
+   .. py:method:: on_local_file_notes_returned()
+
+
+   .. py:method:: on_tabs_changed(tab_index)
+
+
+   .. py:method:: on_create_asset_triggered()
+
+
+   .. py:method:: on_asset_created(data)
+
+
+   .. py:method:: on_asset_archive_triggered()
+
+
+   .. py:method:: on_asset_depreciate_triggered()
+
+
+   .. py:method:: on_find_triggered()
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: wrap_layout(widgets, orientation)
+
+
+   .. py:method:: update_task_label()
+
+      Displays the current task in the interface.
+
+
+   .. py:method:: update_views(index)
+
+
+   .. py:method:: toggle_widgets_vis()
+
+
+   .. py:method:: load_scene(scn_path)
+
+      Loads supplied maya scene.
+
+
+   .. py:method:: save_state()
+
+
+   .. py:method:: restore_state()
+
+
+   .. py:method:: switch_to_selected_task(quiet=True)
+
+
+   .. py:method:: select_current_task()
+
+      Context sensitive to what tab is displaying.
+      It iterates through the treeview's model indexes to match its meta data with the current task.
+
+
+
+.. py:function:: launch()
+
+

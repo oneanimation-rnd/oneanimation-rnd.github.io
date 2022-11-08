@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> bd.storage.errors &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/underscore.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title=" bd.storage.formatter" href="../formatter/index.html" />
+    <link rel="prev" title=" bd.storage.enums" href="../enums/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../api/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.api</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hooks/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.hooks</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.errors</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/autoapi/bd/storage/errors/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-bd.storage.errors">
+<span id="bd-storage-errors"></span><h1> <a class="reference internal" href="#module-bd.storage.errors" title="bd.storage.errors"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bd.storage.errors</span></code></a><a class="headerlink" href="#module-bd.storage.errors" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.StorageError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">StorageError</span></span><a class="headerlink" href="#bd.storage.errors.StorageError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.StorageNotFoundError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">StorageNotFoundError</span></span><a class="headerlink" href="#bd.storage.errors.StorageNotFoundError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.StorageError" title="bd.storage.errors.StorageError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.ItemError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">ItemError</span></span><a class="headerlink" href="#bd.storage.errors.ItemError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.StorageError" title="bd.storage.errors.StorageError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.ItemNotFoundError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">ItemNotFoundError</span></span><a class="headerlink" href="#bd.storage.errors.ItemNotFoundError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.ItemError" title="bd.storage.errors.ItemError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ItemError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.ItemLoadingError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">ItemLoadingError</span></span><a class="headerlink" href="#bd.storage.errors.ItemLoadingError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.ItemError" title="bd.storage.errors.ItemError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ItemError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.InputError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">InputError</span></span><a class="headerlink" href="#bd.storage.errors.InputError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.StorageError" title="bd.storage.errors.StorageError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.MetadataSerializationError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">MetadataSerializationError</span></span><a class="headerlink" href="#bd.storage.errors.MetadataSerializationError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.StorageError" title="bd.storage.errors.StorageError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.ProjectNameNotFound">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">ProjectNameNotFound</span></span><a class="headerlink" href="#bd.storage.errors.ProjectNameNotFound" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.StorageError" title="bd.storage.errors.StorageError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.FormatterError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">FormatterError</span></span><a class="headerlink" href="#bd.storage.errors.FormatterError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.StorageError" title="bd.storage.errors.StorageError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.FormattingError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">FormattingError</span></span><a class="headerlink" href="#bd.storage.errors.FormattingError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.FormatterError" title="bd.storage.errors.FormatterError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FormatterError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.ParsingError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">ParsingError</span></span><a class="headerlink" href="#bd.storage.errors.ParsingError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.FormatterError" title="bd.storage.errors.FormatterError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FormatterError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.NotSequenceItemError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">NotSequenceItemError</span></span><a class="headerlink" href="#bd.storage.errors.NotSequenceItemError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.StorageError" title="bd.storage.errors.StorageError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.SchemaError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">SchemaError</span></span><a class="headerlink" href="#bd.storage.errors.SchemaError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.StorageError" title="bd.storage.errors.StorageError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.SchemaConfigError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">SchemaConfigError</span></span><a class="headerlink" href="#bd.storage.errors.SchemaConfigError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.SchemaError" title="bd.storage.errors.SchemaError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SchemaError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.AccessorError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">AccessorError</span></span><a class="headerlink" href="#bd.storage.errors.AccessorError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.StorageError" title="bd.storage.errors.StorageError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.AccessorCreationError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">AccessorCreationError</span></span><a class="headerlink" href="#bd.storage.errors.AccessorCreationError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.AccessorError" title="bd.storage.errors.AccessorError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AccessorError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.AdapterError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">AdapterError</span></span><a class="headerlink" href="#bd.storage.errors.AdapterError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.StorageError" title="bd.storage.errors.StorageError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.AdapterCreationError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">AdapterCreationError</span></span><a class="headerlink" href="#bd.storage.errors.AdapterCreationError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.AdapterError" title="bd.storage.errors.AdapterError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AdapterError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.ComponentError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">ComponentError</span></span><a class="headerlink" href="#bd.storage.errors.ComponentError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.StorageError" title="bd.storage.errors.StorageError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StorageError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.ComponentRemoveError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">ComponentRemoveError</span></span><a class="headerlink" href="#bd.storage.errors.ComponentRemoveError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.ComponentError" title="bd.storage.errors.ComponentError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComponentError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.RevisionPublishError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">RevisionPublishError</span></span><a class="headerlink" href="#bd.storage.errors.RevisionPublishError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.ComponentError" title="bd.storage.errors.ComponentError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComponentError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.RevisionAcquireError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">RevisionAcquireError</span></span><a class="headerlink" href="#bd.storage.errors.RevisionAcquireError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.ComponentError" title="bd.storage.errors.ComponentError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComponentError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.RevisionCreateError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">RevisionCreateError</span></span><a class="headerlink" href="#bd.storage.errors.RevisionCreateError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.ComponentError" title="bd.storage.errors.ComponentError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComponentError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.UserRequestError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">UserRequestError</span></span><a class="headerlink" href="#bd.storage.errors.UserRequestError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.ComponentError" title="bd.storage.errors.ComponentError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComponentError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.RevisionsGetError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">RevisionsGetError</span></span><a class="headerlink" href="#bd.storage.errors.RevisionsGetError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.ComponentError" title="bd.storage.errors.ComponentError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComponentError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.RevisionOwnershipError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">RevisionOwnershipError</span></span><a class="headerlink" href="#bd.storage.errors.RevisionOwnershipError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.ComponentError" title="bd.storage.errors.ComponentError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComponentError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="bd.storage.errors.RevisionRemoveError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bd.storage.errors.</span></span><span class="sig-name descname"><span class="pre">RevisionRemoveError</span></span><a class="headerlink" href="#bd.storage.errors.RevisionRemoveError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#bd.storage.errors.ComponentError" title="bd.storage.errors.ComponentError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ComponentError</span></code></a></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../enums/index.html" class="btn btn-neutral float-left" title=" bd.storage.enums" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../formatter/index.html" class="btn btn-neutral float-right" title=" bd.storage.formatter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

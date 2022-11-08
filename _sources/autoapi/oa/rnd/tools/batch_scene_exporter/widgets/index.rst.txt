@@ -1,0 +1,17 @@
+ :py:mod:`oa.rnd.tools.batch_scene_exporter.widgets`
+========================================================================================================
+
+.. py:module:: oa.rnd.tools.batch_scene_exporter.widgets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   ascii_progress_bar/index.rst
+   custom_widgets/index.rst
+   syntax/index.rst
+
+

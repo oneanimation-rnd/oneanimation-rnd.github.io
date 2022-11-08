@@ -1,0 +1,38 @@
+ :py:mod:`oa.mat_gui.widgets.search_bar.search_bar`
+======================================================================================================
+
+.. py:module:: oa.mat_gui.widgets.search_bar.search_bar
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.mat_gui.widgets.search_bar.search_bar.SearchBar
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.mat_gui.widgets.search_bar.search_bar.launch_example
+
+
+
+.. py:class:: SearchBar(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: update_completer(values, case_sensitivity=QtCore.Qt.CaseInsensitive, completion_mode=QtWidgets.QCompleter.PopupCompletion, filter_mode=QtCore.Qt.MatchContains)
+
+
+
+.. py:function:: launch_example()
+
+

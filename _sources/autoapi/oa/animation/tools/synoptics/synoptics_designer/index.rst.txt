@@ -1,0 +1,407 @@
+ :py:mod:`oa.animation.tools.synoptics.synoptics_designer`
+====================================================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.synoptics_designer
+
+.. autoapi-nested-parse::
+
+   An interface to design and deploy a gui picker for an asset.
+
+   Author:
+       Jason Labbe
+
+   Bugs:
+       - Need to delete items after spinboxes' input.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner
+   oa.animation.tools.synoptics.synoptics_designer.CustomDoubleSpinBox
+   oa.animation.tools.synoptics.synoptics_designer.CustomSpinBox
+   oa.animation.tools.synoptics.synoptics_designer.View
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.synoptics_designer.launch
+
+
+
+.. py:class:: SynopticsDesigner
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   The designer's main interface.
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: wrap_in_container(widget, caption, orientation=QtCore.Qt.Vertical)
+
+
+   .. py:method:: wrap_layout(widgets, orientation)
+
+      Helper function that takes supplied widgets and wraps them all in a layout.
+
+      :param widgets: A list of QWidgets.
+      :param orientation: QtCore.Qt.Orientation
+
+      :returns: The new layout item.
+
+
+   .. py:method:: on_assign_m_trigger_click()
+
+
+   .. py:method:: del_previous_instance()
+
+      Deletes any previous instances of this class.
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: add_break_line(vertical)
+
+      Adds a line to act as a seperator.
+
+      :param vertical: Orientates it vertically when True, otherwise horizontally.
+      :type vertical: bool
+
+      :returns: The new widget.
+
+
+   .. py:method:: get_icon(file_name, width=None, height=None, transform_mode=QtCore.Qt.SmoothTransformation)
+
+      Simple function to wrap the supplied name as an icon.
+
+      :param fileName: An existing image name.
+      :type fileName: string
+
+      :returns: The file as a QIcon.
+
+
+   .. py:method:: reset()
+
+      Clears items, background, and disables custom shape mode.
+
+
+   .. py:method:: resize_scene(width, height)
+
+
+   .. py:method:: new()
+
+      Resets scene to blank.
+
+
+   .. py:method:: save(path='')
+
+      Saves the current state of the scene to a file.
+
+
+   .. py:method:: load(path='')
+
+      Reads a remote file and loads it into the scene.
+
+
+   .. py:method:: publish()
+
+      Saves the current scene onto the server with the current task.
+
+
+   .. py:method:: delete()
+
+
+   .. py:method:: toggle_grid(state)
+
+
+   .. py:method:: align_x()
+
+      Aligns to last selected item's x axis.
+
+
+   .. py:method:: align_y()
+
+      Aligns to last selected item's y axis.
+
+
+   .. py:method:: mirror_align()
+
+      Aligns to last selected item's mirrored space.
+
+
+   .. py:method:: mirror()
+
+      Flips selected items.
+
+
+   .. py:method:: mirror_copy_items()
+
+      Copies and pastes selected items across the scene's x plane.
+
+
+   .. py:method:: show_help()
+
+
+   .. py:method:: win_size_on_click()
+
+
+   .. py:method:: on_name_change()
+
+      Assigns name with the interface's text field.
+
+
+   .. py:method:: on_spinbox_focus()
+
+      Add an undo block when focusing in on a control.
+
+
+   .. py:method:: on_pos_x_change(value)
+
+      Assigns x position.
+
+
+   .. py:method:: on_pos_y_change(value)
+
+      Assigns y position.
+
+
+   .. py:method:: on_rot_change(value)
+
+      Assigns rotation.
+
+
+   .. py:method:: on_size_change(value)
+
+      Assigns scale.
+
+
+   .. py:method:: on_opacity_change(value)
+
+      Assigns opacity.
+
+
+   .. py:method:: on_z_value_change(value)
+
+      Assigns z value (higher number gets priority to draw in-front).
+
+
+   .. py:method:: on_is_selectable_change(state)
+
+      Assigns if items can be selectable in the viewer.
+
+
+   .. py:method:: on_node_edit(value)
+
+      Assigns a node that the item represents via text field.
+
+
+   .. py:method:: on_assign_node_click()
+
+      Assigns a node that the item represents.
+
+
+   .. py:method:: on_assign_script_click()
+
+      Assigns a script to the last selected item.
+
+
+   .. py:method:: on_assign_selection_set_click()
+
+      Assigns a selection set to the last selected item.
+
+
+   .. py:method:: rename_by_node()
+
+      Items are renamed from their assigned node.
+
+
+   .. py:method:: pre_create_text()
+
+
+   .. py:method:: pre_create_custom_shape()
+
+
+   .. py:method:: set_color()
+
+      Assigns a color from the buttons.
+
+
+   .. py:method:: open_color_picker()
+
+      Opens a window to pick and assign a color.
+
+
+   .. py:method:: pick_bg()
+
+      Opens a file browser to pick an image for the scene's background.
+
+
+   .. py:method:: run()
+
+
+
+.. py:class:: CustomDoubleSpinBox(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDoubleSpinBox`
+
+   Exposes when it is focused.
+
+   .. py:attribute:: focused
+      
+
+      
+
+   .. py:method:: focusInEvent(e)
+
+
+
+.. py:class:: CustomSpinBox(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QSpinBox`
+
+   Exposes when it is focused.
+
+   .. py:attribute:: focused
+      
+
+      
+
+   .. py:method:: focusInEvent(e)
+
+
+
+.. py:class:: View(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QGraphicsView`
+
+   Custom behaviour to the designer's view and scene.
+
+   .. py:method:: create_border_items()
+
+
+   .. py:method:: create_grid_items(count, thickness, color=QtGui.QColor(100, 100, 100))
+
+      Creates a simple grid made out of items.
+
+      :param count: The grid's resolution.
+      :type count: int
+      :param thickness: The size of the grid items.
+      :type thickness: int
+      :param color:
+      :type color: QColor
+
+
+   .. py:method:: show_grid(show_state)
+
+      Toggles the grid's visibility.
+
+      :param show_state:
+      :type show_state: bool
+
+
+   .. py:method:: set_bg_image(path)
+
+      Changes the background's image on an item that can't be interacted with.
+
+      :param path: A full path to an existing image.
+      :type path: string
+
+
+   .. py:method:: selection_changed()
+
+      Sort items by their selected order.
+
+
+   .. py:method:: add_square(color=None, name='square')
+
+
+   .. py:method:: add_rect(color=None, name='rectangle')
+
+
+   .. py:method:: add_circle(color=None, name='circle')
+
+
+   .. py:method:: add_triangle(color=None, name='triangle')
+
+
+   .. py:method:: add_text(txt, font=None, color=None, name='text')
+
+
+   .. py:method:: add_custom_shape()
+
+      Enters shape creation mode where the user can define the points of a new item.
+
+
+   .. py:method:: is_out_of_bounds(item)
+
+      Checks to see if the supplied item is out of the scene's view.
+
+      :param item:
+      :type item: DesignerItem
+
+      :returns: True if it's out view.
+
+
+   .. py:method:: copy_items()
+
+
+   .. py:method:: paste_items(items=None)
+
+
+   .. py:method:: paste_item(item)
+
+      Creates a new item based on the copy's buffer.
+
+      :param item: Override to copy from this item.
+      :type item: DesignerItem
+
+      :returns: The new DesignerItem.
+
+
+   .. py:method:: update_fields_by_last_item()
+
+
+   .. py:method:: add_undo_block()
+
+      Stores a block of data to support an undo.
+
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: mouseReleaseEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+      If an item is being dragged out of bounds, it draws the scene's borders
+      to let the user know that it will be deleted.
+
+
+   .. py:method:: keyPressEvent(e)
+
+
+   .. py:method:: keyReleaseEvent(e)
+
+
+
+.. py:function:: launch()
+
+

@@ -1,0 +1,60 @@
+ :py:mod:`bd.hooks.exceptions`
+============================================================
+
+.. py:module:: bd.hooks.exceptions
+
+
+Module Contents
+---------------
+
+.. py:exception:: HookError(message=None, details=None)
+
+   Bases: :py:obj:`Error`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: InvalidCallbackError(message=None, details=None)
+
+   Bases: :py:obj:`HookError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+   .. py:attribute:: default_message
+      :annotation: = Invalid callback '{callback}' provided for '{hook_name}' hook
+
+      
+
+
+.. py:exception:: CallbackExecutionError(message=None, details=None)
+
+   Bases: :py:obj:`HookError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+   .. py:attribute:: default_message
+      :annotation: = Failed to execute callback '{callback}' for hook '{hook_name}'. {exc_msg}
+
+      
+
+
+.. py:exception:: HookNotFoundError(message=None, details=None)
+
+   Bases: :py:obj:`HookError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+   .. py:attribute:: default_message
+      :annotation: = Unable to find a hook '{hook_name}'
+
+      
+
+

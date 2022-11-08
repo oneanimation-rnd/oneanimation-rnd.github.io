@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.general.tools.shield.checks &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.general.tools.shield.checks.assets" href="assets/index.html" />
+    <link rel="prev" title=" oa.general.tools.shield" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/general/tools/shield/checks/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.general.tools.shield.checks">
+<span id="oa-general-tools-shield-checks"></span><h1> <a class="reference internal" href="#module-oa.general.tools.shield.checks" title="oa.general.tools.shield.checks"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks</span></code></a><a class="headerlink" href="#module-oa.general.tools.shield.checks" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="assets/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assets/anim_curves/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.anim_curves</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/anim_lib_check/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.anim_lib_check</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/asset_structure_names/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.asset_structure_names</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/bad_history/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.bad_history</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/color_management/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.color_management</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/control_pivot_offsets/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.control_pivot_offsets</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/corrupt_skin_clusters/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.corrupt_skin_clusters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/ctrl_set_check/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.ctrl_set_check</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/default_materials/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.default_materials</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/dependency_cycles/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.dependency_cycles</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/double_transforms/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.double_transforms</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/duplicate_names/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.duplicate_names</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/editing_blendshapes/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.editing_blendshapes</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/empty_layers/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.empty_layers</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/empty_resolutions/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.empty_resolutions</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/expressions/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.expressions</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/floating_namespaces/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.floating_namespaces</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/frame_rate/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.frame_rate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/frozen_controls/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.frozen_controls</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/geometry_tag_id/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.geometry_tag_id</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/has_virus/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.has_virus</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/instance_masters/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.instance_masters</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/instances/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.instances</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/is_mental_ray_loaded/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.is_mental_ray_loaded</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/is_rig_scalable/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.is_rig_scalable</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/is_turtle_enabled/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.is_turtle_enabled</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/is_visibility_keyable/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.is_visibility_keyable</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/large_textures/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.large_textures</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/local_reference_paths/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.local_reference_paths</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/material_names/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.material_names</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/material_tag_id/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.material_tag_id</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/mesh_no_verts/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.mesh_no_verts</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/mesh_pivot_offsets/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.mesh_pivot_offsets</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/mirror_anim_mapping/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.mirror_anim_mapping</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/missing_geo/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.missing_geo</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/multiple_orig_nodes/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.multiple_orig_nodes</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/multiple_roots/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.multiple_roots</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/multiple_uv_sets/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.multiple_uv_sets</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/naming_conventions/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.naming_conventions</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/negative_scale/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.negative_scale</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/no_inherit_transforms/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.no_inherit_transforms</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/no_poly_count/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.no_poly_count</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/no_resolutions/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.no_resolutions</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/non_local_connections/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.non_local_connections</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/non_manifold/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.non_manifold</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/open_cl/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.open_cl</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/rdr_loaded/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.rdr_loaded</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/references/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.references</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/render_set_check/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.render_set_check</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/render_setup/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.render_setup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/root_exists/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.root_exists</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/scale_on_render_objs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.scale_on_render_objs</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/stragglers/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.stragglers</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/subdivisions/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.subdivisions</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/unknown_plugins/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.unknown_plugins</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/unused_influences/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.unused_influences</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets/weak_references/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.assets.weak_references</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scenes/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scenes/asset_project/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.asset_project</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/blend_attribute_keys/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.blend_attribute_keys</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/camera_exists/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.camera_exists</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/camera_local_pivots/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.camera_local_pivots</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/duplicated_meshes/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.duplicated_meshes</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/frame_rate/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.frame_rate</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/geom_ids/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.geom_ids</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/get_scene_cp_shots/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.get_scene_cp_shots</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/is_env_in_scene/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.is_env_in_scene</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/is_mental_ray_loaded/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.is_mental_ray_loaded</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/latest_assets/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.latest_assets</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/local_assets/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.local_assets</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/local_gpu_nodes/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.local_gpu_nodes</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/locked_references/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.locked_references</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/muted_dof/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.muted_dof</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/namespace_instance_number/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.namespace_instance_number</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/no_poly_count/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.no_poly_count</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/reference_namespace/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.reference_namespace</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/scene_cp_exists/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.scene_cp_exists</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scenes/unloaded_references/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.checks.scenes.unloaded_references</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title=" oa.general.tools.shield" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="assets/index.html" class="btn btn-neutral float-right" title=" oa.general.tools.shield.checks.assets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

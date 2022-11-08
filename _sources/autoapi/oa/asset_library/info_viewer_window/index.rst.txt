@@ -1,0 +1,167 @@
+ :py:mod:`oa.asset_library.info_viewer_window`
+============================================================================================
+
+.. py:module:: oa.asset_library.info_viewer_window
+
+.. autoapi-nested-parse::
+
+   Reads data from the database to fill in a treeview with asset versions.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_library.info_viewer_window.ColumnIndex
+   oa.asset_library.info_viewer_window.InfoViewer
+   oa.asset_library.info_viewer_window.TreeView
+   oa.asset_library.info_viewer_window.ProxyModel
+   oa.asset_library.info_viewer_window.TreeModel
+   oa.asset_library.info_viewer_window.TreeNode
+   oa.asset_library.info_viewer_window.ModelDescriptionEditor
+
+
+
+
+.. py:class:: ColumnIndex
+
+   .. py:attribute:: Asset
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Comment
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: Date
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: User
+      :annotation: = 3
+
+      
+
+
+.. py:class:: InfoViewer(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   Interface to show an asset's versions info.
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: reset()
+
+      Resets all widgets back to normal to show no active selection.
+
+
+   .. py:method:: display_info(id, project, asset_type, level, category, name, thumbnail, description, depreciated)
+
+      Gets asset from the database and displays its versions in the treeview.
+
+
+   .. py:method:: on_model_desc_clicked()
+
+
+
+.. py:class:: TreeView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTreeView`
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: get_tree_node(index)
+
+
+   .. py:method:: fill_tree(project, name, type, category, level)
+
+      Reset, collect, and add tree node objects.
+
+
+   .. py:method:: on_header_section_clicked(column)
+
+
+   .. py:method:: on_context_menu_triggered(point)
+
+      Creates right-click menu at the supplied point.
+
+
+   .. py:method:: on_double_clicked(index)
+
+
+   .. py:method:: on_import_triggered()
+
+
+   .. py:method:: on_open_browser_triggered()
+
+
+   .. py:method:: on_open_descriptor_triggered()
+
+
+   .. py:method:: on_copy_path_to_clipboard_triggered()
+
+
+
+.. py:class:: ProxyModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QSortFilterProxyModel`
+
+   .. py:method:: lessThan(left_index, right_index)
+
+      Built-in function to determine how to sort column.
+
+
+   .. py:method:: filterAcceptsRow(row, parent_index)
+
+
+
+.. py:class:: TreeModel(parent=None)
+
+   Bases: :py:obj:`oa.asset_library.abstract_widgets.abstract_tree_model.AbstractTreeModel`
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: flags(index)
+
+
+   .. py:method:: clear_data()
+
+
+   .. py:method:: get_data(project, name, asset_type, category, level)
+
+
+
+.. py:class:: TreeNode(node_type, meta_data=None, _data=None, parent=None)
+
+   Bases: :py:obj:`oa.asset_library.abstract_widgets.abstract_tree_node.AbstractTreeNode`
+
+   .. py:method:: appendChild(node_type, meta_data, _data)
+
+
+
+.. py:class:: ModelDescriptionEditor(txt, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: text()
+
+
+

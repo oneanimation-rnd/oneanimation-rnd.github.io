@@ -1,0 +1,22 @@
+ :py:mod:`bd.api.auth`
+============================================
+
+.. py:module:: bd.api.auth
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.api.auth.authenticator
+
+
+
+.. py:function:: authenticator()
+
+

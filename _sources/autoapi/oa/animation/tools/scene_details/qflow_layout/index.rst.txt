@@ -1,0 +1,86 @@
+ :py:mod:`oa.animation.tools.scene_details.qflow_layout`
+================================================================================================================
+
+.. py:module:: oa.animation.tools.scene_details.qflow_layout
+
+.. autoapi-nested-parse::
+
+   Original code from Qt's dev team.
+
+   Ported from c++ to python:
+       https://doc.qt.io/qt-4.8/qt-layouts-flowlayout-flowlayout-cpp.html
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_details.qflow_layout.QFlowLayout
+
+
+
+
+.. py:class:: QFlowLayout(parent=None, margin=-1, hspacing=-1, vspacing=-1)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QLayout`
+
+   .. py:method:: __del__()
+
+
+   .. py:method:: addItem(item)
+
+
+   .. py:method:: horizontalSpacing()
+
+
+   .. py:method:: verticalSpacing()
+
+
+   .. py:method:: count()
+
+
+   .. py:method:: itemAt(index)
+
+
+   .. py:method:: item(index)
+
+
+   .. py:method:: takeAt(index)
+
+
+   .. py:method:: clear()
+
+
+   .. py:method:: expandingDirections()
+
+
+   .. py:method:: hasHeightForWidth()
+
+
+   .. py:method:: heightForWidth(width)
+
+
+   .. py:method:: setGeometry(rect)
+
+
+   .. py:method:: sizeHint()
+
+
+   .. py:method:: minimumSize()
+
+
+   .. py:method:: doLayout(rect, testonly)
+
+
+   .. py:method:: smartSpacing(pm)
+
+
+   .. py:method:: findWidget(widget)
+
+
+

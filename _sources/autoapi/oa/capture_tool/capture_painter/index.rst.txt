@@ -1,0 +1,443 @@
+ :py:mod:`oa.capture_tool.capture_painter`
+====================================================================================
+
+.. py:module:: oa.capture_tool.capture_painter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.capture_tool.capture_painter.CapturePainter
+   oa.capture_tool.capture_painter.TextInputDialog
+   oa.capture_tool.capture_painter.CustomSpinBox
+   oa.capture_tool.capture_painter.CustomDoubleSpinBox
+   oa.capture_tool.capture_painter.CommandTimeTrimmed
+   oa.capture_tool.capture_painter.CommandTimeChange
+   oa.capture_tool.capture_painter.CommandClear
+   oa.capture_tool.capture_painter.CommandDraw
+   oa.capture_tool.capture_painter.CommandText
+   oa.capture_tool.capture_painter.Image
+   oa.capture_tool.capture_painter.TimeLine
+   oa.capture_tool.capture_painter.ColorWidget
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.capture_tool.capture_painter.app
+
+
+.. py:class:: CapturePainter(file_path, mouse_positions, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   Core tool to accept a list of QPixmaps and allow the user to edit them before exporting to a clip or image.
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: BrushMode
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: TextMode
+      :annotation: = 1
+
+      
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: wheelEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: set_preview_color_to_stroke()
+
+
+   .. py:method:: set_gui_for_idle()
+
+
+   .. py:method:: set_gui_for_processing()
+
+
+   .. py:method:: add_icon_button(icon_name, icon_size=30, width=30)
+
+
+   .. py:method:: close_from_no_imgs()
+
+
+   .. py:method:: undo()
+
+
+   .. py:method:: redo()
+
+
+   .. py:method:: set_img(pixmap)
+
+
+   .. py:method:: add_time_action(old_time, new_time)
+
+
+   .. py:method:: update_undo_buttons()
+
+
+   .. py:method:: paint_text(txt, pixmap, x, y)
+
+
+   .. py:method:: begin_text_mode(default_txt)
+
+
+   .. py:method:: end_text_mode()
+
+
+   .. py:method:: show_preview_text()
+
+
+   .. py:method:: commit_text()
+
+
+   .. py:method:: cancel_text()
+
+
+   .. py:method:: ask_for_save_path()
+
+
+   .. py:method:: save_clip(output_path)
+
+
+   .. py:method:: save_img(output_path)
+
+
+   .. py:method:: on_save_clicked()
+
+
+   .. py:method:: remap_range(old_value, old_min, old_max, new_min, new_max)
+
+
+   .. py:method:: on_size_changed(weight)
+
+
+   .. py:method:: on_text_size_changed(point_size)
+
+
+   .. py:method:: on_font_changed(font)
+
+
+   .. py:method:: on_color_moved(color)
+
+
+   .. py:method:: on_play_timer_stopped()
+
+
+   .. py:method:: on_play_timer_started()
+
+
+   .. py:method:: on_clear_clicked()
+
+
+   .. py:method:: on_trim_start_clicked()
+
+
+   .. py:method:: on_trim_end_clicked()
+
+
+   .. py:method:: on_time_changed(new_img_index)
+
+
+   .. py:method:: on_play_timeout()
+
+
+   .. py:method:: on_text_clicked()
+
+
+   .. py:method:: show_cursor_on_toggled()
+
+
+   .. py:method:: on_img_mouse_pressed(event)
+
+
+   .. py:method:: on_img_mouse_moved(event)
+
+
+   .. py:method:: on_img_mouse_released(event)
+
+
+
+.. py:class:: TextInputDialog(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   A pop-up dialog to get input from user to type-in text.
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: get_text()
+
+
+   .. py:method:: accept_and_close()
+
+
+
+.. py:class:: CustomSpinBox(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QSpinBox`
+
+   A typical spinbox that loses focus when enter is pressed.
+
+   .. py:method:: keyPressEvent(event)
+
+
+
+.. py:class:: CustomDoubleSpinBox(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDoubleSpinBox`
+
+   A typical spinbox that loses focus when enter is pressed.
+
+   .. py:method:: keyPressEvent(event)
+
+
+
+.. py:class:: CommandTimeTrimmed(trim_type, old_trim, new_trim, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QUndoCommand`
+
+   An action to trim the timeline.
+
+   .. py:attribute:: Start
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: End
+      :annotation: = 1
+
+      
+
+   .. py:method:: redo()
+
+
+   .. py:method:: undo()
+
+
+
+.. py:class:: CommandTimeChange(old_time, new_time, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QUndoCommand`
+
+   An action to switch to a new frame on the timeline.
+
+   .. py:method:: redo()
+
+
+   .. py:method:: undo()
+
+
+
+.. py:class:: CommandClear(old_pixmap, index, is_marked, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QUndoCommand`
+
+   An action to clear and revert all edits of a pixmap to its original image.
+
+   .. py:method:: redo()
+
+
+   .. py:method:: undo()
+
+
+
+.. py:class:: CommandDraw(frames_data, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QUndoCommand`
+
+   An action to change multiple pixmaps to new pixmaps that have been modified.
+
+   .. py:method:: redo()
+
+
+   .. py:method:: undo()
+
+
+
+.. py:class:: CommandText(frame, old_pixmap, new_pixmap, is_marked, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QUndoCommand`
+
+   An action to add text to a pixmap.
+
+   .. py:method:: redo()
+
+
+   .. py:method:: undo()
+
+
+
+.. py:class:: Image(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QLabel`
+
+   The main image viewer that will receive inputs to be drawn on.
+
+   .. py:attribute:: mouse_pressed
+      
+
+      
+
+   .. py:attribute:: mouse_moved
+      
+
+      
+
+   .. py:attribute:: mouse_released
+      
+
+      
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: mouseReleaseEvent(event)
+
+
+   .. py:method:: paintEvent(event)
+
+
+
+.. py:class:: TimeLine(count, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   A widget where each frame represents an image from the list of pixmaps.
+
+   .. py:attribute:: time_changed
+      
+
+      
+
+   .. py:attribute:: time_trimmed
+      
+
+      
+
+   .. py:method:: get_hud_frame_number()
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: mouseReleaseEvent(event)
+
+
+   .. py:method:: paintEvent(event)
+
+
+   .. py:method:: set_time(index, respect_trim=False)
+
+
+   .. py:method:: prev_frame()
+
+
+   .. py:method:: next_frame()
+
+
+   .. py:method:: prev_edit_frame()
+
+
+   .. py:method:: next_edit_frame()
+
+
+   .. py:method:: map_to_frame_index(event)
+
+
+   .. py:method:: trim_start_frame(index)
+
+
+   .. py:method:: trim_end_frame(index)
+
+
+
+.. py:class:: ColorWidget(fixed_size, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   A color picker that uses HSV color space.
+
+   .. py:attribute:: color_moved
+      
+
+      
+
+   .. py:method:: paintEvent(event)
+
+
+   .. py:method:: remap(val, old_min, old_max, new_min, new_max)
+
+
+   .. py:method:: get_uvs()
+
+
+   .. py:method:: offset_uvs(u, v)
+
+
+   .. py:method:: map_pos_to_hue(x)
+
+
+   .. py:method:: map_pos_to_saturation(y)
+
+
+   .. py:method:: map_pos_to_brightness(y)
+
+
+   .. py:method:: map_pos_to_color(x, y, alpha=100)
+
+
+   .. py:method:: map_uvs_to_pos(u, v)
+
+
+   .. py:method:: set_pos(pos)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: mousePressEvent(event)
+
+
+
+.. py:data:: app
+   
+
+   
+

@@ -1,0 +1,102 @@
+ :py:mod:`oa.rnd.tools.camera_exporter.camera_exporter_gui`
+======================================================================================================================
+
+.. py:module:: oa.rnd.tools.camera_exporter.camera_exporter_gui
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.camera_exporter.camera_exporter_gui.CameraExporterDialog
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.camera_exporter.camera_exporter_gui.maya_main_window
+
+
+
+.. py:function:: maya_main_window()
+
+
+.. py:class:: CameraExporterDialog(parent=maya_main_window())
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: _instance
+      
+
+      
+
+   .. py:attribute:: _on_open_cb_id
+      
+
+      
+
+   .. py:attribute:: _on_new_cb_id
+      
+
+      
+
+   .. py:method:: show_dialog()
+      :classmethod:
+
+
+   .. py:method:: add_callbacks()
+      :classmethod:
+
+
+   .. py:method:: _remove_callbacks()
+      :classmethod:
+
+
+   .. py:method:: _on_scene_open(*args, **kwargs)
+      :classmethod:
+
+      Gets called on loading or starting a new scene.
+      Forces any open instance to be closed.
+
+
+   .. py:method:: _on_scene_new(*args, **kwargs)
+      :classmethod:
+
+
+   .. py:method:: _init_widgets()
+
+
+   .. py:method:: _init_layout()
+
+
+   .. py:method:: _init_connections()
+
+
+   .. py:method:: _refresh()
+
+
+   .. py:method:: _on_selection_changed(*args)
+
+
+   .. py:method:: _on_export()
+
+
+   .. py:method:: _choose_output_dir()
+
+      Open file dialog to choose an output directory.
+
+      :returns: output file path.
+      :rtype: str
+
+
+   .. py:method:: closeEvent(event)
+
+
+

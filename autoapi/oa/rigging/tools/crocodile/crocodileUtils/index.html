@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.rigging.tools.crocodile.crocodileUtils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.rigging.tools.edit_skin" href="../../edit_skin/index.html" />
+    <link rel="prev" title=" oa.rigging.tools.crocodile.crocodile" href="../crocodile/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.crocodile</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/rigging/tools/crocodile/crocodileUtils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.rigging.tools.crocodile.crocodileUtils">
+<span id="oa-rigging-tools-crocodile-crocodileutils"></span><h1> <a class="reference internal" href="#module-oa.rigging.tools.crocodile.crocodileUtils" title="oa.rigging.tools.crocodile.crocodileUtils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils</span></code></a><a class="headerlink" href="#module-oa.rigging.tools.crocodile.crocodileUtils" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.stealSkinWeights" title="oa.rigging.tools.crocodile.crocodileUtils.stealSkinWeights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stealSkinWeights</span></code></a>(fromSkin, toSkin[, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.stealSkinning" title="oa.rigging.tools.crocodile.crocodileUtils.stealSkinning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stealSkinning</span></code></a>(source, targets[, surfaceAssociation])</p></td>
+<td><p>This will use the copy skin weights command to steal the skinning.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.stealShapes" title="oa.rigging.tools.crocodile.crocodileUtils.stealShapes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stealShapes</span></code></a>(source, target[, lastWrapSettings, ...])</p></td>
+<td><p>This will steal the shapes from the 2nd selected object and pass them to</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.stealUvs" title="oa.rigging.tools.crocodile.crocodileUtils.stealUvs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stealUvs</span></code></a>(source, target[, sampleSpace, searchMethod])</p></td>
+<td><p>This will use the transferAttributes command to steal UV's.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.stealMaterials" title="oa.rigging.tools.crocodile.crocodileUtils.stealMaterials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stealMaterials</span></code></a>(source, target[, searchMethod])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.stealAll" title="oa.rigging.tools.crocodile.crocodileUtils.stealAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stealAll</span></code></a>(source, target)</p></td>
+<td><p>This will run all of the operations at once.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.exposePlug" title="oa.rigging.tools.crocodile.crocodileUtils.exposePlug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exposePlug</span></code></a>(plug, value)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.restorePlug" title="oa.rigging.tools.crocodile.crocodileUtils.restorePlug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restorePlug</span></code></a>(plug, values)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.extractRenderMeshes" title="oa.rigging.tools.crocodile.crocodileUtils.extractRenderMeshes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extractRenderMeshes</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.exportRenderMeshesToTemp" title="oa.rigging.tools.crocodile.crocodileUtils.exportRenderMeshesToTemp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exportRenderMeshesToTemp</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.importRenderMeshesFromTemp" title="oa.rigging.tools.crocodile.crocodileUtils.importRenderMeshesFromTemp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">importRenderMeshesFromTemp</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.displayTextures" title="oa.rigging.tools.crocodile.crocodileUtils.displayTextures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">displayTextures</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.restoreOldMaterials" title="oa.rigging.tools.crocodile.crocodileUtils.restoreOldMaterials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restoreOldMaterials</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.createCheckeredMaterial" title="oa.rigging.tools.crocodile.crocodileUtils.createCheckeredMaterial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createCheckeredMaterial</span></code></a>(uvSize)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.applyCheckeredMaterial" title="oa.rigging.tools.crocodile.crocodileUtils.applyCheckeredMaterial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">applyCheckeredMaterial</span></code></a>([uvSize])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.crocodile.crocodileUtils.transferAllUvs" title="oa.rigging.tools.crocodile.crocodileUtils.transferAllUvs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transferAllUvs</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py exception">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.MissingDeformer">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">MissingDeformer</span></span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.MissingDeformer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">BaseException</span></code></p>
+<p>Common base class for all exceptions</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.stealSkinWeights">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">stealSkinWeights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fromSkin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">toSkin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surfaceAssociation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'closestPoint'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">no_mirror</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.stealSkinWeights" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.stealSkinning">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">stealSkinning</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surfaceAssociation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'closestPoint'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.stealSkinning" title="Permalink to this definition"></a></dt>
+<dd><p>This will use the copy skin weights command to steal the skinning.
+It will automate all of the preparation work required in order to get this
+to work properly.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.stealShapes">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">stealShapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lastWrapSettings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thresh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxDist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclusive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoThresh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">falloff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.stealShapes" title="Permalink to this definition"></a></dt>
+<dd><p>This will steal the shapes from the 2nd selected object and pass them to
+the first, as well as reconnect all of the original driving attributes.
+Can define wrap’s settings using optional parameters by disabling &#64;lastWrapSettings</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.stealUvs">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">stealUvs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampleSpace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchMethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.stealUvs" title="Permalink to this definition"></a></dt>
+<dd><p>This will use the transferAttributes command to steal UV’s.
+Argument “space” refers to the sampleSpace used in the transfer.  0 = World Space, 5 = Topology</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.stealMaterials">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">stealMaterials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">searchMethod</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.stealMaterials" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.stealAll">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">stealAll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.stealAll" title="Permalink to this definition"></a></dt>
+<dd><p>This will run all of the operations at once.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.exposePlug">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">exposePlug</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plug</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.exposePlug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.restorePlug">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">restorePlug</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plug</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.restorePlug" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.extractRenderMeshes">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">extractRenderMeshes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.extractRenderMeshes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.exportRenderMeshesToTemp">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">exportRenderMeshesToTemp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.exportRenderMeshesToTemp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.importRenderMeshesFromTemp">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">importRenderMeshesFromTemp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.importRenderMeshesFromTemp" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.displayTextures">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">displayTextures</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.displayTextures" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.restoreOldMaterials">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">restoreOldMaterials</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.restoreOldMaterials" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.createCheckeredMaterial">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">createCheckeredMaterial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uvSize</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.createCheckeredMaterial" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.applyCheckeredMaterial">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">applyCheckeredMaterial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uvSize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">15</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.applyCheckeredMaterial" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.crocodile.crocodileUtils.transferAllUvs">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.crocodile.crocodileUtils.</span></span><span class="sig-name descname"><span class="pre">transferAllUvs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.crocodile.crocodileUtils.transferAllUvs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../crocodile/index.html" class="btn btn-neutral float-left" title=" oa.rigging.tools.crocodile.crocodile" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../edit_skin/index.html" class="btn btn-neutral float-right" title=" oa.rigging.tools.edit_skin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

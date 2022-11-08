@@ -1,0 +1,26 @@
+ :py:mod:`oa.palette`
+==========================================
+
+.. py:module:: oa.palette
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   scripts/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   binding/index.rst
+   palette/index.rst
+   utils/index.rst
+
+

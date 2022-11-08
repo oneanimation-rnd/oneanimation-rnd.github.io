@@ -1,0 +1,149 @@
+ :py:mod:`oa.rnd.tools.joystick_widget.joystick_widget`
+==============================================================================================================
+
+.. py:module:: oa.rnd.tools.joystick_widget.joystick_widget
+
+.. autoapi-nested-parse::
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.joystick_widget.joystick_widget.Flags
+   oa.rnd.tools.joystick_widget.joystick_widget.JoysticWidget
+   oa.rnd.tools.joystick_widget.joystick_widget.Window
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.joystick_widget.joystick_widget.remap
+   oa.rnd.tools.joystick_widget.joystick_widget.constrain
+   oa.rnd.tools.joystick_widget.joystick_widget.open_instance
+
+
+
+.. py:function:: remap(val, in_min, in_max, out_min, out_max)
+
+
+.. py:function:: constrain(value, min_val, max_val)
+
+
+.. py:class:: Flags
+
+   .. py:attribute:: Min
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Mid
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: Max
+      :annotation: = 2
+
+      
+
+
+.. py:class:: JoysticWidget(label='', default_x=Flags.Mid, default_y=Flags.Mid, back_color=None, fore_color=None, display_values=True, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QFrame`
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: hideEvent(event)
+
+
+   .. py:method:: resizeEvent(event)
+
+
+   .. py:method:: paintEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: mouseReleaseEvent(event)
+
+
+   .. py:method:: update_values_by_view_point(x, y)
+
+
+   .. py:method:: viewport_x_to_value_point(x)
+
+
+   .. py:method:: viewport_y_to_value_point(y)
+
+
+   .. py:method:: viewport_to_value_point(x, y)
+
+
+   .. py:method:: update_maya_node()
+
+
+   .. py:method:: unregister_plugs()
+
+
+   .. py:method:: register_plugs()
+
+
+   .. py:method:: setup_plugs(plug_x, min_x, mid_x, max_x, plug_y, min_y, mid_y, max_y)
+
+
+   .. py:method:: value_x_to_plug()
+
+
+   .. py:method:: value_y_to_plug()
+
+
+   .. py:method:: plug_x_to_value()
+
+
+   .. py:method:: plug_y_to_value()
+
+
+   .. py:method:: plug_x_callback()
+
+
+   .. py:method:: plug_y_callback()
+
+
+
+.. py:class:: Window(nsp, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: wrap_layout(widgets, orientation)
+
+      Helper function that takes supplied widgets and wraps them all in a layout.
+
+      :param widgets: A list of QWidgets.
+      :param orientation: QtCore.Qt.Orientation
+
+      :returns: The new layout item.
+
+
+
+.. py:function:: open_instance()
+
+   Temp function to only run the tool with any of the Oddbod characters.
+
+

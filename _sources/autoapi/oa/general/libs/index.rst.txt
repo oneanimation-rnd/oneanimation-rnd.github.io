@@ -1,0 +1,31 @@
+ :py:mod:`oa.general.libs`
+====================================================
+
+.. py:module:: oa.general.libs
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   descriptors/index.rst
+   project_settings/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   clean_utils/index.rst
+   code_bouncer/index.rst
+   global_settings/index.rst
+   kill_turtle/index.rst
+   server_info/index.rst
+   transfer_utils/index.rst
+   user_avatars/index.rst
+
+

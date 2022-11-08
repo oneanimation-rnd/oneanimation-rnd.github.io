@@ -1,0 +1,35 @@
+ :py:mod:`oa.animation.libs.anim_curves.delete_keys`
+========================================================================================================
+
+.. py:module:: oa.animation.libs.anim_curves.delete_keys
+
+.. autoapi-nested-parse::
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.libs.anim_curves.delete_keys.delete_asset_keys
+
+
+
+.. py:function:: delete_asset_keys(namespaces=[], selected_only=False)
+
+   Deletes keys from an asset.
+
+   :param namespaces: A list of namespaces to operate on.
+   :type namespaces: string[]
+   :param selected_only: If true, it will only set keys on selected controls.
+   :type selected_only: bool
+
+

@@ -1,0 +1,127 @@
+ :py:mod:`oa_shot_builder.libs.utils`
+==========================================================================
+
+.. py:module:: oa_shot_builder.libs.utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.utils.get_context_short_name
+   oa_shot_builder.libs.utils._hide_subnet_inputs
+   oa_shot_builder.libs.utils.get_lightrig_for_asset
+   oa_shot_builder.libs.utils.publish_lightrig_for_asset
+   oa_shot_builder.libs.utils.get_lightrig_types_for_asset
+   oa_shot_builder.libs.utils.get_guid
+   oa_shot_builder.libs.utils.get_scene_name
+   oa_shot_builder.libs.utils.fit_timeline
+   oa_shot_builder.libs.utils.get_source_scene_path
+   oa_shot_builder.libs.utils.get_selected_contexts
+   oa_shot_builder.libs.utils.convert_to_description_path
+   oa_shot_builder.libs.utils.publish_context_gallery
+   oa_shot_builder.libs.utils.save_context_to_gallery
+   oa_shot_builder.libs.utils.load_context_from_gallery
+   oa_shot_builder.libs.utils.get_shot_context_identifier
+   oa_shot_builder.libs.utils.get_shot_context_item
+   oa_shot_builder.libs.utils.create_structure_subnet
+   oa_shot_builder.libs.utils.get_structure_subnet
+   oa_shot_builder.libs.utils.set_viewport_camera
+   oa_shot_builder.libs.utils.freeze_definitions
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.utils.this
+   oa_shot_builder.libs.utils._scanned_dirs
+   oa_shot_builder.libs.utils._context_map
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _scanned_dirs
+   
+
+   
+
+.. py:data:: _context_map
+   
+
+   
+
+.. py:function:: get_context_short_name(long_name)
+
+
+.. py:function:: _hide_subnet_inputs(subnet, num_hidden_inputs=3)
+
+
+.. py:function:: get_lightrig_for_asset(node, lightrig_type)
+
+
+.. py:function:: publish_lightrig_for_asset(node, lightrig_type, comment)
+
+
+.. py:function:: get_lightrig_types_for_asset(node)
+
+
+.. py:function:: get_guid(node)
+
+
+.. py:function:: get_scene_name()
+
+
+.. py:function:: fit_timeline(fr_start, fr_end)
+
+   Fits timeline playback range.
+
+
+.. py:function:: get_source_scene_path(episode=None, sequence=None, shot=None)
+
+   Gets path to the original source scene.
+
+
+.. py:function:: get_selected_contexts(contexts, **kwargs)
+
+
+.. py:function:: convert_to_description_path(source_scn_path)
+
+
+.. py:function:: publish_context_gallery(identifier=None, context='effects', comment='')
+
+
+.. py:function:: save_context_to_gallery(context, filename)
+
+
+.. py:function:: load_context_from_gallery(gallery_path, context='effects')
+
+
+.. py:function:: get_shot_context_identifier(context, episode=None, sequence=None, shot=None)
+
+
+.. py:function:: get_shot_context_item(context, episode=None, sequence=None, shot=None, version=None)
+
+
+.. py:function:: create_structure_subnet(parent, name)
+
+
+.. py:function:: get_structure_subnet(parent, name)
+
+
+.. py:function:: set_viewport_camera(cam)
+
+
+.. py:function:: freeze_definitions()
+
+

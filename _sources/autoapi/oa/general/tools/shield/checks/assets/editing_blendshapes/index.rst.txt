@@ -1,0 +1,35 @@
+ :py:mod:`oa.general.tools.shield.checks.assets.editing_blendshapes`
+========================================================================================================================================
+
+.. py:module:: oa.general.tools.shield.checks.assets.editing_blendshapes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.shield.checks.assets.editing_blendshapes.Check
+
+
+
+
+.. py:class:: Check
+
+   Bases: :py:obj:`oa.general.tools.shield.templates.check_template.CheckTemplate`
+
+   .. py:method:: run()
+
+      This check fails if it raises any error.
+      Raise script_utils.CheckError to display it in the interface.
+
+
+   .. py:method:: auto_fix()
+
+      Comment this function out if this check shouldn't have an auto-fix.
+
+
+

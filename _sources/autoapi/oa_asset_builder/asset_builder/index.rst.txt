@@ -1,0 +1,30 @@
+ :py:mod:`oa_asset_builder.asset_builder`
+==================================================================================
+
+.. py:module:: oa_asset_builder.asset_builder
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.asset_builder.build
+   oa_asset_builder.asset_builder.update
+   oa_asset_builder.asset_builder.get_type_name
+
+
+
+.. py:function:: build(source_description, force_rebuild_shading=False, parent=None)
+
+
+.. py:function:: update(asset_node, source_description, cache_path=None)
+
+
+.. py:function:: get_type_name(asset_info)
+
+

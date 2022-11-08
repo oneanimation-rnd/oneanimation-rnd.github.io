@@ -1,0 +1,52 @@
+ :py:mod:`oa.animation.tools.spring_tool.spring_settings_dialog`
+================================================================================================================================
+
+.. py:module:: oa.animation.tools.spring_tool.spring_settings_dialog
+
+.. autoapi-nested-parse::
+
+   A simple dialog to set settings for dynamic presets.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.spring_tool.spring_settings_dialog.SpringSettingsDialog
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.spring_tool.spring_settings_dialog.launch
+
+
+
+.. py:class:: SpringSettingsDialog(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: store_settings()
+
+
+   .. py:method:: restore_settings()
+
+
+
+.. py:function:: launch()
+
+

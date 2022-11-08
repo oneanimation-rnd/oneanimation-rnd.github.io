@@ -1,0 +1,15 @@
+ :py:mod:`oa.general.tools.record_script_editor`
+================================================================================================
+
+.. py:module:: oa.general.tools.record_script_editor
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   record_script_editor/index.rst
+
+

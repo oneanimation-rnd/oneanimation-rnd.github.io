@@ -1,0 +1,69 @@
+ :py:mod:`oa.asset_builder.asset_builder`
+==================================================================================
+
+.. py:module:: oa.asset_builder.asset_builder
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.asset_builder.build
+   oa.asset_builder.asset_builder.update
+   oa.asset_builder.asset_builder.get_type_name
+   oa.asset_builder.asset_builder._create_asset_palette
+   oa.asset_builder.asset_builder._apply_cache
+   oa.asset_builder.asset_builder._set_asset_parms
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.asset_builder.this
+   oa.asset_builder.asset_builder._log
+   oa.asset_builder.asset_builder._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:function:: build(source_description, force_rebuild_shading=False)
+
+
+.. py:function:: update(root_node, source_description, abc_path=None)
+
+
+.. py:function:: get_type_name(asset_info)
+
+
+.. py:function:: _create_asset_palette(source_description, abc_path)
+
+
+.. py:function:: _apply_cache(root_node, abc_path)
+
+
+.. py:function:: _set_asset_parms(root_node, abc_path)
+
+   Sets the asset ui using description info
+
+

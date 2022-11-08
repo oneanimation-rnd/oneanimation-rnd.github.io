@@ -1,0 +1,91 @@
+ :py:mod:`oa.general.libs.code_bouncer`
+==============================================================================
+
+.. py:module:: oa.general.libs.code_bouncer
+
+.. autoapi-nested-parse::
+
+   A module that uses basic validation to block users from running code we don't want them access to.
+
+   Author:
+       Jason Labbe
+
+   Example of usage:
+
+       from oa.general.libs import code_bouncer
+
+       # Raises exception if validation fails.
+       with code_bouncer.CodeBouncer(trusted_groups=["rnd"], password="bW9yb3g=
+   "):
+           # Validation passed and continues execution.
+           print "Hello world!"
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.code_bouncer.CodeBouncer
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.code_bouncer.fetch_password
+   oa.general.libs.code_bouncer.get_user_groups
+
+
+
+.. py:function:: fetch_password(key)
+
+
+.. py:function:: get_user_groups(user)
+
+   Gets and returns a list of groups the supplied user belongs to.
+
+
+.. py:class:: CodeBouncer(msg='Yar not be a TD! Give me ye olde password:', title='Password', trusted_groups=['rnd'], password=fetch_password('maya/passwords/default'), parent=None)
+
+   Bases: :py:obj:`object`
+
+   Use the 'with' statement to use this class.
+
+   :param msg: The message to display in the password window.
+   :type msg: string
+   :param title: The password window's title.
+   :type title: string
+   :param trusted_groups: Ignores password input if the user is a part of any one of these groups.
+   :type trusted_groups: string[]
+   :param password: The password that lets the user through. It's strongly recommended that you at least encode it.
+   :type password: string
+   :param parent:
+   :type parent: QWidget
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(exc_type, exc_val, exc_tb)
+
+
+   .. py:method:: check_validation()
+
+      Prompts user to input password if it's not a member of the trusted group.
+      Raises an exception if validation fails.
+
+
+   .. py:method:: ask_for_password()
+
+      Opens a window with an input field.
+
+      :returns: True if validation was successful.
+
+
+

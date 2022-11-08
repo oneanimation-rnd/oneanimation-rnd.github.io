@@ -1,0 +1,74 @@
+ :py:mod:`oa.animation.tools.constraint_tool.help_dialog`
+==================================================================================================================
+
+.. py:module:: oa.animation.tools.constraint_tool.help_dialog
+
+.. autoapi-nested-parse::
+
+   1. Use the buttons on the bottom to create new constraints (show how to create a constraint)
+   2. Set how you want the constraint's offset control to be displayed with the options below.
+   3. Organize constraints by creating new groups. When you create a new group any selected constraints will move to it. (show how to create a group)
+   4. You can also drag and drop constraints to new groups (show how to drag and drop)
+   5. Apply colors to identify constraints easier at a glance (show how to color)
+   6. Applying a color to a group will also apply it to all of its members (show how to color a group)
+   7. Press delete to delete all selected constraints
+   8. Deleting a group will also delete all of its members
+   9. Use the key buttons to enable or disable a constraint. Enabled constraints will have a white dot and be in bold.
+   10. If a constraint has an unloaded asset it will be colored as red.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool.help_dialog.HelpDialog
+   oa.animation.tools.constraint_tool.help_dialog.MainFrame
+   oa.animation.tools.constraint_tool.help_dialog.Section
+
+
+
+
+.. py:class:: HelpDialog(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: add_page(title, sections)
+
+
+   .. py:method:: to_minimum_size()
+
+
+   .. py:method:: update_page_label()
+
+
+   .. py:method:: prev_page()
+
+
+   .. py:method:: next_page()
+
+
+
+.. py:class:: MainFrame(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: hideEvent(event)
+
+
+
+.. py:class:: Section(img_path, caption)
+
+   Bases: :py:obj:`object`
+
+

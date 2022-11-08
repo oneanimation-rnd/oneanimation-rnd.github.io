@@ -1,0 +1,25 @@
+ :py:mod:`oa.asset.libs`
+================================================
+
+.. py:module:: oa.asset.libs
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   asset_version_control/index.rst
+   asset_wrapper/index.rst
+   duplicate_protection/index.rst
+   geometry_tags/index.rst
+   gpu_utils/index.rst
+   import_utils/index.rst
+   material_tags/index.rst
+   maya_assets/index.rst
+   reference_tags/index.rst
+   reference_wrapper/index.rst
+   subdiv_tags/index.rst
+
+

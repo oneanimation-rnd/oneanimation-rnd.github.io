@@ -1,0 +1,80 @@
+ :py:mod:`oa.asset_builder.libs.delegates.vopnets`
+====================================================================================================
+
+.. py:module:: oa.asset_builder.libs.delegates.vopnets
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.libs.delegates.vopnets.VopnetsDelegate
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.libs.delegates.vopnets.this
+   oa.asset_builder.libs.delegates.vopnets._log
+   oa.asset_builder.libs.delegates.vopnets._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:class:: VopnetsDelegate(root_node, description)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: setup()
+
+
+   .. py:method:: get_subnet()
+
+
+   .. py:method:: _create_subnet()
+
+
+   .. py:method:: _create_palette()
+
+
+   .. py:method:: _load_palette()
+
+
+   .. py:method:: _create_vopnet_node(subnet)
+
+      Creates a 'vopnet' node to build vop networks in it.
+
+
+   .. py:method:: _create_default_shader(vopnet)
+
+      Creates a default surface shader type.
+
+
+   .. py:method:: _get_palette_menu_name()
+
+
+   .. py:method:: _get_palette_type_name()
+
+
+

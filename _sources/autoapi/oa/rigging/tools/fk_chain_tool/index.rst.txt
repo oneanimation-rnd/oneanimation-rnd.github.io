@@ -1,0 +1,16 @@
+ :py:mod:`oa.rigging.tools.fk_chain_tool`
+==================================================================================
+
+.. py:module:: oa.rigging.tools.fk_chain_tool
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   fk_chain_tool/index.rst
+   fk_chain_utils/index.rst
+
+

@@ -1,0 +1,146 @@
+ :py:mod:`oa_utils.ldap_control`
+================================================================
+
+.. py:module:: oa_utils.ldap_control
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.ldap_control.LDAPUnlocker
+   oa_utils.ldap_control.LDAPControl
+   oa_utils.ldap_control.LDAPVersionControl
+   oa_utils.ldap_control.LDAPVersionControlNext
+
+
+
+
+.. py:class:: LDAPUnlocker(path, chmod)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: unlock()
+
+
+   .. py:method:: restore()
+
+
+   .. py:method:: __del__()
+
+
+   .. py:method:: __hash__()
+
+      Return hash(self).
+
+
+
+.. py:class:: LDAPControl(login=config.get_value('ldap/username'), password=config.get_value('ldap/password'))
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: execute(command)
+
+
+   .. py:method:: unlock(path)
+
+
+   .. py:method:: is_owner(path)
+
+
+   .. py:method:: chmod(path, permissions)
+
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(_type, value, traceback)
+
+
+
+.. py:class:: LDAPVersionControl(num_stored_versions=3, num_recent_versions=3, login=config.get_value('ldap/username'), password=config.get_value('ldap/password'))
+
+   Bases: :py:obj:`LDAPControl`
+
+   .. py:method:: _create_comment(path, comment)
+
+
+   .. py:method:: versionize(path, comment='', increment=True)
+
+
+   .. py:method:: backup(path, num_stored_versions=3, num_recent_versions=3)
+
+
+   .. py:method:: get_incremented_version(path)
+      :staticmethod:
+
+      Gets an incremented version of the file.
+
+      :param path: file path to get the version from.
+      :type path: str
+
+      :returns: a new incremented path.
+      :rtype: str
+
+
+   .. py:method:: get_versions(path)
+      :staticmethod:
+
+      Gets all versions of the file.
+
+      :param path: file path to match the version to.
+      :type path: str
+
+      :returns: a list of all versions of the path.
+      :rtype: list-of-str
+
+
+   .. py:method:: get_all_versions(path)
+      :staticmethod:
+
+      Gets all versions of the file, even in 'recent' folder.
+
+      :param path: file path to match the version to.
+      :type path: str
+
+      :returns: a list of all versions of the path.
+      :rtype: list-of-str
+
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(_type, value, traceback)
+
+
+
+.. py:class:: LDAPVersionControlNext(*args, **kwargs)
+
+   Bases: :py:obj:`LDAPVersionControl`
+
+   .. py:method:: versionize(path, comment='', increment=True, mod='0775')
+
+      Create a new (unlocked) version of the file path.
+
+      :param path: a full path to the file.
+      :type path: str
+      :param comment: a comment string
+      :type comment: str
+      :param increment:
+      :type increment: bool
+
+
+   .. py:method:: _create_comment(path, comment, mod='0775')
+
+      Create annotation .txt file.
+      :param path: original file path to create annotation to.
+      :type path: str
+      :param comment: a comment string
+      :type comment: str
+
+
+

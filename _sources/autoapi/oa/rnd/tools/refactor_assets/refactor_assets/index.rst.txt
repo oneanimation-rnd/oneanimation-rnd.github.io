@@ -1,0 +1,34 @@
+ :py:mod:`oa.rnd.tools.refactor_assets.refactor_assets`
+==============================================================================================================
+
+.. py:module:: oa.rnd.tools.refactor_assets.refactor_assets
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.refactor_assets.refactor_assets.set_locks
+   oa.rnd.tools.refactor_assets.refactor_assets.get_inst_masters
+   oa.rnd.tools.refactor_assets.refactor_assets.run
+
+
+
+.. py:function:: set_locks(obj)
+
+
+.. py:function:: get_inst_masters()
+
+
+.. py:function:: run()
+
+   Creates rdr nul if it doesn't exist.
+   Re-parents instances under cog ctrl under rdr nul.
+   Creates instance master nul and re-parents all instance masters to it.
+
+

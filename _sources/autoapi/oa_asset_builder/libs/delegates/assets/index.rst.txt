@@ -1,0 +1,82 @@
+ :py:mod:`oa_asset_builder.libs.delegates.assets`
+==================================================================================================
+
+.. py:module:: oa_asset_builder.libs.delegates.assets
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.delegates.assets.AssetsDelegate
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.delegates.assets.this
+   oa_asset_builder.libs.delegates.assets._log
+   oa_asset_builder.libs.delegates.assets._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:class:: AssetsDelegate(asset_node, root_node, description)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: setup()
+
+
+   .. py:method:: get_container()
+
+
+   .. py:method:: _create_container()
+
+
+   .. py:method:: _destroy_container()
+
+
+   .. py:method:: get_assets()
+
+
+   .. py:method:: _update_assets(asset_descriptions)
+
+
+   .. py:method:: _import_asset(asset_description)
+
+
+   .. py:method:: _build_asset(source_asset_path)
+
+
+   .. py:method:: _ensure_is_valid_asset(asset_info)
+
+
+   .. py:method:: _create_asset_node(type_name)
+
+
+   .. py:method:: _setup_asset_node(asset_node, asset_info)
+
+
+

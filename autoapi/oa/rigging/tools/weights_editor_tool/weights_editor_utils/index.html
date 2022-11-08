@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.rigging.tools.weights_editor_tool.weights_editor_utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.rnd" href="../../../../rnd/index.html" />
+    <link rel="prev" title=" oa.rigging.tools.weights_editor_tool.weights_editor" href="../weights_editor/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.weights_editor_tool</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/rigging/tools/weights_editor_tool/weights_editor_utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.rigging.tools.weights_editor_tool.weights_editor_utils">
+<span id="oa-rigging-tools-weights-editor-tool-weights-editor-utils"></span><h1> <a class="reference internal" href="#module-oa.rigging.tools.weights_editor_tool.weights_editor_utils" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils</span></code></a><a class="headerlink" href="#module-oa.rigging.tools.weights_editor_tool.weights_editor_utils" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.show_error_msg" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.show_error_msg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show_error_msg</span></code></a>(title, msg, parent)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_maya_window" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_maya_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_maya_window</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.convert_version_string" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.convert_version_string"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_version_string</span></code></a>(ver_str)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_version_string_greater" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_version_string_greater"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_version_string_greater</span></code></a>(ver_str_1, ver_str_2)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.create_shortcut" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.create_shortcut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_shortcut</span></code></a>(key_sequence, callback)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.wrap_layout" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.wrap_layout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wrap_layout</span></code></a>(widgets[, orientation, spacing, margins, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_in_component_mode" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_in_component_mode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_in_component_mode</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_selected_mesh" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_selected_mesh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_selected_mesh</span></code></a>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>A mesh from the selection or None if nothing valid was found.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.to_mobject" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.to_mobject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_mobject</span></code></a>(obj)</p></td>
+<td><p>Gets an object as a MObject wrapper.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_curve" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_curve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_curve</span></code></a>(obj)</p></td>
+<td><p>Detects and returns True if supplied object is a nurbs curve.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_close" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_close</span></code></a>(val1, val2[, rel_tol, abs_tol])</p></td>
+<td><p>Determines if the two float values are close enough to each other.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.clamp" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.clamp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clamp</span></code></a>(min_value, max_value, value)</p></td>
+<td><p>Clamps a value to the supplied range.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.remap_range" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.remap_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remap_range</span></code></a>(old_min, old_max, new_min, new_max, old_value)</p></td>
+<td><p>Converts a value from one range to another.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.lerp_color" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.lerp_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lerp_color</span></code></a>(start_color, end_color, blend_value)</p></td>
+<td><p>Lerps between two colors by supplied blend value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.extract_indexes" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.extract_indexes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_indexes</span></code></a>(flatten_list)</p></td>
+<td><p>Converts a flattened vertex list to numbers.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_all_vert_indexes" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_all_vert_indexes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_vert_indexes</span></code></a>(obj)</p></td>
+<td><p>Gets and returns all vertexes from the supplied object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_vert_indexes" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_vert_indexes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_vert_indexes</span></code></a>(obj)</p></td>
+<td><p>Gets and returns selected vertexes from the supplied object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_skin_cluster" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_skin_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_skin_cluster</span></code></a>(obj)</p></td>
+<td><p>Get's an object's skinCluster.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.switch_to_color_set" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.switch_to_color_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">switch_to_color_set</span></code></a>(obj)</p></td>
+<td><p>Switches supplied object's color set to display skin weights.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.toggle_display_colors" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.toggle_display_colors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toggle_display_colors</span></code></a>(obj, enabled)</p></td>
+<td><p>Sets attribute to show vertex colors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_influence_ids" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_influence_ids"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_influence_ids</span></code></a>(skin_cluster)</p></td>
+<td><p>Collects all influences and its ids from a skinCluster.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_skin_data" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_skin_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_skin_data</span></code></a>(skin_cluster)</p></td>
+<td><p>Re-factored code by Tyler Thornock</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.update_weight_value" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.update_weight_value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_weight_value</span></code></a>(weight_data, inf_name, new_value)</p></td>
+<td><p>Updates weight_data with an influence's value while distributing the difference</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_weight_color" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_weight_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_weight_color</span></code></a>(weight[, start_color, mid_color, ...])</p></td>
+<td><p>Gets color that represents supplied weight value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.apply_vert_colors" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.apply_vert_colors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_vert_colors</span></code></a>(obj, colors, vert_indexes)</p></td>
+<td><p>Sets vert colors on the supplied mesh.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.collect_influence_colors" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.collect_influence_colors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">collect_influence_colors</span></code></a>(skin_cluster[, sat, brightness])</p></td>
+<td><p>Generates a unique color for each influence.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.display_multi_color_influence" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.display_multi_color_influence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display_multi_color_influence</span></code></a>(obj, skin_cluster, skin_data)</p></td>
+<td><p>Mimics Softimage and displays all influences at once with their own unique color.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.display_influence" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.display_influence"><code class="xref py py-obj docutils literal notranslate"><span class="pre">display_influence</span></code></a>(obj, skin_data, influence[, ...])</p></td>
+<td><p>Colors a mesh to visualize skin data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.select_inf_vertexes" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.select_inf_vertexes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_inf_vertexes</span></code></a>(obj, infs, skin_data)</p></td>
+<td><p>Selects effected vertexes by supplied influences.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.set_skin_weights" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.set_skin_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_skin_weights</span></code></a>(obj, skin_data, vert_indexes[, normalize])</p></td>
+<td><p>Sets skin weights with the supplied data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_vert_neighbours" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_vert_neighbours"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_vert_neighbours</span></code></a>(obj, vert_index)</p></td>
+<td><p>Fetches adjacent vertexes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.average_by_neighbours" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.average_by_neighbours"><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_by_neighbours</span></code></a>(obj, vert_index, skin_data, strength)</p></td>
+<td><p>Averages weights of surrounding vertexes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.br_smooth_verts" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.br_smooth_verts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">br_smooth_verts</span></code></a>([flood, ignore_lock])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.smooth_weights" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.smooth_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">smooth_weights</span></code></a>(obj, vert_indexes, skin_data, strength)</p></td>
+<td><p>Runs an algorithm to smooth weights on supplied vertex indexes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.mirror_skin_weights" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.mirror_skin_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mirror_skin_weights</span></code></a>(obj, mirror_mode, mirror_inverse, ...)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.prune_weights" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.prune_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prune_weights</span></code></a>(obj, skin_cluster, prune_value)</p></td>
+<td><p>Runs prune weights on selected vertexes on supplied object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.flood_weights_to_closest" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.flood_weights_to_closest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flood_weights_to_closest</span></code></a>(mesh, skin_cluster)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.delete_temp_inputs" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.delete_temp_inputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_temp_inputs</span></code></a>(obj)</p></td>
+<td><p>Deletes extra inputs the tool creates to see weight colors.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.COLOR_SET" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.COLOR_SET"><code class="xref py py-obj docutils literal notranslate"><span class="pre">COLOR_SET</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.POLY_COLOR_PER_VERT" title="oa.rigging.tools.weights_editor_tool.weights_editor_utils.POLY_COLOR_PER_VERT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">POLY_COLOR_PER_VERT</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.COLOR_SET">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">COLOR_SET</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">weightsEditorCreateColorSet</span></em><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.COLOR_SET" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.POLY_COLOR_PER_VERT">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">POLY_COLOR_PER_VERT</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">weightsEditorPolyColorPerVertex</span></em><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.POLY_COLOR_PER_VERT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.show_error_msg">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">show_error_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.show_error_msg" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_maya_window">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">get_maya_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_maya_window" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.convert_version_string">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">convert_version_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ver_str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.convert_version_string" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_version_string_greater">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">is_version_string_greater</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ver_str_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ver_str_2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_version_string_greater" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.create_shortcut">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">create_shortcut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.create_shortcut" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.wrap_layout">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">wrap_layout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widgets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.Qt.Vertical</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spacing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">margins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.wrap_layout" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_in_component_mode">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">is_in_component_mode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_in_component_mode" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_selected_mesh">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">get_selected_mesh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_selected_mesh" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A mesh from the selection or None if nothing valid was found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.to_mobject">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">to_mobject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.to_mobject" title="Permalink to this definition"></a></dt>
+<dd><p>Gets an object as a MObject wrapper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> (<em>string</em>) – An object’s name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An MObject.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_curve">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">is_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_curve" title="Permalink to this definition"></a></dt>
+<dd><p>Detects and returns True if supplied object is a nurbs curve.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_close">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">is_close</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rel_tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-09</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">abs_tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_close" title="Permalink to this definition"></a></dt>
+<dd><p>Determines if the two float values are close enough to each other.
+<a class="reference external" href="https://www.python.org/dev/peps/pep-0485/#proposed-implementation">https://www.python.org/dev/peps/pep-0485/#proposed-implementation</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.clamp">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">clamp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.clamp" title="Permalink to this definition"></a></dt>
+<dd><p>Clamps a value to the supplied range.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.remap_range">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">remap_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_min</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.remap_range" title="Permalink to this definition"></a></dt>
+<dd><p>Converts a value from one range to another.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.lerp_color">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">lerp_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.lerp_color" title="Permalink to this definition"></a></dt>
+<dd><p>Lerps between two colors by supplied blend value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_color</strong> (<em>QColor</em>) – </p></li>
+<li><p><strong>end_color</strong> (<em>QColor</em>) – </p></li>
+<li><p><strong>blend_value</strong> (<em>float</em>) – A value between 0.0 to 1.0
+0.0=start_color
+0.5=50% mix of both colors
+1.0=end_color</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A QColor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.extract_indexes">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">extract_indexes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flatten_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.extract_indexes" title="Permalink to this definition"></a></dt>
+<dd><p>Converts a flattened vertex list to numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>flatten_list</strong> (<em>string</em><em>[</em><em>]</em>) – [“obj.vtx[0]”, “obj.vtx[1]”, ..]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of integers.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_all_vert_indexes">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">get_all_vert_indexes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_all_vert_indexes" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns all vertexes from the supplied object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_vert_indexes">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">get_vert_indexes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_vert_indexes" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns selected vertexes from the supplied object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_skin_cluster">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">get_skin_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_skin_cluster" title="Permalink to this definition"></a></dt>
+<dd><p>Get’s an object’s skinCluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> (<em>string</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Object’s skinCluster.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.switch_to_color_set">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">switch_to_color_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.switch_to_color_set" title="Permalink to this definition"></a></dt>
+<dd><p>Switches supplied object’s color set to display skin weights.
+Needs to do this otherwise we risk overwriting another color set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> (<em>string</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.toggle_display_colors">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">toggle_display_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.toggle_display_colors" title="Permalink to this definition"></a></dt>
+<dd><p>Sets attribute to show vertex colors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – </p></li>
+<li><p><strong>enabled</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_influence_ids">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">get_influence_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skin_cluster</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_influence_ids" title="Permalink to this definition"></a></dt>
+<dd><p>Collects all influences and its ids from a skinCluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>skin_cluster</strong> (<em>string</em>) – A skinCluster’s name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>{id(int):inf_name(string)}</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_skin_data">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">get_skin_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skin_cluster</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_skin_data" title="Permalink to this definition"></a></dt>
+<dd><p>Re-factored code by Tyler Thornock
+Faster than cmds.skinPercent() and more practical than OpenMaya.MFnSkinCluster()</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>skin_cluster</strong> (<em>string</em>) – A skinCluster’s name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary.
+{vert_index:{“weights”:{inf_name:weight_value…}, “dq”float}}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.update_weight_value">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">update_weight_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weight_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inf_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.update_weight_value" title="Permalink to this definition"></a></dt>
+<dd><p>Updates weight_data with an influence’s value while distributing the difference
+to the rest of its influences. The sum should always be 1.0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>weight_data</strong> (<em>dict</em>) – {inf_name:inf_value…}
+This is found in skin_data and represents a vertex.</p></li>
+<li><p><strong>inf_name</strong> (<em>string</em>) – Influence to update.</p></li>
+<li><p><strong>new_value</strong> (<em>float</em>) – A number between 0 and 1.0.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_weight_color">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">get_weight_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">weight</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">1]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mid_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[1,</span> <span class="pre">0,</span> <span class="pre">0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[1.0,</span> <span class="pre">1.0,</span> <span class="pre">1.0]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_weight_color" title="Permalink to this definition"></a></dt>
+<dd><p>Gets color that represents supplied weight value.
+A value of 0 will be bias towards start_color, 1.0 will be biased towards end_color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>weight</strong> (<em>float</em>) – A value between 0.0 to 1.0.</p></li>
+<li><p><strong>start_color</strong> (<em>float</em><em>[</em><em>]</em>) – Represents rbg when weight is 0.0.</p></li>
+<li><p><strong>mid_color</strong> (<em>float</em><em>[</em><em>]</em>) – Represents rbg when weight is 0.5.</p></li>
+<li><p><strong>end_color</strong> (<em>float</em><em>[</em><em>]</em>) – Represents rbg when weight is 1.0.</p></li>
+<li><p><strong>full_color</strong> (<em>float</em><em>[</em><em>]</em>) – Represents rbg when weight is equal to 1.0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An rbg list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.apply_vert_colors">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">apply_vert_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vert_indexes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.apply_vert_colors" title="Permalink to this definition"></a></dt>
+<dd><p>Sets vert colors on the supplied mesh.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – Object to edit vert colors.</p></li>
+<li><p><strong>colors</strong> (<em>float</em><em>[</em><em>]</em>) – A list of rgb values.</p></li>
+<li><p><strong>vert_indexes</strong> (<em>int</em><em>[</em><em>]</em>) – A list of vertex indexes.
+This should match the length of colors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.collect_influence_colors">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">collect_influence_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skin_cluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">250</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brightness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">150</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.collect_influence_colors" title="Permalink to this definition"></a></dt>
+<dd><p>Generates a unique color for each influence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>skin_cluster</strong> (<em>string</em>) – SkinCluster to get influences from.</p></li>
+<li><p><strong>sat</strong> (<em>float</em>) – </p></li>
+<li><p><strong>brightness</strong> (<em>float</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[r, g, b]…}</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A dictionary of {inf_name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.display_multi_color_influence">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">display_multi_color_influence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_cluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vert_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.display_multi_color_influence" title="Permalink to this definition"></a></dt>
+<dd><p>Mimics Softimage and displays all influences at once with their own unique color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – </p></li>
+<li><p><strong>skin_cluster</strong> (<em>string</em>) – </p></li>
+<li><p><strong>skin_data</strong> (<em>dict</em>) – </p></li>
+<li><p><strong>vert_filter</strong> (<em>int</em><em>[</em><em>]</em>) – List of vertex indexes to only operate on.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[r, g, b]…}</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A dictionary of {inf_name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.display_influence">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">display_influence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">influence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vert_filter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.display_influence" title="Permalink to this definition"></a></dt>
+<dd><p>Colors a mesh to visualize skin data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – </p></li>
+<li><p><strong>skin_data</strong> (<em>dict</em>) – </p></li>
+<li><p><strong>influence</strong> (<em>string</em>) – Name of influence to display.</p></li>
+<li><p><strong>color_style</strong> (<em>int</em>) – 0=Max theme, 1=Maya theme.</p></li>
+<li><p><strong>vert_filter</strong> (<em>int</em><em>[</em><em>]</em>) – List of vertex indexes to only operate on.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.select_inf_vertexes">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">select_inf_vertexes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">infs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.select_inf_vertexes" title="Permalink to this definition"></a></dt>
+<dd><p>Selects effected vertexes by supplied influences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – </p></li>
+<li><p><strong>infs</strong> (<em>string</em><em>[</em><em>]</em>) – List of influences to select from.</p></li>
+<li><p><strong>skin_data</strong> (<em>dict</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.set_skin_weights">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">set_skin_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vert_indexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.set_skin_weights" title="Permalink to this definition"></a></dt>
+<dd><p>Sets skin weights with the supplied data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – Object with a skinCluster.</p></li>
+<li><p><strong>skin_data</strong> (<em>dict</em>) – Data to set with.</p></li>
+<li><p><strong>vert_indexes</strong> (<em>int</em><em>[</em><em>]</em>) – List of vertex indexes to only operate on.</p></li>
+<li><p><strong>normalize</strong> (<em>bool</em>) – Forces weights to be normalized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_vert_neighbours">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">get_vert_neighbours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vert_index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_vert_neighbours" title="Permalink to this definition"></a></dt>
+<dd><p>Fetches adjacent vertexes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – </p></li>
+<li><p><strong>vert_index</strong> (<em>int</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of vertex indexes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.average_by_neighbours">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">average_by_neighbours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vert_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strength</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.average_by_neighbours" title="Permalink to this definition"></a></dt>
+<dd><p>Averages weights of surrounding vertexes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – </p></li>
+<li><p><strong>vert_index</strong> (<em>int</em>) – </p></li>
+<li><p><strong>skin_data</strong> (<em>dict</em>) – </p></li>
+<li><p><strong>strength</strong> (<em>int</em>) – A value of 0-1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>weight_value…}</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>A dictionary of the new weights. {int_name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.br_smooth_verts">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">br_smooth_verts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flood</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_lock</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.br_smooth_verts" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.smooth_weights">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">smooth_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vert_indexes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.smooth_weights" title="Permalink to this definition"></a></dt>
+<dd><p>Runs an algorithm to smooth weights on supplied vertex indexes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – </p></li>
+<li><p><strong>vert_indexes</strong> (<em>int</em><em>[</em><em>]</em>) – </p></li>
+<li><p><strong>skin_data</strong> (<em>dict</em>) – </p></li>
+<li><p><strong>strength</strong> (<em>int</em>) – A value of 0-1</p></li>
+<li><p><strong>normalize_weights</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.mirror_skin_weights">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">mirror_skin_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirror_mode</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirror_inverse</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">surface_association</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inf_association</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.mirror_skin_weights" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.prune_weights">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">prune_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_cluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prune_value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.prune_weights" title="Permalink to this definition"></a></dt>
+<dd><p>Runs prune weights on selected vertexes on supplied object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – </p></li>
+<li><p><strong>skin_cluster</strong> (<em>string</em>) – </p></li>
+<li><p><strong>prune_value</strong> (<em>float</em>) – Removes any weights below this value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True on success.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.flood_weights_to_closest">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">flood_weights_to_closest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_cluster</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.flood_weights_to_closest" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.weights_editor_tool.weights_editor_utils.delete_temp_inputs">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.weights_editor_tool.weights_editor_utils.</span></span><span class="sig-name descname"><span class="pre">delete_temp_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.weights_editor_tool.weights_editor_utils.delete_temp_inputs" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes extra inputs the tool creates to see weight colors.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../weights_editor/index.html" class="btn btn-neutral float-left" title=" oa.rigging.tools.weights_editor_tool.weights_editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../../rnd/index.html" class="btn btn-neutral float-right" title=" oa.rnd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

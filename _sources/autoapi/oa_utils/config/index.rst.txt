@@ -1,0 +1,57 @@
+ :py:mod:`oa_utils.config`
+====================================================
+
+.. py:module:: oa_utils.config
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.config._load_config
+   oa_utils.config.get_value
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.config.this
+   oa_utils.config._log
+   oa_utils.config._config
+   oa_utils.config._os
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _config
+   
+
+   
+
+.. py:data:: _os
+   
+
+   
+
+.. py:function:: _load_config(config_dir)
+
+
+.. py:function:: get_value(key, default=None, config_dir=None)
+
+

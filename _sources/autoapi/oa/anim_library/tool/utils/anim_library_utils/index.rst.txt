@@ -1,0 +1,522 @@
+ :py:mod:`oa.anim_library.tool.utils.anim_library_utils`
+================================================================================================================
+
+.. py:module:: oa.anim_library.tool.utils.anim_library_utils
+
+.. autoapi-nested-parse::
+
+   Contains generic and core functions for the animation library.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.utils.anim_library_utils.UndoStack
+   oa.anim_library.tool.utils.anim_library_utils.ViewportOff
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.utils.anim_library_utils.get_icon
+   oa.anim_library.tool.utils.anim_library_utils.get_projects
+   oa.anim_library.tool.utils.anim_library_utils.popup_message
+   oa.anim_library.tool.utils.anim_library_utils.connect_to_db
+   oa.anim_library.tool.utils.anim_library_utils.get_keys_time
+   oa.anim_library.tool.utils.anim_library_utils.xform_to_matrix
+   oa.anim_library.tool.utils.anim_library_utils.matrix_to_xform
+   oa.anim_library.tool.utils.anim_library_utils.get_latest_version
+   oa.anim_library.tool.utils.anim_library_utils.traverse_to_asset_root
+   oa.anim_library.tool.utils.anim_library_utils.is_ctrl_set_member
+   oa.anim_library.tool.utils.anim_library_utils.get_first_root_nul
+   oa.anim_library.tool.utils.anim_library_utils.get_controls_by_sel_set
+   oa.anim_library.tool.utils.anim_library_utils.get_selected_controls
+   oa.anim_library.tool.utils.anim_library_utils.get_all_controls
+   oa.anim_library.tool.utils.anim_library_utils.get_current_panel
+   oa.anim_library.tool.utils.anim_library_utils.get_isolate_objs
+   oa.anim_library.tool.utils.anim_library_utils.get_viewport_settings
+   oa.anim_library.tool.utils.anim_library_utils.pre_capture_setup
+   oa.anim_library.tool.utils.anim_library_utils.restore_viewport
+   oa.anim_library.tool.utils.anim_library_utils.tweak_pixmap_brightness
+   oa.anim_library.tool.utils.anim_library_utils.crop_to_square
+   oa.anim_library.tool.utils.anim_library_utils.screengrab_viewport
+   oa.anim_library.tool.utils.anim_library_utils.capture_single_frame
+   oa.anim_library.tool.utils.anim_library_utils.capture_frame_range
+   oa.anim_library.tool.utils.anim_library_utils.dereference_ref
+   oa.anim_library.tool.utils.anim_library_utils.get_all_users
+   oa.anim_library.tool.utils.anim_library_utils.collect_clips
+   oa.anim_library.tool.utils.anim_library_utils.create_clip
+   oa.anim_library.tool.utils.anim_library_utils.update_clip_animation
+   oa.anim_library.tool.utils.anim_library_utils.import_clip
+   oa.anim_library.tool.utils.anim_library_utils.set_clip_inactive
+   oa.anim_library.tool.utils.anim_library_utils.set_range_tangents
+   oa.anim_library.tool.utils.anim_library_utils.collect_all_tags
+   oa.anim_library.tool.utils.anim_library_utils.collect_all_clip_names
+   oa.anim_library.tool.utils.anim_library_utils.copy_to_clipboard
+   oa.anim_library.tool.utils.anim_library_utils.get_clip_ranges
+   oa.anim_library.tool.utils.anim_library_utils.get_clip_length
+   oa.anim_library.tool.utils.anim_library_utils.get_offset_objs
+   oa.anim_library.tool.utils.anim_library_utils.delete_clips
+   oa.anim_library.tool.utils.anim_library_utils.offset_space_all
+   oa.anim_library.tool.utils.anim_library_utils.get_and_create_user_settings_path
+   oa.anim_library.tool.utils.anim_library_utils.get_user_settings
+   oa.anim_library.tool.utils.anim_library_utils.set_user_settings
+   oa.anim_library.tool.utils.anim_library_utils.get_popular_tags
+   oa.anim_library.tool.utils.anim_library_utils.remove_popular_tag
+   oa.anim_library.tool.utils.anim_library_utils.increase_popular_tag_count
+   oa.anim_library.tool.utils.anim_library_utils.display_label_when_empty
+   oa.anim_library.tool.utils.anim_library_utils.get_anm_path_controls
+   oa.anim_library.tool.utils.anim_library_utils.get_sel_set_path
+   oa.anim_library.tool.utils.anim_library_utils.read_sel_set_data
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.utils.anim_library_utils.user_settings_version
+   oa.anim_library.tool.utils.anim_library_utils.clips_path
+   oa.anim_library.tool.utils.anim_library_utils.current_project
+
+
+.. py:data:: user_settings_version
+   :annotation: = 2.0
+
+   
+
+.. py:data:: clips_path
+   :annotation: = /Volumes/asset/PROJECTS/RND/anim_library_clips
+
+   
+
+.. py:data:: current_project
+   
+
+   
+
+.. py:class:: UndoStack(name='action')
+
+   Bases: :py:obj:`object`
+
+   To be used with "with" statement to group actions as a chunk to undo.
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(tb_type, tb_value, tb)
+
+
+
+.. py:class:: ViewportOff
+
+   Bases: :py:obj:`object`
+
+   Uses "with" statement to disable the viewport's drawing inside its block.
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(exit_type, exit_val, exit_traceback)
+
+
+
+.. py:function:: get_icon(file_name, width=None, height=None)
+
+
+.. py:function:: get_projects()
+
+   Returns a list of all projects from the database
+
+
+.. py:function:: popup_message(title, msg, icon=QtWidgets.QMessageBox.NoIcon, buttons=[QtWidgets.QMessageBox.Ok], parent=None)
+
+   Convenient method to display a message.
+
+   :param title: The window's title.
+   :param msg: The window's main content.
+   :param icon: Either a pixmap or QtWidgets.QMessageBox.Icon.
+   :param buttons: A list of QtWidgets.QMessage.StandardButton.
+   :param parent: A QWidget to center the message to.
+
+   :returns: The QtWidgets.QMessage.StandardButton enum that was chosen.
+
+
+.. py:function:: connect_to_db(hosts=(), replica_set_name='rs0', read_pref=None, db_name='test-main-db', collection_name='anim_clips')
+
+
+.. py:function:: get_keys_time(obj, attrs)
+
+   Collects frame numbers that keys are on.
+
+   :param obj: Object to check with.
+   :param attrs: A list of attribute names to check with.
+
+   :returns: A list of frame numbers.
+
+
+.. py:function:: xform_to_matrix(xform)
+
+   Converts a list of floats to a matrix wrapper.
+
+   :param xform: A transform using cmds.xform
+
+   :returns: A MTransformationMatrix wrapper.
+
+
+.. py:function:: matrix_to_xform(mmatrix)
+
+   Converts an MMatrix wrapper to a list of floats.
+
+   :param mmatrix: An MMatrix wrapper.
+
+   :returns: A list that represents the transform.
+
+
+.. py:function:: get_latest_version(file_entry_id)
+
+   Gets and returns the supplied id's latest file path.
+
+   :param file_entry_id: A w_file.WFileEntry id.
+
+
+.. py:function:: traverse_to_asset_root(objs)
+
+   A generator to get an object's asset root nul.
+
+   :param objs: A list of transform names.
+
+   :Yields: The object's asset root nul or None.
+
+
+.. py:function:: is_ctrl_set_member(obj)
+
+   Checks and returns true if the supplied object is a member of a ctrl set.
+
+
+.. py:function:: get_first_root_nul(objs)
+
+   Gets and returns the root nul of the first asset that is detected.
+
+   :param objs: A list of object names.
+
+   :returns: An asset's root nul, or None if nothing was found.
+
+
+.. py:function:: get_controls_by_sel_set(sel_set_name, sel_set_data, root_nul=None)
+
+   Parses through selection to collect controls from the FIRST asset
+   that it detects.
+
+   Uses the supplied selection set to get controls by name.
+
+   :param sel_set_name: The selection set's name to collect from.
+   :param sel_set_data: The selection set data stored from a json format.
+   :param root_nul: Root to get controls from. If it's not supplied, it will use the
+                    first root detected from the current selection.
+
+   :returns: A list of control names.
+
+
+.. py:function:: get_selected_controls(root_nul=None)
+
+   Parses through selection to collect selected controls from the FIRST asset
+   that it detects.
+
+   :param root_nul: Root to get controls from. If it's not supplied, it will use the
+                    first root detected from the current selection.
+
+   :returns: A list of control names from a single asset.
+
+
+.. py:function:: get_all_controls(root_nul=None, exclude_global_srt=True, exclude_cog=True)
+
+   Parses through selection to collect all controls from the FIRST asset that
+   it detects.
+
+   :param root_nul: Root to get controls from. If it's not supplied, it will use the
+                    first root detected from the current selection.
+   :param exclude_global_srt: Excludes global_srt_CTRL from the return list.
+   :param exclude_cog: Excludes cog_CTRL from the return list.
+
+   :returns: A list of control names from a single asset.
+
+
+.. py:function:: get_current_panel()
+
+   Gets and returns the name of the active viewport.
+   If the active panel is not a viewport it returns persp's viewport.
+
+
+.. py:function:: get_isolate_objs(panel=None)
+
+   Gets a list of objects that are currently in the isolate set.
+
+   :param panel: The panel to check the set from.
+
+   :returns: A list of objects.
+
+
+.. py:function:: get_viewport_settings()
+
+   Collects active viewport's current state to a dictionary.
+
+   :returns: A dictionary of the viewport's data.
+
+
+.. py:function:: pre_capture_setup(isolate_objs=[])
+
+   Prepares the viewport for capture.
+
+   :param isolate_objs: A list of objects to isolate for capture.
+
+   :returns: A dictionary of the viewport's previous settings.
+
+
+.. py:function:: restore_viewport(viewport_settings)
+
+   Restores the active viewport to the supplied settings.
+
+   :param viewport_settings: Supply a dictionary returned from get_viewport_settings()
+
+
+.. py:function:: tweak_pixmap_brightness(pixmap, value)
+
+   Adjusts pixmap to make it brighter or darker.
+
+   :param pixmap: The pixmap to adjust.
+   :param value: A value above 100 brightens it, while below darkens it.
+
+   :returns: The new pixmap.
+
+
+.. py:function:: crop_to_square(path)
+
+   Reads image and crops it to a square from its center.
+
+   :param path: Full path to an existing image.
+
+   :returns: The cropped pixmap.
+
+
+.. py:function:: screengrab_viewport(path, width, height, img_type='jpg', crop_img=True)
+
+   Saves a screen grab of the active viewport to a file.
+
+   :param path: Full path to save the image to.
+   :param width: Image's output width.
+   :param height: Image's output height.
+   :param img_type: Image's output extension.
+   :param crop_img: Crops's the image to a square.
+
+
+.. py:function:: capture_single_frame(output_path, frame, width=500, height=500, isolate_objs=[])
+
+   Captures a single frame to a jpg file.
+
+   :param output_path: Full jpg path to save to.
+   :param frame: Frame number to capture from.
+   :param width: Image's width.
+   :param height: Image's height.
+   :param isolate_objs: A list of objects to isolate for capture.
+
+
+.. py:function:: capture_frame_range(output_path, start_frame, end_frame, width=500, height=500, isolate_objs=[])
+
+   Captures a frame range to a gif file.
+
+   :param output_path: Full gif path to save to.
+   :param start_frame: Frame number to capture from.
+   :param end_frame: Frame number to capture to.
+   :param width: Image's width.
+   :param height: Image's height.
+   :param isolate_objs: A list of objects to isolate for capture.
+
+
+.. py:function:: dereference_ref(collection_name, db_ref)
+
+
+.. py:function:: get_all_users(batch_size=1000)
+
+
+.. py:function:: collect_clips(tag_search_type, name=None, tags=None, batch_size=1000)
+
+
+.. py:function:: create_clip(project, start_frame, end_frame, label, description, thumbnail, tags, controls, euler_filter, progress_bar=True)
+
+   Creates a new animation clip and adds it to the database.
+
+   :param start_frame: Frame to begin capturing animation.
+   :param end_frame: Frame to stop capturing animation.
+   :param label: The clip's name.
+   :param description:
+   :param thumbnail: A full path to an existing gif image.
+   :param tags: A list of words to search this clip with.
+   :param controls: A list of objects to capture animation from.
+   :param euler_filter: Runs a euler filter on controls before exporting animation.
+   :param progress_bar: Displays progress bar in the main window.
+   :type progress_bar: bool
+
+   :returns: The new entry's id from the database.
+
+
+.. py:function:: update_clip_animation(file_entry_id, controls, start_frame, end_frame, comment, euler_filter)
+
+   Uses the current selection to update a clip's animation.
+   This doesn't replace the animation, it iterates to the next version.
+
+   :param file_entry_id: WFileEntry.id
+   :param controls: A list of control objects to export with.
+   :param start_frame: The frame to begin the capture.
+   :param end_frame: The frame to stop the capture.
+   :param comment: A quick description of the animation update.
+   :param euler_filter: Runs a euler filter on controls before exporting animation.
+
+
+.. py:function:: import_clip(anm_path, selection_type, import_type, space_type, euler_filter, set_tangents=True)
+
+   Loads animation onto the first selected asset.
+
+   :param anm_path: An absolute path to a anm format.
+   :param selection_type: enums.SelectionType.
+   :param import_type: enums.ImportType.
+   :param space_type: enums.SpaceType.Relative=Appends from offset ctrl and re-orients to its direction.
+                      enums.SpaceType.Absolute=Uses clip's world space.
+   :param euler_filter: Runs a euler filter on imported animation.
+   :param set_tangents: Auto-sets tangents on start and end keys.
+
+
+.. py:function:: set_clip_inactive(clip_id)
+
+   Marks anim clip in database as inactive so that it's ignored.
+
+   :param clip_id: A WAnmClip's id.
+
+
+.. py:function:: set_range_tangents(objs, attrs, start_frame, end_frame, start_tangent_type='auto', end_tangent_type='auto')
+
+   Sets start and end keyframe tangents so they transition more smoothly.
+
+   :param objs: A list of objects.
+   :param attrs: A list of attributes to check keys with.
+   :param start_frame:
+   :param end_frame:
+   :param start_tangent_type: Tangent to set for start frame keys.
+   :param end_tangent_type: Tangent to set for end frame keys.
+
+
+.. py:function:: collect_all_tags()
+
+   Gets and returns a list of unique tags.
+
+
+.. py:function:: collect_all_clip_names()
+
+
+.. py:function:: copy_to_clipboard(txt)
+
+   Copies supplied string to the clipboard.
+   stackoverflow.com/questions/7606062
+
+
+.. py:function:: get_clip_ranges(anm_path)
+
+   Reads file to get its frame ranges.
+
+   :param anm_path: Absolute path to a anm format.
+
+   :returns: A list of start and end frames.
+
+
+.. py:function:: get_clip_length(anm_path)
+
+
+.. py:function:: get_offset_objs(root_nul)
+
+   Gets and returns a dictionary of objects related to offset animation when importing.
+
+   :param root_nul: An asset's root nul where the weak references are contained.
+
+
+.. py:function:: delete_clips(anim_clip_ids)
+
+   Permanently deletes supplied clips from the database and their anm files.
+
+   :param anim_clip_ids: A list of file entry ids.
+
+
+.. py:function:: offset_space_all(start_frame, end_frame, offset_objs, offset_xform, cog_ctrl)
+
+   Applies an offset on supplied controls so they can append to space.
+
+   :param start_frame: Frame to begin modifying keys from.
+   :param end_frame: Frame to end modifying keys to.
+   :param offset_objs: Objects to transform and offset.
+   :param offset_tm: OpenMaya.MTransformationMatrix to offset against.
+   :param parent_tm: OpenMaya.MTransformationMatrix to multiply its inverse with.
+
+
+.. py:function:: get_and_create_user_settings_path()
+
+
+.. py:function:: get_user_settings()
+
+   Reads json format and returns a dictionary of saved data.
+
+
+.. py:function:: set_user_settings(clear_obsolete_tags=False, **kwargs)
+
+   Saves data to be stored locally.
+
+   :param kwargs: A list of settings to save out to file.
+
+
+.. py:function:: get_popular_tags(max_tag_count=15)
+
+   Gets and returns a list of tags that the user uses the most.
+
+   :param max_tag_count: The maximum length of the returning list.
+   :param all_tags: Skips any tags that aren't found in this list of tags.
+
+
+.. py:function:: remove_popular_tag(tag)
+
+
+.. py:function:: increase_popular_tag_count(tag)
+
+
+.. py:function:: display_label_when_empty(widget, label)
+
+   Uses paint to display a label if the layout from the supplied widget is empty.
+
+   :param widget: A widget to draw on.
+   :param label: The message to display.
+
+
+.. py:function:: get_anm_path_controls(anm_path, short_names=False)
+
+   Reads anm format and collects a list of control objects that were used during its export.
+
+   :param anm_path: A full path to an existing anm format file.
+   :param short_names: Returns controls as short names.
+
+
+.. py:function:: get_sel_set_path(asset_info)
+
+
+.. py:function:: read_sel_set_data(asset_info)
+
+

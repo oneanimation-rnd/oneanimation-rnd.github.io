@@ -1,0 +1,87 @@
+ :py:mod:`bd.storage.structure.item`
+========================================================================
+
+.. py:module:: bd.storage.structure.item
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.structure.item.BaseSchemaItem
+   bd.storage.structure.item.SchemaDir
+   bd.storage.structure.item.SchemaAnchor
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.structure.item.log
+
+
+.. py:data:: log
+   
+
+   
+
+.. py:class:: BaseSchemaItem(schema_id, path)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: template
+
+
+   .. py:attribute:: _cache
+      
+
+      
+
+   .. py:method:: create(schema_id, path)
+      :classmethod:
+
+
+   .. py:method:: clear(schema_id=None)
+      :classmethod:
+
+
+   .. py:method:: add_child(item)
+
+
+   .. py:method:: get_config(key, default=None)
+
+
+   .. py:method:: _get_basename()
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+
+.. py:class:: SchemaDir(schema_id, path)
+
+   Bases: :py:obj:`BaseSchemaItem`
+
+
+.. py:class:: SchemaAnchor(schema_id, path)
+
+   Bases: :py:obj:`BaseSchemaItem`
+
+   .. py:method:: _get_basename()
+
+
+

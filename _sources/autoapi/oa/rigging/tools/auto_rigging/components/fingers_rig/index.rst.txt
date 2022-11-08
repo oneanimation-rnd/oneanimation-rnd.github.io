@@ -1,0 +1,22 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.components.fingers_rig`
+==============================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.components.fingers_rig
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.components.fingers_rig.rig
+
+
+
+.. py:function:: rig(hand, cp_ctrl=None, thumb_jnts=None, index_jnts=None, middle_jnts=None, ring_jnts=None, pinky_jnts=None, rig_scale=6.0, control_color=25, suffix='')
+
+

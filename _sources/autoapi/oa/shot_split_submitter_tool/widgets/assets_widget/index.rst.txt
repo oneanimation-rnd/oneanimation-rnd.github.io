@@ -1,0 +1,88 @@
+ :py:mod:`oa.shot_split_submitter_tool.widgets.assets_widget`
+==========================================================================================================================
+
+.. py:module:: oa.shot_split_submitter_tool.widgets.assets_widget
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_split_submitter_tool.widgets.assets_widget.TableView
+   oa.shot_split_submitter_tool.widgets.assets_widget.TableModel
+
+
+
+
+.. py:class:: TableView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableView`
+
+   .. py:attribute:: selected_row
+      
+
+      
+
+   .. py:attribute:: double_clicked
+      
+
+      
+
+   .. py:method:: paintEvent(paint_event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+
+   .. py:method:: selectionChanged(selected, deselected)
+
+
+   .. py:method:: update_contents(shots)
+
+
+
+.. py:class:: TableModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtGui.QStandardItemModel`
+
+   .. py:attribute:: NAME_COLUMN
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: CHECKBOX_COLUMN
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: checkbox_changed
+      
+
+      
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: setData(index, value, role)
+
+
+   .. py:method:: headerData(column, orientation, role)
+
+
+   .. py:method:: flags(index)
+
+
+   .. py:method:: get_data(assets_data)
+
+
+   .. py:method:: clear_contents()
+
+
+

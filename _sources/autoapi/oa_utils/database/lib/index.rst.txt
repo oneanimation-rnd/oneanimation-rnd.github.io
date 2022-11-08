@@ -1,0 +1,17 @@
+ :py:mod:`oa_utils.database.lib`
+================================================================
+
+.. py:module:: oa_utils.database.lib
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   entity/index.rst
+   providers/index.rst
+   version_control/index.rst
+
+

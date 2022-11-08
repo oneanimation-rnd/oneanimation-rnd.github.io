@@ -1,0 +1,30 @@
+ :py:mod:`oa.hou_utils.hda`
+======================================================
+
+.. py:module:: oa.hou_utils.hda
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.hou_utils.hda.is_locked_hda
+   oa.hou_utils.hda.is_modified
+   oa.hou_utils.hda.get_first_definition_in_file
+
+
+
+.. py:function:: is_locked_hda(node)
+
+
+.. py:function:: is_modified(node)
+
+
+.. py:function:: get_first_definition_in_file(hda_path, type_name=None)
+
+

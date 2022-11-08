@@ -1,0 +1,195 @@
+ :py:mod:`oa.asset.tools.costumes.costumes_creator`
+======================================================================================================
+
+.. py:module:: oa.asset.tools.costumes.costumes_creator
+
+.. autoapi-nested-parse::
+
+   An interface that helps attaches props to a character then exports it as a costume.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.costumes.costumes_creator.CostumeCreator
+   oa.asset.tools.costumes.costumes_creator.CustomTableWidget
+   oa.asset.tools.costumes.costumes_creator.CustomListWidget
+   oa.asset.tools.costumes.costumes_creator.ConnectionItem
+   oa.asset.tools.costumes.costumes_creator.GroupItem
+   oa.asset.tools.costumes.costumes_creator.ThumbnailPreview
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.costumes.costumes_creator.launch
+
+
+
+.. py:class:: CostumeCreator(root_nul, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: set_texture_deformer_column(row, enabled)
+
+
+   .. py:method:: set_smooth_column(row, iterations)
+
+
+   .. py:method:: fill_list()
+
+
+   .. py:method:: fill_costume_names()
+
+
+   .. py:method:: fill_fields_from_costume()
+
+
+   .. py:method:: update_thumbnail(img_path)
+
+
+   .. py:method:: show_help_screen()
+
+
+   .. py:method:: on_menu_on_requested(point)
+
+
+   .. py:method:: on_bind_list_double_clicked(index)
+
+
+   .. py:method:: on_select_source_triggered()
+
+
+   .. py:method:: on_select_target_triggered()
+
+
+   .. py:method:: on_remove_triggered()
+
+
+   .. py:method:: on_add_texture_deformer_triggered()
+
+
+   .. py:method:: on_remove_texture_deformer_triggered()
+
+
+   .. py:method:: on_smooth_skin_clicked()
+
+
+   .. py:method:: on_bind_clicked(bind_type)
+
+
+   .. py:method:: on_thumbnail_clicked()
+
+
+   .. py:method:: on_create_costume_clicked()
+
+
+   .. py:method:: on_group_manager_clicked()
+
+
+
+.. py:class:: CustomTableWidget(tooltip, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableWidget`
+
+   .. py:class:: Column
+
+      .. py:attribute:: Name
+         :annotation: = 0
+
+         
+
+      .. py:attribute:: Texture
+         :annotation: = 1
+
+         
+
+      .. py:attribute:: Smooth
+         :annotation: = 2
+
+         
+
+
+   .. py:attribute:: double_clicked
+      
+
+      
+
+   .. py:method:: paintEvent(paint_event)
+
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+
+   .. py:method:: selected_items()
+
+
+
+.. py:class:: CustomListWidget(tooltip, checkable=False, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListWidget`
+
+   .. py:method:: paintEvent(paint_event)
+
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: toggle_selected_items()
+
+
+
+.. py:class:: ConnectionItem(label, source, targets, bind_method, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableWidgetItem`
+
+
+.. py:class:: GroupItem(_id, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListWidgetItem`
+
+
+.. py:class:: ThumbnailPreview(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QPushButton`
+
+   .. py:method:: enterEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: paintEvent(paint_event)
+
+
+
+.. py:function:: launch()
+
+

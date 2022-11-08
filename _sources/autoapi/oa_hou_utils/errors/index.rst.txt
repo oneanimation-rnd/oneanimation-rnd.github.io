@@ -1,0 +1,72 @@
+ :py:mod:`oa_hou_utils.errors`
+============================================================
+
+.. py:module:: oa_hou_utils.errors
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_hou_utils.errors.error_check
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_hou_utils.errors.this
+   oa_hou_utils.errors._log
+   oa_hou_utils.errors._msglog
+   oa_hou_utils.errors._decorated
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:data:: _decorated
+   :annotation: = False
+
+   
+
+.. py:exception:: Error(message=None, details=None)
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+   .. py:attribute:: default_message
+      :annotation: = Unspecified error occured
+
+      
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+
+.. py:function:: error_check(error_dialog_title='Error', raise_errors=False, clear_scene=False, suppress_save_prompt=False, success_message=None)
+
+

@@ -1,0 +1,117 @@
+ :py:mod:`oa.animation.tools.spring_tool.floating_tooltip`
+====================================================================================================================
+
+.. py:module:: oa.animation.tools.spring_tool.floating_tooltip
+
+.. autoapi-nested-parse::
+
+   A floating dialog to replace Qt's native tooltip.
+   This supports multiple labels, images, and gifs.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.spring_tool.floating_tooltip.FloatingTooltip
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.spring_tool.floating_tooltip.translate_mult_tooltip
+   oa.animation.tools.spring_tool.floating_tooltip.rotate_mult_tooltip
+   oa.animation.tools.spring_tool.floating_tooltip.settle_tooltip
+   oa.animation.tools.spring_tool.floating_tooltip.max_speed_tooltip
+   oa.animation.tools.spring_tool.floating_tooltip.air_drag_tooltip
+   oa.animation.tools.spring_tool.floating_tooltip.limit_tooltip
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.spring_tool.floating_tooltip.resources_path
+   oa.animation.tools.spring_tool.floating_tooltip.gifs_path
+
+
+.. py:data:: resources_path
+   
+
+   
+
+.. py:data:: gifs_path
+   
+
+   
+
+.. py:class:: FloatingTooltip(area, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QLabel`
+
+   .. py:class:: Area
+
+      .. py:attribute:: Top
+         :annotation: = 0
+
+         
+
+      .. py:attribute:: Bottom
+         :annotation: = 1
+
+         
+
+
+   .. py:method:: set_title(title)
+
+
+   .. py:method:: set_description(description)
+
+
+   .. py:method:: add_section(img_path, caption)
+
+
+   .. py:method:: enterEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: destroy_clips()
+
+
+
+.. py:function:: translate_mult_tooltip(area, parent)
+
+
+.. py:function:: rotate_mult_tooltip(area, parent)
+
+
+.. py:function:: settle_tooltip(area, parent)
+
+
+.. py:function:: max_speed_tooltip(area, parent)
+
+
+.. py:function:: air_drag_tooltip(area, parent)
+
+
+.. py:function:: limit_tooltip(area, parent)
+
+

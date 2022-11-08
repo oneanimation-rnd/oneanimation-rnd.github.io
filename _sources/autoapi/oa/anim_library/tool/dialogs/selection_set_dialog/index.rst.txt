@@ -1,0 +1,87 @@
+ :py:mod:`oa.anim_library.tool.dialogs.selection_set_dialog`
+========================================================================================================================
+
+.. py:module:: oa.anim_library.tool.dialogs.selection_set_dialog
+
+.. autoapi-nested-parse::
+
+   This editor let's the user define an asset's selection sets.
+
+   Selection sets are just collection of objects so when a clip is exported, it can use
+   the controls defined by a selection set to create the clip with.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.dialogs.selection_set_dialog.SelectionSet
+
+
+
+
+.. py:class:: SelectionSet(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: del_previous_instance()
+
+      Deletes any previous instance of this class.
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: get_members_by_selection()
+
+
+   .. py:method:: save_sel_set_data(sel_set_data)
+
+
+   .. py:method:: display_sets(select=None)
+
+
+   .. py:method:: display_members(sel_set_data=None)
+
+
+   .. py:method:: selected_set_name()
+
+
+   .. py:method:: sets_list_on_sel_change(index)
+
+
+   .. py:method:: add_set_on_click()
+
+
+   .. py:method:: delete_set_on_click()
+
+
+   .. py:method:: add_members_on_click()
+
+
+   .. py:method:: remove_members_on_click()
+
+
+   .. py:method:: clear_members_on_click()
+
+
+   .. py:method:: select_members_on_click()
+
+
+

@@ -1,0 +1,66 @@
+ :py:mod:`oa.general.tools.task_switcher.widgets.shot_nums_viewer`
+====================================================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.widgets.shot_nums_viewer
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.widgets.shot_nums_viewer.ShotsNumTableView
+   oa.general.tools.task_switcher.widgets.shot_nums_viewer.ShotsNumTableModel
+
+
+
+
+.. py:class:: ShotsNumTableView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableView`
+
+   .. py:method:: clear_table()
+
+
+   .. py:method:: fill_table(shots_data)
+
+
+
+.. py:class:: ShotsNumTableModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractTableModel`
+
+   .. py:attribute:: SHOT_COLUMN
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: START_COLUMN
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: END_COLUMN
+      :annotation: = 2
+
+      
+
+   .. py:method:: rowCount(parent)
+
+
+   .. py:method:: columnCount(parent)
+
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: headerData(column, orientation, role)
+
+
+   .. py:method:: flags(index)
+
+
+

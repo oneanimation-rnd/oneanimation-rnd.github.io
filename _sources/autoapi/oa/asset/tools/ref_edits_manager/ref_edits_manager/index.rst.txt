@@ -1,0 +1,103 @@
+ :py:mod:`oa.asset.tools.ref_edits_manager.ref_edits_manager`
+==========================================================================================================================
+
+.. py:module:: oa.asset.tools.ref_edits_manager.ref_edits_manager
+
+.. autoapi-nested-parse::
+
+   Reads a reference's edits so that the user can choose which to remove.
+   This reads and applies edits significantly faster than Maya's native tool.
+   Sometimes Maya's native tool won't remove specified edits, whereas this one does.
+
+   Author:
+       Jason Labbe
+
+   .. todo:: - Support removing edits on multiple references in a single action.
+
+   Limitations:
+       - Failed edits are not included and will be removed if edits are re-applied.
+       - Ignores nested references.
+
+   Usage:
+       import ref_edits_manager
+       ref_edits_manager.launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.ref_edits_manager.ref_edits_manager.RefEditsManager
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.ref_edits_manager.ref_edits_manager.launch
+
+
+
+.. py:class:: RefEditsManager(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: _on_load_ref_from_selection_clicked()
+
+
+   .. py:method:: _on_select_contents_clicked()
+
+
+   .. py:method:: _on_inspect_with_native_clicked()
+
+
+   .. py:method:: _on_refs_list_selection_changed(index)
+
+
+   .. py:method:: _on_select_by_filter_clicked()
+
+
+   .. py:method:: _on_keep_selected_edits_clicked()
+
+
+   .. py:method:: _on_remove_selected_edits_clicked()
+
+
+   .. py:method:: _on_visibility_filter_clicked()
+
+
+   .. py:method:: _on_reload_clicked()
+
+
+   .. py:method:: _on_apply_edits_clicked()
+
+
+   .. py:method:: _update_edits_count_labels()
+
+
+   .. py:method:: _get_pattern(line_edit)
+
+
+   .. py:method:: _clear_edits_dir()
+
+
+   .. py:method:: _load_edits(ref_path)
+
+
+
+.. py:function:: launch(parent=None)
+
+

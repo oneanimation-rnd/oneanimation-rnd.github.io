@@ -1,0 +1,22 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.components.oddbods_spine_rig`
+==========================================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.components.oddbods_spine_rig
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.components.oddbods_spine_rig.rig_oddbods_spine
+
+
+
+.. py:function:: rig_oddbods_spine(root_nul, hips, spine_base, spine_tip, rig_scale=1)
+
+

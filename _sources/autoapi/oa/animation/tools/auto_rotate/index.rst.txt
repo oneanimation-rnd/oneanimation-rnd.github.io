@@ -1,0 +1,16 @@
+ :py:mod:`oa.animation.tools.auto_rotate`
+==================================================================================
+
+.. py:module:: oa.animation.tools.auto_rotate
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   auto_rotate_tool/index.rst
+   auto_rotate_utils/index.rst
+
+

@@ -1,0 +1,245 @@
+ :py:mod:`oa.animation.tools.shot_splitter.shot_splitter`
+==================================================================================================================
+
+.. py:module:: oa.animation.tools.shot_splitter.shot_splitter
+
+.. autoapi-nested-parse::
+
+   Separates animation sequence scene files to individual shots.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.shot_splitter.shot_splitter.get_scene_cp
+   oa.animation.tools.shot_splitter.shot_splitter.get_scene_info
+   oa.animation.tools.shot_splitter.shot_splitter.get_shot_frame_ranges
+   oa.animation.tools.shot_splitter.shot_splitter.split_timeline
+   oa.animation.tools.shot_splitter.shot_splitter.trim_scene_cp_shots
+   oa.animation.tools.shot_splitter.shot_splitter.set_first_last_keyframes
+   oa.animation.tools.shot_splitter.shot_splitter.delete_out_of_range_keyframes
+   oa.animation.tools.shot_splitter.shot_splitter.find_too_close_adjacent_keys
+   oa.animation.tools.shot_splitter.shot_splitter.get_anim_curve
+   oa.animation.tools.shot_splitter.shot_splitter.adjacent_keys_iterator
+   oa.animation.tools.shot_splitter.shot_splitter.cut_too_near_end_key
+   oa.animation.tools.shot_splitter.shot_splitter.delete_motion_trails
+   oa.animation.tools.shot_splitter.shot_splitter.switch_resolutions_to_rdr
+   oa.animation.tools.shot_splitter.shot_splitter.update_refs_by_inf_assets
+   oa.animation.tools.shot_splitter.shot_splitter.collect_scene_ref_paths
+   oa.animation.tools.shot_splitter.shot_splitter.load_reference
+   oa.animation.tools.shot_splitter.shot_splitter.split_shot
+   oa.animation.tools.shot_splitter.shot_splitter.split_and_output_shot
+   oa.animation.tools.shot_splitter.shot_splitter.submit_job
+   oa.animation.tools.shot_splitter.shot_splitter.split_and_cache_on_farm
+
+
+
+.. py:function:: get_scene_cp()
+
+   Gets SceneCP if it exists.
+
+   :returns: The name of the SceneCP, or None if it doesn't exist.
+
+   :raises AssertionError: When it can't find it in the scene.
+
+
+.. py:function:: get_scene_info()
+
+   Gets shot data from scene cp.
+
+   :returns: A dictionary of all the shot info.
+
+   :raises AssertionError: If the scene_info can't be found on the SceneCP.
+
+
+.. py:function:: get_shot_frame_ranges(shot)
+
+   Gets start and end frames of a shot.
+   :param shot <str>: Shot name including zero padding.
+
+   :raises AssertionError: If it's unable to find a shot in the SceneCP.
+
+   :returns: A list with the start and end frames.
+
+
+.. py:function:: split_timeline(shot)
+
+   Splits timeline to a shot's frame range from the SceneCP.
+
+   :param shot: Shot name including zero padding.
+   :type shot: string
+
+   :raises AssertionError: If the shot is not in SceneCP.
+
+
+.. py:function:: trim_scene_cp_shots(shot)
+
+   Removes all shots from SceneCP except supplied shot.
+
+   :param shot: Shot name including zero padding to keep in SceneCP.
+   :type shot: string
+
+   :raises AssertionError: If the shot is not in SceneCP.
+
+
+.. py:function:: set_first_last_keyframes(shot)
+
+   Tries to set a key for the shot's start and end range without affecting the existing anim curves.
+   Ignores if infinity is a cycle.
+   Use this before deleting keys out of the shot's ranges.
+
+   :param shot: Shot name including zero padding.
+   :type shot: string
+
+
+.. py:function:: delete_out_of_range_keyframes(shot)
+
+   Deletes all keyframes that are outside of the shot's frame ranges.
+   Ignores keyframes if infinity is end of a cycle.
+
+   :param shot: Shot name including zero padding.
+   :type shot: string
+
+
+.. py:function:: find_too_close_adjacent_keys(anim_curve, threshold, time_range=())
+
+   Looks for keys that have a spacing below the given threshold.
+
+   :param anim_curve: The curve to check against.
+   :type anim_curve: string
+   :param threshold: The distance of frames it will check for if it's below.
+   :type threshold: float
+   :param time_range: A start and end frame range to only check with, instead of checking all frames.
+   :type time_range: float[]
+
+   :returns: A list of tuples of the frames in pairs that are too near each other.
+
+
+.. py:function:: get_anim_curve(plug)
+
+   Tries to get a plug's animation curve if it exists.
+
+
+.. py:function:: adjacent_keys_iterator(threshold=0.05, time_range=())
+
+   A generator that will yield data when it finds adjacent keys that are too close.
+
+   :Yields: The animation curve, the plug name, and the frames.
+
+
+.. py:function:: cut_too_near_end_key()
+
+   Looks specifically for keys at the end of the shot and tries to cut any adjacent keys that are too close.
+   This should help prevent popping at the end of the shot.
+
+
+.. py:function:: delete_motion_trails()
+
+   When using cutKey on an object that has a motion trail with at least 2 keys, it will revert the value to 0 instead of maintaining its value.
+   This significantly messes up shot splitting as it changes its value.
+
+
+.. py:function:: switch_resolutions_to_rdr(update_filter=())
+
+   Tries to switch all references to RDR resolution.
+
+
+.. py:function:: update_refs_by_inf_assets(ref_node, inf_asset_list)
+
+   Updates reference and its nested references by matching reference ids from a INFAsset.
+
+   :param ref_node: A reference node.
+   :type ref_node: string
+   :param inf_asset_list:
+   :type inf_asset_list: INFAsset[]
+
+
+.. py:function:: collect_scene_ref_paths()
+
+   Gets and returns all references' resolved paths.
+
+
+.. py:function:: load_reference(ref_path)
+
+   Goes through reference and its nested references to load them all.
+
+   :param ref_path: Resolved reference path.
+   :type ref_path: string
+
+
+.. py:function:: split_shot(shot, run_frustum=True, update_filter=())
+
+   Splits a scene to an individual shot.
+
+   :param shot: Shot name including zero padding.
+   :type shot: string
+   :param run_frustum: Skip frustum culling if false.
+   :type run_frustum: bool
+   :param update_filter: Names of assets to update to latest version.
+   :type update_filter: string[]
+
+
+.. py:function:: split_and_output_shot(ep, seq, shot, run_frustum=True, update_filter=())
+
+   Splits shot then exports it onto the server with a maINF descriptor.
+
+   :param ep:
+   :type ep: string
+   :param seq:
+   :type seq: string
+   :param shot:
+   :type shot: string
+   :param run_frustum:
+   :type run_frustum: bool
+
+
+.. py:function:: submit_job(scene_path, shots, project=None, ep=None, seq=None, run_frustum=True, ref_paths=[])
+
+   Submits a job on the farm to split a sequence to separated shots.
+
+   :param scene_path: Full path to a maya scene on the server.
+   :type scene_path: string
+   :param shots: List of shot names to split to.
+   :type shots: string[]
+   :param project:
+   :type project: string
+   :param ep:
+   :type ep: string
+   :param seq:
+   :type seq: string
+   :param run_frustum:
+   :type run_frustum: bool
+   :param ref_paths: List of resolved reference paths.
+   :type ref_paths: string[]
+
+   :returns: True if jobs were launched with no errors.
+
+
+.. py:function:: split_and_cache_on_farm(project, ep, seq, shots, run_frustum, ref_paths=[])
+
+   Sends jobs to split shots and cache assets on the farm.
+
+   :param project: Project's name.
+   :type project: string
+   :param ep: Episode's name.
+   :type ep: string
+   :param seq: Sequence's name.
+   :type seq: string
+   :param shots: List of shot names.
+   :type shots: string[]
+   :param run_frustum: True to include run frustum before splitting.
+   :type run_frustum: bool
+   :param ref_paths: List of reference paths to cache on the farm.
+   :type ref_paths: string[]
+
+

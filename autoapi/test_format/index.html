@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> test_format &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Glossary" href="../../glossary.html" />
+    <link rel="prev" title=" oa_utils.xml_info_hou" href="../oa_utils/xml_info_hou/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../api.html">API DOCS</a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/autoapi/test_format/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-test_format">
+<span id="test-format"></span><h1> <a class="reference internal" href="#module-test_format" title="test_format"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a><a class="headerlink" href="#module-test_format" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#test_format.TestAnmCore" title="test_format.TestAnmCore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestAnmCore</span></code></a></p></td>
+<td><p>A class whose instances are single test cases.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#test_format.TestCommand" title="test_format.TestCommand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestCommand</span></code></a></p></td>
+<td><p>A class whose instances are single test cases.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#test_format.TestExportCmd" title="test_format.TestExportCmd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestExportCmd</span></code></a></p></td>
+<td><p>A class whose instances are single test cases.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#test_format.TestImportCmd" title="test_format.TestImportCmd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestImportCmd</span></code></a></p></td>
+<td><p>A class whose instances are single test cases.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="test_format.TestAnmCore">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">test_format.</span></span><span class="sig-name descname"><span class="pre">TestAnmCore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestAnmCore" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">unittest.TestCase</span></code></p>
+<p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+‘runTest’.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test’s environment (‘fixture’) can be
+implemented by overriding the ‘setUp’ and ‘tearDown’ methods respectively.</p>
+<p>If it is necessary to override the __init__ method, the base class
+__init__ method must always be called. It is important that subclasses
+should not change the signature of their __init__ method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when</p>
+<blockquote>
+<div><p>the instance’s assertion methods fail; test methods raising this
+exception will be deemed to have ‘failed’ rather than ‘errored’.</p>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>longMessage: determines whether long messages (including repr of</dt><dd><p>objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>maxDiff: sets the maximum length of a diff in failure messages</dt><dd><p>by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestAnmCore.setUpClass">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setUpClass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestAnmCore.setUpClass" title="Permalink to this definition"></a></dt>
+<dd><p>Hook method for setting up class fixture before running tests in the class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestAnmCore.tearDownClass">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tearDownClass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestAnmCore.tearDownClass" title="Permalink to this definition"></a></dt>
+<dd><p>Hook method for deconstructing the class fixture after running all tests in the class.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="test_format.TestCommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">test_format.</span></span><span class="sig-name descname"><span class="pre">TestCommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestCommand" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#test_format.TestAnmCore" title="test_format.TestAnmCore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestAnmCore</span></code></a></p>
+<p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+‘runTest’.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test’s environment (‘fixture’) can be
+implemented by overriding the ‘setUp’ and ‘tearDown’ methods respectively.</p>
+<p>If it is necessary to override the __init__ method, the base class
+__init__ method must always be called. It is important that subclasses
+should not change the signature of their __init__ method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when</p>
+<blockquote>
+<div><p>the instance’s assertion methods fail; test methods raising this
+exception will be deemed to have ‘failed’ rather than ‘errored’.</p>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>longMessage: determines whether long messages (including repr of</dt><dd><p>objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>maxDiff: sets the maximum length of a diff in failure messages</dt><dd><p>by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="test_format.TestCommand.output_path">
+<span class="sig-name descname"><span class="pre">output_path</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">/Volumes/data/animation.anm</span></em><a class="headerlink" href="#test_format.TestCommand.output_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestCommand.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestCommand.setUp" title="Permalink to this definition"></a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestCommand.tearDown">
+<span class="sig-name descname"><span class="pre">tearDown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestCommand.tearDown" title="Permalink to this definition"></a></dt>
+<dd><p>Hook method for deconstructing the test fixture after testing it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestCommand._remove_tmp_files">
+<span class="sig-name descname"><span class="pre">_remove_tmp_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestCommand._remove_tmp_files" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="test_format.TestExportCmd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">test_format.</span></span><span class="sig-name descname"><span class="pre">TestExportCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestExportCmd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#test_format.TestCommand" title="test_format.TestCommand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestCommand</span></code></a></p>
+<p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+‘runTest’.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test’s environment (‘fixture’) can be
+implemented by overriding the ‘setUp’ and ‘tearDown’ methods respectively.</p>
+<p>If it is necessary to override the __init__ method, the base class
+__init__ method must always be called. It is important that subclasses
+should not change the signature of their __init__ method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when</p>
+<blockquote>
+<div><p>the instance’s assertion methods fail; test methods raising this
+exception will be deemed to have ‘failed’ rather than ‘errored’.</p>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>longMessage: determines whether long messages (including repr of</dt><dd><p>objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>maxDiff: sets the maximum length of a diff in failure messages</dt><dd><p>by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestExportCmd.test_no_arguments">
+<span class="sig-name descname"><span class="pre">test_no_arguments</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestExportCmd.test_no_arguments" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestExportCmd.test_selection">
+<span class="sig-name descname"><span class="pre">test_selection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestExportCmd.test_selection" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestExportCmd.test_non_transform_node">
+<span class="sig-name descname"><span class="pre">test_non_transform_node</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestExportCmd.test_non_transform_node" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestExportCmd.test_missing_or_invalid_flags">
+<span class="sig-name descname"><span class="pre">test_missing_or_invalid_flags</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestExportCmd.test_missing_or_invalid_flags" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestExportCmd.test_framerange_flags">
+<span class="sig-name descname"><span class="pre">test_framerange_flags</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestExportCmd.test_framerange_flags" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestExportCmd.test_anchor">
+<span class="sig-name descname"><span class="pre">test_anchor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestExportCmd.test_anchor" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestExportCmd.test_units">
+<span class="sig-name descname"><span class="pre">test_units</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestExportCmd.test_units" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestExportCmd.test_tag_attribute">
+<span class="sig-name descname"><span class="pre">test_tag_attribute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestExportCmd.test_tag_attribute" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestExportCmd.test_attribute_integrity">
+<span class="sig-name descname"><span class="pre">test_attribute_integrity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestExportCmd.test_attribute_integrity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestExportCmd.test_anim_curve_integrity">
+<span class="sig-name descname"><span class="pre">test_anim_curve_integrity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestExportCmd.test_anim_curve_integrity" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestExportCmd._read_output">
+<span class="sig-name descname"><span class="pre">_read_output</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestExportCmd._read_output" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="test_format.TestImportCmd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">test_format.</span></span><span class="sig-name descname"><span class="pre">TestImportCmd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestImportCmd" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#test_format.TestCommand" title="test_format.TestCommand"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TestCommand</span></code></a></p>
+<p>A class whose instances are single test cases.</p>
+<p>By default, the test code itself should be placed in a method named
+‘runTest’.</p>
+<p>If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.</p>
+<p>Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test’s environment (‘fixture’) can be
+implemented by overriding the ‘setUp’ and ‘tearDown’ methods respectively.</p>
+<p>If it is necessary to override the __init__ method, the base class
+__init__ method must always be called. It is important that subclasses
+should not change the signature of their __init__ method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.</p>
+<p>When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when</p>
+<blockquote>
+<div><p>the instance’s assertion methods fail; test methods raising this
+exception will be deemed to have ‘failed’ rather than ‘errored’.</p>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>longMessage: determines whether long messages (including repr of</dt><dd><p>objects used in assert methods) will be printed on failure in <em>addition</em>
+to any explicit message passed.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>maxDiff: sets the maximum length of a diff in failure messages</dt><dd><p>by assert methods using difflib. It is looked up as an instance
+attribute so can be configured by individual tests if required.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestImportCmd.test_match_by_tag">
+<span class="sig-name descname"><span class="pre">test_match_by_tag</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestImportCmd.test_match_by_tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestImportCmd.test_match_by_tag_hierarchy">
+<span class="sig-name descname"><span class="pre">test_match_by_tag_hierarchy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestImportCmd.test_match_by_tag_hierarchy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="test_format.TestImportCmd.testAnim_curve_match">
+<span class="sig-name descname"><span class="pre">testAnim_curve_match</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#test_format.TestImportCmd.testAnim_curve_match" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../oa_utils/xml_info_hou/index.html" class="btn btn-neutral float-left" title=" oa_utils.xml_info_hou" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../glossary.html" class="btn btn-neutral float-right" title="Glossary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

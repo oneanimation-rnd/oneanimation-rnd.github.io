@@ -1,0 +1,478 @@
+ :py:mod:`oa.animation.tools.scene_details.refs_treeview`
+==================================================================================================================
+
+.. py:module:: oa.animation.tools.scene_details.refs_treeview
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_details.refs_treeview.RefsTreeView
+   oa.animation.tools.scene_details.refs_treeview.AssetProxyModel
+   oa.animation.tools.scene_details.refs_treeview.AssetTreeModel
+   oa.animation.tools.scene_details.refs_treeview.StyledItemDelegate
+   oa.animation.tools.scene_details.refs_treeview.ComboBoxEditor
+   oa.animation.tools.scene_details.refs_treeview.ComboBoxDelegate
+   oa.animation.tools.scene_details.refs_treeview.AssetTreeNode
+
+
+
+
+.. py:class:: RefsTreeView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTreeView`
+
+   .. py:attribute:: show_help_requested
+      
+
+      
+
+   .. py:attribute:: show_thumbnails_toggled
+      
+
+      
+
+   .. py:attribute:: show_inst_masters_toggled
+      
+
+      
+
+   .. py:attribute:: show_hierarchy_toggled
+      
+
+      
+
+   .. py:attribute:: data_updated
+      
+
+      
+
+   .. py:attribute:: selection_changed
+      
+
+      
+
+   .. py:attribute:: TimeRange
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: ShotRange
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: SequenceRange
+      :annotation: = 2
+
+      
+
+   .. py:method:: paintEvent(paint_event)
+
+
+   .. py:method:: mouseReleaseEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: wheelEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: on_expanded(top_index)
+
+
+   .. py:method:: on_collapsed(top_index)
+
+
+   .. py:method:: on_header_section_clicked(column)
+
+
+   .. py:method:: on_menu_on_requested(point)
+
+
+   .. py:method:: on_load_triggered()
+
+
+   .. py:method:: on_unload_triggered()
+
+
+   .. py:method:: on_replace_triggered()
+
+
+   .. py:method:: on_remove_triggered()
+
+
+   .. py:method:: on_update_triggered()
+
+
+   .. py:method:: on_update_all_triggered()
+
+
+   .. py:method:: on_create_gpu_triggered()
+
+
+   .. py:method:: on_run_frustum_triggered()
+
+
+   .. py:method:: on_run_frustum_shot_triggered()
+
+
+   .. py:method:: on_run_frustum_seq_triggered()
+
+
+   .. py:method:: on_select_all_triggered()
+
+
+   .. py:method:: on_select_globalsrt_triggered()
+
+
+   .. py:method:: on_select_from_maya_triggered()
+
+
+   .. py:method:: on_frame_camera_triggered()
+
+
+   .. py:method:: on_show_thumbnails_triggered()
+
+
+   .. py:method:: on_inst_masters_triggered()
+
+
+   .. py:method:: on_show_hierarchy_triggered()
+
+
+   .. py:method:: on_resync_triggered()
+
+
+   .. py:method:: on_show_help_triggered()
+
+
+   .. py:method:: on_open_dir_triggered()
+
+
+   .. py:method:: on_copy_dir_path_triggered()
+
+
+   .. py:method:: on_copy_ref_path_triggered()
+
+
+   .. py:method:: on_selection_changed(current, previous)
+
+
+   .. py:method:: selected_indexes()
+
+
+   .. py:method:: select_indexes(indexes, clear=True, flags=None)
+
+
+   .. py:method:: get_selected_ref_path()
+
+
+   .. py:method:: traverse_top_rows()
+
+      A generator that iterates through selected rows, but skips a row if it's not the very top.
+
+
+   .. py:method:: traverse_parent_rows()
+
+      A generator that iterates through selected rows, but skips a row if its parent is selected.
+      Effectively it's going through all top-most rows.
+
+
+   .. py:method:: clear_tree()
+
+
+   .. py:method:: fill_tree()
+
+      Reset and add tree node objects.
+
+
+   .. py:method:: update_filter(pattern)
+
+      Updates proxy's filter string.
+
+
+   .. py:method:: get_selected_items_objs(pattern='*')
+
+
+   .. py:method:: set_thumbnails_vis(show)
+
+
+   .. py:method:: set_inst_masters_vis(show)
+
+
+   .. py:method:: set_hierarchy_vis(show)
+
+
+   .. py:method:: run_frustum(time_range_type)
+
+
+
+.. py:class:: AssetProxyModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QSortFilterProxyModel`
+
+   Proxy used between QTreeView and QAbstractItemModel to filter and sort items.
+
+   .. py:method:: filterAcceptsRow(row, parent_index)
+
+      Built-in function to filter what items are seen.
+
+
+   .. py:method:: has_accepted_children(pattern, tree_node)
+
+      Recursively searches through tree node's children to see if it matches the supplied pattern.
+      This is used so for filtering so that the parent remains visible if it has a valid child.
+
+
+
+.. py:class:: AssetTreeModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractItemModel`
+
+   
+   QTreeView uses this class to handle all its data for best performance.
+
+   .. py:attribute:: ColumnNamespace
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: ColumnVersion
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: ColumnRes
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: ColumnLoaded
+      :annotation: = 3
+
+      
+
+   .. py:attribute:: ColumnThumbnail
+      :annotation: = 4
+
+      
+
+   .. py:attribute:: assets_updated
+      
+
+      
+
+   .. py:attribute:: start_progress
+      
+
+      
+
+   .. py:attribute:: next_progress
+      
+
+      
+
+   .. py:attribute:: progress_finished
+      
+
+      
+
+   .. py:attribute:: rows_changed
+      
+
+      
+
+   .. py:attribute:: data_updated
+      
+
+      
+
+   .. py:method:: columnCount(index=QtCore.QModelIndex())
+
+
+   .. py:method:: rowCount(index=QtCore.QModelIndex())
+
+
+   .. py:method:: index(row, column, index=QtCore.QModelIndex())
+
+
+   .. py:method:: parent(index)
+
+
+   .. py:method:: hasChildren(index)
+
+
+   .. py:method:: data(index, role)
+
+      Edit this to determine how the model should get its data from tree nodes.
+
+
+   .. py:method:: setData(index, value, role=QtCore.Qt.EditRole)
+
+      Edit this to determine how the model should set data back onto tree nodes.
+
+
+   .. py:method:: flags(index)
+
+      Sets a role for columns.
+
+
+   .. py:method:: headerData(section, orientation, role)
+
+
+   .. py:method:: store_eval_settings()
+
+
+   .. py:method:: to_serial_mode()
+
+
+   .. py:method:: restore_eval_settings()
+
+
+   .. py:method:: get_data()
+
+
+   .. py:method:: create_nodes_by_refs(ref_paths, parent=None)
+
+
+   .. py:method:: append_sub_nodes(ref_path, parent=None)
+
+
+   .. py:method:: traverse_all_rows(index=None, column=None)
+
+
+   .. py:method:: crop_thumbnail(pixmap)
+
+
+   .. py:method:: set_load_state(indexes, load)
+
+
+   .. py:method:: replace_refs(indexes, to_ref_path)
+
+
+   .. py:method:: remove_refs(indexes)
+
+
+   .. py:method:: create_gpu(indexes)
+
+
+   .. py:method:: set_version(index, new_version)
+
+
+   .. py:method:: update_to_latest(indexes)
+
+
+   .. py:method:: update_all_old_versions()
+
+
+
+.. py:class:: StyledItemDelegate(parent)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QStyledItemDelegate`
+
+   .. py:method:: paint(painter, option, index)
+
+
+
+.. py:class:: ComboBoxEditor(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QComboBox`
+
+   .. py:attribute:: entered
+      
+
+      
+
+   .. py:method:: enterEvent(event)
+
+
+
+.. py:class:: ComboBoxDelegate(parent)
+
+   Bases: :py:obj:`StyledItemDelegate`
+
+   .. py:method:: createEditor(parent, option, index)
+
+
+   .. py:method:: setEditorData(editor, index)
+
+
+   .. py:method:: setModelData(editor, model, index)
+
+
+   .. py:method:: hide_asset_tool_tip()
+
+
+   .. py:method:: on_combobox_entered()
+
+
+
+.. py:class:: AssetTreeNode(parent, node_type, _data, meta_data=None)
+
+   Bases: :py:obj:`object`
+
+   The tree's model will be populated with this.
+
+   .. py:method:: data(column)
+
+      Fetches data by column.
+
+
+   .. py:method:: setData(column, value)
+
+      Sets value to internal data.
+
+
+   .. py:method:: appendChild(node_type, _data, meta_data=None)
+
+      Appends a new AssetTreeNode child to self.
+
+
+   .. py:method:: removeChild(position)
+
+
+   .. py:method:: removeChildren()
+
+
+   .. py:method:: child(row)
+
+      Fetches child by relative row index.
+
+
+   .. py:method:: childrenCount()
+
+      Gets number of children.
+
+
+   .. py:method:: hasChildren()
+
+      Returns True if self has children.
+
+
+   .. py:method:: row()
+
+      Gets self's current row index.
+
+
+   .. py:method:: columnCount()
+
+      Gets self's number of columns.
+
+
+   .. py:method:: collect_version_info()
+
+
+

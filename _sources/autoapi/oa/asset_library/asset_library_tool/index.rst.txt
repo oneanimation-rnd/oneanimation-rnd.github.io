@@ -1,0 +1,152 @@
+ :py:mod:`oa.asset_library.asset_library_tool`
+============================================================================================
+
+.. py:module:: oa.asset_library.asset_library_tool
+
+.. autoapi-nested-parse::
+
+   Interface to display assets from the database and to import them in a scene.
+   Runs in Maya and standalone.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_library.asset_library_tool.AssetLibrary
+   oa.asset_library.asset_library_tool.ProjectComboBox
+   oa.asset_library.asset_library_tool.HorizontalScrollArea
+   oa.asset_library.asset_library_tool.ImportCountInputDialog
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_library.asset_library_tool.launch
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_library.asset_library_tool.qapp
+
+
+.. py:class:: AssetLibrary(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: get_settings_path()
+
+      Gets the file path where to save/restore tool's settings
+
+
+   .. py:method:: save_gui_settings()
+
+      Save the current state of the gui to a json format.
+
+
+   .. py:method:: restore_gui_settings()
+
+      Restore ui to its previous state.
+
+
+   .. py:method:: set_no_selection_state()
+
+
+   .. py:method:: set_has_selection_state()
+
+
+   .. py:method:: fill_projects_list()
+
+
+   .. py:method:: update_info(*args)
+
+      Get selected AssetTreeNode, fetch all its versions and show it.
+
+
+   .. py:method:: import_asset()
+
+
+   .. py:method:: on_menu_triggered(index, menu)
+
+
+   .. py:method:: on_asset_double_clicked(index)
+
+
+   .. py:method:: on_projects_changed(*args)
+
+
+   .. py:method:: on_import_cam_clicked()
+
+
+   .. py:method:: on_import_clicked()
+
+
+   .. py:method:: on_import_multiple_clicked()
+
+
+   .. py:method:: on_find_clicked()
+
+
+
+.. py:class:: ProjectComboBox(icon_size=QtCore.QSize(100, 80), max_vis_items=8, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QComboBox`
+
+   .. py:method:: showPopup()
+
+
+   .. py:method:: add_item(row, label, pixmap)
+
+
+   .. py:method:: set_count(count)
+
+
+
+.. py:class:: HorizontalScrollArea(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QScrollArea`
+
+   .. py:method:: wheelEvent(event)
+
+
+
+.. py:class:: ImportCountInputDialog(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QInputDialog`
+
+
+.. py:function:: launch()
+
+
+.. py:data:: qapp
+   
+
+   
+

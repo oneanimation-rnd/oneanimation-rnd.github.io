@@ -1,0 +1,26 @@
+ :py:mod:`oa.hou_utils.misc`
+========================================================
+
+.. py:module:: oa.hou_utils.misc
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.hou_utils.misc.rename_node
+   oa.hou_utils.misc.expand_string
+
+
+
+.. py:function:: rename_node(node, name)
+
+
+.. py:function:: expand_string(s)
+
+

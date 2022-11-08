@@ -1,0 +1,66 @@
+ :py:mod:`oa.asset.tools.ref_edits_manager.widgets.reference_list_view`
+==============================================================================================================================================
+
+.. py:module:: oa.asset.tools.ref_edits_manager.widgets.reference_list_view
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.ref_edits_manager.widgets.reference_list_view.ReferenceListView
+   oa.asset.tools.ref_edits_manager.widgets.reference_list_view.ReferenceListModel
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.ref_edits_manager.widgets.reference_list_view.QStringListModel
+
+
+.. py:data:: QStringListModel
+   
+
+   
+
+.. py:class:: ReferenceListView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListView`
+
+   .. py:attribute:: selection_changed
+      
+
+      
+
+   .. py:method:: selectionChanged(selected, deselected)
+
+
+   .. py:method:: refresh_list()
+
+
+   .. py:method:: selected_ref_path()
+
+
+   .. py:method:: select_by_name(name)
+
+
+
+.. py:class:: ReferenceListModel(parent)
+
+   Bases: :py:obj:`QStringListModel`
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: load_scene_references()
+
+
+

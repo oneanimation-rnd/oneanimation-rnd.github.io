@@ -1,0 +1,56 @@
+ :py:mod:`oa.rigging.libs.rig_resolutions.general_functions`
+========================================================================================================================
+
+.. py:module:: oa.rigging.libs.rig_resolutions.general_functions
+
+.. autoapi-nested-parse::
+
+   Author: jason.labbe
+
+   This class holds generic functions that are geared towards a specific tool, with the idea in mind to be imported from other scripts
+   CAUTION: Changing these functions may affect a lot of scripts, so make sure any modifications work!
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.rig_resolutions.general_functions.GeneralFunctions
+
+
+
+
+.. py:class:: GeneralFunctions
+
+   Bases: :py:obj:`object`
+
+   Create a custom attribute of basic type all in one go
+   Supports types int, float, string, bool
+   :param obj <str> - Object to add attribute to:
+   :param longName <str> - Attribute's name:
+   :param attrValue <typeless> - Default value of attribute. The type of this variable determines what kind of attribute will be built.:
+   :param shortName <str> - Option of attribute's short name:
+   :param keyable <bool> - Option to show attribute in channel box:
+   :param lock <bool> - Option to lock attribute:
+
+   .. py:method:: createCustomAttr(obj, longName, attrValue, shortName=None, keyable=True, lock=False)
+
+
+   .. py:method:: getAttrValue(obj, attrName)
+
+
+   .. py:method:: createWeakReference(obj, weakRefObj, attrName)
+
+
+   .. py:method:: getWeakReferenceObj(obj, attrName)
+
+
+   .. py:method:: setWireColor(objs, colorIndexValue)
+
+
+

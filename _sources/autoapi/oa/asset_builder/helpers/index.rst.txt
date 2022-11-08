@@ -1,0 +1,77 @@
+ :py:mod:`oa.asset_builder.helpers`
+======================================================================
+
+.. py:module:: oa.asset_builder.helpers
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.helpers.build_asset
+   oa.asset_builder.helpers.load_asset
+   oa.asset_builder.helpers.install_asset
+   oa.asset_builder.helpers.get_comments
+   oa.asset_builder.helpers.export_selected_assets
+   oa.asset_builder.helpers.export_asset
+   oa.asset_builder.helpers._export_bound_palettes
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.helpers.this
+   oa.asset_builder.helpers._log
+   oa.asset_builder.helpers._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:function:: build_asset(source_asset_path=None, force_rebuild_shading=None)
+
+   Creates a new houdini asset from the provided source softimage asset.
+
+
+.. py:function:: load_asset(source_asset_path=None)
+
+   Import Houdini scene
+
+
+.. py:function:: install_asset(asset_description=None, source_asset_path=None)
+
+
+.. py:function:: get_comments()
+
+
+.. py:function:: export_selected_assets()
+
+
+.. py:function:: export_asset(asset_node, comment='')
+
+   Function called when the user asks to export the scene to the server.
+
+
+.. py:function:: _export_bound_palettes(asset_node, comment='')
+
+

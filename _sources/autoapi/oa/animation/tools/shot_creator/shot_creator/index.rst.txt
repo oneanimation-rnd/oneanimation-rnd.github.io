@@ -1,0 +1,141 @@
+ :py:mod:`oa.animation.tools.shot_creator.shot_creator`
+==============================================================================================================
+
+.. py:module:: oa.animation.tools.shot_creator.shot_creator
+
+.. autoapi-nested-parse::
+
+   Creates project's directory structure for shots.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.shot_creator.shot_creator.NameValidator
+   oa.animation.tools.shot_creator.shot_creator.CustomSpinBox
+   oa.animation.tools.shot_creator.shot_creator.ShotCreator
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.shot_creator.shot_creator.extract_number_from_name
+   oa.animation.tools.shot_creator.shot_creator.parse_ep_name
+   oa.animation.tools.shot_creator.shot_creator.parse_seq_name
+   oa.animation.tools.shot_creator.shot_creator.create_new_directory
+
+
+
+.. py:function:: extract_number_from_name(name)
+
+
+.. py:function:: parse_ep_name(project, ep)
+
+
+.. py:function:: parse_seq_name(seq)
+
+
+.. py:class:: NameValidator(parent=None)
+
+   Bases: :py:obj:`PySide2.QtGui.QValidator`
+
+   Validates strings that don't contain any illegal characters.
+
+   .. py:method:: validate(val, pos)
+
+
+
+.. py:function:: create_new_directory(project, ep, seq)
+
+   Creates a new shot directory on the server via ftp.
+   Also creates its database entries.
+
+   :param project: Project's name.
+   :type project: string
+   :param ep: Episode number only.
+   :type ep: string
+   :param seq: Sequence number only.
+   :type seq: string
+
+   Retuns:
+       A full path to the new directory on success.
+
+
+.. py:class:: CustomSpinBox(padding_count=3, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QSpinBox`
+
+   Subclass from QSpinBox to always display a zero padding.
+
+   .. py:method:: textFromValue(value)
+
+
+
+.. py:class:: ShotCreator(default_episode=None, close_on_create=False, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   Tool to create new shots on the server.
+
+   :param close_on_create: Interface closes when a new asset is created.
+   :type close_on_create: bool
+   :param parent: Widget to parent this to.
+   :type parent: QtWidgets.QWidget
+
+   .. py:attribute:: tool_name
+      :annotation: = shotCreatorTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: shot_created
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: do_validation()
+
+
+   .. py:method:: create_on_click()
+
+
+   .. py:method:: accept_shot()
+
+
+   .. py:method:: reject_shot(label)
+
+
+   .. py:method:: run()
+
+
+

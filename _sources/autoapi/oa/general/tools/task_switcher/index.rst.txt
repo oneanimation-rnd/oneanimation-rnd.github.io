@@ -1,0 +1,29 @@
+ :py:mod:`oa.general.tools.task_switcher`
+==================================================================================
+
+.. py:module:: oa.general.tools.task_switcher
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   abstract_widgets/index.rst
+   widgets/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   switcher_functions/index.rst
+   task_hud_display/index.rst
+   task_switcher_tool/index.rst
+   task_switcher_utils/index.rst
+   users_info/index.rst
+
+

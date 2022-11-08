@@ -1,0 +1,46 @@
+ :py:mod:`oa.animation.tools.synoptics.widgets.script_editor`
+==========================================================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.widgets.script_editor
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.widgets.script_editor.ScriptEditorDialog
+
+
+
+
+.. py:class:: ScriptEditorDialog(item, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   Window to assign and edit a script to an item.
+
+   :param item:
+   :type item: DesignerItem
+   :param parent:
+   :type parent: QWidget
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: add_code_tooltip(tag, description)
+
+
+   .. py:method:: run()
+
+
+   .. py:method:: on_delete_clicked()
+
+
+   .. py:method:: on_apply_clicked()
+
+
+

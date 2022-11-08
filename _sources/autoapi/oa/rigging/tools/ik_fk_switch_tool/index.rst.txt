@@ -1,0 +1,15 @@
+ :py:mod:`oa.rigging.tools.ik_fk_switch_tool`
+==========================================================================================
+
+.. py:module:: oa.rigging.tools.ik_fk_switch_tool
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   ik_fk_switch/index.rst
+
+

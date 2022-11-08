@@ -1,0 +1,261 @@
+ :py:mod:`oa.animation.tools.constraint_tool_old.constraint_widgets`
+========================================================================================================================================
+
+.. py:module:: oa.animation.tools.constraint_tool_old.constraint_widgets
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool_old.constraint_widgets.TreeNode
+   oa.animation.tools.constraint_tool_old.constraint_widgets.DelegateItem
+   oa.animation.tools.constraint_tool_old.constraint_widgets.ProxyModel
+   oa.animation.tools.constraint_tool_old.constraint_widgets.TreeModel
+   oa.animation.tools.constraint_tool_old.constraint_widgets.TreeView
+
+
+
+
+.. py:class:: TreeNode(node_type, _data=None, target_attr=None, target=None, parent=None)
+
+   Bases: :py:obj:`object`
+
+   The tree's model will be populated with this.
+
+   .. py:attribute:: ConstraintType
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: OffsetType
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: TargetType
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: WeightType
+      :annotation: = 3
+
+      
+
+   .. py:method:: data(column)
+
+
+   .. py:method:: setData(column, value)
+
+
+   .. py:method:: appendChild(node_type, _data, target_attr=None, target=None)
+
+
+   .. py:method:: child(row)
+
+
+   .. py:method:: childrenCount()
+
+
+   .. py:method:: hasChildren()
+
+
+   .. py:method:: row()
+
+
+   .. py:method:: columnCount()
+
+
+   .. py:method:: removeChildren(position, count)
+
+
+
+.. py:class:: DelegateItem(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QStyledItemDelegate`
+
+   Manages dynamic spinboxes to be used in a tree's cell.
+
+   .. py:attribute:: active_index
+      
+
+      
+
+   .. py:method:: eventFilter(obj, event)
+
+      Catches close event.
+
+
+   .. py:method:: createEditor(parent, option, index)
+
+      Generates a spinbox when the cell is clicked.
+
+
+   .. py:method:: setEditorData(editor, index)
+
+      Sets value to spinbox.
+
+
+   .. py:method:: setModelData(editor, proxy_model, index)
+
+      Adds spinbox's value to the tree node's internal data.
+
+
+   .. py:method:: paint(painter, option, index)
+
+
+
+.. py:class:: ProxyModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QSortFilterProxyModel`
+
+   Proxy used between QTreeView and QAbstractItemModel to filter and sort items.
+
+   .. py:method:: filterAcceptsRow(row, parent_index)
+
+      Sub-classed to filter what items are seen.
+
+
+
+.. py:class:: TreeModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractItemModel`
+
+   QTreeView uses this class to handle all its data for best performance.
+
+   .. py:method:: columnCount(index=QtCore.QModelIndex())
+
+      Gets tree's column count.
+
+
+   .. py:method:: rowCount(index=QtCore.QModelIndex())
+
+      Gets tree's row count.
+
+
+   .. py:method:: index(row, column, index=QtCore.QModelIndex())
+
+      Gets an item's QModelIndex.
+
+
+   .. py:method:: parent(index)
+
+      Gets index's parent QModelIndex.
+
+
+   .. py:method:: hasChildren(index)
+
+      Checks is index has any children.
+
+
+   .. py:method:: data(index, role)
+
+      Displays internal data and determines how it looks.
+
+
+   .. py:method:: setData(index, value, role=QtCore.Qt.EditRole)
+
+      Edit this to determine how the model should set data back onto TreeNode objects.
+
+
+   .. py:method:: flags(index)
+
+      Sets a role for columns.
+
+
+   .. py:method:: headerData(section, orientation, role)
+
+
+   .. py:method:: removeRows(position, count, parent_index)
+
+      Deletes rows and its internal data.
+
+
+   .. py:method:: add_constraint_to_tree(constraint_data, emit_update=False, sort=False, select=False, expand=False)
+
+      Adds supplied constraint data to the tree.
+
+
+   .. py:method:: get_tree_node_index(tree_node)
+
+      Gets and returns a TreeNode's QModelIndex.
+
+
+   .. py:method:: get_data()
+
+
+
+.. py:class:: TreeView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTreeView`
+
+   Used to display assets in a hierarchy.
+
+   .. py:method:: enterEvent(event)
+
+      Removes tip from paint event.
+
+
+   .. py:method:: paintEvent(event)
+
+      Shows temporary tip until the mouse enters its view.
+
+
+   .. py:method:: keyPressEvent(event)
+
+      Needed so this doesn't override keys to be passed to the viewport.
+
+
+   .. py:method:: selectionChanged(selected, deselected)
+
+      Selects the object from the current row.
+
+
+   .. py:method:: key_target_on_trigger()
+
+
+   .. py:method:: key_all_targets_on_trigger()
+
+
+   .. py:method:: del_target_on_trigger()
+
+
+   .. py:method:: del_constraint_on_trigger()
+
+
+   .. py:method:: set_target_weight(tree_node, value=None, set_key=False)
+
+
+   .. py:method:: get_constraint_index(index)
+
+
+   .. py:method:: menu_triggered(mouse_point)
+
+      Builds context menu depending on what nodeType is selected.
+
+
+   .. py:method:: populate_tree()
+
+      Reset and add TreeNode objects.
+
+
+   .. py:method:: add_targets_to_view(targets)
+
+      Adds new targets to the selected constraint then updates the view.
+
+      :param targets: List of objects to add as targets.
+      :type targets: string[]
+
+
+   .. py:method:: update_weight_values()
+
+      Gets called regularly from a timer, so beware that this stays optimized.
+      Updates the targets weights with the current values in the scene.
+
+
+

@@ -1,0 +1,60 @@
+ :py:mod:`oa.asset.libs.duplicate_protection`
+==========================================================================================
+
+.. py:module:: oa.asset.libs.duplicate_protection
+
+.. autoapi-nested-parse::
+
+   Author: Jason Labbe
+
+   This class prevents references with an assetCP to be duplicated
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.duplicate_protection.DuplicateProtection
+
+
+
+
+.. py:class:: DuplicateProtection
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: isInvalid
+      :annotation: = False
+
+      
+
+   .. py:attribute:: beforeDuplicate_id
+      
+
+      
+
+   .. py:attribute:: afterDuplicate_id
+      
+
+      
+
+   .. py:method:: onDuplicate_before(client)
+      :staticmethod:
+
+
+   .. py:method:: onDuplicate_after(client)
+      :staticmethod:
+
+
+   .. py:method:: removeCallbacks()
+
+
+   .. py:method:: addCallbacks()
+
+
+

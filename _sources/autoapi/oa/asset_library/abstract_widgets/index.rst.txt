@@ -1,0 +1,16 @@
+ :py:mod:`oa.asset_library.abstract_widgets`
+========================================================================================
+
+.. py:module:: oa.asset_library.abstract_widgets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   abstract_tree_model/index.rst
+   abstract_tree_node/index.rst
+
+

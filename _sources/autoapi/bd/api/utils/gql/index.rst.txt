@@ -1,0 +1,22 @@
+ :py:mod:`bd.api.utils.gql`
+======================================================
+
+.. py:module:: bd.api.utils.gql
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.api.utils.gql.gql
+
+
+
+.. py:function:: gql(query_str)
+
+

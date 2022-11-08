@@ -1,0 +1,29 @@
+ :py:mod:`oa.gui.libs.preferences.preferences`
+============================================================================================
+
+.. py:module:: oa.gui.libs.preferences.preferences
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.libs.preferences.preferences.update_script_editor
+   oa.gui.libs.preferences.preferences.clear_recent_files
+
+
+
+.. py:function:: update_script_editor()
+
+   Resets script editor tabs to match scripts found in the user's preferences.
+   This is needed when preferences are deleted to restore the tabs.
+
+
+.. py:function:: clear_recent_files()
+
+

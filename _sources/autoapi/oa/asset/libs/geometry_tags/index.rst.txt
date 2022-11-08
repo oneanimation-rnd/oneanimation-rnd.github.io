@@ -1,0 +1,114 @@
+ :py:mod:`oa.asset.libs.geometry_tags`
+============================================================================
+
+.. py:module:: oa.asset.libs.geometry_tags
+
+.. autoapi-nested-parse::
+
+   Manages unique tags on geometry for lighting and rendering.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.geometry_tags.NodeAddedCallback
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.geometry_tags.add_node_added_callback
+   oa.asset.libs.geometry_tags.set_tag
+   oa.asset.libs.geometry_tags.get_tag
+   oa.asset.libs.geometry_tags.tag_asset_meshes
+   oa.asset.libs.geometry_tags.tag_selection
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.geometry_tags.valid_node_types
+   oa.asset.libs.geometry_tags.tag_attr_name
+
+
+.. py:data:: valid_node_types
+   :annotation: = ['mesh', 'nurbsSurface']
+
+   
+
+.. py:data:: tag_attr_name
+   :annotation: = geomId
+
+   
+
+.. py:class:: NodeAddedCallback
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: add_node_added_callback_id
+      
+
+      
+
+   .. py:method:: remove_callback()
+      :staticmethod:
+
+
+   .. py:method:: add_callback()
+      :staticmethod:
+
+      Adds callback to execute whenever a new object is created.
+
+
+
+.. py:function:: add_node_added_callback(mobject, client_data)
+
+   This gets called when a new object is created, duplicated, imported, referenced.
+   A new tag is assigned when it doesn't have one or if it's been duplicated.
+
+
+.. py:function:: set_tag(mesh_obj, id=None, force=False, silent=False)
+
+   Tags an object with a unique id.
+
+   :param mesh_obj: A mesh object to tag.
+   :param id: If supplied, it will tag the object with this id.
+              Otherwise the id is randomly generated.
+   :param force: Re-assigns a new id even if one already exists.
+   :param silent: Prints output on True.
+
+
+.. py:function:: get_tag(mesh_obj)
+
+   Gets an id from an object.
+
+   :param mesh_obj: Object to get a tag from.
+
+   :returns: Objects's id or None.
+
+
+.. py:function:: tag_asset_meshes()
+
+   Searches scene and goes through an asset's render set to tag them.
+
+
+.. py:function:: tag_selection()
+
+   Simple function to re-assign new tags to the selection with any mesh shapes.
+
+

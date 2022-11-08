@@ -1,0 +1,6 @@
+ :py:mod:`oa.animation.tools.capture.resources`
+==============================================================================================
+
+.. py:module:: oa.animation.tools.capture.resources
+
+

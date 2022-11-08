@@ -1,0 +1,167 @@
+ :py:mod:`oa.general.tools.task_switcher.task_switcher_utils`
+==========================================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.task_switcher_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.task_switcher_utils.Vars
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.task_switcher_utils.load_pixmap
+   oa.general.tools.task_switcher.task_switcher_utils.create_tool_button
+   oa.general.tools.task_switcher.task_switcher_utils.copy_to_clipboard
+   oa.general.tools.task_switcher.task_switcher_utils.popup_msg
+   oa.general.tools.task_switcher.task_switcher_utils.open_path
+   oa.general.tools.task_switcher.task_switcher_utils.open_text_editor
+   oa.general.tools.task_switcher.task_switcher_utils.get_remote_drive
+   oa.general.tools.task_switcher.task_switcher_utils.get_servers_info
+   oa.general.tools.task_switcher.task_switcher_utils.connect_to_db
+   oa.general.tools.task_switcher.task_switcher_utils.build_wmodel_id
+   oa.general.tools.task_switcher.task_switcher_utils.add_version_to_path
+   oa.general.tools.task_switcher.task_switcher_utils.check_connections
+   oa.general.tools.task_switcher.task_switcher_utils.start_progress_bar
+   oa.general.tools.task_switcher.task_switcher_utils.find_asset_in_anm_scenes
+   oa.general.tools.task_switcher.task_switcher_utils.load_maya_scene
+   oa.general.tools.task_switcher.task_switcher_utils.toggle_depreciate_asset
+   oa.general.tools.task_switcher.task_switcher_utils.get_file_annotation
+   oa.general.tools.task_switcher.task_switcher_utils.set_file_annotation
+   oa.general.tools.task_switcher.task_switcher_utils.restore_state_switch
+
+
+
+.. py:class:: Vars
+
+   .. py:class:: TabTypes
+
+      .. py:attribute:: Rnd
+         :annotation: = PERS
+
+         
+
+      .. py:attribute:: Characters
+         :annotation: = CHR
+
+         
+
+      .. py:attribute:: Cameras
+         :annotation: = CAM
+
+         
+
+      .. py:attribute:: Props
+         :annotation: = PRP
+
+         
+
+      .. py:attribute:: Environments
+         :annotation: = ENV
+
+         
+
+      .. py:attribute:: Sets
+         :annotation: = SET
+
+         
+
+      .. py:attribute:: Shots
+         :annotation: = SHOTS
+
+         
+
+
+
+.. py:function:: load_pixmap(file_name, width=None, height=None)
+
+
+.. py:function:: create_tool_button(text, icon, width=32, height=32, style=QtCore.Qt.ToolButtonTextBesideIcon, tooltip=None, parent=None)
+
+
+.. py:function:: copy_to_clipboard(txt)
+
+
+.. py:function:: popup_msg(parent, title, msg, icon=None)
+
+   Displays a message.
+
+   :param parent: The widget to parent this to.
+   :param title: The window's titlebar label.
+   :param msg: The actual message.
+   :param icon: A full path to an existing png.
+
+
+.. py:function:: open_path(path)
+
+   Opens up a browser to the supplied path.
+
+   :param path: An absolute existing path.
+
+
+.. py:function:: open_text_editor(path)
+
+   Opens supplied path with a text editor.
+
+   :param path: An absolute existing path.
+
+
+.. py:function:: get_remote_drive()
+
+   Returns the path to the remote asset drive relative to this location.
+
+
+.. py:function:: get_servers_info()
+
+   Gets info regarding both servers.
+
+   :returns: [studio's name, server's ip, path to asset drive]
+
+
+.. py:function:: connect_to_db(hosts=(), replica_set_name='rs0', read_pref=None, db_name='test-main-db', collection_name='assets')
+
+
+.. py:function:: build_wmodel_id(project, asset_type, name, category, level)
+
+
+.. py:function:: add_version_to_path(non_version_path, version)
+
+
+.. py:function:: check_connections()
+
+   Checks to see if it can connect to both servers via FTP and to the database.
+   Raises a runtime error if it fails.
+
+
+.. py:function:: start_progress_bar(label, count)
+
+
+.. py:function:: find_asset_in_anm_scenes(asset_id)
+
+
+.. py:function:: load_maya_scene(file_path, warning_parent=None)
+
+
+.. py:function:: toggle_depreciate_asset(asset_id)
+
+
+.. py:function:: get_file_annotation(file_path)
+
+
+.. py:function:: set_file_annotation(file_path, annotation)
+
+
+.. py:function:: restore_state_switch(splitter, data, state)
+
+

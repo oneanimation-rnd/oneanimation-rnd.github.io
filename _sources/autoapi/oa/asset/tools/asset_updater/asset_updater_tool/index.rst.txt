@@ -1,0 +1,96 @@
+ :py:mod:`oa.asset.tools.asset_updater.asset_updater_tool`
+====================================================================================================================
+
+.. py:module:: oa.asset.tools.asset_updater.asset_updater_tool
+
+.. autoapi-nested-parse::
+
+   A simple tool to pop-up a dialog when old asset versions are detected in the scene.
+   Nested assets are ignored.
+   A callback is included to trigger this after a file finishes opening.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_updater.asset_updater_tool.AssetUpdater
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.asset_updater.asset_updater_tool.launch
+
+
+
+.. py:class:: AssetUpdater(obsolete_assets, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: CallbackId
+      
+
+      
+
+   .. py:attribute:: ColumnNamespace
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: ColumnCurrent
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: ColumnLatest
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: ColumnComments
+      :annotation: = 3
+
+      
+
+   .. py:attribute:: ColumnType
+      :annotation: = 4
+
+      
+
+   .. py:method:: add_callback()
+      :staticmethod:
+
+
+   .. py:method:: remove_callback()
+      :staticmethod:
+
+
+   .. py:method:: callback_trigger(*args)
+      :staticmethod:
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: on_update_clicked()
+
+
+   .. py:method:: populate_table()
+
+
+
+.. py:function:: launch()
+
+

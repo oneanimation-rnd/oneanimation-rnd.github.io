@@ -1,0 +1,16 @@
+ :py:mod:`oa.animation.tools.dof_tool`
+============================================================================
+
+.. py:module:: oa.animation.tools.dof_tool
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   dof_tool/index.rst
+   dof_utils/index.rst
+
+

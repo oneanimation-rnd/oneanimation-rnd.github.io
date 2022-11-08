@@ -1,0 +1,163 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.widgets.abstract_weights_view`
+==========================================================================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.widgets.abstract_weights_view
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.widgets.abstract_weights_view.AbstractWeightsView
+   oa.rigging.tools.weights_editor_tool.widgets.abstract_weights_view.AbstractModel
+
+
+
+
+.. py:class:: AbstractWeightsView(view_type, header_orientation, editor_inst)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableView`
+
+   .. py:attribute:: key_pressed
+      
+
+      
+
+   .. py:attribute:: header_middle_clicked
+      
+
+      
+
+   .. py:attribute:: display_inf_triggered
+      
+
+      
+
+   .. py:attribute:: select_inf_verts_triggered
+      
+
+      
+
+   .. py:method:: sort_ascending_on_triggered()
+      :abstractmethod:
+
+
+   .. py:method:: sort_descending_on_triggered()
+      :abstractmethod:
+
+
+   .. py:method:: select_items_by_inf()
+      :abstractmethod:
+
+
+   .. py:method:: get_selected_verts_and_infs()
+      :abstractmethod:
+
+
+   .. py:method:: save_table_selection()
+      :abstractmethod:
+
+
+   .. py:method:: load_table_selection(selection_data)
+      :abstractmethod:
+
+
+   .. py:method:: paintEvent(paint_event)
+
+      Shows tooltip when table is empty.
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: header_on_context_trigger(point)
+
+
+   .. py:method:: header_on_left_clicked(index)
+
+
+   .. py:method:: header_on_middle_clicked(index)
+
+
+   .. py:method:: display_inf_on_triggered()
+
+
+   .. py:method:: select_inf_verts_on_triggered()
+
+
+   .. py:method:: select_inf_on_triggered()
+
+
+   .. py:method:: set_model(abstract_model)
+
+
+   .. py:method:: display_infs()
+
+
+   .. py:method:: set_display_infs(new_infs)
+
+
+   .. py:method:: begin_update()
+
+
+   .. py:method:: end_update()
+
+
+   .. py:method:: emit_header_data_changed()
+
+
+   .. py:method:: fit_headers_to_contents()
+
+
+   .. py:method:: reset_color_headers()
+
+
+   .. py:method:: color_headers(count)
+
+      Resets the colors on the top headers.
+      An active influence will be colored as blue.
+      When using the Softimage theme, each header will be the color if its influence.
+
+
+   .. py:method:: get_selected_indexes()
+
+
+
+.. py:class:: AbstractModel(editor_inst, parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractTableModel`
+
+   .. py:method:: rowCount(parent)
+      :abstractmethod:
+
+
+   .. py:method:: columnCount(parent)
+      :abstractmethod:
+
+
+   .. py:method:: data(index, role)
+      :abstractmethod:
+
+
+   .. py:method:: setData(index, value, role)
+      :abstractmethod:
+
+
+   .. py:method:: headerData(column, orientation, role)
+      :abstractmethod:
+
+
+   .. py:method:: flags(index)
+
+
+   .. py:method:: get_inf(index)
+
+
+

@@ -1,0 +1,81 @@
+ :py:mod:`oa.animation.tools.spring_tool.spring_tool`
+==========================================================================================================
+
+.. py:module:: oa.animation.tools.spring_tool.spring_tool
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.spring_tool.spring_tool.SpringTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.spring_tool.spring_tool.launch
+
+
+
+.. py:class:: SpringTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: wrap_layout(widgets, orientation)
+      :staticmethod:
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: save_state()
+
+
+   .. py:method:: load_state()
+
+
+   .. py:method:: set_dyn_settings(**kwargs)
+
+
+   .. py:method:: normal_preset_on_triggered()
+
+
+   .. py:method:: bouncy_preset_on_triggered()
+
+
+   .. py:method:: slow_preset_on_triggered()
+
+
+   .. py:method:: normal_big_preset_on_triggered()
+
+
+   .. py:method:: bouncy_big_preset_on_triggered()
+
+
+   .. py:method:: slow_big_preset_on_triggered()
+
+
+   .. py:method:: set_start_on_clicked()
+
+
+   .. py:method:: set_end_on_clicked()
+
+
+   .. py:method:: run_on_clicked()
+
+
+
+.. py:function:: launch()
+
+

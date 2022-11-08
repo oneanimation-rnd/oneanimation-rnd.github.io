@@ -1,0 +1,68 @@
+ :py:mod:`oa_asset_builder.libs.ui.widgets.asset_selector`
+====================================================================================================================
+
+.. py:module:: oa_asset_builder.libs.ui.widgets.asset_selector
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.ui.widgets.asset_selector.AssetSelectorDialog
+
+
+
+
+.. py:class:: AssetSelectorDialog(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: _instance
+      
+
+      
+
+   .. py:attribute:: asset_selected
+      
+
+      
+
+   .. py:method:: show_dialog(parent=None)
+      :classmethod:
+
+
+   .. py:method:: _init_widgets()
+
+
+   .. py:method:: _init_layout()
+
+
+   .. py:method:: _init_connections()
+
+
+   .. py:method:: _on_item_clicked(data)
+
+
+   .. py:method:: reload()
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: _on_rejected()
+
+
+   .. py:method:: _on_accepted()
+
+
+

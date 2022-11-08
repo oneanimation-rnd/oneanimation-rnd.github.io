@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa_utils.xml_info_hou &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title=" test_format" href="../../test_format/index.html" />
+    <link rel="prev" title=" oa_utils.xml_info_api" href="../xml_info_api/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../config/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../helpers/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.helpers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../ldap_control/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.ldap_control</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../logger/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.logger</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../medusa/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.medusa</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../takes/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.takes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vcs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.vcs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../xml_info_api/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.xml_info_api</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.xml_info_hou</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.xml_info_hou</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/oa_utils/xml_info_hou/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa_utils.xml_info_hou">
+<span id="oa-utils-xml-info-hou"></span><h1> <a class="reference internal" href="#module-oa_utils.xml_info_hou" title="oa_utils.xml_info_hou"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils.xml_info_hou</span></code></a><a class="headerlink" href="#module-oa_utils.xml_info_hou" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.rootHou" title="oa_utils.xml_info_hou.rootHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rootHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFAssetHou" title="oa_utils.xml_info_hou.INFAssetHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFAssetHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFClusterHou" title="oa_utils.xml_info_hou.INFClusterHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFClusterHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFGroupHou" title="oa_utils.xml_info_hou.INFGroupHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFGroupHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFInfoHou" title="oa_utils.xml_info_hou.INFInfoHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFInfoHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFInstanceHou" title="oa_utils.xml_info_hou.INFInstanceHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFInstanceHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFMaterialHou" title="oa_utils.xml_info_hou.INFMaterialHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFMaterialHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFModelHou" title="oa_utils.xml_info_hou.INFModelHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFModelHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFObjectHou" title="oa_utils.xml_info_hou.INFObjectHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFObjectHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFPassHou" title="oa_utils.xml_info_hou.INFPassHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFPassHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFShotHou" title="oa_utils.xml_info_hou.INFShotHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFShotHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFSceneHou" title="oa_utils.xml_info_hou.INFSceneHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFSceneHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFClusterListHou" title="oa_utils.xml_info_hou.INFClusterListHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFClusterListHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFMemberListHou" title="oa_utils.xml_info_hou.INFMemberListHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFMemberListHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFTargetListHou" title="oa_utils.xml_info_hou.INFTargetListHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFTargetListHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFShotListHou" title="oa_utils.xml_info_hou.INFShotListHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFShotListHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFGrpListHou" title="oa_utils.xml_info_hou.INFGrpListHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFGrpListHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFModListHou" title="oa_utils.xml_info_hou.INFModListHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFModListHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFInstListHou" title="oa_utils.xml_info_hou.INFInstListHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFInstListHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFObjListHou" title="oa_utils.xml_info_hou.INFObjListHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFObjListHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFPassListHou" title="oa_utils.xml_info_hou.INFPassListHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFPassListHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFMatListHou" title="oa_utils.xml_info_hou.INFMatListHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFMatListHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFTexListHou" title="oa_utils.xml_info_hou.INFTexListHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFTexListHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.INFMemberHou" title="oa_utils.xml_info_hou.INFMemberHou"><code class="xref py py-obj docutils literal notranslate"><span class="pre">INFMemberHou</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.parsexml_" title="oa_utils.xml_info_hou.parsexml_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parsexml_</span></code></a>(*args, **kwargs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.get_root_tag" title="oa_utils.xml_info_hou.get_root_tag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_root_tag</span></code></a>(node)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.parse" title="oa_utils.xml_info_hou.parse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse</span></code></a>(inFilename[, silence])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.parseEtree" title="oa_utils.xml_info_hou.parseEtree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parseEtree</span></code></a>(inFilename[, silence])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.parseString" title="oa_utils.xml_info_hou.parseString"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parseString</span></code></a>(inString[, silence])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.parseLiteral" title="oa_utils.xml_info_hou.parseLiteral"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parseLiteral</span></code></a>(inFilename[, silence])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.usage" title="oa_utils.xml_info_hou.usage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">usage</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.main" title="oa_utils.xml_info_hou.main"><code class="xref py py-obj docutils literal notranslate"><span class="pre">main</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.etree_" title="oa_utils.xml_info_hou.etree_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">etree_</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.Verbose_import_" title="oa_utils.xml_info_hou.Verbose_import_"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Verbose_import_</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id0" title="oa_utils.xml_info_hou.XMLParser_import_library"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLParser_import_library</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id0" title="oa_utils.xml_info_hou.XMLParser_import_library"><code class="xref py py-obj docutils literal notranslate"><span class="pre">XMLParser_import_library</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.ExternalEncoding" title="oa_utils.xml_info_hou.ExternalEncoding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExternalEncoding</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id23" title="oa_utils.xml_info_hou.subclass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">subclass</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa_utils.xml_info_hou.USAGE_TEXT" title="oa_utils.xml_info_hou.USAGE_TEXT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">USAGE_TEXT</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.etree_">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">etree_</span></span><a class="headerlink" href="#oa_utils.xml_info_hou.etree_" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.Verbose_import_">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">Verbose_import_</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">False</span></em><a class="headerlink" href="#oa_utils.xml_info_hou.Verbose_import_" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.XMLParser_import_library">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">XMLParser_import_library</span></span><a class="headerlink" href="#oa_utils.xml_info_hou.XMLParser_import_library" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">XMLParser_import_library</span></span><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.parsexml_">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">parsexml_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.parsexml_" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.ExternalEncoding">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">ExternalEncoding</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">UTF-8</span></em><a class="headerlink" href="#oa_utils.xml_info_hou.ExternalEncoding" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.rootHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">rootHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'AssetInfo'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syntax_version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'4.0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Scene</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Asset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.rootHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.root" title="oa_utils.xml_info_api.root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.root</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.subclass">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#oa_utils.xml_info_hou.subclass" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFAssetHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFAssetHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">res</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AssetName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Episode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Category</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SubCategory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Models</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Instances</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Objects</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Materials</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFAssetHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFAsset" title="oa_utils.xml_info_api.INFAsset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFAsset</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id1" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFClusterHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFClusterHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">material</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFClusterHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFCluster" title="oa_utils.xml_info_api.INFCluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFCluster</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id2" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFGroupHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFGroupHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">viewvis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rendvis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Members</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFGroupHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFGroup" title="oa_utils.xml_info_api.INFGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFGroup</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id3" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFInfoHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFInfoHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">episode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">houdiniVersion</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FullName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ShotList</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFInfoHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFInfo" title="oa_utils.xml_info_api.INFInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFInfo</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id4" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFInstanceHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFInstanceHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFInstanceHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFInstance" title="oa_utils.xml_info_api.INFInstance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFInstance</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id5" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFMaterialHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFMaterialHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFMaterialHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFMaterial" title="oa_utils.xml_info_api.INFMaterial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFMaterial</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id6">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id6" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFModelHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFModelHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Asset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Object</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFModelHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFModel" title="oa_utils.xml_info_api.INFModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFModel</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id7">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id7" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFObjectHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFObjectHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">material</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Clusters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Textures</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFObjectHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFObject" title="oa_utils.xml_info_api.INFObject"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFObject</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id8">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id8" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFPassHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFPassHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frameStep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frameEnd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frameStart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IsRenderActive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OutputPicture</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OutputFolder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RMPreset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFPassHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFPass" title="oa_utils.xml_info_api.INFPass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFPass</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id9">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id9" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFShotHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFShotHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endFrame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">startFrame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFShotHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFShot" title="oa_utils.xml_info_api.INFShot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFShot</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id10">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id10" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFSceneHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFSceneHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Assets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFSceneHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFScene" title="oa_utils.xml_info_api.INFScene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFScene</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id11">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id11" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFClusterListHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFClusterListHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Cluster</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFClusterListHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFClusterList" title="oa_utils.xml_info_api.INFClusterList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFClusterList</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id12">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id12" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFMemberListHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFMemberListHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Member</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFMemberListHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFMemberList" title="oa_utils.xml_info_api.INFMemberList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFMemberList</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id13">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id13" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFTargetListHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFTargetListHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Object</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Cluster</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFTargetListHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFTargetList" title="oa_utils.xml_info_api.INFTargetList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFTargetList</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id14">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id14" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFShotListHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFShotListHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Shot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFShotListHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFShotList" title="oa_utils.xml_info_api.INFShotList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFShotList</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id15">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id15" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFGrpListHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFGrpListHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFGrpListHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFGrpList" title="oa_utils.xml_info_api.INFGrpList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFGrpList</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id16">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id16" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFModListHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFModListHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Asset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFModListHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFModList" title="oa_utils.xml_info_api.INFModList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFModList</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id17">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id17" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFInstListHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFInstListHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Instance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFInstListHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFInstList" title="oa_utils.xml_info_api.INFInstList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFInstList</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id18">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id18" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFObjListHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFObjListHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Object</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFObjListHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFObjList" title="oa_utils.xml_info_api.INFObjList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFObjList</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id19">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id19" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFPassListHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFPassListHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Pass</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFPassListHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFPassList" title="oa_utils.xml_info_api.INFPassList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFPassList</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id20">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id20" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFMatListHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFMatListHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Material</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFMatListHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFMatList" title="oa_utils.xml_info_api.INFMatList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFMatList</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id21">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id21" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFTexListHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFTexListHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Texture</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFTexListHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFTexList" title="oa_utils.xml_info_api.INFTexList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFTexList</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id22">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id22" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.INFMemberHou">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">INFMemberHou</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mdlpath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.INFMemberHou" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="../xml_info_api/index.html#oa_utils.xml_info_api.INFMember" title="oa_utils.xml_info_api.INFMember"><code class="xref py py-obj docutils literal notranslate"><span class="pre">oa_utils.xml_info_api.INFMember</span></code></a></p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="id23">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">subclass</span></span><a class="headerlink" href="#id23" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.get_root_tag">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">get_root_tag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.get_root_tag" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.parse">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inFilename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.parse" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.parseEtree">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">parseEtree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inFilename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.parseEtree" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.parseString">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">parseString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inString</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.parseString" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.parseLiteral">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">parseLiteral</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inFilename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">silence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.parseLiteral" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.USAGE_TEXT">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">USAGE_TEXT</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Multiline-String</span></em><a class="headerlink" href="#oa_utils.xml_info_hou.USAGE_TEXT" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><details><summary>Show Value</summary><div class="highlight-text notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span>Usage: python ???.py &lt;infilename&gt;
+</pre></div>
+</div>
+</details></div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.usage">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">usage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.usage" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa_utils.xml_info_hou.main">
+<span class="sig-prename descclassname"><span class="pre">oa_utils.xml_info_hou.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa_utils.xml_info_hou.main" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../xml_info_api/index.html" class="btn btn-neutral float-left" title=" oa_utils.xml_info_api" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../test_format/index.html" class="btn btn-neutral float-right" title=" test_format" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+ :py:mod:`oa.user_directory.constants`
+============================================================================
+
+.. py:module:: oa.user_directory.constants
+
+
+Module Contents
+---------------
+
+.. py:data:: DOMAIN
+   :annotation: = oneanimation.com
+
+   
+
+.. py:data:: CLIENT_ID
+   :annotation: = 451475884931-nui4jvqvktr8affgkjj6hq7eua4parud.apps.googleusercontent.com
+
+   
+
+.. py:data:: CLIENT_SECRET
+   :annotation: = m4pXnKCceu51jAw64d3zGL3h
+
+   
+
+.. py:data:: SCOPE
+   :annotation: = https://www.googleapis.com/auth/admin.directory.user.readonly
+
+   
+

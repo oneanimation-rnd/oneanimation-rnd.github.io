@@ -1,0 +1,163 @@
+ :py:mod:`oa.gui.tools.shelves.shelf_manager`
+==========================================================================================
+
+.. py:module:: oa.gui.tools.shelves.shelf_manager
+
+.. autoapi-nested-parse::
+
+   Dynamically creates all of our custom shelves by reading json files.
+   Also creates a user shelf where it gets scripts from a directory in maya preferences.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.tools.shelves.shelf_manager.Checkbox
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.tools.shelves.shelf_manager.get_state
+   oa.gui.tools.shelves.shelf_manager.get_maya_shelf
+   oa.gui.tools.shelves.shelf_manager.get_custom_shelf_paths
+   oa.gui.tools.shelves.shelf_manager.clean_shelves
+   oa.gui.tools.shelves.shelf_manager.create_user_data
+   oa.gui.tools.shelves.shelf_manager.create_user_shelf
+   oa.gui.tools.shelves.shelf_manager.delete_shelf
+   oa.gui.tools.shelves.shelf_manager.clean_preferences
+   oa.gui.tools.shelves.shelf_manager.create_shelf
+   oa.gui.tools.shelves.shelf_manager.get_settings
+   oa.gui.tools.shelves.shelf_manager.checkbox_on_check
+   oa.gui.tools.shelves.shelf_manager.create_custom_shelves
+   oa.gui.tools.shelves.shelf_manager.pick_script
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.tools.shelves.shelf_manager.user_file_name
+   oa.gui.tools.shelves.shelf_manager.user_scripts_dir
+   oa.gui.tools.shelves.shelf_manager.default_icon
+
+
+.. py:data:: user_file_name
+   :annotation: = one_user_shelf.json
+
+   
+
+.. py:data:: user_scripts_dir
+   
+
+   
+
+.. py:data:: default_icon
+   
+
+   
+
+.. py:class:: Checkbox
+
+   Container for checkbox states.
+
+   .. py:attribute:: items
+      
+
+      
+
+
+.. py:function:: get_state(full_name)
+
+   Gets and returns the checked state of the supplied checkbox.
+   Returns False if it can't find it.
+
+   :param full_name: The menu item's full name described in the json file.
+   :type full_name: string
+
+
+.. py:function:: get_maya_shelf()
+
+   Gets and returns Maya's global variable that references the main shelf layout.
+
+
+.. py:function:: get_custom_shelf_paths()
+
+   Gets and returns a list of paths to all custom shelves.
+
+
+.. py:function:: clean_shelves()
+
+   Fixes internal data for optionVar values, and fixes any bad naming on default shelves.
+
+
+.. py:function:: create_user_data()
+
+   Creates json file from scripts in the user's folder.
+
+
+.. py:function:: create_user_shelf()
+
+   Gets user data file and creates a shelf from it.
+
+
+.. py:function:: delete_shelf(shelf_name, only_items=False)
+
+   Cleanly deletes a shelf from the gui and from user preferences.
+
+   :param shelf_name: The shelf's name.
+   :type shelf_name: string
+
+
+.. py:function:: clean_preferences()
+
+   Deletes custom shelf files from preferences.
+   To be called during Maya's start up.
+
+
+.. py:function:: create_shelf(data_path, cell_size=33, shelf_style='iconAndTextHorizontal')
+
+   Gets data from a json file and creates a new shelf with its contents.
+   Overrides any shelf that has the same name.
+
+   :param data_path: A full path to a json file.
+   :type data_path: string
+   :param cell_size: The size of the shelf buttons.
+   :type cell_size: int
+   :param shelf_style: The style it should default to.
+   :type shelf_style: string
+
+
+.. py:function:: get_settings()
+
+
+.. py:function:: checkbox_on_check(menu_item)
+
+
+.. py:function:: create_custom_shelves()
+
+   Deletes and re-creates all custom shelves including the user's shelf.
+
+
+.. py:function:: pick_script(update_shelf=True)
+
+   Opens a file browser to pick a script, then copies it over to the user's scripts.
+
+   :param update_shelf: If true, it forces the user shelf to update.
+   :type update_shelf: bool
+
+

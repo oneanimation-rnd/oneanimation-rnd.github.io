@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.animation.tools.synoptics.synoptics_designer &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.animation.tools.synoptics.synoptics_viewer" href="../synoptics_viewer/index.html" />
+    <link rel="prev" title=" oa.animation.tools.synoptics.widgets.text_settings_dialog" href="../widgets/text_settings_dialog/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.synoptics</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.synoptics.synoptics_designer</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/animation/tools/synoptics/synoptics_designer/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.animation.tools.synoptics.synoptics_designer">
+<span id="oa-animation-tools-synoptics-synoptics-designer"></span><h1> <a class="reference internal" href="#module-oa.animation.tools.synoptics.synoptics_designer" title="oa.animation.tools.synoptics.synoptics_designer"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation.tools.synoptics.synoptics_designer</span></code></a><a class="headerlink" href="#module-oa.animation.tools.synoptics.synoptics_designer" title="Permalink to this heading"></a></h1>
+<p>An interface to design and deploy a gui picker for an asset.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+<dt>Bugs:</dt><dd><ul class="simple">
+<li><p>Need to delete items after spinboxes’ input.</p></li>
+</ul>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner" title="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SynopticsDesigner</span></code></a></p></td>
+<td><p>The designer's main interface.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.synoptics.synoptics_designer.CustomDoubleSpinBox" title="oa.animation.tools.synoptics.synoptics_designer.CustomDoubleSpinBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomDoubleSpinBox</span></code></a></p></td>
+<td><p>Exposes when it is focused.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.synoptics.synoptics_designer.CustomSpinBox" title="oa.animation.tools.synoptics.synoptics_designer.CustomSpinBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomSpinBox</span></code></a></p></td>
+<td><p>Exposes when it is focused.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.animation.tools.synoptics.synoptics_designer.View" title="oa.animation.tools.synoptics.synoptics_designer.View"><code class="xref py py-obj docutils literal notranslate"><span class="pre">View</span></code></a></p></td>
+<td><p>Custom behaviour to the designer's view and scene.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.animation.tools.synoptics.synoptics_designer.launch" title="oa.animation.tools.synoptics.synoptics_designer.launch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.synoptics.synoptics_designer.</span></span><span class="sig-name descname"><span class="pre">SynopticsDesigner</span></span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<p>The designer’s main interface.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.instance">
+<span class="sig-name descname"><span class="pre">instance</span></span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.instance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.create_gui">
+<span class="sig-name descname"><span class="pre">create_gui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.create_gui" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.wrap_in_container">
+<span class="sig-name descname"><span class="pre">wrap_in_container</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.Qt.Vertical</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.wrap_in_container" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.wrap_layout">
+<span class="sig-name descname"><span class="pre">wrap_layout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widgets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orientation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.wrap_layout" title="Permalink to this definition"></a></dt>
+<dd><p>Helper function that takes supplied widgets and wraps them all in a layout.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>widgets</strong> – A list of QWidgets.</p></li>
+<li><p><strong>orientation</strong> – QtCore.Qt.Orientation</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The new layout item.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_assign_m_trigger_click">
+<span class="sig-name descname"><span class="pre">on_assign_m_trigger_click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_assign_m_trigger_click" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.del_previous_instance">
+<span class="sig-name descname"><span class="pre">del_previous_instance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.del_previous_instance" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes any previous instances of this class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.closeEvent">
+<span class="sig-name descname"><span class="pre">closeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.closeEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.add_break_line">
+<span class="sig-name descname"><span class="pre">add_break_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vertical</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.add_break_line" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a line to act as a seperator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vertical</strong> (<em>bool</em>) – Orientates it vertically when True, otherwise horizontally.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The new widget.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.get_icon">
+<span class="sig-name descname"><span class="pre">get_icon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transform_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtCore.Qt.SmoothTransformation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.get_icon" title="Permalink to this definition"></a></dt>
+<dd><p>Simple function to wrap the supplied name as an icon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fileName</strong> (<em>string</em>) – An existing image name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The file as a QIcon.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.reset" title="Permalink to this definition"></a></dt>
+<dd><p>Clears items, background, and disables custom shape mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.resize_scene">
+<span class="sig-name descname"><span class="pre">resize_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.resize_scene" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.new">
+<span class="sig-name descname"><span class="pre">new</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.new" title="Permalink to this definition"></a></dt>
+<dd><p>Resets scene to blank.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.save" title="Permalink to this definition"></a></dt>
+<dd><p>Saves the current state of the scene to a file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.load" title="Permalink to this definition"></a></dt>
+<dd><p>Reads a remote file and loads it into the scene.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.publish">
+<span class="sig-name descname"><span class="pre">publish</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.publish" title="Permalink to this definition"></a></dt>
+<dd><p>Saves the current scene onto the server with the current task.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.delete" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.toggle_grid">
+<span class="sig-name descname"><span class="pre">toggle_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.toggle_grid" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.align_x">
+<span class="sig-name descname"><span class="pre">align_x</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.align_x" title="Permalink to this definition"></a></dt>
+<dd><p>Aligns to last selected item’s x axis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.align_y">
+<span class="sig-name descname"><span class="pre">align_y</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.align_y" title="Permalink to this definition"></a></dt>
+<dd><p>Aligns to last selected item’s y axis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.mirror_align">
+<span class="sig-name descname"><span class="pre">mirror_align</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.mirror_align" title="Permalink to this definition"></a></dt>
+<dd><p>Aligns to last selected item’s mirrored space.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.mirror">
+<span class="sig-name descname"><span class="pre">mirror</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.mirror" title="Permalink to this definition"></a></dt>
+<dd><p>Flips selected items.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.mirror_copy_items">
+<span class="sig-name descname"><span class="pre">mirror_copy_items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.mirror_copy_items" title="Permalink to this definition"></a></dt>
+<dd><p>Copies and pastes selected items across the scene’s x plane.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.show_help">
+<span class="sig-name descname"><span class="pre">show_help</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.show_help" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.win_size_on_click">
+<span class="sig-name descname"><span class="pre">win_size_on_click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.win_size_on_click" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_name_change">
+<span class="sig-name descname"><span class="pre">on_name_change</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_name_change" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns name with the interface’s text field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_spinbox_focus">
+<span class="sig-name descname"><span class="pre">on_spinbox_focus</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_spinbox_focus" title="Permalink to this definition"></a></dt>
+<dd><p>Add an undo block when focusing in on a control.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_pos_x_change">
+<span class="sig-name descname"><span class="pre">on_pos_x_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_pos_x_change" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns x position.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_pos_y_change">
+<span class="sig-name descname"><span class="pre">on_pos_y_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_pos_y_change" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns y position.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_rot_change">
+<span class="sig-name descname"><span class="pre">on_rot_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_rot_change" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns rotation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_size_change">
+<span class="sig-name descname"><span class="pre">on_size_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_size_change" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns scale.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_opacity_change">
+<span class="sig-name descname"><span class="pre">on_opacity_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_opacity_change" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns opacity.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_z_value_change">
+<span class="sig-name descname"><span class="pre">on_z_value_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_z_value_change" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns z value (higher number gets priority to draw in-front).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_is_selectable_change">
+<span class="sig-name descname"><span class="pre">on_is_selectable_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_is_selectable_change" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns if items can be selectable in the viewer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_node_edit">
+<span class="sig-name descname"><span class="pre">on_node_edit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_node_edit" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns a node that the item represents via text field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_assign_node_click">
+<span class="sig-name descname"><span class="pre">on_assign_node_click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_assign_node_click" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns a node that the item represents.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_assign_script_click">
+<span class="sig-name descname"><span class="pre">on_assign_script_click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_assign_script_click" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns a script to the last selected item.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_assign_selection_set_click">
+<span class="sig-name descname"><span class="pre">on_assign_selection_set_click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.on_assign_selection_set_click" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns a selection set to the last selected item.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.rename_by_node">
+<span class="sig-name descname"><span class="pre">rename_by_node</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.rename_by_node" title="Permalink to this definition"></a></dt>
+<dd><p>Items are renamed from their assigned node.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.pre_create_text">
+<span class="sig-name descname"><span class="pre">pre_create_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.pre_create_text" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.pre_create_custom_shape">
+<span class="sig-name descname"><span class="pre">pre_create_custom_shape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.pre_create_custom_shape" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.set_color">
+<span class="sig-name descname"><span class="pre">set_color</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.set_color" title="Permalink to this definition"></a></dt>
+<dd><p>Assigns a color from the buttons.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.open_color_picker">
+<span class="sig-name descname"><span class="pre">open_color_picker</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.open_color_picker" title="Permalink to this definition"></a></dt>
+<dd><p>Opens a window to pick and assign a color.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.pick_bg">
+<span class="sig-name descname"><span class="pre">pick_bg</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.pick_bg" title="Permalink to this definition"></a></dt>
+<dd><p>Opens a file browser to pick an image for the scene’s background.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.SynopticsDesigner.run" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.CustomDoubleSpinBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.synoptics.synoptics_designer.</span></span><span class="sig-name descname"><span class="pre">CustomDoubleSpinBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.CustomDoubleSpinBox" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QDoubleSpinBox</span></code></p>
+<p>Exposes when it is focused.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.CustomDoubleSpinBox.focused">
+<span class="sig-name descname"><span class="pre">focused</span></span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.CustomDoubleSpinBox.focused" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.CustomDoubleSpinBox.focusInEvent">
+<span class="sig-name descname"><span class="pre">focusInEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.CustomDoubleSpinBox.focusInEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.CustomSpinBox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.synoptics.synoptics_designer.</span></span><span class="sig-name descname"><span class="pre">CustomSpinBox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.CustomSpinBox" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QSpinBox</span></code></p>
+<p>Exposes when it is focused.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.CustomSpinBox.focused">
+<span class="sig-name descname"><span class="pre">focused</span></span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.CustomSpinBox.focused" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.CustomSpinBox.focusInEvent">
+<span class="sig-name descname"><span class="pre">focusInEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.CustomSpinBox.focusInEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.animation.tools.synoptics.synoptics_designer.</span></span><span class="sig-name descname"><span class="pre">View</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGraphicsView</span></code></p>
+<p>Custom behaviour to the designer’s view and scene.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.create_border_items">
+<span class="sig-name descname"><span class="pre">create_border_items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.create_border_items" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.create_grid_items">
+<span class="sig-name descname"><span class="pre">create_grid_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thickness</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">QtGui.QColor(100,</span> <span class="pre">100,</span> <span class="pre">100)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.create_grid_items" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a simple grid made out of items.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>count</strong> (<em>int</em>) – The grid’s resolution.</p></li>
+<li><p><strong>thickness</strong> (<em>int</em>) – The size of the grid items.</p></li>
+<li><p><strong>color</strong> (<em>QColor</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.show_grid">
+<span class="sig-name descname"><span class="pre">show_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">show_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.show_grid" title="Permalink to this definition"></a></dt>
+<dd><p>Toggles the grid’s visibility.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>show_state</strong> (<em>bool</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.set_bg_image">
+<span class="sig-name descname"><span class="pre">set_bg_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.set_bg_image" title="Permalink to this definition"></a></dt>
+<dd><p>Changes the background’s image on an item that can’t be interacted with.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>string</em>) – A full path to an existing image.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.selection_changed">
+<span class="sig-name descname"><span class="pre">selection_changed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.selection_changed" title="Permalink to this definition"></a></dt>
+<dd><p>Sort items by their selected order.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.add_square">
+<span class="sig-name descname"><span class="pre">add_square</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'square'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.add_square" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.add_rect">
+<span class="sig-name descname"><span class="pre">add_rect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rectangle'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.add_rect" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.add_circle">
+<span class="sig-name descname"><span class="pre">add_circle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'circle'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.add_circle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.add_triangle">
+<span class="sig-name descname"><span class="pre">add_triangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'triangle'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.add_triangle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.add_text">
+<span class="sig-name descname"><span class="pre">add_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">txt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'text'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.add_text" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.add_custom_shape">
+<span class="sig-name descname"><span class="pre">add_custom_shape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.add_custom_shape" title="Permalink to this definition"></a></dt>
+<dd><p>Enters shape creation mode where the user can define the points of a new item.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.is_out_of_bounds">
+<span class="sig-name descname"><span class="pre">is_out_of_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.is_out_of_bounds" title="Permalink to this definition"></a></dt>
+<dd><p>Checks to see if the supplied item is out of the scene’s view.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>item</strong> (<a class="reference internal" href="../widgets/items/designer_item/index.html#oa.animation.tools.synoptics.widgets.items.designer_item.DesignerItem" title="oa.animation.tools.synoptics.widgets.items.designer_item.DesignerItem"><em>DesignerItem</em></a>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if it’s out view.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.copy_items">
+<span class="sig-name descname"><span class="pre">copy_items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.copy_items" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.paste_items">
+<span class="sig-name descname"><span class="pre">paste_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">items</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.paste_items" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.paste_item">
+<span class="sig-name descname"><span class="pre">paste_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.paste_item" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new item based on the copy’s buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>item</strong> (<a class="reference internal" href="../widgets/items/designer_item/index.html#oa.animation.tools.synoptics.widgets.items.designer_item.DesignerItem" title="oa.animation.tools.synoptics.widgets.items.designer_item.DesignerItem"><em>DesignerItem</em></a>) – Override to copy from this item.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The new DesignerItem.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.update_fields_by_last_item">
+<span class="sig-name descname"><span class="pre">update_fields_by_last_item</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.update_fields_by_last_item" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.add_undo_block">
+<span class="sig-name descname"><span class="pre">add_undo_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.add_undo_block" title="Permalink to this definition"></a></dt>
+<dd><p>Stores a block of data to support an undo.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.mousePressEvent">
+<span class="sig-name descname"><span class="pre">mousePressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.mousePressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.mouseReleaseEvent">
+<span class="sig-name descname"><span class="pre">mouseReleaseEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.mouseReleaseEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.mouseMoveEvent">
+<span class="sig-name descname"><span class="pre">mouseMoveEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.mouseMoveEvent" title="Permalink to this definition"></a></dt>
+<dd><p>If an item is being dragged out of bounds, it draws the scene’s borders
+to let the user know that it will be deleted.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.keyPressEvent">
+<span class="sig-name descname"><span class="pre">keyPressEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.keyPressEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.View.keyReleaseEvent">
+<span class="sig-name descname"><span class="pre">keyReleaseEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.View.keyReleaseEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.animation.tools.synoptics.synoptics_designer.launch">
+<span class="sig-prename descclassname"><span class="pre">oa.animation.tools.synoptics.synoptics_designer.</span></span><span class="sig-name descname"><span class="pre">launch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.animation.tools.synoptics.synoptics_designer.launch" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../widgets/text_settings_dialog/index.html" class="btn btn-neutral float-left" title=" oa.animation.tools.synoptics.widgets.text_settings_dialog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../synoptics_viewer/index.html" class="btn btn-neutral float-right" title=" oa.animation.tools.synoptics.synoptics_viewer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

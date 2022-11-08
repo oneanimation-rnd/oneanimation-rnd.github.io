@@ -1,0 +1,81 @@
+ :py:mod:`oa.general.tools.daily_reminder.daily_reminder`
+==================================================================================================================
+
+.. py:module:: oa.general.tools.daily_reminder.daily_reminder
+
+.. autoapi-nested-parse::
+
+   Contains a class that will trigger a function when it passes a certain time of the day.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.daily_reminder.daily_reminder.DailyReminder
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.daily_reminder.daily_reminder.get_next_timing
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.daily_reminder.daily_reminder.active_reminders
+
+
+.. py:data:: active_reminders
+   :annotation: = []
+
+   
+
+.. py:class:: DailyReminder(hour, func, interval=30000, parent=None)
+
+   A reminder that schedules a time and periodically checks if it goes past it.
+   Once it does it triggers a function and re-schedules a new time.
+
+   .. py:method:: register(hour, func)
+      :staticmethod:
+
+      Adds a new daily reminder everytime it passes the supplied hour.
+
+      :param hour: A value from 0-23.
+      :type hour: int
+      :param func: The function it will run.
+      :type func: function
+
+
+   .. py:method:: __del__()
+
+
+   .. py:method:: check_schedule()
+
+
+
+.. py:function:: get_next_timing(hour)
+
+   Calculates the time for the supplied coming hour.
+
+   :param hour: A value from 0-23.
+   :type hour: int
+
+   :returns: A QDateTime object for the next timing.
+
+

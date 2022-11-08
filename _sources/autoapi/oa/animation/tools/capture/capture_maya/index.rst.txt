@@ -1,0 +1,286 @@
+ :py:mod:`oa.animation.tools.capture.capture_maya`
+====================================================================================================
+
+.. py:module:: oa.animation.tools.capture.capture_maya
+
+.. autoapi-nested-parse::
+
+   Our replacement of Maya's playblast that includes a custom slate.
+
+   Author:
+       Angeline
+
+   Refactored:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.capture.capture_maya.OneCaptureTool
+   oa.animation.tools.capture.capture_maya.CustomSpinBox
+   oa.animation.tools.capture.capture_maya.TimeSpinBox
+   oa.animation.tools.capture.capture_maya.CollapsibleGroupbox
+
+
+
+
+.. py:class:: OneCaptureTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = captureTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: SHOT_COLUMN
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: START_COLUMN
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: END_COLUMN
+      :annotation: = 2
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: run()
+
+      Opens interface.
+
+
+   .. py:method:: create_gui()
+
+      Generates the interface.
+
+
+   .. py:method:: setup_gui()
+
+      Initializes the interface.
+
+
+   .. py:method:: wrap_layout(widgets, orientation)
+
+
+   .. py:method:: save_state()
+
+      Saves interface's state to a file.
+
+
+   .. py:method:: load_state()
+
+      Restores interface's state from a file.
+
+
+   .. py:method:: get_scene_cp()
+
+      Checks for scene cp and if found, grabs and sets the internal values.
+
+
+   .. py:method:: fill_shots_table()
+
+      Populates the shot table with scene cp's data.
+
+
+   .. py:method:: get_gui_show_states()
+
+      Gets and returns the state of show type checkboxes from the interface.
+
+
+   .. py:method:: update_capture_cp()
+
+      Sends off persistent data to be stored in the capture cp.
+
+
+   .. py:method:: capture_shot(file_name, frame_range, cam_name, viewport_mode)
+
+      Captures a shot to a temporary local location first.
+
+      :param file_name: File name with extension (no file path).
+      :type file_name: string
+      :param frame_range: Start frame and end frame respectively.
+      :type frame_range: int[]
+      :param cam_name: Shot camera name as selected from the camera list.
+      :type cam_name: string
+      :param viewport_mode: Selected viewport mode for capturing.
+      :type viewport_mode: string
+
+      :returns: A full path to the movie.
+
+
+   .. py:method:: play_movie()
+
+      Launches video player to play movies.
+
+
+   .. py:method:: browse_type_on_toggle()
+
+
+   .. py:method:: show_all_on_click()
+
+
+   .. py:method:: hide_all_on_click()
+
+
+   .. py:method:: show_geo_on_click()
+
+
+   .. py:method:: open_output_dir_on_click()
+
+
+   .. py:method:: open_dailies_dir_on_click()
+
+
+   .. py:method:: open_browser_on_click()
+
+
+   .. py:method:: capture_on_click()
+
+      Creates a movie file based on interface settings, then plays it.
+
+
+   .. py:method:: dailies_browser_on_click()
+
+      Opens a file browser to pick dailies new output directory.
+
+
+   .. py:method:: output_browser_on_click()
+
+      Opens a file browser to pick a new local output directory.
+
+
+   .. py:method:: start_frame_on_edit_finished()
+
+      Calls when a start frame spinbox is done editing.
+      Makes sure the start frame doesn't overlap the end frame.
+
+
+   .. py:method:: end_frame_on_edit_finished()
+
+      Calls when a end frame spinbox is done editing.
+      Makes sure the end frame doesn't overlap the start frame.
+
+
+   .. py:method:: submit_dailies_on_check(state)
+
+      Changes enabled state on some interface items depending if dailies is checked.
+
+
+   .. py:method:: resize_timer_on_tick()
+
+
+   .. py:method:: range_button_on_toggle()
+
+      Switches display on interface between custom range and shots table.
+
+
+   .. py:method:: size_on_index_change(index)
+
+      Sets visibility of custom size items.
+
+
+   .. py:method:: reset_custom_range_on_click()
+
+      Resets frame ranges to current timeline's ranges.
+
+
+   .. py:method:: reset_table_on_click()
+
+      Resets table to scene cp values.
+
+
+   .. py:method:: go_to_shot_on_click()
+
+
+   .. py:method:: clips_browser_on_delete_pressed()
+
+
+   .. py:method:: clips_browser_on_double_clicked()
+
+      Runs selected file.
+
+
+   .. py:method:: play_clips_on_click()
+
+
+   .. py:method:: open_logs_on_click()
+
+
+   .. py:method:: browser_on_return_pressed()
+
+      Re-points browser to a new path.
+
+
+   .. py:method:: show_thumbnails_on_check(state)
+
+
+   .. py:method:: filter_on_text_changed()
+
+
+
+.. py:class:: CustomSpinBox(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QSpinBox`
+
+   Custom spinBox to auto-select the table's row when this widget is focused.
+
+   .. py:method:: focusInEvent(event)
+
+
+   .. py:method:: get_row()
+
+
+   .. py:method:: wheelEvent(event)
+
+
+
+.. py:class:: TimeSpinBox(spinbox_type, parent=None)
+
+   Bases: :py:obj:`CustomSpinBox`
+
+   Custom spinBox to make sure values don't overlap each other.
+
+   .. py:method:: on_value_changed()
+
+
+   .. py:method:: set_sibiling(spinbox)
+
+
+
+.. py:class:: CollapsibleGroupbox(label, main_window, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QGroupBox`
+
+   A groupbox that can collapse its contents.
+
+   .. py:method:: checked_on_changed(state)
+
+
+

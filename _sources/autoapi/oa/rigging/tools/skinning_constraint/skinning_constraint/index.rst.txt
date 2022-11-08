@@ -1,0 +1,22 @@
+ :py:mod:`oa.rigging.tools.skinning_constraint.skinning_constraint`
+======================================================================================================================================
+
+.. py:module:: oa.rigging.tools.skinning_constraint.skinning_constraint
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.skinning_constraint.skinning_constraint.create_skinning_constraint
+
+
+
+.. py:function:: create_skinning_constraint()
+
+

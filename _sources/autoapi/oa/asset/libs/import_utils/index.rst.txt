@@ -1,0 +1,136 @@
+ :py:mod:`oa.asset.libs.import_utils`
+==========================================================================
+
+.. py:module:: oa.asset.libs.import_utils
+
+.. autoapi-nested-parse::
+
+   Core functions to import a reference to Maya.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.import_utils.strip_ref_path_num
+   oa.asset.libs.import_utils.get_latest_index
+   oa.asset.libs.import_utils.build_namespace
+   oa.asset.libs.import_utils.get_res_type_by_path
+   oa.asset.libs.import_utils.remap_path_to_res
+   oa.asset.libs.import_utils.import_ref
+   oa.asset.libs.import_utils.replace_ref
+   oa.asset.libs.import_utils.unload_ref
+   oa.asset.libs.import_utils.remove_ref
+   oa.asset.libs.import_utils.switch_resolution
+   oa.asset.libs.import_utils.import_camera
+
+
+
+.. py:function:: strip_ref_path_num(path)
+
+
+.. py:function:: get_latest_index(nsp)
+
+   Checks scene for all references using the same namespace and gets the latest index.
+
+   :param nsp: Namespace without an instance number.
+   :type nsp: string
+
+
+.. py:function:: build_namespace(path, idx=None)
+
+   Generates a namespace based on the file's location.
+
+   :param path: Absolute path to maya file.
+   :type path: string
+   :param idx: If not None, force to use this instance number.
+   :type idx: int
+
+
+.. py:function:: get_res_type_by_path(path)
+
+   Parses supplied path to detect what resolution it is.
+
+   :param path: A full path to a scene file.
+   :type path: string
+
+   :returns: The resolution name that defined the path.
+
+
+.. py:function:: remap_path_to_res(path, res)
+
+   Re-maps the supplied path to the resolution.
+
+   :param path: A full path to a scene file.
+   :type path: string
+   :param res: The resolution to switch the path to.
+   :type res: string
+
+   :returns: A new full path.
+             If the file doesn't exist then it'll return None.
+
+
+.. py:function:: import_ref(path, default_res=None, nsp=None)
+
+   Imports reference with proper naming for namespace.
+
+   :param path: Absolute path to maya file.
+   :type path: string
+   :param default_res: The resolution type to re-map the path to. If it fails it'll just use the supplied path.
+   :type default_res: string
+
+   :returns: The resolved file path with copy number.
+
+
+.. py:function:: replace_ref(ref_path, new_path, update_namespace=True)
+
+   Replaces a reference with another file.
+
+   :param ref_path: Unresolved references path.
+   :type ref_path: string
+   :param new_path: Absolute path to maya file.
+   :type new_path: string
+   :param update_namespace: If False, keep the same namespace.
+   :type update_namespace: bool
+
+   :returns: The unresolved file path with copy number.
+
+
+.. py:function:: unload_ref(ref_path)
+
+
+.. py:function:: remove_ref(ref_path)
+
+
+.. py:function:: switch_resolution(ref_path, res, latest=False, force=False)
+
+   Replaces a reference with a different resolution.
+
+   :param ref_path: A resolved reference path.
+   :type ref_path: string
+   :param res: The resolution to switch to.
+   :type res: string
+   :param latest: It will use the latest version on True, otherwise it will try to stick with the same version.
+   :type latest: bool
+   :param force: Normally it does nothing if the resulting path is the same, but force enabled will load it regardless.
+   :type force: bool
+
+   :returns: The new resovled reference path.
+
+
+.. py:function:: import_camera()
+
+   Imports our standard camera.
+
+   :returns: The unresolved file path with copy number.
+
+

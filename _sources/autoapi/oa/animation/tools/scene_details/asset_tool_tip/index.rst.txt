@@ -1,0 +1,30 @@
+ :py:mod:`oa.animation.tools.scene_details.asset_tool_tip`
+====================================================================================================================
+
+.. py:module:: oa.animation.tools.scene_details.asset_tool_tip
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_details.asset_tool_tip.AssetToolTip
+
+
+
+
+.. py:class:: AssetToolTip(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: fill_fields(version, namespace, comments, user, date, user_thumbnail, latest)
+
+
+

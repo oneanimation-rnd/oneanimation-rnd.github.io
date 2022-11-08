@@ -1,0 +1,52 @@
+ :py:mod:`oa.asset.tools.ref_edits_manager.batch_cleaner`
+==================================================================================================================
+
+.. py:module:: oa.asset.tools.ref_edits_manager.batch_cleaner
+
+.. autoapi-nested-parse::
+
+   For rnd use to batch cleanup reference edits on multiple assets.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       import batch_cleaner
+       batch_cleaner.clean_all_ref_edits(["*.colorSet*"])  # Cleans current open scene.
+       batch_cleaner.batch_run(["/path/scn.ma"], "/outputDir", ["*.colorSet*"], True)  # Opens and cleans multiple scenes and prints benchmarks info.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.ref_edits_manager.batch_cleaner.RefEditsBatchCleaner
+
+
+
+
+.. py:class:: RefEditsBatchCleaner
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: _clear_edits_dir()
+
+
+   .. py:method:: _export_all_ref_edits()
+
+
+   .. py:method:: _remove_edits_from_file(edits_path, filters)
+
+
+   .. py:method:: clean_all_ref_edits(filters)
+
+
+   .. py:method:: batch_run(scn_paths, output_dir, filters, benchmark)
+
+
+

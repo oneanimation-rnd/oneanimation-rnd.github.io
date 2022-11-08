@@ -1,0 +1,22 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.components.quad_head_rig`
+==================================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.components.quad_head_rig
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.components.quad_head_rig.rig
+
+
+
+.. py:function:: rig(root_nul, neck_jnt, head_jnt, rig_scale=1)
+
+

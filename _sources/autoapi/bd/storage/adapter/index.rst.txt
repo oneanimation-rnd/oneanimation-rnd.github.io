@@ -1,0 +1,35 @@
+ :py:mod:`bd.storage.adapter`
+==========================================================
+
+.. py:module:: bd.storage.adapter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.adapter.BaseAdapter
+
+
+
+
+.. py:class:: BaseAdapter
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: output(identifier)
+      :abstractmethod:
+
+
+   .. py:method:: input(identifier)
+      :abstractmethod:
+
+
+   .. py:method:: update_current(identifier)
+
+
+

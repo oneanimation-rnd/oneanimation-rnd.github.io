@@ -1,0 +1,99 @@
+ :py:mod:`oa.capture_tool.capture_picker`
+==================================================================================
+
+.. py:module:: oa.capture_tool.capture_picker
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.capture_tool.capture_picker.CapturePicker
+   oa.capture_tool.capture_picker.Screen
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.capture_tool.capture_picker.app
+
+
+.. py:class:: CapturePicker(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: send_img_to_painter
+      
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: create_screens()
+
+
+   .. py:method:: save_settings()
+
+
+   .. py:method:: load_settings()
+
+
+   .. py:method:: get_active_screen()
+
+
+   .. py:method:: get_active_global_region()
+
+
+   .. py:method:: edit_region()
+
+
+
+.. py:class:: Screen(screen_id, screen_geo, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: enterEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: mouseMoveEvent(event)
+
+
+   .. py:method:: mouseReleaseEvent(event)
+
+
+   .. py:method:: paintEvent(event)
+
+
+   .. py:method:: get_hotspots(pos)
+
+
+   .. py:method:: crop_img()
+
+
+
+.. py:data:: app
+   
+
+   
+

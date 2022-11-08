@@ -1,0 +1,114 @@
+ :py:mod:`oa.animation.tools.deform_tool.deform_utils`
+============================================================================================================
+
+.. py:module:: oa.animation.tools.deform_tool.deform_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.deform_tool.deform_utils.load_pixmap
+   oa.animation.tools.deform_tool.deform_utils.wrap_layout
+   oa.animation.tools.deform_tool.deform_utils.start_undo_stack
+   oa.animation.tools.deform_tool.deform_utils.end_undo_stack
+   oa.animation.tools.deform_tool.deform_utils.display_error
+   oa.animation.tools.deform_tool.deform_utils.get_selected_geos
+   oa.animation.tools.deform_tool.deform_utils.get_camera
+   oa.animation.tools.deform_tool.deform_utils.get_deform_planes
+   oa.animation.tools.deform_tool.deform_utils.get_selected_deform_plane
+   oa.animation.tools.deform_tool.deform_utils.get_asset_meshes
+   oa.animation.tools.deform_tool.deform_utils.select_current_asset_meshes
+   oa.animation.tools.deform_tool.deform_utils.build_plane_to_lattice
+   oa.animation.tools.deform_tool.deform_utils.connect_lattice_to_plane
+   oa.animation.tools.deform_tool.deform_utils.reset_to_rest
+   oa.animation.tools.deform_tool.deform_utils.key_all_vertices
+   oa.animation.tools.deform_tool.deform_utils.delete_key_all_vertices
+   oa.animation.tools.deform_tool.deform_utils.select_all_vertices
+   oa.animation.tools.deform_tool.deform_utils.get_keys
+   oa.animation.tools.deform_tool.deform_utils.go_to_next_key
+   oa.animation.tools.deform_tool.deform_utils.go_to_prev_key
+   oa.animation.tools.deform_tool.deform_utils.show_hidden_shapes
+   oa.animation.tools.deform_tool.deform_utils.restore_hidden_shapes
+   oa.animation.tools.deform_tool.deform_utils.delete_deformer_by_plane
+   oa.animation.tools.deform_tool.deform_utils.attach_deformer
+
+
+
+.. py:function:: load_pixmap(file_name, width=None, height=None)
+
+
+.. py:function:: wrap_layout(widgets, orientation=QtCore.Qt.Vertical, parent=None)
+
+
+.. py:function:: start_undo_stack(name)
+
+
+.. py:function:: end_undo_stack()
+
+
+.. py:function:: display_error(err, parent=None)
+
+
+.. py:function:: get_selected_geos()
+
+
+.. py:function:: get_camera()
+
+
+.. py:function:: get_deform_planes()
+
+
+.. py:function:: get_selected_deform_plane()
+
+
+.. py:function:: get_asset_meshes(namespace)
+
+
+.. py:function:: select_current_asset_meshes()
+
+
+.. py:function:: build_plane_to_lattice(lattice)
+
+
+.. py:function:: connect_lattice_to_plane(lattice, plane)
+
+
+.. py:function:: reset_to_rest(plane)
+
+
+.. py:function:: key_all_vertices(plane)
+
+
+.. py:function:: delete_key_all_vertices(plane)
+
+
+.. py:function:: select_all_vertices(plane)
+
+
+.. py:function:: get_keys(obj)
+
+
+.. py:function:: go_to_next_key(obj)
+
+
+.. py:function:: go_to_prev_key(obj)
+
+
+.. py:function:: show_hidden_shapes(objs)
+
+
+.. py:function:: restore_hidden_shapes(old_connections)
+
+
+.. py:function:: delete_deformer_by_plane(plane)
+
+
+.. py:function:: attach_deformer(deform_objs, camera, orient_to_camera, constraint_obj=None, name='deformer')
+
+

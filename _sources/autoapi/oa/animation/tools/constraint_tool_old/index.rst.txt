@@ -1,0 +1,17 @@
+ :py:mod:`oa.animation.tools.constraint_tool_old`
+==================================================================================================
+
+.. py:module:: oa.animation.tools.constraint_tool_old
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   constraint_functions/index.rst
+   constraint_tool/index.rst
+   constraint_widgets/index.rst
+
+

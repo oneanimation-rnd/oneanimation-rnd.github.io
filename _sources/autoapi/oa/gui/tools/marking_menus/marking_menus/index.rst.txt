@@ -1,0 +1,69 @@
+ :py:mod:`oa.gui.tools.marking_menus.marking_menus`
+======================================================================================================
+
+.. py:module:: oa.gui.tools.marking_menus.marking_menus
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.tools.marking_menus.marking_menus.get_icon
+   oa.gui.tools.marking_menus.marking_menus.get_shelf_icon
+   oa.gui.tools.marking_menus.marking_menus.get_asset_info
+   oa.gui.tools.marking_menus.marking_menus.id_by_asset_info
+   oa.gui.tools.marking_menus.marking_menus.open_anim_marking_menu
+   oa.gui.tools.marking_menus.marking_menus.create_anim_marking_menu
+   oa.gui.tools.marking_menus.marking_menus.open_asset_marking_menu
+   oa.gui.tools.marking_menus.marking_menus.create_asset_marking_menu
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.tools.marking_menus.marking_menus.anim_mmenu
+   oa.gui.tools.marking_menus.marking_menus.asset_mmenu
+
+
+.. py:data:: anim_mmenu
+   :annotation: = animMarkingMenu
+
+   
+
+.. py:data:: asset_mmenu
+   :annotation: = assetMarkingMenu
+
+   
+
+.. py:function:: get_icon(icon_name)
+
+
+.. py:function:: get_shelf_icon(icon_name)
+
+
+.. py:function:: get_asset_info()
+
+
+.. py:function:: id_by_asset_info(asset_info)
+
+
+.. py:function:: open_anim_marking_menu(menu, parent)
+
+
+.. py:function:: create_anim_marking_menu()
+
+
+.. py:function:: open_asset_marking_menu(menu, parent)
+
+
+.. py:function:: create_asset_marking_menu()
+
+

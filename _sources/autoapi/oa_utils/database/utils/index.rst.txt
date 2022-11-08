@@ -1,0 +1,85 @@
+ :py:mod:`oa_utils.database.utils`
+====================================================================
+
+.. py:module:: oa_utils.database.utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.utils.AssertionSupresser
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.utils.read_annotation
+   oa_utils.database.utils.normname
+   oa_utils.database.utils.tokenize
+   oa_utils.database.utils.untokenize
+   oa_utils.database.utils.all_subclasses
+   oa_utils.database.utils.replicate_asset_library
+   oa_utils.database.utils.update_scene_database
+   oa_utils.database.utils.collect_scene_data
+   oa_utils.database.utils.delete_scene_entry
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.utils.LOGGER
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:class:: AssertionSupresser
+
+   Bases: :py:obj:`type`
+
+   .. py:method:: __call__(*args, **kwargs)
+
+      Call self as a function.
+
+
+
+.. py:function:: read_annotation(path)
+
+
+.. py:function:: normname(text)
+
+
+.. py:function:: tokenize(filepath)
+
+
+.. py:function:: untokenize(filepath)
+
+
+.. py:function:: all_subclasses(cls)
+
+
+.. py:function:: replicate_asset_library()
+
+
+.. py:function:: update_scene_database(scn_description_path)
+
+
+.. py:function:: collect_scene_data(search_paths)
+
+
+.. py:function:: delete_scene_entry(entry_id, delete_files=False)
+
+

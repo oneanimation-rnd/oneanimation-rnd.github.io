@@ -1,0 +1,87 @@
+ :py:mod:`oa.general.tools.naming_tool.naming_utils`
+========================================================================================================
+
+.. py:module:: oa.general.tools.naming_tool.naming_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.naming_tool.naming_utils.UndoStack
+   oa.general.tools.naming_tool.naming_utils.MayaNode
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.naming_tool.naming_utils.get_icon
+   oa.general.tools.naming_tool.naming_utils.wrap_object
+   oa.general.tools.naming_tool.naming_utils.find_replace
+
+
+
+.. py:class:: UndoStack(name='action')
+
+   Bases: :py:obj:`object`
+
+   To be used with "with" statement to group actions as a chunk to undo.
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(exc_type, exc_value, traceback)
+
+
+
+.. py:class:: MayaNode(obj_name)
+
+   Bases: :py:obj:`maya.OpenMaya.MDagPath`
+
+   Wrapper for a maya node so it's not name dependent.
+
+   :param obj_name: An existing object to wrap.
+   :type obj_name: string
+
+   .. py:method:: __str__()
+
+
+   .. py:method:: name()
+
+
+   .. py:method:: short_name()
+
+
+
+.. py:function:: get_icon(name)
+
+
+.. py:function:: wrap_object(obj_name)
+
+   Points supplied object to a wrapper.
+
+   :param obj_name: An existing object to wrap.
+
+   :returns: A OpenMaya.MDagPath if the supplied object is a dag node.
+             Otherwise it returns itself.
+
+
+.. py:function:: find_replace(find_str, replace_str, objs=[])
+
+   Finds a string in an object's name and replaces it.
+
+   :param find_str: The string to search for and match.
+   :type find_str: string
+   :param replace_str: The string to replace with.
+   :type replace_str: string
+   :param objs: A collection of objects to run on.
+   :type objs: string[]
+
+

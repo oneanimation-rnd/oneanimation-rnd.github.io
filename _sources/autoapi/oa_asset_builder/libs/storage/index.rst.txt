@@ -1,0 +1,61 @@
+ :py:mod:`oa_asset_builder.libs.storage`
+================================================================================
+
+.. py:module:: oa_asset_builder.libs.storage
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.storage.StorageManager
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.storage.sp
+
+
+.. py:data:: sp
+   
+
+   
+
+.. py:class:: StorageManager(src_asset_path)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: get_item(filename)
+
+
+   .. py:method:: get_src_asset_item()
+
+
+   .. py:method:: get_description_item()
+
+
+   .. py:method:: get_hou_root_hda_item()
+
+
+   .. py:method:: get_cache_item()
+
+
+   .. py:method:: get_hou_context_hda_item(context)
+
+
+   .. py:method:: get_texture_item(element, tex_type='Diffuse', ext='png')
+
+
+   .. py:method:: get_texture_dir_item()
+
+
+

@@ -1,0 +1,188 @@
+ :py:mod:`oa.animation.tools.dof_tool.dof_tool`
+==============================================================================================
+
+.. py:module:: oa.animation.tools.dof_tool.dof_tool
+
+.. autoapi-nested-parse::
+
+   Takes the camera's fstop and focal distance and places them in clips so they can be tweaked in the time editor.
+   Uses the same behavior as Enrique's super sexy dof tool in xsi.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.dof_tool.dof_tool.DOFTool
+   oa.animation.tools.dof_tool.dof_tool.QuickToolTip
+   oa.animation.tools.dof_tool.dof_tool.CustomButton
+   oa.animation.tools.dof_tool.dof_tool.CustomSlider
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.dof_tool.dof_tool.launch
+
+
+
+.. py:class:: DOFTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = dofTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: strengths
+      
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: wrap_layout(widgets, orientation)
+
+
+   .. py:method:: get_scene_camera()
+
+      Collects all camera assets in the scene.
+
+
+   .. py:method:: get_cam_objs()
+
+      Collects important camera objects from the active camera in the combobox.
+
+      :returns: A dictionary of objects.
+
+
+   .. py:method:: color_strength_button(value)
+
+
+   .. py:method:: open_wiki_on_clicked()
+
+
+   .. py:method:: tooltip_timer_on_timeout()
+
+
+   .. py:method:: preset_on_entered(preset_name)
+
+
+   .. py:method:: preset_on_leave()
+
+
+   .. py:method:: select_focus_distance_on_click()
+
+
+   .. py:method:: select_camera_attr_on_click()
+
+
+   .. py:method:: strength_slider_on_value_change(val)
+
+
+   .. py:method:: strength_spinbox_on_value_change(val)
+
+
+   .. py:method:: focus_loc_on_click()
+
+
+   .. py:method:: focus_on_click()
+
+
+   .. py:method:: preset_on_click(value)
+
+
+   .. py:method:: set_strength_on_click()
+
+
+   .. py:method:: bake_on_click()
+
+
+   .. py:method:: unbake_on_click()
+
+
+   .. py:method:: apply_transitions_on_click()
+
+
+   .. py:method:: open_time_editor_on_click()
+
+
+
+.. py:class:: QuickToolTip(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: set_pixmaps_by_name(name)
+
+
+   .. py:method:: get_pixmaps(filter_name)
+
+
+
+.. py:class:: CustomButton(text, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QToolButton`
+
+   .. py:attribute:: entered
+      
+
+      
+
+   .. py:attribute:: leave
+      
+
+      
+
+   .. py:method:: enterEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+
+.. py:class:: CustomSlider(orientation, parent)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QSlider`
+
+   .. py:method:: paintEvent(paint_event)
+
+
+
+.. py:function:: launch()
+
+

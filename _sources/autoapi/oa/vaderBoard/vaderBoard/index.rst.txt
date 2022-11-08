@@ -1,0 +1,107 @@
+ :py:mod:`oa.vaderBoard.vaderBoard`
+======================================================================
+
+.. py:module:: oa.vaderBoard.vaderBoard
+
+.. autoapi-nested-parse::
+
+   StoryBoard Checkin Tool
+
+   Author:         Enrique Caballero
+   Follow-up:      Angeline Tan
+   Date:           January 15th 2014
+
+   This is a tool for the Storyboard, the Editing and Coordination Department,
+   its goal is to make checking in files incredibly easy, as well as helping maintain
+   proper naming conventions and introducing safety checks.
+
+   Version log:
+   v2.0 --- Dec 22, 2014
+       - Remove checks for file extensions
+       -
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.vaderBoard.vaderBoard.StoryboardTool
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.vaderBoard.vaderBoard.server
+   oa.vaderBoard.vaderBoard.asset_drive
+   oa.vaderBoard.vaderBoard.temp_folder
+
+
+.. py:data:: server
+   
+
+   
+
+.. py:data:: asset_drive
+   
+
+   
+
+.. py:data:: temp_folder
+   
+
+   
+
+.. py:class:: StoryboardTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: createUI()
+
+      Creates the main UI
+
+
+   .. py:method:: createTabPanels()
+
+      Creates the tab panes with it's drop boxes
+
+
+   .. py:method:: updateAudioTab()
+
+
+   .. py:method:: createEpisodicDirectory()
+
+      This will create a directory if one does not exist. It will also check for valid path names
+
+
+   .. py:method:: createCharDirectory()
+
+
+   .. py:method:: __validateInput(inputStr)
+
+
+   .. py:method:: updateSubCategories(index)
+
+      This runs automatically when the project index is changed in the ComboBox
+
+
+   .. py:method:: updateAudioCombo(text)
+
+
+   .. py:method:: checkinProcess()
+
+      This is what happens when they check in a file.
+
+
+   .. py:method:: clearTempDir()
+
+
+

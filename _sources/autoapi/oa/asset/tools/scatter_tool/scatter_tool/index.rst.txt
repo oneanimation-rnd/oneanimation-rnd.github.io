@@ -1,0 +1,69 @@
+ :py:mod:`oa.asset.tools.scatter_tool.scatter_tool`
+======================================================================================================
+
+.. py:module:: oa.asset.tools.scatter_tool.scatter_tool
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.scatter_tool.scatter_tool.PaintScatterToolSet
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.scatter_tool.scatter_tool.launch
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.scatter_tool.scatter_tool.mayaHandle
+   oa.asset.tools.scatter_tool.scatter_tool.mayaMainWindow
+
+
+.. py:data:: mayaHandle
+   
+
+   
+
+.. py:data:: mayaMainWindow
+   
+
+   
+
+.. py:class:: PaintScatterToolSet(*args, **kwargs)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: initUI()
+
+      Initialises the UI
+
+
+   .. py:method:: setupButton_onClicked()
+
+      This is the button that does the pre setup stage for the Scatter Tool.
+
+
+   .. py:method:: instancesButton_onClicked()
+
+      This is the button that converts the MASH instances into actual instances for the Scatter Tool.
+
+
+
+.. py:function:: launch()
+
+

@@ -1,0 +1,116 @@
+ :py:mod:`oa_asset_builder.libs.delegates.objects`
+====================================================================================================
+
+.. py:module:: oa_asset_builder.libs.delegates.objects
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.delegates.objects.ObjectsDelegate
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.delegates.objects.this
+   oa_asset_builder.libs.delegates.objects._log
+   oa_asset_builder.libs.delegates.objects._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:class:: ObjectsDelegate(asset_node, root_node, description)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: setup()
+
+
+   .. py:method:: update()
+
+
+   .. py:method:: get_container()
+
+
+   .. py:method:: _create_container()
+
+
+   .. py:method:: _destroy_container()
+
+
+   .. py:method:: _create_palette()
+
+
+   .. py:method:: _load_palette()
+
+
+   .. py:method:: _create_custom_subnet()
+
+
+   .. py:method:: get_objects_geo_node()
+
+
+   .. py:method:: _create_objects_geo_node()
+
+      Creates a 'geo' node to build objects' geometry in it.
+
+
+   .. py:method:: _get_geometry_node()
+
+
+   .. py:method:: _create_geometry_node(objects_geo_node)
+
+      Create 'oa::geobuilder' node and initialize it's parameters.
+
+
+   .. py:method:: _create_properties_node(geometry_node)
+
+
+   .. py:method:: _create_overrides_subnet(properties_node)
+
+
+   .. py:method:: _create_structure()
+
+
+   .. py:method:: _copy_userdata_from_asset()
+
+
+   .. py:method:: _copy_userdata_from_geometry(geometry_node)
+
+
+   .. py:method:: _create_objects(obj_descriptions, update=False)
+
+
+   .. py:method:: _update_objects(obj_descriptions)
+
+
+   .. py:method:: _get_palette_menu_name()
+
+
+   .. py:method:: _get_palette_type_name()
+
+
+

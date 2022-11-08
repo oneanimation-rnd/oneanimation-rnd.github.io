@@ -1,0 +1,58 @@
+ :py:mod:`oa.gui.libs.menus.task_menu`
+============================================================================
+
+.. py:module:: oa.gui.libs.menus.task_menu
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.libs.menus.task_menu.TaskMenu
+
+
+
+
+.. py:class:: TaskMenu(parent)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: name
+      :annotation: = taskMenu
+
+      
+
+   .. py:method:: create()
+      :classmethod:
+
+      Builds the menu and its items in the main window's menu bar.
+
+
+   .. py:method:: delete()
+      :classmethod:
+
+      Deletes menu from the main window's menubar if it exists.
+
+
+   .. py:method:: get_main_window()
+      :staticmethod:
+
+      Returns Maya's main window's name.
+
+
+   .. py:method:: refresh_menu(*args)
+
+      This function runs every time the user opens up the menu.
+
+
+   .. py:method:: switch_task_on_triggered(*args)
+
+
+   .. py:method:: show_task_on_toggled(enabled)
+
+
+

@@ -1,0 +1,103 @@
+ :py:mod:`oa.rigging.tools.mirror_tool.mirror_utils`
+========================================================================================================
+
+.. py:module:: oa.rigging.tools.mirror_tool.mirror_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.mirror_tool.mirror_utils.ObjectWrapper
+   oa.rigging.tools.mirror_tool.mirror_utils.UndoStack
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.mirror_tool.mirror_utils.xform_to_matrix
+   oa.rigging.tools.mirror_tool.mirror_utils.matrix_to_xform
+   oa.rigging.tools.mirror_tool.mirror_utils.mirror_objs
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.mirror_tool.mirror_utils.mirror_axis
+
+
+.. py:data:: mirror_axis
+   
+
+   
+
+.. py:class:: ObjectWrapper(obj_name)
+
+   Bases: :py:obj:`maya.OpenMaya.MDagPath`
+
+   Wrapper for a maya node so it's not name dependent.
+
+   :param obj_name: An existing object to wrap.
+   :type obj_name: string
+
+   .. py:method:: __str__()
+
+
+   .. py:method:: name()
+
+
+
+.. py:class:: UndoStack(name='action')
+
+   Bases: :py:obj:`object`
+
+   To be used with "with" statement to group actions as a chunk to undo.
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(type, value, traceback)
+
+
+
+.. py:function:: xform_to_matrix(xform)
+
+   Converts a list of floats to a matrix wrapper.
+
+   :param xform: A transform using cmds.xform
+
+   :returns: A MTransformationMatrix wrapper.
+
+
+.. py:function:: matrix_to_xform(mmatrix)
+
+   Converts an MMatrix wrapper to a list of floats.
+
+   :param mmatrix: An MMatrix wrapper.
+
+   :returns: A list that represents the transform.
+
+
+.. py:function:: mirror_objs(objs, axis, flip_x=False, flip_y=False, flip_z=False, duplicate=False)
+
+   Mirrors supplied objects without effecting their scale.
+   Multiplies transforms with the same axises used by Maya's mirror joints tool.
+
+   :param objs: A list of exiting object names.
+   :param axis: A key from the variable mirror_axis.
+   :param flip_x: Flips the object's x position.
+   :param flip_y: Flips the object's y position.
+   :param flip_z: Flips the object's z position.
+   :param duplicate: Duplicates the object then mirrors it, otherwise does it with the supplied object.
+
+

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.vcs &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../about.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title=" oa_asset_builder" href="../../oa_asset_builder/index.html" />
+    <link rel="prev" title=" oa.migration" href="../migration/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../config/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../migration/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.migration</span></code></a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vcs</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vcs</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/oa/vcs/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.vcs">
+<span id="oa-vcs"></span><h1> <a class="reference internal" href="#module-oa.vcs" title="oa.vcs"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vcs</span></code></a><a class="headerlink" href="#module-oa.vcs" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.vcs.FileSystemAccessor" title="oa.vcs.FileSystemAccessor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileSystemAccessor</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.vcs.FTPAccessor" title="oa.vcs.FTPAccessor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FTPAccessor</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.vcs.Transaction" title="oa.vcs.Transaction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transaction</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.vcs.VCS" title="oa.vcs.VCS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VCS</span></code></a></p></td>
+<td><p>A class responsible for version</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.vcs._json_encoder" title="oa.vcs._json_encoder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_json_encoder</span></code></a>(obj)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.vcs._tokenize" title="oa.vcs._tokenize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_tokenize</span></code></a>(path)</p></td>
+<td><p>Replace path elements with environment variables.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.vcs._untokenize" title="oa.vcs._untokenize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_untokenize</span></code></a>(path)</p></td>
+<td><p>Replace any environment variables with their corresponding values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.vcs.make_database_key" title="oa.vcs.make_database_key"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_database_key</span></code></a>(path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.vcs.make_temp_path" title="oa.vcs.make_temp_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_temp_path</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.vcs.make_versioned_path" title="oa.vcs.make_versioned_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">make_versioned_path</span></code></a>(path, version)</p></td>
+<td><p>Build a versioned path from the provided one.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.vcs.parse_annotation" title="oa.vcs.parse_annotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parse_annotation</span></code></a>(path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.vcs.json_dump" title="oa.vcs.json_dump"><code class="xref py py-obj docutils literal notranslate"><span class="pre">json_dump</span></code></a>(data, f)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.vcs.text_dump" title="oa.vcs.text_dump"><code class="xref py py-obj docutils literal notranslate"><span class="pre">text_dump</span></code></a>(data, f)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.vcs.refresh_filesystem" title="oa.vcs.refresh_filesystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">refresh_filesystem</span></code></a>(path)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.vcs.LOGGER" title="oa.vcs.LOGGER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LOGGER</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.vcs.LOGGER">
+<span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">LOGGER</span></span><a class="headerlink" href="#oa.vcs.LOGGER" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.vcs._json_encoder">
+<span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">_json_encoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs._json_encoder" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.vcs._tokenize">
+<span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">_tokenize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs._tokenize" title="Permalink to this definition"></a></dt>
+<dd><p>Replace path elements with environment variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path to convert.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Tokenized path.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.vcs._untokenize">
+<span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">_untokenize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs._untokenize" title="Permalink to this definition"></a></dt>
+<dd><p>Replace any environment variables with their corresponding values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – path to convert.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Untokenized path.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="oa.vcs.VCSError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">VCSError</span></span><a class="headerlink" href="#oa.vcs.VCSError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.vcs.FileSystemAccessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">FileSystemAccessor</span></span><a class="headerlink" href="#oa.vcs.FileSystemAccessor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FileSystemAccessor.is_supported">
+<span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FileSystemAccessor.is_supported" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FileSystemAccessor.upload">
+<span class="sig-name descname"><span class="pre">upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">775</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FileSystemAccessor.upload" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FileSystemAccessor.rm">
+<span class="sig-name descname"><span class="pre">rm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FileSystemAccessor.rm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FileSystemAccessor.make_dir">
+<span class="sig-name descname"><span class="pre">make_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FileSystemAccessor.make_dir" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FileSystemAccessor._get_transit_path">
+<span class="sig-name descname"><span class="pre">_get_transit_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FileSystemAccessor._get_transit_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">FTPAccessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">get_value('ftp/host')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">get_value('ftp/username')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">get_value('ftp/password')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">get_value('ftp/root')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">get_value('ftp/timeout')</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor._ensure_connected">
+<span class="sig-name descname"><span class="pre">_ensure_connected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor._ensure_connected" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor._get_local_path">
+<span class="sig-name descname"><span class="pre">_get_local_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor._get_local_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor._get_remote_path">
+<span class="sig-name descname"><span class="pre">_get_remote_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor._get_remote_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor._get_transit_path">
+<span class="sig-name descname"><span class="pre">_get_transit_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor._get_transit_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor.is_supported">
+<span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor.is_supported" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor.read" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor.upload">
+<span class="sig-name descname"><span class="pre">upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">775</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor.upload" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor.rm">
+<span class="sig-name descname"><span class="pre">rm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor.rm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor._is_dir">
+<span class="sig-name descname"><span class="pre">_is_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor._is_dir" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor._is_file">
+<span class="sig-name descname"><span class="pre">_is_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor._is_file" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor.make_dir">
+<span class="sig-name descname"><span class="pre">make_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor.make_dir" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.FTPAccessor._exists">
+<span class="sig-name descname"><span class="pre">_exists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.FTPAccessor._exists" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.vcs.Transaction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">Transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vcs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">accessors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.Transaction" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.Transaction._register_upload">
+<span class="sig-name descname"><span class="pre">_register_upload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">775</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">record_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.Transaction._register_upload" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.Transaction._add_db_record">
+<span class="sig-name descname"><span class="pre">_add_db_record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metadata</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.Transaction._add_db_record" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.Transaction.add_item">
+<span class="sig-name descname"><span class="pre">add_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">775</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">metadata</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.Transaction.add_item" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.Transaction.add_annotation">
+<span class="sig-name descname"><span class="pre">add_annotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">775</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.meta'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_json</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">metadata</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.Transaction.add_annotation" title="Permalink to this definition"></a></dt>
+<dd><p>Create annotation .txt file.
+:param path: a file path for which to create annotation.
+:type path: str
+:param comment: a comment string.
+:type comment: str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.Transaction.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.Transaction.execute" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.vcs.make_database_key">
+<span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">make_database_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.make_database_key" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.vcs.make_temp_path">
+<span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">make_temp_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.make_temp_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.vcs.make_versioned_path">
+<span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">make_versioned_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.make_versioned_path" title="Permalink to this definition"></a></dt>
+<dd><p>Build a versioned path from the provided one.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – input path with or without version in it.</p></li>
+<li><p><strong>version</strong> (<em>int</em>) – version number.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Return (str): versioned path.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.vcs.parse_annotation">
+<span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">parse_annotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.parse_annotation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.vcs.json_dump">
+<span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">json_dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.json_dump" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.vcs.text_dump">
+<span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">text_dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.text_dump" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.vcs.refresh_filesystem">
+<span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">refresh_filesystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.refresh_filesystem" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.vcs.VCS">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.vcs.</span></span><span class="sig-name descname"><span class="pre">VCS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">studios=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_hosts=get_value('mongodb/hosts')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_replicate_set=get_value('mongodb/replica_set')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_read_preference=pymongo.ReadPreference.PRIMARY_PREFERRED</span> <span class="pre">if</span> <span class="pre">get_value('studio')</span> <span class="pre">==</span> <span class="pre">'SG'</span> <span class="pre">else</span> <span class="pre">pymongo.ReadPreference.SECONDARY_PREFERRED</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_name='oa_central_db'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_collection='files'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_connect=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_connect_timeout_ms=120000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db_server_selection_timeout_ms=120000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.VCS" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class responsible for version
+management and making file transactions to the
+remote server.</p>
+<p>Constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>studios</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – a list of studio locations e.g. [‘SG’, ‘JK’].
+By default it’s a current studio location.</p></li>
+<li><p><strong>db_name</strong> (<em>str</em>) – database name.</p></li>
+<li><p><strong>db_collection</strong> (<em>str</em>) – collection name.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.VCS.db">
+<span class="sig-name descname"><span class="pre">db</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.VCS.db" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.VCS.create_transaction">
+<span class="sig-name descname"><span class="pre">create_transaction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.VCS.create_transaction" title="Permalink to this definition"></a></dt>
+<dd><p>A context to initiate and perform transaction to the remote server.</p>
+<dl class="simple">
+<dt>Return (Transaction): a transaction object with already</dt><dd><p>established remote connections.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.VCS.get_last_revision">
+<span class="sig-name descname"><span class="pre">get_last_revision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">active_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.VCS.get_last_revision" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.VCS.get_revisions">
+<span class="sig-name descname"><span class="pre">get_revisions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">active_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.VCS.get_revisions" title="Permalink to this definition"></a></dt>
+<dd><p>Gets all the database records of the file specified by path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – input path.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Kwargs:</dt><dd><p>limit (int): number of records to return in a single batch.
+active_only (bool): return only records with ‘active’ flag set to true.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a list of all revisions of the file.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.vcs.VCS.remove_revision">
+<span class="sig-name descname"><span class="pre">remove_revision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.vcs.VCS.remove_revision" title="Permalink to this definition"></a></dt>
+<dd><p>Deactivate a specific file revision.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – file path.</p></li>
+<li><p><strong>version</strong> (<em>int</em>) – revision version to remove.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../migration/index.html" class="btn btn-neutral float-left" title=" oa.migration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../oa_asset_builder/index.html" class="btn btn-neutral float-right" title=" oa_asset_builder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

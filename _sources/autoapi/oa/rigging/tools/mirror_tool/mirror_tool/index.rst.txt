@@ -1,0 +1,84 @@
+ :py:mod:`oa.rigging.tools.mirror_tool.mirror_tool`
+======================================================================================================
+
+.. py:module:: oa.rigging.tools.mirror_tool.mirror_tool
+
+.. autoapi-nested-parse::
+
+   A simple interface to mirror objects without scaling them.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.mirror_tool.mirror_tool.MirrorTool
+
+
+
+
+.. py:class:: MirrorTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = mirrorTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: mirror_on_click()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: get_gui_state()
+
+      Captures the current state of the interface.
+
+      :returns: A dictionary to represent the state.
+
+
+   .. py:method:: set_gui_state(state_data)
+
+      Sets the interface with the supplied state parameter.
+
+
+   .. py:method:: save_gui_state()
+
+      Saves the current state to a file with json format.
+
+
+   .. py:method:: restore_gui_state()
+
+      Reads local file to restore the interface to its last state.
+
+
+

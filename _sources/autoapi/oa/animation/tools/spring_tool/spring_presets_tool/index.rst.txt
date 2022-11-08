@@ -1,0 +1,163 @@
+ :py:mod:`oa.animation.tools.spring_tool.spring_presets_tool`
+==========================================================================================================================
+
+.. py:module:: oa.animation.tools.spring_tool.spring_presets_tool
+
+.. autoapi-nested-parse::
+
+   This tool stores dynamic presets in the database to make it easier for animators to run simulations with a click of a button.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.spring_tool.spring_presets_tool.SpringPresetsTool
+   oa.animation.tools.spring_tool.spring_presets_tool.ListWidget
+   oa.animation.tools.spring_tool.spring_presets_tool.TableWidget
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.spring_tool.spring_presets_tool.launch
+
+
+
+.. py:class:: SpringPresetsTool(ref_obj, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: create_label_checkbox(label, checked, min_width=None)
+
+
+   .. py:method:: create_label_spinbox(label, float_tool_tip, min_val, max_val, val, steps, min_width=None)
+
+
+   .. py:method:: get_selected_preset()
+
+
+   .. py:method:: update_presets_list()
+
+
+   .. py:method:: update_objs_list()
+
+
+   .. py:method:: update_dyn_obj_values(dyn_settings)
+
+
+   .. py:method:: serialize_row(row)
+
+
+   .. py:method:: on_presets_list_selection_changed()
+
+
+   .. py:method:: on_translate_toggled(enabled)
+
+
+   .. py:method:: on_rotate_toggled(enabled)
+
+
+   .. py:method:: on_translate_mult_edited()
+
+
+   .. py:method:: on_rotate_mult_edited()
+
+
+   .. py:method:: on_settle_edited()
+
+
+   .. py:method:: on_max_speed_edited()
+
+
+   .. py:method:: on_air_drag_edited()
+
+
+   .. py:method:: on_limit_edited()
+
+
+   .. py:method:: filter_objs_list()
+
+
+   .. py:method:: on_create_preset_clicked()
+
+
+   .. py:method:: on_delete_preset_clicked()
+
+
+   .. py:method:: on_rename_preset_clicked()
+
+
+   .. py:method:: on_run_sim_clicked()
+
+
+   .. py:method:: on_add_dyn_obj_clicked()
+
+
+   .. py:method:: on_edit_dyn_obj_clicked()
+
+
+   .. py:method:: on_remove_dyn_obj_clicked()
+
+
+   .. py:method:: on_select_dyn_obj_clicked()
+
+
+   .. py:method:: on_sim_dyn_obj_clicked()
+
+
+   .. py:method:: on_pull_values_clicked()
+
+
+
+.. py:class:: ListWidget(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QListWidget`
+
+   .. py:method:: store_selection()
+
+
+   .. py:method:: restore_selection()
+
+
+
+.. py:class:: TableWidget(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableWidget`
+
+   .. py:method:: store_selection(column=0)
+
+
+   .. py:method:: restore_selection(column=0)
+
+
+   .. py:method:: reset_sort_order()
+
+
+   .. py:method:: store_sort_order()
+
+
+   .. py:method:: restore_sort_order()
+
+
+
+.. py:function:: launch()
+
+

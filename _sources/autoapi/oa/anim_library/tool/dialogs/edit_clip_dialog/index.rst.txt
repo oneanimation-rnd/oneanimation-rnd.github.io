@@ -1,0 +1,105 @@
+ :py:mod:`oa.anim_library.tool.dialogs.edit_clip_dialog`
+================================================================================================================
+
+.. py:module:: oa.anim_library.tool.dialogs.edit_clip_dialog
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.dialogs.edit_clip_dialog.EditClip
+   oa.anim_library.tool.dialogs.edit_clip_dialog.HoverButton
+
+
+
+
+.. py:class:: EditClip(clip_id, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: clip_modified
+      
+
+      
+
+   .. py:attribute:: clip_deleted
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: capture_on_click()
+
+
+   .. py:method:: start_label_on_click()
+
+
+   .. py:method:: end_label_on_click()
+
+
+   .. py:method:: preview_start_label_on_click()
+
+
+   .. py:method:: preview_end_label_on_click()
+
+
+   .. py:method:: replace_clip_on_click()
+
+
+   .. py:method:: delete_on_click()
+
+
+   .. py:method:: save_settings_on_click()
+
+
+   .. py:method:: assign_sets_on_click()
+
+
+   .. py:method:: del_previous_instance()
+
+      Deletes any previous instance of this class.
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: update_preview()
+
+      Captures viewport with ranges from the interface and displays it.
+
+
+   .. py:method:: collect_controls()
+
+
+   .. py:method:: replace_clip()
+
+      Updates the clip with a new version in the database.
+
+
+
+.. py:class:: HoverButton(label, hover_label, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QPushButton`
+
+   .. py:method:: enterEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+

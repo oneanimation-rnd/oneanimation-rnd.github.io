@@ -1,0 +1,120 @@
+ :py:mod:`oa.asset.libs.material_tags`
+============================================================================
+
+.. py:module:: oa.asset.libs.material_tags
+
+.. autoapi-nested-parse::
+
+   Manages unique tags on materials for lighting and rendering.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.material_tags.NodeAddedCallback
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.material_tags.add_node_added_callback
+   oa.asset.libs.material_tags.collect_scene_materials
+   oa.asset.libs.material_tags.tag_scene_materials
+   oa.asset.libs.material_tags.set_tag
+   oa.asset.libs.material_tags.get_tag
+   oa.asset.libs.material_tags.tag_selection
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.material_tags.valid_node_types
+   oa.asset.libs.material_tags.tag_attr_name
+
+
+.. py:data:: valid_node_types
+   
+
+   
+
+.. py:data:: tag_attr_name
+   :annotation: = matId
+
+   
+
+.. py:class:: NodeAddedCallback
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: add_node_added_callback_id
+      
+
+      
+
+   .. py:method:: remove_callback()
+      :staticmethod:
+
+
+   .. py:method:: add_callback()
+      :staticmethod:
+
+      Adds callback to execute whenever a new object is created.
+
+
+
+.. py:function:: add_node_added_callback(mobject, client_data)
+
+   This gets called when a new material is created, duplicated, imported, referenced.
+   A new tag is assigned when it doesn't have one or if it's been duplicated.
+
+
+.. py:function:: collect_scene_materials()
+
+   Gets and returns a list of materials.
+
+
+.. py:function:: tag_scene_materials()
+
+   Set tags to all materials in the scene that doesn't have one.
+
+
+.. py:function:: set_tag(obj, id=None, force=False, silent=False)
+
+   Tags an object with a unique id.
+
+   :param obj: A material object to tag.
+   :param id: If supplied, it will tag the object with this id.
+              Otherwise the id is randomly generated.
+   :param force: Re-assigns a new id even if one already exists.
+   :param silent: Prints output on True.
+
+
+.. py:function:: get_tag(obj)
+
+   Gets an id from a material.
+
+   :param obj: Object to get a tag from.
+
+   :returns: Objects's id or None.
+
+
+.. py:function:: tag_selection()
+
+   Simple function to re-assign new tags to selected materials.
+
+

@@ -1,0 +1,46 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.auto_rigs.biped`
+================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.auto_rigs.biped
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.auto_rigs.biped.rig
+   oa.rigging.tools.auto_rigging.auto_rigs.biped.is_visible
+   oa.rigging.tools.auto_rigging.auto_rigs.biped.create_biped_body_waves
+   oa.rigging.tools.auto_rigging.auto_rigs.biped.add_body_wave
+   oa.rigging.tools.auto_rigging.auto_rigs.biped.get_finger_count
+   oa.rigging.tools.auto_rigging.auto_rigs.biped.set_finger_count
+   oa.rigging.tools.auto_rigging.auto_rigs.biped.launch_finger_count_dialog
+
+
+
+.. py:function:: rig(knee_no_flip=False, use_noodle_legs=False)
+
+
+.. py:function:: is_visible(obj)
+
+
+.. py:function:: create_biped_body_waves(head_tip_jnt, body_offset_ctrl, spine_1_ctrl, spine_2_ctrl, spine_3_ctrl, neck_ctrl, arm_fk_r_ctrl, arm_fk_l_ctrl, ctrl_size=1)
+
+
+.. py:function:: add_body_wave(obj, axis, global_mult_plug, mult_plug, amp_plug, freq_plug, time_offset_plug, time_plug, name='newSinNode')
+
+
+.. py:function:: get_finger_count()
+
+
+.. py:function:: set_finger_count(count)
+
+
+.. py:function:: launch_finger_count_dialog()
+
+

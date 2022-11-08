@@ -1,0 +1,24 @@
+ :py:mod:`oa.general.libs.clean_utils`
+============================================================================
+
+.. py:module:: oa.general.libs.clean_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.clean_utils.clean_scene_file
+
+
+
+.. py:function:: clean_scene_file(scn_path, verbose=True)
+
+   Scans scene file for any corrupted lines that would throw errors on loading.
+
+

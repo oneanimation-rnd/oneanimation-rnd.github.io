@@ -1,0 +1,194 @@
+ :py:mod:`oa.rigging.libs.blendshape_groups`
+========================================================================================
+
+.. py:module:: oa.rigging.libs.blendshape_groups
+
+.. autoapi-nested-parse::
+
+   A simple library to expose blendShape groups.
+
+   BlendShape groups have absolutely no access point with Maya's existing apis, except from a few obscure mel commands.
+   Though these mel commands completely rely on Shape Editor selection, making it impractical to write code with it.
+   This library exposes methods to easily modify and manage a blendShape's groups.
+
+   Author:
+       Jason Labbe
+       https://github.com/theRussetPotato/blendshape-groups
+
+   Usage example:
+       import blendshape_groups
+       blendshape_groups.create_example_scene()  # Check out function for full detail usage.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.blendshape_groups.BlendShapeGroups
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.blendshape_groups.create_example_scene
+
+
+
+.. py:class:: BlendShapeGroups(blendshape)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: __iter__()
+
+
+   .. py:method:: _extract_index(attr)
+
+      Extracts an index from a attribute string representing an array.
+
+
+   .. py:method:: _next_grp_index()
+
+      Fetches the next available group index for creation.
+
+
+   .. py:method:: _get_grp_parent(grp_index)
+
+      Gets the supplied group's current parent index.
+
+
+   .. py:method:: _set_grp_parent(grp_index, parent_grp_index)
+
+      Sets the supplied group's to be parented under a new index.
+
+
+   .. py:method:: _get_grp_children(grp_index)
+
+      Gets a list of indices (groups and targets) of the supplied group.
+      Groups are listed as negative numbers.
+
+
+   .. py:method:: _set_grp_children(grp_index, indices)
+
+      Replaces supplied group's children with a list of indices representing other groups and targets.
+      Groups are listed as negative numbers.
+
+
+   .. py:method:: _grp_exists(index)
+
+      Checks if the group at the supplied index is valid.
+
+
+   .. py:method:: _check_grp_validation(grp_index)
+
+
+   .. py:method:: _build_unique_name(grp_index, name)
+
+      Generates a unique name if the supplied name will cause a conflict with another group.
+
+
+   .. py:method:: _grp_iterator()
+
+      An iterator to go through all groups with a for loop.
+
+
+   .. py:method:: _grp_parent_iterator(grp_index)
+
+      An iterator that steps through a group's hierarchy by going up its parents.
+
+
+   .. py:method:: get_all_grp_indices()
+
+      Fetches a list of all available group indices.
+
+
+   .. py:method:: get_grp_indices(grp_index)
+
+      Fetches a list of group indices that are parented to the supplied group (excludes nested groups).
+
+
+   .. py:method:: get_grp_count()
+
+      Returns the current number of groups. Root group is included in the count.
+
+
+   .. py:method:: move_grps(indices, grp_index)
+
+      Moves multiple groups to be parented under a new group.
+
+      :param indices: A list of indices representing groups to be moved.
+      :param grp_index: An index representing a group to parent to.
+
+
+   .. py:method:: move_targets(indices, grp_index)
+
+      Moves targets to be parented under a new group.
+
+      :param indices: A list of indexes representing targets to be moved.
+      :param grp_index: An index representing the group to be moved to.
+
+
+   .. py:method:: rename_grp(grp_index, name)
+
+      Renames the supplied group. Names with conflicts will be auto-named.
+
+      :param grp_index: An index representing a group to rename.
+      :param name: What to rename the group to.
+
+      :returns: The new name of the group (in case it was renamed).
+
+
+   .. py:method:: get_grp_name(grp_index)
+
+      Returns the supplied group's name.
+
+
+   .. py:method:: create_grp(parent_grp_index=0, targets=[], name='New Group')
+
+      Creates a new group and parents targets under it.
+
+      :param parent_grp_index: An index representing which group to parent this new group to.
+      :param targets: A list of target indices to parent under the new group. Make this an empty list to create an empty group.
+      :param name: What to name the new group.
+
+      :returns: The index of the new group.
+
+
+   .. py:method:: delete_grp(grp_index)
+
+      Deletes the supplied group and anything parented underneath it.
+      Undo will not reflect in the Shape Editor until it is reopened.
+
+
+   .. py:method:: get_all_target_indices()
+
+      Fetches a list of valid target indices.
+
+
+   .. py:method:: get_grp_target_indices(grp_index)
+
+      Fetches a list of valid target indices that are parented to the supplied group (excludes nested targets).
+
+
+   .. py:method:: find_grp(grp_name)
+
+      Searches groups and returns its index if it matches the supplied name.
+      Returns None if nothing is found.
+
+
+   .. py:method:: delete_target(index)
+
+      Deletes a target at the supplied index.
+
+
+
+.. py:function:: create_example_scene()
+
+

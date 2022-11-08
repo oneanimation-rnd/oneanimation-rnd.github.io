@@ -1,0 +1,34 @@
+ :py:mod:`oa.general.tools.shield.checks.assets.corrupt_skin_clusters`
+============================================================================================================================================
+
+.. py:module:: oa.general.tools.shield.checks.assets.corrupt_skin_clusters
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.shield.checks.assets.corrupt_skin_clusters.Check
+
+
+
+
+.. py:class:: Check
+
+   Bases: :py:obj:`oa.general.tools.shield.templates.check_template.CheckTemplate`
+
+   .. py:method:: get_mesh_by_skin(skin_cluster)
+      :staticmethod:
+
+
+   .. py:method:: run()
+
+      This check fails if it raises any error.
+      Raise script_utils.CheckError to display it in the interface.
+
+
+

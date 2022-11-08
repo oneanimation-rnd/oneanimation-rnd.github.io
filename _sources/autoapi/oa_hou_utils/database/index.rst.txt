@@ -1,0 +1,22 @@
+ :py:mod:`oa_hou_utils.database`
+================================================================
+
+.. py:module:: oa_hou_utils.database
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_hou_utils.database.get_client
+
+
+
+.. py:function:: get_client()
+
+

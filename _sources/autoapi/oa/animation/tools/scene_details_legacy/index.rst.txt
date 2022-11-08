@@ -1,0 +1,25 @@
+ :py:mod:`oa.animation.tools.scene_details_legacy`
+====================================================================================================
+
+.. py:module:: oa.animation.tools.scene_details_legacy
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   resources/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   scene_details_legacy/index.rst
+   version_check_cb/index.rst
+
+

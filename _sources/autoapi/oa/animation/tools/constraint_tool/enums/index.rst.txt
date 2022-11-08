@@ -1,0 +1,106 @@
+ :py:mod:`oa.animation.tools.constraint_tool.enums`
+======================================================================================================
+
+.. py:module:: oa.animation.tools.constraint_tool.enums
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool.enums.ConstraintType
+   oa.animation.tools.constraint_tool.enums.Attrs
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool.enums.color_sat
+   oa.animation.tools.constraint_tool.enums.color_bri
+   oa.animation.tools.constraint_tool.enums.Colors
+
+
+.. py:class:: ConstraintType
+
+   .. py:attribute:: Point
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Orient
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: Parent
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: Path
+      :annotation: = 3
+
+      
+
+
+.. py:class:: Attrs
+
+   .. py:attribute:: Constraint
+      :annotation: = constraint
+
+      
+
+   .. py:attribute:: ONul
+      :annotation: = offset_nul
+
+      
+
+   .. py:attribute:: OCtrl
+      :annotation: = offset_ctrl
+
+      
+
+   .. py:attribute:: ConstraintType
+      :annotation: = constraint_type
+
+      
+
+   .. py:attribute:: Target
+      :annotation: = constraint_target
+
+      
+
+   .. py:attribute:: UValue
+      :annotation: = uValue
+
+      
+
+   .. py:attribute:: Color
+      :annotation: = constraint_color
+
+      
+
+
+.. py:data:: color_sat
+   :annotation: = 0.55
+
+   
+
+.. py:data:: color_bri
+   :annotation: = 0.4
+
+   
+
+.. py:data:: Colors
+   
+
+   
+

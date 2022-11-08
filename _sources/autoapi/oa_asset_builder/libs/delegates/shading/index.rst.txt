@@ -1,0 +1,85 @@
+ :py:mod:`oa_asset_builder.libs.delegates.shading`
+====================================================================================================
+
+.. py:module:: oa_asset_builder.libs.delegates.shading
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.delegates.shading.ShadingDelegate
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.delegates.shading.this
+   oa_asset_builder.libs.delegates.shading._log
+   oa_asset_builder.libs.delegates.shading._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:class:: ShadingDelegate(asset_node, root_node, description, objects_delegate)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: _assign()
+
+
+   .. py:method:: _create_container()
+
+
+   .. py:method:: _create_palette()
+
+
+   .. py:method:: _get_palette_menu_name()
+
+
+   .. py:method:: _get_palette_type_name()
+
+
+   .. py:method:: _load_palette()
+
+
+   .. py:method:: _setup_network_manager()
+
+
+   .. py:method:: _create_material(mat_factory, obj_description, mat_description)
+
+
+   .. py:method:: _setup_materials(matnet, obj_descriptions, mat_description_map)
+
+
+   .. py:method:: get_container()
+
+
+   .. py:method:: setup(force_rebuild=False)
+
+
+   .. py:method:: update_textures()
+
+
+

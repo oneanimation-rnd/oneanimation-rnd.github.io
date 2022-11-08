@@ -1,0 +1,17 @@
+ :py:mod:`oa.rigging.tools.rope_auto_rigger`
+========================================================================================
+
+.. py:module:: oa.rigging.tools.rope_auto_rigger
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   color_picker/index.rst
+   rope_auto_rigger_tool/index.rst
+   rope_auto_rigger_utils/index.rst
+
+

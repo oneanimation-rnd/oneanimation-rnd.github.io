@@ -1,0 +1,16 @@
+ :py:mod:`oa.rigging.tools.motion_path_tool`
+========================================================================================
+
+.. py:module:: oa.rigging.tools.motion_path_tool
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   motion_path_tool/index.rst
+   motion_path_utils/index.rst
+
+

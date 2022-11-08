@@ -1,0 +1,27 @@
+ :py:mod:`oa.asset.tools.set_dress`
+======================================================================
+
+.. py:module:: oa.asset.tools.set_dress
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   custom_widgets/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   reference_wrapper/index.rst
+   set_dress_exporter_tool/index.rst
+   set_dress_importer_tool/index.rst
+   set_dress_utils/index.rst
+
+

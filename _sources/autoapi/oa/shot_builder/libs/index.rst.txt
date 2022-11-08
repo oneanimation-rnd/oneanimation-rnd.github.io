@@ -1,0 +1,26 @@
+ :py:mod:`oa.shot_builder.libs`
+==============================================================
+
+.. py:module:: oa.shot_builder.libs
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   delegates/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   description/index.rst
+   exceptions/index.rst
+   utils/index.rst
+
+

@@ -1,0 +1,86 @@
+ :py:mod:`oa.asset.tools.set_dress.custom_widgets.env_view`
+======================================================================================================================
+
+.. py:module:: oa.asset.tools.set_dress.custom_widgets.env_view
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.set_dress.custom_widgets.env_view.EnvView
+   oa.asset.tools.set_dress.custom_widgets.env_view.EnvModel
+
+
+
+
+.. py:class:: EnvView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableView`
+
+   .. py:attribute:: selected_row
+      
+
+      
+
+   .. py:attribute:: double_clicked
+      
+
+      
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: selectionChanged(selected, deselected)
+
+
+
+.. py:class:: EnvModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractTableModel`
+
+   .. py:attribute:: NAME_COLUMN
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: THUMBNAIL_COLUMN
+      :annotation: = 1
+
+      
+
+   .. py:method:: rowCount(parent)
+
+
+   .. py:method:: columnCount(parent)
+
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: headerData(column, orientation, role)
+
+
+   .. py:method:: flags(index)
+
+
+   .. py:method:: begin_update()
+
+
+   .. py:method:: end_update()
+
+
+   .. py:method:: get_data()
+
+
+   .. py:method:: apply_filter(match)
+
+
+

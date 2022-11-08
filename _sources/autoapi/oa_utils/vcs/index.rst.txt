@@ -1,0 +1,222 @@
+ :py:mod:`oa_utils.vcs`
+==============================================
+
+.. py:module:: oa_utils.vcs
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.vcs.FileSystemAccessor
+   oa_utils.vcs.FTPAccessor
+   oa_utils.vcs.Transaction
+   oa_utils.vcs.VCS
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.vcs._json_encoder
+   oa_utils.vcs.make_database_key
+   oa_utils.vcs.make_temp_path
+   oa_utils.vcs.make_versioned_path
+   oa_utils.vcs.parse_annotation
+   oa_utils.vcs.json_dump
+   oa_utils.vcs.text_dump
+   oa_utils.vcs.refresh_filesystem
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.vcs.LOGGER
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:function:: _json_encoder(obj)
+
+
+.. py:exception:: VCSError
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:class:: FileSystemAccessor
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: is_supported(path)
+
+
+   .. py:method:: upload(source_path, target_path, mode=775)
+
+
+   .. py:method:: rm(target_path)
+
+
+   .. py:method:: make_dir(target_path, recursive=False)
+
+
+   .. py:method:: _get_transit_path(target_path)
+
+
+
+.. py:class:: FTPAccessor(host=config.get_value('ftp/host'), username=config.get_value('ftp/username'), password=config.get_value('ftp/password'), root=config.get_value('ftp/root'), timeout=config.get_value('ftp/timeout'))
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: _ensure_connected()
+
+
+   .. py:method:: _get_local_path(remote_path)
+
+
+   .. py:method:: _get_remote_path(local_path)
+
+
+   .. py:method:: _get_transit_path(target_path)
+
+
+   .. py:method:: is_supported(path)
+
+
+   .. py:method:: read(source_path)
+
+
+   .. py:method:: upload(source_path, target_path, mode=775)
+
+
+   .. py:method:: rm(target_path)
+
+
+   .. py:method:: _is_dir(target_path)
+
+
+   .. py:method:: _is_file(target_path)
+
+
+   .. py:method:: make_dir(target_dir, recursive=False)
+
+
+   .. py:method:: _exists(target_path)
+
+
+
+.. py:class:: Transaction(vcs, accessors)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: _register_upload(source_path, target_path, mode=775, record_id=None)
+
+
+   .. py:method:: _add_db_record(path, version, metadata)
+
+
+   .. py:method:: add_item(path, version=None, update_db=True, mode=775, **metadata)
+
+
+   .. py:method:: add_annotation(path, mode=775, suffix='.meta', as_json=True, **metadata)
+
+      Create annotation .txt file.
+      :param path: a file path for which to create annotation.
+      :type path: str
+      :param comment: a comment string.
+      :type comment: str
+
+
+   .. py:method:: execute()
+
+
+
+.. py:function:: make_database_key(path)
+
+
+.. py:function:: make_temp_path()
+
+
+.. py:function:: make_versioned_path(path, version)
+
+   Build a versioned path from the provided one.
+
+   :param path: input path with or without version in it.
+   :type path: str
+   :param version: version number.
+   :type version: int
+
+   Return (str): versioned path.
+
+
+
+.. py:function:: parse_annotation(path)
+
+
+.. py:function:: json_dump(data, f)
+
+
+.. py:function:: text_dump(data, f)
+
+
+.. py:function:: refresh_filesystem(path)
+
+
+.. py:class:: VCS(studios=None, db_name='oa_central_db', db_collection='files')
+
+   Bases: :py:obj:`object`
+
+   A class responsible for version
+   management and making file transactions to the
+   remote server.
+
+
+   Constructor.
+
+   :param studios: a list of studio locations e.g. ['SG', 'JK'].
+                   By default it's a current studio location.
+   :type studios: list[str]
+
+   .. py:method:: db()
+
+
+   .. py:method:: create_transaction()
+
+      A context to initiate and perform transaction to the remote server.
+
+      Return (Transaction): a transaction object with already
+          established remote connections.
+
+
+
+   .. py:method:: get_last_revision(path, active_only=True)
+
+
+   .. py:method:: get_revisions(path, limit=0)
+
+      Gets all the database records of the file specified by path.
+
+      :param path: input path.
+      :type path: str
+
+      :returns: a list of all revisions of the file.
+      :rtype: list[dict]
+
+
+

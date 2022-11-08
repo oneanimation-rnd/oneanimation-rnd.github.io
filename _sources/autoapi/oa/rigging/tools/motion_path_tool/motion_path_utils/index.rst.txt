@@ -1,0 +1,63 @@
+ :py:mod:`oa.rigging.tools.motion_path_tool.motion_path_utils`
+============================================================================================================================
+
+.. py:module:: oa.rigging.tools.motion_path_tool.motion_path_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.motion_path_tool.motion_path_utils.UndoStack
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.motion_path_tool.motion_path_utils.set_rgb_color
+   oa.rigging.tools.motion_path_tool.motion_path_utils.create_node
+   oa.rigging.tools.motion_path_tool.motion_path_utils.attach_motion_path
+   oa.rigging.tools.motion_path_tool.motion_path_utils.add_objs_to_path
+
+
+
+.. py:class:: UndoStack(name='action')
+
+   Bases: :py:obj:`object`
+
+   To be used with "with" statement to group actions as a chunk to undo.
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(*args)
+
+
+
+.. py:function:: set_rgb_color(obj, rgb)
+
+
+.. py:function:: create_node(obj_type, name)
+
+
+.. py:function:: attach_motion_path(path, target, u_value=0, follow=True, fraction_mode=True, up_type=0, up_object=None, world_up_vector=[0, 1, 0], follow_axis=0, up_axis=1, inverse_up=False, inverse_front=False, bank=False, name='motionPath')
+
+   Manually creates a new motion path and attaches the supplied object to it.
+   cmds.pathAnimation() is notorious for not being friendly with undoing properly.
+   Also pathAnimation creates a non-fatal cycle by default, which is annoying.
+
+
+.. py:function:: add_objs_to_path(path, count, obj_type, upv_obj_type='locator', follow=True, fraction_mode=True, up_type=0, up_object=None, world_up_vector=[0, 1, 0], follow_axis=0, up_axis=1, inverse_up=False, inverse_front=False, bank=False, display_axis=False, color=[0, 1, 0], upv_color=[1, 0, 0], name='motionPath', suffix='')
+
+   Creates a series of objects to go along a path.
+
+   :param up_type: If set to 5, it expects up_object to be a curve to use as an upnode.
+
+

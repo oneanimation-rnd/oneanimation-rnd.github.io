@@ -1,0 +1,169 @@
+ :py:mod:`oa.animation.tools.key_breakdown.key_breakdown_tool`
+============================================================================================================================
+
+.. py:module:: oa.animation.tools.key_breakdown.key_breakdown_tool
+
+.. autoapi-nested-parse::
+
+   This tool allows you to quickly set keys to create breakdowns that blend between the previous and next keys.
+   The slider can be used to get more precise control, or presets are available.
+
+   There are different layer of filters to work with.
+
+       1 - It will key all keyable attributes that have a key.
+       2 - If there's any selected attributes on the channel box it will only key on them.
+       3 - If there's any selected keys from the graph editor it will only key on them. This overrides the channel box filter.
+       4 - There's an option on the interface to key only on translation or rotation. If either of these are on it will override both the channel box and graph editor filters.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       from oa.animation.tools.key_breakdown import key_breakdown_tool
+
+       key_breakdown_tool.dock_it()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.key_breakdown.key_breakdown_tool.ColorPicker
+   oa.animation.tools.key_breakdown.key_breakdown_tool.KeyBreakdownTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.key_breakdown.key_breakdown_tool.delete_dock_widget
+   oa.animation.tools.key_breakdown.key_breakdown_tool.dock_it
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.key_breakdown.key_breakdown_tool.maya_dock_name
+
+
+.. py:data:: maya_dock_name
+   :annotation: = breakdownToolWidget
+
+   
+
+.. py:function:: delete_dock_widget()
+
+
+.. py:class:: ColorPicker(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QColorDialog`
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: hideEvent(event)
+
+
+
+.. py:class:: KeyBreakdownTool(parent=None)
+
+   Bases: :py:obj:`maya.app.general.mayaMixin.MayaQWidgetDockableMixin`, :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: tool_name
+      :annotation: = keyBreakdownTool
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: dockCloseEventTriggered()
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: wrap_layout(widgets, orientation)
+
+      Helper function that takes supplied widgets and wraps them all in a layout.
+
+      :param widgets: A list of QWidgets.
+      :param orientation: QtCore.Qt.Orientation
+
+      :returns: The new layout item.
+
+
+   .. py:method:: save_state()
+
+      Saves interface settings to a json file.
+
+
+   .. py:method:: load_state()
+
+      Restores settings from a json file.
+
+
+   .. py:method:: update_weight_label()
+
+
+   .. py:method:: slider_on_pressed()
+
+
+   .. py:method:: slider_on_value_changed(value)
+
+
+   .. py:method:: slider_on_released()
+
+
+   .. py:method:: preset_on_clicked(bias)
+
+
+   .. py:method:: color_picker_on_changed(color)
+
+
+   .. py:method:: color_picker_on_clicked()
+
+
+   .. py:method:: context_menu_on_triggered(mouse_point)
+
+
+   .. py:method:: display_presets_on_toggled(enabled)
+
+
+   .. py:method:: update_mouse_up_on_toggled(enabled)
+
+
+   .. py:method:: breakdown_keys_on_toggled(enabled)
+
+
+   .. py:method:: translate_filter_on_toggled(enabled)
+
+
+   .. py:method:: rotate_filter_on_toggled(enabled)
+
+
+   .. py:method:: channelbox_filter_on_toggled(enabled)
+
+
+   .. py:method:: graph_filter_on_toggled(enabled)
+
+
+
+.. py:function:: dock_it(dockable=True, area='bottom')
+
+   Creates the tool and docks it in Maya's interface.
+
+

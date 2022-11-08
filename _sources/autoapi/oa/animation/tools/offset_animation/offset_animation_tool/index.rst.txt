@@ -1,0 +1,108 @@
+ :py:mod:`oa.animation.tools.offset_animation.offset_animation_tool`
+========================================================================================================================================
+
+.. py:module:: oa.animation.tools.offset_animation.offset_animation_tool
+
+.. autoapi-nested-parse::
+
+   A simple interface for a tool that allows you to re-point existing animation to a new direction.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       import offset_animation_tool
+       offset_animation_tool.launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.offset_animation.offset_animation_tool.OffsetAnimationTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.offset_animation.offset_animation_tool.launch
+
+
+
+.. py:class:: OffsetAnimationTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = offsetAnimationTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: wrap_layout(widgets, orientation)
+
+      Helper function that takes supplied widgets and wraps them all in a layout.
+
+      :param widgets: A list of QWidgets.
+      :param orientation: QtCore.Qt.Orientation
+
+      :returns: The new layout item.
+
+
+   .. py:method:: prepare_gui_for_edit(nsp)
+
+
+   .. py:method:: prepare_gui_for_picking()
+
+
+   .. py:method:: start_set_now_on_clicked()
+
+
+   .. py:method:: end_set_now_on_clicked()
+
+
+   .. py:method:: start_check_on_changed(state)
+
+
+   .. py:method:: last_key_on_changed(state)
+
+
+   .. py:method:: start_edit_on_clicked()
+
+
+   .. py:method:: commit_edit_on_clicked()
+
+
+   .. py:method:: cancel_edit_on_clicked()
+
+
+
+.. py:function:: launch()
+
+

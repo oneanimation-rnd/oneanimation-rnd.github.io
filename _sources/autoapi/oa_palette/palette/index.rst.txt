@@ -1,0 +1,76 @@
+ :py:mod:`oa_palette.palette`
+==========================================================
+
+.. py:module:: oa_palette.palette
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_palette.palette.create
+   oa_palette.palette.edit
+   oa_palette.palette.save
+   oa_palette.palette.switch
+   oa_palette.palette.refresh_all
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_palette.palette.this
+   oa_palette.palette._log
+   oa_palette.palette._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:function:: create(node, type_name, menu_name, lock_contents=False, save_spare_parms=True, save_init_parms=True, make_init_parms_defaults=False, min_num_inputs=0, max_num_inputs=0, editable_nodes='')
+
+   Creates a palette from subnetwork or material.
+
+   :param node: a node to create palette from.
+   :type node: hou.Node
+   :param type_name: the name of the node type that the new palette will define.
+   :type type_name: str
+   :param menu_name: the name that will appear in the tab menu. If None, Houdini will use the name for the label.
+   :type menu_name: str
+   :param ...:
+
+   :returns: new palette node if succeeded.
+   :rtype: hou.Node
+
+
+.. py:function:: edit(node, type_name=None, menu_name=None, **metadata)
+
+
+.. py:function:: save(node, identifier=None, comment=None)
+
+
+.. py:function:: switch(source_definition, target_definition)
+
+
+.. py:function:: refresh_all()
+
+

@@ -1,0 +1,16 @@
+ :py:mod:`oa.animation.tools.key_breakdown`
+======================================================================================
+
+.. py:module:: oa.animation.tools.key_breakdown
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   key_breakdown_tool/index.rst
+   key_breakdown_utils/index.rst
+
+

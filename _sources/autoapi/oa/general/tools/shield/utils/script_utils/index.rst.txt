@@ -1,0 +1,151 @@
+ :py:mod:`oa.general.tools.shield.utils.script_utils`
+==========================================================================================================
+
+.. py:module:: oa.general.tools.shield.utils.script_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.shield.utils.script_utils.DagWrapper
+   oa.general.tools.shield.utils.script_utils.DGWrapper
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.shield.utils.script_utils.wrap_object
+   oa.general.tools.shield.utils.script_utils.get_class_properties
+   oa.general.tools.shield.utils.script_utils.untokenize
+   oa.general.tools.shield.utils.script_utils.get_module_check_cls
+   oa.general.tools.shield.utils.script_utils.traverse_to_asset_root
+   oa.general.tools.shield.utils.script_utils.get_first_root_nul
+   oa.general.tools.shield.utils.script_utils.get_scene_root_nuls
+   oa.general.tools.shield.utils.script_utils.path_to_qicon
+   oa.general.tools.shield.utils.script_utils.get_icon_by_type
+   oa.general.tools.shield.utils.script_utils.get_weak_ref
+
+
+
+.. py:exception:: CheckError
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:class:: DagWrapper(mselection_list)
+
+   Bases: :py:obj:`maya.OpenMaya.MDagPath`
+
+   Wrapper for a dag node so it's not name dependent.
+
+   :param mselection_list: An OpenMaya.MSelectionList.
+
+   .. py:method:: __str__()
+
+
+   .. py:method:: long_name()
+
+
+   .. py:method:: short_name()
+
+
+
+.. py:class:: DGWrapper(mobject)
+
+   Bases: :py:obj:`maya.OpenMaya.MFnDependencyNode`
+
+   Wrapper for a DG node.
+
+   :param mobject: An OpenMaya.MObject.
+
+   .. py:method:: __str__()
+
+
+   .. py:method:: long_name()
+
+
+   .. py:method:: short_name()
+
+
+
+.. py:function:: wrap_object(obj_name)
+
+   Points supplied object to a wrapper.
+
+   :param obj_name: An existing object to wrap.
+
+   :returns: A OpenMaya.MDagPath if the supplied object is a dag node.
+             Otherwise it returns a OpenMaya.MFnDependencyNode node.
+
+
+.. py:function:: get_class_properties(cls)
+
+   Gets and returns a list of all properties from a class.
+
+   :param cls: A python class object.
+
+
+.. py:function:: untokenize(path)
+
+   Replaces string to point to the relative checks directory.
+
+   :param path:
+
+
+.. py:function:: get_module_check_cls(module)
+
+   Gets and returns a module's check class.
+
+   :param module: An imported module.
+
+
+.. py:function:: traverse_to_asset_root(objs)
+
+   A generator to get an object's asset root nul.
+   This skips any referenced objects to work with nested assets.
+
+   :param objs: A list of transform names.
+
+   :Yields: The object's asset root nul or None.
+
+
+.. py:function:: get_first_root_nul(objs)
+
+   Gets and returns the root nul of the first asset that is detected.
+
+   :param objs: A list of object names.
+
+   :returns: An asset's root nul, or None if nothing was found.
+
+
+.. py:function:: get_scene_root_nuls()
+
+   Gets and returns a list of root nuls in the whole scene.
+   Excludes nested assets.
+
+
+.. py:function:: path_to_qicon(path)
+
+
+.. py:function:: get_icon_by_type(obj)
+
+   Gets and returns a QtGui.QIcon based on the supplied object's type.
+
+
+.. py:function:: get_weak_ref(obj, attr)
+
+   Gets and returns the attribute's weak reference that it's pointing to.
+
+

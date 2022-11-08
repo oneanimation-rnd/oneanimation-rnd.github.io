@@ -1,0 +1,83 @@
+ :py:mod:`oa.asset_builder.libs.utils`
+============================================================================
+
+.. py:module:: oa.asset_builder.libs.utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.libs.utils.get_logger
+   oa.asset_builder.libs.utils.get_guid
+   oa.asset_builder.libs.utils.get_description_path
+   oa.asset_builder.libs.utils.rename_node
+   oa.asset_builder.libs.utils.build_guid_path
+   oa.asset_builder.libs.utils.normname
+   oa.asset_builder.libs.utils.set_parm_value
+   oa.asset_builder.libs.utils.set_parm_values
+   oa.asset_builder.libs.utils.set_expression
+   oa.asset_builder.libs.utils.lock_all_parms
+   oa.asset_builder.libs.utils.get_updated_references
+   oa.asset_builder.libs.utils.update_references
+   oa.asset_builder.libs.utils.tokenize
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.libs.utils.VERSION_REGEX
+
+
+.. py:data:: VERSION_REGEX
+   
+
+   
+
+.. py:function:: get_logger(logger, ui=False)
+
+
+.. py:function:: get_guid(node)
+
+
+.. py:function:: get_description_path(source_asset_path)
+
+
+.. py:function:: rename_node(node, name)
+
+
+.. py:function:: build_guid_path(entry)
+
+
+.. py:function:: normname(text)
+
+
+.. py:function:: set_parm_value(node, parmname, value)
+
+
+.. py:function:: set_parm_values(node, parm_dict)
+
+
+.. py:function:: set_expression(node, parmname, expression, language=hou.exprLanguage.Hscript)
+
+
+.. py:function:: lock_all_parms(node, exclude=())
+
+
+.. py:function:: get_updated_references(_filter=None)
+
+
+.. py:function:: update_references(_filter=None)
+
+
+.. py:function:: tokenize(path)
+
+

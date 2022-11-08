@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.general.tools.shield.utils.script_utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../../" id="documentation_options" src="../../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" />
+    <link rel="next" title=" oa.general.tools.shield.shield_interface" href="../../shield_interface/index.html" />
+    <link rel="prev" title=" oa.general.tools.shield.utils.enums" href="../enums/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.utils</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.utils.script_utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../../_sources/autoapi/oa/general/tools/shield/utils/script_utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.general.tools.shield.utils.script_utils">
+<span id="oa-general-tools-shield-utils-script-utils"></span><h1> <a class="reference internal" href="#module-oa.general.tools.shield.utils.script_utils" title="oa.general.tools.shield.utils.script_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.shield.utils.script_utils</span></code></a><a class="headerlink" href="#module-oa.general.tools.shield.utils.script_utils" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.shield.utils.script_utils.DagWrapper" title="oa.general.tools.shield.utils.script_utils.DagWrapper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DagWrapper</span></code></a></p></td>
+<td><p>Wrapper for a dag node so it's not name dependent.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.shield.utils.script_utils.DGWrapper" title="oa.general.tools.shield.utils.script_utils.DGWrapper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DGWrapper</span></code></a></p></td>
+<td><p>Wrapper for a DG node.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.shield.utils.script_utils.wrap_object" title="oa.general.tools.shield.utils.script_utils.wrap_object"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wrap_object</span></code></a>(obj_name)</p></td>
+<td><p>Points supplied object to a wrapper.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.shield.utils.script_utils.get_class_properties" title="oa.general.tools.shield.utils.script_utils.get_class_properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_class_properties</span></code></a>(cls)</p></td>
+<td><p>Gets and returns a list of all properties from a class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.shield.utils.script_utils.untokenize" title="oa.general.tools.shield.utils.script_utils.untokenize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">untokenize</span></code></a>(path)</p></td>
+<td><p>Replaces string to point to the relative checks directory.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.shield.utils.script_utils.get_module_check_cls" title="oa.general.tools.shield.utils.script_utils.get_module_check_cls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_module_check_cls</span></code></a>(module)</p></td>
+<td><p>Gets and returns a module's check class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.shield.utils.script_utils.traverse_to_asset_root" title="oa.general.tools.shield.utils.script_utils.traverse_to_asset_root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">traverse_to_asset_root</span></code></a>(objs)</p></td>
+<td><p>A generator to get an object's asset root nul.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.shield.utils.script_utils.get_first_root_nul" title="oa.general.tools.shield.utils.script_utils.get_first_root_nul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_first_root_nul</span></code></a>(objs)</p></td>
+<td><p>Gets and returns the root nul of the first asset that is detected.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.shield.utils.script_utils.get_scene_root_nuls" title="oa.general.tools.shield.utils.script_utils.get_scene_root_nuls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_scene_root_nuls</span></code></a>()</p></td>
+<td><p>Gets and returns a list of root nuls in the whole scene.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.shield.utils.script_utils.path_to_qicon" title="oa.general.tools.shield.utils.script_utils.path_to_qicon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">path_to_qicon</span></code></a>(path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.shield.utils.script_utils.get_icon_by_type" title="oa.general.tools.shield.utils.script_utils.get_icon_by_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_icon_by_type</span></code></a>(obj)</p></td>
+<td><p>Gets and returns a QtGui.QIcon based on the supplied object's type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.shield.utils.script_utils.get_weak_ref" title="oa.general.tools.shield.utils.script_utils.get_weak_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_weak_ref</span></code></a>(obj, attr)</p></td>
+<td><p>Gets and returns the attribute's weak reference that it's pointing to.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py exception">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.CheckError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">CheckError</span></span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.CheckError" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Common base class for all non-exit exceptions.</p>
+<p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.DagWrapper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">DagWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mselection_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.DagWrapper" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">maya.OpenMaya.MDagPath</span></code></p>
+<p>Wrapper for a dag node so it’s not name dependent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mselection_list</strong> – An OpenMaya.MSelectionList.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.DagWrapper.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.DagWrapper.__str__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.DagWrapper.long_name">
+<span class="sig-name descname"><span class="pre">long_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.DagWrapper.long_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.DagWrapper.short_name">
+<span class="sig-name descname"><span class="pre">short_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.DagWrapper.short_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.DGWrapper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">DGWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mobject</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.DGWrapper" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">maya.OpenMaya.MFnDependencyNode</span></code></p>
+<p>Wrapper for a DG node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mobject</strong> – An OpenMaya.MObject.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.DGWrapper.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.DGWrapper.__str__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.DGWrapper.long_name">
+<span class="sig-name descname"><span class="pre">long_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.DGWrapper.long_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.DGWrapper.short_name">
+<span class="sig-name descname"><span class="pre">short_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.DGWrapper.short_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.wrap_object">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">wrap_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.wrap_object" title="Permalink to this definition"></a></dt>
+<dd><p>Points supplied object to a wrapper.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj_name</strong> – An existing object to wrap.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A OpenMaya.MDagPath if the supplied object is a dag node.
+Otherwise it returns a OpenMaya.MFnDependencyNode node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.get_class_properties">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">get_class_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.get_class_properties" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a list of all properties from a class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cls</strong> – A python class object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.untokenize">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">untokenize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.untokenize" title="Permalink to this definition"></a></dt>
+<dd><p>Replaces string to point to the relative checks directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.get_module_check_cls">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">get_module_check_cls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.get_module_check_cls" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a module’s check class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>module</strong> – An imported module.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.traverse_to_asset_root">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">traverse_to_asset_root</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.traverse_to_asset_root" title="Permalink to this definition"></a></dt>
+<dd><p>A generator to get an object’s asset root nul.
+This skips any referenced objects to work with nested assets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objs</strong> – A list of transform names.</p>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p>The object’s asset root nul or None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.get_first_root_nul">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">get_first_root_nul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.get_first_root_nul" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the root nul of the first asset that is detected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objs</strong> – A list of object names.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An asset’s root nul, or None if nothing was found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.get_scene_root_nuls">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">get_scene_root_nuls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.get_scene_root_nuls" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a list of root nuls in the whole scene.
+Excludes nested assets.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.path_to_qicon">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">path_to_qicon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.path_to_qicon" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.get_icon_by_type">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">get_icon_by_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.get_icon_by_type" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a QtGui.QIcon based on the supplied object’s type.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.shield.utils.script_utils.get_weak_ref">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.shield.utils.script_utils.</span></span><span class="sig-name descname"><span class="pre">get_weak_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.shield.utils.script_utils.get_weak_ref" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns the attribute’s weak reference that it’s pointing to.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../enums/index.html" class="btn btn-neutral float-left" title=" oa.general.tools.shield.utils.enums" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../shield_interface/index.html" class="btn btn-neutral float-right" title=" oa.general.tools.shield.shield_interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

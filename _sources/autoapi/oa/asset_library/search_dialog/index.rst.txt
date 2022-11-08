@@ -1,0 +1,53 @@
+ :py:mod:`oa.asset_library.search_dialog`
+==================================================================================
+
+.. py:module:: oa.asset_library.search_dialog
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_library.search_dialog.SearchDialog
+   oa.asset_library.search_dialog.NestedToolButton
+
+
+
+
+.. py:class:: SearchDialog(standalone, asset_id, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: task_switched
+      
+
+      
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: filter_results(*args)
+
+
+   .. py:method:: on_load_scn_clicked()
+
+
+   .. py:method:: on_open_folder_clicked()
+
+
+   .. py:method:: on_clipboard_clicked()
+
+
+   .. py:method:: on_full_paths_toggled(enabled)
+
+
+
+.. py:class:: NestedToolButton(index, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QToolButton`
+
+

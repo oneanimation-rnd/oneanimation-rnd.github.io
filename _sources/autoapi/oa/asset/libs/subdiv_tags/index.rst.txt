@@ -1,0 +1,47 @@
+ :py:mod:`oa.asset.libs.subdiv_tags`
+========================================================================
+
+.. py:module:: oa.asset.libs.subdiv_tags
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.subdiv_tags.has_no_subdiv_tag
+   oa.asset.libs.subdiv_tags.add_no_subdiv_tag
+   oa.asset.libs.subdiv_tags.delete_no_subdiv_tag
+   oa.asset.libs.subdiv_tags.add_no_subdiv_asset
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.subdiv_tags.no_subdiv_tag
+
+
+.. py:data:: no_subdiv_tag
+   :annotation: = no_subdivs
+
+   
+
+.. py:function:: has_no_subdiv_tag(obj)
+
+
+.. py:function:: add_no_subdiv_tag(objs=None)
+
+
+.. py:function:: delete_no_subdiv_tag(objs=None)
+
+
+.. py:function:: add_no_subdiv_asset()
+
+

@@ -1,0 +1,89 @@
+ :py:mod:`bd.api.subscriptions`
+==============================================================
+
+.. py:module:: bd.api.subscriptions
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.api.subscriptions.GQLSubscriptionManager
+
+
+
+
+.. py:class:: GQLSubscriptionManager(connection_timeout=c.CONNECTION_TIMEOUT)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: _authorize()
+
+
+   .. py:method:: _enqueue_unsent_operations()
+
+
+   .. py:method:: _connect()
+
+
+   .. py:method:: _add_operation(operation)
+
+
+   .. py:method:: _get_operation(op_id)
+
+
+   .. py:method:: _pop_operation(op_id)
+
+
+   .. py:method:: _iter_operations()
+
+
+   .. py:method:: subscribe(query, handler, variable_values=None)
+
+
+   .. py:method:: _send_message(msg_type, op_id=None, options=None)
+
+
+   .. py:method:: _flush_unsent_messages()
+
+
+   .. py:method:: _send_message_raw(message)
+
+      Send message through websocket.
+
+      :param message: data to pass to the server.
+      :type message: dict
+
+
+   .. py:method:: _build_message(op_id, msg_type, options)
+
+
+   .. py:method:: unsubscribe(op_id)
+
+
+   .. py:method:: unsubscribe_all()
+
+
+   .. py:method:: close(closed_by_user=True)
+
+
+   .. py:method:: _on_open()
+
+
+   .. py:method:: _on_error(error)
+
+
+   .. py:method:: _on_close()
+
+
+   .. py:method:: _on_connection_ack()
+
+
+   .. py:method:: _on_message(message)
+
+
+

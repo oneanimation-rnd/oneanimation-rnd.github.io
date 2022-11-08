@@ -1,0 +1,77 @@
+ :py:mod:`oa_shot_builder.shot_builder`
+==============================================================================
+
+.. py:module:: oa_shot_builder.shot_builder
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.shot_builder.run
+   oa_shot_builder.shot_builder.setup_context
+   oa_shot_builder.shot_builder.publish
+   oa_shot_builder.shot_builder.publish_context
+   oa_shot_builder.shot_builder._publish_scene
+   oa_shot_builder.shot_builder._update_shot_info
+   oa_shot_builder.shot_builder._rename_scene
+   oa_shot_builder.shot_builder._create_structure_subnets
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.shot_builder.this
+   oa_shot_builder.shot_builder._log
+   oa_shot_builder.shot_builder._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:function:: run(source_description, contexts=None, use_latest_geo_cache=True)
+
+
+.. py:function:: setup_context(context, episode=None, sequence=None, shot=None, version=None)
+
+
+.. py:function:: publish(comment='', contexts=None)
+
+
+.. py:function:: publish_context(context, comment='')
+
+
+.. py:function:: _publish_scene(comment)
+
+
+.. py:function:: _update_shot_info(project, episode, sequence, shot_index, shot_sf, shot_ef)
+
+   Update context options.
+
+
+.. py:function:: _rename_scene()
+
+
+.. py:function:: _create_structure_subnets()
+
+

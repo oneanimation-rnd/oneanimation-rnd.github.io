@@ -1,0 +1,80 @@
+ :py:mod:`oa.gui.libs.menus.rnd_menu`
+==========================================================================
+
+.. py:module:: oa.gui.libs.menus.rnd_menu
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.libs.menus.rnd_menu.RndMenu
+
+
+
+
+.. py:class:: RndMenu(parent)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: name
+      :annotation: = rndMenu
+
+      
+
+   .. py:method:: create()
+      :classmethod:
+
+      Builds the menu and its items in the main window's menu bar.
+
+
+   .. py:method:: delete()
+      :classmethod:
+
+      Deletes menu from the main window's menubar if it exists.
+
+
+   .. py:method:: get_main_window()
+      :staticmethod:
+
+      Returns Maya's main window's name.
+
+
+   .. py:method:: open_dir(path)
+      :staticmethod:
+
+
+   .. py:method:: refresh_menu(*args)
+
+      This function runs every time the user opens up the menu.
+
+
+   .. py:method:: open_local_task_on_triggered(*args)
+
+
+   .. py:method:: open_server_task_on_triggered(*args)
+
+
+   .. py:method:: rebuild_shelves_on_triggered(*args)
+
+      Rebuilds all shelf buttons from files.
+      With this we can add or remove tools without restarting Maya.
+
+
+   .. py:method:: list_solutions_on_triggered(*args)
+
+
+   .. py:method:: shot_splitter_on_triggered(*args)
+
+
+   .. py:method:: disable_anim_state_on_triggered(*args)
+
+
+   .. py:method:: enable_anim_state_on_triggered(*args)
+
+
+

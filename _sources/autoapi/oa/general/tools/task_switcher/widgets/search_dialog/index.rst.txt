@@ -1,0 +1,53 @@
+ :py:mod:`oa.general.tools.task_switcher.widgets.search_dialog`
+==============================================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.widgets.search_dialog
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.widgets.search_dialog.SearchDialog
+   oa.general.tools.task_switcher.widgets.search_dialog.NestedToolButton
+
+
+
+
+.. py:class:: SearchDialog(asset_id, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: task_switched
+      
+
+      
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: on_load_scn_clicked()
+
+
+   .. py:method:: on_open_folder_clicked()
+
+
+   .. py:method:: on_clipboard_clicked()
+
+
+   .. py:method:: on_full_paths_toggled(enabled)
+
+
+   .. py:method:: filter_results(*args)
+
+
+
+.. py:class:: NestedToolButton(index, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QToolButton`
+
+

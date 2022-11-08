@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.general.tools.reorder_attributes_tool.reorder_attributes_ui &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.general.tools.reorder_attributes_tool.utils" href="../utils/index.html" />
+    <link rel="prev" title=" oa.general.tools.reorder_attributes_tool" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.reorder_attributes_tool</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/general/tools/reorder_attributes_tool/reorder_attributes_ui/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.general.tools.reorder_attributes_tool.reorder_attributes_ui">
+<span id="oa-general-tools-reorder-attributes-tool-reorder-attributes-ui"></span><h1> <a class="reference internal" href="#module-oa.general.tools.reorder_attributes_tool.reorder_attributes_ui" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui</span></code></a><a class="headerlink" href="#module-oa.general.tools.reorder_attributes_tool.reorder_attributes_ui" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeItem</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeDisplayWidget" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeDisplayWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AttributeDisplayWidget</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DropListWidget</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ReorderAttributesWidget</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.mayaWindow" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.mayaWindow"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mayaWindow</span></code></a>()</p></td>
+<td><p>Get Maya's main window.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.mayaToQT" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.mayaToQT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mayaToQT</span></code></a>(name)</p></td>
+<td><p>Maya -&gt; QWidget</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.qtToMaya" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.qtToMaya"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qtToMaya</span></code></a>(widget)</p></td>
+<td><p>QWidget -&gt; Maya name</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.getChannelBox" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.getChannelBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getChannelBox</span></code></a>()</p></td>
+<td><p>Get ChannelBox, convert the main channel box to QT.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.getChannelBoxMenu" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.getChannelBoxMenu"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getChannelBoxMenu</span></code></a>()</p></td>
+<td><p>Get ChannelBox Menu, convert the main channel box to QT and return the</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.show" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.show"><code class="xref py py-obj docutils literal notranslate"><span class="pre">show</span></code></a>(*args)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.install" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.install"><code class="xref py py-obj docutils literal notranslate"><span class="pre">install</span></code></a>()</p></td>
+<td><p>Add two additional buttons to the Channel Box -&gt; Edit menu, a divider and</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.qtVersion" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.qtVersion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">qtVersion</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.TITLE" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.TITLE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TITLE</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.CHANNELBOX" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.CHANNELBOX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CHANNELBOX</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DIVIDER_NAME" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DIVIDER_NAME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DIVIDER_NAME</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.BUTTON_NAME" title="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.BUTTON_NAME"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BUTTON_NAME</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.qtVersion">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">qtVersion</span></span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.qtVersion" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.TITLE">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">TITLE</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">Reorder</span> <span class="pre">Attributes</span></em><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.TITLE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.CHANNELBOX">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">CHANNELBOX</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">ChannelBoxForm</span></em><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.CHANNELBOX" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DIVIDER_NAME">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">DIVIDER_NAME</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">reorderAttrDivider</span></em><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DIVIDER_NAME" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.BUTTON_NAME">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">BUTTON_NAME</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">reorderAttrButton</span></em><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.BUTTON_NAME" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.mayaWindow">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">mayaWindow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.mayaWindow" title="Permalink to this definition"></a></dt>
+<dd><p>Get Maya’s main window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>QMainWindow</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.mayaToQT">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">mayaToQT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.mayaToQT" title="Permalink to this definition"></a></dt>
+<dd><p>Maya -&gt; QWidget
+:param str name: Maya name of an ui object
+:return: QWidget of parsed Maya name
+:rtype: QWidget</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.qtToMaya">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">qtToMaya</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.qtToMaya" title="Permalink to this definition"></a></dt>
+<dd><p>QWidget -&gt; Maya name
+:param QWidget widget: QWidget of a maya ui object
+:return: Maya name of parsed QWidget
+:rtype: str</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.getChannelBox">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">getChannelBox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.getChannelBox" title="Permalink to this definition"></a></dt>
+<dd><p>Get ChannelBox, convert the main channel box to QT.
+:return: Maya’s main channel box
+:rtype: QWidget</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.getChannelBoxMenu">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">getChannelBoxMenu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.getChannelBoxMenu" title="Permalink to this definition"></a></dt>
+<dd><p>Get ChannelBox Menu, convert the main channel box to QT and return the
+Edit QMenu which is part of the channel box’ children.
+:return: Maya’s main channel box menu
+:rtype: QMenu</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">AttributeItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">QListWidgetItem</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem.node">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem.node" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem.attr">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">attr</span></span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem.attr" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem.rename">
+<span class="sig-name descname"><span class="pre">rename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem.rename" title="Permalink to this definition"></a></dt>
+<dd><p>Rename the attribute with the mode, the three possible modes and
+correspoding names have been stored during the initializing of this
+item.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem.delete">
+<span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeItem.delete" title="Permalink to this definition"></a></dt>
+<dd><p>Delete attribute, first set the lock stated of the attribute to false
+so the attribute can actually be deleted. These two functions are
+wrapped into one undo chunk for later undoing.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeDisplayWidget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">AttributeDisplayWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">defaultName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Long'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeDisplayWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeDisplayWidget.signal">
+<span class="sig-name descname"><span class="pre">signal</span></span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeDisplayWidget.signal" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeDisplayWidget.buttonReleased">
+<span class="sig-name descname"><span class="pre">buttonReleased</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.AttributeDisplayWidget.buttonReleased" title="Permalink to this definition"></a></dt>
+<dd><p>When the radio button selection is changed this command gets called,
+it will read the name of the selected button. This name will get lower
+cased and parsed into the signal that gets emitted.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">DropListWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">QListWidget</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.attributes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">attributes</span></span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.attributes" title="Permalink to this definition"></a></dt>
+<dd><p>Get all attributes in the widget, this list is reversed as its needed
+to start the deletion process of the attributes in reverse.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of attributes ( AttributeItem )</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.signal">
+<span class="sig-name descname"><span class="pre">signal</span></span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.signal" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.addMenuActions">
+<span class="sig-name descname"><span class="pre">addMenuActions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.addMenuActions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.rename">
+<span class="sig-name descname"><span class="pre">rename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.rename" title="Permalink to this definition"></a></dt>
+<dd><p>Rename all attributes by setting the mode, this mode can be three
+different things as have been initialized in the attribute item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mode</strong> (<em>str</em>) – Attribute name mode: “long”, “short” or “nice”.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.updateUI">
+<span class="sig-name descname"><span class="pre">updateUI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.updateUI" title="Permalink to this definition"></a></dt>
+<dd><p>Based on the input the widget gets updated with a list of the user
+defined attributes of the parsed nodes. The attributes display name
+depends on the mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> (<em>str</em>) – Node of which to query user defined attributes</p></li>
+<li><p><strong>mode</strong> (<em>str</em>) – Attribute name mode: “long”, “short” or “nice”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.dropEvent">
+<span class="sig-name descname"><span class="pre">dropEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.dropEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.sortItems">
+<span class="sig-name descname"><span class="pre">sortItems</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.DropListWidget.sortItems" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">ReorderAttributesWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">QWidget</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.title">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.title" title="Permalink to this definition"></a></dt>
+<dd><p>The title of the window, this title differs based on the selection.
+If no node is active, the default title will be returned. If a node is
+active, the full path will be stripped into a base name and appened
+to the default title.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Window title</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.isReferenced">
+<span class="sig-name descname"><span class="pre">isReferenced</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.isReferenced" title="Permalink to this definition"></a></dt>
+<dd><p>Check if the node selected is referenced, reordering of attributes is
+not supported on referenced objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Referenced state of self.node</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.updateUI">
+<span class="sig-name descname"><span class="pre">updateUI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.updateUI" title="Permalink to this definition"></a></dt>
+<dd><p>Update function gets ran every time the selection is changed. The
+latest selected node will be queried. The list widget updated with the
+attributes of that node. The UI is disabled of the node selected is
+referenced.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.reorder">
+<span class="sig-name descname"><span class="pre">reorder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.reorder" title="Permalink to this definition"></a></dt>
+<dd><p>Reorder all of the attributes based on the new attribute list. All of
+the attributes in the list are deleted, they are deleted in such an
+order that when all of the deletion are undone. The attribute order
+is changed to what the input of the user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.addCallback">
+<span class="sig-name descname"><span class="pre">addCallback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.addCallback" title="Permalink to this definition"></a></dt>
+<dd><p>Register a callback to run the update function every time the
+selection list is modified.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.removeCallback">
+<span class="sig-name descname"><span class="pre">removeCallback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.removeCallback" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the callback that updates the ui every time the selection
+list is modified.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.closeEvent">
+<span class="sig-name descname"><span class="pre">closeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.ReorderAttributesWidget.closeEvent" title="Permalink to this definition"></a></dt>
+<dd><p>Subclass the closeEvent function to first remove the callback,
+this callback shouldn’t be floating around and should be deleted
+with the widget.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.show">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.show" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.install">
+<span class="sig-prename descclassname"><span class="pre">oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.</span></span><span class="sig-name descname"><span class="pre">install</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.general.tools.reorder_attributes_tool.reorder_attributes_ui.install" title="Permalink to this definition"></a></dt>
+<dd><p>Add two additional buttons to the Channel Box -&gt; Edit menu, a divider and
+a button to open up the attribute reordering ui. The edit menu is
+retrieved from the channel box form and a mel command is ran to populate
+this menu in case it hasn’t been opened before. If reorderAttributes is
+already installed the original buttons will be removed and new ones
+created.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title=" oa.general.tools.reorder_attributes_tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../utils/index.html" class="btn btn-neutral float-right" title=" oa.general.tools.reorder_attributes_tool.utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

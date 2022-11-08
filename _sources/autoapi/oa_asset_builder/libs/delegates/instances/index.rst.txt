@@ -1,0 +1,76 @@
+ :py:mod:`oa_asset_builder.libs.delegates.instances`
+========================================================================================================
+
+.. py:module:: oa_asset_builder.libs.delegates.instances
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.delegates.instances.InstancesDelegate
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.delegates.instances.this
+   oa_asset_builder.libs.delegates.instances._log
+   oa_asset_builder.libs.delegates.instances._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:class:: InstancesDelegate(asset_node, root_node, description)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: setup()
+
+
+   .. py:method:: get_container()
+
+
+   .. py:method:: _create_container()
+
+
+   .. py:method:: _destroy_container()
+
+
+   .. py:method:: get_instances()
+
+
+   .. py:method:: _get_guid_to_asset_map()
+
+
+   .. py:method:: _update_instances(inst_descriptions)
+
+
+   .. py:method:: _create_instance(master)
+
+
+   .. py:method:: _update_instance_parms(instance, master, abc_paths)
+
+
+

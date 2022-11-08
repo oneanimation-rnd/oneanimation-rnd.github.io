@@ -1,0 +1,83 @@
+ :py:mod:`oa_asset_builder.libs.utils`
+============================================================================
+
+.. py:module:: oa_asset_builder.libs.utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.utils.get_guid
+   oa_asset_builder.libs.utils.rename_node
+   oa_asset_builder.libs.utils.build_guid_path
+   oa_asset_builder.libs.utils.normname
+   oa_asset_builder.libs.utils.set_parm_value
+   oa_asset_builder.libs.utils.set_parm_values
+   oa_asset_builder.libs.utils.set_expression
+   oa_asset_builder.libs.utils.lock_all_parms
+   oa_asset_builder.libs.utils.tokenize
+   oa_asset_builder.libs.utils.untokenize
+   oa_asset_builder.libs.utils.home_viewport
+   oa_asset_builder.libs.utils.bind_node_to_asset
+   oa_asset_builder.libs.utils.get_root_shading_subnet_name
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.utils.VERSION_REGEX
+
+
+.. py:data:: VERSION_REGEX
+   
+
+   
+
+.. py:function:: get_guid(node)
+
+
+.. py:function:: rename_node(node, name)
+
+
+.. py:function:: build_guid_path(entry)
+
+
+.. py:function:: normname(text)
+
+
+.. py:function:: set_parm_value(node, parm_name, value, follow_parm_reference=False)
+
+
+.. py:function:: set_parm_values(node, parm_dict)
+
+
+.. py:function:: set_expression(node, parmname, expression, language=hou.exprLanguage.Hscript)
+
+
+.. py:function:: lock_all_parms(node, exclude=())
+
+
+.. py:function:: tokenize(path)
+
+
+.. py:function:: untokenize(path)
+
+
+.. py:function:: home_viewport()
+
+
+.. py:function:: bind_node_to_asset(target_node, asset_node)
+
+
+.. py:function:: get_root_shading_subnet_name()
+
+

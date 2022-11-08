@@ -1,0 +1,22 @@
+ :py:mod:`oa_hou_utils.logging`
+==============================================================
+
+.. py:module:: oa_hou_utils.logging
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_hou_utils.logging.get_logger
+
+
+
+.. py:function:: get_logger(logger, ui=False)
+
+

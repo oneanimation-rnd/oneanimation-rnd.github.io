@@ -1,0 +1,414 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.weights_editor_utils`
+========================================================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.weights_editor_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.show_error_msg
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_maya_window
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.convert_version_string
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_version_string_greater
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.create_shortcut
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.wrap_layout
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_in_component_mode
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_selected_mesh
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.to_mobject
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_curve
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.is_close
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.clamp
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.remap_range
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.lerp_color
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.extract_indexes
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_all_vert_indexes
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_vert_indexes
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_skin_cluster
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.switch_to_color_set
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.toggle_display_colors
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_influence_ids
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_skin_data
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.update_weight_value
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_weight_color
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.apply_vert_colors
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.collect_influence_colors
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.display_multi_color_influence
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.display_influence
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.select_inf_vertexes
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.set_skin_weights
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.get_vert_neighbours
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.average_by_neighbours
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.br_smooth_verts
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.smooth_weights
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.mirror_skin_weights
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.prune_weights
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.flood_weights_to_closest
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.delete_temp_inputs
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.COLOR_SET
+   oa.rigging.tools.weights_editor_tool.weights_editor_utils.POLY_COLOR_PER_VERT
+
+
+.. py:data:: COLOR_SET
+   :annotation: = weightsEditorCreateColorSet
+
+   
+
+.. py:data:: POLY_COLOR_PER_VERT
+   :annotation: = weightsEditorPolyColorPerVertex
+
+   
+
+.. py:function:: show_error_msg(title, msg, parent)
+
+
+.. py:function:: get_maya_window()
+
+
+.. py:function:: convert_version_string(ver_str)
+
+
+.. py:function:: is_version_string_greater(ver_str_1, ver_str_2)
+
+
+.. py:function:: create_shortcut(key_sequence, callback)
+
+
+.. py:function:: wrap_layout(widgets, orientation=QtCore.Qt.Vertical, spacing=None, margins=None, parent=None)
+
+
+.. py:function:: is_in_component_mode()
+
+
+.. py:function:: get_selected_mesh()
+
+   :returns: A mesh from the selection or None if nothing valid was found.
+
+
+.. py:function:: to_mobject(obj)
+
+   Gets an object as a MObject wrapper.
+
+   :param obj: An object's name.
+   :type obj: string
+
+   :returns: An MObject.
+
+
+.. py:function:: is_curve(obj)
+
+   Detects and returns True if supplied object is a nurbs curve.
+
+
+.. py:function:: is_close(val1, val2, rel_tol=1e-09, abs_tol=0.0)
+
+   Determines if the two float values are close enough to each other.
+   https://www.python.org/dev/peps/pep-0485/#proposed-implementation
+
+
+.. py:function:: clamp(min_value, max_value, value)
+
+   Clamps a value to the supplied range.
+
+
+.. py:function:: remap_range(old_min, old_max, new_min, new_max, old_value)
+
+   Converts a value from one range to another.
+
+
+.. py:function:: lerp_color(start_color, end_color, blend_value)
+
+   Lerps between two colors by supplied blend value.
+
+   :param start_color:
+   :type start_color: QColor
+   :param end_color:
+   :type end_color: QColor
+   :param blend_value: A value between 0.0 to 1.0
+                       0.0=start_color
+                       0.5=50% mix of both colors
+                       1.0=end_color
+   :type blend_value: float
+
+   :returns: A QColor.
+
+
+.. py:function:: extract_indexes(flatten_list)
+
+   Converts a flattened vertex list to numbers.
+
+   :param flatten_list: ["obj.vtx[0]", "obj.vtx[1]", ..]
+   :type flatten_list: string[]
+
+   :returns: A list of integers.
+
+
+.. py:function:: get_all_vert_indexes(obj)
+
+   Gets and returns all vertexes from the supplied object.
+
+
+.. py:function:: get_vert_indexes(obj)
+
+   Gets and returns selected vertexes from the supplied object.
+
+
+.. py:function:: get_skin_cluster(obj)
+
+   Get's an object's skinCluster.
+
+   :param obj:
+   :type obj: string
+
+   :returns: Object's skinCluster.
+
+
+.. py:function:: switch_to_color_set(obj)
+
+   Switches supplied object's color set to display skin weights.
+   Needs to do this otherwise we risk overwriting another color set.
+
+   :param obj:
+   :type obj: string
+
+
+.. py:function:: toggle_display_colors(obj, enabled)
+
+   Sets attribute to show vertex colors.
+
+   :param obj:
+   :type obj: string
+   :param enabled:
+   :type enabled: bool
+
+
+.. py:function:: get_influence_ids(skin_cluster)
+
+   Collects all influences and its ids from a skinCluster.
+
+   :param skin_cluster: A skinCluster's name.
+   :type skin_cluster: string
+
+   :returns: {id(int):inf_name(string)}
+   :rtype: A dictionary
+
+
+.. py:function:: get_skin_data(skin_cluster)
+
+   Re-factored code by Tyler Thornock
+   Faster than cmds.skinPercent() and more practical than OpenMaya.MFnSkinCluster()
+
+   :param skin_cluster: A skinCluster's name.
+   :type skin_cluster: string
+
+   :returns: A dictionary.
+             {vert_index:{"weights":{inf_name:weight_value...}, "dq"float}}
+
+
+.. py:function:: update_weight_value(weight_data, inf_name, new_value)
+
+   Updates weight_data with an influence's value while distributing the difference
+   to the rest of its influences. The sum should always be 1.0.
+
+   :param weight_data: {inf_name:inf_value...}
+                       This is found in skin_data and represents a vertex.
+   :type weight_data: dict
+   :param inf_name: Influence to update.
+   :type inf_name: string
+   :param new_value: A number between 0 and 1.0.
+   :type new_value: float
+
+
+.. py:function:: get_weight_color(weight, start_color=[0, 0, 1], mid_color=[0, 1, 0], end_color=[1, 0, 0], full_color=[1.0, 1.0, 1.0])
+
+   Gets color that represents supplied weight value.
+   A value of 0 will be bias towards start_color, 1.0 will be biased towards end_color.
+
+   :param weight: A value between 0.0 to 1.0.
+   :type weight: float
+   :param start_color: Represents rbg when weight is 0.0.
+   :type start_color: float[]
+   :param mid_color: Represents rbg when weight is 0.5.
+   :type mid_color: float[]
+   :param end_color: Represents rbg when weight is 1.0.
+   :type end_color: float[]
+   :param full_color: Represents rbg when weight is equal to 1.0.
+   :type full_color: float[]
+
+   :returns: An rbg list.
+
+
+.. py:function:: apply_vert_colors(obj, colors, vert_indexes)
+
+   Sets vert colors on the supplied mesh.
+
+   :param obj: Object to edit vert colors.
+   :type obj: string
+   :param colors: A list of rgb values.
+   :type colors: float[]
+   :param vert_indexes: A list of vertex indexes.
+                        This should match the length of colors.
+   :type vert_indexes: int[]
+
+
+.. py:function:: collect_influence_colors(skin_cluster, sat=250, brightness=150)
+
+   Generates a unique color for each influence.
+
+   :param skin_cluster: SkinCluster to get influences from.
+   :type skin_cluster: string
+   :param sat:
+   :type sat: float
+   :param brightness:
+   :type brightness: float
+
+   :returns: [r, g, b]...}
+   :rtype: A dictionary of {inf_name
+
+
+.. py:function:: display_multi_color_influence(obj, skin_cluster, skin_data, vert_filter=[])
+
+   Mimics Softimage and displays all influences at once with their own unique color.
+
+   :param obj:
+   :type obj: string
+   :param skin_cluster:
+   :type skin_cluster: string
+   :param skin_data:
+   :type skin_data: dict
+   :param vert_filter: List of vertex indexes to only operate on.
+   :type vert_filter: int[]
+
+   :returns: [r, g, b]...}
+   :rtype: A dictionary of {inf_name
+
+
+.. py:function:: display_influence(obj, skin_data, influence, color_style=0, vert_filter=[])
+
+   Colors a mesh to visualize skin data.
+
+   :param obj:
+   :type obj: string
+   :param skin_data:
+   :type skin_data: dict
+   :param influence: Name of influence to display.
+   :type influence: string
+   :param color_style: 0=Max theme, 1=Maya theme.
+   :type color_style: int
+   :param vert_filter: List of vertex indexes to only operate on.
+   :type vert_filter: int[]
+
+
+.. py:function:: select_inf_vertexes(obj, infs, skin_data)
+
+   Selects effected vertexes by supplied influences.
+
+   :param obj:
+   :type obj: string
+   :param infs: List of influences to select from.
+   :type infs: string[]
+   :param skin_data:
+   :type skin_data: dict
+
+
+.. py:function:: set_skin_weights(obj, skin_data, vert_indexes, normalize=False)
+
+   Sets skin weights with the supplied data.
+
+   :param obj: Object with a skinCluster.
+   :type obj: string
+   :param skin_data: Data to set with.
+   :type skin_data: dict
+   :param vert_indexes: List of vertex indexes to only operate on.
+   :type vert_indexes: int[]
+   :param normalize: Forces weights to be normalized.
+   :type normalize: bool
+
+
+.. py:function:: get_vert_neighbours(obj, vert_index)
+
+   Fetches adjacent vertexes.
+
+   :param obj:
+   :type obj: string
+   :param vert_index:
+   :type vert_index: int
+
+   :returns: A list of vertex indexes.
+
+
+.. py:function:: average_by_neighbours(obj, vert_index, skin_data, strength)
+
+   Averages weights of surrounding vertexes.
+
+   :param obj:
+   :type obj: string
+   :param vert_index:
+   :type vert_index: int
+   :param skin_data:
+   :type skin_data: dict
+   :param strength: A value of 0-1
+   :type strength: int
+
+   :returns: weight_value...}
+   :rtype: A dictionary of the new weights. {int_name
+
+
+.. py:function:: br_smooth_verts(flood=1.0, ignore_lock=True)
+
+
+.. py:function:: smooth_weights(obj, vert_indexes, skin_data, strength, normalize_weights=True)
+
+   Runs an algorithm to smooth weights on supplied vertex indexes.
+
+   :param obj:
+   :type obj: string
+   :param vert_indexes:
+   :type vert_indexes: int[]
+   :param skin_data:
+   :type skin_data: dict
+   :param strength: A value of 0-1
+   :type strength: int
+   :param normalize_weights:
+   :type normalize_weights: bool
+
+
+.. py:function:: mirror_skin_weights(obj, mirror_mode, mirror_inverse, surface_association, inf_association=None)
+
+
+.. py:function:: prune_weights(obj, skin_cluster, prune_value)
+
+   Runs prune weights on selected vertexes on supplied object.
+
+   :param obj:
+   :type obj: string
+   :param skin_cluster:
+   :type skin_cluster: string
+   :param prune_value: Removes any weights below this value.
+   :type prune_value: float
+
+   :returns: True on success.
+
+
+.. py:function:: flood_weights_to_closest(mesh, skin_cluster)
+
+
+.. py:function:: delete_temp_inputs(obj)
+
+   Deletes extra inputs the tool creates to see weight colors.
+
+

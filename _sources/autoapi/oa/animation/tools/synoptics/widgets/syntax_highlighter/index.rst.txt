@@ -1,0 +1,103 @@
+ :py:mod:`oa.animation.tools.synoptics.widgets.syntax_highlighter`
+====================================================================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.widgets.syntax_highlighter
+
+.. autoapi-nested-parse::
+
+   https://wiki.python.org/moin/PyQt/Python%20syntax%20highlighting
+
+   Adds syntax coloring to a textbox.
+   Code tweaked to work with Qt5 and to mimic Maya's script editor colors.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.widgets.syntax_highlighter.PythonHighlighter
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.widgets.syntax_highlighter.format
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.widgets.syntax_highlighter.STYLES
+   oa.animation.tools.synoptics.widgets.syntax_highlighter.font
+
+
+.. py:function:: format(color, style='')
+
+   Return a QTextCharFormat with the given attributes.
+
+
+
+.. py:data:: STYLES
+   
+
+   
+
+.. py:class:: PythonHighlighter(document)
+
+   Bases: :py:obj:`PySide2.QtGui.QSyntaxHighlighter`
+
+   Syntax highlighter for the Python language.
+
+
+   .. py:attribute:: keywords
+      :annotation: = ['and', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'exec',...
+
+      
+
+   .. py:attribute:: modules
+      :annotation: = ['OpenMaya', 'PySide2', 'PySide2', 'cmds', 'fnmatch', 'functools', 'glob', 'inspect', 'json',...
+
+      
+
+   .. py:attribute:: operators
+      :annotation: = ['=', '==', '!=', '<', '<=', '>', '>=', '\\+', '-', '\\*', '/', '//', '\\%', '\\*\\*', '\\+=',...
+
+      
+
+   .. py:attribute:: braces
+      :annotation: = ['\\{', '\\}', '\\(', '\\)', '\\[', '\\]']
+
+      
+
+   .. py:method:: highlightBlock(text)
+
+      Apply syntax highlighting to the given block of text.
+
+
+
+   .. py:method:: match_multiline(text, delimiter, in_state, style)
+
+      Do highlighting of multi-line strings. ``delimiter`` should be a
+      ``QRegExp`` for triple-single-quotes or triple-double-quotes, and
+      ``in_state`` should be a unique integer to represent the corresponding
+      state changes when inside those strings. Returns True if we're still
+      inside a multi-line string when this function is finished.
+
+
+
+.. py:data:: font
+   
+
+   
+

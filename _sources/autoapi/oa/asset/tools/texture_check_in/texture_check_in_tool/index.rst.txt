@@ -1,0 +1,179 @@
+ :py:mod:`oa.asset.tools.texture_check_in.texture_check_in_tool`
+================================================================================================================================
+
+.. py:module:: oa.asset.tools.texture_check_in.texture_check_in_tool
+
+.. autoapi-nested-parse::
+
+   Textures check-in tool
+
+   Gui interface to check-in texture files for assets.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.texture_check_in.texture_check_in_tool.TextureCheckinTool
+   oa.asset.tools.texture_check_in.texture_check_in_tool.ProjectComboBox
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.texture_check_in.texture_check_in_tool.launch
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.texture_check_in.texture_check_in_tool.anim_repo_path
+   oa.asset.tools.texture_check_in.texture_check_in_tool.qapp
+
+
+.. py:data:: anim_repo_path
+   
+
+   
+
+.. py:class:: TextureCheckinTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: tool_name
+      :annotation: = TextureCheckinTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: dragLeaveEvent(event)
+
+
+   .. py:method:: dragEnterEvent(event)
+
+
+   .. py:method:: dropEvent(event)
+
+
+   .. py:method:: item_on_click(*args)
+
+
+   .. py:method:: tabs_on_changed(*args)
+
+
+   .. py:method:: remove_check_in_on_click()
+
+
+   .. py:method:: thread_pool_on_start()
+
+
+   .. py:method:: thread_pool_on_finish()
+
+
+   .. py:method:: worker_on_finish(index, status)
+
+
+   .. py:method:: check_in_on_click()
+
+
+   .. py:method:: list_on_double_click(item)
+
+
+   .. py:method:: on_server_filter_returned()
+
+
+   .. py:method:: on_open_server_dir_click()
+
+
+   .. py:method:: server_list_on_double_click(index)
+
+
+   .. py:method:: server_list_on_delete_press()
+
+
+   .. py:method:: on_toggle_versions(state)
+
+
+   .. py:method:: projects_on_index_changed(index)
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: get_texture_path_by_index(asset_index)
+
+
+   .. py:method:: fill_projects_list()
+
+
+   .. py:method:: update_server_list()
+
+      Re-points server listview to the selected asset.
+
+
+   .. py:method:: reset_background(list_widget)
+
+      Clears all QListWidgetItems background color to default.
+
+      :param list_widget: A QListWidget.
+
+
+   .. py:method:: set_interface_for_check_in(enabled)
+
+      Sets the interface for pre/post check-in.
+
+      :param enabled: Disables interface on False, restores it on True.
+
+
+
+.. py:class:: ProjectComboBox(icon_size=QtCore.QSize(100, 80), max_vis_items=8, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QComboBox`
+
+   .. py:method:: showPopup()
+
+
+   .. py:method:: add_item(row, label, pixmap)
+
+
+   .. py:method:: set_count(count)
+
+
+
+.. py:function:: launch()
+
+
+.. py:data:: qapp
+   
+
+   
+

@@ -1,0 +1,42 @@
+ :py:mod:`oa_asset_builder.libs.ui.widgets.thumbnail`
+==========================================================================================================
+
+.. py:module:: oa_asset_builder.libs.ui.widgets.thumbnail
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.ui.widgets.thumbnail.AssetThumbnail
+
+
+
+
+.. py:class:: AssetThumbnail(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QLabel`
+
+   .. py:method:: setPixmap(pixmap)
+
+
+   .. py:method:: _height_for_width(width)
+
+
+   .. py:method:: sizeHint()
+
+
+   .. py:method:: _get_size()
+
+
+   .. py:method:: _scaled_pixmap()
+
+
+   .. py:method:: resizeEvent(e)
+
+
+

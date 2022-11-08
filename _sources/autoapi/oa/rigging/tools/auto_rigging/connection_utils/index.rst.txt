@@ -1,0 +1,91 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.connection_utils`
+==================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.connection_utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.connection_utils.connect
+   oa.rigging.tools.auto_rigging.connection_utils.get_targets_data
+   oa.rigging.tools.auto_rigging.connection_utils.create_target
+   oa.rigging.tools.auto_rigging.connection_utils.first_tier
+   oa.rigging.tools.auto_rigging.connection_utils.second_tier
+   oa.rigging.tools.auto_rigging.connection_utils.get_group_index
+   oa.rigging.tools.auto_rigging.connection_utils.get_first_in_selection
+   oa.rigging.tools.auto_rigging.connection_utils.read_config_file
+   oa.rigging.tools.auto_rigging.connection_utils.create_connections
+   oa.rigging.tools.auto_rigging.connection_utils.mirror_shapes
+   oa.rigging.tools.auto_rigging.connection_utils.create_facial_connections
+   oa.rigging.tools.auto_rigging.connection_utils.mirror_shapes_on_selection
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.connection_utils._mesh
+   oa.rigging.tools.auto_rigging.connection_utils._blendshape
+   oa.rigging.tools.auto_rigging.connection_utils._base_mesh
+
+
+.. py:data:: _mesh
+   
+
+   
+
+.. py:data:: _blendshape
+   
+
+   
+
+.. py:data:: _base_mesh
+   
+
+   
+
+.. py:function:: connect(driver, driven)
+
+
+.. py:function:: get_targets_data(blendshape)
+
+
+.. py:function:: create_target(target_name, base_mesh=None, grp_index=0)
+
+
+.. py:function:: first_tier(name, driver, default_value, ctrl=None, grp=0)
+
+
+.. py:function:: second_tier(name, driver1=None, driver2=None, grp=0)
+
+
+.. py:function:: get_group_index(blendshape, grp_name, parent_index=0)
+
+
+.. py:function:: get_first_in_selection()
+
+
+.. py:function:: read_config_file(config_path)
+
+
+.. py:function:: create_connections(transform, config_path)
+
+
+.. py:function:: mirror_shapes(transform, map_from='_L_', map_to='_R_', axis='x', show_progress=False)
+
+
+.. py:function:: create_facial_connections()
+
+
+.. py:function:: mirror_shapes_on_selection()
+
+

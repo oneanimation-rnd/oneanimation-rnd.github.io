@@ -1,0 +1,192 @@
+ :py:mod:`oa.rigging.tools.fk_chain_tool.fk_chain_utils`
+================================================================================================================
+
+.. py:module:: oa.rigging.tools.fk_chain_tool.fk_chain_utils
+
+.. autoapi-nested-parse::
+
+   A collection of helper functions to create an fk chain.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_attr
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_weak_ref
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_weak_ref
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.set_color
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_distance
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_between_pos
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_root_by_objs
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_template_root
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.get_rig_root
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_template
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.rebuild_points_on_curve
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.parent_to_cog_srt
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.create_rig
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.fk_chain_tool.fk_chain_utils.rig_name
+
+
+.. py:data:: rig_name
+   :annotation: = FK_CHAIN
+
+   
+
+.. py:function:: create_attr(obj, long_name, attr_value, keyable=True, lock=False)
+
+   Creates a custom attribute.
+
+   :param obj: The object to add the new attribute on.
+   :type obj: string
+   :param long_name: The new attribute's name.
+   :type long_name: string
+   :param attr_value: The attribute's default value. The type of this variable determines what kind of attribute will be built.
+   :type attr_value: typeless
+   :param keyable: Shows attribute in the channel box.
+   :type keyable: bool
+   :param lock: Locks the attribute.
+   :type lock: bool
+
+
+.. py:function:: create_weak_ref(obj, target, attr)
+
+   Connects one object to another via weak reference.
+
+   :param obj: The object to hold the weak reference.
+   :type obj: string
+   :param target: The object that will be connected to the weak reference attribute.
+   :type target: string
+   :param attr: The attribute's name.
+   :type attr: string
+
+
+.. py:function:: get_weak_ref(obj, attr)
+
+   Checks connection of the supplied attribute and returns its weak reference.
+
+   :param obj: The object that holds the weak reference.
+   :type obj: string
+   :param attr: The attribute's name.
+   :type attr: string
+
+   :returns: The attribute's weak reference object.
+
+
+.. py:function:: set_color(objs, qcolor)
+
+   Sets the object's wire color.
+
+   :param objs: A list of objects.
+   :type objs: string[]
+   :param qcolor: The color to set to.
+   :type qcolor: QtGui.QColor
+
+
+.. py:function:: get_distance(pos1, pos2)
+
+   Gets and returns the distance between two points.
+
+   :param pos1: 1st position.
+   :type pos1: float[]
+   :param pos2: 2nd position.
+   :type pos2: float[]
+
+
+.. py:function:: get_between_pos(pos1, pos2, weight)
+
+   Query a position between two objects.
+
+   :param pos1: 1st position.
+   :type pos1: float[]
+   :param pos2: 2nd position.
+   :type pos2: float[]
+   :param weight: A number between 0 to 1.0. 0 being the start position, 1.0 being the end position.
+   :type weight: float
+
+   :returns: A world position.
+
+
+.. py:function:: get_root_by_objs(objs, attr)
+
+   Get and returns all root nuls from supplied objects for templates or rigs.
+
+   :param objs: A list of objects to check with.
+   :type objs: string[]
+   :param attr: The attribute name to match. ('templateType' or 'rigType')
+   :type attr: string
+
+   :returns: A list of root nuls.
+
+
+.. py:function:: get_template_root(objs)
+
+   Uses get_root_by_objs to get all template root nuls
+
+
+.. py:function:: get_rig_root(objs)
+
+   Uses get_root_by_objs to get all rig root nuls
+
+
+.. py:function:: create_template(start, end, point_count)
+
+   Creates a rig template to layout joint positions before finalizing them.
+
+   :param start: An object to start building from.
+   :type start: string
+   :param end: An object to end building to.
+   :type end: string
+   :param point_count: The number of locators to create on the curve.
+   :type point_count: int
+
+
+.. py:function:: rebuild_points_on_curve(template_root, point_count)
+
+   Deletes existing points from template curve and recreates them to the supplied count.
+
+   :param template_root: The template's root nul.
+   :type template_root: string
+   :param point_count: The number of locators to create on the curve.
+   :type point_count: int
+
+   :returns: A list of all new locators.
+
+
+.. py:function:: parent_to_cog_srt(rig_root)
+
+   Parents the rig's root to an asset's cog ctrl.
+
+   :param rig_root: A rig's root.
+   :type rig_root: string
+
+
+.. py:function:: create_rig(template_root, control_type='linearSphere', name='', color=QtGui.QColor(0, 100, 0))
+
+   Builds a rig on top of a template.
+
+   :param template_root: The name of the template's top nul.
+   :type template_root: string
+   :param control_type: The rig's controls style.
+   :type control_type: string
+   :param name: The rig's prefix.
+   :type name: string
+
+

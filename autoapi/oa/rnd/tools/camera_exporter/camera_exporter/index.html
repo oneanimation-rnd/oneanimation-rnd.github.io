@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.rnd.tools.camera_exporter.camera_exporter &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.rnd.tools.camera_exporter.camera_exporter_gui" href="../camera_exporter_gui/index.html" />
+    <link rel="prev" title=" oa.rnd.tools.camera_exporter" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd.tools.camera_exporter</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd.tools.camera_exporter.camera_exporter</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/rnd/tools/camera_exporter/camera_exporter/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.rnd.tools.camera_exporter.camera_exporter">
+<span id="oa-rnd-tools-camera-exporter-camera-exporter"></span><h1> <a class="reference internal" href="#module-oa.rnd.tools.camera_exporter.camera_exporter" title="oa.rnd.tools.camera_exporter.camera_exporter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd.tools.camera_exporter.camera_exporter</span></code></a><a class="headerlink" href="#module-oa.rnd.tools.camera_exporter.camera_exporter" title="Permalink to this heading"></a></h1>
+<p>Exports shot camera and selected locators as .ma file compatible with After Effects.</p>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rnd.tools.camera_exporter.camera_exporter._create_camera_instance" title="oa.rnd.tools.camera_exporter.camera_exporter._create_camera_instance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_create_camera_instance</span></code></a>(src_cam_shape)</p></td>
+<td><p>Create camera instance in world space.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rnd.tools.camera_exporter.camera_exporter._get_shot_camera_shape" title="oa.rnd.tools.camera_exporter.camera_exporter._get_shot_camera_shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_shot_camera_shape</span></code></a>()</p></td>
+<td><p>Get current shot camera shape node.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rnd.tools.camera_exporter.camera_exporter._bake_animation" title="oa.rnd.tools.camera_exporter.camera_exporter._bake_animation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_bake_animation</span></code></a>(cam_xform, locators[, start_frame, ...])</p></td>
+<td><p>Bake animation into per-frame keys.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rnd.tools.camera_exporter.camera_exporter._export" title="oa.rnd.tools.camera_exporter.camera_exporter._export"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_export</span></code></a>(camera, locators, output_path)</p></td>
+<td><p>Export camera and selected locators to the specified scene path.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rnd.tools.camera_exporter.camera_exporter._open_file" title="oa.rnd.tools.camera_exporter.camera_exporter._open_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_open_file</span></code></a>(path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rnd.tools.camera_exporter.camera_exporter._update_render_settings" title="oa.rnd.tools.camera_exporter.camera_exporter._update_render_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_update_render_settings</span></code></a>()</p></td>
+<td><p>Update render settings with proper resolution and camera.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rnd.tools.camera_exporter.camera_exporter._create_locators_from_selection" title="oa.rnd.tools.camera_exporter.camera_exporter._create_locators_from_selection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">_create_locators_from_selection</span></code></a>(selected_nodes)</p></td>
+<td><p>Create constrained locators from all the selected transforms.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rnd.tools.camera_exporter.camera_exporter.is_scene_modified" title="oa.rnd.tools.camera_exporter.camera_exporter.is_scene_modified"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_scene_modified</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rnd.tools.camera_exporter.camera_exporter.is_task" title="oa.rnd.tools.camera_exporter.camera_exporter.is_task"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_task</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rnd.tools.camera_exporter.camera_exporter.export_camera" title="oa.rnd.tools.camera_exporter.camera_exporter.export_camera"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_camera</span></code></a>(shot_number_str, output_dir[, ...])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rnd.tools.camera_exporter.camera_exporter._create_camera_instance">
+<span class="sig-prename descclassname"><span class="pre">oa.rnd.tools.camera_exporter.camera_exporter.</span></span><span class="sig-name descname"><span class="pre">_create_camera_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_cam_shape</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rnd.tools.camera_exporter.camera_exporter._create_camera_instance" title="Permalink to this definition"></a></dt>
+<dd><p>Create camera instance in world space.</p>
+<p>Create a transform on the scene root level and put the provided camera shape underneath it.
+Parent constraint that transform to the original camera to inherit all the transformations in
+world space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>path to the new camera.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rnd.tools.camera_exporter.camera_exporter._get_shot_camera_shape">
+<span class="sig-prename descclassname"><span class="pre">oa.rnd.tools.camera_exporter.camera_exporter.</span></span><span class="sig-name descname"><span class="pre">_get_shot_camera_shape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rnd.tools.camera_exporter.camera_exporter._get_shot_camera_shape" title="Permalink to this definition"></a></dt>
+<dd><p>Get current shot camera shape node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>camera shape path.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rnd.tools.camera_exporter.camera_exporter._bake_animation">
+<span class="sig-prename descclassname"><span class="pre">oa.rnd.tools.camera_exporter.camera_exporter.</span></span><span class="sig-name descname"><span class="pre">_bake_animation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cam_xform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locators</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rnd.tools.camera_exporter.camera_exporter._bake_animation" title="Permalink to this definition"></a></dt>
+<dd><p>Bake animation into per-frame keys.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cam_xform</strong> (<em>str</em>) – path to camera transform node.</p></li>
+<li><p><strong>locators</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – paths to locator nodes.</p></li>
+<li><p><strong>start_frame</strong> (<em>int</em>) – start frame of the range to bake.</p></li>
+<li><p><strong>end_frame</strong> (<em>int</em>) – end frame of the range to bake.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rnd.tools.camera_exporter.camera_exporter._export">
+<span class="sig-prename descclassname"><span class="pre">oa.rnd.tools.camera_exporter.camera_exporter.</span></span><span class="sig-name descname"><span class="pre">_export</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">camera</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locators</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rnd.tools.camera_exporter.camera_exporter._export" title="Permalink to this definition"></a></dt>
+<dd><p>Export camera and selected locators to the specified scene path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>camera</strong> (<em>str</em>) – shot camera path.</p></li>
+<li><p><strong>locators</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – locators to export.</p></li>
+<li><p><strong>output_path</strong> (<em>str</em>) – output scene file path.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rnd.tools.camera_exporter.camera_exporter._open_file">
+<span class="sig-prename descclassname"><span class="pre">oa.rnd.tools.camera_exporter.camera_exporter.</span></span><span class="sig-name descname"><span class="pre">_open_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rnd.tools.camera_exporter.camera_exporter._open_file" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rnd.tools.camera_exporter.camera_exporter._update_render_settings">
+<span class="sig-prename descclassname"><span class="pre">oa.rnd.tools.camera_exporter.camera_exporter.</span></span><span class="sig-name descname"><span class="pre">_update_render_settings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rnd.tools.camera_exporter.camera_exporter._update_render_settings" title="Permalink to this definition"></a></dt>
+<dd><p>Update render settings with proper resolution and camera.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rnd.tools.camera_exporter.camera_exporter._create_locators_from_selection">
+<span class="sig-prename descclassname"><span class="pre">oa.rnd.tools.camera_exporter.camera_exporter.</span></span><span class="sig-name descname"><span class="pre">_create_locators_from_selection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selected_nodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rnd.tools.camera_exporter.camera_exporter._create_locators_from_selection" title="Permalink to this definition"></a></dt>
+<dd><p>Create constrained locators from all the selected transforms.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rnd.tools.camera_exporter.camera_exporter.is_scene_modified">
+<span class="sig-prename descclassname"><span class="pre">oa.rnd.tools.camera_exporter.camera_exporter.</span></span><span class="sig-name descname"><span class="pre">is_scene_modified</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rnd.tools.camera_exporter.camera_exporter.is_scene_modified" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rnd.tools.camera_exporter.camera_exporter.is_task">
+<span class="sig-prename descclassname"><span class="pre">oa.rnd.tools.camera_exporter.camera_exporter.</span></span><span class="sig-name descname"><span class="pre">is_task</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rnd.tools.camera_exporter.camera_exporter.is_task" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rnd.tools.camera_exporter.camera_exporter.export_camera">
+<span class="sig-prename descclassname"><span class="pre">oa.rnd.tools.camera_exporter.camera_exporter.</span></span><span class="sig-name descname"><span class="pre">export_camera</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shot_number_str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reopen_src_scene</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rnd.tools.camera_exporter.camera_exporter.export_camera" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title=" oa.rnd.tools.camera_exporter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../camera_exporter_gui/index.html" class="btn btn-neutral float-right" title=" oa.rnd.tools.camera_exporter.camera_exporter_gui" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

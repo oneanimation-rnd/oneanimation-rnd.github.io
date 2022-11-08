@@ -1,0 +1,167 @@
+ :py:mod:`oa.general.tools.naming_tool.naming_tool`
+======================================================================================================
+
+.. py:module:: oa.general.tools.naming_tool.naming_tool
+
+.. autoapi-nested-parse::
+
+   A tool to batch rename objects with our naming conventions.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.naming_tool.naming_tool.NamingTool
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.naming_tool.naming_tool.launch
+
+
+
+.. py:class:: NamingTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = namingTool
+
+      
+
+   .. py:attribute:: instance
+      :annotation: = []
+
+      
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+      Override key events to disable Maya hotkeys.
+
+
+   .. py:method:: keyReleaseEvent(event)
+
+      Override key events to disable Maya hotkeys.
+
+
+   .. py:method:: wrap_layout(widgets, orientation)
+
+      Helper function that takes supplied widgets and wraps them all in a layout.
+
+      :param widgets: A list of QWidgets.
+      :param orientation: QtCore.Qt.Orientation
+
+      :returns: The new layout item.
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: create_find_replace_widgets(suffix)
+
+
+   .. py:method:: restore()
+
+      Restores the tool's state from a json file.
+
+
+   .. py:method:: save()
+
+      Saves the tool's current state to a json file.
+
+
+   .. py:method:: prefix_on_check(state)
+
+
+   .. py:method:: suffix_on_check(state)
+
+
+   .. py:method:: side_on_check(state)
+
+
+   .. py:method:: start_num_on_check(state)
+
+
+   .. py:method:: auto_suffix_on_check()
+
+
+   .. py:method:: add_prefix_on_clicked()
+
+
+   .. py:method:: add_suffix_on_clicked()
+
+
+   .. py:method:: rename_on_click()
+
+      Renames object with values from the gui.
+      Defaults with current selection.
+
+
+   .. py:method:: find_replace_on_click(find_edit, replace_edit)
+
+
+   .. py:method:: move_word_on_clicked(direction)
+
+
+   .. py:method:: wrap_selection()
+
+
+   .. py:method:: run_sanity_check(rstring)
+
+      Checks string and gets rid of any invalid characters that would mess up names in Maya.
+
+
+   .. py:method:: run_find_replace_sanity_check(rstring)
+
+      Specific for find & replace fields.
+      Checks string and gets rid of any invalid characters that would mess up names in Maya.
+
+
+   .. py:method:: update_preview_name()
+
+      Displays what the new name will be.
+
+
+   .. py:method:: get_suffix(obj)
+
+
+   .. py:method:: build_name(obj=None, value=None)
+
+      Generates a name from values in the interface.
+
+      :param obj: The object to use the auto-suffix with.
+      :type obj: string
+      :param value: The number value to set it to.
+      :type value: int
+
+      :returns: The new name.
+
+
+
+.. py:function:: launch()
+
+

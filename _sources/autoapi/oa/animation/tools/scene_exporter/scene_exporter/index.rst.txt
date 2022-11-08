@@ -1,0 +1,87 @@
+ :py:mod:`oa.animation.tools.scene_exporter.scene_exporter`
+======================================================================================================================
+
+.. py:module:: oa.animation.tools.scene_exporter.scene_exporter
+
+.. autoapi-nested-parse::
+
+   Prior to exporting, Shield is brought up to make sure it is ok to be pushed on the server.
+   Exports the scene on the server, and updates the database.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_exporter.scene_exporter.popup_message
+   oa.animation.tools.scene_exporter.scene_exporter.run_exporter
+   oa.animation.tools.scene_exporter.scene_exporter.on_shield_passed
+   oa.animation.tools.scene_exporter.scene_exporter.on_export_clicked
+   oa.animation.tools.scene_exporter.scene_exporter.get_latest_version
+   oa.animation.tools.scene_exporter.scene_exporter.export_scene
+
+
+
+.. py:function:: popup_message(title, msg, icon=QtWidgets.QMessageBox.NoIcon, buttons=[QtWidgets.QMessageBox.Ok], parent=None)
+
+   Convenient method to display a message.
+
+   :param title: The window's title.
+   :param msg: The window's main content.
+   :param icon: Either a pixmap or QtGui.QMessageBox.Icon.
+   :param buttons: A list of QtGui.QMessage.StandardButton.
+   :param parent: A QWidget to center the message to.
+
+   :returns: The QtGui.QMessage.StandardButton enum that was chosen.
+
+
+.. py:function:: run_exporter(skip_shield=False)
+
+
+.. py:function:: on_shield_passed()
+
+
+.. py:function:: on_export_clicked(scene_info_wrapper)
+
+
+.. py:function:: get_latest_version(file_entry_id)
+
+   Gets and returns the latest version number of the supplied id.
+
+   :param file_entry_id: An id from the database's file entries.
+   :type file_entry_id: string
+
+
+.. py:function:: export_scene(project, ep, seq, shot_task_type, shot_list, notes, quiet=False, reload_scene=False)
+
+   Exports scene onto the server.
+
+   :param project: Project name.
+   :type project: string
+   :param ep: Episode name.
+   :type ep: string
+   :param seq: Sequence name.
+   :type seq: string
+   :param shot_task_type: ANM, LA.
+   :type shot_task_type: string
+   :param shot_list: A list of shot names with their zero padding.
+   :type shot_list: string[]
+   :param notes: Comments to include in log.
+   :type notes: string
+   :param quiet: Pops up messages if True.
+   :type quiet: bool
+   :param reload_scene: Reloads scene after export is done. This will be overridden when quiet is False.
+   :type reload_scene: bool
+
+   :returns: Full path to exported scene file on the server.
+
+

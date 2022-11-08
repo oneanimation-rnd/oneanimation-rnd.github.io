@@ -1,0 +1,67 @@
+ :py:mod:`bd.hooks.registry`
+========================================================
+
+.. py:module:: bd.hooks.registry
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.hooks.registry.HookRegistry
+
+
+
+
+.. py:class:: HookRegistry
+
+   Bases: :py:obj:`object`
+
+   This class is used to add and retrieve hook items.
+
+   It is passed as an argument into the 'register' function
+   of every individual plugin to allow it to decide which
+   callback is going to be registered for which hook name.
+
+
+   .. py:method:: add_hook(name, callback, priority=50)
+
+      Associated a callback with the hook name.
+
+      :param name: A hook name.
+      :param callback: Function or method.
+      :type callback: callable
+      :param priority: Priority level.
+                       Execution starts from the items with the highest
+                       priority and follows to the items with the lower one.
+                       If multiple items have exactly the same priority, they
+                       will be executed in the order they were added into the
+                       registry.
+      :type priority: int
+
+      :raises InvalidCallbackError: If the 'callback' argument is not callable.
+
+
+   .. py:method:: get_hooks(name)
+
+      Return a list of hook items registered under the specified hook name.
+
+      It also sorts hook items by their priorities in the descending order,
+      so the item with the highest priority goes first.
+
+      :param name: A hook name.
+
+      :returns:
+
+                A list of all the hook items
+                    registered under the specified hook name.
+      :rtype: list[HookItem]
+
+      :raises HookNotFoundError: If the hook name has no registered hook items.
+
+
+

@@ -1,0 +1,53 @@
+ :py:mod:`oa.animation.tools.capture.versionExporter`
+==========================================================================================================
+
+.. py:module:: oa.animation.tools.capture.versionExporter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.capture.versionExporter.VersionExporter
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.capture.versionExporter.versionExporter
+
+
+.. py:class:: VersionExporter
+
+   .. py:method:: checkIn(localFilePath, destFilePath, Annotation='automatically exported', versionLimit=-1)
+
+
+   .. py:method:: __decreaseVersion__(destOldDirName, fileName, maxVersion, versionLimit)
+
+
+   .. py:method:: putAnnotation(Annotation, destFilePath)
+
+
+   .. py:method:: __getMaxVersion__(destOldDirName, fileName)
+
+
+   .. py:method:: isWriteProtected(destFilePath)
+
+
+   .. py:method:: close()
+
+
+
+.. py:data:: versionExporter
+   
+
+   
+

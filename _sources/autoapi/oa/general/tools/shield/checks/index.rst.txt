@@ -1,0 +1,16 @@
+ :py:mod:`oa.general.tools.shield.checks`
+==================================================================================
+
+.. py:module:: oa.general.tools.shield.checks
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   assets/index.rst
+   scenes/index.rst
+
+

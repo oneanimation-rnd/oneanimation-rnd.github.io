@@ -1,0 +1,41 @@
+ :py:mod:`bd.api.utils.decorators`
+====================================================================
+
+.. py:module:: bd.api.utils.decorators
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.api.utils.decorators.loop
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.api.utils.decorators.this
+   bd.api.utils.decorators._log
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:function:: loop(func)
+
+

@@ -1,0 +1,31 @@
+ :py:mod:`oa.animation.tools.capture`
+==========================================================================
+
+.. py:module:: oa.animation.tools.capture
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   resources/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   capture_cam/index.rst
+   capture_cp/index.rst
+   capture_maya/index.rst
+   capture_utils/index.rst
+   file_browser_widget/index.rst
+   slate_info/index.rst
+   thread_worker/index.rst
+   versionExporter/index.rst
+
+

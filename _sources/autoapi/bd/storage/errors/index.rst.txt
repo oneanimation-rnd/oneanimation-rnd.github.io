@@ -1,0 +1,252 @@
+ :py:mod:`bd.storage.errors`
+========================================================
+
+.. py:module:: bd.storage.errors
+
+
+Module Contents
+---------------
+
+.. py:exception:: StorageError
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: StorageNotFoundError
+
+   Bases: :py:obj:`StorageError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: ItemError
+
+   Bases: :py:obj:`StorageError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: ItemNotFoundError
+
+   Bases: :py:obj:`ItemError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: ItemLoadingError
+
+   Bases: :py:obj:`ItemError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: InputError
+
+   Bases: :py:obj:`StorageError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: MetadataSerializationError
+
+   Bases: :py:obj:`StorageError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: ProjectNameNotFound
+
+   Bases: :py:obj:`StorageError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: FormatterError
+
+   Bases: :py:obj:`StorageError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: FormattingError
+
+   Bases: :py:obj:`FormatterError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: ParsingError
+
+   Bases: :py:obj:`FormatterError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: NotSequenceItemError
+
+   Bases: :py:obj:`StorageError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: SchemaError
+
+   Bases: :py:obj:`StorageError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: SchemaConfigError
+
+   Bases: :py:obj:`SchemaError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: AccessorError
+
+   Bases: :py:obj:`StorageError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: AccessorCreationError
+
+   Bases: :py:obj:`AccessorError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: AdapterError
+
+   Bases: :py:obj:`StorageError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: AdapterCreationError
+
+   Bases: :py:obj:`AdapterError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: ComponentError
+
+   Bases: :py:obj:`StorageError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: ComponentRemoveError
+
+   Bases: :py:obj:`ComponentError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: RevisionPublishError
+
+   Bases: :py:obj:`ComponentError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: RevisionAcquireError
+
+   Bases: :py:obj:`ComponentError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: RevisionCreateError
+
+   Bases: :py:obj:`ComponentError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: UserRequestError
+
+   Bases: :py:obj:`ComponentError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: RevisionsGetError
+
+   Bases: :py:obj:`ComponentError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: RevisionOwnershipError
+
+   Bases: :py:obj:`ComponentError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:exception:: RevisionRemoveError
+
+   Bases: :py:obj:`ComponentError`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+

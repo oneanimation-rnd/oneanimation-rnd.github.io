@@ -1,0 +1,62 @@
+ :py:mod:`oa_shot_builder.libs.state`
+==========================================================================
+
+.. py:module:: oa_shot_builder.libs.state
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.state.States
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.state.get_state
+   oa_shot_builder.libs.state.get_states
+   oa_shot_builder.libs.state.change_state
+   oa_shot_builder.libs.state.enter_state
+   oa_shot_builder.libs.state.exit_state
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.state._states
+
+
+.. py:class:: States
+
+
+.. py:data:: _states
+   
+
+   
+
+.. py:function:: get_state()
+
+
+.. py:function:: get_states()
+
+
+.. py:function:: change_state(state)
+
+
+.. py:function:: enter_state(state)
+
+
+.. py:function:: exit_state()
+
+

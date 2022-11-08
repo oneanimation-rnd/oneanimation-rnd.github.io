@@ -1,0 +1,59 @@
+ :py:mod:`bd.api.constants`
+======================================================
+
+.. py:module:: bd.api.constants
+
+
+Module Contents
+---------------
+
+.. py:data:: CACHE_DIR
+   
+
+   
+
+.. py:data:: CACHE_KEY_IDENTITY
+   :annotation: = credentials
+
+   
+
+.. py:data:: CLIENT_ID
+   
+
+   
+
+.. py:data:: AUTH0_DOMAIN
+   
+
+   
+
+.. py:data:: GRANT_TYPE_URL
+   :annotation: = http://auth0.com/oauth/grant-type/passwordless/otp
+
+   
+
+.. py:data:: GRAPHQL_WSS_URL
+   
+
+   
+
+.. py:data:: GRAPHQL_HTTPS_URL
+   
+
+   
+
+.. py:data:: EXECUTION_TIMEOUT
+   :annotation: = 5
+
+   
+
+.. py:data:: CONNECTION_TIMEOUT
+   :annotation: = 10
+
+   
+
+.. py:data:: INITIALIZED_TIMEOUT
+   :annotation: = 30
+
+   
+

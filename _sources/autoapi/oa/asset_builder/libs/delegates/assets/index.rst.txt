@@ -1,0 +1,73 @@
+ :py:mod:`oa.asset_builder.libs.delegates.assets`
+==================================================================================================
+
+.. py:module:: oa.asset_builder.libs.delegates.assets
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.libs.delegates.assets.AssetsDelegate
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset_builder.libs.delegates.assets.this
+   oa.asset_builder.libs.delegates.assets._log
+   oa.asset_builder.libs.delegates.assets._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:class:: AssetsDelegate(root_node, description, abc_path)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: setup()
+
+
+   .. py:method:: get_subnet()
+
+
+   .. py:method:: _create_subnet()
+
+
+   .. py:method:: _destroy_subnet()
+
+
+   .. py:method:: get_assets()
+
+
+   .. py:method:: _update_assets(asset_descriptions)
+
+
+   .. py:method:: _load_asset(asset_description)
+
+
+   .. py:method:: _build_asset(source_asset_path)
+
+
+

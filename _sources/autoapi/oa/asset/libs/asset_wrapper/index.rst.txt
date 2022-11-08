@@ -1,0 +1,74 @@
+ :py:mod:`oa.asset.libs.asset_wrapper`
+============================================================================
+
+.. py:module:: oa.asset.libs.asset_wrapper
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.asset_wrapper.AssetWrapper
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.asset_wrapper.get_weak_ref
+
+
+
+.. py:function:: get_weak_ref(obj, attr)
+
+   Gets and returns the attribute's weak reference that it's pointing to.
+
+
+.. py:class:: AssetWrapper(collect=True)
+
+   Bases: :py:obj:`object`
+
+   Wrapper to collect an asset's information.
+
+   .. py:method:: get_task_data()
+
+
+   .. py:method:: get_local_dir()
+
+
+   .. py:method:: get_base_name()
+
+
+   .. py:method:: get_id()
+
+
+   .. py:method:: get_temp_dir()
+
+
+   .. py:method:: make_temp_thumbnail_path()
+
+
+   .. py:method:: copy_thumbnail_to_temp(thumbnail)
+
+
+   .. py:method:: remove_temp_thumbnail()
+
+
+   .. py:method:: get_resolutions()
+
+      Get resolution objects and file names
+
+
+   .. py:method:: collect_data()
+
+
+   .. py:method:: set_time()
+
+
+

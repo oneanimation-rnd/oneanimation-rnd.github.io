@@ -1,0 +1,17 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.classes`
+==============================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.classes
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   command_edit_weights/index.rst
+   command_lock_infs/index.rst
+   hotkey/index.rst
+
+

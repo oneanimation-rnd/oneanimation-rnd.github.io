@@ -1,0 +1,18 @@
+ :py:mod:`oa.rnd.tools.batch_asset_replacer.widgets`
+========================================================================================================
+
+.. py:module:: oa.rnd.tools.batch_asset_replacer.widgets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   ascii_progress_bar/index.rst
+   mapping_widget/index.rst
+   scene_view/index.rst
+   syntax/index.rst
+
+

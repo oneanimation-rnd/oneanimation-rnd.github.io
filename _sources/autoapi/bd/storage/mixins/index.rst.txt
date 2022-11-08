@@ -1,0 +1,98 @@
+ :py:mod:`bd.storage.mixins`
+========================================================
+
+.. py:module:: bd.storage.mixins
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.mixins.TagsMixin
+   bd.storage.mixins.FieldsMixin
+   bd.storage.mixins.ChainItemMixin
+
+
+
+
+.. py:class:: TagsMixin(tags)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: tags
+
+
+   .. py:property:: common_tags
+
+
+   .. py:property:: extra_tags
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+
+.. py:class:: FieldsMixin(fields=None)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: fields
+
+
+   .. py:property:: common_fields
+
+
+   .. py:property:: extra_fields
+
+
+   .. py:method:: get_field(name)
+
+
+   .. py:method:: __str__()
+
+      Return str(self).
+
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+
+.. py:class:: ChainItemMixin
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: iter_chain(upstream=True)
+
+
+   .. py:method:: set_next_item(item)
+
+
+   .. py:method:: set_prev_item(item)
+
+
+   .. py:method:: get_upstream_item()
+
+
+   .. py:method:: get_downstream_item()
+
+
+   .. py:method:: add_upstream_item(item)
+
+
+   .. py:method:: add_downstream_item(item)
+
+
+

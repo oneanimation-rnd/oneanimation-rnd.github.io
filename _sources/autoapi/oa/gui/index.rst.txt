@@ -1,0 +1,16 @@
+ :py:mod:`oa.gui`
+==================================
+
+.. py:module:: oa.gui
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   libs/index.rst
+   tools/index.rst
+
+

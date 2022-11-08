@@ -1,0 +1,94 @@
+ :py:mod:`oa.general.libs.transfer_utils`
+==================================================================================
+
+.. py:module:: oa.general.libs.transfer_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.transfer_utils.Transfer
+
+
+
+
+.. py:exception:: UploadError
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+   Initialize self.  See help(type(self)) for accurate signature.
+
+
+.. py:class:: Transfer(**kwargs)
+
+   Bases: :py:obj:`object`
+
+   .. py:attribute:: ValidatorHost
+      :annotation: = 192.168.10.128
+
+      
+
+   .. py:method:: has_connection(host)
+      :staticmethod:
+
+
+   .. py:method:: versioned_paths(path)
+      :staticmethod:
+
+
+   .. py:method:: last_version(path)
+      :staticmethod:
+
+
+   .. py:method:: last_versioned_path(path)
+      :staticmethod:
+
+
+   .. py:method:: next_versioned_path(path)
+      :staticmethod:
+
+
+   .. py:method:: make_dir(path)
+      :staticmethod:
+
+
+   .. py:method:: make_temp_path()
+      :staticmethod:
+
+
+   .. py:method:: wfh_delete(paths)
+      :classmethod:
+
+
+   .. py:method:: clear_uploaded_files()
+
+
+   .. py:method:: remove_uploaded_files()
+
+
+   .. py:method:: create_annotation(path, annotation, **metadata)
+
+
+   .. py:method:: upload(source_path, dest_path)
+
+
+   .. py:method:: upload_zip(source_path, dest_path)
+
+
+   .. py:method:: upload_annotation(path, annotation, **metadata)
+
+
+   .. py:method:: delete(path)
+
+
+   .. py:method:: read(path)
+
+
+

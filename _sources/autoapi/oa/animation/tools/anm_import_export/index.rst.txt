@@ -1,0 +1,16 @@
+ :py:mod:`oa.animation.tools.anm_import_export`
+==============================================================================================
+
+.. py:module:: oa.animation.tools.anm_import_export
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   exporter/index.rst
+   importer/index.rst
+
+

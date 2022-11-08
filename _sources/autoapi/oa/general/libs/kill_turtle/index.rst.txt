@@ -1,0 +1,34 @@
+ :py:mod:`oa.general.libs.kill_turtle`
+============================================================================
+
+.. py:module:: oa.general.libs.kill_turtle
+
+.. autoapi-nested-parse::
+
+   Turtle is a native plugin for rendering.
+   When Turtle is enabled and a scene saves it writes a 'requires' line in the file, which auto-loads the plugin and its nodes when the scene is re-opened.
+   This makes it difficult to completely remove and spreads like a virus.
+
+   This module is an attempt to remove it like the tick it is.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.kill_turtle.kill_the_turtle
+
+
+
+.. py:function:: kill_the_turtle()
+
+

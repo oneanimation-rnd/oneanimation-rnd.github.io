@@ -1,0 +1,192 @@
+ :py:mod:`oa.animation.tools.deform_tool.deform_tool`
+==========================================================================================================
+
+.. py:module:: oa.animation.tools.deform_tool.deform_tool
+
+.. autoapi-nested-parse::
+
+   Deform Tool
+
+   Based on Enrique's tool from Softimage to link points from a lattice to a plane to make it easier to deform the target meshes.
+
+   Author:
+       Jason Labbe
+
+   Usage:
+       launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.deform_tool.deform_tool.DeformTool
+   oa.animation.tools.deform_tool.deform_tool.CreateDialog
+   oa.animation.tools.deform_tool.deform_tool.ShortcutManager
+   oa.animation.tools.deform_tool.deform_tool.IconButton
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.deform_tool.deform_tool.launch
+
+
+
+.. py:class:: DeformTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QMainWindow`
+
+   .. py:attribute:: shotcut_manager
+      
+
+      
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: setup_shortcuts()
+
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: on_show_keys_shortcut_triggered()
+
+
+   .. py:method:: on_item_clicked(item)
+
+
+   .. py:method:: on_create_dialog_clicked()
+
+
+   .. py:method:: on_create_dialog_finished(status)
+
+
+   .. py:method:: on_create_dialog_request_resize(width, height)
+
+
+   .. py:method:: on_delete_clicked()
+
+
+   .. py:method:: on_set_key_clicked()
+
+
+   .. py:method:: on_show_keys_clicked()
+
+
+   .. py:method:: on_delete_key_clicked()
+
+
+   .. py:method:: on_prev_key_clicked()
+
+
+   .. py:method:: on_next_key_clicked()
+
+
+   .. py:method:: on_reset_to_rest_clicked()
+
+
+   .. py:method:: save_settings()
+
+
+   .. py:method:: update_list()
+
+
+   .. py:method:: show_help_page()
+
+
+
+.. py:class:: CreateDialog(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: finished
+      
+
+      
+
+   .. py:attribute:: request_resize
+      
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: on_name_text_changed()
+
+
+   .. py:method:: on_add_parent_clicked()
+
+
+   .. py:method:: on_select_meshes_clicked()
+
+
+   .. py:method:: on_attach_clicked()
+
+
+   .. py:method:: on_width_divisions_changed(value)
+
+
+   .. py:method:: on_height_divisions_changed(value)
+
+
+   .. py:method:: on_commit_clicked()
+
+
+   .. py:method:: on_cancel_clicked()
+
+
+   .. py:method:: has_lattice_objs()
+
+
+   .. py:method:: delete_lattice_objs()
+
+
+   .. py:method:: reset()
+
+
+   .. py:method:: validate_name()
+
+
+
+.. py:class:: ShortcutManager
+
+   .. py:method:: add_shortcut(modifiers, key)
+
+
+   .. py:method:: unregister_all()
+
+
+
+.. py:class:: IconButton(priority, caption=None, img=None, icon_size=QtCore.QSize(20, 20), parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QPushButton`
+
+   .. py:attribute:: double_clicked
+      
+
+      
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+
+
+.. py:function:: launch()
+
+

@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.rigging.tools.auto_rigging.rigging_utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.rigging.tools.calisthenics" href="../../calisthenics/index.html" />
+    <link rel="prev" title=" oa.rigging.tools.auto_rigging.oddbods_extra" href="../oddbods_extra/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.auto_rigging</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/rigging/tools/auto_rigging/rigging_utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.rigging.tools.auto_rigging.rigging_utils">
+<span id="oa-rigging-tools-auto-rigging-rigging-utils"></span><h1> <a class="reference internal" href="#module-oa.rigging.tools.auto_rigging.rigging_utils" title="oa.rigging.tools.auto_rigging.rigging_utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils</span></code></a><a class="headerlink" href="#module-oa.rigging.tools.auto_rigging.rigging_utils" title="Permalink to this heading"></a></h1>
+<p>This file holds a collection of generic helper functions to use across other modules.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper" title="oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObjectWrapper</span></code></a></p></td>
+<td><p>Wrapper for a maya node so it's not name dependent.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_annotation" title="oa.rigging.tools.auto_rigging.rigging_utils.create_annotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_annotation</span></code></a>(start_obj, end_obj[, caption, name])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_maya_window" title="oa.rigging.tools.auto_rigging.rigging_utils.get_maya_window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_maya_window</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.popup_error_msg" title="oa.rigging.tools.auto_rigging.rigging_utils.popup_error_msg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">popup_error_msg</span></code></a>(title, msg[, icon, parent])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_centroid_by_cvs" title="oa.rigging.tools.auto_rigging.rigging_utils.get_centroid_by_cvs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_centroid_by_cvs</span></code></a>(obj)</p></td>
+<td><p>Collects all cv positions and gets the centroid of them.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.unlock_template" title="oa.rigging.tools.auto_rigging.rigging_utils.unlock_template"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unlock_template</span></code></a>(rig_template)</p></td>
+<td><p>Removes all locks/expressions and freezes scale/joint rotation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_template_objs" title="oa.rigging.tools.auto_rigging.rigging_utils.get_template_objs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_template_objs</span></code></a>(template)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_weak_ref" title="oa.rigging.tools.auto_rigging.rigging_utils.create_weak_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_weak_ref</span></code></a>(obj, target, attr_name)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param obj</dt>
+<dd class="field-odd"><p>An object to add weak reference to.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_weak_ref" title="oa.rigging.tools.auto_rigging.rigging_utils.get_weak_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_weak_ref</span></code></a>(obj, attr_name)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param obj</dt>
+<dd class="field-odd"><p>An object to get weak reference from.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.tag_socket" title="oa.rigging.tools.auto_rigging.rigging_utils.tag_socket"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tag_socket</span></code></a>(obj, socket_name)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param obj</dt>
+<dd class="field-odd"><p>An object to add a new socket to.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.tag_plug" title="oa.rigging.tools.auto_rigging.rigging_utils.tag_plug"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tag_plug</span></code></a>(obj, socket_name, plug_type)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param obj</dt>
+<dd class="field-odd"><p>An object to add a new plug to.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.connect_plugs" title="oa.rigging.tools.auto_rigging.rigging_utils.connect_plugs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">connect_plugs</span></code></a>(root_nul)</p></td>
+<td><p>Finds all plugs and sockets in the scene and connects them together by</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_sdk" title="oa.rigging.tools.auto_rigging.rigging_utils.set_sdk"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_sdk</span></code></a>(driver, driven, values[, in_tangent, out_tangent])</p></td>
+<td><p>Quicker way to set a series of set driven keys.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_joint_label" title="oa.rigging.tools.auto_rigging.rigging_utils.set_joint_label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_joint_label</span></code></a>(jnt)</p></td>
+<td><p>Automates the joint's label to use for mirroring skin weights.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.remove_skin_jnt" title="oa.rigging.tools.auto_rigging.rigging_utils.remove_skin_jnt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_skin_jnt</span></code></a>(objs)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.tag_skin_jnt" title="oa.rigging.tools.auto_rigging.rigging_utils.tag_skin_jnt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tag_skin_jnt</span></code></a>(obj)</p></td>
+<td><p>Makes joint easily identifiable that it's for skinning.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_skin_jnts" title="oa.rigging.tools.auto_rigging.rigging_utils.get_skin_jnts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_skin_jnts</span></code></a>()</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>All tagged skin joints in the scene.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.bind_skin_jnts" title="oa.rigging.tools.auto_rigging.rigging_utils.bind_skin_jnts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bind_skin_jnts</span></code></a>()</p></td>
+<td><p>Binds skin joints to selected mesh objects.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.align" title="oa.rigging.tools.auto_rigging.rigging_utils.align"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align</span></code></a>(obj, target[, pos, rot])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param obj</dt>
+<dd class="field-odd"><p>Object to align.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.align_and_offset" title="oa.rigging.tools.auto_rigging.rigging_utils.align_and_offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">align_and_offset</span></code></a>(obj, target, offset_x, offset_y, offset_z)</p></td>
+<td><p>Aligns to target with the supplied offset from the target's local space.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_matrix" title="oa.rigging.tools.auto_rigging.rigging_utils.get_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_matrix</span></code></a>(obj)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>A MTransformationMatrix object in world space.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_axis_dir" title="oa.rigging.tools.auto_rigging.rigging_utils.get_axis_dir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_axis_dir</span></code></a>(obj, axis, direction)</p></td>
+<td><p>Determines in world space what direction an object's axis is facing.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_distance" title="oa.rigging.tools.auto_rigging.rigging_utils.get_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_distance</span></code></a>(obj_1, obj_2)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">returns</dt>
+<dd class="field-odd"><p>The total distance of both supplied objects.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_between_pos" title="oa.rigging.tools.auto_rigging.rigging_utils.get_between_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_between_pos</span></code></a>(start_pos, end_pos, percent)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param start_pos</dt>
+<dd class="field-odd"><p>A list to define the starting position.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_group" title="oa.rigging.tools.auto_rigging.rigging_utils.create_group"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_group</span></code></a>([name, parent_obj, align_obj])</p></td>
+<td><p>Creates an empty group.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_locator" title="oa.rigging.tools.auto_rigging.rigging_utils.create_locator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_locator</span></code></a>([name, parent_obj, align_obj, size, color])</p></td>
+<td><p>Creates a locator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_joint" title="oa.rigging.tools.auto_rigging.rigging_utils.create_joint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_joint</span></code></a>([name, parent_obj, align_obj, size, ...])</p></td>
+<td><p>Creates a joint.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_control" title="oa.rigging.tools.auto_rigging.rigging_utils.create_control"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_control</span></code></a>([name, style, parent_obj, align_obj, ...])</p></td>
+<td><p>Creates a control object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_ik_handle" title="oa.rigging.tools.auto_rigging.rigging_utils.create_ik_handle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_ik_handle</span></code></a>(start_joint, end_joint, solver[, ...])</p></td>
+<td><p>Creates an ik handle.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_cluster" title="oa.rigging.tools.auto_rigging.rigging_utils.create_cluster"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_cluster</span></code></a>(components[, parent_obj, name, color])</p></td>
+<td><p>Creates a cluster deformer and binds the supplied components to it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.insert_nul" title="oa.rigging.tools.auto_rigging.rigging_utils.insert_nul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insert_nul</span></code></a>(obj[, name])</p></td>
+<td><p>Inserts an aligned group between the supplied object and its parent.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.offset_shape" title="oa.rigging.tools.auto_rigging.rigging_utils.offset_shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">offset_shape</span></code></a>(curve_obj, x, y, z[, os])</p></td>
+<td><p>Offsets a shape without effecting its pivot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.rotate_shape" title="oa.rigging.tools.auto_rigging.rigging_utils.rotate_shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rotate_shape</span></code></a>(curve_obj, x, y, z)</p></td>
+<td><p>Rotates a shape without effecting its pivot.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.scale_shape" title="oa.rigging.tools.auto_rigging.rigging_utils.scale_shape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale_shape</span></code></a>(curve_obj, x, y, z)</p></td>
+<td><p>Scales a shape without effecting its pivot.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_color" title="oa.rigging.tools.auto_rigging.rigging_utils.set_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_color</span></code></a>(obj, color)</p></td>
+<td><p>Sets wirecolor of all a transform's shapes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.duplicate_joint_chain" title="oa.rigging.tools.auto_rigging.rigging_utils.duplicate_joint_chain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">duplicate_joint_chain</span></code></a>(objs)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param objs</dt>
+<dd class="field-odd"><p>A list of joint objects.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_axis_order" title="oa.rigging.tools.auto_rigging.rigging_utils.set_axis_order"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_axis_order</span></code></a>(obj, axis)</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param obj</dt>
+<dd class="field-odd"><p>An object's name.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_lock_flags" title="oa.rigging.tools.auto_rigging.rigging_utils.set_lock_flags"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_lock_flags</span></code></a>(obj, unlock_flags)</p></td>
+<td><p>A quick function to set what transforms remain unlocked.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_limits" title="oa.rigging.tools.auto_rigging.rigging_utils.set_limits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_limits</span></code></a>(obj, limit_sets)</p></td>
+<td><p>Sets transform limits on the supplied object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.attach_follicle" title="oa.rigging.tools.auto_rigging.rigging_utils.attach_follicle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">attach_follicle</span></code></a>(obj[, u_value, v_value, name])</p></td>
+<td><p>Attaches a hair follicle to a mesh object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.attach_motion_path" title="oa.rigging.tools.auto_rigging.rigging_utils.attach_motion_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">attach_motion_path</span></code></a>(path, target[, u_value, follow, ...])</p></td>
+<td><p>Manually creates a new motion path and attaches the supplied object to it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.constraint_joints" title="oa.rigging.tools.auto_rigging.rigging_utils.constraint_joints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">constraint_joints</span></code></a>(blend_jnts, ik_jnts, fk_jnts, blend_plug)</p></td>
+<td><p>This is used to constrain nodes to blend between ik and fk.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_fk_chain" title="oa.rigging.tools.auto_rigging.rigging_utils.create_fk_chain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_fk_chain</span></code></a>(joints[, skip_last_jnt, size, name, ...])</p></td>
+<td><p>Creates a simple fk chain with controls.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_stretchy_bones" title="oa.rigging.tools.auto_rigging.rigging_utils.create_stretchy_bones"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_stretchy_bones</span></code></a>(joints[, mirrored, size, name, ...])</p></td>
+<td><p>Creates an fk chain that is able to squash and stretch.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_outliner_colors" title="oa.rigging.tools.auto_rigging.rigging_utils.set_outliner_colors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_outliner_colors</span></code></a>([controlColor, rootColor])</p></td>
+<td><p>Sets colors to control objects so they show up differently in the outliner.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_outliner_visibility" title="oa.rigging.tools.auto_rigging.rigging_utils.set_outliner_visibility"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_outliner_visibility</span></code></a>()</p></td>
+<td><p>Cleans up hierarchy so that only objects that contain a control object are visible.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_snap_objects" title="oa.rigging.tools.auto_rigging.rigging_utils.get_snap_objects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_snap_objects</span></code></a>()</p></td>
+<td><p>Checks if selection is tagged to support snapping and gets its objects</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.snap_ik_to_fk_arm" title="oa.rigging.tools.auto_rigging.rigging_utils.snap_ik_to_fk_arm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">snap_ik_to_fk_arm</span></code></a>([set_keys])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param set_keys</dt>
+<dd class="field-odd"><p>Sets keys on previous and current frame on all controls.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.snap_fk_to_ik_arm" title="oa.rigging.tools.auto_rigging.rigging_utils.snap_fk_to_ik_arm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">snap_fk_to_ik_arm</span></code></a>([set_keys])</p></td>
+<td><p><dl class="field-list simple">
+<dt class="field-odd">param set_keys</dt>
+<dd class="field-odd"><p>Sets keys on previous and current frame on all controls.</p>
+</dd>
+</dl>
+</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_cubic_curve" title="oa.rigging.tools.auto_rigging.rigging_utils.create_cubic_curve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_cubic_curve</span></code></a>(positions[, color, parent_obj, name])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_pole_vector_line" title="oa.rigging.tools.auto_rigging.rigging_utils.create_pole_vector_line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_pole_vector_line</span></code></a>(obj_1, obj_2[, vis_obj, ...])</p></td>
+<td><p>Connects a line supplied objects to represent a pole vector.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.add_offset_ctrl" title="oa.rigging.tools.auto_rigging.rigging_utils.add_offset_ctrl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_offset_ctrl</span></code></a>(root_nul, cog_ctrl, body_ctrl, ...[, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_rig_stucture" title="oa.rigging.tools.auto_rigging.rigging_utils.create_rig_stucture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_rig_stucture</span></code></a>([srt_style, cog_style, size])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.import_scene" title="oa.rigging.tools.auto_rigging.rigging_utils.import_scene"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_scene</span></code></a>(path)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.import_template" title="oa.rigging.tools.auto_rigging.rigging_utils.import_template"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_template</span></code></a>(template_type)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.save_template" title="oa.rigging.tools.auto_rigging.rigging_utils.save_template"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_template</span></code></a>([no_popups, confirm])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_space_switch" title="oa.rigging.tools.auto_rigging.rigging_utils.create_space_switch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_space_switch</span></code></a>(obj, attr_holder, prefix, spaces, ...)</p></td>
+<td><p>Automates setup to switch an object to a different rotational space.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">ObjectWrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">maya.OpenMaya.MDagPath</span></code></p>
+<p>Wrapper for a maya node so it’s not name dependent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj_name</strong> (<em>string</em>) – An existing object to wrap.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.__str__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.__repr__">
+<span class="sig-name descname"><span class="pre">__repr__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.__repr__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.__hash__">
+<span class="sig-name descname"><span class="pre">__hash__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.__hash__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.__add__">
+<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.__add__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.__radd__">
+<span class="sig-name descname"><span class="pre">__radd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.__radd__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.name">
+<span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.rename">
+<span class="sig-name descname"><span class="pre">rename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.rename" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.parent">
+<span class="sig-name descname"><span class="pre">parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_parent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper.parent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_annotation">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_annotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'annotation'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_annotation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.get_maya_window">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">get_maya_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_maya_window" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.popup_error_msg">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">popup_error_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.popup_error_msg" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.get_centroid_by_cvs">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">get_centroid_by_cvs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_centroid_by_cvs" title="Permalink to this definition"></a></dt>
+<dd><p>Collects all cv positions and gets the centroid of them.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.unlock_template">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">unlock_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rig_template</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.unlock_template" title="Permalink to this definition"></a></dt>
+<dd><p>Removes all locks/expressions and freezes scale/joint rotation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of all the template objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.get_template_objs">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">get_template_objs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_template_objs" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_weak_ref">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_weak_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_weak_ref" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – An object to add weak reference to.</p></li>
+<li><p><strong>target</strong> (<em>string</em>) – An object to be weak referenced.</p></li>
+<li><p><strong>attr_name</strong> (<em>string</em>) – The attribute’s name to refer to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.get_weak_ref">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">get_weak_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_weak_ref" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – An object to get weak reference from.</p></li>
+<li><p><strong>attr_name</strong> (<em>string</em>) – The attribute’s name.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The object that is being weak referenced or None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.tag_socket">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">tag_socket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socket_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.tag_socket" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – An object to add a new socket to.</p></li>
+<li><p><strong>socket_name</strong> (<em>string</em>) – A unique name to identify this socket.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.tag_plug">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">tag_plug</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">socket_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plug_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.tag_plug" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – An object to add a new plug to.</p></li>
+<li><p><strong>socket_name</strong> (<em>string</em>) – Name of a socket this plug should connect to.</p></li>
+<li><p><strong>plug_type</strong> (<em>string</em>) – The operation it should do when connecting to a socket.
+Plug types are “parent”, “parentConstraint”, “pointConstraint”, “orientConstraint”, “scaleConstraint”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.connect_plugs">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">connect_plugs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_nul</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.connect_plugs" title="Permalink to this definition"></a></dt>
+<dd><p>Finds all plugs and sockets in the scene and connects them together by
+matching their names.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.set_sdk">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">set_sdk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">driven</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_tangent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_tangent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_sdk" title="Permalink to this definition"></a></dt>
+<dd><p>Quicker way to set a series of set driven keys.
+:param driver: Object and attribute name.
+:type driver: string
+:param driven: Object and attribute name.
+:type driven: string
+:param values: {driver_value:driven_value}
+:type values: dict
+:param in_tangent:
+:type in_tangent: string
+:param out_tangent:
+:type out_tangent: string</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.set_joint_label">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">set_joint_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jnt</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_joint_label" title="Permalink to this definition"></a></dt>
+<dd><p>Automates the joint’s label to use for mirroring skin weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jnt</strong> (<em>string</em>) – A joint object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.remove_skin_jnt">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">remove_skin_jnt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.remove_skin_jnt" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.tag_skin_jnt">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">tag_skin_jnt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.tag_skin_jnt" title="Permalink to this definition"></a></dt>
+<dd><p>Makes joint easily identifiable that it’s for skinning.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.get_skin_jnts">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">get_skin_jnts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_skin_jnts" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>All tagged skin joints in the scene.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.bind_skin_jnts">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">bind_skin_jnts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.bind_skin_jnts" title="Permalink to this definition"></a></dt>
+<dd><p>Binds skin joints to selected mesh objects.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.align">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">align</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.align" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – Object to align.</p></li>
+<li><p><strong>target</strong> (<em>string</em>) – Object to align to.</p></li>
+<li><p><strong>pos</strong> (<em>bool</em>) – Aligns position if True.</p></li>
+<li><p><strong>rot</strong> (<em>bool</em>) – Aligns rotation if True.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.align_and_offset">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">align_and_offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.align_and_offset" title="Permalink to this definition"></a></dt>
+<dd><p>Aligns to target with the supplied offset from the target’s local space.
+:param obj: Object to align.
+:type obj: string
+:param target: Object to align to.
+:type target: string
+:param offset_x: Offset in world x axis.
+:type offset_x: float
+:param offset_y: Offset in world y axis.
+:type offset_y: float
+:param offset_z: Offset in world z axis.
+:type offset_z: float</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.get_matrix">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">get_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_matrix" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A MTransformationMatrix object in world space.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.get_axis_dir">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">get_axis_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_axis_dir" title="Permalink to this definition"></a></dt>
+<dd><p>Determines in world space what direction an object’s axis is facing.
+This is used mostly to determine if an axis was mirrored or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – An object’s name.</p></li>
+<li><p><strong>axis</strong> (<em>string</em>) – The object’s local axis to check with.
+Value can be x, y, or z.</p></li>
+<li><p><strong>direction</strong> (<em>string</em>) – The world space direction to see what way the axis is facing.
+Value can be x (left &amp; right), y (up &amp; down), or z (backwards &amp; forwards).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Either 1 or -1 depending on the direction the axis is facing.
+x: 1=left, -1=down
+y: 1=up, -1=down
+z: 1=forwards, -1=backwards</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.get_distance">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">get_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj_2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_distance" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The total distance of both supplied objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.get_between_pos">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">get_between_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">percent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_between_pos" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_pos</strong> (<em>float</em><em>[</em><em>]</em>) – A list to define the starting position.</p></li>
+<li><p><strong>end_pos</strong> (<em>float</em><em>[</em><em>]</em>) – A list to define the ending position.</p></li>
+<li><p><strong>percent</strong> (<em>float</em>) – A number between 0.0 to 1.0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list to define the position between the start and end points.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_group">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'newGroup'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_group" title="Permalink to this definition"></a></dt>
+<dd><p>Creates an empty group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – The group’s name.</p></li>
+<li><p><strong>parent_obj</strong> (<em>string</em>) – An object to parent the group to.</p></li>
+<li><p><strong>align_obj</strong> (<em>string</em>) – An object to align the group to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An ObjectWrapper of the new group.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_locator">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_locator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'newLocator'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">13</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_locator" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a locator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – The locator’s name.</p></li>
+<li><p><strong>parent_obj</strong> (<em>string</em>) – An object to parent the locator to.</p></li>
+<li><p><strong>align_obj</strong> (<em>string</em>) – An object to align the locator to.</p></li>
+<li><p><strong>size</strong> (<em>float</em>) – The amount to set the locator’s localScale.</p></li>
+<li><p><strong>color</strong> (<em>int</em>) – Sets the locator’s color by Maya’s built-in color index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An ObjectWrapper of the new locator.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_joint">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_joint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'newJoint'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">28</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_jnt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_joint" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a joint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – The joint’s name.</p></li>
+<li><p><strong>parent_obj</strong> (<em>string</em>) – An object to parent the joint to.</p></li>
+<li><p><strong>align_obj</strong> (<em>string</em>) – An object to align the joint to.</p></li>
+<li><p><strong>size</strong> (<em>float</em>) – The amount to set the joint’s radius.</p></li>
+<li><p><strong>color</strong> (<em>int</em>) – Sets the joint’s color by Maya’s built-in color index.</p></li>
+<li><p><strong>skin_jnt</strong> (<em>bool</em>) – Tag joint as a skinning joint.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An ObjectWrapper of the new joint.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_control">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_control</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'newControl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cube'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_nul</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rot_offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_control" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a control object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>) – The control’s name.</p></li>
+<li><p><strong>style</strong> (<em>string</em>) – Control’s drawing style.</p></li>
+<li><p><strong>parent_obj</strong> (<em>string</em>) – An object to parent the control to.</p></li>
+<li><p><strong>align_obj</strong> (<em>string</em>) – An object to align the control to.</p></li>
+<li><p><strong>size</strong> (<em>float</em>) – The amount to set the control’s size.</p></li>
+<li><p><strong>color</strong> (<em>int</em>) – Sets the control’s color by Maya’s built-in color index.</p></li>
+<li><p><strong>add_nul</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>locks</strong> (<em>str</em><em>[</em><em>]</em>) – Supply a list of attributes that will remain unlock.</p></li>
+<li><p><strong>axis</strong> (<em>str</em>) – The axis order to switch the control to.</p></li>
+<li><p><strong>rot_offset</strong> (<em>float</em><em>[</em><em>]</em>) – A 3 float vector to offset control’s shape rotation.</p></li>
+<li><p><strong>offset</strong> (<em>float</em><em>[</em><em>]</em>) – A 3 float vector to offset the control’s shape translation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of the control’s nul and ctrl.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_ik_handle">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_ik_handle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_joint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_joint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pole_vec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'newIkHandle'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_ik_handle" title="Permalink to this definition"></a></dt>
+<dd><p>Creates an ik handle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start_joint</strong> (<em>string</em>) – The joint the ik starts with.</p></li>
+<li><p><strong>end_joint</strong> (<em>string</em>) – The joint the ik ends with.</p></li>
+<li><p><strong>solver</strong> (<em>string</em>) – The solver’s type (see Maya doc).</p></li>
+<li><p><strong>flip</strong> (<em>bool</em>) – Uses the solver’s twist to flip it.</p></li>
+<li><p><strong>priority</strong> (<em>int</em>) – The solver’s priority order.</p></li>
+<li><p><strong>pole_vec</strong> (<em>string</em>) – The object it needs to use as a pole vector.</p></li>
+<li><p><strong>parent_obj</strong> (<em>string</em>) – An object to parent the ik handle to.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – Set’s the ik handle and effector’s names to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The new ik handle.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_cluster">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'newCluster'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_cluster" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a cluster deformer and binds the supplied components to it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>components</strong> (<em>string</em>) – A list of verts to bind to.</p></li>
+<li><p><strong>parent_obj</strong> (<em>string</em>) – An object to parent the cluster to.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – Name of the new cluster object.</p></li>
+<li><p><strong>color</strong> (<em>int</em>) – Maya’s internal color index to set the cluster to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The new cluster.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.insert_nul">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">insert_nul</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'newGroup'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.insert_nul" title="Permalink to this definition"></a></dt>
+<dd><p>Inserts an aligned group between the supplied object and its parent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – Object to insert nul onto.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – Name of the new group.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The new group.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.offset_shape">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">offset_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curve_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">os</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.offset_shape" title="Permalink to this definition"></a></dt>
+<dd><p>Offsets a shape without effecting its pivot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>curve_obj</strong> (<em>string</em>) – Name of a curve shape.</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – Offset in x axis.</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – Offset in y axis.</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – Offset in z axis.</p></li>
+<li><p><strong>os</strong> (<em>bool</em>) – Uses object space by default, or world space on False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.rotate_shape">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">rotate_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curve_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.rotate_shape" title="Permalink to this definition"></a></dt>
+<dd><p>Rotates a shape without effecting its pivot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>curve_obj</strong> (<em>string</em>) – Name of a curve shape.</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – Offset in x axis.</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – Offset in y axis.</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – Offset in z axis.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.scale_shape">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">scale_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curve_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.scale_shape" title="Permalink to this definition"></a></dt>
+<dd><p>Scales a shape without effecting its pivot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>curve_obj</strong> (<em>string</em>) – Name of a curve shape.</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – Offset in x axis.</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – Offset in y axis.</p></li>
+<li><p><strong>z</strong> (<em>float</em>) – Offset in z axis.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.set_color">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">set_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_color" title="Permalink to this definition"></a></dt>
+<dd><p>Sets wirecolor of all a transform’s shapes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – A name of a transform object.</p></li>
+<li><p><strong>color</strong> (<em>int</em><em> or </em><em>float</em><em>[</em><em>]</em>) – A number between 0-31 or 3 floats between 0-1</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.duplicate_joint_chain">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">duplicate_joint_chain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.duplicate_joint_chain" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>objs</strong> (<em>string</em><em>[</em><em>]</em>) – A list of joint objects.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of ObjectWrappers of the new joints.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.set_axis_order">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">set_axis_order</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_axis_order" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – An object’s name.</p></li>
+<li><p><strong>axis</strong> (<em>string</em>) – Options are “xyz”, “yzx”, “zxy”, “xzy”, “yxz”, “zyx”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.set_lock_flags">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">set_lock_flags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unlock_flags</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_lock_flags" title="Permalink to this definition"></a></dt>
+<dd><p>A quick function to set what transforms remain unlocked.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – An object’s name.</p></li>
+<li><p><strong>unlock_flags</strong> (<em>string</em><em>[</em><em>]</em>) – Supply a list of attributes that will remain unlock.
+(Use its short name)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.set_limits">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">set_limits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit_sets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_limits" title="Permalink to this definition"></a></dt>
+<dd><p>Sets transform limits on the supplied object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – An object’s name.</p></li>
+<li><p><strong>limit_sets</strong> (<em>dict</em>) – {“tx”:(-5, 5), “ry”:(-45, 45)}</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.attach_follicle">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">attach_follicle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'newFollicle'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.attach_follicle" title="Permalink to this definition"></a></dt>
+<dd><p>Attaches a hair follicle to a mesh object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – A name of the mesh object to attach to.</p></li>
+<li><p><strong>u_value</strong> (<em>float</em>) – A value between 0.0 to 1.0 to set its horizontal space.</p></li>
+<li><p><strong>v_value</strong> (<em>float</em>) – A value between 0.0 to 1.0 to set its vertical space.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – Name of the new follicle.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of the follicle’s nul and shape.</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Use cmds.polyEditUV(q=True) to get selected uv coords.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.attach_motion_path">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">attach_motion_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">follow</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fraction_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">up_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">up_object</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">world_up_vector</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">follow_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">up_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse_up</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse_front</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bank</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'motionPath'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.attach_motion_path" title="Permalink to this definition"></a></dt>
+<dd><p>Manually creates a new motion path and attaches the supplied object to it.
+cmds.pathAnimation() is notorious for not being friendly with undoing properly.
+Also pathAnimation creates a non-fatal cycle by default, which is annoying.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.constraint_joints">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">constraint_joints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blend_jnts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ik_jnts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fk_jnts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend_plug</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.constraint_joints" title="Permalink to this definition"></a></dt>
+<dd><p>This is used to constrain nodes to blend between ik and fk.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blend_jnts</strong> (<em>string</em><em>[</em><em>]</em>) – A list of nodes to blend between ik and fk.</p></li>
+<li><p><strong>ik_jnts</strong> (<em>string</em><em>[</em><em>]</em>) – A list of ik joints.</p></li>
+<li><p><strong>fk_jnts</strong> (<em>string</em><em>[</em><em>]</em>) – A list of fk joints.</p></li>
+<li><p><strong>blend_plug</strong> (<em>string</em>) – A plug that will control the blend of the constraints.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – Name to set utility nodes.</p></li>
+<li><p><strong>suffix</strong> (<em>string</em>) – “L” or “R”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_fk_chain">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_fk_chain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skip_last_jnt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fkChain'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">28</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_fk_chain" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a simple fk chain with controls.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>joints</strong> (<em>string</em><em>[</em><em>]</em>) – A list of joints.</p></li>
+<li><p><strong>skip_last_jnt</strong> (<em>bool</em>) – Doesn’t create a control for last joint.</p></li>
+<li><p><strong>size</strong> (<em>float</em>) – Determines scale of all objects.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – Name to set on all objects.</p></li>
+<li><p><strong>suffix</strong> (<em>string</em>) – “L” or “R”</p></li>
+<li><p><strong>control_color</strong> (<em>int</em>) – Sets the control’s color by Maya’s built-in color index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary of objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_stretchy_bones">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_stretchy_bones</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joints</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrored</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'stretchyBones'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suffix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">28</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_stretchy_bones" title="Permalink to this definition"></a></dt>
+<dd><p>Creates an fk chain that is able to squash and stretch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>joints</strong> (<em>string</em><em>[</em><em>]</em>) – A list of joints.</p></li>
+<li><p><strong>mirrored</strong> (<em>bool</em>) – Use True if building on left side.</p></li>
+<li><p><strong>size</strong> (<em>float</em>) – Determines scale of all objects.</p></li>
+<li><p><strong>name</strong> (<em>string</em>) – Name to set on all objects.</p></li>
+<li><p><strong>suffix</strong> (<em>string</em>) – “L” or “R”</p></li>
+<li><p><strong>control_color</strong> (<em>int</em>) – Sets the control’s color by Maya’s built-in color index.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary of objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.set_outliner_colors">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">set_outliner_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">controlColor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0,</span> <span class="pre">0.8,</span> <span class="pre">0.8]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rootColor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0.8,</span> <span class="pre">0.8,</span> <span class="pre">0]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_outliner_colors" title="Permalink to this definition"></a></dt>
+<dd><p>Sets colors to control objects so they show up differently in the outliner.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.set_outliner_visibility">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">set_outliner_visibility</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.set_outliner_visibility" title="Permalink to this definition"></a></dt>
+<dd><p>Cleans up hierarchy so that only objects that contain a control object are visible.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.get_snap_objects">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">get_snap_objects</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.get_snap_objects" title="Permalink to this definition"></a></dt>
+<dd><p>Checks if selection is tagged to support snapping and gets its objects
+with weak references.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A dictionary of objects.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.snap_ik_to_fk_arm">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">snap_ik_to_fk_arm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.snap_ik_to_fk_arm" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>set_keys</strong> (<em>bool</em>) – Sets keys on previous and current frame on all controls.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.snap_fk_to_ik_arm">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">snap_fk_to_ik_arm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.snap_fk_to_ik_arm" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>set_keys</strong> (<em>bool</em>) – Sets keys on previous and current frame on all controls.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_cubic_curve">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_cubic_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">positions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'curve1'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_cubic_curve" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_pole_vector_line">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_pole_vector_line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obj_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vis_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curve_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'poleVectorLine'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_pole_vector_line" title="Permalink to this definition"></a></dt>
+<dd><p>Connects a line supplied objects to represent a pole vector.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.add_offset_ctrl">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">add_offset_ctrl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_nul</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cog_ctrl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body_ctrl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_members</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctrl_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctrl_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">18</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.add_offset_ctrl" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_rig_stucture">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_rig_stucture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">srt_style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'circleArrows'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cog_style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'fatFlatArrow'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_rig_stucture" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.import_scene">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">import_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.import_scene" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.import_template">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">import_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.import_template" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.save_template">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">save_template</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">no_popups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confirm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.save_template" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.rigging.tools.auto_rigging.rigging_utils.create_space_switch">
+<span class="sig-prename descclassname"><span class="pre">oa.rigging.tools.auto_rigging.rigging_utils.</span></span><span class="sig-name descname"><span class="pre">create_space_switch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr_holder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spaces</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parents</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">world_space_index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_space_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'spaceSwitch'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.rigging.tools.auto_rigging.rigging_utils.create_space_switch" title="Permalink to this definition"></a></dt>
+<dd><p>Automates setup to switch an object to a different rotational space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>obj</strong> (<em>string</em>) – The object to switch space.</p></li>
+<li><p><strong>attr_holder</strong> (<em>string</em>) – An object to hold the space switch attribute.</p></li>
+<li><p><strong>prefix</strong> (<em>string</em>) – The prefix to use for all object names.</p></li>
+<li><p><strong>spaces</strong> (<em>string</em><em>[</em><em>]</em>) – A list of space names that displays in the attribute.</p></li>
+<li><p><strong>parents</strong> (<em>string</em><em>[</em><em>]</em>) – A list of objects the space parents to.</p></li>
+<li><p><strong>world_space_index</strong> (<em>int</em>) – The top space to parent to.</p></li>
+<li><p><strong>local_space_index</strong> (<em>int</em>) – The space that all the others will be point constraint to, or None to do nothing.</p></li>
+<li><p><strong>attr_name</strong> (<em>string</em>) – The attribute’s internal name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../oddbods_extra/index.html" class="btn btn-neutral float-left" title=" oa.rigging.tools.auto_rigging.oddbods_extra" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../calisthenics/index.html" class="btn btn-neutral float-right" title=" oa.rigging.tools.calisthenics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

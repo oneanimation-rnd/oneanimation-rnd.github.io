@@ -1,0 +1,59 @@
+ :py:mod:`oa.general.tools.color_tool.color_utils`
+====================================================================================================
+
+.. py:module:: oa.general.tools.color_tool.color_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.color_tool.color_utils.UndoStack
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.color_tool.color_utils.set_color_rgb
+   oa.general.tools.color_tool.color_utils.set_color_index
+
+
+
+.. py:class:: UndoStack(name='')
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(type, value, traceback)
+
+
+
+.. py:function:: set_color_rgb(objs, r, g, b)
+
+   Sets wire color by supplied rgb values.
+   :param objs: A collection of objects.
+   :type objs: string[]
+   :param r: 0.0 to 1.0
+   :type r: float
+   :param g: 0.0 to 1.0
+   :type g: float
+   :param b: 0.0 to 1.0
+   :type b: float
+
+
+.. py:function:: set_color_index(objs, color_index)
+
+   Sets wire color by using Maya's internal color index.
+   :param objs: A collection of objects.
+   :type objs: string[]
+   :param color_index: 0 to 31
+   :type color_index: int
+
+

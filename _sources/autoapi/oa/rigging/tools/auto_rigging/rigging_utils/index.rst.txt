@@ -1,0 +1,688 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.rigging_utils`
+============================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.rigging_utils
+
+.. autoapi-nested-parse::
+
+   This file holds a collection of generic helper functions to use across other modules.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.rigging_utils.ObjectWrapper
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.rigging_utils.create_annotation
+   oa.rigging.tools.auto_rigging.rigging_utils.get_maya_window
+   oa.rigging.tools.auto_rigging.rigging_utils.popup_error_msg
+   oa.rigging.tools.auto_rigging.rigging_utils.get_centroid_by_cvs
+   oa.rigging.tools.auto_rigging.rigging_utils.unlock_template
+   oa.rigging.tools.auto_rigging.rigging_utils.get_template_objs
+   oa.rigging.tools.auto_rigging.rigging_utils.create_weak_ref
+   oa.rigging.tools.auto_rigging.rigging_utils.get_weak_ref
+   oa.rigging.tools.auto_rigging.rigging_utils.tag_socket
+   oa.rigging.tools.auto_rigging.rigging_utils.tag_plug
+   oa.rigging.tools.auto_rigging.rigging_utils.connect_plugs
+   oa.rigging.tools.auto_rigging.rigging_utils.set_sdk
+   oa.rigging.tools.auto_rigging.rigging_utils.set_joint_label
+   oa.rigging.tools.auto_rigging.rigging_utils.remove_skin_jnt
+   oa.rigging.tools.auto_rigging.rigging_utils.tag_skin_jnt
+   oa.rigging.tools.auto_rigging.rigging_utils.get_skin_jnts
+   oa.rigging.tools.auto_rigging.rigging_utils.bind_skin_jnts
+   oa.rigging.tools.auto_rigging.rigging_utils.align
+   oa.rigging.tools.auto_rigging.rigging_utils.align_and_offset
+   oa.rigging.tools.auto_rigging.rigging_utils.get_matrix
+   oa.rigging.tools.auto_rigging.rigging_utils.get_axis_dir
+   oa.rigging.tools.auto_rigging.rigging_utils.get_distance
+   oa.rigging.tools.auto_rigging.rigging_utils.get_between_pos
+   oa.rigging.tools.auto_rigging.rigging_utils.create_group
+   oa.rigging.tools.auto_rigging.rigging_utils.create_locator
+   oa.rigging.tools.auto_rigging.rigging_utils.create_joint
+   oa.rigging.tools.auto_rigging.rigging_utils.create_control
+   oa.rigging.tools.auto_rigging.rigging_utils.create_ik_handle
+   oa.rigging.tools.auto_rigging.rigging_utils.create_cluster
+   oa.rigging.tools.auto_rigging.rigging_utils.insert_nul
+   oa.rigging.tools.auto_rigging.rigging_utils.offset_shape
+   oa.rigging.tools.auto_rigging.rigging_utils.rotate_shape
+   oa.rigging.tools.auto_rigging.rigging_utils.scale_shape
+   oa.rigging.tools.auto_rigging.rigging_utils.set_color
+   oa.rigging.tools.auto_rigging.rigging_utils.duplicate_joint_chain
+   oa.rigging.tools.auto_rigging.rigging_utils.set_axis_order
+   oa.rigging.tools.auto_rigging.rigging_utils.set_lock_flags
+   oa.rigging.tools.auto_rigging.rigging_utils.set_limits
+   oa.rigging.tools.auto_rigging.rigging_utils.attach_follicle
+   oa.rigging.tools.auto_rigging.rigging_utils.attach_motion_path
+   oa.rigging.tools.auto_rigging.rigging_utils.constraint_joints
+   oa.rigging.tools.auto_rigging.rigging_utils.create_fk_chain
+   oa.rigging.tools.auto_rigging.rigging_utils.create_stretchy_bones
+   oa.rigging.tools.auto_rigging.rigging_utils.set_outliner_colors
+   oa.rigging.tools.auto_rigging.rigging_utils.set_outliner_visibility
+   oa.rigging.tools.auto_rigging.rigging_utils.get_snap_objects
+   oa.rigging.tools.auto_rigging.rigging_utils.snap_ik_to_fk_arm
+   oa.rigging.tools.auto_rigging.rigging_utils.snap_fk_to_ik_arm
+   oa.rigging.tools.auto_rigging.rigging_utils.create_cubic_curve
+   oa.rigging.tools.auto_rigging.rigging_utils.create_pole_vector_line
+   oa.rigging.tools.auto_rigging.rigging_utils.add_offset_ctrl
+   oa.rigging.tools.auto_rigging.rigging_utils.create_rig_stucture
+   oa.rigging.tools.auto_rigging.rigging_utils.import_scene
+   oa.rigging.tools.auto_rigging.rigging_utils.import_template
+   oa.rigging.tools.auto_rigging.rigging_utils.save_template
+   oa.rigging.tools.auto_rigging.rigging_utils.create_space_switch
+
+
+
+.. py:class:: ObjectWrapper(obj_name)
+
+   Bases: :py:obj:`maya.OpenMaya.MDagPath`
+
+   Wrapper for a maya node so it's not name dependent.
+
+   :param obj_name: An existing object to wrap.
+   :type obj_name: string
+
+   .. py:method:: __str__()
+
+
+   .. py:method:: __repr__()
+
+
+   .. py:method:: __hash__()
+
+
+   .. py:method:: __add__(other)
+
+
+   .. py:method:: __radd__(other)
+
+
+   .. py:method:: name()
+
+
+   .. py:method:: rename(new_name)
+
+
+   .. py:method:: parent(new_parent)
+
+
+
+.. py:function:: create_annotation(start_obj, end_obj, caption='', name='annotation')
+
+
+.. py:function:: get_maya_window()
+
+
+.. py:function:: popup_error_msg(title, msg, icon=None, parent=None)
+
+
+.. py:function:: get_centroid_by_cvs(obj)
+
+   Collects all cv positions and gets the centroid of them.
+
+
+.. py:function:: unlock_template(rig_template)
+
+   Removes all locks/expressions and freezes scale/joint rotation.
+
+   :returns: A list of all the template objects.
+
+
+.. py:function:: get_template_objs(template)
+
+
+.. py:function:: create_weak_ref(obj, target, attr_name)
+
+   :param obj: An object to add weak reference to.
+   :type obj: string
+   :param target: An object to be weak referenced.
+   :type target: string
+   :param attr_name: The attribute's name to refer to.
+   :type attr_name: string
+
+
+.. py:function:: get_weak_ref(obj, attr_name)
+
+   :param obj: An object to get weak reference from.
+   :type obj: string
+   :param attr_name: The attribute's name.
+   :type attr_name: string
+
+   :returns: The object that is being weak referenced or None.
+
+
+.. py:function:: tag_socket(obj, socket_name)
+
+   :param obj: An object to add a new socket to.
+   :type obj: string
+   :param socket_name: A unique name to identify this socket.
+   :type socket_name: string
+
+
+.. py:function:: tag_plug(obj, socket_name, plug_type)
+
+   :param obj: An object to add a new plug to.
+   :type obj: string
+   :param socket_name: Name of a socket this plug should connect to.
+   :type socket_name: string
+   :param plug_type: The operation it should do when connecting to a socket.
+                     Plug types are "parent", "parentConstraint", "pointConstraint", "orientConstraint", "scaleConstraint"
+   :type plug_type: string
+
+
+.. py:function:: connect_plugs(root_nul)
+
+   Finds all plugs and sockets in the scene and connects them together by
+   matching their names.
+
+
+.. py:function:: set_sdk(driver, driven, values, in_tangent='auto', out_tangent='auto')
+
+   Quicker way to set a series of set driven keys.
+   :param driver: Object and attribute name.
+   :type driver: string
+   :param driven: Object and attribute name.
+   :type driven: string
+   :param values: {driver_value:driven_value}
+   :type values: dict
+   :param in_tangent:
+   :type in_tangent: string
+   :param out_tangent:
+   :type out_tangent: string
+
+
+.. py:function:: set_joint_label(jnt)
+
+   Automates the joint's label to use for mirroring skin weights.
+
+   :param jnt: A joint object.
+   :type jnt: string
+
+
+.. py:function:: remove_skin_jnt(objs)
+
+
+.. py:function:: tag_skin_jnt(obj)
+
+   Makes joint easily identifiable that it's for skinning.
+
+
+.. py:function:: get_skin_jnts()
+
+   :returns: All tagged skin joints in the scene.
+
+
+.. py:function:: bind_skin_jnts()
+
+   Binds skin joints to selected mesh objects.
+
+
+.. py:function:: align(obj, target, pos=True, rot=True)
+
+   :param obj: Object to align.
+   :type obj: string
+   :param target: Object to align to.
+   :type target: string
+   :param pos: Aligns position if True.
+   :type pos: bool
+   :param rot: Aligns rotation if True.
+   :type rot: bool
+
+
+.. py:function:: align_and_offset(obj, target, offset_x, offset_y, offset_z)
+
+   Aligns to target with the supplied offset from the target's local space.
+   :param obj: Object to align.
+   :type obj: string
+   :param target: Object to align to.
+   :type target: string
+   :param offset_x: Offset in world x axis.
+   :type offset_x: float
+   :param offset_y: Offset in world y axis.
+   :type offset_y: float
+   :param offset_z: Offset in world z axis.
+   :type offset_z: float
+
+
+.. py:function:: get_matrix(obj)
+
+   :returns: A MTransformationMatrix object in world space.
+
+
+.. py:function:: get_axis_dir(obj, axis, direction)
+
+   Determines in world space what direction an object's axis is facing.
+   This is used mostly to determine if an axis was mirrored or not.
+
+   :param obj: An object's name.
+   :type obj: string
+   :param axis: The object's local axis to check with.
+                Value can be x, y, or z.
+   :type axis: string
+   :param direction: The world space direction to see what way the axis is facing.
+                     Value can be x (left & right), y (up & down), or z (backwards & forwards).
+   :type direction: string
+
+   :returns: Either 1 or -1 depending on the direction the axis is facing.
+             x: 1=left, -1=down
+             y: 1=up, -1=down
+             z: 1=forwards, -1=backwards
+
+
+.. py:function:: get_distance(obj_1, obj_2)
+
+   :returns: The total distance of both supplied objects.
+
+
+.. py:function:: get_between_pos(start_pos, end_pos, percent)
+
+   :param start_pos: A list to define the starting position.
+   :type start_pos: float[]
+   :param end_pos: A list to define the ending position.
+   :type end_pos: float[]
+   :param percent: A number between 0.0 to 1.0.
+   :type percent: float
+
+   :returns: A list to define the position between the start and end points.
+
+
+.. py:function:: create_group(name='newGroup', parent_obj='', align_obj='')
+
+   Creates an empty group.
+
+   :param name: The group's name.
+   :type name: string
+   :param parent_obj: An object to parent the group to.
+   :type parent_obj: string
+   :param align_obj: An object to align the group to.
+   :type align_obj: string
+
+   :returns: An ObjectWrapper of the new group.
+
+
+.. py:function:: create_locator(name='newLocator', parent_obj='', align_obj='', size=0.1, color=13)
+
+   Creates a locator.
+
+   :param name: The locator's name.
+   :type name: string
+   :param parent_obj: An object to parent the locator to.
+   :type parent_obj: string
+   :param align_obj: An object to align the locator to.
+   :type align_obj: string
+   :param size: The amount to set the locator's localScale.
+   :type size: float
+   :param color: Sets the locator's color by Maya's built-in color index.
+   :type color: int
+
+   :returns: An ObjectWrapper of the new locator.
+
+
+.. py:function:: create_joint(name='newJoint', parent_obj='', align_obj='', size=0.1, color=28, skin_jnt=False)
+
+   Creates a joint.
+
+   :param name: The joint's name.
+   :type name: string
+   :param parent_obj: An object to parent the joint to.
+   :type parent_obj: string
+   :param align_obj: An object to align the joint to.
+   :type align_obj: string
+   :param size: The amount to set the joint's radius.
+   :type size: float
+   :param color: Sets the joint's color by Maya's built-in color index.
+   :type color: int
+   :param skin_jnt: Tag joint as a skinning joint.
+   :type skin_jnt: bool
+
+   :returns: An ObjectWrapper of the new joint.
+
+
+.. py:function:: create_control(name='newControl', style='cube', parent_obj='', align_obj='', size=0.2, color=25, add_nul=True, locks=None, axis=None, rot_offset=None, offset=None)
+
+   Creates a control object.
+
+   :param name: The control's name.
+   :type name: string
+   :param style: Control's drawing style.
+   :type style: string
+   :param parent_obj: An object to parent the control to.
+   :type parent_obj: string
+   :param align_obj: An object to align the control to.
+   :type align_obj: string
+   :param size: The amount to set the control's size.
+   :type size: float
+   :param color: Sets the control's color by Maya's built-in color index.
+   :type color: int
+   :param add_nul:
+   :type add_nul: bool
+   :param locks: Supply a list of attributes that will remain unlock.
+   :type locks: str[]
+   :param axis: The axis order to switch the control to.
+   :type axis: str
+   :param rot_offset: A 3 float vector to offset control's shape rotation.
+   :type rot_offset: float[]
+   :param offset: A 3 float vector to offset the control's shape translation.
+   :type offset: float[]
+
+   :returns: A list of the control's nul and ctrl.
+
+
+.. py:function:: create_ik_handle(start_joint, end_joint, solver, flip=False, priority=1, pole_vec=None, parent_obj='', name='newIkHandle')
+
+   Creates an ik handle.
+
+   :param start_joint: The joint the ik starts with.
+   :type start_joint: string
+   :param end_joint: The joint the ik ends with.
+   :type end_joint: string
+   :param solver: The solver's type (see Maya doc).
+   :type solver: string
+   :param flip: Uses the solver's twist to flip it.
+   :type flip: bool
+   :param priority: The solver's priority order.
+   :type priority: int
+   :param pole_vec: The object it needs to use as a pole vector.
+   :type pole_vec: string
+   :param parent_obj: An object to parent the ik handle to.
+   :type parent_obj: string
+   :param name: Set's the ik handle and effector's names to.
+   :type name: string
+
+   :returns: The new ik handle.
+
+
+.. py:function:: create_cluster(components, parent_obj='', name='newCluster', color=6)
+
+   Creates a cluster deformer and binds the supplied components to it.
+
+   :param components: A list of verts to bind to.
+   :type components: string
+   :param parent_obj: An object to parent the cluster to.
+   :type parent_obj: string
+   :param name: Name of the new cluster object.
+   :type name: string
+   :param color: Maya's internal color index to set the cluster to.
+   :type color: int
+
+   :returns: The new cluster.
+
+
+.. py:function:: insert_nul(obj, name='newGroup')
+
+   Inserts an aligned group between the supplied object and its parent.
+
+   :param obj: Object to insert nul onto.
+   :type obj: string
+   :param name: Name of the new group.
+   :type name: string
+
+   :returns: The new group.
+
+
+.. py:function:: offset_shape(curve_obj, x, y, z, os=True)
+
+   Offsets a shape without effecting its pivot.
+
+   :param curve_obj: Name of a curve shape.
+   :type curve_obj: string
+   :param x: Offset in x axis.
+   :type x: float
+   :param y: Offset in y axis.
+   :type y: float
+   :param z: Offset in z axis.
+   :type z: float
+   :param os: Uses object space by default, or world space on False.
+   :type os: bool
+
+
+.. py:function:: rotate_shape(curve_obj, x, y, z)
+
+   Rotates a shape without effecting its pivot.
+
+   :param curve_obj: Name of a curve shape.
+   :type curve_obj: string
+   :param x: Offset in x axis.
+   :type x: float
+   :param y: Offset in y axis.
+   :type y: float
+   :param z: Offset in z axis.
+   :type z: float
+
+
+.. py:function:: scale_shape(curve_obj, x, y, z)
+
+   Scales a shape without effecting its pivot.
+
+   :param curve_obj: Name of a curve shape.
+   :type curve_obj: string
+   :param x: Offset in x axis.
+   :type x: float
+   :param y: Offset in y axis.
+   :type y: float
+   :param z: Offset in z axis.
+   :type z: float
+
+
+.. py:function:: set_color(obj, color)
+
+   Sets wirecolor of all a transform's shapes.
+
+   :param obj: A name of a transform object.
+   :type obj: string
+   :param color: A number between 0-31 or 3 floats between 0-1
+   :type color: int or float[]
+
+
+.. py:function:: duplicate_joint_chain(objs)
+
+   :param objs: A list of joint objects.
+   :type objs: string[]
+
+   :returns: A list of ObjectWrappers of the new joints.
+
+
+.. py:function:: set_axis_order(obj, axis)
+
+   :param obj: An object's name.
+   :type obj: string
+   :param axis: Options are "xyz", "yzx", "zxy", "xzy", "yxz", "zyx"
+   :type axis: string
+
+
+.. py:function:: set_lock_flags(obj, unlock_flags)
+
+   A quick function to set what transforms remain unlocked.
+
+   :param obj: An object's name.
+   :type obj: string
+   :param unlock_flags: Supply a list of attributes that will remain unlock.
+                        (Use its short name)
+   :type unlock_flags: string[]
+
+
+.. py:function:: set_limits(obj, limit_sets)
+
+   Sets transform limits on the supplied object.
+
+   :param obj: An object's name.
+   :type obj: string
+   :param limit_sets: {"tx":(-5, 5), "ry":(-45, 45)}
+   :type limit_sets: dict
+
+
+.. py:function:: attach_follicle(obj, u_value=0.5, v_value=0.5, name='newFollicle')
+
+   Attaches a hair follicle to a mesh object.
+
+   :param obj: A name of the mesh object to attach to.
+   :type obj: string
+   :param u_value: A value between 0.0 to 1.0 to set its horizontal space.
+   :type u_value: float
+   :param v_value: A value between 0.0 to 1.0 to set its vertical space.
+   :type v_value: float
+   :param name: Name of the new follicle.
+   :type name: string
+
+   :returns: A list of the follicle's nul and shape.
+
+   .. rubric:: Notes
+
+   Use cmds.polyEditUV(q=True) to get selected uv coords.
+
+
+.. py:function:: attach_motion_path(path, target, u_value=0, follow=True, fraction_mode=True, up_type=0, up_object=None, world_up_vector=[0, 1, 0], follow_axis=0, up_axis=1, inverse_up=False, inverse_front=False, bank=False, name='motionPath')
+
+   Manually creates a new motion path and attaches the supplied object to it.
+   cmds.pathAnimation() is notorious for not being friendly with undoing properly.
+   Also pathAnimation creates a non-fatal cycle by default, which is annoying.
+
+
+.. py:function:: constraint_joints(blend_jnts, ik_jnts, fk_jnts, blend_plug, name='', suffix='')
+
+   This is used to constrain nodes to blend between ik and fk.
+
+   :param blend_jnts: A list of nodes to blend between ik and fk.
+   :type blend_jnts: string[]
+   :param ik_jnts: A list of ik joints.
+   :type ik_jnts: string[]
+   :param fk_jnts: A list of fk joints.
+   :type fk_jnts: string[]
+   :param blend_plug: A plug that will control the blend of the constraints.
+   :type blend_plug: string
+   :param name: Name to set utility nodes.
+   :type name: string
+   :param suffix: "L" or "R"
+   :type suffix: string
+
+
+.. py:function:: create_fk_chain(joints, skip_last_jnt=False, size=None, name='fkChain', suffix='', control_color=28)
+
+   Creates a simple fk chain with controls.
+
+   :param joints: A list of joints.
+   :type joints: string[]
+   :param skip_last_jnt: Doesn't create a control for last joint.
+   :type skip_last_jnt: bool
+   :param size: Determines scale of all objects.
+   :type size: float
+   :param name: Name to set on all objects.
+   :type name: string
+   :param suffix: "L" or "R"
+   :type suffix: string
+   :param control_color: Sets the control's color by Maya's built-in color index.
+   :type control_color: int
+
+   :returns: A dictionary of objects.
+
+
+.. py:function:: create_stretchy_bones(joints, mirrored=False, size=None, name='stretchyBones', suffix='', control_color=28)
+
+   Creates an fk chain that is able to squash and stretch.
+
+   :param joints: A list of joints.
+   :type joints: string[]
+   :param mirrored: Use True if building on left side.
+   :type mirrored: bool
+   :param size: Determines scale of all objects.
+   :type size: float
+   :param name: Name to set on all objects.
+   :type name: string
+   :param suffix: "L" or "R"
+   :type suffix: string
+   :param control_color: Sets the control's color by Maya's built-in color index.
+   :type control_color: int
+
+   :returns: A dictionary of objects.
+
+
+.. py:function:: set_outliner_colors(controlColor=[0, 0.8, 0.8], rootColor=[0.8, 0.8, 0])
+
+   Sets colors to control objects so they show up differently in the outliner.
+
+
+.. py:function:: set_outliner_visibility()
+
+   Cleans up hierarchy so that only objects that contain a control object are visible.
+
+
+.. py:function:: get_snap_objects()
+
+   Checks if selection is tagged to support snapping and gets its objects
+   with weak references.
+
+   :returns: A dictionary of objects.
+
+
+.. py:function:: snap_ik_to_fk_arm(set_keys=True)
+
+   :param set_keys: Sets keys on previous and current frame on all controls.
+   :type set_keys: bool
+
+
+.. py:function:: snap_fk_to_ik_arm(set_keys=True)
+
+   :param set_keys: Sets keys on previous and current frame on all controls.
+   :type set_keys: bool
+
+
+.. py:function:: create_cubic_curve(positions, color=None, parent_obj='', name='curve1')
+
+
+.. py:function:: create_pole_vector_line(obj_1, obj_2, vis_obj=None, curve_color=3, name='poleVectorLine')
+
+   Connects a line supplied objects to represent a pole vector.
+
+
+.. py:function:: add_offset_ctrl(root_nul, cog_ctrl, body_ctrl, offset_members, ctrl_size=1, ctrl_color=18)
+
+
+.. py:function:: create_rig_stucture(srt_style='circleArrows', cog_style='fatFlatArrow', size=1)
+
+
+.. py:function:: import_scene(path)
+
+
+.. py:function:: import_template(template_type)
+
+
+.. py:function:: save_template(no_popups=True, confirm=False)
+
+
+.. py:function:: create_space_switch(obj, attr_holder, prefix, spaces, parents, world_space_index, local_space_index=None, attr_name='spaceSwitch')
+
+   Automates setup to switch an object to a different rotational space.
+
+   :param obj: The object to switch space.
+   :type obj: string
+   :param attr_holder: An object to hold the space switch attribute.
+   :type attr_holder: string
+   :param prefix: The prefix to use for all object names.
+   :type prefix: string
+   :param spaces: A list of space names that displays in the attribute.
+   :type spaces: string[]
+   :param parents: A list of objects the space parents to.
+   :type parents: string[]
+   :param world_space_index: The top space to parent to.
+   :type world_space_index: int
+   :param local_space_index: The space that all the others will be point constraint to, or None to do nothing.
+   :type local_space_index: int
+   :param attr_name: The attribute's internal name.
+   :type attr_name: string
+
+

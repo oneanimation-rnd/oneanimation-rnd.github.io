@@ -1,0 +1,114 @@
+ :py:mod:`oa.animation.tools.capture.slate_info`
+================================================================================================
+
+.. py:module:: oa.animation.tools.capture.slate_info
+
+.. autoapi-nested-parse::
+
+   Author:
+       Angeline
+
+   Refactored:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.capture.slate_info.PlayControl
+   oa.animation.tools.capture.slate_info.SceneSlate
+
+
+
+
+.. py:class:: PlayControl
+
+   Bases: :py:obj:`object`
+
+   Collects values pertaining to the time slider.
+
+   .. py:method:: get_current_frame()
+
+
+   .. py:method:: get_animation_start()
+
+
+   .. py:method:: get_animation_end()
+
+
+   .. py:method:: get_playback_start()
+
+
+   .. py:method:: get_playback_end()
+
+
+   .. py:method:: next_frame()
+
+
+   .. py:method:: prev_frame()
+
+
+   .. py:method:: get_fps()
+
+
+
+.. py:class:: SceneSlate
+
+   Bases: :py:obj:`object`
+
+   Handles the slate data.
+
+   .. py:method:: get_scene_cp_info()
+
+
+   .. py:method:: get_date()
+
+
+   .. py:method:: get_time()
+
+
+   .. py:method:: get_scene_type()
+
+
+   .. py:method:: get_capture_range()
+
+
+   .. py:method:: get_episode_num()
+
+
+   .. py:method:: get_scene_num()
+
+
+   .. py:method:: get_frame_num()
+
+
+   .. py:method:: get_camera_focal_len(cam)
+
+      :param camShape: A camera's shape name.
+      :type camShape: string
+
+
+   .. py:method:: update_slate(capture_cam, frame_range, shot_num='')
+
+      :param capture_cam: A camera's name.
+      :type capture_cam: string
+      :param frame_range: Start frame and end frame numbers respectively.
+      :type frame_range: int[]
+      :param shot_num: (string): Shot's number.
+
+
+   .. py:method:: clean_up_slate()
+
+
+   .. py:method:: run_slate()
+
+      Creates HUD objects to display scene info.
+
+
+

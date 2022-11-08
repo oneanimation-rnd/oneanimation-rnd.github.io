@@ -1,0 +1,76 @@
+ :py:mod:`oa.animation.tools.auto_rotate.auto_rotate_utils`
+======================================================================================================================
+
+.. py:module:: oa.animation.tools.auto_rotate.auto_rotate_utils
+
+.. autoapi-nested-parse::
+
+   Automates how much spin a wheel rotates while traveling through space.
+   First the asset must be setup with a master, directional, and wheels objects.
+   The sim will run in memory then apply it onto the objects by setting keyframes.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.auto_rotate.auto_rotate_utils.get_shot_ranges
+   oa.animation.tools.auto_rotate.auto_rotate_utils.unset_obj
+   oa.animation.tools.auto_rotate.auto_rotate_utils.unset_selection
+   oa.animation.tools.auto_rotate.auto_rotate_utils.set_as_master
+   oa.animation.tools.auto_rotate.auto_rotate_utils.set_as_directional_obj
+   oa.animation.tools.auto_rotate.auto_rotate_utils.estimate_radius
+   oa.animation.tools.auto_rotate.auto_rotate_utils.set_as_wheel
+   oa.animation.tools.auto_rotate.auto_rotate_utils.create_master_ctrl
+   oa.animation.tools.auto_rotate.auto_rotate_utils.create_directional_obj
+   oa.animation.tools.auto_rotate.auto_rotate_utils.sim_auto_rotate
+   oa.animation.tools.auto_rotate.auto_rotate_utils.sim_asset
+   oa.animation.tools.auto_rotate.auto_rotate_utils.shelf_sim_asset
+
+
+
+.. py:function:: get_shot_ranges(frame)
+
+
+.. py:function:: unset_obj(obj)
+
+
+.. py:function:: unset_selection()
+
+
+.. py:function:: set_as_master(obj, multiplier=1, steps=1, bake_method=0, spin_limit=127.5)
+
+
+.. py:function:: set_as_directional_obj(obj)
+
+
+.. py:function:: estimate_radius(obj)
+
+
+.. py:function:: set_as_wheel(obj, radius=None, spin_axis=0, invert=False)
+
+
+.. py:function:: create_master_ctrl(size=2.5)
+
+
+.. py:function:: create_directional_obj(size=3)
+
+
+.. py:function:: sim_auto_rotate(obj, directional_obj, multiplier_plug, radius, spin_axis, start_frame, end_frame, invert, spin_limit=None, anim_layer=None, steps=1)
+
+
+.. py:function:: sim_asset()
+
+
+.. py:function:: shelf_sim_asset()
+
+

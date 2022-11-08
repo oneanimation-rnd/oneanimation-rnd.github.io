@@ -1,0 +1,21 @@
+ :py:mod:`oa.gui.libs`
+============================================
+
+.. py:module:: oa.gui.libs
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   auto_save/index.rst
+   eval_modes/index.rst
+   gui_states/index.rst
+   hotkeys/index.rst
+   menus/index.rst
+   preferences/index.rst
+   screen_capture/index.rst
+
+

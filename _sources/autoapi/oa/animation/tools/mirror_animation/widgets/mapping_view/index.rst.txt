@@ -1,0 +1,90 @@
+ :py:mod:`oa.animation.tools.mirror_animation.widgets.mapping_view`
+======================================================================================================================================
+
+.. py:module:: oa.animation.tools.mirror_animation.widgets.mapping_view
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.mirror_animation.widgets.mapping_view.MappingView
+   oa.animation.tools.mirror_animation.widgets.mapping_view.MappingModel
+
+
+
+
+.. py:class:: MappingView(map_type, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTableView`
+
+   .. py:attribute:: selected_row
+      
+
+      
+
+   .. py:method:: paintEvent(paint_event)
+
+      Shows tooltip when it's empty.
+
+
+   .. py:method:: selectionChanged(selected, deselected)
+
+
+
+.. py:class:: MappingModel(map_type, parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QAbstractTableModel`
+
+   .. py:attribute:: NAME_COLUMN
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: ATTRS_COLUMN
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: SWAP_MAP_TYPE
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: FLIP_MAP_TYPE
+      :annotation: = 1
+
+      
+
+   .. py:method:: rowCount(parent)
+
+
+   .. py:method:: columnCount(parent)
+
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: headerData(column, orientation, role)
+
+
+   .. py:method:: flags(index)
+
+
+   .. py:method:: begin_update()
+
+
+   .. py:method:: end_update()
+
+
+   .. py:method:: get_data()
+
+
+   .. py:method:: apply_filter(filter)
+
+
+

@@ -1,0 +1,15 @@
+ :py:mod:`oa.general.tools.taskman_submitter.abstract`
+============================================================================================================
+
+.. py:module:: oa.general.tools.taskman_submitter.abstract
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   abstract_submitter/index.rst
+
+

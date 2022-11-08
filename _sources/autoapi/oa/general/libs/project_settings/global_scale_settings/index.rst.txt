@@ -1,0 +1,47 @@
+ :py:mod:`oa.general.libs.project_settings.global_scale_settings`
+==================================================================================================================================
+
+.. py:module:: oa.general.libs.project_settings.global_scale_settings
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.project_settings.global_scale_settings.set_small_scale
+   oa.general.libs.project_settings.global_scale_settings.set_large_scale
+   oa.general.libs.project_settings.global_scale_settings.set_scale_by_current_project
+   oa.general.libs.project_settings.global_scale_settings.is_small_scale_project
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.libs.project_settings.global_scale_settings.small_scale_projects
+
+
+.. py:data:: small_scale_projects
+   :annotation: = ['ODDBODS', 'ANTIKS', 'ROB']
+
+   
+
+.. py:function:: set_small_scale()
+
+
+.. py:function:: set_large_scale()
+
+
+.. py:function:: set_scale_by_current_project()
+
+
+.. py:function:: is_small_scale_project(project=None)
+
+

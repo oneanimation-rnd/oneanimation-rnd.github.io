@@ -1,0 +1,154 @@
+ :py:mod:`oa_utils.database.lib.providers`
+====================================================================================
+
+.. py:module:: oa_utils.database.lib.providers
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.lib.providers.AbsProvider
+   oa_utils.database.lib.providers.MAYAProvider
+   oa_utils.database.lib.providers.HoudiniProvider
+   oa_utils.database.lib.providers.XSIModelProvider
+   oa_utils.database.lib.providers.XSISceneProvider
+   oa_utils.database.lib.providers.ANMClipProvider
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.lib.providers.get_provider
+
+
+
+.. py:class:: AbsProvider(filepath)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: is_supported_extension(extension)
+      :staticmethod:
+      :abstractmethod:
+
+
+   .. py:method:: is_supported_entity_type(entity_type)
+      :staticmethod:
+      :abstractmethod:
+
+
+   .. py:method:: version_control()
+
+
+   .. py:method:: get_description_path()
+
+
+   .. py:method:: get_thumbnail_path()
+
+
+   .. py:method:: get_annotation()
+
+
+
+.. py:class:: MAYAProvider(filepath)
+
+   Bases: :py:obj:`AbsProvider`
+
+   .. py:method:: is_supported_extension(extension)
+      :staticmethod:
+
+
+   .. py:method:: is_supported_entity_type(entity_type)
+      :staticmethod:
+
+
+   .. py:method:: get_description_path()
+
+
+   .. py:method:: get_thumbnail_path()
+
+
+
+.. py:class:: HoudiniProvider(filepath)
+
+   Bases: :py:obj:`AbsProvider`
+
+   .. py:method:: is_supported_extension(extension)
+      :staticmethod:
+
+
+   .. py:method:: is_supported_entity_type(entity_type)
+      :staticmethod:
+
+
+   .. py:method:: get_description_path()
+
+
+   .. py:method:: get_thumbnail_path()
+
+
+
+.. py:class:: XSIModelProvider(filepath)
+
+   Bases: :py:obj:`AbsProvider`
+
+   .. py:method:: is_supported_extension(extension)
+      :staticmethod:
+
+
+   .. py:method:: is_supported_entity_type(entity_type)
+      :staticmethod:
+
+
+   .. py:method:: get_description_path()
+
+
+   .. py:method:: get_thumbnail_path()
+
+
+
+.. py:class:: XSISceneProvider(filepath)
+
+   Bases: :py:obj:`AbsProvider`
+
+   .. py:method:: is_supported_extension(extension)
+      :staticmethod:
+
+
+   .. py:method:: is_supported_entity_type(entity_type)
+      :staticmethod:
+
+
+   .. py:method:: version_control()
+
+
+   .. py:method:: get_description_path()
+
+
+
+.. py:class:: ANMClipProvider(filepath)
+
+   Bases: :py:obj:`AbsProvider`
+
+   .. py:method:: is_supported_extension(extension)
+      :staticmethod:
+
+
+   .. py:method:: is_supported_entity_type(entity_type)
+      :staticmethod:
+
+
+   .. py:method:: get_description_path()
+
+
+
+.. py:function:: get_provider(entity_type, filepath)
+
+

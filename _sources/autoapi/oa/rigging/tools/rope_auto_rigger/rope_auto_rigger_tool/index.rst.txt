@@ -1,0 +1,190 @@
+ :py:mod:`oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_tool`
+====================================================================================================================================
+
+.. py:module:: oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_tool
+
+.. autoapi-nested-parse::
+
+   An auto-rigger that layers single-chain solvers to create a stable rope rig.
+
+   Usage:
+       RopeAutoRiggerTool.launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_tool.RopeAutoRiggerTool
+   oa.rigging.tools.rope_auto_rigger.rope_auto_rigger_tool.ColorButton
+
+
+
+
+.. py:class:: RopeAutoRiggerTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:class:: Control
+
+      .. py:attribute:: Attr
+         :annotation: = ropeAutoRigNode
+
+         
+
+      .. py:attribute:: Master
+         :annotation: = 0
+
+         
+
+      .. py:attribute:: Main
+         :annotation: = 1
+
+         
+
+      .. py:attribute:: Sub
+         :annotation: = 2
+
+         
+
+
+   .. py:class:: Defaults
+
+      .. py:attribute:: Prefix
+         :annotation: = rope
+
+         
+
+      .. py:attribute:: ControlSize
+         :annotation: = 1.0
+
+         
+
+      .. py:attribute:: ControlSteps
+         :annotation: = 3
+
+         
+
+      .. py:attribute:: RootColor
+         
+
+         
+
+      .. py:attribute:: MasterColor
+         
+
+         
+
+      .. py:attribute:: MainColor
+         
+
+         
+
+      .. py:attribute:: SubColor
+         
+
+         
+
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: launch(parent=None)
+      :classmethod:
+
+
+   .. py:method:: _delete_instance()
+      :classmethod:
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: _wrap_caption(caption, widget, min_width=100, stretch=True)
+
+
+   .. py:method:: _wrap_groupbox(caption, widgets)
+
+
+   .. py:method:: _wrap_color_group(caption, qcolor)
+
+
+   .. py:method:: _create_gui()
+
+
+   .. py:method:: _save_settings()
+
+
+   .. py:method:: _restore_settings()
+
+
+   .. py:method:: _reset_to_defaults_on_triggered()
+
+
+   .. py:method:: _curve_edit_on_text_changed(text)
+
+
+   .. py:method:: _steps_on_value_changed(*args)
+
+
+   .. py:method:: _pick_curve_on_clicked()
+
+
+   .. py:method:: _set_masters_on_clicked()
+
+
+   .. py:method:: _unset_masters_on_clicked()
+
+
+   .. py:method:: _pick_upv_curve_on_clicked()
+
+
+   .. py:method:: _set_as_master(obj)
+
+
+   .. py:method:: _set_as_main(obj)
+
+
+   .. py:method:: _create_placeholder(cv_index, control_type)
+
+
+   .. py:method:: _create_curve_placeholders()
+
+
+   .. py:method:: _collect_placeholders()
+
+
+   .. py:method:: _clear_placeholders()
+
+
+   .. py:method:: _pick_object(line_edit, node_type)
+
+
+   .. py:method:: _create_rig()
+
+
+
+.. py:class:: ColorButton(qcolor, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QPushButton`
+
+   .. py:method:: _update_button_color()
+
+
+   .. py:method:: _pick_from_color_dialog()
+
+
+   .. py:method:: to_rgb_list()
+
+
+   .. py:method:: set_color(qcolor)
+
+
+

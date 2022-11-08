@@ -1,0 +1,34 @@
+ :py:mod:`oa.modeling.tools.bake_history.bake_history`
+============================================================================================================
+
+.. py:module:: oa.modeling.tools.bake_history.bake_history
+
+.. autoapi-nested-parse::
+
+   Author: jason.labbe
+
+   Very simple script to help bake an object's history while ignoring deformers
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.modeling.tools.bake_history.bake_history.BakeHistory
+
+
+
+
+.. py:class:: BakeHistory
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: bakeObjectsHistory(objs=[])
+
+
+

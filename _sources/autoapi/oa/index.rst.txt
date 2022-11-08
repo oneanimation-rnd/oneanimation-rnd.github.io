@@ -1,0 +1,53 @@
+ :py:mod:`oa`
+==========================
+
+.. py:module:: oa
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   anim_library/index.rst
+   animation/index.rst
+   asset/index.rst
+   asset_builder/index.rst
+   asset_library/index.rst
+   capture_tool/index.rst
+   general/index.rst
+   gui/index.rst
+   hou_utils/index.rst
+   mat_gui/index.rst
+   modeling/index.rst
+   palette/index.rst
+   reset_maya_user_prefs/index.rst
+   rigging/index.rst
+   rnd/index.rst
+   shot_builder/index.rst
+   shot_split_submitter_tool/index.rst
+   texture_check_in_tool/index.rst
+   user_directory/index.rst
+   vaderBoard/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   config/index.rst
+   migration/index.rst
+   vcs/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: __path__
+   
+
+   
+

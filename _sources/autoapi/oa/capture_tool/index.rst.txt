@@ -1,0 +1,19 @@
+ :py:mod:`oa.capture_tool`
+====================================================
+
+.. py:module:: oa.capture_tool
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   capture_painter/index.rst
+   capture_picker/index.rst
+   capture_tool/index.rst
+   capture_utils/index.rst
+   capture_worker/index.rst
+
+

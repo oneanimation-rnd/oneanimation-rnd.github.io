@@ -1,0 +1,34 @@
+ :py:mod:`oa.general.tools.task_switcher.users_info`
+========================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.users_info
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.users_info.UsersInfo
+
+
+
+
+.. py:class:: UsersInfo(pixmap_size=100)
+
+   .. py:method:: reset()
+
+
+   .. py:method:: collect_all_users(batch_size=1000)
+
+
+   .. py:method:: get_user_name_by_id(user_id)
+
+
+   .. py:method:: get_pixmap_by_user_name(user_name)
+
+
+

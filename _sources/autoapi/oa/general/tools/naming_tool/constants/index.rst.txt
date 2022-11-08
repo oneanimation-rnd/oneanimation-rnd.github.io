@@ -1,0 +1,14 @@
+ :py:mod:`oa.general.tools.naming_tool.constants`
+==================================================================================================
+
+.. py:module:: oa.general.tools.naming_tool.constants
+
+
+Module Contents
+---------------
+
+.. py:data:: SUFFIXES
+   
+
+   
+

@@ -1,0 +1,83 @@
+ :py:mod:`oa.asset.tools.dp_asset_updater.dp_asset_updater`
+======================================================================================================================
+
+.. py:module:: oa.asset.tools.dp_asset_updater.dp_asset_updater
+
+.. autoapi-nested-parse::
+
+   Searches sets and envs with current prop in the scene for any out-of-date versions.
+   Uses batch asset exporter tool to do the work in batch mode and publish the asset.
+
+   Usage:
+       DpAssetUpdater.launch()
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.dp_asset_updater.dp_asset_updater.DpAssetUpdater
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.tools.dp_asset_updater.dp_asset_updater.get_dependent_assets_from_current
+   oa.asset.tools.dp_asset_updater.dp_asset_updater.iter_dependent_assets
+   oa.asset.tools.dp_asset_updater.dp_asset_updater.get_dependent_assets
+   oa.asset.tools.dp_asset_updater.dp_asset_updater.wmodel_id_by_scn_path
+   oa.asset.tools.dp_asset_updater.dp_asset_updater.update_to_latest_versions
+   oa.asset.tools.dp_asset_updater.dp_asset_updater.run_batch_mode
+
+
+
+.. py:class:: DpAssetUpdater(asset_paths, title=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: _init_ui()
+
+
+   .. py:method:: _init_layout()
+
+
+   .. py:method:: _init_signals()
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: get_selected_paths()
+
+
+   .. py:method:: launch()
+      :classmethod:
+
+
+
+.. py:function:: get_dependent_assets_from_current()
+
+
+.. py:function:: iter_dependent_assets(proj_name, asset_type, asset_level, resolution='RDR')
+
+
+.. py:function:: get_dependent_assets(proj_name, search_asset_name, search_asset_path, dp_asset_type, dp_asset_level, dp_asset_resolution)
+
+
+.. py:function:: wmodel_id_by_scn_path(path)
+
+
+.. py:function:: update_to_latest_versions(wmodel_id)
+
+
+.. py:function:: run_batch_mode(wmodel_id, asset_paths, debug=False)
+
+

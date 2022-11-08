@@ -1,0 +1,113 @@
+ :py:mod:`oa.migration`
+==============================================
+
+.. py:module:: oa.migration
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.migration.Migration
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.migration._add_arguments
+   oa.migration.main
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.migration.log
+   oa.migration.parser
+
+
+.. py:data:: log
+   
+
+   
+
+.. py:class:: Migration(src_proj, dst_proj, **vcs_kwargs)
+
+   Bases: :py:obj:`object`
+
+   A class used to migrate files between projects.
+
+
+   .. py:method:: _update_project_name(path)
+
+      Replace source project name with the target one in a path.
+
+      :param path: file path.
+      :type path: str
+
+      :returns: update file path.
+      :rtype: str
+
+
+   .. py:method:: find(pattern, flags=re.IGNORECASE)
+
+      Find all unique 'unversioned' file paths matching the pattern.
+
+      :param pattern: regex pattern used to locate
+                      the source paths in the database.
+      :type pattern: str
+
+      Kwargs:
+          flags: flags to pass to the regular expression compiler.
+
+      :returns: file paths.
+      :rtype: list[str]
+
+
+   .. py:method:: migrate(src_paths)
+
+      Transfer all revisions of the files and its
+      corresponding database records into the destination project.
+
+      :param src_paths: file paths to migrate.
+      :type src_paths: list[str]
+
+      :returns: True on success, False otherwise.
+
+
+   .. py:method:: execute(pattern, flags=re.IGNORECASE)
+
+      Transfer all revisions of the file and its
+      corresponding database records into the destination project.
+
+      :param pattern: regex pattern used to locate
+                      the source paths in the database.
+      :type pattern: str
+
+      Kwargs:
+          flags: flags to pass to the regular expression compiler.
+
+      :returns: True on success, False otherwise.
+
+
+
+.. py:function:: _add_arguments(parser)
+
+
+.. py:function:: main(args)
+
+
+.. py:data:: parser
+   
+
+   
+

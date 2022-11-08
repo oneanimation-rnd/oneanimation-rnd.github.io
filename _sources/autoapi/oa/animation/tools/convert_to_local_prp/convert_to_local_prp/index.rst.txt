@@ -1,0 +1,62 @@
+ :py:mod:`oa.animation.tools.convert_to_local_prp.convert_to_local_prp`
+==============================================================================================================================================
+
+.. py:module:: oa.animation.tools.convert_to_local_prp.convert_to_local_prp
+
+.. autoapi-nested-parse::
+
+   Replaces either a nested prop or an instance by importing the same prop and matching its pose.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.convert_to_local_prp.convert_to_local_prp.get_offset_value
+   oa.animation.tools.convert_to_local_prp.convert_to_local_prp.traverse_parents
+   oa.animation.tools.convert_to_local_prp.convert_to_local_prp.get_asset_info
+   oa.animation.tools.convert_to_local_prp.convert_to_local_prp.build_wmodel_id
+   oa.animation.tools.convert_to_local_prp.convert_to_local_prp.save_ref_ctrls_anim
+   oa.animation.tools.convert_to_local_prp.convert_to_local_prp.match_pose
+   oa.animation.tools.convert_to_local_prp.convert_to_local_prp.convert_nested_prp_to_prp
+   oa.animation.tools.convert_to_local_prp.convert_to_local_prp.convert_inst_to_prp
+   oa.animation.tools.convert_to_local_prp.convert_to_local_prp.convert_selection_to_prp
+
+
+
+.. py:function:: get_offset_value()
+
+
+.. py:function:: traverse_parents(obj)
+
+
+.. py:function:: get_asset_info(obj)
+
+
+.. py:function:: build_wmodel_id(asset_info)
+
+
+.. py:function:: save_ref_ctrls_anim(output, nsp)
+
+
+.. py:function:: match_pose(from_nsp, to_nsp)
+
+
+.. py:function:: convert_nested_prp_to_prp(ref_obj, quiet=False)
+
+
+.. py:function:: convert_inst_to_prp(inst)
+
+
+.. py:function:: convert_selection_to_prp()
+
+

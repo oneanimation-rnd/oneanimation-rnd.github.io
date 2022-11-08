@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.texture_check_in_tool.helpers.utils &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title=" oa.texture_check_in_tool.resources" href="../../resources/index.html" />
+    <link rel="prev" title=" oa.texture_check_in_tool.helpers.thread_worker" href="../thread_worker/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool.helpers</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool.helpers.utils</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/oa/texture_check_in_tool/helpers/utils/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.texture_check_in_tool.helpers.utils">
+<span id="oa-texture-check-in-tool-helpers-utils"></span><h1> <a class="reference internal" href="#module-oa.texture_check_in_tool.helpers.utils" title="oa.texture_check_in_tool.helpers.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool.helpers.utils</span></code></a><a class="headerlink" href="#module-oa.texture_check_in_tool.helpers.utils" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.texture_check_in_tool.helpers.utils.load_pixmap" title="oa.texture_check_in_tool.helpers.utils.load_pixmap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_pixmap</span></code></a>(file_name[, width, height])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.texture_check_in_tool.helpers.utils.popup_error_msg" title="oa.texture_check_in_tool.helpers.utils.popup_error_msg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">popup_error_msg</span></code></a>(title, msg[, parent, print_traceback])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.texture_check_in_tool.helpers.utils.file_size" title="oa.texture_check_in_tool.helpers.utils.file_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">file_size</span></code></a>(nbytes)</p></td>
+<td><p><a class="reference external" href="https://stackoverflow.com/questions/14996453/python-libraries-to-calculate-human-readable-filesize-from-bytes">https://stackoverflow.com/questions/14996453/python-libraries-to-calculate-human-readable-filesize-from-bytes</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.texture_check_in_tool.helpers.utils.check_in_texture" title="oa.texture_check_in_tool.helpers.utils.check_in_texture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_in_texture</span></code></a>(source_path, dest_dir, **meta_data)</p></td>
+<td><p>Generates renderer specific texture file from from the supplied file, and copies it onto the server.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.texture_check_in_tool.helpers.utils.open_file" title="oa.texture_check_in_tool.helpers.utils.open_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">open_file</span></code></a>(path)</p></td>
+<td><p>A system call to open the supplied file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.texture_check_in_tool.helpers.utils.get_projects" title="oa.texture_check_in_tool.helpers.utils.get_projects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_projects</span></code></a>()</p></td>
+<td><p>Gets and returns a list of available projects in the asset drive.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.texture_check_in_tool.helpers.utils.set_environment" title="oa.texture_check_in_tool.helpers.utils.set_environment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_environment</span></code></a>(project)</p></td>
+<td><p>Set the renderer and bd_hookpatjs environment variables for the given project</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.texture_check_in_tool.helpers.utils.query_assets_from_db" title="oa.texture_check_in_tool.helpers.utils.query_assets_from_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_assets_from_db</span></code></a>(project, asset_type)</p></td>
+<td><p>Queries asset wrappers from the database.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.texture_check_in_tool.helpers.utils.asset_drive" title="oa.texture_check_in_tool.helpers.utils.asset_drive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">asset_drive</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.texture_check_in_tool.helpers.utils.valid_img_types" title="oa.texture_check_in_tool.helpers.utils.valid_img_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">valid_img_types</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.texture_check_in_tool.helpers.utils.asset_drive">
+<span class="sig-prename descclassname"><span class="pre">oa.texture_check_in_tool.helpers.utils.</span></span><span class="sig-name descname"><span class="pre">asset_drive</span></span><a class="headerlink" href="#oa.texture_check_in_tool.helpers.utils.asset_drive" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.texture_check_in_tool.helpers.utils.valid_img_types">
+<span class="sig-prename descclassname"><span class="pre">oa.texture_check_in_tool.helpers.utils.</span></span><span class="sig-name descname"><span class="pre">valid_img_types</span></span><em class="property"><span class="w"> </span><span class="pre">=</span> <span class="pre">['png',</span> <span class="pre">'jpg',</span> <span class="pre">'jpeg',</span> <span class="pre">'tiff',</span> <span class="pre">'tga']</span></em><a class="headerlink" href="#oa.texture_check_in_tool.helpers.utils.valid_img_types" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.texture_check_in_tool.helpers.utils.load_pixmap">
+<span class="sig-prename descclassname"><span class="pre">oa.texture_check_in_tool.helpers.utils.</span></span><span class="sig-name descname"><span class="pre">load_pixmap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.texture_check_in_tool.helpers.utils.load_pixmap" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.texture_check_in_tool.helpers.utils.popup_error_msg">
+<span class="sig-prename descclassname"><span class="pre">oa.texture_check_in_tool.helpers.utils.</span></span><span class="sig-name descname"><span class="pre">popup_error_msg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_traceback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.texture_check_in_tool.helpers.utils.popup_error_msg" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.texture_check_in_tool.helpers.utils.file_size">
+<span class="sig-prename descclassname"><span class="pre">oa.texture_check_in_tool.helpers.utils.</span></span><span class="sig-name descname"><span class="pre">file_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nbytes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.texture_check_in_tool.helpers.utils.file_size" title="Permalink to this definition"></a></dt>
+<dd><p><a class="reference external" href="https://stackoverflow.com/questions/14996453/python-libraries-to-calculate-human-readable-filesize-from-bytes">https://stackoverflow.com/questions/14996453/python-libraries-to-calculate-human-readable-filesize-from-bytes</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.texture_check_in_tool.helpers.utils.check_in_texture">
+<span class="sig-prename descclassname"><span class="pre">oa.texture_check_in_tool.helpers.utils.</span></span><span class="sig-name descname"><span class="pre">check_in_texture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dest_dir</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">meta_data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.texture_check_in_tool.helpers.utils.check_in_texture" title="Permalink to this definition"></a></dt>
+<dd><p>Generates renderer specific texture file from from the supplied file, and copies it onto the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source_path</strong> – Full path to a file to copy from.</p></li>
+<li><p><strong>dest_dir</strong> – Full path to a directory on the server to copy to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.texture_check_in_tool.helpers.utils.open_file">
+<span class="sig-prename descclassname"><span class="pre">oa.texture_check_in_tool.helpers.utils.</span></span><span class="sig-name descname"><span class="pre">open_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.texture_check_in_tool.helpers.utils.open_file" title="Permalink to this definition"></a></dt>
+<dd><p>A system call to open the supplied file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> – Full path to an existing file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.texture_check_in_tool.helpers.utils.get_projects">
+<span class="sig-prename descclassname"><span class="pre">oa.texture_check_in_tool.helpers.utils.</span></span><span class="sig-name descname"><span class="pre">get_projects</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.texture_check_in_tool.helpers.utils.get_projects" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a list of available projects in the asset drive.
+Excludes softimage and non-projects.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.texture_check_in_tool.helpers.utils.set_environment">
+<span class="sig-prename descclassname"><span class="pre">oa.texture_check_in_tool.helpers.utils.</span></span><span class="sig-name descname"><span class="pre">set_environment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.texture_check_in_tool.helpers.utils.set_environment" title="Permalink to this definition"></a></dt>
+<dd><p>Set the renderer and bd_hookpatjs environment variables for the given project</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.texture_check_in_tool.helpers.utils.query_assets_from_db">
+<span class="sig-prename descclassname"><span class="pre">oa.texture_check_in_tool.helpers.utils.</span></span><span class="sig-name descname"><span class="pre">query_assets_from_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asset_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.texture_check_in_tool.helpers.utils.query_assets_from_db" title="Permalink to this definition"></a></dt>
+<dd><p>Queries asset wrappers from the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>project</strong> – A project on the asset drive.</p></li>
+<li><p><strong>asset_type</strong> – The asset’s type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../thread_worker/index.html" class="btn btn-neutral float-left" title=" oa.texture_check_in_tool.helpers.thread_worker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../resources/index.html" class="btn btn-neutral float-right" title=" oa.texture_check_in_tool.resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

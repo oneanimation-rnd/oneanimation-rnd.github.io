@@ -1,0 +1,206 @@
+ :py:mod:`oa.animation.tools.constraint_tool.constraint_utils`
+============================================================================================================================
+
+.. py:module:: oa.animation.tools.constraint_tool.constraint_utils
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool.constraint_utils.UndoStack
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool.constraint_utils.get_full_img_path
+   oa.animation.tools.constraint_tool.constraint_utils.load_pixmap
+   oa.animation.tools.constraint_tool.constraint_utils.display_error
+   oa.animation.tools.constraint_tool.constraint_utils.get_weak_ref
+   oa.animation.tools.constraint_tool.constraint_utils.create_weak_ref
+   oa.animation.tools.constraint_tool.constraint_utils.toggle_transform_locks
+   oa.animation.tools.constraint_tool.constraint_utils.get_scene_constraints
+   oa.animation.tools.constraint_tool.constraint_utils.add_members_to_obj_set
+   oa.animation.tools.constraint_tool.constraint_utils.create_group
+   oa.animation.tools.constraint_tool.constraint_utils.switch_to_group
+   oa.animation.tools.constraint_tool.constraint_utils.set_constraint_color
+   oa.animation.tools.constraint_tool.constraint_utils.remove_constraint_color
+   oa.animation.tools.constraint_tool.constraint_utils.get_constraint_color
+   oa.animation.tools.constraint_tool.constraint_utils.get_pair_blend
+   oa.animation.tools.constraint_tool.constraint_utils.get_pair_blend_attr
+   oa.animation.tools.constraint_tool.constraint_utils.attach_motion_path
+   oa.animation.tools.constraint_tool.constraint_utils.can_add_constraint
+   oa.animation.tools.constraint_tool.constraint_utils.create_offset
+   oa.animation.tools.constraint_tool.constraint_utils.set_keys_and_step
+   oa.animation.tools.constraint_tool.constraint_utils.add_constraint
+   oa.animation.tools.constraint_tool.constraint_utils.set_key_off
+   oa.animation.tools.constraint_tool.constraint_utils.set_key_on
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.constraint_tool.constraint_utils.global_set
+   oa.animation.tools.constraint_tool.constraint_utils.costumes_set
+   oa.animation.tools.constraint_tool.constraint_utils.costumes_color
+
+
+.. py:data:: global_set
+   :annotation: = constraint_ctrls
+
+   
+
+.. py:data:: costumes_set
+   :annotation: = costumes
+
+   
+
+.. py:data:: costumes_color
+   
+
+   
+
+.. py:class:: UndoStack(name='')
+
+   Bases: :py:obj:`object`
+
+   Includes all operations as a single chunk so Maya can undo/redo all at once.
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(exc_type, exc_value, traceback)
+
+
+
+.. py:function:: get_full_img_path(file_name)
+
+
+.. py:function:: load_pixmap(file_name, width=None, height=None)
+
+
+.. py:function:: display_error(err, parent=None)
+
+
+.. py:function:: get_weak_ref(obj, attr_name)
+
+   Gets and returns the attribute weak reference object.
+
+
+.. py:function:: create_weak_ref(obj, weak_ref, attr_name)
+
+   Connects one object to another via weak reference.
+
+   :param obj: Container to hold weak reference.
+   :param weak_ref: Object to reference.
+   :param attr_name: Name of the attribute.
+
+
+.. py:function:: toggle_transform_locks(obj, lock)
+
+
+.. py:function:: get_scene_constraints()
+
+
+.. py:function:: add_members_to_obj_set(new_members, obj_set)
+
+
+.. py:function:: create_group(name)
+
+   Creates a new object set to group constraint ctrls to.
+
+
+.. py:function:: switch_to_group(objs, group_name)
+
+   Removes supplied objects from other constraint object sets and adds them to the supplied one.
+
+
+.. py:function:: set_constraint_color(objs, qcolor)
+
+
+.. py:function:: remove_constraint_color(objs)
+
+
+.. py:function:: get_constraint_color(obj)
+
+
+.. py:function:: get_pair_blend(obj, axis_type)
+
+   Gets and returns the channel's pairBlend driver, if it exists.
+
+   :param obj: The object to check on.
+   :param axis_type: 0=Translate, 1=Rotate.
+
+
+.. py:function:: get_pair_blend_attr(pair_blend)
+
+
+.. py:function:: attach_motion_path(obj, path, u_value=0, up_type=0, fraction_mode=True, name='motionPath')
+
+   Manually creates a new motion path and attaches the supplied object to it.
+   cmds.pathAnimation() is notorious for not being friendly with undoing properly.
+   Also pathAnimation creates a non-fatal cycle by default, which is annoying.
+
+
+.. py:function:: can_add_constraint(obj, target, constraint_type)
+
+   Does a series of sanity checks to see if the constraint can be added.
+   An exception is raised if it fails.
+
+   :param obj: The object to constraint.
+   :param target: The object that will drive the constraint.
+   :param constraint_type: enums.ConstraintType.
+
+
+.. py:function:: create_offset(obj, target, constraint_type, style, size, color, group=global_set)
+
+   Creates an offset control and nul.
+   offset_ctrl=Object the animators will use. The object constraints to this.
+   offset_nul=Constraints with the target.
+
+   :param obj: The object to constraint.
+   :param target: The object to drive the constraint.
+   :param constraint_type: enums.ConstraintType.
+   :param style: The offset's shape style.
+   :param size: The size of the offset ctrl.
+   :param color: An rgb 3-float list to color the offset ctrl.
+   :param group: The object set the offset ctrl should be added to.
+
+   :returns: A list of the offset nul and offset ctrl.
+
+
+.. py:function:: set_keys_and_step(plug, prev_val=None, val=None)
+
+   Sets a key for the previous and current frame and sets first key's out tangent to step.
+
+   :param plug: The plug to set keys on.
+   :param prev_val: The value to set on the first key, otherwise it just inserts itself.
+   :param val: The value to set on the second key, otherwise it just inserts itself.
+
+
+.. py:function:: add_constraint(obj, target, constraint_type, control_style='sphere', control_size=1, control_color=[255, 0, 0], set_keys=True, color=None, group=global_set)
+
+   Adds a new constraint to the target with the supplied constraint type.
+
+
+.. py:function:: set_key_off(onuls)
+
+   Disables constraint on the supplied offset nuls.
+
+
+.. py:function:: set_key_on(onuls)
+
+   Enables the constraint on the supplied offset nuls.
+
+

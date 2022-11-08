@@ -1,0 +1,111 @@
+ :py:mod:`oa_asset_builder.libs.description`
+========================================================================================
+
+.. py:module:: oa_asset_builder.libs.description
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_asset_builder.libs.description.ObjectDescription
+   oa_asset_builder.libs.description.MaterialDescription
+   oa_asset_builder.libs.description.InstanceDescription
+   oa_asset_builder.libs.description.AssetDescription
+
+
+
+
+.. py:class:: ObjectDescription(inf_object)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: guid
+
+
+   .. py:property:: name
+
+
+   .. py:property:: abcpath
+
+
+   .. py:property:: material
+
+
+   .. py:property:: subdiv
+
+
+
+.. py:class:: MaterialDescription(inf_material)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: guid
+
+
+   .. py:property:: name
+
+
+   .. py:property:: color
+
+
+
+.. py:class:: InstanceDescription(inf_instance)
+
+   Bases: :py:obj:`object`
+
+   .. py:property:: guid
+
+
+   .. py:property:: name
+
+
+   .. py:property:: abcpath
+
+
+   .. py:property:: master_guid
+
+
+
+.. py:class:: AssetDescription(inf_asset, storage_manager)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: from_asset_path(asset_scene_path)
+      :classmethod:
+
+
+   .. py:method:: from_inf_asset(inf_asset)
+      :classmethod:
+
+
+   .. py:method:: _parse_description(filename)
+      :classmethod:
+
+
+   .. py:method:: get_asm()
+
+
+   .. py:method:: get_asset_info()
+
+
+   .. py:method:: get_asset_fullname()
+
+
+   .. py:method:: get_object_descriptions()
+
+
+   .. py:method:: get_asset_descriptions()
+
+
+   .. py:method:: get_instance_descriptions()
+
+
+   .. py:method:: get_mat_description_map()
+
+
+

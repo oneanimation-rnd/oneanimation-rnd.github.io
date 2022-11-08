@@ -1,0 +1,23 @@
+ :py:mod:`oa.rigging.tools.weights_editor_tool.widgets`
+==============================================================================================================
+
+.. py:module:: oa.rigging.tools.weights_editor_tool.widgets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   about_dialog/index.rst
+   abstract_weights_view/index.rst
+   custom_double_spinbox/index.rst
+   custom_header_view/index.rst
+   hotkeys_dialog/index.rst
+   inf_list_view/index.rst
+   presets_dialog/index.rst
+   weights_list_view/index.rst
+   weights_table_view/index.rst
+
+

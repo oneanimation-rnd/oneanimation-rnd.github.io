@@ -1,0 +1,16 @@
+ :py:mod:`oa.texture_check_in_tool.widgets`
+======================================================================================
+
+.. py:module:: oa.texture_check_in_tool.widgets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   check_in_widget/index.rst
+   server_widget/index.rst
+
+

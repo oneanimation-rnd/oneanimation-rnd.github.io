@@ -1,0 +1,160 @@
+ :py:mod:`oa.general.tools.task_switcher.widgets.shots_viewer`
+============================================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.widgets.shots_viewer
+
+.. autoapi-nested-parse::
+
+   Reads data from the database to fill in a treeview with sequences their shots.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.general.tools.task_switcher.widgets.shots_viewer.ColumnIndex
+   oa.general.tools.task_switcher.widgets.shots_viewer.TreeView
+   oa.general.tools.task_switcher.widgets.shots_viewer.ProxyModel
+   oa.general.tools.task_switcher.widgets.shots_viewer.TreeModel
+   oa.general.tools.task_switcher.widgets.shots_viewer.TreeNode
+
+
+
+
+.. py:class:: ColumnIndex
+
+   .. py:attribute:: Shot
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: Comment
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: Date
+      :annotation: = 2
+
+      
+
+   .. py:attribute:: User
+      :annotation: = 3
+
+      
+
+
+.. py:class:: TreeView(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTreeView`
+
+   .. py:attribute:: double_clicked
+      
+
+      
+
+   .. py:attribute:: selection_changed
+      
+
+      
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+
+   .. py:method:: selectionChanged(selected, deselected)
+
+
+   .. py:method:: get_shots_by_selection()
+
+
+   .. py:method:: on_context_menu_triggered(point)
+
+      Creates right-click menu at the supplied point.
+
+
+   .. py:method:: on_open_browser_triggered()
+
+
+   .. py:method:: on_copy_to_clipboard_triggered()
+
+
+   .. py:method:: on_open_descriptor_triggered()
+
+
+   .. py:method:: on_load_scene_triggered()
+
+
+   .. py:method:: on_pull_triggered()
+
+
+   .. py:method:: on_archive_shot_triggered()
+
+
+   .. py:method:: get_tree_node(index, node_type=None)
+
+
+   .. py:method:: expand_root_item()
+
+      Expands root TreeNode.
+
+
+   .. py:method:: fill_tree(project, ep, seq, shot_type)
+
+      Reset and add tree node objects.
+
+
+
+.. py:class:: ProxyModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QSortFilterProxyModel`
+
+   Proxy used between QTreeView and QAbstractItemModel to filter and sort items.
+
+   .. py:method:: filterAcceptsRow(row, parent_index)
+
+      Built-in function to filter what items are seen.
+
+
+
+.. py:class:: TreeModel(parent=None)
+
+   Bases: :py:obj:`oa.general.tools.task_switcher.abstract_widgets.abstract_tree_model.AbstractTreeModel`
+
+   
+   QTreeView uses this class to handle all its data for best performance.
+
+   .. py:method:: data(index, role)
+
+      Edit this to determine how the model should get its data from tree nodes.
+
+
+   .. py:method:: flags(index)
+
+      Sets a role for columns.
+
+
+   .. py:method:: get_data(project, ep, seq, shot_type)
+
+
+
+.. py:class:: TreeNode(node_type, container_type=None, meta_data=None, _data=None, parent=None)
+
+   Bases: :py:obj:`oa.general.tools.task_switcher.abstract_widgets.abstract_tree_node.AbstractTreeNode`
+
+   .. py:method:: appendChild(node_type, container_type, meta_data, _data)
+
+      Appends a new TreeNode child to self.
+
+
+

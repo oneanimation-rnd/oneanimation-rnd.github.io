@@ -1,0 +1,20 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.auto_rigs`
+====================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.auto_rigs
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   biped/index.rst
+   bird/index.rst
+   face/index.rst
+   face_2d/index.rst
+   oddbod/index.rst
+   quad/index.rst
+
+

@@ -1,0 +1,86 @@
+ :py:mod:`oa.asset.libs.asset_version_control`
+============================================================================================
+
+.. py:module:: oa.asset.libs.asset_version_control
+
+.. autoapi-nested-parse::
+
+   Extends ldap's module to handle version control of our assets.
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.asset.libs.asset_version_control.validate_scn_path
+   oa.asset.libs.asset_version_control.to_unresolved_path
+   oa.asset.libs.asset_version_control.get_latest_path
+   oa.asset.libs.asset_version_control.get_latest_ref_paths
+   oa.asset.libs.asset_version_control.get_next_version
+   oa.asset.libs.asset_version_control.update_to_latest_ref
+
+
+
+.. py:function:: validate_scn_path(path)
+
+
+.. py:function:: to_unresolved_path(path)
+
+   Strips number at the end of a path to make it unresolved.
+
+   :param path: A full path (my/path/name.ma{0})
+   :type path: string
+
+   :returns: The path as unresolved.
+
+
+.. py:function:: get_latest_path(path)
+
+   Gets latest version from the path's directory.
+   If the path has no versions, or its directory doesn't exists, it returns itself.
+
+   :param path: Full file path.
+   :type path: string
+
+   :returns: A full path with a version.
+
+
+.. py:function:: get_latest_ref_paths()
+
+   Goes through all references in the scene and gets their latest version.
+
+   :returns: latest_ref_path, ..}
+   :rtype: A dictionary {current_ref_path
+
+
+.. py:function:: get_next_version(path)
+
+   Checks the latest version from the path's directory and increments it.
+   If the path has no versions, or its directory doesn't exist, it will pass as v001.
+
+   :param path: Full file path.
+   :type path: string
+
+   :returns: A full path with a version.
+
+
+.. py:function:: update_to_latest_ref(ref_path, nested=False, force=False)
+
+   Updates supplied reference and its nested references to their latest versions.
+
+   :param ref_path: A reference's resolved path.
+   :type ref_path: string
+   :param nested: Also updates any nested references, though these changes won't stick.
+   :type nested: bool
+   :param force: Forces it to update on True.
+   :type force: bool
+
+   :returns: The new reference's resolved path.
+
+

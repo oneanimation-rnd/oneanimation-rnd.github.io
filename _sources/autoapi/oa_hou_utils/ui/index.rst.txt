@@ -1,0 +1,59 @@
+ :py:mod:`oa_hou_utils.ui`
+====================================================
+
+.. py:module:: oa_hou_utils.ui
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_hou_utils.ui.MongoDBAccessor
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_hou_utils.ui.choose_revision
+   oa_hou_utils.ui.choose_scn_from_tree
+   oa_hou_utils.ui.ensure_comment
+   oa_hou_utils.ui.ensure_scn_path
+
+
+
+.. py:function:: choose_revision(component, current_version=None, title='Select Revision', message='', exclusive=True, select_current=False)
+
+
+.. py:function:: choose_scn_from_tree(scn_type='SH', scn_ext='ma', title='Choose Scene')
+
+
+.. py:function:: ensure_comment(comment, title=None, loop=False, raise_error=False)
+
+
+.. py:function:: ensure_scn_path(scn_path, scn_type='SH', scn_ext='ma', title='Choose Scene')
+
+
+.. py:class:: MongoDBAccessor(project, database='test-main-db')
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: get_episodes()
+
+
+   .. py:method:: get_sequences(episode)
+
+
+   .. py:method:: get_scenes(episode, sequence)
+
+
+   .. py:method:: get_scenes_by_regex(regex)
+
+
+

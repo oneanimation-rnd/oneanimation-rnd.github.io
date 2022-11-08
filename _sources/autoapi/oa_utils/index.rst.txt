@@ -1,0 +1,40 @@
+ :py:mod:`oa_utils`
+======================================
+
+.. py:module:: oa_utils
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   database/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   config/index.rst
+   helpers/index.rst
+   ldap_control/index.rst
+   logger/index.rst
+   medusa/index.rst
+   takes/index.rst
+   vcs/index.rst
+   xml_info_api/index.rst
+   xml_info_hou/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: __path__
+   
+
+   
+

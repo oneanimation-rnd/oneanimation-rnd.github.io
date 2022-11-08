@@ -1,0 +1,16 @@
+ :py:mod:`oa.general.tools.shield.templates`
+========================================================================================
+
+.. py:module:: oa.general.tools.shield.templates
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   check_template/index.rst
+   shield_template/index.rst
+
+

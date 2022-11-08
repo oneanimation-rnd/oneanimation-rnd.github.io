@@ -1,0 +1,42 @@
+ :py:mod:`oa.animation.tools.synoptics.widgets.delete_dialog`
+==========================================================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.widgets.delete_dialog
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.widgets.delete_dialog.DeleteDialog
+
+
+
+
+.. py:class:: DeleteDialog(parent)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   Window to delete an asset's synoptic files.
+   Uses current asset via environment variables.
+
+   :param parent:
+   :type parent: QWidget
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: list_synoptics()
+
+
+   .. py:method:: delete_selected()
+
+
+

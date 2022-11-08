@@ -1,0 +1,22 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.components.oddbods_face_rig`
+========================================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.components.oddbods_face_rig
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.components.oddbods_face_rig.rig_oddbods_face
+
+
+
+.. py:function:: rig_oddbods_face(root_nul, rig_template, spine_path, jaw_up_mult=3.0, emoticon_mult=3.0, rig_scale=3.0)
+
+

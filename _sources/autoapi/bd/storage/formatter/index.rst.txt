@@ -1,0 +1,92 @@
+ :py:mod:`bd.storage.formatter`
+==============================================================
+
+.. py:module:: bd.storage.formatter
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.formatter.FieldFormatter
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.formatter._dummy_func
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   bd.storage.formatter.log
+   bd.storage.formatter._formatter
+   bd.storage.formatter._type_conversions
+
+
+.. py:data:: log
+   
+
+   
+
+.. py:data:: _formatter
+   
+
+   
+
+.. py:data:: _type_conversions
+   
+
+   
+
+.. py:function:: _dummy_func(x)
+
+
+.. py:class:: FieldFormatter(field_formatting_config)
+
+   Bases: :py:obj:`object`
+
+   .. py:class:: SafeDict
+
+      Bases: :py:obj:`dict`
+
+      dict() -> new empty dictionary
+      dict(mapping) -> new dictionary initialized from a mapping object's
+          (key, value) pairs
+      dict(iterable) -> new dictionary initialized as if via:
+          d = {}
+          for k, v in iterable:
+              d[k] = v
+      dict(**kwargs) -> new dictionary initialized with the name=value pairs
+          in the keyword argument list.  For example:  dict(one=1, two=2)
+
+      Initialize self.  See help(type(self)) for accurate signature.
+
+      .. py:method:: __missing__(key)
+
+
+
+   .. py:method:: parse(input_str, format_str)
+
+
+   .. py:method:: format(template, **fields)
+
+
+   .. py:method:: _ensure_extra_fields(field_formatting_config)
+
+
+   .. py:method:: _ensure_typed(fields)
+
+
+

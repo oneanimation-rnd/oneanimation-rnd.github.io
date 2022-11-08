@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.anim_library.tool.anim_library_tool &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/underscore.js"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title=" oa.animation" href="../../../animation/index.html" />
+    <link rel="prev" title=" oa.anim_library.tool.widgets.qtag_widget" href="../widgets/qtag_widget/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library.tool</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library.tool.anim_library_tool</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../_sources/autoapi/oa/anim_library/tool/anim_library_tool/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.anim_library.tool.anim_library_tool">
+<span id="oa-anim-library-tool-anim-library-tool"></span><h1> <a class="reference internal" href="#module-oa.anim_library.tool.anim_library_tool" title="oa.anim_library.tool.anim_library_tool"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library.tool.anim_library_tool</span></code></a><a class="headerlink" href="#module-oa.anim_library.tool.anim_library_tool" title="Permalink to this heading"></a></h1>
+<p>Animation library</p>
+<p>Interface to create, edit, and delete animation clips.
+Clips are stored physically in the RND project on the asset drive, and its meta-data is stored in the database.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+<dt>Usage:</dt><dd><p>launch()</p>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary" title="oa.anim_library.tool.anim_library_tool.AnimLibrary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnimLibrary</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.anim_library.tool.anim_library_tool.ClipsContainer" title="oa.anim_library.tool.anim_library_tool.ClipsContainer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClipsContainer</span></code></a></p></td>
+<td><p>Displays a tip if it's empty.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.anim_library.tool.anim_library_tool.TagsContainer" title="oa.anim_library.tool.anim_library_tool.TagsContainer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TagsContainer</span></code></a></p></td>
+<td><p>Displays a tip if it's empty.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.anim_library.tool.anim_library_tool.CustomScrollArea" title="oa.anim_library.tool.anim_library_tool.CustomScrollArea"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomScrollArea</span></code></a></p></td>
+<td><p>Needed to expose the mouse wheel event.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.anim_library.tool.anim_library_tool.ClipFrame" title="oa.anim_library.tool.anim_library_tool.ClipFrame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClipFrame</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.anim_library.tool.anim_library_tool.launch" title="oa.anim_library.tool.anim_library_tool.launch"><code class="xref py py-obj docutils literal notranslate"><span class="pre">launch</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.anim_library_tool.</span></span><span class="sig-name descname"><span class="pre">AnimLibrary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.instance">
+<span class="sig-name descname"><span class="pre">instance</span></span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.instance" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.setup_gui">
+<span class="sig-name descname"><span class="pre">setup_gui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.setup_gui" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.create_gui">
+<span class="sig-name descname"><span class="pre">create_gui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.create_gui" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.showEvent">
+<span class="sig-name descname"><span class="pre">showEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.showEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.closeEvent">
+<span class="sig-name descname"><span class="pre">closeEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.closeEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.on_projects_changed">
+<span class="sig-name descname"><span class="pre">on_projects_changed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.on_projects_changed" title="Permalink to this definition"></a></dt>
+<dd><p>Callback to update project clips when switching project</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.interrupt_on_triggered">
+<span class="sig-name descname"><span class="pre">interrupt_on_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.interrupt_on_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.clip_on_entered">
+<span class="sig-name descname"><span class="pre">clip_on_entered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.clip_on_entered" title="Permalink to this definition"></a></dt>
+<dd><p>Display the clip’s info with a custom tooltip.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.clip_on_exited">
+<span class="sig-name descname"><span class="pre">clip_on_exited</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.clip_on_exited" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.clip_on_mouse_moved">
+<span class="sig-name descname"><span class="pre">clip_on_mouse_moved</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qpoint</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.clip_on_mouse_moved" title="Permalink to this definition"></a></dt>
+<dd><p>Makes tooltip follow the mouse.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.wheel_on_triggered">
+<span class="sig-name descname"><span class="pre">wheel_on_triggered</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.wheel_on_triggered" title="Permalink to this definition"></a></dt>
+<dd><p>Hides tool tip, otherwise it doesn’t trigger leave event for its current clip.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.create_clip_on_clicked">
+<span class="sig-name descname"><span class="pre">create_clip_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.create_clip_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.edit_sel_sets_on_clicked">
+<span class="sig-name descname"><span class="pre">edit_sel_sets_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.edit_sel_sets_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.tags_on_created">
+<span class="sig-name descname"><span class="pre">tags_on_created</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qtag</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.tags_on_created" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.tags_on_loaded">
+<span class="sig-name descname"><span class="pre">tags_on_loaded</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.tags_on_loaded" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.popular_tags_on_toggled">
+<span class="sig-name descname"><span class="pre">popular_tags_on_toggled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.popular_tags_on_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.popular_tag_on_clicked">
+<span class="sig-name descname"><span class="pre">popular_tag_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.popular_tag_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.popular_tag_del_on_clicked">
+<span class="sig-name descname"><span class="pre">popular_tag_del_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.popular_tag_del_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.settings_on_toggled">
+<span class="sig-name descname"><span class="pre">settings_on_toggled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.settings_on_toggled" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.clip_on_deleted">
+<span class="sig-name descname"><span class="pre">clip_on_deleted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">clip_frame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.clip_on_deleted" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.on_tags_option_clicked">
+<span class="sig-name descname"><span class="pre">on_tags_option_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.on_tags_option_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.refresh_on_clicked">
+<span class="sig-name descname"><span class="pre">refresh_on_clicked</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.refresh_on_clicked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.del_previous_instance">
+<span class="sig-name descname"><span class="pre">del_previous_instance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.del_previous_instance" title="Permalink to this definition"></a></dt>
+<dd><p>Deletes any previous instance of this class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.save_state">
+<span class="sig-name descname"><span class="pre">save_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.save_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.restore_state">
+<span class="sig-name descname"><span class="pre">restore_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.restore_state" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.load_anm_plugin">
+<span class="sig-name descname"><span class="pre">load_anm_plugin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.load_anm_plugin" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.recollect_tags">
+<span class="sig-name descname"><span class="pre">recollect_tags</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.recollect_tags" title="Permalink to this definition"></a></dt>
+<dd><p>Populates combobox’s auto-complete with all tags.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.fill_projects_list">
+<span class="sig-name descname"><span class="pre">fill_projects_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.fill_projects_list" title="Permalink to this definition"></a></dt>
+<dd><p>Populates project combobox and set current project.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.fill_clip_names">
+<span class="sig-name descname"><span class="pre">fill_clip_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.fill_clip_names" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.update_search_fields">
+<span class="sig-name descname"><span class="pre">update_search_fields</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.update_search_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.update_clips">
+<span class="sig-name descname"><span class="pre">update_clips</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.update_clips" title="Permalink to this definition"></a></dt>
+<dd><p>Update the frame with clips filtered by the active tags.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.get_loaded_tags">
+<span class="sig-name descname"><span class="pre">get_loaded_tags</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.get_loaded_tags" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a list of active tags.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.fill_popular_tags">
+<span class="sig-name descname"><span class="pre">fill_popular_tags</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.fill_popular_tags" title="Permalink to this definition"></a></dt>
+<dd><p>Populates frame with the user’s most popular tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>all_tags</strong> – Skips if tag isn’t found in this list of tags.
+If not supplied, collects all tags from the database.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.AnimLibrary.add_to_popular_count">
+<span class="sig-name descname"><span class="pre">add_to_popular_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tag_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.AnimLibrary.add_to_popular_count" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.ClipsContainer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.anim_library_tool.</span></span><span class="sig-name descname"><span class="pre">ClipsContainer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.ClipsContainer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QGroupBox</span></code></p>
+<p>Displays a tip if it’s empty.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.ClipsContainer.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paint_event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.ClipsContainer.paintEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.TagsContainer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.anim_library_tool.</span></span><span class="sig-name descname"><span class="pre">TagsContainer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.TagsContainer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QFrame</span></code></p>
+<p>Displays a tip if it’s empty.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.TagsContainer.paintEvent">
+<span class="sig-name descname"><span class="pre">paintEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">paint_event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.TagsContainer.paintEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.CustomScrollArea">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.anim_library_tool.</span></span><span class="sig-name descname"><span class="pre">CustomScrollArea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.CustomScrollArea" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QScrollArea</span></code></p>
+<p>Needed to expose the mouse wheel event.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.CustomScrollArea.wheel_triggered">
+<span class="sig-name descname"><span class="pre">wheel_triggered</span></span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.CustomScrollArea.wheel_triggered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.CustomScrollArea.wheelEvent">
+<span class="sig-name descname"><span class="pre">wheelEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wheel_event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.CustomScrollArea.wheelEvent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.ClipFrame">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.anim_library_tool.</span></span><span class="sig-name descname"><span class="pre">ClipFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qclip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.ClipFrame" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QFrame</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.ClipFrame.clip_entered">
+<span class="sig-name descname"><span class="pre">clip_entered</span></span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.ClipFrame.clip_entered" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.ClipFrame.clip_exited">
+<span class="sig-name descname"><span class="pre">clip_exited</span></span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.ClipFrame.clip_exited" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.ClipFrame.mouse_moved">
+<span class="sig-name descname"><span class="pre">mouse_moved</span></span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.ClipFrame.mouse_moved" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.ClipFrame.on_edit_click">
+<span class="sig-name descname"><span class="pre">on_edit_click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.ClipFrame.on_edit_click" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.ClipFrame.on_double_click">
+<span class="sig-name descname"><span class="pre">on_double_click</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.ClipFrame.on_double_click" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.ClipFrame.on_right_click">
+<span class="sig-name descname"><span class="pre">on_right_click</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mouse_event</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.ClipFrame.on_right_click" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.ClipFrame.filepath">
+<span class="sig-name descname"><span class="pre">filepath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.ClipFrame.filepath" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.anim_library.tool.anim_library_tool.launch">
+<span class="sig-prename descclassname"><span class="pre">oa.anim_library.tool.anim_library_tool.</span></span><span class="sig-name descname"><span class="pre">launch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.anim_library.tool.anim_library_tool.launch" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../widgets/qtag_widget/index.html" class="btn btn-neutral float-left" title=" oa.anim_library.tool.widgets.qtag_widget" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../animation/index.html" class="btn btn-neutral float-right" title=" oa.animation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

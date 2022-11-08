@@ -1,0 +1,73 @@
+ :py:mod:`oa.rnd.tools.cache_importer.file_browser_widget`
+====================================================================================================================
+
+.. py:module:: oa.rnd.tools.cache_importer.file_browser_widget
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rnd.tools.cache_importer.file_browser_widget.IconProvider
+   oa.rnd.tools.cache_importer.file_browser_widget.FileSystemModel
+   oa.rnd.tools.cache_importer.file_browser_widget.FileBrowserWidget
+
+
+
+
+.. py:class:: IconProvider(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QFileIconProvider`
+
+   Determines what icon the row should use.
+
+   .. py:method:: icon(qfileinfo)
+
+
+
+.. py:class:: FileSystemModel(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QFileSystemModel`
+
+   .. py:method:: data(index, role)
+
+
+   .. py:method:: headerData(section, orientation, role)
+
+
+
+.. py:class:: FileBrowserWidget(start_path='', parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QTreeView`
+
+   A file browser that can be used as a widget.
+
+   .. py:attribute:: shot_double_clicked
+      
+
+      
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: mouseDoubleClickEvent(event)
+
+      Expands/Collapses item if it has children.
+
+
+   .. py:method:: header_on_click(section)
+
+
+   .. py:method:: set_path(path)
+
+
+   .. py:method:: get_selected_file(index=None)
+
+      Gets and returns the full path of the current selected file.
+
+
+

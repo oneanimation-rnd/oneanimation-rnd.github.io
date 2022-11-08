@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> oa.gui.libs.gui_states.gui_states &mdash; One Animation Pipeline Docs# 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../../../../" id="documentation_options" src="../../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../../_static/jquery.js"></script>
+        <script src="../../../../../../_static/underscore.js"></script>
+        <script src="../../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../../../../_static/doctools.js"></script>
+        <script src="../../../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../../../_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="../../../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+    <link rel="next" title=" oa.gui.libs.hotkeys" href="../../hotkeys/index.html" />
+    <link rel="prev" title=" oa.gui.libs.gui_states" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../../../../index.html" class="icon icon-home"> One Animation Pipeline Docs#
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../about.html">About US</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../howtos.html">Guides and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../pipeline.html">Pipeline</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../api.html">API DOCS</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../bd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">bd</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../format_schema_pb2/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">format_schema_pb2</span></code></a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../../../index.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../../../anim_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.anim_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../animation/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.animation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../asset_library/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.asset_library</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../capture_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.capture_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../general/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.general</span></code></a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.hou_utils</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../mat_gui/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.mat_gui</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../modeling/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.modeling</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.palette</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../reset_maya_user_prefs/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.reset_maya_user_prefs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rigging/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rigging</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../rnd/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.rnd</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_builder</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../shot_split_submitter_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.shot_split_submitter_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../texture_check_in_tool/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.texture_check_in_tool</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../user_directory/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.user_directory</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../vaderBoard/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.vaderBoard</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_asset_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_asset_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_hou_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_hou_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_palette/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_palette</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_shot_builder/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_shot_builder</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../oa_utils/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa_utils</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../test_format/index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">test_format</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../faq.html">Frequently asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../help.html">Help &amp; Support</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../index.html">One Animation Pipeline Docs#</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../api.html">API DOCS</a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui.libs</span></code></a></li>
+          <li class="breadcrumb-item"><a href="../index.html"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui.libs.gui_states</span></code></a></li>
+      <li class="breadcrumb-item active"> <code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui.libs.gui_states.gui_states</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../../../_sources/autoapi/oa/gui/libs/gui_states/gui_states/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-oa.gui.libs.gui_states.gui_states">
+<span id="oa-gui-libs-gui-states-gui-states"></span><h1> <a class="reference internal" href="#module-oa.gui.libs.gui_states.gui_states" title="oa.gui.libs.gui_states.gui_states"><code class="xref py py-mod docutils literal notranslate"><span class="pre">oa.gui.libs.gui_states.gui_states</span></code></a><a class="headerlink" href="#module-oa.gui.libs.gui_states.gui_states" title="Permalink to this heading"></a></h1>
+<p>As a response for getting too many broken scenes, it has been decided to disable any potentially
+dangerous built-in tools when working on animation scenes.</p>
+<p>This gets triggered when a task is switched to a shot.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Jason Labbe</p>
+</dd>
+</dl>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.gui.libs.gui_states.gui_states.init_menus" title="oa.gui.libs.gui_states.gui_states.init_menus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_menus</span></code></a>()</p></td>
+<td><p>Initializes menus otherwise they won't have any children.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.gui.libs.gui_states.gui_states.init_shelfs" title="oa.gui.libs.gui_states.gui_states.init_shelfs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init_shelfs</span></code></a>()</p></td>
+<td><p>Initializes shelfs by switching tabs to it otherwise they won't have any items.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.gui.libs.gui_states.gui_states.get_maya_shelf" title="oa.gui.libs.gui_states.gui_states.get_maya_shelf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_maya_shelf</span></code></a>()</p></td>
+<td><p>Gets and returns Maya's main shelf layout.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.gui.libs.gui_states.gui_states.set_outliner_popup_anim" title="oa.gui.libs.gui_states.gui_states.set_outliner_popup_anim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_outliner_popup_anim</span></code></a>(*args)</p></td>
+<td><p>Disables some sensitive menu items from the Outliner's popup menu.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.gui.libs.gui_states.gui_states.set_outliner_popup_normal" title="oa.gui.libs.gui_states.gui_states.set_outliner_popup_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_outliner_popup_normal</span></code></a>(*args)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.gui.libs.gui_states.gui_states.set_anim_state" title="oa.gui.libs.gui_states.gui_states.set_anim_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_anim_state</span></code></a>(state)</p></td>
+<td><p>Disables menus, marking menus, and shelf items as a protection against tools that may break our scene files.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.gui.libs.gui_states.gui_states.disable_anim_state" title="oa.gui.libs.gui_states.gui_states.disable_anim_state"><code class="xref py py-obj docutils literal notranslate"><span class="pre">disable_anim_state</span></code></a>()</p></td>
+<td><p>Prompts user to input password if it's not a trusted user.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#oa.gui.libs.gui_states.gui_states.menus_info" title="oa.gui.libs.gui_states.gui_states.menus_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">menus_info</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#oa.gui.libs.gui_states.gui_states.shelfs_info" title="oa.gui.libs.gui_states.gui_states.shelfs_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">shelfs_info</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.gui.libs.gui_states.gui_states.menus_info">
+<span class="sig-prename descclassname"><span class="pre">oa.gui.libs.gui_states.gui_states.</span></span><span class="sig-name descname"><span class="pre">menus_info</span></span><a class="headerlink" href="#oa.gui.libs.gui_states.gui_states.menus_info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="oa.gui.libs.gui_states.gui_states.shelfs_info">
+<span class="sig-prename descclassname"><span class="pre">oa.gui.libs.gui_states.gui_states.</span></span><span class="sig-name descname"><span class="pre">shelfs_info</span></span><a class="headerlink" href="#oa.gui.libs.gui_states.gui_states.shelfs_info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.gui.libs.gui_states.gui_states.init_menus">
+<span class="sig-prename descclassname"><span class="pre">oa.gui.libs.gui_states.gui_states.</span></span><span class="sig-name descname"><span class="pre">init_menus</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.gui.libs.gui_states.gui_states.init_menus" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes menus otherwise they won’t have any children.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.gui.libs.gui_states.gui_states.init_shelfs">
+<span class="sig-prename descclassname"><span class="pre">oa.gui.libs.gui_states.gui_states.</span></span><span class="sig-name descname"><span class="pre">init_shelfs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.gui.libs.gui_states.gui_states.init_shelfs" title="Permalink to this definition"></a></dt>
+<dd><p>Initializes shelfs by switching tabs to it otherwise they won’t have any items.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.gui.libs.gui_states.gui_states.get_maya_shelf">
+<span class="sig-prename descclassname"><span class="pre">oa.gui.libs.gui_states.gui_states.</span></span><span class="sig-name descname"><span class="pre">get_maya_shelf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.gui.libs.gui_states.gui_states.get_maya_shelf" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns Maya’s main shelf layout.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.gui.libs.gui_states.gui_states.set_outliner_popup_anim">
+<span class="sig-prename descclassname"><span class="pre">oa.gui.libs.gui_states.gui_states.</span></span><span class="sig-name descname"><span class="pre">set_outliner_popup_anim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.gui.libs.gui_states.gui_states.set_outliner_popup_anim" title="Permalink to this definition"></a></dt>
+<dd><p>Disables some sensitive menu items from the Outliner’s popup menu.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.gui.libs.gui_states.gui_states.set_outliner_popup_normal">
+<span class="sig-prename descclassname"><span class="pre">oa.gui.libs.gui_states.gui_states.</span></span><span class="sig-name descname"><span class="pre">set_outliner_popup_normal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.gui.libs.gui_states.gui_states.set_outliner_popup_normal" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.gui.libs.gui_states.gui_states.set_anim_state">
+<span class="sig-prename descclassname"><span class="pre">oa.gui.libs.gui_states.gui_states.</span></span><span class="sig-name descname"><span class="pre">set_anim_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#oa.gui.libs.gui_states.gui_states.set_anim_state" title="Permalink to this definition"></a></dt>
+<dd><p>Disables menus, marking menus, and shelf items as a protection against tools that may break our scene files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>state</strong> (<em>bool</em>) – Enables protection on True.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="oa.gui.libs.gui_states.gui_states.disable_anim_state">
+<span class="sig-prename descclassname"><span class="pre">oa.gui.libs.gui_states.gui_states.</span></span><span class="sig-name descname"><span class="pre">disable_anim_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#oa.gui.libs.gui_states.gui_states.disable_anim_state" title="Permalink to this definition"></a></dt>
+<dd><p>Prompts user to input password if it’s not a trusted user.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title=" oa.gui.libs.gui_states" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../hotkeys/index.html" class="btn btn-neutral float-right" title=" oa.gui.libs.hotkeys" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, One Animation RnD Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

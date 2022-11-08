@@ -1,0 +1,227 @@
+ :py:mod:`oa_utils.takes`
+==================================================
+
+.. py:module:: oa_utils.takes
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.takes.TakeWrapper
+   oa_utils.takes.Take
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.takes._takeErr
+   oa_utils.takes.allTakes
+   oa_utils.takes.curTake
+   oa_utils.takes.findTake
+   oa_utils.takes.prefixForNewTakeNames
+   oa_utils.takes.rootTake
+   oa_utils.takes.setCurTake
+   oa_utils.takes.setAutoTake
+   oa_utils.takes.setPrefixForNewTakeNames
+
+
+
+.. py:class:: TakeWrapper(name)
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: __repr__()
+
+      Return repr(self).
+
+
+   .. py:method:: setName(name)
+
+      Set this Takes name.
+
+
+   .. py:method:: memoryUsageInBytes()
+
+      Memory used by this Take in bytes
+
+
+   .. py:method:: _solveFullPath()
+
+
+   .. py:method:: fullPath()
+
+      Retrun the full path to this Take.
+
+
+   .. py:method:: name()
+
+      Return the name of this take
+
+
+   .. py:method:: destroy(recursive=False)
+
+      Destroy this Take.
+
+
+   .. py:method:: asCode()
+
+      Returns the commands necessary to re-create this take.
+
+
+   .. py:method:: saveToFile(filename, recursive=False)
+
+      Save child or children of this take to specified filename
+
+
+   .. py:method:: loadChildTakeFromFile(filename)
+
+      Load Take from the specified filename as a child of this Take
+
+
+   .. py:method:: addChildTake(name='')
+
+      Add a child Take under this Take
+
+
+   .. py:method:: children()
+
+      Returns a tuple of Takes that are children of this Take.
+
+
+   .. py:method:: _addRemoveParm(parm, add=True)
+
+
+   .. py:method:: addParm(parm)
+
+      Include the specified parm in this Take
+
+
+   .. py:method:: removeParm(parm)
+
+      Remove the specified parm is from this take.
+
+
+   .. py:method:: hasParm(parm)
+
+      Test if the specified parm is included in this take.
+
+
+   .. py:method:: parms()
+
+      returns a tuple of hou.parms
+
+
+   .. py:method:: removeAllParmsOfNode(node)
+
+      Remove all parameters from specified Node from this Take
+
+
+   .. py:method:: addAllParmsOfNode(node)
+
+      Include all parameters from specified Node in this Take
+
+
+   .. py:method:: addParmsFromTake(take, overwrite_existing=True)
+
+      Include parameters from the specified Take in this Take.
+
+
+   .. py:method:: _addRemoveFlag(node, flag, add=True)
+
+
+   .. py:method:: addNodeBypassFlag(node)
+
+      Include the specified node's bypass flag in this Take.
+
+
+   .. py:method:: addNodeDisplayFlag(node)
+
+      Include the specified node's display flag in this Take.
+
+
+   .. py:method:: addNodeRenderFlag(node)
+
+      Include the specified node's render flag in this Take.
+
+
+   .. py:method:: removeNodeBypassFlag(node)
+
+      Remove the specified node's bypass flag from this Take.
+
+
+   .. py:method:: removeNodeDisplayFlag(node)
+
+      Remove the specified node's display flag from this Take.
+
+
+   .. py:method:: removeNodeRenderFlag(node)
+
+      Remove the specified node's render flag from this Take.
+
+
+   .. py:method:: moveUnderTake(take)
+
+      Moves take and all its children under pecified parent Take.
+
+
+   .. py:method:: insertTakeAbove(name='')
+
+      Insert the take between the specified Take and its parent.
+      (becomes the new parent of the child takes)
+
+
+
+.. py:class:: Take(name='')
+
+   Bases: :py:obj:`TakeWrapper`
+
+
+.. py:function:: _takeErr(cmd_err_output)
+
+
+.. py:function:: allTakes()
+
+   returns a tuple of all Take objects
+
+
+.. py:function:: curTake()
+
+   returns the current Take object
+
+
+.. py:function:: findTake(take_name)
+
+   returnsTake object or None
+
+
+.. py:function:: prefixForNewTakeNames()
+
+   return the prefix used when creating new takes
+
+
+.. py:function:: rootTake()
+
+   returns the root Take object
+
+
+.. py:function:: setCurTake(take)
+
+   sets the active Take
+
+
+.. py:function:: setAutoTake(switch)
+
+
+.. py:function:: setPrefixForNewTakeNames(prefix_name='take')
+
+   set the prefix used when vreating new takes
+
+

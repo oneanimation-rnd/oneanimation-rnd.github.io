@@ -1,0 +1,42 @@
+ :py:mod:`oa.gui.libs.auto_save.auto_save_setup`
+================================================================================================
+
+.. py:module:: oa.gui.libs.auto_save.auto_save_setup
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.gui.libs.auto_save.auto_save_setup.set_auto_save_to_task_dir
+   oa.gui.libs.auto_save.auto_save_setup.set_auto_save_limits
+   oa.gui.libs.auto_save.auto_save_setup.set_auto_save_interval
+   oa.gui.libs.auto_save.auto_save_setup.get_auto_save_enable
+   oa.gui.libs.auto_save.auto_save_setup.get_auto_save_interval
+   oa.gui.libs.auto_save.auto_save_setup.get_interval_input
+
+
+
+.. py:function:: set_auto_save_to_task_dir()
+
+
+.. py:function:: set_auto_save_limits(max_count)
+
+
+.. py:function:: set_auto_save_interval(interval)
+
+
+.. py:function:: get_auto_save_enable()
+
+
+.. py:function:: get_auto_save_interval()
+
+
+.. py:function:: get_interval_input()
+
+

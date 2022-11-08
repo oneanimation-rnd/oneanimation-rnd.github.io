@@ -1,0 +1,75 @@
+ :py:mod:`oa_utils.database.wrappers.w_anmclip`
+==============================================================================================
+
+.. py:module:: oa_utils.database.wrappers.w_anmclip
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_anmclip.WAnmClipMeta
+   oa_utils.database.wrappers.w_anmclip.WAnmClip
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_anmclip.LOGGER
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:class:: WAnmClipMeta
+
+   Bases: :py:obj:`type`
+
+   .. py:attribute:: THUMBNAIL_FORMAT
+      :annotation: = gif
+
+      
+
+   .. py:attribute:: ENTITY
+      
+
+      
+
+   .. py:method:: __getattr__(name)
+      :classmethod:
+
+
+
+.. py:class:: WAnmClip(anim_clip)
+
+   .. py:property:: file
+
+
+   .. py:property:: wrapped
+
+
+   .. py:method:: upsert(unique_id, project=None, target_model=None, label=None, thumbnail=None, description=None, tags=None)
+      :classmethod:
+
+
+   .. py:method:: build_unique_id(filepath)
+      :classmethod:
+
+
+   .. py:method:: add_tags(tags)
+
+
+   .. py:method:: __getattr__(name)
+
+
+

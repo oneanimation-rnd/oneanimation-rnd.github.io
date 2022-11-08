@@ -1,0 +1,37 @@
+ :py:mod:`oa.rigging.libs.transform_utils.reset_nodes`
+============================================================================================================
+
+.. py:module:: oa.rigging.libs.transform_utils.reset_nodes
+
+.. autoapi-nested-parse::
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.transform_utils.reset_nodes.reset_control_objs
+
+
+
+.. py:function:: reset_control_objs(objs, selection_only=False, reset_global_srt=False)
+
+   Resets assets controls to their default attribute values.
+
+   :param objs: A list of control objects.
+   :type objs: string[]
+   :param selection_only: Resets the whole asset if False, otherwise resets only supplied objects.
+   :type selection_only: bool
+   :param reset_global_srt: Skips global_SRT if False.
+   :type reset_global_srt: bool
+
+

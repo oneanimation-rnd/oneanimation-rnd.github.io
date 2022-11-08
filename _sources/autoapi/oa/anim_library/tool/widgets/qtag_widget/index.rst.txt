@@ -1,0 +1,29 @@
+ :py:mod:`oa.anim_library.tool.widgets.qtag_widget`
+======================================================================================================
+
+.. py:module:: oa.anim_library.tool.widgets.qtag_widget
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.widgets.qtag_widget.QTagWidget
+
+
+
+
+.. py:class:: QTagWidget(label, editable=True, back_color=QtGui.QColor(82, 94, 102), fore_color=QtGui.QColor(108, 182, 229), size=enums.QTagSize.Normal, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QPushButton`
+
+   .. py:attribute:: del_clicked
+      
+
+      
+
+

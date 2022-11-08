@@ -1,0 +1,101 @@
+ :py:mod:`oa.shot_builder.shot_builder`
+==============================================================================
+
+.. py:module:: oa.shot_builder.shot_builder
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.shot_builder.run
+   oa.shot_builder.shot_builder.save
+   oa.shot_builder.shot_builder._update_environment
+   oa.shot_builder.shot_builder._rename_scene
+   oa.shot_builder.shot_builder.setup_lighting
+   oa.shot_builder.shot_builder.setup_effects
+   oa.shot_builder.shot_builder.setup_assets
+   oa.shot_builder.shot_builder.setup_caching
+   oa.shot_builder.shot_builder.setup_takes
+   oa.shot_builder.shot_builder._create_subnets
+   oa.shot_builder.shot_builder.save_lighting
+   oa.shot_builder.shot_builder.save_effects
+   oa.shot_builder.shot_builder.save_scene
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_builder.shot_builder.this
+   oa.shot_builder.shot_builder._log
+   oa.shot_builder.shot_builder._msglog
+
+
+.. py:data:: this
+   
+
+   
+
+.. py:data:: _log
+   
+
+   
+
+.. py:data:: _msglog
+   
+
+   
+
+.. py:function:: run(source_description, contexts=None, use_latest_cache=True)
+
+
+.. py:function:: save(hip_scn_path, comment='', contexts=None)
+
+
+.. py:function:: _update_environment(shot_index, shot_sf, shot_ef, project, episode, sequence)
+
+   Update environment variables.
+
+
+.. py:function:: _rename_scene()
+
+
+.. py:function:: setup_lighting(episode=None, sequence=None, shot=None, version=None)
+
+
+.. py:function:: setup_effects(episode=None, sequence=None, shot=None, version=None)
+
+
+.. py:function:: setup_assets()
+
+   Creates real houdini assets in the scene from provided description.
+
+
+.. py:function:: setup_caching(use_latest_cache=True)
+
+   Applies caches to all assets based on their guids.
+
+
+.. py:function:: setup_takes()
+
+
+.. py:function:: _create_subnets()
+
+
+.. py:function:: save_lighting(comment='')
+
+
+.. py:function:: save_effects(comment='')
+
+
+.. py:function:: save_scene(hip_path, comment)
+
+

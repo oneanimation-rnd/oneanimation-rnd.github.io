@@ -1,0 +1,27 @@
+ :py:mod:`oa.shot_split_submitter_tool`
+==============================================================================
+
+.. py:module:: oa.shot_split_submitter_tool
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   widgets/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   cache_standalone/index.rst
+   shot_split_submitter_tool/index.rst
+   split_standalone/index.rst
+   utils/index.rst
+
+

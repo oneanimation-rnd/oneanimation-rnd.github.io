@@ -1,0 +1,211 @@
+ :py:mod:`oa.animation.tools.scene_cp.scene_cp_tool`
+========================================================================================================
+
+.. py:module:: oa.animation.tools.scene_cp.scene_cp_tool
+
+.. autoapi-nested-parse::
+
+   Interface to edit the scene cp.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.scene_cp.scene_cp_tool.SceneCpTool
+   oa.animation.tools.scene_cp.scene_cp_tool.CustomSpinBox
+   oa.animation.tools.scene_cp.scene_cp_tool.TimeSpinBox
+
+
+
+
+.. py:class:: SceneCpTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: tool_name
+      :annotation: = sceneCpTool
+
+      
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: on_open_cb_id
+      
+
+      
+
+   .. py:attribute:: on_new_cb_id
+      
+
+      
+
+   .. py:method:: add_callbacks()
+      :staticmethod:
+
+
+   .. py:method:: remove_callbacks()
+      :staticmethod:
+
+
+   .. py:method:: on_trigger_auto_close(arg)
+      :staticmethod:
+
+      Gets called on loading or starting a new scene.
+      Forces any open instance to be closed.
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: add_shot_on_clicked()
+
+
+   .. py:method:: apply_changes_on_clicked()
+
+
+   .. py:method:: on_spinbox_focused()
+
+
+   .. py:method:: remove_shot_on_clicked()
+
+      Removes selected rows.
+
+
+   .. py:method:: go_to_shot_on_clicked()
+
+      Re-times timeline to match selected shot's frame range.
+
+
+   .. py:method:: offset_shot_on_clicked()
+
+      Pops up a window to ask user how many frames to offset selected shot.
+
+
+   .. py:method:: eventFilter(source, event)
+
+
+   .. py:method:: run()
+
+      Opens the interface.
+
+
+   .. py:method:: setup_gui()
+
+      Setups data for interface.
+
+
+   .. py:method:: delete_instance()
+
+      Deletes any instances of this class.
+
+
+   .. py:method:: get_scene_cp_info()
+
+      Collects meta-data from scene cp.
+
+
+   .. py:method:: set_scene_cp_data()
+
+      Constructs json string from table and sets it onto the scene cp.
+
+
+   .. py:method:: fill_table()
+
+      Populates the table with shots.
+
+
+   .. py:method:: add_row(shot_number=None, start_frame=None, end_frame=None)
+
+      Appends a new row in the table.
+
+
+   .. py:method:: set_spinbox_padding(spinbox=None)
+
+      Sets a spinbox's prefix padding with '0's.
+
+
+   .. py:method:: check_frame_ranges()
+
+      Checks if adjacent shots have overlapping frame ranges.
+
+
+   .. py:method:: get_duplicate_shot()
+
+      Checks to make sure all shot numbers are unique.
+
+
+   .. py:method:: get_corrupted_rows()
+
+      Collects any corrupted rows.
+      Rows usually get corrupted if a user manually edits the scene cp.
+
+
+   .. py:method:: set_dirty_state()
+
+
+   .. py:method:: clear_dirty_state()
+
+
+   .. py:method:: get_shot_intersections()
+
+
+   .. py:method:: apply_changes()
+
+      Does a series of sanity checks to make sure shots are ok.
+      Adds shots to scene cp as a json string.
+
+
+
+.. py:class:: CustomSpinBox(table_item, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QSpinBox`
+
+   Auto-selects the table's row when this widget is focused.
+
+   .. py:attribute:: focused
+      
+
+      
+
+   .. py:method:: wheelEvent(event)
+
+      Ignore wheel events so the user can scroll with a long list.
+
+
+   .. py:method:: focusInEvent(event)
+
+      Emit focussed signal
+
+
+
+.. py:class:: TimeSpinBox(combo_type, table_item, parent=None)
+
+   Bases: :py:obj:`CustomSpinBox`
+
+   Checks its sibling spinbox and makes sure it doesn't overlap ranges.
+
+   :param combo_type: 0=Start frame, 1=End frame
+   :type combo_type: int
+
+   .. py:method:: on_editing_finished()
+
+
+   .. py:method:: set_sibling(spinbox)
+
+
+

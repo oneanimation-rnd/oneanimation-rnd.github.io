@@ -1,0 +1,28 @@
+ :py:mod:`oa.rigging.libs`
+====================================================
+
+.. py:module:: oa.rigging.libs
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   blendshape_utils/index.rst
+   control_objects/index.rst
+   rig_resolutions/index.rst
+   transform_utils/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   blendshape_groups/index.rst
+   rigging_libs/index.rst
+
+

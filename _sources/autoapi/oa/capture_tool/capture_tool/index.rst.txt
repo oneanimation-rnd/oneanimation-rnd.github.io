@@ -1,0 +1,174 @@
+ :py:mod:`oa.capture_tool.capture_tool`
+==============================================================================
+
+.. py:module:: oa.capture_tool.capture_tool
+
+.. autoapi-nested-parse::
+
+   Uses Qt's framework to capture the screen then open an editor to paint on the images.
+   Later the images can be exported and be stitched together using ffmpeg.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.capture_tool.capture_tool.CaptureTool
+   oa.capture_tool.capture_tool.RegionBorder
+   oa.capture_tool.capture_tool.AnimatedLabel
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.capture_tool.capture_tool.capture_picker_inst
+   oa.capture_tool.capture_tool.capture_painter_inst
+   oa.capture_tool.capture_tool.app
+
+
+.. py:data:: capture_picker_inst
+   
+
+   
+
+.. py:data:: capture_painter_inst
+   
+
+   
+
+.. py:class:: CaptureTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   Core tool to allow user to select what region of the screen to capture.
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: mousePressEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: add_icon_button(icon_name, icon_size=28, fixed_size=28)
+
+
+   .. py:method:: align_to_capture_region()
+
+
+   .. py:method:: set_region_borders(rect, border=3)
+
+
+   .. py:method:: set_border_opacity(opacity)
+
+
+   .. py:method:: show_region_borders()
+
+
+   .. py:method:: hide_region_borders()
+
+
+   .. py:method:: set_gui_for_capturing()
+
+
+   .. py:method:: set_gui_for_saving_pixmaps(total_count)
+
+
+   .. py:method:: set_gui_for_idle()
+
+
+   .. py:method:: launch_capture_painter(file_path, mouse_positions)
+
+
+   .. py:method:: launch_capture_picker()
+
+
+   .. py:method:: pick_region()
+
+
+   .. py:method:: on_picker_finished(result)
+
+
+   .. py:method:: on_border_timeout()
+
+
+   .. py:method:: on_send_img_to_painter(region_rect, pixmap)
+
+
+   .. py:method:: record_on_clicked()
+
+
+   .. py:method:: stop_on_clicked()
+
+
+   .. py:method:: cancel_on_clicked()
+
+
+   .. py:method:: pick_on_clicked()
+
+
+   .. py:method:: on_pixmap_saved(count)
+
+
+   .. py:method:: on_frame_changed(count)
+
+
+   .. py:method:: on_capture_stopped(total_count)
+
+
+   .. py:method:: on_capture_finished(mouse_positions, status, err_msg)
+
+
+   .. py:method:: on_capture_cancelled()
+
+
+
+.. py:class:: RegionBorder(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   A borderless widget that helps define the borders of the capture area without effecting mouse input.
+
+
+.. py:class:: AnimatedLabel(label, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QLabel`
+
+   Exposes the color property so it can be animated.
+
+   .. py:attribute:: color
+      
+
+      
+
+   .. py:method:: _get_color()
+
+
+   .. py:method:: _set_color(val)
+
+
+
+.. py:data:: app
+   
+
+   
+

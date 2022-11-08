@@ -1,0 +1,32 @@
+ :py:mod:`oa.rigging.tools.motion_path_fix.motion_path_fix`
+======================================================================================================================
+
+.. py:module:: oa.rigging.tools.motion_path_fix.motion_path_fix
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.motion_path_fix.motion_path_fix.fix_motion_path
+   oa.rigging.tools.motion_path_fix.motion_path_fix.fix_scene_motion_paths
+
+
+
+.. py:function:: fix_motion_path(motion_path)
+
+   Fixes cycle that Maya creates with a default motion path.
+
+   :param motion_path: A motion path utility node.
+
+
+.. py:function:: fix_scene_motion_paths()
+
+   Finds and fixes all motion path cycles.
+
+

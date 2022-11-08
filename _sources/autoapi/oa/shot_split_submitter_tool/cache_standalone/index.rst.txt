@@ -1,0 +1,46 @@
+ :py:mod:`oa.shot_split_submitter_tool.cache_standalone`
+================================================================================================================
+
+.. py:module:: oa.shot_split_submitter_tool.cache_standalone
+
+.. autoapi-nested-parse::
+
+   Jobs on Afanasy will call this script to perform cache exports onto the cache drive.
+
+   Author:
+       Jason Labbe
+
+   Modified:
+       Heorhi Samushyia
+
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_split_submitter_tool.cache_standalone.main
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.shot_split_submitter_tool.cache_standalone.data
+
+
+.. py:function:: main(data)
+
+
+.. py:data:: data
+   
+
+   
+

@@ -1,0 +1,36 @@
+ :py:mod:`oa.anim_library.tool.widgets.qclip_tooltip`
+==========================================================================================================
+
+.. py:module:: oa.anim_library.tool.widgets.qclip_tooltip
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.widgets.qclip_tooltip.QClipToolTip
+
+
+
+
+.. py:class:: QClipToolTip(offset_x=0, offset_y=0, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: set_labels(**kwargs)
+
+
+   .. py:method:: clear_tags()
+
+
+   .. py:method:: add_tag(label)
+
+
+

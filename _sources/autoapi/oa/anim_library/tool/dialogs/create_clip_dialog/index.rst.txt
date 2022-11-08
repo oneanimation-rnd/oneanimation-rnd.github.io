@@ -1,0 +1,97 @@
+ :py:mod:`oa.anim_library.tool.dialogs.create_clip_dialog`
+====================================================================================================================
+
+.. py:module:: oa.anim_library.tool.dialogs.create_clip_dialog
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.anim_library.tool.dialogs.create_clip_dialog.CreateClip
+   oa.anim_library.tool.dialogs.create_clip_dialog.HoverButton
+
+
+
+
+.. py:class:: CreateClip(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:attribute:: clip_created
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: setup_gui()
+
+
+   .. py:method:: create_gui()
+
+
+   .. py:method:: del_previous_instance()
+
+      Deletes any previous instance of this class.
+
+
+   .. py:method:: update_preview()
+
+      Captures viewport with ranges from the interface and displays it.
+
+
+   .. py:method:: collect_clip_data()
+
+      Collects all relevant info and returns it as a dictionary.
+
+
+   .. py:method:: collect_controls()
+
+
+   .. py:method:: collect_keys()
+
+
+   .. py:method:: create_clip()
+
+
+   .. py:method:: capture_on_click()
+
+
+   .. py:method:: start_label_on_click()
+
+
+   .. py:method:: end_label_on_click()
+
+
+   .. py:method:: create_clip_on_click()
+
+
+   .. py:method:: selection_on_change(index)
+
+
+
+.. py:class:: HoverButton(label, hover_label, parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QPushButton`
+
+   .. py:method:: enterEvent(event)
+
+
+   .. py:method:: leaveEvent(event)
+
+
+

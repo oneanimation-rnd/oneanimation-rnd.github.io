@@ -1,0 +1,178 @@
+ :py:mod:`oa.capture_tool.capture_worker`
+==================================================================================
+
+.. py:module:: oa.capture_tool.capture_worker
+
+.. autoapi-nested-parse::
+
+   Capturing must be done as a balancing act in order to capture with a decent frame rate while not overflowing the machine's memory.
+
+   A ThreadPool is ran on a separate thread to capture pixmaps of the screen at a constant rate.
+   For high res/long captures it's imperative to dump those pixmaps on disc during capturing otherwise the machine's memory will fill and make the machine unresponsive.
+
+   To solve this we use a series of Queue and Thread objects that will save all the pixmaps from separate threads.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.capture_tool.capture_worker.ThreadPool
+   oa.capture_tool.capture_worker.ThreadSignals
+   oa.capture_tool.capture_worker.Worker
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.capture_tool.capture_worker.clear_temp_dir
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.capture_tool.capture_worker.temp_capture_dir
+
+
+.. py:data:: temp_capture_dir
+   :annotation: = /Volumes/data/.temp_capture_imgs
+
+   
+
+.. py:function:: clear_temp_dir()
+
+
+.. py:class:: ThreadPool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtCore.QObject`
+
+   Manages all Worker objects.
+
+   .. py:attribute:: frame_changed
+      
+
+      
+
+   .. py:attribute:: pixmap_saved
+      
+
+      
+
+   .. py:attribute:: capture_cancelled
+      
+
+      
+
+   .. py:attribute:: capture_stopped
+      
+
+      
+
+   .. py:attribute:: capture_finished
+      
+
+      
+
+   .. py:method:: start(rect, quality)
+
+
+   .. py:method:: stop()
+
+
+   .. py:method:: cancel()
+
+
+
+.. py:class:: ThreadSignals
+
+   Bases: :py:obj:`PySide2.QtCore.QObject`
+
+   Signals must inherit from QObject, so this is a workaround to signal from a QRunnable object.
+
+   .. py:attribute:: frame_changed
+      
+
+      
+
+   .. py:attribute:: pixmap_saved
+      
+
+      
+
+   .. py:attribute:: capture_cancelled
+      
+
+      
+
+   .. py:attribute:: capture_stopped
+      
+
+      
+
+   .. py:attribute:: capture_finished
+      
+
+      
+
+
+.. py:class:: Worker(rect, quality)
+
+   Bases: :py:obj:`PySide2.QtCore.QRunnable`
+
+   Captures screen as pixmaps in a separate thread.
+
+   .. py:attribute:: StatusOk
+      :annotation: = 0
+
+      
+
+   .. py:attribute:: StatusError
+      :annotation: = 1
+
+      
+
+   .. py:attribute:: Stop
+      :annotation: = False
+
+      
+
+   .. py:attribute:: Cancel
+      :annotation: = False
+
+      
+
+   .. py:attribute:: inst
+      
+
+      
+
+   .. py:method:: add_writer_workers(thread_count, quality)
+
+
+   .. py:method:: save_pixmaps(queue, quality)
+
+
+   .. py:method:: capture(rect, capture_rate=0.04)
+
+
+   .. py:method:: clear_queue(queue)
+
+
+   .. py:method:: reset_global_vars()
+
+
+   .. py:method:: run()
+
+
+

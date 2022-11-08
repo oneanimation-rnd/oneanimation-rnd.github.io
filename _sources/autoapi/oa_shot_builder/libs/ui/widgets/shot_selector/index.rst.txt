@@ -1,0 +1,94 @@
+ :py:mod:`oa_shot_builder.libs.ui.widgets.shot_selector`
+================================================================================================================
+
+.. py:module:: oa_shot_builder.libs.ui.widgets.shot_selector
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_shot_builder.libs.ui.widgets.shot_selector.ShotSelectorDialog
+   oa_shot_builder.libs.ui.widgets.shot_selector.ShotBuildDialog
+
+
+
+
+.. py:class:: ShotSelectorDialog(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QDialog`
+
+   .. py:attribute:: _instance
+      
+
+      
+
+   .. py:attribute:: shot_selected
+      
+
+      
+
+   .. py:method:: show_dialog(parent=None)
+      :classmethod:
+
+
+   .. py:method:: _init_shot_tree()
+
+
+   .. py:method:: _init_widgets()
+
+
+   .. py:method:: _init_layout()
+
+
+   .. py:method:: _init_connections()
+
+
+   .. py:method:: _on_item_clicked(data)
+
+
+   .. py:method:: reload()
+
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: showEvent(event)
+
+
+   .. py:method:: keyPressEvent(event)
+
+
+   .. py:method:: _on_rejected()
+
+
+   .. py:method:: _on_accepted()
+
+
+
+.. py:class:: ShotBuildDialog(parent=None)
+
+   Bases: :py:obj:`ShotSelectorDialog`
+
+   .. py:attribute:: shot_selected
+      
+
+      
+
+   .. py:method:: reload()
+
+
+   .. py:method:: _init_widgets()
+
+
+   .. py:method:: _init_layout()
+
+
+   .. py:method:: _on_accepted()
+
+
+

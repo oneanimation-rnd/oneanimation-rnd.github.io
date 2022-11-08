@@ -1,0 +1,60 @@
+ :py:mod:`oa.animation.tools.synoptics.widgets.items.viewer_item`
+==================================================================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.widgets.items.viewer_item
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.animation.tools.synoptics.widgets.items.viewer_item.ViewerItem
+
+
+
+
+.. py:class:: ViewerItem(view, item_type, item_color=None, name='', txt='', font=None, custom_path='', mirrored=False, is_selectable=True, view_scale=1.0, m_trigger_item=None)
+
+   Bases: :py:obj:`oa.animation.tools.synoptics.widgets.items.base_item.BaseItem`
+
+   An item used specifically only for the synoptics viewer.
+
+   :param view:
+   :type view: QGraphicsView
+   :param item_type: "square", "circle", "rectangle", "triangle", "text", "custom"
+   :type item_type: string
+   :param item_color:
+   :type item_color: QColor
+   :param name:
+   :type name: string
+   :param font:
+   :type font: QFont
+   :param custom_path:
+   :type custom_path: QPainterPath
+   :param mirrored: Flips it horizontally.
+   :type mirrored: bool
+   :param is_selectable: User isn't able to click it in the viewer.
+   :type is_selectable: bool
+   :param view_scale: Helps scale it when the window resizes.
+   :type view_scale: float
+
+   .. py:method:: hoverEnterEvent(event)
+
+      Displays info in the taskbar while it's hovering.
+
+
+   .. py:method:: hoverLeaveEvent(event)
+
+      Clear taskbar as the mouse leaves the item.
+
+
+   .. py:method:: mousePressEvent(event)
+
+      Re-direct selection to m trigger's item.
+
+
+

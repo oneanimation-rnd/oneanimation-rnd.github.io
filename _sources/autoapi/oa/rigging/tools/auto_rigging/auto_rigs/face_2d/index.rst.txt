@@ -1,0 +1,108 @@
+ :py:mod:`oa.rigging.tools.auto_rigging.auto_rigs.face_2d`
+====================================================================================================================
+
+.. py:module:: oa.rigging.tools.auto_rigging.auto_rigs.face_2d
+
+.. autoapi-nested-parse::
+
+   Author:
+       Enrique Caballero
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.auto_rigging.auto_rigs.face_2d.Face2D
+
+
+
+
+.. py:class:: Face2D(*args, **kwargs)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QWidget`
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: delete_inst()
+      :classmethod:
+
+
+   .. py:method:: run()
+      :classmethod:
+
+
+   .. py:method:: import_face_rig(scn_path)
+      :staticmethod:
+
+
+   .. py:method:: transfer_button_clicked()
+
+
+   .. py:method:: bind_shrink_wraps_clicked()
+
+
+   .. py:method:: create_shrink_wrap(mesh, target, **kwargs)
+      :staticmethod:
+
+
+   .. py:method:: transfer_rigging_objects()
+      :staticmethod:
+
+      Starts moving objects over to the character rig.
+
+
+   .. py:method:: get_offset_by_name(geo_name)
+
+
+   .. py:method:: setup_face_geometry()
+
+      Prepares the face geometry to be bound to the rig
+
+
+   .. py:method:: start_bind_shrink_wrap()
+
+
+   .. py:method:: bind_face_geometry(new_geometries_list)
+
+      Binds the selected geometries to the characters face rig
+
+
+   .. py:method:: connect_shapes()
+
+      This puts it all together.
+
+
+   .. py:method:: create_attributes(ctrl_plug, shape_name)
+      :staticmethod:
+
+      This will create the driving attributes on the appropriate controller.
+
+
+   .. py:method:: connect_visibility(shape_name, enum_count, input_geo, ctrl_plug)
+      :staticmethod:
+
+      This creates the connection for the nodes for each shape.
+
+
+   .. py:method:: create_secondary_node_structure(cond_node, input_geo)
+      :staticmethod:
+
+      Creates the secondary structure for the teeth and the tongue.
+
+
+   .. py:method:: organize_selection()
+      :staticmethod:
+
+      This organizes the selection into an ordered list of all the shapes that will be driven by the same nodes.
+
+
+

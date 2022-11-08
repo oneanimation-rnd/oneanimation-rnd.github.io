@@ -1,0 +1,16 @@
+ :py:mod:`oa.general.tools.task_switcher.abstract_widgets`
+====================================================================================================================
+
+.. py:module:: oa.general.tools.task_switcher.abstract_widgets
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   abstract_tree_model/index.rst
+   abstract_tree_node/index.rst
+
+

@@ -1,0 +1,64 @@
+ :py:mod:`oa.rigging.tools.fk_chain_tool.fk_chain_tool`
+==============================================================================================================
+
+.. py:module:: oa.rigging.tools.fk_chain_tool.fk_chain_tool
+
+.. autoapi-nested-parse::
+
+   An interface to create an fk chain.
+
+   Author:
+       Jason Labbe
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.tools.fk_chain_tool.fk_chain_tool.FkChainTool
+
+
+
+
+.. py:class:: FkChainTool(parent=None)
+
+   Bases: :py:obj:`PySide2.QtWidgets.QMainWindow`
+
+   .. py:attribute:: instance
+      
+
+      
+
+   .. py:method:: closeEvent(event)
+
+
+   .. py:method:: create_template_on_click()
+
+
+   .. py:method:: update_template_on_click()
+
+
+   .. py:method:: delete_template_on_click()
+
+
+   .. py:method:: open_color_dialog_on_click()
+
+
+   .. py:method:: create_rig_on_click()
+
+
+   .. py:method:: parent_rig_on_click()
+
+
+   .. py:method:: delete_rig_on_click()
+
+
+   .. py:method:: delete_prev_inst()
+
+
+

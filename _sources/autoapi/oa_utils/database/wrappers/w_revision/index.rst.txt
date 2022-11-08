@@ -1,0 +1,58 @@
+ :py:mod:`oa_utils.database.wrappers.w_revision`
+================================================================================================
+
+.. py:module:: oa_utils.database.wrappers.w_revision
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_revision._meta
+   oa_utils.database.wrappers.w_revision.WRevision
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.wrappers.w_revision.LOGGER
+
+
+.. py:data:: LOGGER
+   
+
+   
+
+.. py:class:: _meta
+
+   Bases: :py:obj:`type`
+
+   .. py:method:: __getattr__(name)
+      :classmethod:
+
+
+
+.. py:class:: WRevision(revision, filepath=None)
+
+   .. py:property:: filepath
+
+
+   .. py:property:: wrapped
+
+
+   .. py:method:: create(version, comment, user=None, date=None)
+      :classmethod:
+
+
+   .. py:method:: __getattr__(name)
+
+
+

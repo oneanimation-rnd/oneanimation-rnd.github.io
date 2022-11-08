@@ -1,0 +1,18 @@
+ :py:mod:`oa.animation.tools.synoptics.widgets.items`
+==========================================================================================================
+
+.. py:module:: oa.animation.tools.synoptics.widgets.items
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   base_item/index.rst
+   custom_item_template/index.rst
+   designer_item/index.rst
+   viewer_item/index.rst
+
+

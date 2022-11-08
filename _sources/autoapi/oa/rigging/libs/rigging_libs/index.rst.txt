@@ -1,0 +1,185 @@
+ :py:mod:`oa.rigging.libs.rigging_libs`
+==============================================================================
+
+.. py:module:: oa.rigging.libs.rigging_libs
+
+.. autoapi-nested-parse::
+
+   Holds generic functions specifically for rigging.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.rigging_libs.ObjectWrapper
+
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.rigging_libs.attach_follicle
+   oa.rigging.libs.rigging_libs.add_follicles_to_vertices
+   oa.rigging.libs.rigging_libs.create_weak_ref
+   oa.rigging.libs.rigging_libs.get_weak_ref
+   oa.rigging.libs.rigging_libs.convert_name_to_type
+   oa.rigging.libs.rigging_libs.create_node
+   oa.rigging.libs.rigging_libs.add_child_node
+   oa.rigging.libs.rigging_libs.add_child_nodes_to_sel
+   oa.rigging.libs.rigging_libs.add_parent_node
+   oa.rigging.libs.rigging_libs.add_parent_nodes_to_sel
+   oa.rigging.libs.rigging_libs.add_node_at_components
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   oa.rigging.libs.rigging_libs.suffixes
+
+
+.. py:data:: suffixes
+   
+
+   
+
+.. py:class:: ObjectWrapper(obj_name)
+
+   Bases: :py:obj:`maya.OpenMaya.MDagPath`
+
+   Wrapper for a maya node so it's not name dependent.
+
+   :param obj_name: An existing object to wrap.
+   :type obj_name: string
+
+   .. py:method:: __str__()
+
+
+   .. py:method:: name()
+
+
+
+.. py:function:: attach_follicle(obj, u_value=0.5, v_value=0.5, name='newFollicle')
+
+   Attaches a hair follicle to a mesh object.
+
+   :param obj: A name of the mesh object to attach to.
+   :type obj: string
+   :param u_value: A value between 0.0 to 1.0 to set its horizontal space.
+   :type u_value: float
+   :param v_value: A value between 0.0 to 1.0 to set its vertical space.
+   :type v_value: float
+   :param name: Name of the new follicle.
+   :type name: string
+
+   :returns: A list of the follicle's nul and shape.
+
+
+.. py:function:: add_follicles_to_vertices(select=False)
+
+   Creates a new follicle for each selected vertex.
+   Object must have uvs in order this to work.
+
+   :param select: Selects new follicles on true.
+   :type select: bool
+
+   :returns: A list of the new follicles.
+
+
+.. py:function:: create_weak_ref(container_obj, weak_ref_obj, attr_name)
+
+   Connects one object to another via weak reference.
+
+   :param container_obj: Object to hold weak references.
+   :type container_obj: string
+   :param weak_ref_obj: Objects to be referenced.
+   :type weak_ref_obj: string
+   :param attr_name: Name of attribute.
+   :type attr_name: string
+
+
+.. py:function:: get_weak_ref(obj, attr)
+
+   Gets and returns the attribute's weak reference that it's pointing to.
+
+
+.. py:function:: convert_name_to_type(node_type, obj)
+
+   Uses supplied arguments to return a new name.
+
+
+.. py:function:: create_node(node_type, name)
+
+   Creates a new maya object with the supplied name and returns it.
+
+
+.. py:function:: add_child_node(node_type, obj, name=None)
+
+   Creates a new node, aligns then parents it to the supplied object.
+
+   :param node_type: The node type to create the new objects as.
+   :type node_type: string
+   :param obj: The object to align and parent to.
+   :type obj: string
+
+   :returns: An ObjectWrapper of the new node.
+
+
+.. py:function:: add_child_nodes_to_sel(node_type, select=False)
+
+   Creates a child nodes on selection.
+
+   :param node_type: The node type to create the new objects as.
+   :type node_type: string
+   :param select: Selects the new nodes.
+   :type select: bool
+
+   :returns: A list of all the new nodes.
+
+
+.. py:function:: add_parent_node(node_type, obj, name=None)
+
+   Creates a new node, aligns then parents the supplied object to it.
+
+   :param node_type: The node type to create the new objects as.
+   :type node_type: string
+   :param obj: The object to align and parent to.
+   :type obj: string
+
+   :returns: An ObjectWrapper of the new node.
+
+
+.. py:function:: add_parent_nodes_to_sel(node_type, select=False)
+
+   Creates a parent nodes on selection.
+
+   :param node_type: The node type to create the new objects as.
+   :type node_type: string
+   :param select: Selects the new nodes.
+   :type select: bool
+
+   :returns: A list of all the new nodes.
+
+
+.. py:function:: add_node_at_components(node_type, select=False, name=None)
+
+   Creates a new node and aligns it to the average position of selected components.
+
+   :param node_type: The node type to create the new objects as.
+   :type node_type: string
+   :param select: Selects the new node.
+   :type select: bool
+
+   :returns: The new node.
+
+

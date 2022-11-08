@@ -1,0 +1,566 @@
+ :py:mod:`oa_utils.database.lib.entity`
+==============================================================================
+
+.. py:module:: oa_utils.database.lib.entity
+
+.. autoapi-nested-parse::
+
+   This module defines a database schema.
+
+   In order to store and retrieve data from the database in a more
+   user-friendly manner, we have to associate every database document
+   type with a class defining the structure of that document.
+
+   Check mongoengine documentation for more information on that subject.
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa_utils.database.lib.entity.EntityTypes
+   oa_utils.database.lib.entity.IUser
+   oa_utils.database.lib.entity.IDescriptable
+   oa_utils.database.lib.entity.Revision
+   oa_utils.database.lib.entity.FileEntry
+   oa_utils.database.lib.entity.IMetaEntry
+   oa_utils.database.lib.entity.IMetaEntryEmbedded
+   oa_utils.database.lib.entity.Asset
+   oa_utils.database.lib.entity.IVisual
+   oa_utils.database.lib.entity.IVisualUrl
+   oa_utils.database.lib.entity.IProjectItem
+   oa_utils.database.lib.entity.IEpisodeItem
+   oa_utils.database.lib.entity.ISequenceItem
+   oa_utils.database.lib.entity.ITaggable
+   oa_utils.database.lib.entity.User
+   oa_utils.database.lib.entity.Model
+   oa_utils.database.lib.entity.ModelXsi
+   oa_utils.database.lib.entity.ModelMaya
+   oa_utils.database.lib.entity.ModelHoudini
+   oa_utils.database.lib.entity.Scene
+   oa_utils.database.lib.entity.SceneXsi
+   oa_utils.database.lib.entity.SceneMaya
+   oa_utils.database.lib.entity.SceneHoudini
+   oa_utils.database.lib.entity.Design
+   oa_utils.database.lib.entity.Texture
+   oa_utils.database.lib.entity.AnmClip
+
+
+
+
+.. py:class:: EntityTypes
+
+   Entity type enumerator.
+
+
+.. py:class:: IUser
+
+   Bases: :py:obj:`mongoengine.Document`
+
+   Base abstract class for all 'user' document schemas.
+
+   .. py:attribute:: name
+      
+
+      
+
+   .. py:attribute:: email
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: IDescriptable
+
+   Bases: :py:obj:`mongoengine.Document`
+
+   Abstract class for all documents that have description.
+
+   .. py:attribute:: description
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: Revision
+
+   Bases: :py:obj:`mongoengine.EmbeddedDocument`
+
+   .. py:attribute:: version
+      
+
+      
+
+   .. py:attribute:: comment
+      
+
+      
+
+   .. py:attribute:: user
+      
+
+      
+
+   .. py:attribute:: date
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: FileEntry
+
+   Bases: :py:obj:`mongoengine.Document`
+
+   .. py:attribute:: id
+      
+
+      
+
+   .. py:attribute:: entity_type
+      
+
+      
+
+   .. py:attribute:: filepath
+      
+
+      
+
+   .. py:attribute:: revisions
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: IMetaEntry
+
+   Bases: :py:obj:`mongoengine.Document`
+
+   .. py:attribute:: file
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: IMetaEntryEmbedded
+
+   Bases: :py:obj:`mongoengine.EmbeddedDocument`
+
+   .. py:attribute:: file
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: Asset
+
+   Bases: :py:obj:`mongoengine.Document`
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: IVisual
+
+   Bases: :py:obj:`mongoengine.Document`
+
+   .. py:attribute:: thumbnail
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: IVisualUrl
+
+   Bases: :py:obj:`mongoengine.Document`
+
+   .. py:attribute:: thumbnail
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: IProjectItem
+
+   Bases: :py:obj:`mongoengine.Document`
+
+   .. py:attribute:: project
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: IEpisodeItem
+
+   Bases: :py:obj:`mongoengine.Document`
+
+   .. py:attribute:: episode
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: ISequenceItem
+
+   Bases: :py:obj:`mongoengine.Document`
+
+   .. py:attribute:: sequence
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: ITaggable
+
+   Bases: :py:obj:`mongoengine.Document`
+
+   .. py:attribute:: tags
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: User
+
+   Bases: :py:obj:`IUser`, :py:obj:`IVisualUrl`
+
+   Base abstract class for all 'user' document schemas.
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: Model
+
+   Bases: :py:obj:`Asset`, :py:obj:`IProjectItem`, :py:obj:`IVisualUrl`, :py:obj:`ITaggable`, :py:obj:`IDescriptable`
+
+   Abstract class for all documents that have description.
+
+   .. py:class:: Resolutions
+
+      Bases: :py:obj:`mongoengine.EmbeddedDocument`
+
+      .. py:attribute:: ANI
+         
+
+         
+
+      .. py:attribute:: RDR
+         
+
+         
+
+      .. py:attribute:: PRX
+         
+
+         
+
+      .. py:attribute:: DFM
+         
+
+         
+
+
+   .. py:attribute:: id
+      
+
+      
+
+   .. py:attribute:: name
+      
+
+      
+
+   .. py:attribute:: type
+      
+
+      
+
+   .. py:attribute:: level
+      
+
+      
+
+   .. py:attribute:: category
+      
+
+      
+
+   .. py:attribute:: resolutions
+      
+
+      
+
+   .. py:attribute:: depreciated
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: ModelXsi
+
+   Bases: :py:obj:`Model`
+
+   Abstract class for all documents that have description.
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: ModelMaya
+
+   Bases: :py:obj:`Model`
+
+   Abstract class for all documents that have description.
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: ModelHoudini
+
+   Bases: :py:obj:`Model`
+
+   Abstract class for all documents that have description.
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: Scene
+
+   Bases: :py:obj:`IProjectItem`, :py:obj:`IEpisodeItem`, :py:obj:`ISequenceItem`, :py:obj:`IMetaEntry`
+
+   .. py:class:: Shot
+
+      Bases: :py:obj:`mongoengine.EmbeddedDocument`
+
+      .. py:attribute:: index
+         
+
+         
+
+      .. py:attribute:: fr_start
+         
+
+         
+
+      .. py:attribute:: fr_end
+         
+
+         
+
+
+   .. py:class:: RefAsset
+
+      Bases: :py:obj:`mongoengine.EmbeddedDocument`
+
+      .. py:attribute:: version
+         
+
+         
+
+      .. py:attribute:: asset
+         
+
+         
+
+
+   .. py:attribute:: id
+      
+
+      
+
+   .. py:attribute:: type
+      
+
+      
+
+   .. py:attribute:: shots
+      
+
+      
+
+   .. py:attribute:: refs
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: SceneXsi
+
+   Bases: :py:obj:`Scene`
+
+   .. py:attribute:: rule
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: SceneMaya
+
+   Bases: :py:obj:`Scene`
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: SceneHoudini
+
+   Bases: :py:obj:`Scene`
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: Design
+
+   Bases: :py:obj:`Asset`, :py:obj:`IMetaEntry`, :py:obj:`IVisual`
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: Texture
+
+   Bases: :py:obj:`Asset`, :py:obj:`IMetaEntry`, :py:obj:`IVisual`
+
+   .. py:attribute:: meta
+      
+
+      
+
+
+.. py:class:: AnmClip
+
+   Bases: :py:obj:`IMetaEntry`, :py:obj:`IDescriptable`, :py:obj:`IVisualUrl`, :py:obj:`ITaggable`
+
+   Abstract class for all documents that have description.
+
+   .. py:attribute:: id
+      
+
+      
+
+   .. py:attribute:: project
+      
+
+      
+
+   .. py:attribute:: active
+      
+
+      
+
+   .. py:attribute:: label
+      
+
+      
+
+   .. py:attribute:: target
+      
+
+      
+
+   .. py:attribute:: meta
+      
+
+      
+
+

@@ -1,0 +1,70 @@
+ :py:mod:`oa.modeling.tools.selection.selection`
+================================================================================================
+
+.. py:module:: oa.modeling.tools.selection.selection
+
+.. autoapi-nested-parse::
+
+   Created on 29 Apr, 2015
+
+   @author: angeline
+
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   oa.modeling.tools.selection.selection.MAYAToolUndo
+   oa.modeling.tools.selection.selection.StoreLoadSelect
+   oa.modeling.tools.selection.selection.MirrorSelection
+
+
+
+
+.. py:class:: MAYAToolUndo(name='')
+
+   Bases: :py:obj:`object`
+
+   .. py:method:: __enter__()
+
+
+   .. py:method:: __exit__(type, value, traceback)
+
+
+
+.. py:class:: StoreLoadSelect
+
+   Bases: :py:obj:`object`
+
+   store and/or load selection from external file
+
+   .. py:method:: storeSelection(sKey='01')
+
+      store selection as string externally
+      Parameter:
+      sKey: string, number of selection files
+
+
+   .. py:method:: loadSelection(sKey='01')
+
+      load selection from external text file
+      Parameter:
+      sKey: string, number of selection files
+
+
+
+.. py:class:: MirrorSelection
+
+   Bases: :py:obj:`object`
+
+   select the left/right of the controllers
+
+   .. py:method:: run()
+
+
+
